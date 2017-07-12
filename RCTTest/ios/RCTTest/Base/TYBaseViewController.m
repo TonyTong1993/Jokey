@@ -7,7 +7,7 @@
 //
 
 #import "TYBaseViewController.h"
-
+#import  <MJRefresh/MJRefresh.h>
 @interface TYBaseViewController ()
 
 @end
@@ -27,13 +27,27 @@
     //去除footer样式
     self.tableView.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:_tableView];
+    
+    //设置网络数据刷新
+   MJRefreshGifHeader *gifHeader = [MJRefreshGifHeader headerWithRefreshingBlock:^{
+        
+    }];
+    [gifHeader.gifView setImage:[UIImage imageNamed:@"refresh"]];
+    
+    self.tableView.mj_header = gifHeader;
 }
 
 -(void)setUpNavigationBar {
     
 }
-
-
+//加载新数据
+-(void)loadNewData {
+    
+}
+//加载更多数据
+-(void)loadMoreData {
+    
+}
 #pragma mark---UITableViewDataSource and UITableViewDelegate
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
