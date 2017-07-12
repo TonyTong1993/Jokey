@@ -1,0 +1,17 @@
+//
+//  PrefixHeader.pch
+//  RCTTest
+//
+//  Created by 童万华 on 2017/6/28.
+//  Copyright © 2017年 童万华. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "TYBaseViewController.h"
+#import <MJExtension/MJExtension.h>
+#import <MJRefresh/MJRefresh.h>
+#import "UIColor+LPExtension.h"
+#import "TYServiceApi.h"
+#endif /* PrefixHeader_pch */
