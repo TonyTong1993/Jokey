@@ -73,11 +73,11 @@
     //设置网络数据下啦刷新
     __weak typeof(self) weakSelf = self;
    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingBlock:^{
-       dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+       [weakSelf loadNewData];
+       dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
            [weakSelf.tableView.mj_header endRefreshing];
        });
     }];
-
     [header setImages:self.normalImages forState:MJRefreshStateIdle];
     [header setImages:self.pullingImages  forState:MJRefreshStatePulling];
     [header setImages:self.refreshImages  forState:MJRefreshStateRefreshing];
@@ -85,8 +85,18 @@
     header.stateLabel.hidden = YES;
     self.tableView.mj_header = header;
     self.tableView.mj_header.mj_h = 74;
-    //设置上拉加载更多数据
     
+    //设置上拉加载更多数据
+    MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        [weakSelf loadMoreData];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf.tableView.mj_footer endRefreshing];
+        });
+    }];
+    self.tableView.mj_footer = footer;
+    footer.refreshingTitleHidden = YES;
+    footer.stateLabel.hidden = YES;
+    [footer beginRefreshing];
 }
 
 -(void)setUpNavigationBar {

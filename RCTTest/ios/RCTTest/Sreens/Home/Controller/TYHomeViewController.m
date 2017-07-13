@@ -17,7 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dataSource = @[@"",@"",@""];
+    
+    NSMutableArray *dataSource = [NSMutableArray array];
+    for (int i = 0; i < 15; i++) {
+        [dataSource addObject:@""];
+    }
+    self.dataSource = dataSource;
+    
 }
 
 -(void)setUpTableView {
