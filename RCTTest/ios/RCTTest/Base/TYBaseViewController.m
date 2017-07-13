@@ -7,9 +7,11 @@
 //
 
 #import "TYBaseViewController.h"
-#import  <MJRefresh/MJRefresh.h>
+#import "UIImage+Extentions.h"
+
 @interface TYBaseViewController ()
 @property (nonatomic) NSMutableArray *normalImages;
+@property (nonatomic) NSMutableArray *pullingImages;
 @property (nonatomic) NSMutableArray *refreshImages;
 @end
 
@@ -19,28 +21,34 @@
 {
     if (_normalImages == nil) {
         _normalImages = [[NSMutableArray alloc] init];
-        for (int i = 95; i > 82; i--) {
-            UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"refresh_00%d",i]];
+        for (int i = 0; i < 10; i++) {
+            UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"pull_to_refresh_%d_54x54_",i+1]];
             [_normalImages addObject:image];
         }
         
     }
     return _normalImages;
 }
-
+- (NSMutableArray *)pullingImages
+{
+    if (_pullingImages == nil) {
+        _pullingImages = [[NSMutableArray alloc] init];
+        for (int i = 0; i < 10; i++) {
+            UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"pull_to_refresh_%d_54x54_",i+1]];
+            [_pullingImages addObject:image];
+        }
+        
+    }
+    return _pullingImages;
+}
 //正在刷新状态下的图片
 - (NSMutableArray *)refreshImages
 {
     if (_refreshImages == nil) {
         _refreshImages = [[NSMutableArray alloc] init];
         
-        for (int i = 82; i > 0; i--) {
-            UIImage *image;
-            if (i > 9) {
-                image = [UIImage imageNamed:[NSString stringWithFormat:@"refresh_00%d",i]];
-            }else {
-                image = [UIImage imageNamed:[NSString stringWithFormat:@"refresh_000%d",i]];
-            }
+        for (int i = 0; i < 10; i++) {
+            UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"pull_to_refresh_%d_54x54_",i+1]];
             [_refreshImages addObject:image];
         }
     }
@@ -48,6 +56,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
     [self setUpTableView];
     [self setUpNavigationBar];
 }
@@ -56,22 +65,28 @@
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.tableView.backgroundColor = [UIColor colorWithHexString:@"#f0f0f8"];
     //去除footer样式
     self.tableView.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:_tableView];
     
-    //设置网络数据刷新
-   MJRefreshGifHeader *gifHeader = [MJRefreshGifHeader headerWithRefreshingBlock:^{
-       NSLog(@"gifHeader-------");
+    //设置网络数据下啦刷新
+    __weak typeof(self) weakSelf = self;
+   MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingBlock:^{
+       dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+           [weakSelf.tableView.mj_header endRefreshing];
+       });
     }];
 
-    [gifHeader setImages:self.refreshImages  forState:MJRefreshStateRefreshing];
-    [gifHeader setImages:self.normalImages forState:MJRefreshStateIdle];
-    [gifHeader setImages:self.normalImages  forState:MJRefreshStatePulling];
-    gifHeader.lastUpdatedTimeLabel.hidden= YES;//如果不隐藏这个会默认 图片在最左边不是在中间
-    gifHeader.stateLabel.hidden = YES;
-    [gifHeader beginRefreshing];
-    self.tableView.mj_header = gifHeader;
+    [header setImages:self.normalImages forState:MJRefreshStateIdle];
+    [header setImages:self.pullingImages  forState:MJRefreshStatePulling];
+    [header setImages:self.refreshImages  forState:MJRefreshStateRefreshing];
+    header.lastUpdatedTimeLabel.hidden= YES;//如果不隐藏这个会默认 图片在最左边不是在中间
+    header.stateLabel.hidden = YES;
+    self.tableView.mj_header = header;
+    self.tableView.mj_header.mj_h = 74;
+    //设置上拉加载更多数据
+    
 }
 
 -(void)setUpNavigationBar {
