@@ -17,11 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
-    
+
+    self.dataSource = @[@"",@"",@""];
  
 }
 
-
+-(void)setUpTableView {
+    [super setUpTableView];
+}
 
 @end

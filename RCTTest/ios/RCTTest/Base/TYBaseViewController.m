@@ -9,11 +9,43 @@
 #import "TYBaseViewController.h"
 #import  <MJRefresh/MJRefresh.h>
 @interface TYBaseViewController ()
-
+@property (nonatomic) NSMutableArray *normalImages;
+@property (nonatomic) NSMutableArray *refreshImages;
 @end
 
 @implementation TYBaseViewController
+#pragma mark---getter and setter
+- (NSMutableArray *)normalImages
+{
+    if (_normalImages == nil) {
+        _normalImages = [[NSMutableArray alloc] init];
+        for (int i = 95; i > 82; i--) {
+            UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"refresh_00%d",i]];
+            [_normalImages addObject:image];
+        }
+        
+    }
+    return _normalImages;
+}
 
+//正在刷新状态下的图片
+- (NSMutableArray *)refreshImages
+{
+    if (_refreshImages == nil) {
+        _refreshImages = [[NSMutableArray alloc] init];
+        
+        for (int i = 82; i > 0; i--) {
+            UIImage *image;
+            if (i > 9) {
+                image = [UIImage imageNamed:[NSString stringWithFormat:@"refresh_00%d",i]];
+            }else {
+                image = [UIImage imageNamed:[NSString stringWithFormat:@"refresh_000%d",i]];
+            }
+            [_refreshImages addObject:image];
+        }
+    }
+    return _refreshImages;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpTableView];
@@ -30,10 +62,15 @@
     
     //设置网络数据刷新
    MJRefreshGifHeader *gifHeader = [MJRefreshGifHeader headerWithRefreshingBlock:^{
-        
+       NSLog(@"gifHeader-------");
     }];
-    [gifHeader.gifView setImage:[UIImage imageNamed:@"refresh"]];
-    
+
+    [gifHeader setImages:self.refreshImages  forState:MJRefreshStateRefreshing];
+    [gifHeader setImages:self.normalImages forState:MJRefreshStateIdle];
+    [gifHeader setImages:self.normalImages  forState:MJRefreshStatePulling];
+    gifHeader.lastUpdatedTimeLabel.hidden= YES;//如果不隐藏这个会默认 图片在最左边不是在中间
+    gifHeader.stateLabel.hidden = YES;
+    [gifHeader beginRefreshing];
     self.tableView.mj_header = gifHeader;
 }
 
