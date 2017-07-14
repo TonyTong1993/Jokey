@@ -96,7 +96,6 @@
     self.tableView.mj_footer = footer;
     footer.refreshingTitleHidden = YES;
     footer.stateLabel.hidden = YES;
-    [footer beginRefreshing];
 }
 
 -(void)setUpNavigationBar {

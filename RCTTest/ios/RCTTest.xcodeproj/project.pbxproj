@@ -33,6 +33,8 @@
 		EB3299E51F1385B60034D095 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299DB1F1385B60034D095 /* Octicons.ttf */; };
 		EB3299E61F1385B60034D095 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299DC1F1385B60034D095 /* SimpleLineIcons.ttf */; };
 		EB3299E71F1385B60034D095 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299DD1F1385B60034D095 /* Zocial.ttf */; };
+		EB575A941F186298007C1427 /* UIView+TYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EB575A931F186298007C1427 /* UIView+TYExtension.m */; };
+		EB575A971F186443007C1427 /* UIViewController+TYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EB575A961F186443007C1427 /* UIViewController+TYExtension.m */; };
 		EB593FF01F161DDC0093EF63 /* TYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB593FEF1F161DDC0093EF63 /* TYBaseViewController.m */; };
 		EB5A2A101F0388D700A19F2C /* TYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A0F1F0388D700A19F2C /* TYTabBarController.m */; };
 		EB5A2A131F03890100A19F2C /* TYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A121F03890100A19F2C /* TYNavigationController.m */; };
@@ -85,6 +87,11 @@
 		EB3299DB1F1385B60034D095 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
 		EB3299DC1F1385B60034D095 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		EB3299DD1F1385B60034D095 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
+		EB575A921F186298007C1427 /* UIView+TYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TYExtension.h"; sourceTree = "<group>"; };
+		EB575A931F186298007C1427 /* UIView+TYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TYExtension.m"; sourceTree = "<group>"; };
+		EB575A951F186443007C1427 /* UIViewController+TYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TYExtension.h"; sourceTree = "<group>"; };
+		EB575A961F186443007C1427 /* UIViewController+TYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TYExtension.m"; sourceTree = "<group>"; };
+		EB575A981F1866AD007C1427 /* ScrollPageViewDeleagte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollPageViewDeleagte.h; sourceTree = "<group>"; };
 		EB593FEE1F161DDC0093EF63 /* TYBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYBaseViewController.h; sourceTree = "<group>"; };
 		EB593FEF1F161DDC0093EF63 /* TYBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYBaseViewController.m; sourceTree = "<group>"; };
 		EB5A2A0E1F0388D700A19F2C /* TYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabBarController.h; sourceTree = "<group>"; };
@@ -251,6 +258,18 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		EB575A911F18621F007C1427 /* ScrollPageView */ = {
+			isa = PBXGroup;
+			children = (
+				EB575A921F186298007C1427 /* UIView+TYExtension.h */,
+				EB575A931F186298007C1427 /* UIView+TYExtension.m */,
+				EB575A951F186443007C1427 /* UIViewController+TYExtension.h */,
+				EB575A961F186443007C1427 /* UIViewController+TYExtension.m */,
+				EB575A981F1866AD007C1427 /* ScrollPageViewDeleagte.h */,
+			);
+			name = ScrollPageView;
+			sourceTree = "<group>";
+		};
 		EB593FED1F161D890093EF63 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +282,7 @@
 		EB5A29F51F03860000A19F2C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				EB575A911F18621F007C1427 /* ScrollPageView */,
 				EB5A2A321F0392AB00A19F2C /* Macro.h */,
 			);
 			path = Common;
@@ -531,11 +551,13 @@
 				EB5A2A3D1F03B3E800A19F2C /* TYLoginViewController.m in Sources */,
 				EB18D3F21F0F785500B44790 /* TYTheme.m in Sources */,
 				EB18D3F81F0F89C500B44790 /* TYServiceApi.m in Sources */,
+				EB575A971F186443007C1427 /* UIViewController+TYExtension.m in Sources */,
 				EB032D261F0251F300F32465 /* ViewController.m in Sources */,
 				EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */,
 				EB032D231F0251F300F32465 /* AppDelegate.m in Sources */,
 				EB5A2A131F03890100A19F2C /* TYNavigationController.m in Sources */,
 				EB3299CE1F1354420034D095 /* TYHomeViewController.m in Sources */,
+				EB575A941F186298007C1427 /* UIView+TYExtension.m in Sources */,
 				EB032D201F0251F300F32465 /* main.m in Sources */,
 				EB18D3EA1F0F725C00B44790 /* TYVideoController.swift in Sources */,
 				EB5A2A401F03B40D00A19F2C /* TYRCTViewController.m in Sources */,
