@@ -31,4 +31,5 @@ char TYIndexKey;//动态绑定或获取子视图位置的key
 -(NSInteger)currentIndex {
     return [objc_getAssociatedObject(self, &TYIndexKey) integerValue];
 }
+
 @end

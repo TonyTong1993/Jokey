@@ -45,6 +45,9 @@
 		EB5A2A3D1F03B3E800A19F2C /* TYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A3C1F03B3E800A19F2C /* TYLoginViewController.m */; };
 		EB5A2A401F03B40D00A19F2C /* TYRCTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A3F1F03B40D00A19F2C /* TYRCTViewController.m */; };
 		EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */; };
+		EB914BD11F1C46D5003FC124 /* TYContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB914BD01F1C46D5003FC124 /* TYContentView.m */; };
+		EB914BD41F1C4773003FC124 /* TYScrollSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB914BD31F1C4773003FC124 /* TYScrollSegmentView.m */; };
+		EB914BD71F1C47C6003FC124 /* TYTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB914BD61F1C47C6003FC124 /* TYTitleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +117,12 @@
 		EB5A2A3F1F03B40D00A19F2C /* TYRCTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYRCTViewController.m; sourceTree = "<group>"; };
 		EB6C70D51F1745A700D5B7AD /* UIImage+Extentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extentions.h"; sourceTree = "<group>"; };
 		EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extentions.m"; sourceTree = "<group>"; };
+		EB914BCF1F1C46D5003FC124 /* TYContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYContentView.h; sourceTree = "<group>"; };
+		EB914BD01F1C46D5003FC124 /* TYContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYContentView.m; sourceTree = "<group>"; };
+		EB914BD21F1C4773003FC124 /* TYScrollSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYScrollSegmentView.h; sourceTree = "<group>"; };
+		EB914BD31F1C4773003FC124 /* TYScrollSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYScrollSegmentView.m; sourceTree = "<group>"; };
+		EB914BD51F1C47C6003FC124 /* TYTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTitleView.h; sourceTree = "<group>"; };
+		EB914BD61F1C47C6003FC124 /* TYTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTitleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +274,12 @@
 				EB575A931F186298007C1427 /* UIView+TYExtension.m */,
 				EB575A951F186443007C1427 /* UIViewController+TYExtension.h */,
 				EB575A961F186443007C1427 /* UIViewController+TYExtension.m */,
+				EB914BCF1F1C46D5003FC124 /* TYContentView.h */,
+				EB914BD01F1C46D5003FC124 /* TYContentView.m */,
+				EB914BD21F1C4773003FC124 /* TYScrollSegmentView.h */,
+				EB914BD31F1C4773003FC124 /* TYScrollSegmentView.m */,
+				EB914BD51F1C47C6003FC124 /* TYTitleView.h */,
+				EB914BD61F1C47C6003FC124 /* TYTitleView.m */,
 				EB575A981F1866AD007C1427 /* ScrollPageViewDeleagte.h */,
 			);
 			name = ScrollPageView;
@@ -555,6 +570,7 @@
 				EB032D261F0251F300F32465 /* ViewController.m in Sources */,
 				EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */,
 				EB032D231F0251F300F32465 /* AppDelegate.m in Sources */,
+				EB914BD71F1C47C6003FC124 /* TYTitleView.m in Sources */,
 				EB5A2A131F03890100A19F2C /* TYNavigationController.m in Sources */,
 				EB3299CE1F1354420034D095 /* TYHomeViewController.m in Sources */,
 				EB575A941F186298007C1427 /* UIView+TYExtension.m in Sources */,
@@ -562,6 +578,8 @@
 				EB18D3EA1F0F725C00B44790 /* TYVideoController.swift in Sources */,
 				EB5A2A401F03B40D00A19F2C /* TYRCTViewController.m in Sources */,
 				EB593FF01F161DDC0093EF63 /* TYBaseViewController.m in Sources */,
+				EB914BD41F1C4773003FC124 /* TYScrollSegmentView.m in Sources */,
+				EB914BD11F1C46D5003FC124 /* TYContentView.m in Sources */,
 				EB18D3E71F0F6B7700B44790 /* TYRCTModule.m in Sources */,
 				EB5A2A1D1F038C4100A19F2C /* UIButton+LPExtension.m in Sources */,
 				EB18D3E41F0F427200B44790 /* RCTLocationObserver.m in Sources */,
