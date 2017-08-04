@@ -48,6 +48,7 @@
 		EB914BD11F1C46D5003FC124 /* TYContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB914BD01F1C46D5003FC124 /* TYContentView.m */; };
 		EB914BD41F1C4773003FC124 /* TYScrollSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB914BD31F1C4773003FC124 /* TYScrollSegmentView.m */; };
 		EB914BD71F1C47C6003FC124 /* TYTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB914BD61F1C47C6003FC124 /* TYTitleView.m */; };
+		EBE5B4E91F21DF3600270D15 /* UIButton+TYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE5B4E81F21DF3600270D15 /* UIButton+TYExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +124,8 @@
 		EB914BD31F1C4773003FC124 /* TYScrollSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYScrollSegmentView.m; sourceTree = "<group>"; };
 		EB914BD51F1C47C6003FC124 /* TYTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTitleView.h; sourceTree = "<group>"; };
 		EB914BD61F1C47C6003FC124 /* TYTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTitleView.m; sourceTree = "<group>"; };
+		EBE5B4E71F21DF3600270D15 /* UIButton+TYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TYExtension.h"; sourceTree = "<group>"; };
+		EBE5B4E81F21DF3600270D15 /* UIButton+TYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TYExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +284,8 @@
 				EB914BD51F1C47C6003FC124 /* TYTitleView.h */,
 				EB914BD61F1C47C6003FC124 /* TYTitleView.m */,
 				EB575A981F1866AD007C1427 /* ScrollPageViewDeleagte.h */,
+				EBE5B4E71F21DF3600270D15 /* UIButton+TYExtension.h */,
+				EBE5B4E81F21DF3600270D15 /* UIButton+TYExtension.m */,
 			);
 			name = ScrollPageView;
 			sourceTree = "<group>";
@@ -573,6 +578,7 @@
 				EB914BD71F1C47C6003FC124 /* TYTitleView.m in Sources */,
 				EB5A2A131F03890100A19F2C /* TYNavigationController.m in Sources */,
 				EB3299CE1F1354420034D095 /* TYHomeViewController.m in Sources */,
+				EBE5B4E91F21DF3600270D15 /* UIButton+TYExtension.m in Sources */,
 				EB575A941F186298007C1427 /* UIView+TYExtension.m in Sources */,
 				EB032D201F0251F300F32465 /* main.m in Sources */,
 				EB18D3EA1F0F725C00B44790 /* TYVideoController.swift in Sources */,

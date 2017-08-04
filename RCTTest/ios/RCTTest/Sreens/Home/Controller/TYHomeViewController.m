@@ -8,7 +8,8 @@
 
 #import "TYHomeViewController.h"
 #import "TYNetWorkingTool.h"
-@interface TYHomeViewController ()
+#import "TYTitleView.h"
+@interface TYHomeViewController ()<ScrollPageViewDeleagte>
 
 @end
 
@@ -21,13 +22,25 @@
     NSMutableArray *dataSource = [NSMutableArray array];
     for (int i = 0; i < 15; i++) {
         [dataSource addObject:@""];
+       
+       
     }
     self.dataSource = dataSource;
-    
+    TYTitleView *titleView = [[TYTitleView alloc] init];
+    [titleView setDelegate:self handlerTitleClicked:^(NSUInteger index) {
+        
+    }];
+    self.navigationItem.titleView = titleView;
 }
 
 -(void)setUpTableView {
     [super setUpTableView];
 }
-
+#pragma mark--
+-(NSUInteger)numberOfTitlesInScrollPageView:(UIView *)scrollPageView {
+    return 3;
+}
+-(NSString *)scrollPageView:(UIView *)scrollPageView titleForIndex:(NSUInteger)index {
+    return @"推荐";
+}
 @end
