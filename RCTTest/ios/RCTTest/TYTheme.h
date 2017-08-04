@@ -22,5 +22,7 @@ typedef NS_ENUM(NSInteger,TYThemeType) {
 +(NSString *)themeColorWithType:(TYThemeType)type;
 //获取主题色
 +(NSString *)themeColor;
+
 +(NSString *)themeFontFamilyName;
+
 @end

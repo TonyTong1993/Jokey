@@ -8,8 +8,8 @@
 
 #import "TYHomeViewController.h"
 #import "TYNetWorkingTool.h"
-#import "MJCSegmentInterface.h"
-@interface TYHomeViewController ()
+#import "TYSegmentView.h"
+@interface TYHomeViewController ()<TYSegmentControlDelegate>
 
 @end
 
@@ -26,37 +26,26 @@
        
     }
     self.dataSource = dataSource;
-   
-    UIViewController *vc1 = [[UIViewController alloc]init];
-//    vc1.titlesCount = 1;
-    UIViewController *vc2 = [[UIViewController alloc]init];
-//    vc2.titlesCount = 2;
-//    MJCTestViewController1 *vc3 = [[MJCTestViewController1 alloc]init];
-//    vc3.titlesCount = 3;
-//    MJCTestViewController *vc4 = [[MJCTestViewController alloc]init];
-//    vc4.titlesCount = 4;
-//    MJCTestViewController *vc5 = [[MJCTestViewController alloc]init];
-//    vc5.titlesCount = 5;
-//    MJCTestViewController *vc6 = [[MJCTestViewController alloc]init];
-//    vc6.titlesCount = 6;
-//    MJCTestViewController *vc7 = [[MJCTestViewController alloc]init];
-//    vc7.titlesCount = 7;
-    NSArray *vcarrr = @[vc1,vc2];
-    NSArray *titlesArr = @[@"荣耀",@"联盟"];
+    NSArray *titles = @[@"推荐",@"视频",@"图文"];
+    TYSegmentView *segmentView = [[TYSegmentView alloc] initWithTitles:titles];
     
-    //以下是我的控件中的代码
-    MJCSegmentInterface *lala = [[MJCSegmentInterface alloc]init];
-    lala.frame = CGRectMake(0,64,self.view.mj_w, self.view.mj_h-64);
-    lala.selectedSegmentIndex = 1;
-    [lala intoTitlesArray:titlesArr hostController:self];
-    [self.view addSubview:lala];
-    [lala intoChildControllerArray:vcarrr];
+    [segmentView setTitleFont:[UIFont fontWithName:[TYTheme themeFontFamilyName] size:16]];
+    [segmentView setTitleColor:HEXCOLOR(0x333333) state:SegmentControlStateNormal];
+    [segmentView setTitleColor:HEXCOLOR(0x55B1E6) state:SegmentControlStateSelected];
+    segmentView.delegate = self;
+    [segmentView setSelectedItemIndex:0];
+    [segmentView setIndicatorBackgroundColor:HEXCOLOR(0x55B1E6)];
+    self.navigationItem.titleView = segmentView;
 }
 
 -(void)setUpTableView {
     [super setUpTableView];
-    MJCSegmentInterface *segmentInterface = [MJCSegmentInterface segmentinitWithFrame:CGRectMake(0, 0, self.view.mj_w, 44) MJCTitleBarStyle:<#(MJCTitleBarStyles)#>]
-    
+  
 }
 
+#pragma mark---
+#pragma mark--- TYSegmentControlDelegate
+-(void)segmentConrol:(UIView *)segmentView didSelectedItemAtIndex:(NSUInteger)index {
+    NSLog(@"didSelectedItemAtIndex = %lu",index);
+}
 @end

@@ -42,6 +42,12 @@
 		EB5A2A2D1F03911200A19F2C /* TYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A2C1F03911200A19F2C /* TYProfileViewController.m */; };
 		EB5A2A3D1F03B3E800A19F2C /* TYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A3C1F03B3E800A19F2C /* TYLoginViewController.m */; };
 		EB5A2A401F03B40D00A19F2C /* TYRCTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A3F1F03B40D00A19F2C /* TYRCTViewController.m */; };
+		EB5D39251F345C490029085F /* TYSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39241F345C490029085F /* TYSegmentView.m */; };
+		EB5D39281F345D0A0029085F /* TYCalculateFrameTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39271F345D0A0029085F /* TYCalculateFrameTool.m */; };
+		EB5D392B1F345DE90029085F /* TYSegementIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D392A1F345DE90029085F /* TYSegementIndicatorView.m */; };
+		EB5D392E1F3460750029085F /* UIButton+TYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D392D1F3460750029085F /* UIButton+TYExtension.m */; };
+		EB5D39311F3464200029085F /* TYSegmentConst.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39301F3464200029085F /* TYSegmentConst.m */; };
+		EB5D39341F34657C0029085F /* TYSegmentTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39331F34657C0029085F /* TYSegmentTool.m */; };
 		EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +111,19 @@
 		EB5A2A3C1F03B3E800A19F2C /* TYLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYLoginViewController.m; sourceTree = "<group>"; };
 		EB5A2A3E1F03B40D00A19F2C /* TYRCTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYRCTViewController.h; sourceTree = "<group>"; };
 		EB5A2A3F1F03B40D00A19F2C /* TYRCTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYRCTViewController.m; sourceTree = "<group>"; };
+		EB5D39231F345C490029085F /* TYSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSegmentView.h; sourceTree = "<group>"; };
+		EB5D39241F345C490029085F /* TYSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSegmentView.m; sourceTree = "<group>"; };
+		EB5D39261F345D0A0029085F /* TYCalculateFrameTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYCalculateFrameTool.h; sourceTree = "<group>"; };
+		EB5D39271F345D0A0029085F /* TYCalculateFrameTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYCalculateFrameTool.m; sourceTree = "<group>"; };
+		EB5D39291F345DE90029085F /* TYSegementIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSegementIndicatorView.h; sourceTree = "<group>"; };
+		EB5D392A1F345DE90029085F /* TYSegementIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSegementIndicatorView.m; sourceTree = "<group>"; };
+		EB5D392C1F3460750029085F /* UIButton+TYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TYExtension.h"; sourceTree = "<group>"; };
+		EB5D392D1F3460750029085F /* UIButton+TYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TYExtension.m"; sourceTree = "<group>"; };
+		EB5D392F1F3464200029085F /* TYSegmentConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSegmentConst.h; sourceTree = "<group>"; };
+		EB5D39301F3464200029085F /* TYSegmentConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSegmentConst.m; sourceTree = "<group>"; };
+		EB5D39321F34657C0029085F /* TYSegmentTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSegmentTool.h; sourceTree = "<group>"; };
+		EB5D39331F34657C0029085F /* TYSegmentTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSegmentTool.m; sourceTree = "<group>"; };
+		EB5D39351F34717F0029085F /* TYSegmentControlDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSegmentControlDelegate.h; sourceTree = "<group>"; };
 		EB6C70D51F1745A700D5B7AD /* UIImage+Extentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extentions.h"; sourceTree = "<group>"; };
 		EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extentions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -254,6 +273,17 @@
 		EB575A911F18621F007C1427 /* ScrollPageView */ = {
 			isa = PBXGroup;
 			children = (
+				EB5D39231F345C490029085F /* TYSegmentView.h */,
+				EB5D39241F345C490029085F /* TYSegmentView.m */,
+				EB5D39291F345DE90029085F /* TYSegementIndicatorView.h */,
+				EB5D392A1F345DE90029085F /* TYSegementIndicatorView.m */,
+				EB5D392C1F3460750029085F /* UIButton+TYExtension.h */,
+				EB5D392D1F3460750029085F /* UIButton+TYExtension.m */,
+				EB5D392F1F3464200029085F /* TYSegmentConst.h */,
+				EB5D39301F3464200029085F /* TYSegmentConst.m */,
+				EB5D39321F34657C0029085F /* TYSegmentTool.h */,
+				EB5D39331F34657C0029085F /* TYSegmentTool.m */,
+				EB5D39351F34717F0029085F /* TYSegmentControlDelegate.h */,
 			);
 			name = ScrollPageView;
 			sourceTree = "<group>";
@@ -272,6 +302,8 @@
 			children = (
 				EB575A911F18621F007C1427 /* ScrollPageView */,
 				EB5A2A321F0392AB00A19F2C /* Macro.h */,
+				EB5D39261F345D0A0029085F /* TYCalculateFrameTool.h */,
+				EB5D39271F345D0A0029085F /* TYCalculateFrameTool.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -534,6 +566,7 @@
 			files = (
 				EB5A2A2A1F0390FB00A19F2C /* TYMailViewController.m in Sources */,
 				EB5A2A2D1F03911200A19F2C /* TYProfileViewController.m in Sources */,
+				EB5D392B1F345DE90029085F /* TYSegementIndicatorView.m in Sources */,
 				EB5A2A101F0388D700A19F2C /* TYTabBarController.m in Sources */,
 				EB18D3F51F0F890700B44790 /* TYNetWorkingTool.m in Sources */,
 				EB5A2A3D1F03B3E800A19F2C /* TYLoginViewController.m in Sources */,
@@ -541,13 +574,18 @@
 				EB18D3F81F0F89C500B44790 /* TYServiceApi.m in Sources */,
 				EB032D261F0251F300F32465 /* ViewController.m in Sources */,
 				EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */,
+				EB5D39251F345C490029085F /* TYSegmentView.m in Sources */,
 				EB032D231F0251F300F32465 /* AppDelegate.m in Sources */,
 				EB5A2A131F03890100A19F2C /* TYNavigationController.m in Sources */,
+				EB5D39311F3464200029085F /* TYSegmentConst.m in Sources */,
+				EB5D39341F34657C0029085F /* TYSegmentTool.m in Sources */,
 				EB3299CE1F1354420034D095 /* TYHomeViewController.m in Sources */,
 				EB032D201F0251F300F32465 /* main.m in Sources */,
 				EB18D3EA1F0F725C00B44790 /* TYVideoController.swift in Sources */,
+				EB5D392E1F3460750029085F /* UIButton+TYExtension.m in Sources */,
 				EB5A2A401F03B40D00A19F2C /* TYRCTViewController.m in Sources */,
 				EB593FF01F161DDC0093EF63 /* TYBaseViewController.m in Sources */,
+				EB5D39281F345D0A0029085F /* TYCalculateFrameTool.m in Sources */,
 				EB18D3E71F0F6B7700B44790 /* TYRCTModule.m in Sources */,
 				EB5A2A1D1F038C4100A19F2C /* UIButton+LPExtension.m in Sources */,
 				EB18D3E41F0F427200B44790 /* RCTLocationObserver.m in Sources */,
