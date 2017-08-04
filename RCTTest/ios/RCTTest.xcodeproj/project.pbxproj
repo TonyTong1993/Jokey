@@ -48,6 +48,7 @@
 		EB5D392E1F3460750029085F /* UIButton+TYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D392D1F3460750029085F /* UIButton+TYExtension.m */; };
 		EB5D39311F3464200029085F /* TYSegmentConst.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39301F3464200029085F /* TYSegmentConst.m */; };
 		EB5D39341F34657C0029085F /* TYSegmentTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39331F34657C0029085F /* TYSegmentTool.m */; };
+		EB5D39381F3491C30029085F /* TYSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39371F3491C30029085F /* TYSegmentViewController.m */; };
 		EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +125,8 @@
 		EB5D39321F34657C0029085F /* TYSegmentTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSegmentTool.h; sourceTree = "<group>"; };
 		EB5D39331F34657C0029085F /* TYSegmentTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSegmentTool.m; sourceTree = "<group>"; };
 		EB5D39351F34717F0029085F /* TYSegmentControlDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSegmentControlDelegate.h; sourceTree = "<group>"; };
+		EB5D39361F3491C30029085F /* TYSegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSegmentViewController.h; sourceTree = "<group>"; };
+		EB5D39371F3491C30029085F /* TYSegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSegmentViewController.m; sourceTree = "<group>"; };
 		EB6C70D51F1745A700D5B7AD /* UIImage+Extentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extentions.h"; sourceTree = "<group>"; };
 		EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extentions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -284,6 +287,8 @@
 				EB5D39321F34657C0029085F /* TYSegmentTool.h */,
 				EB5D39331F34657C0029085F /* TYSegmentTool.m */,
 				EB5D39351F34717F0029085F /* TYSegmentControlDelegate.h */,
+				EB5D39361F3491C30029085F /* TYSegmentViewController.h */,
+				EB5D39371F3491C30029085F /* TYSegmentViewController.m */,
 			);
 			name = ScrollPageView;
 			sourceTree = "<group>";
@@ -568,6 +573,7 @@
 				EB5A2A2D1F03911200A19F2C /* TYProfileViewController.m in Sources */,
 				EB5D392B1F345DE90029085F /* TYSegementIndicatorView.m in Sources */,
 				EB5A2A101F0388D700A19F2C /* TYTabBarController.m in Sources */,
+				EB5D39381F3491C30029085F /* TYSegmentViewController.m in Sources */,
 				EB18D3F51F0F890700B44790 /* TYNetWorkingTool.m in Sources */,
 				EB5A2A3D1F03B3E800A19F2C /* TYLoginViewController.m in Sources */,
 				EB18D3F21F0F785500B44790 /* TYTheme.m in Sources */,

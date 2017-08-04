@@ -9,23 +9,16 @@
 #import "TYHomeViewController.h"
 #import "TYNetWorkingTool.h"
 #import "TYSegmentView.h"
-@interface TYHomeViewController ()<TYSegmentControlDelegate>
-
+#import "TYSegmentViewController.h"
+@interface TYHomeViewController ()<TYSegmentControlDelegate,UIScrollViewDelegate>
+@property (nonatomic,strong) UIScrollView *scrollView;
 @end
 
 @implementation TYHomeViewController
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSMutableArray *dataSource = [NSMutableArray array];
-    for (int i = 0; i < 15; i++) {
-        [dataSource addObject:@""];
-       
-       
-    }
-    self.dataSource = dataSource;
     NSArray *titles = @[@"推荐",@"视频",@"图文"];
     TYSegmentView *segmentView = [[TYSegmentView alloc] initWithTitles:titles];
     
@@ -36,16 +29,56 @@
     [segmentView setSelectedItemIndex:0];
     [segmentView setIndicatorBackgroundColor:HEXCOLOR(0x55B1E6)];
     self.navigationItem.titleView = segmentView;
+    
+   
+    
+    
 }
-
 -(void)setUpTableView {
-    [super setUpTableView];
-  
+    
+    self.automaticallyAdjustsScrollViewInsets = false;
+    //设置scrollView
+    self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.showsVerticalScrollIndicator = false;
+    self.scrollView.showsHorizontalScrollIndicator = false;
+    self.scrollView.delegate = self;
+    self.scrollView.bounces = false;
+    [self.view addSubview:_scrollView];
+    
+    for (int i  = 0; i < 3; i++) {
+        UIViewController *vc = [[UIViewController alloc] init];
+        [self addChildViewController:vc];
+    }
+    
+    
+    
+    CGFloat width = self.view.frame.size.width;
+    CGFloat height = self.view.frame.size.height;
+    CGFloat startX = 0;
+    CGFloat startY = 0;
+    NSUInteger index = 0;
+    NSUInteger count = self.childViewControllers.count;
+    self.scrollView.contentSize = CGSizeMake(width*count, height);
+    for (UIViewController *viewController in self.childViewControllers) {
+        startX = index*width;
+        UIView *view =  viewController.view;
+        view.frame = CGRectMake(startX, startY, width, height);
+        view.backgroundColor = [UIColor randomColor];
+        [self.scrollView addSubview:view];
+        index++;
+    }
 }
-
 #pragma mark---
 #pragma mark--- TYSegmentControlDelegate
 -(void)segmentConrol:(UIView *)segmentView didSelectedItemAtIndex:(NSUInteger)index {
     NSLog(@"didSelectedItemAtIndex = %lu",index);
 }
+
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+   
+    NSLog(@"scrollView.contentOffset = %lf", scrollView.contentOffset.x);
+}
+
 @end
