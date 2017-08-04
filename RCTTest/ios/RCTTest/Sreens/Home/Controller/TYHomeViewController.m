@@ -77,8 +77,22 @@
 
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
-   
-    NSLog(@"scrollView.contentOffset = %lf", scrollView.contentOffset.x);
+//    CGFloat offsetX = scrollView.contentOffset.x;
+//    CGFloat width = self.view.frame.size.width;
+    
 }
 
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate;
+{
+    NSLog(@"scrollViewDidEndDragging");
+}
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+{
+    NSLog(@"scrollViewWillEndDragging");
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+     NSLog(@"scrollViewDidEndDecelerating");
+}
 @end
