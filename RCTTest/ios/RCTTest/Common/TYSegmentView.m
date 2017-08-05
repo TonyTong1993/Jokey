@@ -14,7 +14,7 @@
 @interface TYSegmentView ()
 @property (nonatomic,copy) NSArray *titles;
 
-@property (nonatomic,strong) UIButton *currentSeletedItem;
+@property (nonatomic,copy) NSArray *items;
 
 @property (nonatomic,strong) TYSegementIndicatorView *indicatorView;
 @end
@@ -81,10 +81,42 @@
 
 -(void)setSelectedItemIndex:(NSUInteger)selectedItemIndex {
     _selectedItemIndex = selectedItemIndex;
+    
 }
-
+-(void)updateSelectedItemIndex:(NSUInteger)selectedItemIndex {
+    if (selectedItemIndex != _selectedItemIndex) {
+        UIButton *preItem = _items[_selectedItemIndex];
+        UIButton *lastItem = _items[selectedItemIndex];
+        [preItem setSelected:false];
+        [lastItem setSelected:true];
+        _selectedItemIndex = selectedItemIndex;
+    }
+    
+}
 -(void)setIndicatorBackgroundColor:(UIColor *)color {
     self.indicatorView.backgroundColor = color;
+}
+-(void)setIndicatorViewScrollOffSetX:(CGFloat)scaleValue {
+    NSUInteger count = self.titles.count;
+    CGFloat value = scaleValue;
+    if (value >= count - 1) return;
+    if (value <= 0) return;
+    CGFloat scaleRight = 0;
+    CGFloat scaleLeft = 0;
+    NSUInteger leftIndex = (int)value;
+    NSUInteger rightIndex = leftIndex + 1;
+    scaleRight = value - leftIndex;
+    scaleLeft  = 1 - scaleRight;
+    if (scaleLeft == 1 && scaleRight == 0)return;
+    UIButton * leftItem = self.items[leftIndex];
+    UIButton * rightItem;
+    if (rightIndex < count) {
+         rightItem = self.items[rightIndex];
+    }
+    CGFloat originalY =  _indicatorView.center.y;
+    CGFloat centerX = leftItem.center.x + (rightItem.center.x - leftItem.center.x) * scaleRight;
+    _indicatorView.center = CGPointMake(centerX, originalY);
+    
 }
 -(void)layoutSubviews {
     [super layoutSubviews];
@@ -94,7 +126,7 @@
     
     
     NSArray *items = [UIButton buttonWithTitles:self.titles normalColor:self.titleNormalColor selectedColor:self.titleSelectedColor font:self.titleFont frame:CGRectMake(0, 0, itemW, itemH)];
-    
+    self.items = items;
     __weak typeof(self) weakSelf = self;
     [items enumerateObjectsUsingBlock:^(UIButton *item, NSUInteger idx, BOOL * _Nonnull stop) {
         item.mj_origin = CGPointMake(itemW*idx, 0);
@@ -103,12 +135,11 @@
         
         if (item.indexInSegmentView == weakSelf.selectedItemIndex) {
             [item setSelected:YES];
-            weakSelf.currentSeletedItem = item;
             
             //更新指示器
             NSString *title = weakSelf.titles[idx];
             
-            [self updateIndicatorViewWithTitle:title animated:false];
+            [self updateIndicatorViewWithTitle:title];
             
         }
     }];
@@ -116,12 +147,11 @@
 }
 
 -(void)handleItemSelectedAtIndex:(UIButton *)selectedItem {
-    if (selectedItem != self.currentSeletedItem) {
-        [self.currentSeletedItem setSelected:false];
+    if (selectedItem.indexInSegmentView != self.selectedItemIndex) {
+        UIButton *currentSeletedItem = _items[_selectedItemIndex];
+        [currentSeletedItem setSelected:false];
         [selectedItem setSelected:YES];
-        self.currentSeletedItem = selectedItem;
-         NSString *title = self.titles[selectedItem.indexInSegmentView];
-        [self updateIndicatorViewWithTitle:title animated:true];
+        _selectedItemIndex = selectedItem.indexInSegmentView;
         if (_delegate &&[_delegate respondsToSelector:@selector(segmentConrol:didSelectedItemAtIndex:)]) {
             [_delegate segmentConrol:self didSelectedItemAtIndex:selectedItem.indexInSegmentView];
         }
@@ -129,21 +159,12 @@
     
 }
 
--(void)updateIndicatorViewWithTitle:(NSString *)title animated:(BOOL)animated {
-    if (animated) {
-        [UIView animateWithDuration:0.25 animations:^{
-            [self updateIndicatorViewWithTitle:title];
-        }];
-        
-    }else {
-        [self updateIndicatorViewWithTitle:title];
-    }
-}
 -(void)updateIndicatorViewWithTitle:(NSString *)title {
     CGSize size = [TYSegmentTool caculateTitleFrameWithTitle:title withFont:self.titleFont];
-    CGFloat itemW = self.currentSeletedItem.frame.size.width;
-    CGFloat itemH = self.currentSeletedItem.frame.size.height;
-    CGFloat itemOX =  self.currentSeletedItem.frame.origin.x;
+    UIButton *currentSeletedItem = _items[_selectedItemIndex];
+    CGFloat itemW = currentSeletedItem.frame.size.width;
+    CGFloat itemH = currentSeletedItem.frame.size.height;
+    CGFloat itemOX = currentSeletedItem.frame.origin.x;
     CGFloat startX = itemOX + (itemW -size.width)/2;
     self.indicatorView.frame = CGRectMake(startX, itemH-2, size.width, indicatorViewHeight);
 }

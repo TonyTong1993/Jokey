@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B66FD8E6017C583CB15941D /* libPods-RCTTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8615EBF6469A8CA8B7939F62 /* libPods-RCTTest.a */; };
+		1AC1253604F5FFBB13EB143A /* libPods-RCTTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8615EBF6469A8CA8B7939F62 /* libPods-RCTTest.a */; };
 		EB032D201F0251F300F32465 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB032D1F1F0251F300F32465 /* main.m */; };
 		EB032D231F0251F300F32465 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB032D221F0251F300F32465 /* AppDelegate.m */; };
 		EB032D261F0251F300F32465 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB032D251F0251F300F32465 /* ViewController.m */; };
@@ -20,6 +20,7 @@
 		EB18D3F21F0F785500B44790 /* TYTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3F11F0F785500B44790 /* TYTheme.m */; };
 		EB18D3F51F0F890700B44790 /* TYNetWorkingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3F41F0F890700B44790 /* TYNetWorkingTool.m */; };
 		EB18D3F81F0F89C500B44790 /* TYServiceApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3F71F0F89C500B44790 /* TYServiceApi.m */; };
+		EB2425F71F34C5D800E0ACE6 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2425F61F34C5D800E0ACE6 /* libReact.a */; };
 		EB3299C81F1352710034D095 /* fontFamily.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB3299C71F1352710034D095 /* fontFamily.txt */; };
 		EB3299CE1F1354420034D095 /* TYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3299CD1F1354420034D095 /* TYHomeViewController.m */; };
 		EB3299D01F136B860034D095 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299CF1F136B860034D095 /* iconfont.ttf */; };
@@ -78,6 +79,7 @@
 		EB18D3F41F0F890700B44790 /* TYNetWorkingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYNetWorkingTool.m; sourceTree = "<group>"; };
 		EB18D3F61F0F89C500B44790 /* TYServiceApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYServiceApi.h; sourceTree = "<group>"; };
 		EB18D3F71F0F89C500B44790 /* TYServiceApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYServiceApi.m; sourceTree = "<group>"; };
+		EB2425F61F34C5D800E0ACE6 /* libReact.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libReact.a; path = "Pods/../build/Debug-iphoneos/React/libReact.a"; sourceTree = "<group>"; };
 		EB3299C71F1352710034D095 /* fontFamily.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fontFamily.txt; sourceTree = "<group>"; };
 		EB3299CC1F1354420034D095 /* TYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYHomeViewController.h; sourceTree = "<group>"; };
 		EB3299CD1F1354420034D095 /* TYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYHomeViewController.m; sourceTree = "<group>"; };
@@ -136,7 +138,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B66FD8E6017C583CB15941D /* libPods-RCTTest.a in Frameworks */,
+				EB2425F71F34C5D800E0ACE6 /* libReact.a in Frameworks */,
+				1AC1253604F5FFBB13EB143A /* libPods-RCTTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +158,7 @@
 		C99CA68C2F5497E7F1256D9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB2425F61F34C5D800E0ACE6 /* libReact.a */,
 				8615EBF6469A8CA8B7939F62 /* libPods-RCTTest.a */,
 			);
 			name = Frameworks;
@@ -559,7 +563,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -723,7 +727,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RCTTest/PrefixHeader.pch;
 				INFOPLIST_FILE = RCTTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/React",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.RCTTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RCTTest/Sreens/Video/RCTTest-Bridging-Header.h";
@@ -744,7 +753,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RCTTest/PrefixHeader.pch;
 				INFOPLIST_FILE = RCTTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/React",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.RCTTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RCTTest/Sreens/Video/RCTTest-Bridging-Header.h";

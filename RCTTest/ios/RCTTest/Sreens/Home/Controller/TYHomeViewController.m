@@ -12,6 +12,7 @@
 #import "TYSegmentViewController.h"
 @interface TYHomeViewController ()<TYSegmentControlDelegate,UIScrollViewDelegate>
 @property (nonatomic,strong) UIScrollView *scrollView;
+@property (nonatomic,strong) TYSegmentView *segmentView;
 @end
 
 @implementation TYHomeViewController
@@ -29,7 +30,7 @@
     [segmentView setSelectedItemIndex:0];
     [segmentView setIndicatorBackgroundColor:HEXCOLOR(0x55B1E6)];
     self.navigationItem.titleView = segmentView;
-    
+    self.segmentView = segmentView;
    
     
     
@@ -72,13 +73,15 @@
 #pragma mark---
 #pragma mark--- TYSegmentControlDelegate
 -(void)segmentConrol:(UIView *)segmentView didSelectedItemAtIndex:(NSUInteger)index {
-    NSLog(@"didSelectedItemAtIndex = %lu",index);
+      CGFloat width = self.scrollView.frame.size.width;
+    [self.scrollView setContentOffset:CGPointMake(width*index, 0) animated:true];
 }
 
-
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
-//    CGFloat offsetX = scrollView.contentOffset.x;
-//    CGFloat width = self.view.frame.size.width;
+    
+    CGFloat value = scrollView.contentOffset.x / scrollView.frame.size.width;
+    [self.segmentView setIndicatorViewScrollOffSetX:value];
+    
     
 }
 
@@ -93,6 +96,8 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-     NSLog(@"scrollViewDidEndDecelerating");
+    int index = scrollView.contentOffset.x / scrollView.frame.size.width;
+    [self.segmentView updateSelectedItemIndex:index];
+    
 }
 @end
