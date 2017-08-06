@@ -87,11 +87,11 @@
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate;
 {
-    NSLog(@"scrollViewDidEndDragging");
+    [_segmentView segment_resetItemTextNormalColors];
 }
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
 {
-    NSLog(@"scrollViewWillEndDragging");
+     [_segmentView segment_resetItemTextNormalColors];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView

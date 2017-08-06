@@ -8,6 +8,7 @@
 
 #import "TYSegmentView.h"
 #import "UIButton+TYExtension.h"
+#import "UIColor+RGBA.h"
 #import "TYSegmentTool.h"
 #import "TYSegementIndicatorView.h"
 #define indicatorViewHeight 2
@@ -16,7 +17,20 @@
 
 @property (nonatomic,copy) NSArray *items;
 
+@property (nonatomic,weak) NSArray *normalColorRgbaArr;
+
+@property (nonatomic,weak) NSArray *selectedColorRgbaArr;
+
+@property (nonatomic,weak) NSArray *gradientRgbaArr;
+
+@property (nonatomic,weak) UIButton *oldsSelectedItem;
+
+@property (nonatomic,weak) UIButton *newsSelectedItem;
+
 @property (nonatomic,strong) TYSegementIndicatorView *indicatorView;
+
+-(void)setTitleNormalColor:(UIColor *)normalColor item:(UIButton *)item;
+-(void)setTitleSelectedColor:(UIColor *)selectedColor item:(UIButton *)item;
 @end
 @implementation TYSegmentView
 
@@ -78,7 +92,30 @@
             break;
     }
 }
-
+- (NSArray *)normalColorRgbaArr
+{
+    if (!_normalColorRgbaArr) {
+        NSArray *normalColorRgbaArr = [UIColor colorForRGBAWithConvertColor:_titleNormalColor];
+        _normalColorRgbaArr = normalColorRgbaArr;
+    }
+    return  _normalColorRgbaArr;
+}
+- (NSArray *)selectedColorRgbaArr
+{
+    if (!_selectedColorRgbaArr) {
+        NSArray *selectedColorRgbaArr = [UIColor colorForRGBAWithConvertColor:_titleSelectedColor];
+        _selectedColorRgbaArr = selectedColorRgbaArr;
+    }
+    return  _selectedColorRgbaArr;
+}
+- (NSArray *)gradientRgbaArr
+{
+    if (!_gradientRgbaArr) {
+        NSArray *gradientRgbaArr = [UIColor colorForGradientRGBAWith:self.normalColorRgbaArr selectedRgbaComponents:self.selectedColorRgbaArr];
+        _gradientRgbaArr= gradientRgbaArr;
+    }
+    return  _gradientRgbaArr;
+}
 -(void)setSelectedItemIndex:(NSUInteger)selectedItemIndex {
     _selectedItemIndex = selectedItemIndex;
     
@@ -90,8 +127,11 @@
         [preItem setSelected:false];
         [lastItem setSelected:true];
         _selectedItemIndex = selectedItemIndex;
+        [self setTitleSelectedColor:_titleSelectedColor item:lastItem];
     }
-    
+    [_items enumerateObjectsUsingBlock:^(UIButton*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+       [self setTitleNormalColor:_titleNormalColor item:obj];
+    }];
 }
 -(void)setIndicatorBackgroundColor:(UIColor *)color {
     self.indicatorView.backgroundColor = color;
@@ -117,6 +157,34 @@
     CGFloat centerX = leftItem.center.x + (rightItem.center.x - leftItem.center.x) * scaleRight;
     _indicatorView.center = CGPointMake(centerX, originalY);
     
+    [self setupGramientWithValueTag:value leftItem:leftItem rightItem:rightItem scaleRight:scaleRight];
+    
+}
+-(void)setupGramientWithValueTag:(NSInteger)value leftItem:(UIButton*)leftItem rightItem:(UIButton*)rightItem scaleRight:(CGFloat)scaleRight
+{
+    if (value > _selectedItemIndex || value == _selectedItemIndex) {
+        [self setTitleSelectedColor:[UIColor oldColorWithSelectedColorRGBA:self.selectedColorRgbaArr deltaRGBA:self.gradientRgbaArr scale:scaleRight] item:leftItem];
+         _oldsSelectedItem =  leftItem;
+         [self setTitleNormalColor:[UIColor newColorWithNormalColorRGBA:self.normalColorRgbaArr deltaRGBA:self.gradientRgbaArr scale:scaleRight] item:rightItem];
+         _newsSelectedItem = rightItem;
+    }else{
+        
+        [self setTitleNormalColor:[UIColor oldColorWithSelectedColorRGBA:self.selectedColorRgbaArr deltaRGBA:self.gradientRgbaArr scale:scaleRight] item:leftItem];
+         _newsSelectedItem = leftItem;
+        [self setTitleSelectedColor:[UIColor newColorWithNormalColorRGBA:self.normalColorRgbaArr deltaRGBA:self.gradientRgbaArr scale:scaleRight] item:rightItem];
+         _oldsSelectedItem =  rightItem;
+    }
+}
+- (void)segment_resetItemTextNormalColors
+{
+    [self setTitleNormalColor:_titleNormalColor item:_oldsSelectedItem];
+}
+
+-(void)setTitleNormalColor:(UIColor *)normalColor item:(UIButton *)item{
+    [item setTitleColor:normalColor forState:UIControlStateNormal];
+}
+-(void)setTitleSelectedColor:(UIColor *)selectedColor item:(UIButton *)item{
+     [item setTitleColor:selectedColor forState:UIControlStateSelected];
 }
 -(void)layoutSubviews {
     [super layoutSubviews];

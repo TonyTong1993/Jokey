@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1AC1253604F5FFBB13EB143A /* libPods-RCTTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8615EBF6469A8CA8B7939F62 /* libPods-RCTTest.a */; };
+		EB01F61B1F36B635008CF290 /* UIColor+RGBA.m in Sources */ = {isa = PBXBuildFile; fileRef = EB01F61A1F36B635008CF290 /* UIColor+RGBA.m */; };
 		EB032D201F0251F300F32465 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB032D1F1F0251F300F32465 /* main.m */; };
 		EB032D231F0251F300F32465 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB032D221F0251F300F32465 /* AppDelegate.m */; };
 		EB032D261F0251F300F32465 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB032D251F0251F300F32465 /* ViewController.m */; };
@@ -57,6 +58,8 @@
 		8615EBF6469A8CA8B7939F62 /* libPods-RCTTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RCTTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D502818BA0F8EC5DDC48C475 /* Pods-RCTTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.debug.xcconfig"; sourceTree = "<group>"; };
 		DC2E37739B2C59D2F6B877A9 /* Pods-RCTTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.release.xcconfig"; sourceTree = "<group>"; };
+		EB01F6191F36B635008CF290 /* UIColor+RGBA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RGBA.h"; sourceTree = "<group>"; };
+		EB01F61A1F36B635008CF290 /* UIColor+RGBA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RGBA.m"; sourceTree = "<group>"; };
 		EB032D1B1F0251F300F32465 /* RCTTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCTTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB032D1F1F0251F300F32465 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EB032D211F0251F300F32465 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -293,6 +296,8 @@
 				EB5D39351F34717F0029085F /* TYSegmentControlDelegate.h */,
 				EB5D39361F3491C30029085F /* TYSegmentViewController.h */,
 				EB5D39371F3491C30029085F /* TYSegmentViewController.m */,
+				EB01F6191F36B635008CF290 /* UIColor+RGBA.h */,
+				EB01F61A1F36B635008CF290 /* UIColor+RGBA.m */,
 			);
 			name = ScrollPageView;
 			sourceTree = "<group>";
@@ -578,6 +583,7 @@
 				EB5D392B1F345DE90029085F /* TYSegementIndicatorView.m in Sources */,
 				EB5A2A101F0388D700A19F2C /* TYTabBarController.m in Sources */,
 				EB5D39381F3491C30029085F /* TYSegmentViewController.m in Sources */,
+				EB01F61B1F36B635008CF290 /* UIColor+RGBA.m in Sources */,
 				EB18D3F51F0F890700B44790 /* TYNetWorkingTool.m in Sources */,
 				EB5A2A3D1F03B3E800A19F2C /* TYLoginViewController.m in Sources */,
 				EB18D3F21F0F785500B44790 /* TYTheme.m in Sources */,

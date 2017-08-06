@@ -40,4 +40,5 @@ typedef NS_ENUM(NSUInteger,SegmentControlState) {
 
 -(void)updateSelectedItemIndex:(NSUInteger)selectedItemIndex;
 
+- (void)segment_resetItemTextNormalColors;
 @end
