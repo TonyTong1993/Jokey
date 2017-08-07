@@ -79,8 +79,8 @@
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
-    CGFloat value = scrollView.contentOffset.x / scrollView.frame.size.width;
-    [self.segmentView setIndicatorViewScrollOffSetX:value];
+   
+    [self.segmentView setIndicatorViewScrollOffSetX:scrollView];
     
     
 }

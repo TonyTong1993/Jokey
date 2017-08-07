@@ -136,9 +136,9 @@
 -(void)setIndicatorBackgroundColor:(UIColor *)color {
     self.indicatorView.backgroundColor = color;
 }
--(void)setIndicatorViewScrollOffSetX:(CGFloat)scaleValue {
+-(void)setIndicatorViewScrollOffSetX:(UIScrollView *)scrollView {
     NSUInteger count = self.titles.count;
-    CGFloat value = scaleValue;
+    CGFloat value = scrollView.contentOffset.x / scrollView.frame.size.width;
     if (value >= count - 1) return;
     if (value <= 0) return;
     CGFloat scaleRight = 0;
@@ -157,8 +157,9 @@
     CGFloat centerX = leftItem.center.x + (rightItem.center.x - leftItem.center.x) * scaleRight;
     _indicatorView.center = CGPointMake(centerX, originalY);
     
-    [self setupGramientWithValueTag:value leftItem:leftItem rightItem:rightItem scaleRight:scaleRight];
-    
+    if (scrollView.dragging) {
+         [self setupGramientWithValueTag:value leftItem:leftItem rightItem:rightItem scaleRight:scaleRight];
+    }
 }
 -(void)setupGramientWithValueTag:(NSInteger)value leftItem:(UIButton*)leftItem rightItem:(UIButton*)rightItem scaleRight:(CGFloat)scaleRight
 {
