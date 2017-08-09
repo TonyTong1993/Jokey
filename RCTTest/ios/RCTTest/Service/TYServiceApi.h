@@ -12,6 +12,8 @@
 
 extern NSString const  *api_common;
 
+extern NSString const  *api_common_avatar;
+extern NSString const  *api_common_image;
 @end
 //!!!!模块接口
 @interface TYServiceApi (Home)
