@@ -36,5 +36,9 @@ typedef NS_ENUM(NSUInteger,SegmentControlState) {
 
 -(void)setIndicatorBackgroundColor:(UIColor *)color ;
 
+-(void)setIndicatorViewScrollOffSetX:(UIScrollView *)scrollView ;
 
+-(void)updateSelectedItemIndex:(NSUInteger)selectedItemIndex;
+
+- (void)segment_resetItemTextNormalColors;
 @end

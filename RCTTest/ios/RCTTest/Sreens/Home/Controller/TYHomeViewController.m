@@ -12,6 +12,7 @@
 #import "TYSegmentViewController.h"
 @interface TYHomeViewController ()<TYSegmentControlDelegate,UIScrollViewDelegate>
 @property (nonatomic,strong) UIScrollView *scrollView;
+@property (nonatomic,strong) TYSegmentView *segmentView;
 @end
 
 @implementation TYHomeViewController
@@ -29,14 +30,14 @@
     [segmentView setSelectedItemIndex:0];
     [segmentView setIndicatorBackgroundColor:HEXCOLOR(0x55B1E6)];
     self.navigationItem.titleView = segmentView;
-    
+    self.segmentView = segmentView;
    
     
     
 }
 -(void)setUpTableView {
     
-    self.automaticallyAdjustsScrollViewInsets = false;
+//    self.automaticallyAdjustsScrollViewInsets = false;
     //设置scrollView
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     self.scrollView.pagingEnabled = YES;
@@ -72,27 +73,31 @@
 #pragma mark---
 #pragma mark--- TYSegmentControlDelegate
 -(void)segmentConrol:(UIView *)segmentView didSelectedItemAtIndex:(NSUInteger)index {
-    NSLog(@"didSelectedItemAtIndex = %lu",index);
+      CGFloat width = self.scrollView.frame.size.width;
+    [self.scrollView setContentOffset:CGPointMake(width*index, 0) animated:false];
 }
 
-
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
-//    CGFloat offsetX = scrollView.contentOffset.x;
-//    CGFloat width = self.view.frame.size.width;
+    
+   
+    [self.segmentView setIndicatorViewScrollOffSetX:scrollView];
+    
     
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate;
 {
-    NSLog(@"scrollViewDidEndDragging");
+    [_segmentView segment_resetItemTextNormalColors];
 }
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
 {
-    NSLog(@"scrollViewWillEndDragging");
+     [_segmentView segment_resetItemTextNormalColors];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-     NSLog(@"scrollViewDidEndDecelerating");
+    int index = scrollView.contentOffset.x / scrollView.frame.size.width;
+    [self.segmentView updateSelectedItemIndex:index];
+    
 }
 @end
