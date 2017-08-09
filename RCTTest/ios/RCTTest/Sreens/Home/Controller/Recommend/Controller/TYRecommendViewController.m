@@ -19,7 +19,7 @@
 
 }
 -(void)setUpTableView {
-    [super setUpTableView];
+    
 }
 
 @end
