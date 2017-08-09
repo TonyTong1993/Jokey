@@ -10,6 +10,7 @@
 #import "TYNetWorkingTool.h"
 #import "TYSegmentView.h"
 #import "TYSegmentViewController.h"
+
 @interface TYHomeViewController ()<TYSegmentControlDelegate,UIScrollViewDelegate>
 @property (nonatomic,strong) UIScrollView *scrollView;
 @property (nonatomic,strong) TYSegmentView *segmentView;
@@ -31,7 +32,7 @@
     [segmentView setIndicatorBackgroundColor:HEXCOLOR(0x55B1E6)];
     self.navigationItem.titleView = segmentView;
     self.segmentView = segmentView;
-   
+    [self loadNewData];
     
     
 }
@@ -76,7 +77,8 @@
       CGFloat width = self.scrollView.frame.size.width;
     [self.scrollView setContentOffset:CGPointMake(width*index, 0) animated:false];
 }
-
+#pragma mark---
+#pragma mark---UIScrollViewDelegate
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
    

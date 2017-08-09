@@ -11,7 +11,12 @@
 @implementation TYServiceApi
 
 NSString const *api_common = @"http://tbapi.ixiaochuan.cn";
+NSString const  *api_common_avatar = @"/account/avatar/id/";
+NSString const  *api_common_image = @"/img/view/id/";
 
++(NSString *)serviceForImagePath:(NSString *)path imageID:(NSUInteger)imageID fileName:(NSString *)fileName {
+    return  [NSString stringWithFormat:@"%@%@%lu%@",api_common,path,imageID,fileName];
+}
 @end
 
 @implementation TYServiceApi(Home)

@@ -22,6 +22,13 @@
 		EB18D3F51F0F890700B44790 /* TYNetWorkingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3F41F0F890700B44790 /* TYNetWorkingTool.m */; };
 		EB18D3F81F0F89C500B44790 /* TYServiceApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3F71F0F89C500B44790 /* TYServiceApi.m */; };
 		EB2425F71F34C5D800E0ACE6 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2425F61F34C5D800E0ACE6 /* libReact.a */; };
+		EB266F4E1F3B29DA00949D40 /* TYModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB266F4D1F3B29DA00949D40 /* TYModelTest.m */; };
+		EB266F511F3B2B0400949D40 /* TYImageTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB266F501F3B2B0400949D40 /* TYImageTest.m */; };
+		EB266F541F3B2B5100949D40 /* TYMemberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB266F531F3B2B5100949D40 /* TYMemberTest.m */; };
+		EB266F571F3B2BEE00949D40 /* TYTopicTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB266F561F3B2BEE00949D40 /* TYTopicTest.m */; };
+		EB266F5A1F3B2D2000949D40 /* TYReviewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB266F591F3B2D2000949D40 /* TYReviewTest.m */; };
+		EB266F5C1F3B317500949D40 /* recommend.json in Resources */ = {isa = PBXBuildFile; fileRef = EB266F5B1F3B317500949D40 /* recommend.json */; };
+		EB266F651F3B38AE00949D40 /* TYRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB266F641F3B38AE00949D40 /* TYRecommendViewController.m */; };
 		EB3299C81F1352710034D095 /* fontFamily.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB3299C71F1352710034D095 /* fontFamily.txt */; };
 		EB3299CE1F1354420034D095 /* TYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3299CD1F1354420034D095 /* TYHomeViewController.m */; };
 		EB3299D01F136B860034D095 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299CF1F136B860034D095 /* iconfont.ttf */; };
@@ -83,6 +90,20 @@
 		EB18D3F61F0F89C500B44790 /* TYServiceApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYServiceApi.h; sourceTree = "<group>"; };
 		EB18D3F71F0F89C500B44790 /* TYServiceApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYServiceApi.m; sourceTree = "<group>"; };
 		EB2425F61F34C5D800E0ACE6 /* libReact.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libReact.a; path = "Pods/../build/Debug-iphoneos/React/libReact.a"; sourceTree = "<group>"; };
+		EB266F4C1F3B29DA00949D40 /* TYModelTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYModelTest.h; sourceTree = "<group>"; };
+		EB266F4D1F3B29DA00949D40 /* TYModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYModelTest.m; sourceTree = "<group>"; };
+		EB266F4F1F3B2B0400949D40 /* TYImageTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYImageTest.h; sourceTree = "<group>"; };
+		EB266F501F3B2B0400949D40 /* TYImageTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYImageTest.m; sourceTree = "<group>"; };
+		EB266F521F3B2B5100949D40 /* TYMemberTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYMemberTest.h; sourceTree = "<group>"; };
+		EB266F531F3B2B5100949D40 /* TYMemberTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYMemberTest.m; sourceTree = "<group>"; };
+		EB266F551F3B2BEE00949D40 /* TYTopicTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTopicTest.h; sourceTree = "<group>"; };
+		EB266F561F3B2BEE00949D40 /* TYTopicTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTopicTest.m; sourceTree = "<group>"; };
+		EB266F581F3B2D2000949D40 /* TYReviewTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYReviewTest.h; sourceTree = "<group>"; };
+		EB266F591F3B2D2000949D40 /* TYReviewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYReviewTest.m; sourceTree = "<group>"; };
+		EB266F5B1F3B317500949D40 /* recommend.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recommend.json; sourceTree = "<group>"; };
+		EB266F5D1F3B33B000949D40 /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		EB266F631F3B38AE00949D40 /* TYRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYRecommendViewController.h; sourceTree = "<group>"; };
+		EB266F641F3B38AE00949D40 /* TYRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYRecommendViewController.m; sourceTree = "<group>"; };
 		EB3299C71F1352710034D095 /* fontFamily.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fontFamily.txt; sourceTree = "<group>"; };
 		EB3299CC1F1354420034D095 /* TYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYHomeViewController.h; sourceTree = "<group>"; };
 		EB3299CD1F1354420034D095 /* TYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYHomeViewController.m; sourceTree = "<group>"; };
@@ -224,8 +245,20 @@
 		EB18D3E11F0F41FE00B44790 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				EB266F5B1F3B317500949D40 /* recommend.json */,
 				EB18D3E21F0F427200B44790 /* RCTLocationObserver.h */,
 				EB18D3E31F0F427200B44790 /* RCTLocationObserver.m */,
+				EB266F4C1F3B29DA00949D40 /* TYModelTest.h */,
+				EB266F4D1F3B29DA00949D40 /* TYModelTest.m */,
+				EB266F4F1F3B2B0400949D40 /* TYImageTest.h */,
+				EB266F501F3B2B0400949D40 /* TYImageTest.m */,
+				EB266F521F3B2B5100949D40 /* TYMemberTest.h */,
+				EB266F531F3B2B5100949D40 /* TYMemberTest.m */,
+				EB266F551F3B2BEE00949D40 /* TYTopicTest.h */,
+				EB266F561F3B2BEE00949D40 /* TYTopicTest.m */,
+				EB266F581F3B2D2000949D40 /* TYReviewTest.h */,
+				EB266F591F3B2D2000949D40 /* TYReviewTest.m */,
+				EB266F5D1F3B33B000949D40 /* Test.h */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -240,9 +273,43 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		EB266F5F1F3B37C800949D40 /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				EB266F621F3B386600949D40 /* Model */,
+				EB266F611F3B385500949D40 /* View */,
+				EB266F601F3B383C00949D40 /* Controller */,
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
+		EB266F601F3B383C00949D40 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EB266F631F3B38AE00949D40 /* TYRecommendViewController.h */,
+				EB266F641F3B38AE00949D40 /* TYRecommendViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EB266F611F3B385500949D40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB266F621F3B386600949D40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EB3299C91F1353830034D095 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EB266F5F1F3B37C800949D40 /* Recommend */,
 				EB3299CC1F1354420034D095 /* TYHomeViewController.h */,
 				EB3299CD1F1354420034D095 /* TYHomeViewController.m */,
 			);
@@ -399,9 +466,9 @@
 		EB5A2A161F0389BA00A19F2C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EB3299C91F1353830034D095 /* Controller */,
 				EB3299CB1F1354100034D095 /* Model */,
 				EB3299CA1F1353E10034D095 /* Components */,
-				EB3299C91F1353830034D095 /* Controller */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -499,6 +566,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB266F5C1F3B317500949D40 /* recommend.json in Resources */,
 				EB3299E21F1385B60034D095 /* Ionicons.ttf in Resources */,
 				EB3299E31F1385B60034D095 /* MaterialCommunityIcons.ttf in Resources */,
 				EB032D2E1F0251F300F32465 /* LaunchScreen.storyboard in Resources */,
@@ -579,6 +647,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB5A2A2A1F0390FB00A19F2C /* TYMailViewController.m in Sources */,
+				EB266F541F3B2B5100949D40 /* TYMemberTest.m in Sources */,
 				EB5A2A2D1F03911200A19F2C /* TYProfileViewController.m in Sources */,
 				EB5D392B1F345DE90029085F /* TYSegementIndicatorView.m in Sources */,
 				EB5A2A101F0388D700A19F2C /* TYTabBarController.m in Sources */,
@@ -597,13 +666,18 @@
 				EB5D39341F34657C0029085F /* TYSegmentTool.m in Sources */,
 				EB3299CE1F1354420034D095 /* TYHomeViewController.m in Sources */,
 				EB032D201F0251F300F32465 /* main.m in Sources */,
+				EB266F571F3B2BEE00949D40 /* TYTopicTest.m in Sources */,
 				EB18D3EA1F0F725C00B44790 /* TYVideoController.swift in Sources */,
 				EB5D392E1F3460750029085F /* UIButton+TYExtension.m in Sources */,
 				EB5A2A401F03B40D00A19F2C /* TYRCTViewController.m in Sources */,
+				EB266F651F3B38AE00949D40 /* TYRecommendViewController.m in Sources */,
+				EB266F4E1F3B29DA00949D40 /* TYModelTest.m in Sources */,
 				EB593FF01F161DDC0093EF63 /* TYBaseViewController.m in Sources */,
 				EB5D39281F345D0A0029085F /* TYCalculateFrameTool.m in Sources */,
 				EB18D3E71F0F6B7700B44790 /* TYRCTModule.m in Sources */,
+				EB266F511F3B2B0400949D40 /* TYImageTest.m in Sources */,
 				EB5A2A1D1F038C4100A19F2C /* UIButton+LPExtension.m in Sources */,
+				EB266F5A1F3B2D2000949D40 /* TYReviewTest.m in Sources */,
 				EB18D3E41F0F427200B44790 /* RCTLocationObserver.m in Sources */,
 				EB5A2A1A1F038C2E00A19F2C /* UIColor+LPExtension.m in Sources */,
 			);
