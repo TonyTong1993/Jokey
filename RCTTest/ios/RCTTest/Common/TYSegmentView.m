@@ -127,10 +127,11 @@
         [preItem setSelected:false];
         [lastItem setSelected:true];
         _selectedItemIndex = selectedItemIndex;
-        [self setTitleSelectedColor:_titleSelectedColor item:lastItem];
+       
     }
     [_items enumerateObjectsUsingBlock:^(UIButton*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
        [self setTitleNormalColor:_titleNormalColor item:obj];
+       [self setTitleSelectedColor:_titleSelectedColor item:obj];
     }];
 }
 -(void)setIndicatorBackgroundColor:(UIColor *)color {
@@ -156,10 +157,8 @@
     CGFloat originalY =  _indicatorView.center.y;
     CGFloat centerX = leftItem.center.x + (rightItem.center.x - leftItem.center.x) * scaleRight;
     _indicatorView.center = CGPointMake(centerX, originalY);
+    [self setupGramientWithValueTag:value leftItem:leftItem rightItem:rightItem scaleRight:scaleRight];
     
-    if (scrollView.dragging) {
-         [self setupGramientWithValueTag:value leftItem:leftItem rightItem:rightItem scaleRight:scaleRight];
-    }
 }
 -(void)setupGramientWithValueTag:(NSInteger)value leftItem:(UIButton*)leftItem rightItem:(UIButton*)rightItem scaleRight:(CGFloat)scaleRight
 {
@@ -208,7 +207,7 @@
             //更新指示器
             NSString *title = weakSelf.titles[idx];
             
-            [self updateIndicatorViewWithTitle:title];
+            [self updateIndicatorViewWithTitle:title animated:false];
             
         }
     }];
@@ -221,9 +220,30 @@
         [currentSeletedItem setSelected:false];
         [selectedItem setSelected:YES];
         _selectedItemIndex = selectedItem.indexInSegmentView;
+        //更新指示器
+        NSString *title = _titles[_selectedItemIndex];
+        [self updateIndicatorViewWithTitle:title animated:true];
+        
         if (_delegate &&[_delegate respondsToSelector:@selector(segmentConrol:didSelectedItemAtIndex:)]) {
             [_delegate segmentConrol:self didSelectedItemAtIndex:selectedItem.indexInSegmentView];
         }
+    }
+    
+}
+-(void)updateIndicatorViewWithTitle:(NSString *)title animated:(BOOL)animated{
+    CGSize size = [TYSegmentTool caculateTitleFrameWithTitle:title withFont:self.titleFont];
+    UIButton *currentSeletedItem = _items[_selectedItemIndex];
+    CGFloat itemW = currentSeletedItem.frame.size.width;
+    CGFloat itemH = currentSeletedItem.frame.size.height;
+    CGFloat itemOX = currentSeletedItem.frame.origin.x;
+    CGFloat startX = itemOX + (itemW -size.width)/2;
+    
+    if (animated) {
+        [UIView animateWithDuration:0.25 animations:^{
+            self.indicatorView.frame = CGRectMake(startX, itemH-2, size.width, indicatorViewHeight);
+        }];
+    }else {
+         self.indicatorView.frame = CGRectMake(startX, itemH-2, size.width, indicatorViewHeight);
     }
     
 }

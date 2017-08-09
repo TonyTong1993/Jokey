@@ -37,7 +37,7 @@
 }
 -(void)setUpTableView {
     
-    self.automaticallyAdjustsScrollViewInsets = false;
+//    self.automaticallyAdjustsScrollViewInsets = false;
     //设置scrollView
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     self.scrollView.pagingEnabled = YES;
@@ -74,7 +74,7 @@
 #pragma mark--- TYSegmentControlDelegate
 -(void)segmentConrol:(UIView *)segmentView didSelectedItemAtIndex:(NSUInteger)index {
       CGFloat width = self.scrollView.frame.size.width;
-    [self.scrollView setContentOffset:CGPointMake(width*index, 0) animated:true];
+    [self.scrollView setContentOffset:CGPointMake(width*index, 0) animated:false];
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
