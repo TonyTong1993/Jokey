@@ -37,7 +37,7 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
         [weakSelf loadNewData];
         
     }];
-    self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.collectionView.backgroundColor = HEXCOLOR(0xEFF0F6);
     [header setImages:self.normalImages forState:MJRefreshStateIdle];
     [header setImages:self.pullingImages  forState:MJRefreshStatePulling];
     [header setImages:self.refreshImages  forState:MJRefreshStateRefreshing];
@@ -85,7 +85,10 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
     CGFloat scrollViewheight = 100;
     CGFloat width = SCREEN_WIDTH ;
     CGFloat height = headerHeight + footerHeight + collectionViewheight + scrollViewheight;
-    return CGSizeMake(width, height);
+    return CGSizeMake(width, height+100);
+}
+-(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 10;
 }
 @end
 

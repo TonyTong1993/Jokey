@@ -54,6 +54,8 @@
 		EB5A2A3D1F03B3E800A19F2C /* TYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A3C1F03B3E800A19F2C /* TYLoginViewController.m */; };
 		EB5A2A401F03B40D00A19F2C /* TYRCTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A3F1F03B40D00A19F2C /* TYRCTViewController.m */; };
 		EB5A99FD1F3C06C30031C497 /* TYHomeUitl.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A99FC1F3C06C30031C497 /* TYHomeUitl.m */; };
+		EB5A9A011F3C4DC10031C497 /* TYImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A99FF1F3C4DC10031C497 /* TYImageViewCell.m */; };
+		EB5A9A021F3C4DC10031C497 /* TYImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5A9A001F3C4DC10031C497 /* TYImageViewCell.xib */; };
 		EB5D39251F345C490029085F /* TYSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39241F345C490029085F /* TYSegmentView.m */; };
 		EB5D39281F345D0A0029085F /* TYCalculateFrameTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39271F345D0A0029085F /* TYCalculateFrameTool.m */; };
 		EB5D392B1F345DE90029085F /* TYSegementIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D392A1F345DE90029085F /* TYSegementIndicatorView.m */; };
@@ -146,6 +148,9 @@
 		EB5A2A3F1F03B40D00A19F2C /* TYRCTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYRCTViewController.m; sourceTree = "<group>"; };
 		EB5A99FB1F3C06C30031C497 /* TYHomeUitl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYHomeUitl.h; sourceTree = "<group>"; };
 		EB5A99FC1F3C06C30031C497 /* TYHomeUitl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYHomeUitl.m; sourceTree = "<group>"; };
+		EB5A99FE1F3C4DC10031C497 /* TYImageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYImageViewCell.h; sourceTree = "<group>"; };
+		EB5A99FF1F3C4DC10031C497 /* TYImageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYImageViewCell.m; sourceTree = "<group>"; };
+		EB5A9A001F3C4DC10031C497 /* TYImageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TYImageViewCell.xib; sourceTree = "<group>"; };
 		EB5D39231F345C490029085F /* TYSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSegmentView.h; sourceTree = "<group>"; };
 		EB5D39241F345C490029085F /* TYSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSegmentView.m; sourceTree = "<group>"; };
 		EB5D39261F345D0A0029085F /* TYCalculateFrameTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYCalculateFrameTool.h; sourceTree = "<group>"; };
@@ -330,6 +335,9 @@
 				EB43475C1F3B51D100EC7AE9 /* TYStatusViewCell.h */,
 				EB43475D1F3B51D100EC7AE9 /* TYStatusViewCell.m */,
 				EB43475E1F3B51D100EC7AE9 /* TYStatusViewCell.xib */,
+				EB5A99FE1F3C4DC10031C497 /* TYImageViewCell.h */,
+				EB5A99FF1F3C4DC10031C497 /* TYImageViewCell.m */,
+				EB5A9A001F3C4DC10031C497 /* TYImageViewCell.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -594,6 +602,7 @@
 				EB3299DE1F1385B60034D095 /* Entypo.ttf in Resources */,
 				EB3299C81F1352710034D095 /* fontFamily.txt in Resources */,
 				EB3299E61F1385B60034D095 /* SimpleLineIcons.ttf in Resources */,
+				EB5A9A021F3C4DC10031C497 /* TYImageViewCell.xib in Resources */,
 				EB3299E11F1385B60034D095 /* Foundation.ttf in Resources */,
 				EB3299E71F1385B60034D095 /* Zocial.ttf in Resources */,
 				EB3299E01F1385B60034D095 /* FontAwesome.ttf in Resources */,
@@ -691,6 +700,7 @@
 				EB3299CE1F1354420034D095 /* TYHomeViewController.m in Sources */,
 				EB032D201F0251F300F32465 /* main.m in Sources */,
 				EB266F571F3B2BEE00949D40 /* TYTopicTest.m in Sources */,
+				EB5A9A011F3C4DC10031C497 /* TYImageViewCell.m in Sources */,
 				EB18D3EA1F0F725C00B44790 /* TYVideoController.swift in Sources */,
 				EB5D392E1F3460750029085F /* UIButton+TYExtension.m in Sources */,
 				EB5A2A401F03B40D00A19F2C /* TYRCTViewController.m in Sources */,

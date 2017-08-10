@@ -11,7 +11,10 @@
 #import "TYModelTest.h"
 #import "TYMemberTest.h"
 #import "TYImageTest.h"
-@interface TYStatusViewCell()
+#import "TYHomeUitl.h"
+#import "TYImageViewCell.h"
+static NSString *reuseIndentifier = @"KTYImageViewCell";
+@interface TYStatusViewCell()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UIImageView *avatarView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *closeBtn;
@@ -36,30 +39,49 @@
     self.avatarView.layer.masksToBounds = YES;
     self.shareBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 12, 0, 0);
     self.reviewBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 12, 0, 0);
-
+    
+    
+    //注册xib
+    [self.collectionView registerNib:[UINib nibWithNibName:@"TYImageViewCell" bundle:nil] forCellWithReuseIdentifier:reuseIndentifier];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
 }
 
 -(void)setModel:(TYModelTest *)model {
     _model = model;
     TYMemberTest *member = [TYMemberTest mj_objectWithKeyValues:model.member];
     NSString *avatarPath = [TYServiceApi serviceForImagePath:api_common_avatar imageID:member.avatar];
-    [_avatarView sd_setImageWithURL:[NSURL URLWithString:avatarPath] placeholderImage:[UIImage imageNamed:@"header_placeholder"]];
+    [_avatarView sd_setImageWithURL:[NSURL URLWithString:avatarPath]];
     _nameLabel.text = member.name;
     _contentLabel.text = model.content;
-    
+    CGFloat collectionViewheight = [TYHomeUitl homeUitlGetCollectionViewHeight:model.imgs.count];
+    self.collectionViewHeightConstraint.constant = collectionViewheight;
+    [self.collectionView reloadData];
 }
-
-@end
-
-@implementation TYStatusViewCell (colectionView)
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 0;
+    return self.model.imgs.count;
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+   
+    TYImageViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIndentifier forIndexPath:indexPath];
+    NSDictionary *imageDic = self.model.imgs[indexPath.item];
+    TYImageTest *imageModel = [TYImageTest mj_objectWithKeyValues:imageDic];
+    NSString *imagePath = [TYServiceApi serviceForImagePath:api_common_image imageID:imageModel.imageID];
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imagePath]];
+    return cell;
+}
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat width = self.collectionView.mj_w;
+    CGFloat margin = 4;
+    int itemCount = [[NSString stringWithFormat:@"%lu",(unsigned long) _model.imgs.count] intValue];
+    int row = floorf(itemCount/3.0)?3:itemCount;
+    int itemW = (width-margin*(row-1))/row;
+    return CGSizeMake(itemW, itemW);
+}
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
+    return 4;
 }
 @end
 
-@implementation TYStatusViewCell (scrollView)
 
-@end

@@ -13,10 +13,3 @@
 
 @end
 
-@interface TYStatusViewCell (collectionView)<UICollectionViewDataSource,UICollectionViewDelegate>
-
-@end
-
-@interface TYStatusViewCell (scrollView)<UIScrollViewDelegate>
-
-@end

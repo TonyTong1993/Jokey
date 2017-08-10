@@ -10,7 +10,7 @@
 
 @implementation TYServiceApi
 
-NSString * const  api_common = @"http://tbapi.ixiaochuan.cn";
+NSString * const  api_common = @"http://tbfile.ixiaochuan.cn";
 NSString * const  api_common_avatar = @"/account/avatar/id/";
 NSString * const  api_common_image = @"/img/view/id/";
 
