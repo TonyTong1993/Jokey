@@ -61,7 +61,7 @@
                             <outlet property="delegate" destination="-1" id="d2S-aI-hjN"/>
                         </connections>
                     </collectionView>
-                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbv-kV-MuA">
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbv-kV-MuA">
                         <rect key="frame" x="0.0" y="249.5" width="375" height="96"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="96" id="Ozz-IX-oeW"/>

@@ -46,6 +46,16 @@ static NSString *reuseIndentifier = @"KTYImageViewCell";
     self.collectionView.backgroundColor = [UIColor whiteColor];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
+    
+    CGFloat height = _scrollView.mj_h;
+    
+    self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH*3, height);
+    
+    for (int i = 0; i < 3; i++) {
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH*i, 0, SCREEN_WIDTH, height)];
+        view.backgroundColor = [UIColor randomColor];
+        [self.scrollView addSubview:view];
+    }
 }
 
 -(void)setModel:(TYModelTest *)model {
