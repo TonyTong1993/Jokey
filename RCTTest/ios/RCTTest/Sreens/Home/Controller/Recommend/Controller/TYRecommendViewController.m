@@ -83,7 +83,7 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
     CGFloat footerHeight = 60.0f;
     CGFloat collectionViewheight = [TYHomeUitl homeUitlGetCollectionViewHeight:model.imgs.count];
     CGFloat scrollViewheight = 100;
-    CGFloat width = SCREEN_WIDTH - 40;
+    CGFloat width = SCREEN_WIDTH ;
     CGFloat height = headerHeight + footerHeight + collectionViewheight + scrollViewheight;
     return CGSizeMake(width, height);
 }

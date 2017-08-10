@@ -32,8 +32,11 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    self.avatarView.layer.cornerRadius = 30;
+    self.avatarView.layer.cornerRadius = _avatarView.mj_w/2;
     self.avatarView.layer.masksToBounds = YES;
+    self.shareBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 12, 0, 0);
+    self.reviewBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 12, 0, 0);
+
 }
 
 -(void)setModel:(TYModelTest *)model {
