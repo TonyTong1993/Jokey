@@ -10,10 +10,12 @@
 //通用接口
 @interface TYServiceApi : NSObject
 
-extern NSString const  *api_common;
+extern NSString  * const  api_common;
 
-extern NSString const  *api_common_avatar;
-extern NSString const  *api_common_image;
+extern NSString  * const  api_common_avatar;
+extern NSString  * const  api_common_image;
+
++(NSString *)serviceForImagePath:(NSString *)path imageID:(NSUInteger)imageID;
 @end
 //!!!!模块接口
 @interface TYServiceApi (Home)

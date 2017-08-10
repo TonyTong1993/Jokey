@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class TYModelTest;
 @interface TYStatusViewCell : UICollectionViewCell
+@property (nonatomic,strong) TYModelTest *model;
+
+@end
+
+@interface TYStatusViewCell (collectionView)<UICollectionViewDataSource,UICollectionViewDelegate>
+
+@end
+
+@interface TYStatusViewCell (scrollView)<UIScrollViewDelegate>
 
 @end

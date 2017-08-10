@@ -10,9 +10,7 @@
 #import "UIImage+Extentions.h"
 
 @interface TYBaseViewController ()
-@property (nonatomic) NSMutableArray *normalImages;
-@property (nonatomic) NSMutableArray *pullingImages;
-@property (nonatomic) NSMutableArray *refreshImages;
+
 @end
 
 @implementation TYBaseViewController
@@ -56,7 +54,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    self.view.backgroundColor = [UIColor whiteColor];
     [self setUpTableView];
     [self setUpNavigationBar];
 }

@@ -9,8 +9,7 @@
 #import "TYHomeViewController.h"
 #import "TYNetWorkingTool.h"
 #import "TYSegmentView.h"
-#import "TYSegmentViewController.h"
-
+#import "TYRecommendViewController.h"
 @interface TYHomeViewController ()<TYSegmentControlDelegate,UIScrollViewDelegate>
 @property (nonatomic,strong) UIScrollView *scrollView;
 @property (nonatomic,strong) TYSegmentView *segmentView;
@@ -37,10 +36,12 @@
     
 }
 -(void)setUpTableView {
+    self.automaticallyAdjustsScrollViewInsets = false;
     
-//    self.automaticallyAdjustsScrollViewInsets = false;
+    CGFloat width = self.view.frame.size.width;
+    CGFloat height = self.view.frame.size.height-64;
     //设置scrollView
-    self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, width, height)];
     self.scrollView.pagingEnabled = YES;
     self.scrollView.showsVerticalScrollIndicator = false;
     self.scrollView.showsHorizontalScrollIndicator = false;
@@ -49,14 +50,9 @@
     [self.view addSubview:_scrollView];
     
     for (int i  = 0; i < 3; i++) {
-        UIViewController *vc = [[UIViewController alloc] init];
+        TYRecommendViewController *vc = [[TYRecommendViewController alloc] init];
         [self addChildViewController:vc];
     }
-    
-    
-    
-    CGFloat width = self.view.frame.size.width;
-    CGFloat height = self.view.frame.size.height;
     CGFloat startX = 0;
     CGFloat startY = 0;
     NSUInteger index = 0;
@@ -66,7 +62,6 @@
         startX = index*width;
         UIView *view =  viewController.view;
         view.frame = CGRectMake(startX, startY, width, height);
-        view.backgroundColor = [UIColor randomColor];
         [self.scrollView addSubview:view];
         index++;
     }

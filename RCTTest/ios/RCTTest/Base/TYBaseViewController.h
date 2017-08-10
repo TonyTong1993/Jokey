@@ -12,6 +12,10 @@
 @property (nonatomic,retain) UITableView *tableView;
 @property (nonatomic,copy) NSArray *dataSource;
 
+@property (nonatomic) NSMutableArray *normalImages;
+@property (nonatomic) NSMutableArray *pullingImages;
+@property (nonatomic) NSMutableArray *refreshImages;
+
 -(void)setUpTableView ;//设置表格视图
 
 -(void)setUpNavigationBar ;//设置导航栏

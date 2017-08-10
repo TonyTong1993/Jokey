@@ -12,6 +12,7 @@
 #import "TYBaseViewController.h"
 #import <MJExtension/MJExtension.h>
 #import <MJRefresh/MJRefresh.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "UIColor+LPExtension.h"
 #import "TYServiceApi.h"
 #import "TYTheme.h"

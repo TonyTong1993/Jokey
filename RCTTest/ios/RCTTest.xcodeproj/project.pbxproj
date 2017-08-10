@@ -53,6 +53,7 @@
 		EB5A2A2D1F03911200A19F2C /* TYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A2C1F03911200A19F2C /* TYProfileViewController.m */; };
 		EB5A2A3D1F03B3E800A19F2C /* TYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A3C1F03B3E800A19F2C /* TYLoginViewController.m */; };
 		EB5A2A401F03B40D00A19F2C /* TYRCTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A3F1F03B40D00A19F2C /* TYRCTViewController.m */; };
+		EB5A99FD1F3C06C30031C497 /* TYHomeUitl.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A99FC1F3C06C30031C497 /* TYHomeUitl.m */; };
 		EB5D39251F345C490029085F /* TYSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39241F345C490029085F /* TYSegmentView.m */; };
 		EB5D39281F345D0A0029085F /* TYCalculateFrameTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39271F345D0A0029085F /* TYCalculateFrameTool.m */; };
 		EB5D392B1F345DE90029085F /* TYSegementIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D392A1F345DE90029085F /* TYSegementIndicatorView.m */; };
@@ -143,6 +144,8 @@
 		EB5A2A3C1F03B3E800A19F2C /* TYLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYLoginViewController.m; sourceTree = "<group>"; };
 		EB5A2A3E1F03B40D00A19F2C /* TYRCTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYRCTViewController.h; sourceTree = "<group>"; };
 		EB5A2A3F1F03B40D00A19F2C /* TYRCTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYRCTViewController.m; sourceTree = "<group>"; };
+		EB5A99FB1F3C06C30031C497 /* TYHomeUitl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYHomeUitl.h; sourceTree = "<group>"; };
+		EB5A99FC1F3C06C30031C497 /* TYHomeUitl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYHomeUitl.m; sourceTree = "<group>"; };
 		EB5D39231F345C490029085F /* TYSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSegmentView.h; sourceTree = "<group>"; };
 		EB5D39241F345C490029085F /* TYSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSegmentView.m; sourceTree = "<group>"; };
 		EB5D39261F345D0A0029085F /* TYCalculateFrameTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYCalculateFrameTool.h; sourceTree = "<group>"; };
@@ -474,6 +477,7 @@
 		EB5A2A161F0389BA00A19F2C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EB5A99FA1F3C06530031C497 /* Uitl */,
 				EB3299C91F1353830034D095 /* Controller */,
 				EB3299CB1F1354100034D095 /* Model */,
 				EB3299CA1F1353E10034D095 /* Components */,
@@ -508,6 +512,15 @@
 				EB5A2A3C1F03B3E800A19F2C /* TYLoginViewController.m */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		EB5A99FA1F3C06530031C497 /* Uitl */ = {
+			isa = PBXGroup;
+			children = (
+				EB5A99FB1F3C06C30031C497 /* TYHomeUitl.h */,
+				EB5A99FC1F3C06C30031C497 /* TYHomeUitl.m */,
+			);
+			name = Uitl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -670,6 +683,7 @@
 				EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */,
 				EB43475F1F3B51D100EC7AE9 /* TYStatusViewCell.m in Sources */,
 				EB5D39251F345C490029085F /* TYSegmentView.m in Sources */,
+				EB5A99FD1F3C06C30031C497 /* TYHomeUitl.m in Sources */,
 				EB032D231F0251F300F32465 /* AppDelegate.m in Sources */,
 				EB5A2A131F03890100A19F2C /* TYNavigationController.m in Sources */,
 				EB5D39311F3464200029085F /* TYSegmentConst.m in Sources */,
