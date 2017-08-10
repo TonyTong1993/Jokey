@@ -47,12 +47,17 @@ static NSString *reuseIndentifier = @"KTYImageViewCell";
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     
-    CGFloat height = _scrollView.mj_h;
+    //设置scrollView
+    self.scrollView.delegate = self;
     
+    CGFloat height = _scrollView.mj_h;
+//    self.scrollViewHeightConstraint.constant = 200;
     self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH*3, height);
     
     for (int i = 0; i < 3; i++) {
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH*i, 0, SCREEN_WIDTH, height)];
+      
+       UIView *view = [[[NSBundle mainBundle] loadNibNamed:@"TestView" owner:nil options:nil] firstObject];
+       view.frame = CGRectMake(SCREEN_WIDTH*i, 0, SCREEN_WIDTH, height);
         view.backgroundColor = [UIColor randomColor];
         [self.scrollView addSubview:view];
     }
@@ -91,6 +96,14 @@ static NSString *reuseIndentifier = @"KTYImageViewCell";
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
     return 4;
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+}
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+   
 }
 @end
 

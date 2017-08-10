@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 @class TYModelTest;
 @interface TYStatusViewCell : UICollectionViewCell
+@property (nonatomic,assign) NSIndexPath *outerIndexPath;
+
 @property (nonatomic,strong) TYModelTest *model;
 
 @end

@@ -56,6 +56,7 @@
 		EB5A99FD1F3C06C30031C497 /* TYHomeUitl.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A99FC1F3C06C30031C497 /* TYHomeUitl.m */; };
 		EB5A9A011F3C4DC10031C497 /* TYImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A99FF1F3C4DC10031C497 /* TYImageViewCell.m */; };
 		EB5A9A021F3C4DC10031C497 /* TYImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5A9A001F3C4DC10031C497 /* TYImageViewCell.xib */; };
+		EB5A9A041F3C64C30031C497 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5A9A031F3C64C30031C497 /* TestView.xib */; };
 		EB5D39251F345C490029085F /* TYSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39241F345C490029085F /* TYSegmentView.m */; };
 		EB5D39281F345D0A0029085F /* TYCalculateFrameTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39271F345D0A0029085F /* TYCalculateFrameTool.m */; };
 		EB5D392B1F345DE90029085F /* TYSegementIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D392A1F345DE90029085F /* TYSegementIndicatorView.m */; };
@@ -151,6 +152,7 @@
 		EB5A99FE1F3C4DC10031C497 /* TYImageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYImageViewCell.h; sourceTree = "<group>"; };
 		EB5A99FF1F3C4DC10031C497 /* TYImageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYImageViewCell.m; sourceTree = "<group>"; };
 		EB5A9A001F3C4DC10031C497 /* TYImageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TYImageViewCell.xib; sourceTree = "<group>"; };
+		EB5A9A031F3C64C30031C497 /* TestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		EB5D39231F345C490029085F /* TYSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSegmentView.h; sourceTree = "<group>"; };
 		EB5D39241F345C490029085F /* TYSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSegmentView.m; sourceTree = "<group>"; };
 		EB5D39261F345D0A0029085F /* TYCalculateFrameTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYCalculateFrameTool.h; sourceTree = "<group>"; };
@@ -338,6 +340,7 @@
 				EB5A99FE1F3C4DC10031C497 /* TYImageViewCell.h */,
 				EB5A99FF1F3C4DC10031C497 /* TYImageViewCell.m */,
 				EB5A9A001F3C4DC10031C497 /* TYImageViewCell.xib */,
+				EB5A9A031F3C64C30031C497 /* TestView.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				EB3299D01F136B860034D095 /* iconfont.ttf in Resources */,
 				EB032D291F0251F300F32465 /* Main.storyboard in Resources */,
 				EB4347601F3B51D100EC7AE9 /* TYStatusViewCell.xib in Resources */,
+				EB5A9A041F3C64C30031C497 /* TestView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
