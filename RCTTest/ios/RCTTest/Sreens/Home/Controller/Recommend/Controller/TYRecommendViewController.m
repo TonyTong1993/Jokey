@@ -79,13 +79,16 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
 }
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     TYModelTest *model = self.dataSource[indexPath.item];
-    CGFloat headerHeight = 80.0f;
-    CGFloat footerHeight = 60.0f;
+    CGFloat headerHeight = 70.0f;
+    CGFloat footerHeight = 50.0f;
+    CGFloat contentH = 19.5;
+    CGFloat marginBetweenContentAndCollectionView = 20;
     CGFloat collectionViewheight = [TYHomeUitl homeUitlGetCollectionViewHeight:model.imgs.count];
-    CGFloat scrollViewheight = 100;
+    CGFloat marginBetweenScrollViewAndCollectionView = 24;
+    CGFloat scrollViewheight = 96;
     CGFloat width = SCREEN_WIDTH ;
-    CGFloat height = headerHeight + footerHeight + collectionViewheight + scrollViewheight;
-    return CGSizeMake(width, height+100);
+    CGFloat height = headerHeight + footerHeight + collectionViewheight + scrollViewheight + marginBetweenContentAndCollectionView + marginBetweenScrollViewAndCollectionView + contentH;
+    return CGSizeMake(width, height);
 }
 -(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
     return 10;
