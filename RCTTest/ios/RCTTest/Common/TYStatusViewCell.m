@@ -28,6 +28,8 @@ static NSString *reuseIndentifier = @"KTYImageViewCell";
 @property (weak, nonatomic) IBOutlet UIButton *upBtn;
 @property (weak, nonatomic) IBOutlet UIButton *downBtn;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfUp;
+@property (weak, nonatomic) IBOutlet UILabel *topicLabel;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @end
 @implementation TYStatusViewCell
@@ -39,7 +41,12 @@ static NSString *reuseIndentifier = @"KTYImageViewCell";
     self.avatarView.layer.masksToBounds = YES;
     self.shareBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 12, 0, 0);
     self.reviewBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 12, 0, 0);
-    
+    self.topicLabel.backgroundColor = HEXCOLOR(0x39B4FF);
+    self.topicLabel.layer.cornerRadius = 2;
+    self.topicLabel.layer.masksToBounds = true;
+    [self.pageControl setCurrentPageIndicatorTintColor:HEXCOLOR(0x39B4FF)];
+    [self.pageControl setPageIndicatorTintColor:HEXCOLOR(0xDBDBDB)];
+    self.translatesAutoresizingMaskIntoConstraints = false;
     
     //注册xib
     [self.collectionView registerNib:[UINib nibWithNibName:@"TYImageViewCell" bundle:nil] forCellWithReuseIdentifier:reuseIndentifier];
@@ -51,14 +58,12 @@ static NSString *reuseIndentifier = @"KTYImageViewCell";
     self.scrollView.delegate = self;
     
     CGFloat height = _scrollView.mj_h;
-//    self.scrollViewHeightConstraint.constant = 200;
     self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH*3, height);
     
     for (int i = 0; i < 3; i++) {
       
        UIView *view = [[[NSBundle mainBundle] loadNibNamed:@"TestView" owner:nil options:nil] firstObject];
        view.frame = CGRectMake(SCREEN_WIDTH*i, 0, SCREEN_WIDTH, height);
-        view.backgroundColor = [UIColor randomColor];
         [self.scrollView addSubview:view];
     }
 }

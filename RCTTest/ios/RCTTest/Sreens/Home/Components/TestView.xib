@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_best_reply_150x62_" translatesAutoresizingMaskIntoConstraints="NO" id="OZa-Ac-Rbz">
-                    <rect key="frame" x="20" y="0.0" width="281" height="183"/>
+                    <rect key="frame" x="12" y="0.0" width="297" height="183"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGZ-cP-db6">
                     <rect key="frame" x="209" y="10" width="12" height="22"/>
@@ -41,10 +41,10 @@
                 <constraint firstItem="OZa-Ac-Rbz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Blv-7S-JJ1"/>
                 <constraint firstItem="Cgo-Pd-LyH" firstAttribute="centerY" secondItem="hUM-Hi-VYq" secondAttribute="centerY" id="NnP-Vy-Sgi"/>
                 <constraint firstItem="hUM-Hi-VYq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Qzk-c2-qlr"/>
-                <constraint firstItem="OZa-Ac-Rbz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="UAG-Mv-gpJ"/>
+                <constraint firstItem="OZa-Ac-Rbz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="UAG-Mv-gpJ"/>
                 <constraint firstItem="OZa-Ac-Rbz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="dX7-3y-rFZ"/>
                 <constraint firstAttribute="trailing" secondItem="hUM-Hi-VYq" secondAttribute="trailing" constant="32" id="hFh-xb-D1g"/>
-                <constraint firstAttribute="trailing" secondItem="OZa-Ac-Rbz" secondAttribute="trailing" constant="20" id="kDb-5D-bNw"/>
+                <constraint firstAttribute="trailing" secondItem="OZa-Ac-Rbz" secondAttribute="trailing" constant="12" id="kDb-5D-bNw"/>
                 <constraint firstAttribute="bottom" secondItem="OZa-Ac-Rbz" secondAttribute="bottom" id="pyM-oq-OIC"/>
                 <constraint firstItem="NGZ-cP-db6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="tOF-Mn-xY7"/>
             </constraints>
