@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,7 +35,6 @@
                     <state key="normal" image="best_reply_hate_12x12_"/>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Cgo-Pd-LyH" firstAttribute="leading" secondItem="NGZ-cP-db6" secondAttribute="trailing" constant="8" id="825-aU-KZj"/>
                 <constraint firstItem="hUM-Hi-VYq" firstAttribute="leading" secondItem="Cgo-Pd-LyH" secondAttribute="trailing" constant="8" id="8PQ-15-s8s"/>

@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -61,6 +62,12 @@
                             <outlet property="delegate" destination="-1" id="d2S-aI-hjN"/>
                         </connections>
                     </collectionView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="hoi-Bh-MVw">
+                        <rect key="frame" x="168" y="231" width="39" height="37"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="pageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="currentPageIndicatorTintColor" red="0.083644787779999993" green="0.1101869107" blue="0.80541612689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </pageControl>
                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbv-kV-MuA">
                         <rect key="frame" x="0.0" y="233.5" width="375" height="96"/>
                         <constraints>
@@ -120,11 +127,6 @@
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <pageControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="hoi-Bh-MVw">
-                        <rect key="frame" x="192" y="229.5" width="39" height="37"/>
-                        <color key="pageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="currentPageIndicatorTintColor" red="0.083644787779999993" green="0.1101869107" blue="0.80541612689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </pageControl>
                 </subviews>
             </view>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -134,12 +136,10 @@
                 <constraint firstItem="wsi-0m-OcT" firstAttribute="top" secondItem="UGf-Fk-pLJ" secondAttribute="bottom" constant="20" id="32c-tK-PKv"/>
                 <constraint firstItem="C8B-Rp-y7m" firstAttribute="top" secondItem="cbv-kV-MuA" secondAttribute="bottom" constant="16" id="4Bk-dM-JSB"/>
                 <constraint firstItem="8bd-KI-dCs" firstAttribute="top" secondItem="cbv-kV-MuA" secondAttribute="bottom" constant="16" id="69u-lZ-ncp"/>
-                <constraint firstItem="hoi-Bh-MVw" firstAttribute="centerX" secondItem="biQ-ku-gF1" secondAttribute="centerX" constant="24" id="87r-Mm-IE7"/>
                 <constraint firstAttribute="trailing" secondItem="cbv-kV-MuA" secondAttribute="trailing" id="8OA-jb-4og"/>
                 <constraint firstItem="FHq-9s-0CP" firstAttribute="leading" secondItem="E51-MU-FCE" secondAttribute="trailing" constant="20" id="9ok-S8-J9n"/>
                 <constraint firstItem="wsi-0m-OcT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="AQi-Ta-nbo"/>
                 <constraint firstItem="HVq-ue-2Jq" firstAttribute="leading" secondItem="8bd-KI-dCs" secondAttribute="trailing" constant="8" id="BIB-yv-CBM"/>
-                <constraint firstItem="hoi-Bh-MVw" firstAttribute="top" secondItem="biQ-ku-gF1" secondAttribute="bottom" constant="20" id="BWF-GV-kHt"/>
                 <constraint firstItem="biQ-ku-gF1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="ETt-uS-4r3"/>
                 <constraint firstItem="cbv-kV-MuA" firstAttribute="top" secondItem="biQ-ku-gF1" secondAttribute="bottom" constant="24" id="Efs-rf-9Ql"/>
                 <constraint firstItem="HVq-ue-2Jq" firstAttribute="centerY" secondItem="C8B-Rp-y7m" secondAttribute="centerY" id="I8S-2A-Aqv"/>
