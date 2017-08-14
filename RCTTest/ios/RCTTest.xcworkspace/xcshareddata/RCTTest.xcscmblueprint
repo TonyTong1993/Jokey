@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3ED1F1A4159CAC40FB80787D80B3063ABFE3BE9E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3ED1F1A4159CAC40FB80787D80B3063ABFE3BE9E" : 9223372036854775807,
+    "E1679FC111225C1A98EA0394D0D0D5A7DEF963BC" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BF5D425B-E9E8-41EE-A789-D78D18F3143D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3ED1F1A4159CAC40FB80787D80B3063ABFE3BE9E" : "Jokey\/",
+    "E1679FC111225C1A98EA0394D0D0D5A7DEF963BC" : "ijkplayer-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RCTTest",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RCTTest\/ios\/RCTTest.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:TonyTong1993\/Jokey.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3ED1F1A4159CAC40FB80787D80B3063ABFE3BE9E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Bilibili\/ijkplayer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E1679FC111225C1A98EA0394D0D0D5A7DEF963BC"
+    }
+  ]
+}

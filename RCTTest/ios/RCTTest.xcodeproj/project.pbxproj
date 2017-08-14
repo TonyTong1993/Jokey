@@ -68,6 +68,20 @@
 		EB6500EA1F4182FE00C0B89A /* TYAttentionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6500E91F4182FE00C0B89A /* TYAttentionViewController.swift */; };
 		EB6500F01F41839C00C0B89A /* TYDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6500EF1F41839C00C0B89A /* TYDiscoverViewController.swift */; };
 		EB6500F31F4186D500C0B89A /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6500F21F4186D500C0B89A /* NSString+Extension.m */; };
+		EB65010A1F418EB400C0B89A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6501091F418EB400C0B89A /* AudioToolbox.framework */; };
+		EB65010C1F418EBB00C0B89A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB65010B1F418EBB00C0B89A /* AVFoundation.framework */; };
+		EB65010E1F418EC400C0B89A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB65010D1F418EC400C0B89A /* CoreGraphics.framework */; };
+		EB6501101F418ECD00C0B89A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB65010F1F418ECD00C0B89A /* CoreMedia.framework */; };
+		EB6501121F418ED500C0B89A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6501111F418ED500C0B89A /* CoreVideo.framework */; };
+		EB6501141F418EE100C0B89A /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6501131F418EE100C0B89A /* libbz2.tbd */; };
+		EB6501161F418EED00C0B89A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6501151F418EED00C0B89A /* libz.tbd */; };
+		EB6501181F418EF700C0B89A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6501171F418EF700C0B89A /* MediaPlayer.framework */; };
+		EB65011A1F418F0100C0B89A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6501191F418F0100C0B89A /* MobileCoreServices.framework */; };
+		EB65011C1F418F0A00C0B89A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB65011B1F418F0A00C0B89A /* OpenGLES.framework */; };
+		EB65011E1F418F1200C0B89A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB65011D1F418F1200C0B89A /* QuartzCore.framework */; };
+		EB6501201F418F1800C0B89A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB65011F1F418F1800C0B89A /* UIKit.framework */; };
+		EB6501221F418F2300C0B89A /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6501211F418F2300C0B89A /* VideoToolbox.framework */; };
+		EB6501291F419FAB00C0B89A /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6501281F419FAB00C0B89A /* IJKMediaFramework.framework */; };
 		EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */; };
 /* End PBXBuildFile section */
 
@@ -177,6 +191,20 @@
 		EB6500EF1F41839C00C0B89A /* TYDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYDiscoverViewController.swift; sourceTree = "<group>"; };
 		EB6500F11F4186D500C0B89A /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		EB6500F21F4186D500C0B89A /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		EB6501091F418EB400C0B89A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		EB65010B1F418EBB00C0B89A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EB65010D1F418EC400C0B89A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EB65010F1F418ECD00C0B89A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		EB6501111F418ED500C0B89A /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		EB6501131F418EE100C0B89A /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		EB6501151F418EED00C0B89A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		EB6501171F418EF700C0B89A /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		EB6501191F418F0100C0B89A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		EB65011B1F418F0A00C0B89A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		EB65011D1F418F1200C0B89A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EB65011F1F418F1800C0B89A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EB6501211F418F2300C0B89A /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		EB6501281F419FAB00C0B89A /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = ../../../IJKMediaFramework.framework; sourceTree = "<group>"; };
 		EB6C70D51F1745A700D5B7AD /* UIImage+Extentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extentions.h"; sourceTree = "<group>"; };
 		EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extentions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +214,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB6501221F418F2300C0B89A /* VideoToolbox.framework in Frameworks */,
+				EB6501201F418F1800C0B89A /* UIKit.framework in Frameworks */,
+				EB65011E1F418F1200C0B89A /* QuartzCore.framework in Frameworks */,
+				EB6501291F419FAB00C0B89A /* IJKMediaFramework.framework in Frameworks */,
+				EB65011C1F418F0A00C0B89A /* OpenGLES.framework in Frameworks */,
+				EB65011A1F418F0100C0B89A /* MobileCoreServices.framework in Frameworks */,
+				EB6501181F418EF700C0B89A /* MediaPlayer.framework in Frameworks */,
+				EB6501161F418EED00C0B89A /* libz.tbd in Frameworks */,
+				EB6501141F418EE100C0B89A /* libbz2.tbd in Frameworks */,
+				EB6501121F418ED500C0B89A /* CoreVideo.framework in Frameworks */,
+				EB6501101F418ECD00C0B89A /* CoreMedia.framework in Frameworks */,
+				EB65010E1F418EC400C0B89A /* CoreGraphics.framework in Frameworks */,
+				EB65010C1F418EBB00C0B89A /* AVFoundation.framework in Frameworks */,
+				EB65010A1F418EB400C0B89A /* AudioToolbox.framework in Frameworks */,
 				EB2425F71F34C5D800E0ACE6 /* libReact.a in Frameworks */,
 				1AC1253604F5FFBB13EB143A /* libPods-RCTTest.a in Frameworks */,
 			);
@@ -206,6 +248,20 @@
 		C99CA68C2F5497E7F1256D9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB6501281F419FAB00C0B89A /* IJKMediaFramework.framework */,
+				EB6501211F418F2300C0B89A /* VideoToolbox.framework */,
+				EB65011F1F418F1800C0B89A /* UIKit.framework */,
+				EB65011D1F418F1200C0B89A /* QuartzCore.framework */,
+				EB65011B1F418F0A00C0B89A /* OpenGLES.framework */,
+				EB6501191F418F0100C0B89A /* MobileCoreServices.framework */,
+				EB6501171F418EF700C0B89A /* MediaPlayer.framework */,
+				EB6501151F418EED00C0B89A /* libz.tbd */,
+				EB6501131F418EE100C0B89A /* libbz2.tbd */,
+				EB6501111F418ED500C0B89A /* CoreVideo.framework */,
+				EB65010F1F418ECD00C0B89A /* CoreMedia.framework */,
+				EB65010D1F418EC400C0B89A /* CoreGraphics.framework */,
+				EB65010B1F418EBB00C0B89A /* AVFoundation.framework */,
+				EB6501091F418EB400C0B89A /* AudioToolbox.framework */,
 				EB2425F61F34C5D800E0ACE6 /* libReact.a */,
 				8615EBF6469A8CA8B7939F62 /* libPods-RCTTest.a */,
 			);
@@ -215,6 +271,7 @@
 		EB032D121F0251F300F32465 = {
 			isa = PBXGroup;
 			children = (
+				EB6500F91F418DE500C0B89A /* ThirdFramework */,
 				EB032D1D1F0251F300F32465 /* RCTTest */,
 				EB032D1C1F0251F300F32465 /* Products */,
 				7953CC99AFBE83F484FADF8B /* Pods */,
@@ -645,6 +702,14 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EB6500F91F418DE500C0B89A /* ThirdFramework */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ThirdFramework;
+			path = RCTTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
