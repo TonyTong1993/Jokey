@@ -17,4 +17,5 @@
 #import "TYServiceApi.h"
 #import "TYTheme.h"
 #import "Macro.h"
+#import "NSString+Extension.h"
 #endif /* PrefixHeader_pch */

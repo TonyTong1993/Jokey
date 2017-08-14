@@ -62,9 +62,12 @@
                             <outlet property="delegate" destination="-1" id="d2S-aI-hjN"/>
                         </connections>
                     </collectionView>
-                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="hoi-Bh-MVw">
+                    <pageControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="hoi-Bh-MVw">
                         <rect key="frame" x="168" y="231" width="39" height="37"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="37" id="OdE-MP-0HB"/>
+                            <constraint firstAttribute="width" constant="39" id="tr5-FI-aFa"/>
+                        </constraints>
                         <color key="pageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="currentPageIndicatorTintColor" red="0.083644787779999993" green="0.1101869107" blue="0.80541612689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </pageControl>
@@ -140,6 +143,7 @@
                 <constraint firstItem="FHq-9s-0CP" firstAttribute="leading" secondItem="E51-MU-FCE" secondAttribute="trailing" constant="20" id="9ok-S8-J9n"/>
                 <constraint firstItem="wsi-0m-OcT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="AQi-Ta-nbo"/>
                 <constraint firstItem="HVq-ue-2Jq" firstAttribute="leading" secondItem="8bd-KI-dCs" secondAttribute="trailing" constant="8" id="BIB-yv-CBM"/>
+                <constraint firstItem="hoi-Bh-MVw" firstAttribute="top" secondItem="biQ-ku-gF1" secondAttribute="bottom" constant="21.5" id="CDb-3W-42v"/>
                 <constraint firstItem="biQ-ku-gF1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="ETt-uS-4r3"/>
                 <constraint firstItem="cbv-kV-MuA" firstAttribute="top" secondItem="biQ-ku-gF1" secondAttribute="bottom" constant="24" id="Efs-rf-9Ql"/>
                 <constraint firstItem="HVq-ue-2Jq" firstAttribute="centerY" secondItem="C8B-Rp-y7m" secondAttribute="centerY" id="I8S-2A-Aqv"/>
@@ -153,6 +157,7 @@
                 <constraint firstItem="E51-MU-FCE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="bDb-O7-3Kl"/>
                 <constraint firstAttribute="trailing" secondItem="wsi-0m-OcT" secondAttribute="trailing" constant="16" id="cDH-oD-azK"/>
                 <constraint firstItem="UGf-Fk-pLJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="f9P-Ob-wla"/>
+                <constraint firstItem="hoi-Bh-MVw" firstAttribute="centerX" secondItem="cbv-kV-MuA" secondAttribute="centerX" id="fMt-Yp-Iyy"/>
                 <constraint firstItem="eUL-IQ-7O5" firstAttribute="top" secondItem="biQ-ku-gF1" secondAttribute="bottom" constant="12" id="jpy-kh-UbY"/>
                 <constraint firstItem="biQ-ku-gF1" firstAttribute="top" secondItem="wsi-0m-OcT" secondAttribute="bottom" constant="20" id="lby-8k-q2T"/>
                 <constraint firstAttribute="trailing" secondItem="mEc-fA-Oq2" secondAttribute="trailing" constant="12" id="pbM-EE-ElY"/>

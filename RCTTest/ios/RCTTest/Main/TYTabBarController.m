@@ -17,12 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     NSArray *barItemInfos = @[
-                              @{@"className":@"TYHomeViewController",@"icon":@"pfb_tabbar_homepage",@"selectedIcon":@"pfb_tabbar_homepage_selected",@"title":@"首页"},
-                              @{@"className":@"TYMailViewController",@"icon":@"pfb_tabbar_discover",@"selectedIcon":@"pfb_tabbar_discover_selected",@"title":@"商城"},
-                              @{@"className":@"TYVideoController",@"icon":@"pfb_tabbar_merchant",@"selectedIcon":@"pfb_tabbar_merchant_selected",@"title":@"视频"},
-                              @{@"className":@"TYProfileViewController",@"icon":@"pfb_tabbar_mine",@"selectedIcon":@"pfb_tabbar_mine_selected",@"title":@"我的"}
+                              @{@"className":@"TYHomeViewController",@"icon":@"tabbar_featured_24x24_",@"selectedIcon":@"tabbar_featured_hl_24x24_",@"title":@"首页"},
+                              @{@"className":[NSString nameSpaceWrapedClassNameInSwift:@"TYAttentionViewController"],@"icon":@"tabbar_follow_24x24_",@"selectedIcon":@"tabbar_follow_hl_24x24_",@"title":@"关注"},
+                              @{@"className":[NSString nameSpaceWrapedClassNameInSwift:@"TYDiscoverViewController"],@"icon":@"tabbar_explore_24x24_",@"selectedIcon":@"tabbar_explore_hl_24x24_",@"title":@"发现"},
+                             @{@"className":[NSString nameSpaceWrapedClassNameInSwift:@"TYMessageViewController"],@"icon":@"tabbar_remind_24x24_",@"selectedIcon":@"tabbar_remind_hl_24x24_",@"title":@"消息"},
+                             @{@"className":@"TYProfileViewController",@"icon":@"tabbar_profile_24x24_",@"selectedIcon":@"tabbar_profile_hl_24x24_",@"title":@"我的"},
                               ];
     for (NSDictionary *dict in barItemInfos) {
         [self addChildViewController:dict[@"className"] icon:dict[@"icon"] selectedIcon:dict[@"selectedIcon"] title:dict[@"title"]];
@@ -30,20 +30,15 @@
 }
 
 -(void)addChildViewController:(NSString *)className icon:(NSString *)icon selectedIcon:(NSString *)selectedIcon title:(NSString *)title {
-    UIViewController *childController;
-     if ([className isEqualToString:@"TYVideoController"]) {
-        childController = [[TYVideoController alloc] init];
-     }else {
-        childController = [[NSClassFromString(className) alloc] init];
-     }
+    UIViewController *childController = [[NSClassFromString(className) alloc] init];
     childController.title = title;
-//    childController.view.backgroundColor = [UIColor randomColor];
     TYNavigationController *nav = [[TYNavigationController alloc] initWithRootViewController:childController];
     UITabBarItem *barItem = childController.tabBarItem;
-    [barItem setImage:[UIImage imageNamed:icon]];
-    [barItem setSelectedImage:[UIImage imageNamed:selectedIcon]];
+    [barItem setImage:[[UIImage imageNamed:icon] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [barItem setSelectedImage:[[UIImage imageNamed:selectedIcon] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [barItem setTitle:title];
-    [barItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithRed:7/255.0 green:185/255.0 blue:165/255.0 alpha:1.0]} forState:UIControlStateSelected];
+    [barItem setTitleTextAttributes:@{NSForegroundColorAttributeName:HEXCOLOR(0x52B5EF)} forState:UIControlStateSelected];
+    [barItem setTitleTextAttributes:@{NSForegroundColorAttributeName:HEXCOLOR(0xB3B2BA)} forState:UIControlStateNormal];
     [self addChildViewController:nav];
 }
 

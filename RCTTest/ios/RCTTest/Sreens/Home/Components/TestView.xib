@@ -23,11 +23,12 @@
                     <state key="normal" image="best_reply_like_12x12_"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2048" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgo-Pd-LyH">
-                    <rect key="frame" x="229" y="13.5" width="40" height="15"/>
+                    <rect key="frame" x="229" y="14.5" width="40" height="13.5"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="n5U-eR-VvG"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.34760969877243042" green="0.74152392148971558" blue="0.99477499723434448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUM-Hi-VYq">

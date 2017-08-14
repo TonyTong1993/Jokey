@@ -64,6 +64,10 @@
 		EB5D39311F3464200029085F /* TYSegmentConst.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39301F3464200029085F /* TYSegmentConst.m */; };
 		EB5D39341F34657C0029085F /* TYSegmentTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39331F34657C0029085F /* TYSegmentTool.m */; };
 		EB5D39381F3491C30029085F /* TYSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39371F3491C30029085F /* TYSegmentViewController.m */; };
+		EB6500E81F4182DE00C0B89A /* TYMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6500E71F4182DE00C0B89A /* TYMessageViewController.swift */; };
+		EB6500EA1F4182FE00C0B89A /* TYAttentionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6500E91F4182FE00C0B89A /* TYAttentionViewController.swift */; };
+		EB6500F01F41839C00C0B89A /* TYDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6500EF1F41839C00C0B89A /* TYDiscoverViewController.swift */; };
+		EB6500F31F4186D500C0B89A /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6500F21F4186D500C0B89A /* NSString+Extension.m */; };
 		EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */; };
 /* End PBXBuildFile section */
 
@@ -168,6 +172,11 @@
 		EB5D39351F34717F0029085F /* TYSegmentControlDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSegmentControlDelegate.h; sourceTree = "<group>"; };
 		EB5D39361F3491C30029085F /* TYSegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSegmentViewController.h; sourceTree = "<group>"; };
 		EB5D39371F3491C30029085F /* TYSegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSegmentViewController.m; sourceTree = "<group>"; };
+		EB6500E71F4182DE00C0B89A /* TYMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYMessageViewController.swift; sourceTree = "<group>"; };
+		EB6500E91F4182FE00C0B89A /* TYAttentionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYAttentionViewController.swift; sourceTree = "<group>"; };
+		EB6500EF1F41839C00C0B89A /* TYDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYDiscoverViewController.swift; sourceTree = "<group>"; };
+		EB6500F11F4186D500C0B89A /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		EB6500F21F4186D500C0B89A /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		EB6C70D51F1745A700D5B7AD /* UIImage+Extentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extentions.h"; sourceTree = "<group>"; };
 		EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extentions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -425,6 +434,9 @@
 		EB5A2A0A1F03876700A19F2C /* Sreens */ = {
 			isa = PBXGroup;
 			children = (
+				EB6500EB1F41838600C0B89A /* Discover */,
+				EB6500E31F4181F000C0B89A /* Attention */,
+				EB6500DF1F4180CB00C0B89A /* Message */,
 				EB5A2A3A1F03B3D100A19F2C /* Login */,
 				EB5A2A371F03B34200A19F2C /* ServerRender */,
 				EB5A2A171F0389D400A19F2C /* Video */,
@@ -455,6 +467,8 @@
 				EB5A2A1C1F038C4100A19F2C /* UIButton+LPExtension.m */,
 				EB5A2A181F038C2E00A19F2C /* UIColor+LPExtension.h */,
 				EB5A2A191F038C2E00A19F2C /* UIColor+LPExtension.m */,
+				EB6500F11F4186D500C0B89A /* NSString+Extension.h */,
+				EB6500F21F4186D500C0B89A /* NSString+Extension.m */,
 			);
 			path = Categry;
 			sourceTree = "<group>";
@@ -532,6 +546,105 @@
 				EB5A99FC1F3C06C30031C497 /* TYHomeUitl.m */,
 			);
 			name = Uitl;
+			sourceTree = "<group>";
+		};
+		EB6500DF1F4180CB00C0B89A /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				EB6500E21F41811B00C0B89A /* Controllers */,
+				EB6500E11F41810B00C0B89A /* View */,
+				EB6500E01F4180F900C0B89A /* Model */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		EB6500E01F4180F900C0B89A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			path = Message/Model;
+			sourceTree = "<group>";
+		};
+		EB6500E11F41810B00C0B89A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			path = Message/View;
+			sourceTree = "<group>";
+		};
+		EB6500E21F41811B00C0B89A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EB6500E71F4182DE00C0B89A /* TYMessageViewController.swift */,
+			);
+			name = Controllers;
+			path = Message/Controllers;
+			sourceTree = "<group>";
+		};
+		EB6500E31F4181F000C0B89A /* Attention */ = {
+			isa = PBXGroup;
+			children = (
+				EB6500E41F4181F000C0B89A /* Controllers */,
+				EB6500E51F4181F000C0B89A /* Model */,
+				EB6500E61F4181F000C0B89A /* View */,
+			);
+			path = Attention;
+			sourceTree = "<group>";
+		};
+		EB6500E41F4181F000C0B89A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EB6500E91F4182FE00C0B89A /* TYAttentionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EB6500E51F4181F000C0B89A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EB6500E61F4181F000C0B89A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB6500EB1F41838600C0B89A /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				EB6500EC1F41838600C0B89A /* Controller */,
+				EB6500ED1F41838600C0B89A /* Model */,
+				EB6500EE1F41838600C0B89A /* View */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		EB6500EC1F41838600C0B89A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EB6500EF1F41839C00C0B89A /* TYDiscoverViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EB6500ED1F41838600C0B89A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EB6500EE1F41838600C0B89A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -693,11 +806,13 @@
 				EB18D3F21F0F785500B44790 /* TYTheme.m in Sources */,
 				EB18D3F81F0F89C500B44790 /* TYServiceApi.m in Sources */,
 				EB032D261F0251F300F32465 /* ViewController.m in Sources */,
+				EB6500F31F4186D500C0B89A /* NSString+Extension.m in Sources */,
 				EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */,
 				EB43475F1F3B51D100EC7AE9 /* TYStatusViewCell.m in Sources */,
 				EB5D39251F345C490029085F /* TYSegmentView.m in Sources */,
 				EB5A99FD1F3C06C30031C497 /* TYHomeUitl.m in Sources */,
 				EB032D231F0251F300F32465 /* AppDelegate.m in Sources */,
+				EB6500E81F4182DE00C0B89A /* TYMessageViewController.swift in Sources */,
 				EB5A2A131F03890100A19F2C /* TYNavigationController.m in Sources */,
 				EB5D39311F3464200029085F /* TYSegmentConst.m in Sources */,
 				EB5D39341F34657C0029085F /* TYSegmentTool.m in Sources */,
@@ -707,6 +822,8 @@
 				EB5A9A011F3C4DC10031C497 /* TYImageViewCell.m in Sources */,
 				EB18D3EA1F0F725C00B44790 /* TYVideoController.swift in Sources */,
 				EB5D392E1F3460750029085F /* UIButton+TYExtension.m in Sources */,
+				EB6500EA1F4182FE00C0B89A /* TYAttentionViewController.swift in Sources */,
+				EB6500F01F41839C00C0B89A /* TYDiscoverViewController.swift in Sources */,
 				EB5A2A401F03B40D00A19F2C /* TYRCTViewController.m in Sources */,
 				EB266F651F3B38AE00949D40 /* TYRecommendViewController.m in Sources */,
 				EB266F4E1F3B29DA00949D40 /* TYModelTest.m in Sources */,

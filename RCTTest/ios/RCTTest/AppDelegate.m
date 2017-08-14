@@ -64,6 +64,8 @@
    //设置主题颜色
     [navBar setBarTintColor:[UIColor colorWithHexString:themeColor]];
     [navBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:[UIFont fontWithName:[TYTheme themeFontFamilyName] size:18]}];
+    
+    [[UITabBar appearance] setBackgroundImage:[[UIImage imageNamed:@"tabbar_bg_1x49_"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 }
 
 @end
