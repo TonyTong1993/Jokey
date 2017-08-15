@@ -44,6 +44,8 @@
 		EB43475F1F3B51D100EC7AE9 /* TYStatusViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB43475D1F3B51D100EC7AE9 /* TYStatusViewCell.m */; };
 		EB4347601F3B51D100EC7AE9 /* TYStatusViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB43475E1F3B51D100EC7AE9 /* TYStatusViewCell.xib */; };
 		EB55658B1F42EC6B005BB5DC /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB55658A1F42EC6B005BB5DC /* TestView.m */; };
+		EB55658D1F42FEB0005BB5DC /* Bundle(Add).swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55658C1F42FEB0005BB5DC /* Bundle(Add).swift */; };
+		EB55658F1F43021C005BB5DC /* topic.json in Resources */ = {isa = PBXBuildFile; fileRef = EB55658E1F43021C005BB5DC /* topic.json */; };
 		EB593FF01F161DDC0093EF63 /* TYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB593FEF1F161DDC0093EF63 /* TYBaseViewController.m */; };
 		EB5A2A101F0388D700A19F2C /* TYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A0F1F0388D700A19F2C /* TYTabBarController.m */; };
 		EB5A2A131F03890100A19F2C /* TYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A121F03890100A19F2C /* TYNavigationController.m */; };
@@ -147,6 +149,8 @@
 		EB43475E1F3B51D100EC7AE9 /* TYStatusViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TYStatusViewCell.xib; path = RCTTest/Common/TYStatusViewCell.xib; sourceTree = SOURCE_ROOT; };
 		EB5565891F42EC6B005BB5DC /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		EB55658A1F42EC6B005BB5DC /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		EB55658C1F42FEB0005BB5DC /* Bundle(Add).swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle(Add).swift"; sourceTree = "<group>"; };
+		EB55658E1F43021C005BB5DC /* topic.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic.json; sourceTree = "<group>"; };
 		EB593FEE1F161DDC0093EF63 /* TYBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYBaseViewController.h; sourceTree = "<group>"; };
 		EB593FEF1F161DDC0093EF63 /* TYBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYBaseViewController.m; sourceTree = "<group>"; };
 		EB5A2A0E1F0388D700A19F2C /* TYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabBarController.h; sourceTree = "<group>"; };
@@ -327,6 +331,7 @@
 		EB18D3E11F0F41FE00B44790 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				EB55658E1F43021C005BB5DC /* topic.json */,
 				EB266F5B1F3B317500949D40 /* recommend.json */,
 				EB18D3E21F0F427200B44790 /* RCTLocationObserver.h */,
 				EB18D3E31F0F427200B44790 /* RCTLocationObserver.m */,
@@ -529,6 +534,7 @@
 				EB5A2A191F038C2E00A19F2C /* UIColor+LPExtension.m */,
 				EB6500F11F4186D500C0B89A /* NSString+Extension.h */,
 				EB6500F21F4186D500C0B89A /* NSString+Extension.m */,
+				EB55658C1F42FEB0005BB5DC /* Bundle(Add).swift */,
 			);
 			path = Categry;
 			sourceTree = "<group>";
@@ -784,6 +790,7 @@
 				EB3299E31F1385B60034D095 /* MaterialCommunityIcons.ttf in Resources */,
 				EB032D2E1F0251F300F32465 /* LaunchScreen.storyboard in Resources */,
 				EB3299DE1F1385B60034D095 /* Entypo.ttf in Resources */,
+				EB55658F1F43021C005BB5DC /* topic.json in Resources */,
 				EB3299C81F1352710034D095 /* fontFamily.txt in Resources */,
 				EB3299E61F1385B60034D095 /* SimpleLineIcons.ttf in Resources */,
 				EB5A9A021F3C4DC10031C497 /* TYImageViewCell.xib in Resources */,
@@ -884,6 +891,7 @@
 				EB5A2A2D1F03911200A19F2C /* TYProfileViewController.m in Sources */,
 				EB5D392B1F345DE90029085F /* TYSegementIndicatorView.m in Sources */,
 				EB5A2A101F0388D700A19F2C /* TYTabBarController.m in Sources */,
+				EB55658D1F42FEB0005BB5DC /* Bundle(Add).swift in Sources */,
 				EB5D39381F3491C30029085F /* TYSegmentViewController.m in Sources */,
 				EB01F61B1F36B635008CF290 /* UIColor+RGBA.m in Sources */,
 				EB18D3F51F0F890700B44790 /* TYNetWorkingTool.m in Sources */,
