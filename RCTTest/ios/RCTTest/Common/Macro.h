@@ -13,7 +13,7 @@
 #endif /* Macro_h */
 #define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
-
+#define SCREEN_WIDTH_SCALE SCREEN_WIDTH / 375.0f
 
 
 /** UIColor 16进制颜色止转换

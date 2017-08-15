@@ -10,6 +10,7 @@
 #import "TYStatusViewCell.h"
 #import "Test.h"
 #import "TYHomeUitl.h"
+#import "TYCalculateFrameTool.h"
 static NSString *reuserIndentifier = @"KTYStatusViewCell";
 @interface TYRecommendViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 @property (nonatomic,strong) UICollectionView *collectionView;
@@ -81,7 +82,7 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
     TYModelTest *model = self.dataSource[indexPath.item];
     CGFloat headerHeight = 70.0f;
     CGFloat footerHeight = 50.0f;
-    CGFloat contentH = 19.5;
+    CGFloat contentH = [TYCalculateFrameTool frameWithContent:model.content font:[UIFont systemFontOfSize:16] preferredMaxLayoutWidth:SCREEN_WIDTH-28].height;
     CGFloat marginBetweenContentAndCollectionView = 20;
     CGFloat collectionViewheight = [TYHomeUitl homeUitlGetCollectionViewHeight:model.imgs.count];
     CGFloat marginBetweenScrollViewAndCollectionView = 24;

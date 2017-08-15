@@ -13,6 +13,7 @@
 #import "TYImageTest.h"
 #import "TYHomeUitl.h"
 #import "TYImageViewCell.h"
+#import "TestView.h"
 static NSString *reuseIndentifier = @"KTYImageViewCell";
 @interface TYStatusViewCell()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UIImageView *avatarView;
@@ -46,7 +47,7 @@ static NSString *reuseIndentifier = @"KTYImageViewCell";
     self.topicLabel.layer.masksToBounds = true;
     [self.pageControl setCurrentPageIndicatorTintColor:HEXCOLOR(0x39B4FF)];
     [self.pageControl setPageIndicatorTintColor:HEXCOLOR(0xDBDBDB)];
-    self.translatesAutoresizingMaskIntoConstraints = false;
+//    self.translatesAutoresizingMaskIntoConstraints = false;
     
     //注册xib
     [self.collectionView registerNib:[UINib nibWithNibName:@"TYImageViewCell" bundle:nil] forCellWithReuseIdentifier:reuseIndentifier];
@@ -62,8 +63,9 @@ static NSString *reuseIndentifier = @"KTYImageViewCell";
     
     for (int i = 0; i < 3; i++) {
       
-       UIView *view = [[[NSBundle mainBundle] loadNibNamed:@"TestView" owner:nil options:nil] firstObject];
-       view.frame = CGRectMake(SCREEN_WIDTH*i, 0, SCREEN_WIDTH, height);
+//       UIView *view = [[[NSBundle mainBundle] loadNibNamed:@"TestView" owner:nil options:nil] firstObject];
+//       view.frame = CGRectMake(SCREEN_WIDTH*i, 0, SCREEN_WIDTH, height);
+        TestView *view = [[TestView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH*i, 0, SCREEN_WIDTH, height)];
         [self.scrollView addSubview:view];
     }
 }

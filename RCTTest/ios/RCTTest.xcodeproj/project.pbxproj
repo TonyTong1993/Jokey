@@ -43,6 +43,7 @@
 		EB3299E71F1385B60034D095 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299DD1F1385B60034D095 /* Zocial.ttf */; };
 		EB43475F1F3B51D100EC7AE9 /* TYStatusViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB43475D1F3B51D100EC7AE9 /* TYStatusViewCell.m */; };
 		EB4347601F3B51D100EC7AE9 /* TYStatusViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB43475E1F3B51D100EC7AE9 /* TYStatusViewCell.xib */; };
+		EB55658B1F42EC6B005BB5DC /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB55658A1F42EC6B005BB5DC /* TestView.m */; };
 		EB593FF01F161DDC0093EF63 /* TYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB593FEF1F161DDC0093EF63 /* TYBaseViewController.m */; };
 		EB5A2A101F0388D700A19F2C /* TYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A0F1F0388D700A19F2C /* TYTabBarController.m */; };
 		EB5A2A131F03890100A19F2C /* TYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A121F03890100A19F2C /* TYNavigationController.m */; };
@@ -144,6 +145,8 @@
 		EB43475C1F3B51D100EC7AE9 /* TYStatusViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYStatusViewCell.h; path = RCTTest/Common/TYStatusViewCell.h; sourceTree = SOURCE_ROOT; };
 		EB43475D1F3B51D100EC7AE9 /* TYStatusViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYStatusViewCell.m; path = RCTTest/Common/TYStatusViewCell.m; sourceTree = SOURCE_ROOT; };
 		EB43475E1F3B51D100EC7AE9 /* TYStatusViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TYStatusViewCell.xib; path = RCTTest/Common/TYStatusViewCell.xib; sourceTree = SOURCE_ROOT; };
+		EB5565891F42EC6B005BB5DC /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		EB55658A1F42EC6B005BB5DC /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		EB593FEE1F161DDC0093EF63 /* TYBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYBaseViewController.h; sourceTree = "<group>"; };
 		EB593FEF1F161DDC0093EF63 /* TYBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYBaseViewController.m; sourceTree = "<group>"; };
 		EB5A2A0E1F0388D700A19F2C /* TYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabBarController.h; sourceTree = "<group>"; };
@@ -405,6 +408,8 @@
 				EB5A99FF1F3C4DC10031C497 /* TYImageViewCell.m */,
 				EB5A9A001F3C4DC10031C497 /* TYImageViewCell.xib */,
 				EB5A9A031F3C64C30031C497 /* TestView.xib */,
+				EB5565891F42EC6B005BB5DC /* TestView.h */,
+				EB55658A1F42EC6B005BB5DC /* TestView.m */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -902,6 +907,7 @@
 				EB5A9A011F3C4DC10031C497 /* TYImageViewCell.m in Sources */,
 				EB18D3EA1F0F725C00B44790 /* TYVideoController.swift in Sources */,
 				EB5D392E1F3460750029085F /* UIButton+TYExtension.m in Sources */,
+				EB55658B1F42EC6B005BB5DC /* TestView.m in Sources */,
 				EB6500EA1F4182FE00C0B89A /* TYAttentionViewController.swift in Sources */,
 				EB6500F01F41839C00C0B89A /* TYDiscoverViewController.swift in Sources */,
 				EB5A2A401F03B40D00A19F2C /* TYRCTViewController.m in Sources */,
