@@ -1,6 +1,5 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
-
 target 'RCTTest' do
    # 但是如果你的结构不同，那你就要根据实际路径修改下面的`:path`
     pod 'React', :path => '../node_modules/react-native', :subspecs => [
@@ -18,6 +17,7 @@ target 'RCTTest' do
     pod "MJExtension"
     pod "MJRefresh"
     pod "AFNetworking"
+
     pod "SDWebImage"
     pod 'IconFont'
 end

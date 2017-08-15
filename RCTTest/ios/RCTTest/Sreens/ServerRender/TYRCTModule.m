@@ -7,7 +7,8 @@
 //
 
 #import "TYRCTModule.h"
-#import <RCTBridge.h>
+#import "RCTBridge.h"
+
 @implementation TYRCTModule
 
 RCT_EXPORT_MODULE(TYRCTModule)

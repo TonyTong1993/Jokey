@@ -10,7 +10,7 @@
 #import "Macro.h"
 #import "TYTabBarController.h"
 #import "TYTheme.h"
-#import  <TBCityIconFont.h>
+#import  "TBCityIconFont.h"
 @interface AppDelegate ()
 
 @end
@@ -20,7 +20,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    CGFloat height = [UIScreen mainScreen].bounds.size.height;
+    self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, width, height)];
     TYTabBarController *root = [[TYTabBarController alloc] init];
     self.window.rootViewController = root;
     [self.window makeKeyAndVisible];
