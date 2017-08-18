@@ -23,7 +23,11 @@ class TYSegmentView: UIView {
         self.scrollView = scrollView
         self.currentIndex = currentIndex
         segmentItems =  []
-        
+        let width = frame.size.width
+        let height = frame.size.height
+        let itemWidth = width / CGFloat(titles.count)
+        var startX = 0
+        var index = 0
         for title in titles {
             let segmentItem = TYSegmentItem(title: title, normalColor: normalColor, selectedColor: selectedColor)
             segmentItems.append(segmentItem)

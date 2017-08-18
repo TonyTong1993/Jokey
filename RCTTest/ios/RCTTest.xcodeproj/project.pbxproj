@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8109F95060B05FD8E050E5C6 /* libPods-RCTTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA216817255956D5DEBB4E32 /* libPods-RCTTest.a */; };
 		EB01F61B1F36B635008CF290 /* UIColor+RGBA.m in Sources */ = {isa = PBXBuildFile; fileRef = EB01F61A1F36B635008CF290 /* UIColor+RGBA.m */; };
 		EB032D201F0251F300F32465 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB032D1F1F0251F300F32465 /* main.m */; };
 		EB032D231F0251F300F32465 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB032D221F0251F300F32465 /* AppDelegate.m */; };
@@ -90,13 +91,25 @@
 		EB6501201F418F1800C0B89A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB65011F1F418F1800C0B89A /* UIKit.framework */; };
 		EB6501221F418F2300C0B89A /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6501211F418F2300C0B89A /* VideoToolbox.framework */; };
 		EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */; };
-		FF50B58B6B513CFA156782BF /* libPods-RCTTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E919215C6F949B65577923ED /* libPods-RCTTest.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		EB5EDB3A1F4713A500B218AF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		AA216817255956D5DEBB4E32 /* libPods-RCTTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RCTTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D502818BA0F8EC5DDC48C475 /* Pods-RCTTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.debug.xcconfig"; sourceTree = "<group>"; };
 		DC2E37739B2C59D2F6B877A9 /* Pods-RCTTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.release.xcconfig"; sourceTree = "<group>"; };
-		E919215C6F949B65577923ED /* libPods-RCTTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RCTTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB01F6191F36B635008CF290 /* UIColor+RGBA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RGBA.h"; sourceTree = "<group>"; };
 		EB01F61A1F36B635008CF290 /* UIColor+RGBA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RGBA.m"; sourceTree = "<group>"; };
 		EB032D1B1F0251F300F32465 /* RCTTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCTTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,7 +259,7 @@
 				EB65010C1F418EBB00C0B89A /* AVFoundation.framework in Frameworks */,
 				EB65010A1F418EB400C0B89A /* AudioToolbox.framework in Frameworks */,
 				EB2425F71F34C5D800E0ACE6 /* libReact.a in Frameworks */,
-				FF50B58B6B513CFA156782BF /* libPods-RCTTest.a in Frameworks */,
+				8109F95060B05FD8E050E5C6 /* libPods-RCTTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +293,7 @@
 				EB65010B1F418EBB00C0B89A /* AVFoundation.framework */,
 				EB6501091F418EB400C0B89A /* AudioToolbox.framework */,
 				EB2425F61F34C5D800E0ACE6 /* libReact.a */,
-				E919215C6F949B65577923ED /* libPods-RCTTest.a */,
+				AA216817255956D5DEBB4E32 /* libPods-RCTTest.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -760,6 +773,7 @@
 				EB032D191F0251F300F32465 /* Resources */,
 				3A1C1FEEB22AEBC912800669 /* [CP] Embed Pods Frameworks */,
 				7E6834BE7404F2833CCF3764 /* [CP] Copy Pods Resources */,
+				EB5EDB3A1F4713A500B218AF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -845,23 +859,23 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IconFont/IconFont.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/React/React.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IconFont.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
