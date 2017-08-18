@@ -17,7 +17,6 @@ target 'RCTTest' do
     pod "MJExtension"
     pod "MJRefresh"
     pod "AFNetworking"
-
     pod "SDWebImage"
     pod 'IconFont'
 end

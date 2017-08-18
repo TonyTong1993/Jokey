@@ -73,7 +73,7 @@ static NSString *reuseIndentifier = @"KTYImageViewCell";
 -(void)setModel:(TYModelTest *)model {
     _model = model;
     TYMemberTest *member = [TYMemberTest mj_objectWithKeyValues:model.member];
-    NSString *avatarPath = [TYServiceApi serviceForImagePath:api_common_avatar imageID:member.avatar];
+    NSString *avatarPath = [TYServiceApi serviceForImagePath:api_common_avatar imageID:member.avatar size:228];
     [_avatarView sd_setImageWithURL:[NSURL URLWithString:avatarPath]];
     _nameLabel.text = member.name;
     _contentLabel.text = model.content;
@@ -89,7 +89,7 @@ static NSString *reuseIndentifier = @"KTYImageViewCell";
     TYImageViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIndentifier forIndexPath:indexPath];
     NSDictionary *imageDic = self.model.imgs[indexPath.item];
     TYImageTest *imageModel = [TYImageTest mj_objectWithKeyValues:imageDic];
-    NSString *imagePath = [TYServiceApi serviceForImagePath:api_common_image imageID:imageModel.imageID];
+    NSString *imagePath = [TYServiceApi serviceForImagePath:api_common_image imageID:imageModel.imageID size:228];
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imagePath]];
     return cell;
 }

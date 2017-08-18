@@ -66,6 +66,10 @@
 		EB5D39311F3464200029085F /* TYSegmentConst.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39301F3464200029085F /* TYSegmentConst.m */; };
 		EB5D39341F34657C0029085F /* TYSegmentTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39331F34657C0029085F /* TYSegmentTool.m */; };
 		EB5D39381F3491C30029085F /* TYSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39371F3491C30029085F /* TYSegmentViewController.m */; };
+		EB5EDB291F46964A00B218AF /* TYAttention.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EDB281F46964A00B218AF /* TYAttention.swift */; };
+		EB5EDB2B1F46C15200B218AF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EDB2A1F46C15200B218AF /* Config.swift */; };
+		EB5EDB2D1F46C21E00B218AF /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EDB2C1F46C21E00B218AF /* UIColor.swift */; };
+		EB60BB8F1F454DB60062DBC2 /* TYAttentionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60BB8E1F454DB60062DBC2 /* TYAttentionViewCell.swift */; };
 		EB6500E81F4182DE00C0B89A /* TYMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6500E71F4182DE00C0B89A /* TYMessageViewController.swift */; };
 		EB6500EA1F4182FE00C0B89A /* TYAttentionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6500E91F4182FE00C0B89A /* TYAttentionViewController.swift */; };
 		EB6500F01F41839C00C0B89A /* TYDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6500EF1F41839C00C0B89A /* TYDiscoverViewController.swift */; };
@@ -192,6 +196,10 @@
 		EB5D39351F34717F0029085F /* TYSegmentControlDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSegmentControlDelegate.h; sourceTree = "<group>"; };
 		EB5D39361F3491C30029085F /* TYSegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSegmentViewController.h; sourceTree = "<group>"; };
 		EB5D39371F3491C30029085F /* TYSegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSegmentViewController.m; sourceTree = "<group>"; };
+		EB5EDB281F46964A00B218AF /* TYAttention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYAttention.swift; sourceTree = "<group>"; };
+		EB5EDB2A1F46C15200B218AF /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		EB5EDB2C1F46C21E00B218AF /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		EB60BB8E1F454DB60062DBC2 /* TYAttentionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYAttentionViewCell.swift; sourceTree = "<group>"; };
 		EB6500E71F4182DE00C0B89A /* TYMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYMessageViewController.swift; sourceTree = "<group>"; };
 		EB6500E91F4182FE00C0B89A /* TYAttentionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYAttentionViewController.swift; sourceTree = "<group>"; };
 		EB6500EF1F41839C00C0B89A /* TYDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYDiscoverViewController.swift; sourceTree = "<group>"; };
@@ -479,6 +487,7 @@
 			children = (
 				EB575A911F18621F007C1427 /* ScrollPageView */,
 				EB5A2A321F0392AB00A19F2C /* Macro.h */,
+				EB5EDB2A1F46C15200B218AF /* Config.swift */,
 				EB5D39261F345D0A0029085F /* TYCalculateFrameTool.h */,
 				EB5D39271F345D0A0029085F /* TYCalculateFrameTool.m */,
 			);
@@ -535,6 +544,7 @@
 				EB6500F11F4186D500C0B89A /* NSString+Extension.h */,
 				EB6500F21F4186D500C0B89A /* NSString+Extension.m */,
 				EB55658C1F42FEB0005BB5DC /* Bundle(Add).swift */,
+				EB5EDB2C1F46C21E00B218AF /* UIColor.swift */,
 			);
 			path = Categry;
 			sourceTree = "<group>";
@@ -614,6 +624,14 @@
 			name = Uitl;
 			sourceTree = "<group>";
 		};
+		EB60BB8D1F454DA20062DBC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB60BB8E1F454DB60062DBC2 /* TYAttentionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EB6500DF1F4180CB00C0B89A /* Message */ = {
 			isa = PBXGroup;
 			children = (
@@ -652,9 +670,9 @@
 		EB6500E31F4181F000C0B89A /* Attention */ = {
 			isa = PBXGroup;
 			children = (
+				EB60BB8D1F454DA20062DBC2 /* View */,
 				EB6500E41F4181F000C0B89A /* Controllers */,
 				EB6500E51F4181F000C0B89A /* Model */,
-				EB6500E61F4181F000C0B89A /* View */,
 			);
 			path = Attention;
 			sourceTree = "<group>";
@@ -670,15 +688,9 @@
 		EB6500E51F4181F000C0B89A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EB5EDB281F46964A00B218AF /* TYAttention.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		EB6500E61F4181F000C0B89A /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		EB6500EB1F41838600C0B89A /* Discover */ = {
@@ -892,8 +904,10 @@
 				EB5D392B1F345DE90029085F /* TYSegementIndicatorView.m in Sources */,
 				EB5A2A101F0388D700A19F2C /* TYTabBarController.m in Sources */,
 				EB55658D1F42FEB0005BB5DC /* Bundle(Add).swift in Sources */,
+				EB60BB8F1F454DB60062DBC2 /* TYAttentionViewCell.swift in Sources */,
 				EB5D39381F3491C30029085F /* TYSegmentViewController.m in Sources */,
 				EB01F61B1F36B635008CF290 /* UIColor+RGBA.m in Sources */,
+				EB5EDB291F46964A00B218AF /* TYAttention.swift in Sources */,
 				EB18D3F51F0F890700B44790 /* TYNetWorkingTool.m in Sources */,
 				EB5A2A3D1F03B3E800A19F2C /* TYLoginViewController.m in Sources */,
 				EB18D3F21F0F785500B44790 /* TYTheme.m in Sources */,
@@ -915,6 +929,7 @@
 				EB5A9A011F3C4DC10031C497 /* TYImageViewCell.m in Sources */,
 				EB18D3EA1F0F725C00B44790 /* TYVideoController.swift in Sources */,
 				EB5D392E1F3460750029085F /* UIButton+TYExtension.m in Sources */,
+				EB5EDB2D1F46C21E00B218AF /* UIColor.swift in Sources */,
 				EB55658B1F42EC6B005BB5DC /* TestView.m in Sources */,
 				EB6500EA1F4182FE00C0B89A /* TYAttentionViewController.swift in Sources */,
 				EB6500F01F41839C00C0B89A /* TYDiscoverViewController.swift in Sources */,
@@ -925,6 +940,7 @@
 				EB5D39281F345D0A0029085F /* TYCalculateFrameTool.m in Sources */,
 				EB18D3E71F0F6B7700B44790 /* TYRCTModule.m in Sources */,
 				EB266F511F3B2B0400949D40 /* TYImageTest.m in Sources */,
+				EB5EDB2B1F46C15200B218AF /* Config.swift in Sources */,
 				EB5A2A1D1F038C4100A19F2C /* UIButton+LPExtension.m in Sources */,
 				EB266F5A1F3B2D2000949D40 /* TYReviewTest.m in Sources */,
 				EB18D3E41F0F427200B44790 /* RCTLocationObserver.m in Sources */,

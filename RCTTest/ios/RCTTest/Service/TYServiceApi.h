@@ -14,8 +14,8 @@ extern NSString  * const  api_common;
 
 extern NSString  * const  api_common_avatar;
 extern NSString  * const  api_common_image;
-
-+(NSString *)serviceForImagePath:(NSString *)path imageID:(NSUInteger)imageID;
+extern NSString  * const  api_topic_cover;
++(NSString *)serviceForImagePath:(NSString *)path imageID:(NSUInteger)imageID size:(NSUInteger)size;
 @end
 //!!!!模块接口
 @interface TYServiceApi (Home)

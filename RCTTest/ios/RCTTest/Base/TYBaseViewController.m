@@ -57,6 +57,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self setUpTableView];
     [self setUpNavigationBar];
+    self.dataSource = @[];
 }
 
 -(void)setUpTableView {
@@ -72,7 +73,7 @@
     __weak typeof(self) weakSelf = self;
    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingBlock:^{
       
-           [weakSelf.tableView.mj_header endRefreshing];
+           [weakSelf loadNewData];
        
     }];
     [header setImages:self.normalImages forState:MJRefreshStateIdle];
@@ -86,7 +87,7 @@
     //设置上拉加载更多数据
     MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
        
-        [weakSelf.tableView.mj_footer endRefreshing];
+        [weakSelf loadMoreData];
         
     }];
     self.tableView.mj_footer = footer;
