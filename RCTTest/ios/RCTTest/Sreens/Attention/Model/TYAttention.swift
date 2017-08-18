@@ -10,10 +10,20 @@ import Foundation
 struct TYAttention {
     var topic = ""
     var coverID = 0
-    
-    init(topic:String,coverID:Int) {
+    var newCnt = 0
+    var newcnt: Int {
+        get {
+            return newCnt
+        }
+        set {
+            
+            newCnt = newValue>99 ?99:newValue
+        }
+    }
+    init(topic:String,coverID:Int,newcnt:Int) {
         self.topic = topic
         self.coverID = coverID
+        self.newcnt = newcnt
     }
     
     

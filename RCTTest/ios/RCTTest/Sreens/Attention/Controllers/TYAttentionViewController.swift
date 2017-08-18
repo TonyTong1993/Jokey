@@ -18,7 +18,9 @@ class TYAttentionViewController: TYBaseViewController {
     
     override func setUpTableView() {
         super.setUpTableView()
-        
+        let height = tableView.mj_h - 49
+        tableView.mj_h = height;
+        //注册cell
         tableView.register(TYAttentionViewCell.classForCoder(), forCellReuseIdentifier: "cell")
         
        
@@ -43,7 +45,8 @@ extension TYAttentionViewController {
             for item in list {
                 let topic = item["topic"] as! String
                 let coverID = item["cover"] as! Int
-                let attention =  TYAttention(topic: topic, coverID: coverID)
+                let newCnt = item["newcnt"] as! Int
+                let attention =  TYAttention(topic: topic, coverID: coverID,newcnt:newCnt)
                 dataSource.append(attention);
                 
             }
@@ -63,6 +66,7 @@ extension TYAttentionViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -73,7 +77,7 @@ extension TYAttentionViewController {
         let url = URL(string: avatarURL!);
         attentionCell.iconView.sd_setImage(with:url, placeholderImage: UIImage(named: "header_placeholder"))
         attentionCell.titlelabel.text = attention.topic
-        attentionCell.rightLabel.text = "99+条更新"
+        attentionCell.rightLabel.text = "\(attention.newCnt)+条更新"
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 56
