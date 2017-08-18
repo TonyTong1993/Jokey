@@ -69,6 +69,8 @@
 		EB5EDB291F46964A00B218AF /* TYAttention.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EDB281F46964A00B218AF /* TYAttention.swift */; };
 		EB5EDB2B1F46C15200B218AF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EDB2A1F46C15200B218AF /* Config.swift */; };
 		EB5EDB2D1F46C21E00B218AF /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EDB2C1F46C21E00B218AF /* UIColor.swift */; };
+		EB5EDB301F46E46300B218AF /* TYSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EDB2F1F46E46300B218AF /* TYSegmentView.swift */; };
+		EB5EDB321F46E48E00B218AF /* TYSegmentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EDB311F46E48E00B218AF /* TYSegmentItem.swift */; };
 		EB60BB8F1F454DB60062DBC2 /* TYAttentionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60BB8E1F454DB60062DBC2 /* TYAttentionViewCell.swift */; };
 		EB6500E81F4182DE00C0B89A /* TYMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6500E71F4182DE00C0B89A /* TYMessageViewController.swift */; };
 		EB6500EA1F4182FE00C0B89A /* TYAttentionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6500E91F4182FE00C0B89A /* TYAttentionViewController.swift */; };
@@ -199,6 +201,8 @@
 		EB5EDB281F46964A00B218AF /* TYAttention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYAttention.swift; sourceTree = "<group>"; };
 		EB5EDB2A1F46C15200B218AF /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		EB5EDB2C1F46C21E00B218AF /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		EB5EDB2F1F46E46300B218AF /* TYSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYSegmentView.swift; sourceTree = "<group>"; };
+		EB5EDB311F46E48E00B218AF /* TYSegmentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYSegmentItem.swift; sourceTree = "<group>"; };
 		EB60BB8E1F454DB60062DBC2 /* TYAttentionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYAttentionViewCell.swift; sourceTree = "<group>"; };
 		EB6500E71F4182DE00C0B89A /* TYMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYMessageViewController.swift; sourceTree = "<group>"; };
 		EB6500E91F4182FE00C0B89A /* TYAttentionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYAttentionViewController.swift; sourceTree = "<group>"; };
@@ -485,6 +489,7 @@
 		EB5A29F51F03860000A19F2C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				EB5EDB2E1F46E3C000B218AF /* ScrollPageView(swift) */,
 				EB575A911F18621F007C1427 /* ScrollPageView */,
 				EB5A2A321F0392AB00A19F2C /* Macro.h */,
 				EB5EDB2A1F46C15200B218AF /* Config.swift */,
@@ -622,6 +627,15 @@
 				EB5A99FC1F3C06C30031C497 /* TYHomeUitl.m */,
 			);
 			name = Uitl;
+			sourceTree = "<group>";
+		};
+		EB5EDB2E1F46E3C000B218AF /* ScrollPageView(swift) */ = {
+			isa = PBXGroup;
+			children = (
+				EB5EDB2F1F46E46300B218AF /* TYSegmentView.swift */,
+				EB5EDB311F46E48E00B218AF /* TYSegmentItem.swift */,
+			);
+			name = "ScrollPageView(swift)";
 			sourceTree = "<group>";
 		};
 		EB60BB8D1F454DA20062DBC2 /* View */ = {
@@ -927,6 +941,7 @@
 				EB032D201F0251F300F32465 /* main.m in Sources */,
 				EB266F571F3B2BEE00949D40 /* TYTopicTest.m in Sources */,
 				EB5A9A011F3C4DC10031C497 /* TYImageViewCell.m in Sources */,
+				EB5EDB321F46E48E00B218AF /* TYSegmentItem.swift in Sources */,
 				EB18D3EA1F0F725C00B44790 /* TYVideoController.swift in Sources */,
 				EB5D392E1F3460750029085F /* UIButton+TYExtension.m in Sources */,
 				EB5EDB2D1F46C21E00B218AF /* UIColor.swift in Sources */,
@@ -939,6 +954,7 @@
 				EB593FF01F161DDC0093EF63 /* TYBaseViewController.m in Sources */,
 				EB5D39281F345D0A0029085F /* TYCalculateFrameTool.m in Sources */,
 				EB18D3E71F0F6B7700B44790 /* TYRCTModule.m in Sources */,
+				EB5EDB301F46E46300B218AF /* TYSegmentView.swift in Sources */,
 				EB266F511F3B2B0400949D40 /* TYImageTest.m in Sources */,
 				EB5EDB2B1F46C15200B218AF /* Config.swift in Sources */,
 				EB5A2A1D1F038C4100A19F2C /* UIButton+LPExtension.m in Sources */,
