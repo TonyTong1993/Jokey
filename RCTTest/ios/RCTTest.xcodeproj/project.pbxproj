@@ -17,7 +17,6 @@
 		EB18D3E41F0F427200B44790 /* RCTLocationObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3E31F0F427200B44790 /* RCTLocationObserver.m */; };
 		EB18D3E71F0F6B7700B44790 /* TYRCTModule.m in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3E61F0F6B7700B44790 /* TYRCTModule.m */; };
 		EB18D3EA1F0F725C00B44790 /* TYVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3E91F0F725C00B44790 /* TYVideoController.swift */; };
-		EB18D3F21F0F785500B44790 /* TYTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3F11F0F785500B44790 /* TYTheme.m */; };
 		EB18D3F51F0F890700B44790 /* TYNetWorkingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3F41F0F890700B44790 /* TYNetWorkingTool.m */; };
 		EB18D3F81F0F89C500B44790 /* TYServiceApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3F71F0F89C500B44790 /* TYServiceApi.m */; };
 		EB2425F71F34C5D800E0ACE6 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2425F61F34C5D800E0ACE6 /* libReact.a */; };
@@ -88,6 +87,7 @@
 		EB6501201F418F1800C0B89A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB65011F1F418F1800C0B89A /* UIKit.framework */; };
 		EB6501221F418F2300C0B89A /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6501211F418F2300C0B89A /* VideoToolbox.framework */; };
 		EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */; };
+		EB9FF1E21F47DF2200EEBE11 /* TYTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9FF1E11F47DF2200EEBE11 /* TYTheme.m */; };
 		FF50B58B6B513CFA156782BF /* libPods-RCTTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E919215C6F949B65577923ED /* libPods-RCTTest.a */; };
 /* End PBXBuildFile section */
 
@@ -113,8 +113,6 @@
 		EB18D3E61F0F6B7700B44790 /* TYRCTModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYRCTModule.m; sourceTree = "<group>"; };
 		EB18D3E81F0F725B00B44790 /* RCTTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCTTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		EB18D3E91F0F725C00B44790 /* TYVideoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYVideoController.swift; sourceTree = "<group>"; };
-		EB18D3F01F0F785500B44790 /* TYTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTheme.h; sourceTree = "<group>"; };
-		EB18D3F11F0F785500B44790 /* TYTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTheme.m; sourceTree = "<group>"; };
 		EB18D3F31F0F890700B44790 /* TYNetWorkingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYNetWorkingTool.h; sourceTree = "<group>"; };
 		EB18D3F41F0F890700B44790 /* TYNetWorkingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYNetWorkingTool.m; sourceTree = "<group>"; };
 		EB18D3F61F0F89C500B44790 /* TYServiceApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYServiceApi.h; sourceTree = "<group>"; };
@@ -221,6 +219,8 @@
 		EB6501281F419FAB00C0B89A /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = ../../../IJKMediaFramework.framework; sourceTree = "<group>"; };
 		EB6C70D51F1745A700D5B7AD /* UIImage+Extentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extentions.h"; sourceTree = "<group>"; };
 		EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extentions.m"; sourceTree = "<group>"; };
+		EB9FF1E01F47DF2200EEBE11 /* TYTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTheme.h; sourceTree = "<group>"; };
+		EB9FF1E11F47DF2200EEBE11 /* TYTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTheme.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,11 +361,10 @@
 		EB18D3ED1F0F77EF00B44790 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
-				EB18D3F01F0F785500B44790 /* TYTheme.h */,
-				EB18D3F11F0F785500B44790 /* TYTheme.m */,
+				EB9FF1E01F47DF2200EEBE11 /* TYTheme.h */,
+				EB9FF1E11F47DF2200EEBE11 /* TYTheme.m */,
 			);
-			name = Theme;
-			path = ..;
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		EB266F5F1F3B37C800949D40 /* Recommend */ = {
@@ -910,7 +909,6 @@
 				EB5EDB291F46964A00B218AF /* TYAttention.swift in Sources */,
 				EB18D3F51F0F890700B44790 /* TYNetWorkingTool.m in Sources */,
 				EB5A2A3D1F03B3E800A19F2C /* TYLoginViewController.m in Sources */,
-				EB18D3F21F0F785500B44790 /* TYTheme.m in Sources */,
 				EB18D3F81F0F89C500B44790 /* TYServiceApi.m in Sources */,
 				EB032D261F0251F300F32465 /* ViewController.m in Sources */,
 				EB6500F31F4186D500C0B89A /* NSString+Extension.m in Sources */,
@@ -919,6 +917,7 @@
 				EB5D39251F345C490029085F /* TYSegmentView.m in Sources */,
 				EB5A99FD1F3C06C30031C497 /* TYHomeUitl.m in Sources */,
 				EB032D231F0251F300F32465 /* AppDelegate.m in Sources */,
+				EB9FF1E21F47DF2200EEBE11 /* TYTheme.m in Sources */,
 				EB6500E81F4182DE00C0B89A /* TYMessageViewController.swift in Sources */,
 				EB5A2A131F03890100A19F2C /* TYNavigationController.m in Sources */,
 				EB5D39311F3464200029085F /* TYSegmentConst.m in Sources */,
