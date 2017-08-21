@@ -55,9 +55,6 @@ class TYSegmentView: UIView {
             item.frame = CGRect(x: width*index, y: 0, width: width, height: frame.height)
             index += 1
         }
-        
-        
-        
     }
     
 }
