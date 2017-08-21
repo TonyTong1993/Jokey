@@ -9,11 +9,20 @@
 import UIKit
 
 class TYAttentionViewController: TYBaseViewController {
-
+    
+    private lazy var segmentView: TYSegmentView = {
+        
+        let segmentView = TYSegmentView(
+                                        frame: CGRect(x: 0, y: 0, width: 200, height: 36),
+                                        titles: ["关注","热点"],
+                                        normalTitleColor: UIColor.black,
+                                        seletedTitleColor: UIColor.blue)
+        return segmentView
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
-       loadNewData()
-     
+        loadNewData()
+        
     }
     
     override func setUpTableView() {
@@ -23,7 +32,7 @@ class TYAttentionViewController: TYBaseViewController {
         //注册cell
         tableView.register(TYAttentionViewCell.classForCoder(), forCellReuseIdentifier: "cell")
         
-       
+        
         
         
         //style
@@ -32,9 +41,11 @@ class TYAttentionViewController: TYBaseViewController {
         tableView.mj_footer.removeFromSuperview()
     }
     
+    override func setUpNavigationBar() {
+        navigationItem.titleView = self.segmentView
+    }
     
-   
-
+    
 }
 extension TYAttentionViewController {
     override func loadNewData() {
@@ -43,22 +54,25 @@ extension TYAttentionViewController {
             let list = data["list"] as! [[String:Any]]
             
             for item in list {
-                let topic = item["topic"] as! String
-                let coverID = item["cover"] as! Int
-                let newCnt = item["newcnt"] as! Int
+                guard let topic = item["topic"] as? String,
+                    let coverID = item["cover"] as? Int,
+                    let newCnt = item["newcnt"] as? Int else {
+                        return
+                }
+                
                 let attention =  TYAttention(topic: topic, coverID: coverID,newcnt:newCnt)
                 dataSource.append(attention);
                 
             }
         }
         tableView.reloadData()
-    
+        
     }
     
 }
 extension TYAttentionViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       let data = dataSource ?? []
+        let data = dataSource ?? []
         return data.count
     }
     

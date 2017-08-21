@@ -108,5 +108,7 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
     [self.collectionView.mj_header endRefreshing];
     [self.collectionView reloadData];
 }
-
+-(void)loadMoreData {
+     [self.collectionView.mj_footer endRefreshingWithNoMoreData];
+}
 @end

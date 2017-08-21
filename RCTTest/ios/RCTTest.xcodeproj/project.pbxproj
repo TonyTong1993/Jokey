@@ -40,6 +40,8 @@
 		EB3299E51F1385B60034D095 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299DB1F1385B60034D095 /* Octicons.ttf */; };
 		EB3299E61F1385B60034D095 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299DC1F1385B60034D095 /* SimpleLineIcons.ttf */; };
 		EB3299E71F1385B60034D095 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299DD1F1385B60034D095 /* Zocial.ttf */; };
+		EB32F1431F4AE31C00D766AF /* TYSegmentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB32F1421F4AE31C00D766AF /* TYSegmentItem.swift */; };
+		EB32F1451F4AE32D00D766AF /* TYSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB32F1441F4AE32D00D766AF /* TYSegmentView.swift */; };
 		EB43475F1F3B51D100EC7AE9 /* TYStatusViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB43475D1F3B51D100EC7AE9 /* TYStatusViewCell.m */; };
 		EB4347601F3B51D100EC7AE9 /* TYStatusViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB43475E1F3B51D100EC7AE9 /* TYStatusViewCell.xib */; };
 		EB55658B1F42EC6B005BB5DC /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB55658A1F42EC6B005BB5DC /* TestView.m */; };
@@ -181,6 +183,8 @@
 		EB3299DB1F1385B60034D095 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
 		EB3299DC1F1385B60034D095 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		EB3299DD1F1385B60034D095 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
+		EB32F1421F4AE31C00D766AF /* TYSegmentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYSegmentItem.swift; sourceTree = "<group>"; };
+		EB32F1441F4AE32D00D766AF /* TYSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYSegmentView.swift; sourceTree = "<group>"; };
 		EB43475C1F3B51D100EC7AE9 /* TYStatusViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYStatusViewCell.h; path = RCTTest/Common/TYStatusViewCell.h; sourceTree = SOURCE_ROOT; };
 		EB43475D1F3B51D100EC7AE9 /* TYStatusViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYStatusViewCell.m; path = RCTTest/Common/TYStatusViewCell.m; sourceTree = SOURCE_ROOT; };
 		EB43475E1F3B51D100EC7AE9 /* TYStatusViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TYStatusViewCell.xib; path = RCTTest/Common/TYStatusViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -520,6 +524,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		EB32F1411F4AE2F300D766AF /* ScrollPageView(swift) */ = {
+			isa = PBXGroup;
+			children = (
+				EB32F1421F4AE31C00D766AF /* TYSegmentItem.swift */,
+				EB32F1441F4AE32D00D766AF /* TYSegmentView.swift */,
+			);
+			path = "ScrollPageView(swift)";
+			sourceTree = "<group>";
+		};
 		EB575A911F18621F007C1427 /* ScrollPageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -554,6 +567,7 @@
 		EB5A29F51F03860000A19F2C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				EB32F1411F4AE2F300D766AF /* ScrollPageView(swift) */,
 				EB575A911F18621F007C1427 /* ScrollPageView */,
 				EB5A2A321F0392AB00A19F2C /* Macro.h */,
 				EB5EDB2A1F46C15200B218AF /* Config.swift */,
@@ -1028,6 +1042,7 @@
 				EB714BD21F4806190024C929 /* ConstraintDSL.swift in Sources */,
 				EB714BEC1F4806190024C929 /* LayoutConstraintItem.swift in Sources */,
 				EB714BDE1F4806190024C929 /* ConstraintMakerFinalizable.swift in Sources */,
+				EB32F1431F4AE31C00D766AF /* TYSegmentItem.swift in Sources */,
 				EB5A2A2D1F03911200A19F2C /* TYProfileViewController.m in Sources */,
 				EB714BE41F4806190024C929 /* ConstraintPriorityTarget.swift in Sources */,
 				EB714BCE1F4806190024C929 /* ConstraintAttributes.swift in Sources */,
@@ -1059,6 +1074,7 @@
 				EB6500E81F4182DE00C0B89A /* TYMessageViewController.swift in Sources */,
 				EB5A2A131F03890100A19F2C /* TYNavigationController.m in Sources */,
 				EB5D39311F3464200029085F /* TYSegmentConst.m in Sources */,
+				EB32F1451F4AE32D00D766AF /* TYSegmentView.swift in Sources */,
 				EB5D39341F34657C0029085F /* TYSegmentTool.m in Sources */,
 				EB3299CE1F1354420034D095 /* TYHomeViewController.m in Sources */,
 				EB032D201F0251F300F32465 /* main.m in Sources */,
