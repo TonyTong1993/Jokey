@@ -1,6 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-#platform :ios, '9.0'
-#use_frameworks!
+ platform :ios, '9.0'
 target 'RCTTest' do
 source 'https://github.com/CocoaPods/Specs.git'
 
@@ -22,4 +21,5 @@ source 'https://github.com/CocoaPods/Specs.git'
     pod "AFNetworking"
     pod "SDWebImage"
     pod 'IconFont'
+    pod 'WRNavigationBar'
 end
