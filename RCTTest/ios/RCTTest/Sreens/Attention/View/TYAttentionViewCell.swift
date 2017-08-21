@@ -30,7 +30,7 @@ class TYAttentionViewCell: UITableViewCell {
         rightLabel.font = UIFont(name: font, size: 10)
         rightLabel.textColor = UIColor.white
         rightLabel.textAlignment = .center
-        rightLabel.backgroundColor = UIColor(hexValue: UInt64(themeColorHexValue))
+        rightLabel.backgroundColor = UIColor(hex: NSInteger(themeColorHexValue))
         rightLabel.layer.cornerRadius = 10
         rightLabel.layer.masksToBounds = true
         

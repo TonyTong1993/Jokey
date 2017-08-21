@@ -27,7 +27,7 @@ class TYAttentionViewController: TYBaseViewController {
         
         
         //style
-        tableView.separatorColor = UIColor(hexValue:UInt64(separatorColorHexValue))
+        tableView.separatorColor = UIColor(hex:NSInteger(separatorColorHexValue))
         tableView.mj_header.removeFromSuperview()
         tableView.mj_footer.removeFromSuperview()
     }
