@@ -62,10 +62,8 @@ static NSString *reuseIndentifier = @"KTYImageViewCell";
     self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH*3, height);
     
     for (int i = 0; i < 3; i++) {
-      
-//       UIView *view = [[[NSBundle mainBundle] loadNibNamed:@"TestView" owner:nil options:nil] firstObject];
-//       view.frame = CGRectMake(SCREEN_WIDTH*i, 0, SCREEN_WIDTH, height);
-        TestView *view = [[TestView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH*i, 0, SCREEN_WIDTH, height)];
+        TestView *view = [TestView testView];
+        view.frame = CGRectMake(SCREEN_WIDTH*i, 0, SCREEN_WIDTH, height);
         [self.scrollView addSubview:view];
     }
 }

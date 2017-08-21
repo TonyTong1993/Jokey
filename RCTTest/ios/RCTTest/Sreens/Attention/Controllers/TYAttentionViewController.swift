@@ -58,10 +58,8 @@ extension TYAttentionViewController {
 }
 extension TYAttentionViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let dataSource = dataSource {
-            return dataSource.count
-        }
-        return 0
+       let data = dataSource ?? []
+        return data.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

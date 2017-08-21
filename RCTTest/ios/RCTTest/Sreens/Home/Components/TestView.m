@@ -9,24 +9,23 @@
 #import "TestView.h"
 
 @implementation TestView
-{
-    CGRect myframe;
-}
 
--(id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
++(TestView *)testView{
+    TestView *testView = [[[NSBundle mainBundle]loadNibNamed:@"TestView" owner:nil options:nil] firstObject];
+    testView.backgroundColor = [UIColor clearColor];
+    return testView;
+}
+-(instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
     if (self) {
-        NSArray *nibs=[[NSBundle mainBundle]loadNibNamed:@"TestView" owner:nil options:nil];
-        self=[nibs objectAtIndex:0];
-        self.backgroundColor = [UIColor clearColor];
-        myframe = frame;
+        
     }
     return self;
 }
 
-- (void)drawRect:(CGRect)rect {
-   self.frame=myframe;
+-(void)awakeFromNib {
+    [super awakeFromNib];
+    
 }
 
 

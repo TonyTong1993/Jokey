@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TestView : UIView
++(TestView *)testView;
 
 @end
