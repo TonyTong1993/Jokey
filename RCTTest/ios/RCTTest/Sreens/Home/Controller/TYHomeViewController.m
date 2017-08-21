@@ -39,9 +39,9 @@
     self.automaticallyAdjustsScrollViewInsets = false;
     
     CGFloat width = self.view.frame.size.width;
-    CGFloat height = self.view.frame.size.height-64;
+    CGFloat height = self.view.frame.size.height-64-49;
     //设置scrollView
-    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, width, height)];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
     self.scrollView.pagingEnabled = YES;
     self.scrollView.showsVerticalScrollIndicator = false;
     self.scrollView.showsHorizontalScrollIndicator = false;

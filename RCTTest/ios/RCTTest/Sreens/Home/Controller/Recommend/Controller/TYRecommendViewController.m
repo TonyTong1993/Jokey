@@ -24,7 +24,7 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
 -(void)setUpTableView {
     self.automaticallyAdjustsScrollViewInsets = false;
     CGFloat width = self.view.frame.size.width;
-    CGFloat height = self.view.frame.size.height-64;
+    CGFloat height = self.view.frame.size.height-103;
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, width, height) collectionViewLayout:layout];
     _collectionView.dataSource = self;

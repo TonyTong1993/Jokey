@@ -62,10 +62,11 @@
 }
 
 -(void)setUpTableView {
-    CGRect frame = CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64);
+    CGRect frame = self.view.bounds;
     self.tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 64, 0);
     self.tableView.backgroundColor = [UIColor colorWithHexString:@"#f0f0f8"];
     //去除footer样式
     self.tableView.tableFooterView = [[UIView alloc] init];

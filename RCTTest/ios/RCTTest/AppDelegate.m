@@ -22,7 +22,9 @@
     // Override point for customization after application launch.
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
+    
     self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, width, height)];
+    self.window.backgroundColor = [UIColor whiteColor];
     TYTabBarController *root = [[TYTabBarController alloc] init];
     self.window.rootViewController = root;
     [self.window makeKeyAndVisible];
@@ -66,6 +68,7 @@
    //设置主题颜色
     [navBar setBarTintColor:[UIColor colorWithHexString:themeColor]];
     [navBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:[UIFont fontWithName:[TYTheme themeFontFamilyName] size:18]}];
+    [navBar setBackgroundImage:[UIImage imageNamed:@"nav_bg_1x64_"] forBarMetrics:UIBarMetricsDefault];
     
     [[UITabBar appearance] setBackgroundImage:[[UIImage imageNamed:@"tabbar_bg_1x49_"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 }
