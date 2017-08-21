@@ -18,10 +18,13 @@ class TYSegmentView: UIView {
     
     private var items : [TYSegmentItem]?
     
+    private var currentIndex: Int = 0
+    
     func setupSegmentItems(titles:[String]) -> [TYSegmentItem] {
         var segmentItems :[TYSegmentItem] = []
         for title in titles {
-            let segmentItem =  TYSegmentItem(title: title, normalTitleColor: normalTitleColor, selectedTitleColor: seletedTitleColor )
+            let segmentItem =  TYSegmentItem(title: title, normalTitleColor: normalTitleColor, selectedTitleColor: seletedTitleColor)
+            segmentItem.addTarget(segmentItem, action: #selector(handleSegmentItemClicked(segmentItem:)), for: .touchUpInside)
             segmentItems.append(segmentItem)
             addSubview(segmentItem)
         }
@@ -34,6 +37,9 @@ class TYSegmentView: UIView {
         titles = ts
         super.init(frame: frame)
         items = setupSegmentItems(titles: titles)
+        
+        //更新默认选中项
+        
     }
     
     convenience init(frame: CGRect,ts: [String],ntc: UIColor,stc : UIColor) {
@@ -53,8 +59,14 @@ class TYSegmentView: UIView {
         var index:CGFloat = 0
         for item in items {
             item.frame = CGRect(x: width*index, y: 0, width: width, height: frame.height)
+            item.segmentIndex = Int(index)
             index += 1
         }
     }
-    
+    @objc func handleSegmentItemClicked(segmentItem:TYSegmentItem) {
+        
+    }
+}
+extension TYSegmentItem {
+  
 }

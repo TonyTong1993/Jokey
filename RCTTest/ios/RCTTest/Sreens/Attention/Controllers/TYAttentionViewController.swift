@@ -15,8 +15,8 @@ class TYAttentionViewController: TYBaseViewController {
         let segmentView = TYSegmentView(
                                         frame: CGRect(x: 0, y: 0, width: 200, height: 36),
                                         titles: ["关注","热点"],
-                                        normalTitleColor: UIColor.black,
-                                        seletedTitleColor: UIColor.blue)
+                                        normalTitleColor: UIColor.textTint,
+                                        seletedTitleColor: UIColor.themeTint)
         return segmentView
     }()
     let scrollView: UIScrollView = {
@@ -36,6 +36,7 @@ class TYAttentionViewController: TYBaseViewController {
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.isPagingEnabled = true
+        scrollView.delegate = self
         view.addSubview(scrollView)
         for i in 0..<2 {
             let vc = TYCategaryViewController()
@@ -47,11 +48,25 @@ class TYAttentionViewController: TYBaseViewController {
         
     }
 
-    
     override func setUpNavigationBar() {
         navigationItem.titleView = segmentView
     }
     
-    
+
 }
 
+extension TYAttentionViewController {
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("scrollViewDidScroll")
+    }
+    override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        print("scrollViewWillEndDragging")
+    }
+    override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        print("scrollViewDidEndDragging")
+    }
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        print("scrollViewDidEndDecelerating")
+    }
+}

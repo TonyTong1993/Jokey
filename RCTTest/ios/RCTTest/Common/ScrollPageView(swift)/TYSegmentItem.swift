@@ -9,6 +9,7 @@
 import UIKit
 
 class TYSegmentItem: UIButton {
+     var segmentIndex = 0
     
     
      init(title: String,normalTitleColor: UIColor,selectedTitleColor: UIColor) {
