@@ -51,6 +51,11 @@ class TYSegmentView: UIView {
         
         //更新默认选中项
         items?.first?.isSelected = true
+        //FIXME:设置指示器的宽度
+        let titleSize = titles.first?.size(attributes: [NSFontAttributeName:UIFont(name: TYTheme.themeFontFamilyName(), size: 16)! ])
+        indicatorView.frame = CGRect(x: 0, y: frame.height-2, width: (titleSize?.width)!, height: 2)
+        indicatorView.backgroundColor = seletedTitleColor
+        addSubview(indicatorView)
     }
     
     convenience init(frame: CGRect,ts: [String],ntc: UIColor,stc : UIColor) {
@@ -73,6 +78,12 @@ class TYSegmentView: UIView {
             item.segmentIndex = Int(index)
             index += 1
         }
+        
+        //更新指示器视图的默认位置
+        let currentItem = items[currentIndex]
+        indicatorView.center.x = currentItem.center.x
+    
+        
     }
     @objc func handleSegmentItemClicked(segmentItem:TYSegmentItem) {
         if segmentItem.segmentIndex != currentIndex {

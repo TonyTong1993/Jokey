@@ -13,8 +13,8 @@ class TYAttentionViewController: TYBaseViewController,TYSegmentViewDelegate {
     private lazy var segmentView: TYSegmentView = {
         
         let segmentView = TYSegmentView(
-            frame: CGRect(x: 0, y: 0, width: 200, height: 36),
-            titles: ["关注","右友圈"],
+            frame: CGRect(x: 0, y: 0, width: 200, height: 44),
+            titles: ["话题","右友圈"],
             normalTitleColor: UIColor.textTint,
             seletedTitleColor: UIColor.themeTint)
         return segmentView
@@ -57,6 +57,11 @@ class TYAttentionViewController: TYBaseViewController,TYSegmentViewDelegate {
         let width = UIScreen.main.bounds.width
         let point = CGPoint(x: width*CGFloat(segmentItem.segmentIndex), y: 0)
         scrollView.setContentOffset(point, animated: false)
+        
+        
+        
+        
+        
     }
     
 }
