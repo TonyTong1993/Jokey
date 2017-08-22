@@ -10,7 +10,7 @@ import UIKit
 
 class TYAttentionViewController: TYBaseViewController,TYSegmentViewDelegate {
     
-    private lazy var segmentView: TYSegmentView = {
+     lazy var segmentView: TYSegmentView = {
         
         let segmentView = TYSegmentView(
             frame: CGRect(x: 0, y: 0, width: 200, height: 44),
@@ -69,7 +69,8 @@ class TYAttentionViewController: TYBaseViewController,TYSegmentViewDelegate {
 extension TYAttentionViewController {
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("scrollViewDidScroll")
+        let scale = scrollView.contentOffset.x/scrollView.frame.width
+        segmentView.updateSegmentViewState(scale: scale)
     }
     override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         print("scrollViewWillEndDragging")

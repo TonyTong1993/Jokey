@@ -52,7 +52,10 @@ class TYSegmentView: UIView {
         //更新默认选中项
         items?.first?.isSelected = true
         //FIXME:设置指示器的宽度
-        let titleSize = titles.first?.size(attributes: [NSFontAttributeName:UIFont(name: TYTheme.themeFontFamilyName(), size: 16)! ])
+        guard let font = UIFont(name: TYTheme.themeFontFamilyName(), size: 16) else {
+            return
+        }
+        let titleSize = titles.first?.size(attributes: [NSFontAttributeName:font])
         indicatorView.frame = CGRect(x: 0, y: frame.height-2, width: (titleSize?.width)!, height: 2)
         indicatorView.backgroundColor = seletedTitleColor
         addSubview(indicatorView)
@@ -98,13 +101,46 @@ class TYSegmentView: UIView {
     }
     
     //pramrk------更新segmentItem状态
-    func updateSegmentItemState(segmentItem:TYSegmentItem)  {
-         let titleSize = titles[segmentItem.segmentIndex].size(attributes: [NSFontAttributeName:UIFont(name: TYTheme.themeFontFamilyName(), size: 16)! ])
+   @objc func updateSegmentItemState(segmentItem:TYSegmentItem)  {
+        guard let font = UIFont(name: TYTheme.themeFontFamilyName(), size: 16) else {
+            return
+        }
+         let titleSize = titles[segmentItem.segmentIndex].size(attributes: [NSFontAttributeName:font])
          let orgin = indicatorView.frame.origin
          UIView.animate(withDuration: 0.25) {
             self.indicatorView.frame = CGRect(x: orgin.x, y: orgin.y, width: titleSize.width, height: 2)
             self.indicatorView.center.x = segmentItem.center.x
         }
+    }
+    
+    //prmark----更新scrollView滚动时，segmentView状态的变化
+    func updateSegmentViewState(scale:CGFloat)  {
+        //边界计算
+        let count = CGFloat(titles.count)
+        if scale >= count-1 {
+            return
+        }
+        if scale <= 0 {
+            return
+        }
+        
+        let leftIndex = Int(scale)
+        let rightIndex = leftIndex+1
+        let scaleRight = scale - CGFloat(leftIndex)
+        let scaleLeft = 1 - scaleRight
+        if scaleLeft == 1 && scaleRight == 0 {
+            return
+        }
+        
+        let leftItem = items![leftIndex]
+        var rightItem : TYSegmentItem?
+        
+        if rightIndex < Int(count) {
+            rightItem = items![rightIndex]
+        }
+        let originalY = indicatorView.center.y;
+        let centerX = leftItem.center.x + ((rightItem?.center.x ?? 0) - leftItem.center.x) * scaleRight;
+        indicatorView.center = CGPoint(x: centerX, y: originalY)
     }
     
 }
