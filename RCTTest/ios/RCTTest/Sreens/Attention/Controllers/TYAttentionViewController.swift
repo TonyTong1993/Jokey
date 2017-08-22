@@ -57,11 +57,6 @@ class TYAttentionViewController: TYBaseViewController,TYSegmentViewDelegate {
         let width = UIScreen.main.bounds.width
         let point = CGPoint(x: width*CGFloat(segmentItem.segmentIndex), y: 0)
         scrollView.setContentOffset(point, animated: false)
-        
-        
-        
-        
-        
     }
     
 }
@@ -79,6 +74,7 @@ extension TYAttentionViewController {
         print("scrollViewDidEndDragging")
     }
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        print("scrollViewDidEndDecelerating")
+        let index = Int(scrollView.contentOffset.x/scrollView.frame.width)
+        segmentView.updateSegmentItemState(index: index)
     }
 }

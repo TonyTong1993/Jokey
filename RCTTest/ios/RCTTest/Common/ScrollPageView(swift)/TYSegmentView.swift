@@ -143,5 +143,14 @@ class TYSegmentView: UIView {
         indicatorView.center = CGPoint(x: centerX, y: originalY)
     }
     
+    func updateSegmentItemState(index:Int)  {
+        if currentIndex != index {
+            let preItem = items?[currentIndex]
+            preItem?.isSelected = false
+            let currentItem = items?[index]
+            currentItem?.isSelected = true
+            currentIndex = index
+        }
+    }
 }
 
