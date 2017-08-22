@@ -93,12 +93,18 @@ class TYSegmentView: UIView {
             lastSegmentItem.isSelected = true
             delegate?.segmentViewItemClicked(segmentItem: segmentItem)
             currentIndex = segmentItem.segmentIndex
+            updateSegmentItemState(segmentItem: segmentItem)
         }
     }
     
     //pramrk------更新segmentItem状态
     func updateSegmentItemState(segmentItem:TYSegmentItem)  {
-        
+         let titleSize = titles[segmentItem.segmentIndex].size(attributes: [NSFontAttributeName:UIFont(name: TYTheme.themeFontFamilyName(), size: 16)! ])
+         let orgin = indicatorView.frame.origin
+         UIView.animate(withDuration: 0.25) {
+            self.indicatorView.frame = CGRect(x: orgin.x, y: orgin.y, width: titleSize.width, height: 2)
+            self.indicatorView.center.x = segmentItem.center.x
+        }
     }
     
 }
