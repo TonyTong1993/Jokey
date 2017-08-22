@@ -56,4 +56,16 @@ extension UIColor {
         
         return UIColor(red: normalR, green: normalG, blue: normalB, alpha: normalA)
     }
+    func transfromToSelectedColor(normalRgbaComponents:[CGFloat]?,deltaRGBA:[CGFloat]?,scale:CGFloat) -> UIColor? {
+        guard let normalRgbaComponents = normalRgbaComponents,
+            let deltaRGBA = deltaRGBA else {
+                return nil
+        }
+        let selectedR = normalRgbaComponents[0] - deltaRGBA[0]*scale
+        let selectedG = normalRgbaComponents[1] - deltaRGBA[1]*scale
+        let selectedB = normalRgbaComponents[2] - deltaRGBA[2]*scale
+        let selectedA = normalRgbaComponents[3] - deltaRGBA[3]*scale
+        
+        return UIColor(red: selectedR, green: selectedG, blue: selectedB, alpha: selectedA)
+    }
 }
