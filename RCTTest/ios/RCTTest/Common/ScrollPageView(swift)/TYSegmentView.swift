@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+protocol TYSegmentViewDelegate : NSObjectProtocol{
+   func segmentViewItemClicked(segmentItem:TYSegmentItem)
+}
 class TYSegmentView: UIView {
     
     private let titles : [String]
@@ -20,11 +22,20 @@ class TYSegmentView: UIView {
     
     private var currentIndex: Int = 0
     
+    lazy var indicatorView: UIView = {
+        let indicatorView = UIView(frame: CGRect())
+        return indicatorView
+    }()
+    
+    
+    weak var delegate : TYSegmentViewDelegate?
+    
+    
     func setupSegmentItems(titles:[String]) -> [TYSegmentItem] {
         var segmentItems :[TYSegmentItem] = []
         for title in titles {
             let segmentItem =  TYSegmentItem(title: title, normalTitleColor: normalTitleColor, selectedTitleColor: seletedTitleColor)
-            segmentItem.addTarget(segmentItem, action: #selector(handleSegmentItemClicked(segmentItem:)), for: .touchUpInside)
+            segmentItem.addTarget(self, action: #selector(handleSegmentItemClicked(segmentItem:)), for: .touchUpInside)
             segmentItems.append(segmentItem)
             addSubview(segmentItem)
         }
@@ -39,7 +50,7 @@ class TYSegmentView: UIView {
         items = setupSegmentItems(titles: titles)
         
         //更新默认选中项
-        
+        items?.first?.isSelected = true
     }
     
     convenience init(frame: CGRect,ts: [String],ntc: UIColor,stc : UIColor) {
@@ -64,9 +75,20 @@ class TYSegmentView: UIView {
         }
     }
     @objc func handleSegmentItemClicked(segmentItem:TYSegmentItem) {
+        if segmentItem.segmentIndex != currentIndex {
+            let preSegmenItem = items![currentIndex]
+            preSegmenItem.isSelected = false
+            let lastSegmentItem = segmentItem
+            lastSegmentItem.isSelected = true
+            delegate?.segmentViewItemClicked(segmentItem: segmentItem)
+            currentIndex = segmentItem.segmentIndex
+        }
+    }
+    
+    //pramrk------更新segmentItem状态
+    func updateSegmentItemState(segmentItem:TYSegmentItem)  {
         
     }
+    
 }
-extension TYSegmentItem {
-  
-}
+

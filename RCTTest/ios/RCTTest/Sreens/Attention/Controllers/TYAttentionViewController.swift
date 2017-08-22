@@ -8,20 +8,20 @@
 
 import UIKit
 
-class TYAttentionViewController: TYBaseViewController {
+class TYAttentionViewController: TYBaseViewController,TYSegmentViewDelegate {
     
     private lazy var segmentView: TYSegmentView = {
         
         let segmentView = TYSegmentView(
-                                        frame: CGRect(x: 0, y: 0, width: 200, height: 36),
-                                        titles: ["关注","热点"],
-                                        normalTitleColor: UIColor.textTint,
-                                        seletedTitleColor: UIColor.themeTint)
+            frame: CGRect(x: 0, y: 0, width: 200, height: 36),
+            titles: ["关注","右友圈"],
+            normalTitleColor: UIColor.textTint,
+            seletedTitleColor: UIColor.themeTint)
         return segmentView
     }()
     let scrollView: UIScrollView = {
         
-       let frame = CGRect(x: 0, y: 0, width:UIScreen.main.bounds.width , height: UIScreen.main.bounds.height-103)
+        let frame = CGRect(x: 0, y: 0, width:UIScreen.main.bounds.width , height: UIScreen.main.bounds.height-103)
         
         let scrView = UIScrollView(frame: frame)
         return scrView
@@ -47,12 +47,18 @@ class TYAttentionViewController: TYBaseViewController {
         }
         
     }
-
+    
     override func setUpNavigationBar() {
         navigationItem.titleView = segmentView
+        segmentView.delegate = self
     }
     
-
+    func segmentViewItemClicked(segmentItem: TYSegmentItem) {
+        let width = UIScreen.main.bounds.width
+        let point = CGPoint(x: width*CGFloat(segmentItem.segmentIndex), y: 0)
+        scrollView.setContentOffset(point, animated: false)
+    }
+    
 }
 
 extension TYAttentionViewController {

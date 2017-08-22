@@ -17,6 +17,7 @@ class TYSegmentItem: UIButton {
         setTitle(title, for: .normal)
         setTitleColor(normalTitleColor, for: .normal)
         setTitleColor(selectedTitleColor, for: .selected)
+        titleLabel?.font = UIFont(name: TYTheme.themeFontFamilyName(), size: 16)
     }
     
     required init?(coder aDecoder: NSCoder) {
