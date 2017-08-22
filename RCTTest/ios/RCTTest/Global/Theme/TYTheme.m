@@ -8,8 +8,10 @@
 //导航栏选中字体颜色 5BB4EB 未选中颜色 black
 
 #import "TYTheme.h"
-NSInteger const themeColorHexValue = 0x55B1E6;
-NSInteger const separatorColorHexValue = 0xebebeb;
+NSInteger const themeColorHexValue = 0x55B1E6;//主题颜色
+NSInteger const separatorColorHexValue = 0xebebeb;//间隔线
+NSInteger const textTint = 0x333333;//文本默认颜色
+CGFloat const textFont = 14;//文本默认大小
 @implementation TYTheme
 static NSString *themeColor;
 +(NSString *)themeColorWithType:(TYThemeType)type {

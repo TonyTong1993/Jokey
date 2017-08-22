@@ -10,6 +10,8 @@
 
 extern NSInteger const themeColorHexValue;
 extern NSInteger const separatorColorHexValue;
+extern NSInteger const textTint;
+extern CGFloat const textFont;
 typedef NS_ENUM(NSInteger,TYThemeType) {
     TYThemeLight = 1,//纯色
     TYThemeDark,//亮黑

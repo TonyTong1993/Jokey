@@ -141,6 +141,9 @@ class TYSegmentView: UIView {
         let originalY = indicatorView.center.y;
         let centerX = leftItem.center.x + ((rightItem?.center.x ?? 0) - leftItem.center.x) * scaleRight;
         indicatorView.center = CGPoint(x: centerX, y: originalY)
+        
+        //TODO:添加渐变颜色
+       
     }
     
     func updateSegmentItemState(index:Int)  {
