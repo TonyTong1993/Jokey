@@ -75,4 +75,9 @@ extension TYCategaryViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 56
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let testVC = UIViewController()
+        testVC.view.backgroundColor = UIColor.green
+        navigationController?.pushViewController(testVC, animated: true)
+    }
 }

@@ -21,4 +21,5 @@ source 'https://github.com/CocoaPods/Specs.git'
     pod "AFNetworking"
     pod "SDWebImage"
     pod 'IconFont'
+    pod "RTRootNavigationController"
 end

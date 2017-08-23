@@ -45,6 +45,7 @@
 		EB32F1481F4B030F00D766AF /* TYCategaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB32F1471F4B030F00D766AF /* TYCategaryViewController.swift */; };
 		EB43475F1F3B51D100EC7AE9 /* TYStatusViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB43475D1F3B51D100EC7AE9 /* TYStatusViewCell.m */; };
 		EB4347601F3B51D100EC7AE9 /* TYStatusViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB43475E1F3B51D100EC7AE9 /* TYStatusViewCell.xib */; };
+		EB54324C1F4D634E00683AA7 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EB54324B1F4D634E00683AA7 /* UIBarButtonItem+Extension.m */; };
 		EB55658B1F42EC6B005BB5DC /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB55658A1F42EC6B005BB5DC /* TestView.m */; };
 		EB55658D1F42FEB0005BB5DC /* Bundle(Add).swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55658C1F42FEB0005BB5DC /* Bundle(Add).swift */; };
 		EB55658F1F43021C005BB5DC /* topic.json in Resources */ = {isa = PBXBuildFile; fileRef = EB55658E1F43021C005BB5DC /* topic.json */; };
@@ -192,6 +193,8 @@
 		EB43475C1F3B51D100EC7AE9 /* TYStatusViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYStatusViewCell.h; path = RCTTest/Common/TYStatusViewCell.h; sourceTree = SOURCE_ROOT; };
 		EB43475D1F3B51D100EC7AE9 /* TYStatusViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYStatusViewCell.m; path = RCTTest/Common/TYStatusViewCell.m; sourceTree = SOURCE_ROOT; };
 		EB43475E1F3B51D100EC7AE9 /* TYStatusViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TYStatusViewCell.xib; path = RCTTest/Common/TYStatusViewCell.xib; sourceTree = SOURCE_ROOT; };
+		EB54324A1F4D634E00683AA7 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		EB54324B1F4D634E00683AA7 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		EB5565891F42EC6B005BB5DC /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		EB55658A1F42EC6B005BB5DC /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		EB55658C1F42FEB0005BB5DC /* Bundle(Add).swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle(Add).swift"; sourceTree = "<group>"; };
@@ -633,6 +636,8 @@
 		EB5A2A0C1F03878D00A19F2C /* Categry */ = {
 			isa = PBXGroup;
 			children = (
+				EB54324A1F4D634E00683AA7 /* UIBarButtonItem+Extension.h */,
+				EB54324B1F4D634E00683AA7 /* UIBarButtonItem+Extension.m */,
 				EB6C70D51F1745A700D5B7AD /* UIImage+Extentions.h */,
 				EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */,
 				EB5A2A1B1F038C4100A19F2C /* UIButton+LPExtension.h */,
@@ -1128,6 +1133,7 @@
 				EB5D39281F345D0A0029085F /* TYCalculateFrameTool.m in Sources */,
 				EB18D3E71F0F6B7700B44790 /* TYRCTModule.m in Sources */,
 				EB266F511F3B2B0400949D40 /* TYImageTest.m in Sources */,
+				EB54324C1F4D634E00683AA7 /* UIBarButtonItem+Extension.m in Sources */,
 				EB5EDB2B1F46C15200B218AF /* Config.swift in Sources */,
 				EB714BCD1F4806190024C929 /* Constraint.swift in Sources */,
 				EB714BEB1F4806190024C929 /* LayoutConstraint.swift in Sources */,

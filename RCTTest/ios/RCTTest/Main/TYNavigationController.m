@@ -7,7 +7,9 @@
 //
 
 #import "TYNavigationController.h"
-
+#import "UIImage+Extentions.h"
+#import  "TBCityIconFont.h"
+#import "UIBarButtonItem+Extension.h"
 @interface TYNavigationController ()
 
 @end
@@ -16,7 +18,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    //设置app主题
+    [self setAppTheme];
 }
 
+
+#pragma mark---设置主题
+-(void)setAppTheme {
+    UINavigationBar *navBar = [UINavigationBar appearance];
+    NSString *themeColor = [TYTheme themeColorWithType:TYThemePureWhite];
+    //设置主题颜色
+    [navBar setBarTintColor:[UIColor colorWithHexString:themeColor]];
+    [navBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:[UIFont fontWithName:[TYTheme themeFontFamilyName] size:18]}];
+    [navBar setBackgroundImage:[UIImage imageNamed:@"nav_bg_1x64_"] forBarMetrics:UIBarMetricsDefault];
+    [navBar setShadowImage:[UIImage singleLineImageWithColor:HEXCOLOR(0xe0e0e0)]];
+    
+    [[UITabBar appearance] setBackgroundImage:[[UIImage imageNamed:@"tabbar_bg_1x49_"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [[UITabBar appearance] setShadowImage:[UIImage singleLineImageWithColor:HEXCOLOR(0xe0e0e0)]];
+}
+
+#pragma mark---自定义push
+-(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    
+    if (self.viewControllers.count >= 1) {
+        //当非根视图时隐藏tabBar
+        viewController.hidesBottomBarWhenPushed = YES;
+        viewController.title = @"测试标题";
+        //自定义返回按钮
+        UIImage *image = [UIImage iconWithInfo:TBCityIconInfoMake(@"\U0000e720;",24, HEXCOLOR(0x333333))];
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem barBtnItemWithNormalIcon:image highlightIcon:image target:self action:@selector(handleBackBarBtnClicked)];
+    }
+    [super pushViewController:viewController animated:animated];
+}
+
+-(void)handleBackBarBtnClicked{
+    [self popViewControllerAnimated:true];
+}
 @end
