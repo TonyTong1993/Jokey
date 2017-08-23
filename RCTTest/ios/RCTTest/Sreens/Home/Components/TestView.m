@@ -8,7 +8,9 @@
 
 #import "TestView.h"
 
-@implementation TestView
+@implementation TestView {
+    CGRect _myFrame;
+}
 
 +(TestView *)testView{
     TestView *testView = [[[NSBundle mainBundle]loadNibNamed:@"TestView" owner:nil options:nil] firstObject];

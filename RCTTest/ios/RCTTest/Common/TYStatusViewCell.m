@@ -60,10 +60,8 @@ static NSString *reuseIndentifier = @"KTYImageViewCell";
     
     CGFloat height = _scrollView.mj_h;
     self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH*3, height);
-    
     for (int i = 0; i < 3; i++) {
         TestView *view = [TestView testView];
-        view.frame = CGRectMake(SCREEN_WIDTH*i, 0, SCREEN_WIDTH, height);
         [self.scrollView addSubview:view];
     }
 }
@@ -79,6 +77,15 @@ static NSString *reuseIndentifier = @"KTYImageViewCell";
     self.collectionViewHeightConstraint.constant = collectionViewheight;
     [self.collectionView reloadData];
 }
+-(void)layoutSubviews {
+    [super layoutSubviews];
+    int index = 0;
+    for (TestView *view in _scrollView.subviews) {
+         view.frame = CGRectMake(SCREEN_WIDTH*index, 0, SCREEN_WIDTH, _scrollView.mj_h);
+        index++;
+    }
+}
+
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.model.imgs.count;
 }

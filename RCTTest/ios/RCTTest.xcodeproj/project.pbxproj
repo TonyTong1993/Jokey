@@ -47,6 +47,7 @@
 		EB4347601F3B51D100EC7AE9 /* TYStatusViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB43475E1F3B51D100EC7AE9 /* TYStatusViewCell.xib */; };
 		EB54324C1F4D634E00683AA7 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EB54324B1F4D634E00683AA7 /* UIBarButtonItem+Extension.m */; };
 		EB54324F1F4D7D2B00683AA7 /* TYTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB54324E1F4D7D2B00683AA7 /* TYTestViewController.m */; };
+		EB5432521F4D995900683AA7 /* TYStatusCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5432511F4D995900683AA7 /* TYStatusCommentView.m */; };
 		EB55658B1F42EC6B005BB5DC /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB55658A1F42EC6B005BB5DC /* TestView.m */; };
 		EB55658D1F42FEB0005BB5DC /* Bundle(Add).swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55658C1F42FEB0005BB5DC /* Bundle(Add).swift */; };
 		EB55658F1F43021C005BB5DC /* topic.json in Resources */ = {isa = PBXBuildFile; fileRef = EB55658E1F43021C005BB5DC /* topic.json */; };
@@ -198,6 +199,8 @@
 		EB54324B1F4D634E00683AA7 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		EB54324D1F4D7D2B00683AA7 /* TYTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTestViewController.h; sourceTree = "<group>"; };
 		EB54324E1F4D7D2B00683AA7 /* TYTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTestViewController.m; sourceTree = "<group>"; };
+		EB5432501F4D995900683AA7 /* TYStatusCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYStatusCommentView.h; sourceTree = "<group>"; };
+		EB5432511F4D995900683AA7 /* TYStatusCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYStatusCommentView.m; sourceTree = "<group>"; };
 		EB5565891F42EC6B005BB5DC /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		EB55658A1F42EC6B005BB5DC /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		EB55658C1F42FEB0005BB5DC /* Bundle(Add).swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle(Add).swift"; sourceTree = "<group>"; };
@@ -510,6 +513,8 @@
 				EB5A9A031F3C64C30031C497 /* TestView.xib */,
 				EB5565891F42EC6B005BB5DC /* TestView.h */,
 				EB55658A1F42EC6B005BB5DC /* TestView.m */,
+				EB5432501F4D995900683AA7 /* TYStatusCommentView.h */,
+				EB5432511F4D995900683AA7 /* TYStatusCommentView.m */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1090,6 +1095,7 @@
 				EB714BD61F4806190024C929 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				EB5A2A3D1F03B3E800A19F2C /* TYLoginViewController.m in Sources */,
 				EB54324F1F4D7D2B00683AA7 /* TYTestViewController.m in Sources */,
+				EB5432521F4D995900683AA7 /* TYStatusCommentView.m in Sources */,
 				EB18D3F81F0F89C500B44790 /* TYServiceApi.m in Sources */,
 				EB032D261F0251F300F32465 /* ViewController.m in Sources */,
 				EB6500F31F4186D500C0B89A /* NSString+Extension.m in Sources */,
