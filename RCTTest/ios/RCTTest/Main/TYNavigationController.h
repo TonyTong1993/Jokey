@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <RTRootNavigationController/RTRootNavigationController.h>
 @interface TYNavigationController : RTRootNavigationController
 
 @end

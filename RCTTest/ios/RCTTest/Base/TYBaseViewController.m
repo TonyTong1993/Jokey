@@ -101,6 +101,19 @@
 -(void)setUpNavigationBar {
     
 }
+//RTRootNavigationController中扩展的方法
+- (UIBarButtonItem *)rt_customBackItemWithTarget:(id)target
+                                          action:(SEL)action
+{
+    
+    UIImage *image = [UIImage iconWithInfo:TBCityIconInfoMake(@"\U0000e720;",24, HEXCOLOR(0x333333))];
+    return  [UIBarButtonItem barBtnItemWithNormalIcon:image
+                                        highlightIcon:image
+                                               target: target
+                                               action:action];
+    
+    
+}
 //加载新数据
 -(void)loadNewData {
     

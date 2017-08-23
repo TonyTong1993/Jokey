@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import  <MJRefresh/MJRefresh.h>
+#import  "TBCityIconFont.h"
+#import "UIBarButtonItem+Extension.h"
 @interface TYBaseViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,retain) UITableView *tableView;
 @property (nonatomic,copy) NSArray *dataSource;

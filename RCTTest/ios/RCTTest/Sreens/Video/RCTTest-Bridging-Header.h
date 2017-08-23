@@ -7,3 +7,4 @@
 #import "Macro.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import  "TBCityIconFont.h"
+#import "TYTestViewController.h"

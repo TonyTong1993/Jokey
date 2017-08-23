@@ -8,8 +8,6 @@
 
 #import "TYNavigationController.h"
 #import "UIImage+Extentions.h"
-#import  "TBCityIconFont.h"
-#import "UIBarButtonItem+Extension.h"
 @interface TYNavigationController ()
 
 @end
@@ -45,13 +43,10 @@
         viewController.hidesBottomBarWhenPushed = YES;
         viewController.title = @"测试标题";
         //自定义返回按钮
-        UIImage *image = [UIImage iconWithInfo:TBCityIconInfoMake(@"\U0000e720;",24, HEXCOLOR(0x333333))];
-        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem barBtnItemWithNormalIcon:image highlightIcon:image target:self action:@selector(handleBackBarBtnClicked)];
+ 
+        
     }
     [super pushViewController:viewController animated:animated];
 }
 
--(void)handleBackBarBtnClicked{
-    [self popViewControllerAnimated:true];
-}
 @end
