@@ -68,10 +68,10 @@ extension TYAttentionViewController {
         segmentView.updateSegmentViewState(scale: scale)
     }
     override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        print("scrollViewWillEndDragging")
+       
     }
     override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        print("scrollViewDidEndDragging")
+        
     }
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let index = Int(scrollView.contentOffset.x/scrollView.frame.width)

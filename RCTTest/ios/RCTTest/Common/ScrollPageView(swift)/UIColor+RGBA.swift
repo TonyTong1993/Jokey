@@ -32,7 +32,7 @@ extension UIColor {
         return components
     }
     
-    func gradientRGBA(normalRgbaComponents:[CGFloat]?,selectedRgbaComponents:[CGFloat]?) -> [CGFloat]? {
+   class func gradientRGBA(normalRgbaComponents:[CGFloat]?,selectedRgbaComponents:[CGFloat]?) -> [CGFloat]? {
         guard let normalRgbaComponents = normalRgbaComponents,
             let selectedRgbaComponents = selectedRgbaComponents  else {
                 return nil
@@ -44,7 +44,7 @@ extension UIColor {
         return [deltaR,deltaG,deltaB,deltaA]
     }
     
-    func transfromToNormalColor(selectedRgbaComponents:[CGFloat]?,deltaRGBA:[CGFloat]?,scale:CGFloat) -> UIColor? {
+   class func transfromToNormalColor(selectedRgbaComponents:[CGFloat]?,deltaRGBA:[CGFloat]?,scale:CGFloat) -> UIColor? {
         guard let selectedRgbaComponents = selectedRgbaComponents,
             let deltaRGBA = deltaRGBA else {
                 return nil
@@ -56,7 +56,7 @@ extension UIColor {
         
         return UIColor(red: normalR, green: normalG, blue: normalB, alpha: normalA)
     }
-    func transfromToSelectedColor(normalRgbaComponents:[CGFloat]?,deltaRGBA:[CGFloat]?,scale:CGFloat) -> UIColor? {
+   class func transfromToSelectedColor(normalRgbaComponents:[CGFloat]?,deltaRGBA:[CGFloat]?,scale:CGFloat) -> UIColor? {
         guard let normalRgbaComponents = normalRgbaComponents,
             let deltaRGBA = deltaRGBA else {
                 return nil

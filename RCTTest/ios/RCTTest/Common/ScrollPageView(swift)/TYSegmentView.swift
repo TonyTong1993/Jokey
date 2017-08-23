@@ -30,6 +30,12 @@ class TYSegmentView: UIView {
     
     weak var delegate : TYSegmentViewDelegate?
     
+     var selectedRgbaComponents: [CGFloat]?
+    
+     var normalRgbaComponents: [CGFloat]?
+    
+     var deltaRgbaComponents : [CGFloat]?
+    
     
     func setupSegmentItems(titles:[String]) -> [TYSegmentItem] {
         var segmentItems :[TYSegmentItem] = []
@@ -59,6 +65,9 @@ class TYSegmentView: UIView {
         indicatorView.frame = CGRect(x: 0, y: frame.height-2, width: (titleSize?.width)!, height: 2)
         indicatorView.backgroundColor = seletedTitleColor
         addSubview(indicatorView)
+        selectedRgbaComponents = seletedTitleColor.rgba()
+        normalRgbaComponents = normalTitleColor.rgba()
+        deltaRgbaComponents = UIColor.gradientRGBA(normalRgbaComponents: normalRgbaComponents,selectedRgbaComponents: selectedRgbaComponents)
     }
     
     convenience init(frame: CGRect,ts: [String],ntc: UIColor,stc : UIColor) {
@@ -143,9 +152,17 @@ class TYSegmentView: UIView {
         indicatorView.center = CGPoint(x: centerX, y: originalY)
         
         //TODO:添加渐变颜色
-       
+       setupGradient(value: Int(scale), leftItem: leftItem, rightItem: rightItem, scale: scaleRight)
     }
-    
+    func setupGradient(value: Int,leftItem: TYSegmentItem,rightItem:TYSegmentItem?,scale: CGFloat)  {
+        if value > currentIndex || value == currentIndex {
+            leftItem.setTitleColor(UIColor.transfromToNormalColor(selectedRgbaComponents: selectedRgbaComponents,deltaRGBA: deltaRgbaComponents,scale: scale), for: .selected)
+            rightItem?.setTitleColor(UIColor.transfromToSelectedColor(normalRgbaComponents: normalRgbaComponents, deltaRGBA: deltaRgbaComponents, scale: scale), for: .normal)
+        }else {
+            leftItem.setTitleColor(UIColor.transfromToNormalColor(selectedRgbaComponents: selectedRgbaComponents,deltaRGBA: deltaRgbaComponents,scale: scale), for: .normal)
+            rightItem?.setTitleColor(UIColor.transfromToSelectedColor(normalRgbaComponents: normalRgbaComponents, deltaRGBA: deltaRgbaComponents, scale: scale), for: .selected)
+        }
+    }
     func updateSegmentItemState(index:Int)  {
         if currentIndex != index {
             let preItem = items?[currentIndex]
@@ -153,6 +170,10 @@ class TYSegmentView: UIView {
             let currentItem = items?[index]
             currentItem?.isSelected = true
             currentIndex = index
+        }
+        for item in items ?? [] {
+            item.setTitleColor(normalTitleColor, for: .normal)
+            item.setTitleColor(seletedTitleColor, for: .selected)
         }
     }
 }
