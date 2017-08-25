@@ -99,17 +99,9 @@
 }
 
 -(void)setUpNavigationBar {
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"屏幕截图" style:UIBarButtonItemStylePlain target:self action:@selector(screenShot)];
-    self.navigationItem.rightBarButtonItem = rightItem;
+    
 }
--(void)screenShot {
-    //test
-    NSString *filePath = @"/Users/tongwanhua/Desktop/test.png";
-    UIImage *image = [UIImage screenShot];
-    image = [image cornerRadius:50 withRoundingCorners:UIRectCornerTopLeft|UIRectCornerTopRight];
-    NSData *data = UIImagePNGRepresentation(image);
-    [data writeToFile:filePath atomically:true];
-}
+
 //RTRootNavigationController中扩展的方法
 - (UIBarButtonItem *)rt_customBackItemWithTarget:(id)target
                                           action:(SEL)action
