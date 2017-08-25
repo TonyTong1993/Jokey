@@ -26,6 +26,7 @@ class TYSegmentView: UIView {
         let indicatorView = UIView(frame: CGRect())
         return indicatorView
     }()
+    var tmpwidth :CGFloat = 50
     
     
     weak var delegate : TYSegmentViewDelegate?
@@ -69,6 +70,7 @@ class TYSegmentView: UIView {
         selectedRgbaComponents = seletedTitleColor.rgba()
         normalRgbaComponents = normalTitleColor.rgba()
         deltaRgbaComponents = UIColor.gradientRGBA(normalRgbaComponents: normalRgbaComponents,selectedRgbaComponents: selectedRgbaComponents)
+        detalTitleSizeW = (items?.last?.titleSize.width)! - (items?.first?.titleSize.width)!
     }
     
     convenience init(frame: CGRect,ts: [String],ntc: UIColor,stc : UIColor) {
@@ -148,24 +150,10 @@ class TYSegmentView: UIView {
         if rightIndex < Int(count) {
             rightItem = items![rightIndex]
         }
-        //更新指示器的策略
-//        CGRect frame = self.itemSelectedBgImageView.frame;
-//        
-//        CGFloat xDiff = rightItem.frameWithOutTransform.origin.x - leftItem.frameWithOutTransform.origin.x;
-//        frame.origin.x = rightScale * xDiff + leftItem.frameWithOutTransform.origin.x + self.itemSelectedBgInsets.left;
-//        
-//        CGFloat widthDiff = rightItem.frameWithOutTransform.size.width - leftItem.frameWithOutTransform.size.width;
-//        if (widthDiff != 0) {
-//            CGFloat leftSelectedBgWidth = leftItem.frameWithOutTransform.size.width - self.itemSelectedBgInsets.left - self.itemSelectedBgInsets.right;
-//            frame.size.width = rightScale * widthDiff + leftSelectedBgWidth;
-//        }
-//        self.itemSelectedBgImageView.frame = frame;
-//        let width = leftItem.titleSize.width + ((rightItem?.titleSize.width ?? 0) - leftItem.titleSize.width)*scaleRight
-//        indicatorView.bounds = CGRect(origin: CGPoint.zero, size:CGSize(width: width, height: 2))
-
-        let originalY = indicatorView.center.y;
-        let centerX = leftItem.center.x + ((rightItem?.center.x ?? 0) - leftItem.center.x) * scaleRight;
-        indicatorView.center = CGPoint(x: centerX, y: originalY)
+        //更新指示器的frame
+        let centerY = indicatorView.center.y;
+        let centerX = leftItem.center.x + ((rightItem?.center.x ?? 0) - leftItem.center.x) * scaleRight
+        indicatorView.center = CGPoint(x: centerX, y: centerY)
         
 
         //添加渐变颜色
