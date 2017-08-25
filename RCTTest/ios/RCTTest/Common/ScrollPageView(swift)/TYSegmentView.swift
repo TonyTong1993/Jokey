@@ -162,12 +162,12 @@ class TYSegmentView: UIView {
 //        self.itemSelectedBgImageView.frame = frame;
 //        let width = leftItem.titleSize.width + ((rightItem?.titleSize.width ?? 0) - leftItem.titleSize.width)*scaleRight
 //        indicatorView.bounds = CGRect(origin: CGPoint.zero, size:CGSize(width: width, height: 2))
-       
+
         let originalY = indicatorView.center.y;
         let centerX = leftItem.center.x + ((rightItem?.center.x ?? 0) - leftItem.center.x) * scaleRight;
         indicatorView.center = CGPoint(x: centerX, y: originalY)
         
-    
+
         //添加渐变颜色
        setupGradient(value: Int(scale), leftItem: leftItem, rightItem: rightItem, scale: scaleRight)
     }
