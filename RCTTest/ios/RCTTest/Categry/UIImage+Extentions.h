@@ -37,9 +37,8 @@
  @param text 水印文字
  @param position  绘制的位置
  */
--(UIImage *)drawText:(NSString *)text position:(CGPoint)position;
+-(UIImage *)drawText:(NSString *)text position:(CGPoint)position attributes:(NSDictionary *)attributes;
 
--(UIImage *)drawAttributedText:(NSAttributedString *)attributedText position:(CGPoint)position;
 
 /**
  设置图片圆角
@@ -48,67 +47,31 @@
  */
 -(UIImage *)cornerRadius:(CGFloat)radius;
 
+/**
+  设置图片圆角
 
-
-
-
-
-
-
-
-
-
-
-+(UIImage*)convertViewToImage:(UIView*)view;
+ @param radius 圆角尺寸
+ @param corners 圆角位置
+ @return 剪切后的图片
+ */
+-(UIImage *)cornerRadius:(CGFloat)radius withRoundingCorners:(UIRectCorner)corners;
 
 /**
- 添加
+ 伸缩图片
 
- @param imageLogo src图片
- @return dist图片
+ @param image 原图
+ @param size 伸缩尺寸
+ @return 伸缩后的图片
  */
--(UIImage *)imageWithLogo:(UIImage *)imageLogo;
-
-/**
- 将文字添加到图片的指定位置上
-
- @param text 文字内容
- @param point 位置信息
- @return 带有文字的图片
- */
--(UIImage *)imageWithText:(NSString *)text position:(CGPoint)point attributes:(NSDictionary *)attributes lineWidth:(CGFloat)width;
-
-/**
- 添加图片到目标图片上
-
- @param image scrImage
- @param position 添加的位置
- @return dist图片
- */
--(UIImage *)addImage:(UIImage *)image position:(CGPoint)position;
-
-/**
- 生成圆形图片
-
- @param image src图片
- @return dist图片
- */
-+ (instancetype)circleImage:(NSString *)image;
-
-/**
- 生成圆角图片
-
- @param image src图片
- @param size 生成图片尺寸
- @param radius 圆角半径
- @return dist图片
- */
-+ (id)createRoundedRectImage:(UIImage*)image size:(CGSize)size radius:(NSInteger)radius;
 +(UIImage*) OriginImage:(UIImage *)image scaleToSize:(CGSize)size;
-- (UIImage *)getResizeImageWithSize:(CGSize )size;
-+ (UIImage *)compressImage:(UIImage *)image toByte:(NSUInteger)maxLength;
+
+/**
+ 画一条屏幕比例下的1像素线
+
+ @param color 线的颜色
+ @return 图片
+ */
 +(UIImage *)singleLineImageWithColor:(UIColor *)color;
 
-+ (UIImage *)imageWithColor1:(UIColor *)color size:(CGSize)size;
 
 @end

@@ -105,7 +105,8 @@
 -(void)screenShot {
     //test
     NSString *filePath = @"/Users/tongwanhua/Desktop/test.png";
-    UIImage *image = [UIImage imageWithView:self.tabBarController.view];
+    UIImage *image = [UIImage screenShot];
+    image = [image cornerRadius:50 withRoundingCorners:UIRectCornerTopLeft|UIRectCornerTopRight];
     NSData *data = UIImagePNGRepresentation(image);
     [data writeToFile:filePath atomically:true];
 }
