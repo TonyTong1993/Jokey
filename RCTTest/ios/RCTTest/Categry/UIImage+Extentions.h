@@ -9,6 +9,56 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImage (Extentions)
+
+/** 
+ 产生一张屏幕截图
+ */
++(UIImage *)screenShot;
+
+/**
+产生一张视图图片
+
+ @param view 在屏幕中必须渲染
+ */
++(UIImage *)imageWithView:(UIView *)view;
+
+
+/**
+ 图片添加logo图片
+
+ @param logo logo图
+ @param position 绘制的位置
+ */
+-(UIImage *)drawLogo:(UIImage *)logo position:(CGPoint)position;
+
+/**
+ 添加水印
+
+ @param text 水印文字
+ @param position  绘制的位置
+ */
+-(UIImage *)drawText:(NSString *)text position:(CGPoint)position;
+
+-(UIImage *)drawAttributedText:(NSAttributedString *)attributedText position:(CGPoint)position;
+
+/**
+ 设置图片圆角
+
+ @param radius 圆角半径
+ */
+-(UIImage *)cornerRadius:(CGFloat)radius;
+
+
+
+
+
+
+
+
+
+
+
+
 +(UIImage*)convertViewToImage:(UIView*)view;
 
 /**

@@ -30,13 +30,15 @@ class TYSegmentView: UIView {
     
     weak var delegate : TYSegmentViewDelegate?
     
-     var selectedRgbaComponents: [CGFloat]?
+    fileprivate  var selectedRgbaComponents: [CGFloat]?
     
-     var normalRgbaComponents: [CGFloat]?
+    fileprivate var normalRgbaComponents: [CGFloat]?
     
-     var deltaRgbaComponents : [CGFloat]?
+    fileprivate var deltaRgbaComponents : [CGFloat]?
     
-    var indicatorViewWidth : CGFloat?
+    fileprivate  var indicatorViewWidth : CGFloat?
+    
+    fileprivate var detalTitleSizeW : CGFloat?
     
     func setupSegmentItems(titles:[String]) -> [TYSegmentItem] {
         var segmentItems :[TYSegmentItem] = []
@@ -58,12 +60,9 @@ class TYSegmentView: UIView {
         
         //更新默认选中项
         items?.first?.isSelected = true
-        //FIXME:设置指示器的宽度
-        guard let font = UIFont(name: TYTheme.themeFontFamilyName(), size: 16) else {
-            return
-        }
-        let titleSize = titles.first?.size(attributes: [NSFontAttributeName:font])
-        indicatorViewWidth = titleSize?.width
+        //设置指示器的宽度
+
+        indicatorViewWidth = items?.first?.titleSize.width
         indicatorView.frame = CGRect(x: 0, y: frame.height-2, width: indicatorViewWidth ?? 0.0, height: 2)
         indicatorView.backgroundColor = seletedTitleColor
         addSubview(indicatorView)
@@ -149,10 +148,15 @@ class TYSegmentView: UIView {
         if rightIndex < Int(count) {
             rightItem = items![rightIndex]
         }
+        
+        let width = leftItem.titleSize.width + ((rightItem?.titleSize.width ?? 0) - leftItem.titleSize.width)*scaleRight
+        indicatorView.bounds = CGRect(origin: CGPoint.zero, size:CGSize(width: width, height: 2))
+       
         let originalY = indicatorView.center.y;
         let centerX = leftItem.center.x + ((rightItem?.center.x ?? 0) - leftItem.center.x) * scaleRight;
         indicatorView.center = CGPoint(x: centerX, y: originalY)
         
+        indicatorView.setNeedsDisplay()
         //添加渐变颜色
        setupGradient(value: Int(scale), leftItem: leftItem, rightItem: rightItem, scale: scaleRight)
     }
@@ -163,6 +167,7 @@ class TYSegmentView: UIView {
         }else {
             leftItem.setTitleColor(UIColor.transfromToNormalColor(selectedRgbaComponents: selectedRgbaComponents,deltaRGBA: deltaRgbaComponents,scale: scale), for: .normal)
             rightItem?.setTitleColor(UIColor.transfromToSelectedColor(normalRgbaComponents: normalRgbaComponents, deltaRGBA: deltaRgbaComponents, scale: scale), for: .selected)
+            
         }
     }
     func updateSegmentItemState(index:Int)  {

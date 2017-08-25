@@ -8,3 +8,4 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import  "TBCityIconFont.h"
 #import "TYTestViewController.h"
+#import "UIImage+Extentions.h"

@@ -76,8 +76,11 @@ extension TYCategaryViewController {
         return 56
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let testVC = TYTestViewController()
         testVC.view.backgroundColor = UIColor.green
         navigationController?.pushViewController(testVC, animated: true)
+
+
     }
 }

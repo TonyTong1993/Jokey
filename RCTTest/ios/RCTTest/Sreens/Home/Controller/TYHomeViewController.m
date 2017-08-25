@@ -66,6 +66,7 @@
         index++;
     }
 }
+
 #pragma mark---
 #pragma mark--- TYSegmentControlDelegate
 -(void)segmentConrol:(UIView *)segmentView didSelectedItemAtIndex:(NSUInteger)index {

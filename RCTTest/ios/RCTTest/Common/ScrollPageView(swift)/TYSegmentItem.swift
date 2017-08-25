@@ -10,14 +10,18 @@ import UIKit
 
 class TYSegmentItem: UIButton {
      var segmentIndex = 0
-    
+     var titleSize : CGSize = CGSize.zero
     
      init(title: String,normalTitleColor: UIColor,selectedTitleColor: UIColor) {
         super.init(frame: CGRect())
         setTitle(title, for: .normal)
         setTitleColor(normalTitleColor, for: .normal)
         setTitleColor(selectedTitleColor, for: .selected)
-        titleLabel?.font = UIFont(name: TYTheme.themeFontFamilyName(), size: 16)
+        guard let font = UIFont(name: TYTheme.themeFontFamilyName(), size: 16) else {
+            return
+        }
+        titleLabel?.font = font
+        titleSize = title.size(attributes: [NSFontAttributeName:font])
     }
     
     required init?(coder aDecoder: NSCoder) {

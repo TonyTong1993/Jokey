@@ -51,14 +51,19 @@ class TYAttentionViewController: TYBaseViewController,TYSegmentViewDelegate {
     override func setUpNavigationBar() {
         navigationItem.titleView = segmentView
         segmentView.delegate = self
+        //segmentView.layer.cornerRadius
     }
     
     func segmentViewItemClicked(segmentItem: TYSegmentItem) {
         let width = UIScreen.main.bounds.width
         let point = CGPoint(x: width*CGFloat(segmentItem.segmentIndex), y: 0)
         scrollView.setContentOffset(point, animated: false)
+        
+
+        
     }
-    
+
+ 
 }
 
 extension TYAttentionViewController {
