@@ -23,4 +23,5 @@ source 'https://github.com/CocoaPods/Specs.git'
     pod 'IconFont'
     pod "RTRootNavigationController"
     pod "Masonry"
+    pod "SDCycleScrollView"
 end

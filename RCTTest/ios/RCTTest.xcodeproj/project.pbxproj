@@ -27,6 +27,7 @@
 		EB266F5A1F3B2D2000949D40 /* TYReviewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB266F591F3B2D2000949D40 /* TYReviewTest.m */; };
 		EB266F5C1F3B317500949D40 /* recommend.json in Resources */ = {isa = PBXBuildFile; fileRef = EB266F5B1F3B317500949D40 /* recommend.json */; };
 		EB266F651F3B38AE00949D40 /* TYRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB266F641F3B38AE00949D40 /* TYRecommendViewController.m */; };
+		EB27A5481F510EBB00B7D023 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB27A5471F510EBB00B7D023 /* SearchView.swift */; };
 		EB3299C81F1352710034D095 /* fontFamily.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB3299C71F1352710034D095 /* fontFamily.txt */; };
 		EB3299CE1F1354420034D095 /* TYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3299CD1F1354420034D095 /* TYHomeViewController.m */; };
 		EB3299D01F136B860034D095 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299CF1F136B860034D095 /* iconfont.ttf */; };
@@ -175,6 +176,7 @@
 		EB266F5D1F3B33B000949D40 /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		EB266F631F3B38AE00949D40 /* TYRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYRecommendViewController.h; sourceTree = "<group>"; };
 		EB266F641F3B38AE00949D40 /* TYRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYRecommendViewController.m; sourceTree = "<group>"; };
+		EB27A5471F510EBB00B7D023 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchView.swift; path = RCTTest/ThirdFramework/SnapKit/SearchView.swift; sourceTree = SOURCE_ROOT; };
 		EB3299C71F1352710034D095 /* fontFamily.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fontFamily.txt; sourceTree = "<group>"; };
 		EB3299CC1F1354420034D095 /* TYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYHomeViewController.h; sourceTree = "<group>"; };
 		EB3299CD1F1354420034D095 /* TYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYHomeViewController.m; sourceTree = "<group>"; };
@@ -836,6 +838,7 @@
 		EB6500EE1F41838600C0B89A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EB27A5471F510EBB00B7D023 /* SearchView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1055,7 +1058,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1075,6 +1078,7 @@
 				EB714BE71F4806190024C929 /* ConstraintView+Extensions.swift in Sources */,
 				EB714BD21F4806190024C929 /* ConstraintDSL.swift in Sources */,
 				EB714BEC1F4806190024C929 /* LayoutConstraintItem.swift in Sources */,
+				EB27A5481F510EBB00B7D023 /* SearchView.swift in Sources */,
 				EB714BDE1F4806190024C929 /* ConstraintMakerFinalizable.swift in Sources */,
 				EB32F1431F4AE31C00D766AF /* TYSegmentItem.swift in Sources */,
 				EB5A2A2D1F03911200A19F2C /* TYProfileViewController.m in Sources */,

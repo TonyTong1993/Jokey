@@ -9,11 +9,15 @@
 import UIKit
 
 class TYDiscoverViewController: TYBaseViewController {
-
+    lazy var searchView: SearchView = {
+      
+        return  SearchView(frame:CGRect(x: 0, y: 0, width:UIScreen.main.bounds.width, height: 40))
+      
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
       
-       
+       navigationItem.titleView = searchView
 
     }
     
