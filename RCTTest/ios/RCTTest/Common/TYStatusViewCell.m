@@ -14,6 +14,7 @@
 #import "TYHomeUitl.h"
 #import "TYImageViewCell.h"
 #import "TestView.h"
+#import "TYStatusCommentView.h"
 static NSString *reuseIndentifier = @"KTYImageViewCell";
 @interface TYStatusViewCell()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UIImageView *avatarView;
@@ -47,7 +48,7 @@ static NSString *reuseIndentifier = @"KTYImageViewCell";
     self.topicLabel.layer.masksToBounds = true;
     [self.pageControl setCurrentPageIndicatorTintColor:HEXCOLOR(0x39B4FF)];
     [self.pageControl setPageIndicatorTintColor:HEXCOLOR(0xDBDBDB)];
-//    self.translatesAutoresizingMaskIntoConstraints = false;
+    self.translatesAutoresizingMaskIntoConstraints = false;
     
     //注册xib
     [self.collectionView registerNib:[UINib nibWithNibName:@"TYImageViewCell" bundle:nil] forCellWithReuseIdentifier:reuseIndentifier];
@@ -58,10 +59,15 @@ static NSString *reuseIndentifier = @"KTYImageViewCell";
     //设置scrollView
     self.scrollView.delegate = self;
     
-    CGFloat height = _scrollView.mj_h;
-    self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH*3, height);
+    //FIXME:需要根据模型确定高度
+    if (__IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_10_0) [_scrollView layoutIfNeeded];
+    
+    self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH*3,  _scrollView.mj_h);
+    int index = 0;
     for (int i = 0; i < 3; i++) {
-        TestView *view = [TestView testView];
+        TYStatusCommentView *view = [[TYStatusCommentView alloc] initWithFrame: CGRectMake(SCREEN_WIDTH*index, 0, SCREEN_WIDTH,  _scrollView.mj_h)];
+            index++;
+        
         [self.scrollView addSubview:view];
     }
 }
@@ -79,11 +85,7 @@ static NSString *reuseIndentifier = @"KTYImageViewCell";
 }
 -(void)layoutSubviews {
     [super layoutSubviews];
-    int index = 0;
-    for (TestView *view in _scrollView.subviews) {
-         view.frame = CGRectMake(SCREEN_WIDTH*index, 0, SCREEN_WIDTH, _scrollView.mj_h);
-        index++;
-    }
+
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
