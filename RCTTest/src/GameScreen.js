@@ -20,13 +20,13 @@ class GameScreen extends Component {
         <TouchableHighlight onPress={this.props.onClick} >
         	<Text style={styles.hello}>{myIcon} </Text>
         </TouchableHighlight>
-
       </View>
     );
   }
   componentDidMount() {
- 
+
 }
+
 }
 const styles = StyleSheet.create({
  container: {
