@@ -7,6 +7,7 @@ import {
   Text,
   Dimensions
 } from 'react-native';
+import ViewPager from 'react-native-viewpager'
 const width = Dimensions.get('window').width;
 const data = [
               "http://img61.ddimg.cn/upload_img/00705/yhj4/640x284_lyx_0829.jpg",
@@ -14,9 +15,13 @@ const data = [
               "http://img54.ddimg.cn/192030035267244_y.jpg"
             ];
 export default class ReCycleView extends React.Component{
-
+  static defaultProps = {
+  	  duration: 3000
+  	}
   constructor(props) {
     super(props);
+    // 用于构建DataSource对象
+
     this.state = {
       page:0
     }
@@ -26,12 +31,13 @@ export default class ReCycleView extends React.Component{
     var scrollView = this.refs.scrollView
 
     this.timer = setInterval(()=>{
-      var activePage = this.state.page+1;
+      var activePage = (this.state.page+1)%3;
+      var animtated = activePage == 0 ? false:true
       this.setState({
-        page:activePage%3
+        page:activePage
       })
-       scrollView.scrollResponderScrollTo({x:this.state.page*width,y:0,animated:true})
-    },5000)
+       scrollView.scrollResponderScrollTo({x:this.state.page*width,y:0,animated:animtated})
+    },this.props.duration)
 
   }
   componentWillUnmount() {
