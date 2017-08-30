@@ -3,43 +3,42 @@ import {
   StyleSheet,
   NavigatorIOS,
   TabBarIOS,
-  View,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import ShopPage from './pages/ShopPage';
 
-const home = ()=>{
-  return <NavigatorIOS
-            initialRote={{
-              components:ShopPage,
+const home = (
+   <NavigatorIOS
+            initialRoute={{
+              component:ShopPage,
               title:'乐跑商城'
             }}
-           style={styles.container}/>
-};
-const category = ()=>{
-  return <NavigatorIOS
-            initialRote={{
-              components:ShopPage,
+           style={{flex:1}}/>
+)
+const category = (
+   <NavigatorIOS
+            initialRoute={{
+              component:ShopPage,
               title:'分类'
             }}
-           style={styles.container}/>
-};
-const discover = ()=>{
-  return <NavigatorIOS
-            initialRote={{
-              components:ShopPage,
+           style={{flex:1}}/>
+)
+const discover = (
+   <NavigatorIOS
+            initialRoute={{
+              component:ShopPage,
               title:'发现'
             }}
-           style={styles.container}/>
-};
-const cart = ()=>{
-  return <NavigatorIOS
-            initialRote={{
-              components:ShopPage,
+          style={{flex:1}}/>
+)
+const cart = (
+   <NavigatorIOS
+            initialRoute={{
+              component:ShopPage,
               title:'购物车'
             }}
-           style={styles.container}/>
-};
+           style={{flex:1}}/>
+)
 const home_normal_icon = (<Icon name='home' size={20} color='#d3d3d3'/>)
 const home_selected_icon = (<Icon name='home' size={20} color='#0bad61'/>)
 
@@ -51,8 +50,6 @@ const discover_selected_icon = (<Icon name='search' size={20} color='#0bad61'/>)
 
 const cart_normal_icon = (<Icon name='fa-shopping-cart' size={20} color='#d3d3d3'/>)
 const cart_selected_icon = (<Icon name='fa-shopping-cart' size={20} color='#0bad61'/>)
-
-
 export default class App extends React.Component {
 
 
@@ -62,10 +59,20 @@ export default class App extends React.Component {
              <TabBarIOS.Item
                title='首页'
                selected={true}>
-               (<View style={{backgroundColor: '#ffffff'}}>
-      </View>)
+               {home}
              </TabBarIOS.Item>
-
+             <TabBarIOS.Item
+               title='分类'>
+               <ShopPage />
+             </TabBarIOS.Item>
+             <TabBarIOS.Item
+               title='发现'>
+                <ShopPage />
+             </TabBarIOS.Item>
+             <TabBarIOS.Item
+               title='购物车'>
+               <ShopPage />
+             </TabBarIOS.Item>
           </TabBarIOS>
       );
   }
@@ -75,5 +82,4 @@ var styles = StyleSheet.create({
   container: {
     flex:1,
   }
-
 })
