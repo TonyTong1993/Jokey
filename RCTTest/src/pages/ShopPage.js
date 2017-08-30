@@ -17,7 +17,6 @@ export default class ShopPage extends React.Component {
         {key:'商品----05'},{key:'商品----06'}]}
         ListHeaderComponent={ReCycleView}
         renderItem={({item})=><Text style={{textAlign:'center',backgroundColor:'#53e021'}}>{item.key}</Text>}
-        ListFooterComponent={ReCycleView}
       />
 
     );
