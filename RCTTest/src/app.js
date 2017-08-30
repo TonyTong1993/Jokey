@@ -39,19 +39,13 @@ const cart = (
             }}
            style={{flex:1}}/>
 )
-// const home_normal_icon = (<Icon name='home' size={20} color='#d3d3d3'/>)
-// const home_selected_icon = (<Icon name='home' size={20} color='#0bad61'/>)
-//
-// const category_normal_icon = (<Icon name='fa-object-group' size={20} color='#d3d3d3'/>)
-// const category_selected_icon = (<Icon name='fa-object-group' size={20} color='#0bad61'/>)
-//
-// const discover_normal_icon = (<Icon name='search' size={20} color='#d3d3d3'/>)
-// const discover_selected_icon = (<Icon name='search' size={20} color='#0bad61'/>)
-//
-// const cart_normal_icon = (<Icon name='fa-shopping-cart' size={20} color='#d3d3d3'/>)
-// const cart_selected_icon = (<Icon name='fa-shopping-cart' size={20} color='#0bad61'/>)
 export default class App extends React.Component {
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedTab:'首页'
+    }
+  }
 
   render() {
         return  (
@@ -59,12 +53,17 @@ export default class App extends React.Component {
              <Icon.TabBarItem
                renderAsOriginal= {true}
                title='首页'
-               selected={true}
+               selected={this.state.selectedTab === '首页'}
                iconSize={20}
                iconName='home'
                iconColor = '#d3d3d3'
                selectedIconName='home'
-               selectedIconColor='#0bad61'>
+               selectedIconColor='#0bad61'
+               onPress={()=>{
+                 this.setState({
+                   selectedTab:'首页'
+                 })
+               }}>
                {home}
              </Icon.TabBarItem>
              <Icon.TabBarItem
@@ -73,7 +72,13 @@ export default class App extends React.Component {
                iconName='glass'
                iconColor = '#d3d3d3'
                selectedIconName='glass'
-               selectedIconColor='#0bad61'>
+               selectedIconColor='#0bad61'
+               selected={this.state.selectedTab === '分类'}
+               onPress={()=>{
+                 this.setState({
+                   selectedTab:'分类'
+                 })
+               }}>
                <ShopPage />
              </Icon.TabBarItem>
              <Icon.TabBarItem
@@ -82,7 +87,14 @@ export default class App extends React.Component {
                iconName='search'
                iconColor = '#d3d3d3'
                selectedIconName='search'
-               selectedIconColor='#0bad61'>
+               selectedIconColor='#0bad61'
+               selected={this.state.selectedTab === '发现'}
+               onPress={()=>{
+                 this.setState({
+                   selectedTab:'发现'
+                 })
+               }}>
+               
                 <ShopPage />
              </Icon.TabBarItem>
              <Icon.TabBarItem
@@ -91,7 +103,13 @@ export default class App extends React.Component {
                iconName='user'
                iconColor = '#d3d3d3'
                selectedIconName='user'
-               selectedIconColor='#0bad61'>
+               selectedIconColor='#0bad61'
+               selected={this.state.selectedTab === '购物车'}
+               onPress={()=>{
+                 this.setState({
+                   selectedTab:'购物车'
+                 })
+               }}>
                <ShopPage />
              </Icon.TabBarItem>
           </TabBarIOS>
