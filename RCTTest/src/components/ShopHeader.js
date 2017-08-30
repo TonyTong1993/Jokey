@@ -27,7 +27,6 @@ export default class ReCycleView extends React.Component{
 
     this.timer = setInterval(()=>{
       var activePage = this.state.page+1;
-
       this.setState({
         page:activePage%3
       })

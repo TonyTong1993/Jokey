@@ -21,6 +21,7 @@ const category = (
               component:ShopPage,
               title:'分类'
             }}
+            navigationBarHidden={false}
            style={{flex:1}}/>
 )
 const discover = (
@@ -79,7 +80,7 @@ export default class App extends React.Component {
                    selectedTab:'分类'
                  })
                }}>
-               <ShopPage />
+               {category}
              </Icon.TabBarItem>
              <Icon.TabBarItem
                title='发现'
@@ -94,8 +95,8 @@ export default class App extends React.Component {
                    selectedTab:'发现'
                  })
                }}>
-               
-                <ShopPage />
+
+                {discover}
              </Icon.TabBarItem>
              <Icon.TabBarItem
                title='购物车'
@@ -110,7 +111,7 @@ export default class App extends React.Component {
                    selectedTab:'购物车'
                  })
                }}>
-               <ShopPage />
+              {cart}
              </Icon.TabBarItem>
           </TabBarIOS>
       );
