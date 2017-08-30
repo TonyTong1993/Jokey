@@ -55,24 +55,27 @@ export default class App extends React.Component {
 
   render() {
         return  (
-          <TabBarIOS >
-             <TabBarIOS.Item
+          <TabBarIOS tintColor='#0bad61'>
+             <Icon.TabBarItem
+               renderAsOriginal= {true}
                title='首页'
-               selected={true}>
+               selected={true}
+               iconSize={22}
+               iconName='search'>
                {home}
-             </TabBarIOS.Item>
-             <TabBarIOS.Item
+             </Icon.TabBarItem>
+             <Icon.TabBarItem
                title='分类'>
                <ShopPage />
-             </TabBarIOS.Item>
-             <TabBarIOS.Item
+             </Icon.TabBarItem>
+             <Icon.TabBarItem
                title='发现'>
                 <ShopPage />
-             </TabBarIOS.Item>
-             <TabBarIOS.Item
+             </Icon.TabBarItem>
+             <Icon.TabBarItem
                title='购物车'>
                <ShopPage />
-             </TabBarIOS.Item>
+             </Icon.TabBarItem>
           </TabBarIOS>
       );
   }
