@@ -14,7 +14,15 @@
 
 @implementation TYShopViewController
 
-
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setHidden:true];
+}
+-(void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+   
+    [self.navigationController.navigationBar setHidden:false];
+}
 
 
 @end

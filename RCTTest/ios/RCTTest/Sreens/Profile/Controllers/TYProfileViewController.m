@@ -50,9 +50,10 @@
     RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:@"test" initialProperties:@{} launchOptions:nil];
     TYShopViewController *vc = [[TYShopViewController alloc] init];
     vc.view = rootView;
-    [self presentViewController:vc animated:true completion:^{
-        
-    }];
+    [self.navigationController pushViewController:vc animated:YES];
+//    [self presentViewController:vc animated:true completion:^{
+//        
+//    }];
     
     
 }

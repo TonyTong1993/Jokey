@@ -39,17 +39,17 @@ const cart = (
             }}
            style={{flex:1}}/>
 )
-const home_normal_icon = (<Icon name='home' size={20} color='#d3d3d3'/>)
-const home_selected_icon = (<Icon name='home' size={20} color='#0bad61'/>)
-
-const category_normal_icon = (<Icon name='fa-object-group' size={20} color='#d3d3d3'/>)
-const category_selected_icon = (<Icon name='fa-object-group' size={20} color='#0bad61'/>)
-
-const discover_normal_icon = (<Icon name='search' size={20} color='#d3d3d3'/>)
-const discover_selected_icon = (<Icon name='search' size={20} color='#0bad61'/>)
-
-const cart_normal_icon = (<Icon name='fa-shopping-cart' size={20} color='#d3d3d3'/>)
-const cart_selected_icon = (<Icon name='fa-shopping-cart' size={20} color='#0bad61'/>)
+// const home_normal_icon = (<Icon name='home' size={20} color='#d3d3d3'/>)
+// const home_selected_icon = (<Icon name='home' size={20} color='#0bad61'/>)
+//
+// const category_normal_icon = (<Icon name='fa-object-group' size={20} color='#d3d3d3'/>)
+// const category_selected_icon = (<Icon name='fa-object-group' size={20} color='#0bad61'/>)
+//
+// const discover_normal_icon = (<Icon name='search' size={20} color='#d3d3d3'/>)
+// const discover_selected_icon = (<Icon name='search' size={20} color='#0bad61'/>)
+//
+// const cart_normal_icon = (<Icon name='fa-shopping-cart' size={20} color='#d3d3d3'/>)
+// const cart_selected_icon = (<Icon name='fa-shopping-cart' size={20} color='#0bad61'/>)
 export default class App extends React.Component {
 
 
@@ -60,20 +60,38 @@ export default class App extends React.Component {
                renderAsOriginal= {true}
                title='首页'
                selected={true}
-               iconSize={22}
-               iconName='search'>
+               iconSize={20}
+               iconName='home'
+               iconColor = '#d3d3d3'
+               selectedIconName='home'
+               selectedIconColor='#0bad61'>
                {home}
              </Icon.TabBarItem>
              <Icon.TabBarItem
-               title='分类'>
+               title='分类'
+               iconSize={20}
+               iconName='glass'
+               iconColor = '#d3d3d3'
+               selectedIconName='glass'
+               selectedIconColor='#0bad61'>
                <ShopPage />
              </Icon.TabBarItem>
              <Icon.TabBarItem
-               title='发现'>
+               title='发现'
+               iconSize={20}
+               iconName='search'
+               iconColor = '#d3d3d3'
+               selectedIconName='search'
+               selectedIconColor='#0bad61'>
                 <ShopPage />
              </Icon.TabBarItem>
              <Icon.TabBarItem
-               title='购物车'>
+               title='购物车'
+               iconSize={20}
+               iconName='user'
+               iconColor = '#d3d3d3'
+               selectedIconName='user'
+               selectedIconColor='#0bad61'>
                <ShopPage />
              </Icon.TabBarItem>
           </TabBarIOS>
