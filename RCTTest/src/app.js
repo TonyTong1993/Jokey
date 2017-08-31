@@ -10,9 +10,10 @@ const home = (
    <NavigatorIOS
             initialRoute={{
               component:ShopPage,
-              title:'乐跑商城'
+              title:'乐跑商城',
             }}
-           style={{flex:1}}/>
+           style={{flex:1}}
+           navigationBarHidden={true}/>
 )
 const category = (
    <NavigatorIOS
