@@ -13,7 +13,7 @@
     "react-native": "^0.43.4"
   },
   "devDependencies": {
-    "react-native-vector-icons": "^4.2.0",
-    "react-native-viewpager": "^0.2.13"
+    "react-native-swiper": "^1.5.10",
+    "react-native-vector-icons": "^4.2.0"
   }
 }

@@ -6,6 +6,7 @@ import {
   FlatList,
 } from 'react-native'
 import ReCycleView from '../components/ShopHeader'
+// import swiper from './SwiperView'
 export default class ShopPage extends React.Component {
 
   render() {

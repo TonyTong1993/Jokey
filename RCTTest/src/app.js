@@ -6,7 +6,6 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import ShopPage from './pages/ShopPage';
-
 const home = (
    <NavigatorIOS
             initialRoute={{
