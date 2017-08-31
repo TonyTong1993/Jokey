@@ -1,3 +1,8 @@
+
+/*
+测试使用swiper
+*/
+
 import React, { Component } from 'react';
 import {
   AppRegistry,

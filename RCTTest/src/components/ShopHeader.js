@@ -8,7 +8,7 @@ import {
   Dimensions
 } from 'react-native';
 import Swiper from 'react-native-swiper'
-const width = Dimensions.get('window').width;
+import Config from '../Config'
 const data = [
               "http://img61.ddimg.cn/upload_img/00705/yhj4/640x284_lyx_0829.jpg",
               "http://img63.ddimg.cn/upload_img/00657/830/Touch-6.6-1.jpg",
@@ -45,11 +45,11 @@ export default class ReCycleView extends React.Component{
 
 var styles = StyleSheet.create({
   container: {
-    width:width,
+    width:Config.screen_width,
     height:166.4,//fixme:需做尺寸适配
   },
   slide:{
-    width:width,
+    width:Config.screen_width,
     height:166.4,
   }
 })
