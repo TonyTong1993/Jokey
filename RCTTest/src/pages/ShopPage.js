@@ -8,8 +8,20 @@ import {
 } from 'react-native'
 import ReCycleView from '../components/ShopHeader'
 import SearchHeader from '../components/SearchHeader'
+import ShopFooter from '../components/ShopFooter'
 import RowBanner from '../components/RowBanner'
-import {screen_width} from '../Config'
+import {screen_width,screen_height} from '../Config'
+
+const data = [
+              {key:'http://img63.ddimg.cn/upload_img/00721/zjl/640x342_wzh_20170830.jpg'},
+              {key:['图书','电子书','网络文学','当当优品','当当优品',
+                    '童书','母婴','玩具','童装童鞋','创意文具',
+                    '女装','男装','内衣配饰','鞋靴箱包','户外活动',
+                    '美妆个护','食品','运营健康','珠宝手表','当当优选',
+                    '家居家纺','家电','Apple','手机数码','图书榜']},
+              {key:'商品---003'},
+                  ]
+
 export default class ShopPage extends React.Component {
 
   render() {
@@ -17,9 +29,9 @@ export default class ShopPage extends React.Component {
       <View style={styles.container}>
          <SearchHeader />
          <FlatList
-           automaticallyAdjustContentInsets = {false}
+           automaticallyAdjustContentInsets={false}
            contentContainerStyle={{flex:1}}
-           data={[{key:'商品----01'},{key:'商品----02'},{key:'商品----03'},{key:'商品----04'},{key:'商品----05'}]}
+           data={data}
            ListHeaderComponent={ReCycleView}
            renderItem={this._renderItem}
          />
@@ -31,14 +43,16 @@ export default class ShopPage extends React.Component {
     switch (data.index) {
       case 0:
       return <View >
-        <Image style={styles.firstBanner} source={{uri:'http://img63.ddimg.cn/upload_img/00721/zjl/640x342_wzh_20170830.jpg'}}/>
+        <Image style={styles.firstBanner} source={{uri:data.item.key}}/>
       </View>
         break;
         case 1:
-        return <RowBanner />
+        return <RowBanner data={data.item.key}/>
           break;
         case 2:
-        return <RowBanner />
+        return <View style={styles.thirdBanner}>
+           <Text>third part</Text>
+        </View>
             break;
         case 3:
         return <RowBanner />
@@ -64,5 +78,10 @@ var styles = StyleSheet.create({
   firstBanner:{
     width:screen_width,
     height:200,
+  },
+  thirdBanner:{
+    width:screen_width,
+    height:100,
+    backgroundColor:'#ffb300'
   }
 })

@@ -7,10 +7,9 @@ import {
   StyleSheet,
 } from 'react-native';
 import {screen_width,onePixel} from '../Config'
-const data = ['图书','电子书','网络文学','当当优品','文玩拍卖']
 export default class RowBanner extends Component {
   render() {
-    const nodes = data.map((data,index)=>{
+    const nodes = this.props.data.map((data,index)=>{
       return this._renderItem(data,index)
     })
     return (
@@ -33,11 +32,13 @@ export default class RowBanner extends Component {
 const styles = StyleSheet.create({
   container: {
     width:screen_width,
-    height:40,
     flexDirection:'row',
+    justifyContent:'flex-start',
+    flexWrap:'wrap'
   },
   item:{
-    flex:1,
+    width:screen_width/5,
+    height:40,
     justifyContent:'center',
     alignItems:'center',
     flexDirection:'row',

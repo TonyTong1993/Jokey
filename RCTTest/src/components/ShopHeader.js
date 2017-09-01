@@ -47,6 +47,7 @@ var styles = StyleSheet.create({
   container: {
     width:Config.screen_width,
     height:166.4,//fixme:需做尺寸适配
+
   },
   slide:{
     width:Config.screen_width,

@@ -13,7 +13,8 @@ const home = (
               title:'乐跑商城',
             }}
            style={{flex:1}}
-           navigationBarHidden={true}/>
+           navigationBarHidden={true}
+           translucent={false}/>
 )
 const category = (
    <NavigatorIOS
@@ -22,6 +23,7 @@ const category = (
               title:'分类'
             }}
             navigationBarHidden={false}
+            translucent={false}
            style={{flex:1}}/>
 )
 const discover = (
@@ -30,7 +32,8 @@ const discover = (
               component:ShopPage,
               title:'发现'
             }}
-          style={{flex:1}}/>
+            translucent={false}
+            style={{flex:1}}/>
 )
 const cart = (
    <NavigatorIOS
@@ -38,7 +41,8 @@ const cart = (
               component:ShopPage,
               title:'购物车'
             }}
-           style={{flex:1}}/>
+            translucent={false}
+            style={{flex:1}}/>
 )
 export default class App extends React.Component {
   constructor(props) {
@@ -50,7 +54,10 @@ export default class App extends React.Component {
 
   render() {
         return  (
-          <TabBarIOS tintColor='#0bad61'>
+          <TabBarIOS
+            tintColor='#0bad61'
+            translucent={false}
+            barTintColor='#ffffff'>
              <Icon.TabBarItem
                renderAsOriginal= {true}
                title='首页'
