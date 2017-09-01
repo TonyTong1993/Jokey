@@ -9,7 +9,7 @@ import {
 import ReCycleView from '../components/ShopHeader'
 import SearchHeader from '../components/SearchHeader'
 import RowBanner from '../components/RowBanner'
-import screen_width from '../Config'
+import {screen_width} from '../Config'
 export default class ShopPage extends React.Component {
 
   render() {
@@ -19,7 +19,7 @@ export default class ShopPage extends React.Component {
          <FlatList
            automaticallyAdjustContentInsets = {false}
            contentContainerStyle={{flex:1}}
-           data={[{key:'商品----01'},{key:'商品----02'}]}
+           data={[{key:'商品----01'},{key:'商品----02'},{key:'商品----03'},{key:'商品----04'},{key:'商品----05'}]}
            ListHeaderComponent={ReCycleView}
            renderItem={this._renderItem}
          />
@@ -37,6 +37,15 @@ export default class ShopPage extends React.Component {
         case 1:
         return <RowBanner />
           break;
+        case 2:
+        return <RowBanner />
+            break;
+        case 3:
+        return <RowBanner />
+            break;
+        case 4:
+        return <RowBanner />
+            break;
       default:
       return <Text>'beyond bounds'</Text>
     }

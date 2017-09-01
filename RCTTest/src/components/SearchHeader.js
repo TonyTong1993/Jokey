@@ -8,7 +8,7 @@ import {
   TextInput,
   Dimensions,
 } from 'react-native'
-import screen_width from '../Config'
+import {screen_width} from '../Config'
 import SearchView from './SearchView'
 export default class SearchHeader extends React.Component {
   constructor(props) {

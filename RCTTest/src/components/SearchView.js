@@ -7,7 +7,7 @@ import {
   Dimensions,
   Image,
 } from 'react-native'
-import screen_width from '../Config'
+import {screen_width} from '../Config'
 export default class SearchView extends React.Component {
   constructor(props) {
     super(props);

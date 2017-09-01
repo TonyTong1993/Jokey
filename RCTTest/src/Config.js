@@ -1,5 +1,10 @@
 import {
-  Dimensions
+  Dimensions,
+  PixelRatio,
 } from 'react-native';
  const screen_width = Dimensions.get('window').width;
- module.exports = screen_width;
+ const onePixel = 1/PixelRatio.get();
+ module.exports = {
+   screen_width:screen_width,
+   onePixel:onePixel
+ };
