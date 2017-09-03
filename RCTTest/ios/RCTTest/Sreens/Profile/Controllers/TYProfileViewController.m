@@ -46,7 +46,7 @@
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://192.168.10.40:8081/index.ios.bundle?platform=ios"];
+    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://192.168.0.112:8081/index.ios.bundle?platform=ios"];
     RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:@"test" initialProperties:@{} launchOptions:nil];
     TYShopViewController *vc = [[TYShopViewController alloc] init];
     vc.view = rootView;

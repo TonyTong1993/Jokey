@@ -9,11 +9,17 @@
   "author": "tony",
   "license": "ISC",
   "dependencies": {
+    "md5": "^2.2.1",
     "react": "^16.0.0-alpha.6",
-    "react-native": "^0.43.4"
+    "react-native": "^0.43.4",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "react-native-swiper": "^1.5.10",
-    "react-native-vector-icons": "^4.2.0"
+    "react-native-vector-icons": "^4.2.0",
+    "redux-logger": "^3.0.6",
+    "redux-promise": "^0.5.3"
   }
 }

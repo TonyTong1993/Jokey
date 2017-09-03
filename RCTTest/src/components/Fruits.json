@@ -1,0 +1,30 @@
+{
+	"data": [{
+			"key": 1,
+			"title": "佳沛新西兰进口猕猴桃",
+			"desc": "12个装",
+			"price": 99,
+			"cover": "http://vczero.github.io/ctrip/guo_1.jpg"
+		}, {
+			"key": 2,
+			"title": "墨西哥进口牛油果",
+			"desc": "6个装",
+			"price": 59,
+			"cover": "http://vczero.github.io/ctrip/guo_2.jpg"
+		}, {
+			"key": 3,
+			"title": "美国加州进口车厘子",
+			"desc": "1000g",
+			"price": 91.5,
+			"cover": "http://vczero.github.io/ctrip/guo_3.jpg"
+		}, {
+			"key": 4,
+			"title": "新疆特产西梅",
+			"desc": "1000g",
+			"price": 69,
+			"cover": "http://vczero.github.io/ctrip/guo_4.jpg"
+		},
+
+
+	]
+}

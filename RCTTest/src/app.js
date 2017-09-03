@@ -6,6 +6,8 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import ShopPage from './pages/ShopPage';
+import FruitShopPage from './pages/FruitShopPage';
+import LoginPage from './pages/LoginPage';
 const home = (
    <NavigatorIOS
             initialRoute={{
@@ -19,7 +21,7 @@ const home = (
 const category = (
    <NavigatorIOS
             initialRoute={{
-              component:ShopPage,
+              component:FruitShopPage,
               title:'分类'
             }}
             navigationBarHidden={false}
@@ -29,7 +31,7 @@ const category = (
 const discover = (
    <NavigatorIOS
             initialRoute={{
-              component:ShopPage,
+              component:LoginPage,
               title:'发现'
             }}
             translucent={false}
@@ -38,7 +40,7 @@ const discover = (
 const cart = (
    <NavigatorIOS
             initialRoute={{
-              component:ShopPage,
+              component:FruitShopPage,
               title:'购物车'
             }}
             translucent={false}

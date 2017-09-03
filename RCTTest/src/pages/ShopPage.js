@@ -10,6 +10,7 @@ import ReCycleView from '../components/ShopHeader'
 import SearchHeader from '../components/SearchHeader'
 import ShopFooter from '../components/ShopFooter'
 import RowBanner from '../components/RowBanner'
+import ThirdBanner from '../components/ThirdBanner'
 import {screen_width,screen_height} from '../Config'
 
 const data = [
@@ -23,22 +24,40 @@ const data = [
                   ]
 
 export default class ShopPage extends React.Component {
-
+  constructor(props){
+    super(props)
+    this.state = {
+      pulling:false
+    }
+  }
   render() {
     return (
       <View style={styles.container}>
          <SearchHeader />
          <FlatList
            automaticallyAdjustContentInsets={false}
-           contentContainerStyle={{flex:1}}
+           contentContainerStyle={{paddingBottom:49}}
            data={data}
            ListHeaderComponent={ReCycleView}
            renderItem={this._renderItem}
+           refreshing={this.state.pulling}
+           onRefresh={this._loadNewData.bind(this)}
+           onEndReached={()=>{
+            console.log('onEndReached')
+           }}
+           onEndReachedThreshold={0.5}
          />
       </View>
 
     );
   }
+  componentDidMount() {
+   
+  }
+ componentWillUnmount() {
+    
+ }
+  /*private method*/
   _renderItem(data:object) {
     switch (data.index) {
       case 0:
@@ -50,9 +69,7 @@ export default class ShopPage extends React.Component {
         return <RowBanner data={data.item.key}/>
           break;
         case 2:
-        return <View style={styles.thirdBanner}>
-           <Text>third part</Text>
-        </View>
+        return <ThirdBanner />
             break;
         case 3:
         return <RowBanner />
@@ -65,6 +82,19 @@ export default class ShopPage extends React.Component {
     }
 
   }
+  _loadNewData(){
+    this.setState({
+      pulling:true 
+    });
+     this.timer = setTimeout(()=>{
+      this.setState({
+      pulling:false 
+    });
+      this.timer && clearTimeout(this.timer);
+    },3000)
+  }
+ 
+   
 }
 
 var styles = StyleSheet.create({
@@ -81,7 +111,7 @@ var styles = StyleSheet.create({
   },
   thirdBanner:{
     width:screen_width,
-    height:100,
+    height:50,
     backgroundColor:'#ffb300'
   }
 })
