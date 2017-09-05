@@ -35,8 +35,7 @@ class LoginPage extends Component {
 	      	<View style={styles.enter}> 
 	      		<Text>登录</Text>
 	      	</View>
-	    </TouchableOpacity>
-	    <Text>{this.props.movies.payload.description}</Text>  	
+	    </TouchableOpacity>	
       </View>
     );
   }

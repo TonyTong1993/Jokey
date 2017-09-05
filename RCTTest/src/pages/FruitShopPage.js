@@ -12,15 +12,20 @@ import {
 	AsyncStorage
 } from 'react-native';
 import FruitCell from '../components/FruitCell'
-
+import FruitDetialPage from './FruitDetialPage'
 class FruitShopPage extends Component {
 	constructor(props) {
 	  super(props);
 	}
-	
+
  _onPressItem = ()=> {
-		alert('hello world')
+		 this.props.navigator.push({
+			 component:FruitDetialPage,
+			 title:'详情页',
+
+		 })
 	}
+
 	render() {
 		return (
 			<View style={{flex:1,backgroundColor:'#f5f5f5'}}>
@@ -40,6 +45,7 @@ class FruitShopPage extends Component {
 		);
 	}
 	componentDidMount() {
+		
 		//保存
 		// AsyncStorage.setItem("fruits", JSON.stringify(goods), (error) => {
 		// 	if (error) {
@@ -60,14 +66,14 @@ class FruitShopPage extends Component {
 	}
 	_renderItem = ({item}) =>{
 		return (
-			<FruitCell 
+			<FruitCell
 				id={item.key}
 				data={item}
 				onPress = {this._onPressItem}
 			/>
 		)
 	}
-	
+
 }
 
 const styles = StyleSheet.create({

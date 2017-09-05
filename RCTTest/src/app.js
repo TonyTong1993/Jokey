@@ -2,9 +2,11 @@ import React from 'react';
 import {
   StyleSheet,
   NavigatorIOS,
-  TabBarIOS,
+  Image,
+  View,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import TabNavigator from 'react-native-tab-navigator'
 import ShopPage from './pages/ShopPage';
 import FruitShopPage from './pages/FruitShopPage';
 import LoginPage from './pages/LoginPage';
@@ -50,79 +52,54 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab:'首页'
+      selectedTab:'Home'
     }
   }
 
   render() {
         return  (
-          <TabBarIOS
-            tintColor='#0bad61'
-            translucent={false}
-            barTintColor='#ffffff'>
-             <Icon.TabBarItem
-               renderAsOriginal= {true}
+          <TabNavigator>
+             <TabNavigator.Item
                title='首页'
-               selected={this.state.selectedTab === '首页'}
-               iconSize={20}
-               iconName='home'
-               iconColor = '#d3d3d3'
-               selectedIconName='home'
-               selectedIconColor='#0bad61'
-               onPress={()=>{
-                 this.setState({
-                   selectedTab:'首页'
-                 })
-               }}>
-               {home}
-             </Icon.TabBarItem>
-             <Icon.TabBarItem
+               renderIcon={()=> <Image source={require('./imgs/tab/home_off@3x.png')}/>}
+               renderSelectedIcon={()=> <Image source={require('./imgs/tab/home_on@3x.png')}/>}
+               selected={this.state.selectedTab === 'Home'}
+               onPress={()=>this.setState({
+                 selectedTab:'Home'
+               })}>
+                {<ShopPage />}
+             </TabNavigator.Item>
+             <TabNavigator.Item
                title='分类'
-               iconSize={20}
-               iconName='glass'
-               iconColor = '#d3d3d3'
-               selectedIconName='glass'
-               selectedIconColor='#0bad61'
-               selected={this.state.selectedTab === '分类'}
-               onPress={()=>{
-                 this.setState({
-                   selectedTab:'分类'
-                 })
-               }}>
-               {category}
-             </Icon.TabBarItem>
-             <Icon.TabBarItem
+               renderIcon={()=> <Image source={require('./imgs/tab/discover_off@3x.png')}/>}
+               renderSelectedIcon={()=> <Image source={require('./imgs/tab/discover_on@3x.png')}/>}
+               selected={this.state.selectedTab === 'Category'}
+               onPress={()=>this.setState({
+                 selectedTab:'Category'
+               })}>
+                {<FruitShopPage />}
+             </TabNavigator.Item>
+             <TabNavigator.Item
                title='发现'
-               iconSize={20}
-               iconName='search'
-               iconColor = '#d3d3d3'
-               selectedIconName='search'
-               selectedIconColor='#0bad61'
-               selected={this.state.selectedTab === '发现'}
-               onPress={()=>{
-                 this.setState({
-                   selectedTab:'发现'
-                 })
-               }}>
-
-                {discover}
-             </Icon.TabBarItem>
-             <Icon.TabBarItem
+               renderIcon={()=> <Image source={require('./imgs/tab/lepao_off@3x.png')}/>}
+               renderSelectedIcon={()=> <Image source={require('./imgs/tab/lepao_on@3x.png')}/>}
+               selected={this.state.selectedTab === 'Discover'}
+               onPress={()=>this.setState({
+                 selectedTab:'Discover'
+               })}>
+                {<LoginPage />}
+             </TabNavigator.Item>
+             <TabNavigator.Item
                title='购物车'
-               iconSize={20}
-               iconName='user'
-               iconColor = '#d3d3d3'
-               selectedIconName='user'
-               selectedIconColor='#0bad61'
-               selected={this.state.selectedTab === '购物车'}
-               onPress={()=>{
-                 this.setState({
-                   selectedTab:'购物车'
-                 })
-               }}>
-              {cart}
-             </Icon.TabBarItem>
-          </TabBarIOS>
+               renderIcon={()=> <Image source={require('./imgs/tab/user_off@3x.png')}/>}
+               renderSelectedIcon={()=> <Image source={require('./imgs/tab/user_on@3x.png')}/>}
+               selected={this.state.selectedTab === 'Cart'}
+               onPress={()=>this.setState({
+                 selectedTab:'Cart'
+               })}>
+                {<View />}
+             </TabNavigator.Item>
+          </TabNavigator>
       );
   }
 }
