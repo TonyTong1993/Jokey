@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   StyleSheet,
+  Navigator,
   NavigatorIOS,
   Image,
   View,
@@ -9,96 +10,88 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import TabNavigator from 'react-native-tab-navigator'
 import ShopPage from './pages/ShopPage';
 import FruitShopPage from './pages/FruitShopPage';
+import FruitDetialPage from './pages/FruitDetialPage';
 import LoginPage from './pages/LoginPage';
 const home = (
-   <NavigatorIOS
+   <Navigator
             initialRoute={{
               component:ShopPage,
-              title:'乐跑商城',
+              name:'home',
+              index:0,
             }}
-           style={{flex:1}}
-           navigationBarHidden={true}
-           translucent={false}/>
+            renderScene = {(route,navigator)=>{
+              let Component = route.component;
+              return <Component {...route.params} navigator= {navigator} />
+            }}
+          />
 )
 const category = (
-   <NavigatorIOS
+   <Navigator
             initialRoute={{
-              component:FruitShopPage,
-              title:'分类'
+              name:'category',
+              index:0,
+              component:FruitShopPage
             }}
-            navigationBarHidden={false}
-            translucent={false}
-           style={{flex:1}}/>
+            renderScene = {(route,navigator)=>{
+              let Component = route.component;
+              return <Component {...route.params} navigator = {navigator} />
+            }}
+           />
 )
 const discover = (
-   <NavigatorIOS
+   <Navigator
             initialRoute={{
               component:LoginPage,
-              title:'发现'
+              name:'discover',
+              index:0
             }}
-            translucent={false}
-            style={{flex:1}}/>
+            renderScene = {(route,navigator)=>{
+              let Component = route.component;
+              return <Component {...route.params} navigator = {navigator} />
+            }}
+            />
 )
 const cart = (
-   <NavigatorIOS
+   <Navigator
             initialRoute={{
               component:FruitShopPage,
-              title:'购物车'
+              name:'cart',
+              index:0
             }}
-            translucent={false}
-            style={{flex:1}}/>
+            renderScene = {(route,navigator)=>{
+              let Component = route.component;
+              return <Component {...route.params} navigator = {navigator} />
+            }}
+            />
 )
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab:'Home'
+      selectedTab:'home'
     }
   }
-
+ _renderTabItem = (title,renderIcon,renderSelectedIcon,component) => {
+   return (
+     <TabNavigator.Item
+       title={title}
+       renderIcon={()=> <Image source={renderIcon}/>}
+       renderSelectedIcon={()=> <Image source={renderSelectedIcon}/>}
+       selected={this.state.selectedTab === title}
+       onPress={()=>this.setState({
+         selectedTab:title
+       })}>
+        {component}
+     </TabNavigator.Item>
+   );
+ }
   render() {
         return  (
           <TabNavigator>
-             <TabNavigator.Item
-               title='首页'
-               renderIcon={()=> <Image source={require('./imgs/tab/home_off@3x.png')}/>}
-               renderSelectedIcon={()=> <Image source={require('./imgs/tab/home_on@3x.png')}/>}
-               selected={this.state.selectedTab === 'Home'}
-               onPress={()=>this.setState({
-                 selectedTab:'Home'
-               })}>
-                {<ShopPage />}
-             </TabNavigator.Item>
-             <TabNavigator.Item
-               title='分类'
-               renderIcon={()=> <Image source={require('./imgs/tab/discover_off@3x.png')}/>}
-               renderSelectedIcon={()=> <Image source={require('./imgs/tab/discover_on@3x.png')}/>}
-               selected={this.state.selectedTab === 'Category'}
-               onPress={()=>this.setState({
-                 selectedTab:'Category'
-               })}>
-                {<FruitShopPage />}
-             </TabNavigator.Item>
-             <TabNavigator.Item
-               title='发现'
-               renderIcon={()=> <Image source={require('./imgs/tab/lepao_off@3x.png')}/>}
-               renderSelectedIcon={()=> <Image source={require('./imgs/tab/lepao_on@3x.png')}/>}
-               selected={this.state.selectedTab === 'Discover'}
-               onPress={()=>this.setState({
-                 selectedTab:'Discover'
-               })}>
-                {<LoginPage />}
-             </TabNavigator.Item>
-             <TabNavigator.Item
-               title='购物车'
-               renderIcon={()=> <Image source={require('./imgs/tab/user_off@3x.png')}/>}
-               renderSelectedIcon={()=> <Image source={require('./imgs/tab/user_on@3x.png')}/>}
-               selected={this.state.selectedTab === 'Cart'}
-               onPress={()=>this.setState({
-                 selectedTab:'Cart'
-               })}>
-                {<View />}
-             </TabNavigator.Item>
+             {this._renderTabItem('home',require('./imgs/tab/home_off@3x.png'),require('./imgs/tab/home_on@3x.png'),home)}
+             {this._renderTabItem('category',require('./imgs/tab/lepao_off@3x.png'),require('./imgs/tab/lepao_on@3x.png'),category)}
+             {this._renderTabItem('discover',require('./imgs/tab/discover_off@3x.png'),require('./imgs/tab/discover_on@3x.png'),discover)}
+             {this._renderTabItem('cart',require('./imgs/tab/user_off@3x.png'),require('./imgs/tab/user_on@3x.png'),cart)}
           </TabNavigator>
       );
   }
