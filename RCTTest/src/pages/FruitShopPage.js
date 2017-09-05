@@ -19,8 +19,8 @@ class FruitShopPage extends Component {
 	}
 	
  _onPressItem = ()=> {
-			alert('hello world')
-		}
+		alert('hello world')
+	}
 	render() {
 		return (
 			<View style={{flex:1,backgroundColor:'#f5f5f5'}}>
@@ -58,10 +58,12 @@ class FruitShopPage extends Component {
 		// 	alert(JSON.parse(result).data)
 		// })
 	}
-	_renderItem(data: object, index: number) {
+	_renderItem = ({item}) =>{
 		return (
 			<FruitCell 
-				data={data.item}
+				id={item.key}
+				data={item}
+				onPress = {this._onPressItem}
 			/>
 		)
 	}

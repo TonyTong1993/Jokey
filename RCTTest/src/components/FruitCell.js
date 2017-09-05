@@ -16,18 +16,15 @@ import {
 } from '../Config'
 class FruitCell extends Component {
 
-	_onPress = () => {
-        alert(this.props.data.title)
-  };
 	render() {
 		return ( 
+		    <TouchableOpacity onPress = {this.props.onPress} >
 			    <View style={styles.container}>
-				    <TouchableOpacity onPress = {this._onPress} >
 				      	<Image style={styles.cover} source={{uri:this.props.data.cover}}>
 				      	<Text style={styles.textStyle}>{this.props.data.title}</Text>
 				      	</Image>
-				      </TouchableOpacity>
 		        </View>
+		      </TouchableOpacity>
 		);
 	}
 }
