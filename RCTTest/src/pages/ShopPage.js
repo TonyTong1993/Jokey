@@ -52,10 +52,10 @@ export default class ShopPage extends React.Component {
     );
   }
   componentDidMount() {
-   
+
   }
  componentWillUnmount() {
-    
+
  }
   /*private method*/
   _renderItem(data:object) {
@@ -84,17 +84,17 @@ export default class ShopPage extends React.Component {
   }
   _loadNewData(){
     this.setState({
-      pulling:true 
+      pulling:true
     });
      this.timer = setTimeout(()=>{
       this.setState({
-      pulling:false 
+      pulling:false
     });
       this.timer && clearTimeout(this.timer);
     },3000)
   }
- 
-   
+
+
 }
 
 var styles = StyleSheet.create({

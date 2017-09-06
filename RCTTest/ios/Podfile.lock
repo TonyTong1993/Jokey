@@ -29,16 +29,22 @@ PODS:
     - React/Core
     - React/RCTWebSocket
   - React/jschelpers (0.43.4)
+  - React/RCTActionSheet (0.43.4):
+    - React/Core
   - React/RCTAnimation (0.43.4):
     - React/Core
   - React/RCTImage (0.43.4):
     - React/Core
     - React/RCTNetwork
+  - React/RCTLinkingIOS (0.43.4):
+    - React/Core
   - React/RCTNetwork (0.43.4):
     - React/Core
   - React/RCTSettings (0.43.4):
     - React/Core
   - React/RCTText (0.43.4):
+    - React/Core
+  - React/RCTVibration (0.43.4):
     - React/Core
   - React/RCTWebSocket (0.43.4):
     - React/Core
@@ -62,11 +68,14 @@ DEPENDENCIES:
   - MJRefresh
   - React/Core (from `../node_modules/react-native`)
   - React/DevSupport (from `../node_modules/react-native`)
+  - React/RCTActionSheet (from `../node_modules/react-native`)
   - React/RCTAnimation (from `../node_modules/react-native`)
   - React/RCTImage (from `../node_modules/react-native`)
+  - React/RCTLinkingIOS (from `../node_modules/react-native`)
   - React/RCTNetwork (from `../node_modules/react-native`)
   - React/RCTSettings (from `../node_modules/react-native`)
   - React/RCTText (from `../node_modules/react-native`)
+  - React/RCTVibration (from `../node_modules/react-native`)
   - React/RCTWebSocket (from `../node_modules/react-native`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - RTRootNavigationController
@@ -95,6 +104,6 @@ SPEC CHECKSUMS:
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   Yoga: 2a70bc5ab41486a272b9fd5b76c482ba9268c5dd
 
-PODFILE CHECKSUM: 59d613ab10c3e4a31624a72cdb6f1e1b9c57f123
+PODFILE CHECKSUM: e5c0393fdab98ba7a4ca0d24958a08bab0041b96
 
 COCOAPODS: 1.3.1
