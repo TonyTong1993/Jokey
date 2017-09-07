@@ -1,5 +1,5 @@
 /* @flow */
-
+/*TabNavigator */
 import React, { Component } from 'react';
 import {
   View,
@@ -8,6 +8,7 @@ import {
   Image,
 } from 'react-native';
 import { TabNavigator } from 'react-navigation'
+import { onePixel } from '../Config'
  class HomeScreen extends Component {
   render() {
     return (
@@ -49,9 +50,13 @@ const RootTabBarNavigator = TabNavigator({
   Home:{
     screen:HomeScreen,
     navigationOptions:()=>({
+      // title:'Home'
       tabBarLabel:'Home',
-      tabBarIcon:({tintColor})=> (
-        <Image source={require('../imgs/tab/home_off@2x.png')} style={[styles.icon,{tintColor:tintColor}]}/>
+      tabBarIcon:({focused,tintColor})=> (
+        focused ?
+        <Image source={require('../imgs/tab/home_on@3x.png')} style={styles.icon}/>
+        :
+        <Image source={require('../imgs/tab/home_off@3x.png')} style={styles.icon}/>
       )
     })
   },
@@ -59,8 +64,11 @@ const RootTabBarNavigator = TabNavigator({
     screen:ContactScreen,
     navigationOptions:()=>({
       tabBarLabel:'Contact',
-      tabBarIcon:({tintColor})=> (
-        <Image source={require('../imgs/tab/home_off@2x.png')} style={[styles.icon,{tintColor:tintColor}]}/>
+      tabBarIcon:({focused,tintColor})=> (
+        focused ?
+        <Image source={require('../imgs/tab/category_on@3x.png')} style={styles.icon}/>
+        :
+        <Image source={require('../imgs/tab/category_off@3x.png')} style={styles.icon}/>
       )
     })
   },
@@ -68,8 +76,11 @@ const RootTabBarNavigator = TabNavigator({
     screen:DiscoverScreen,
     navigationOptions:()=>({
       tabBarLabel:'Discover',
-      tabBarIcon:({tintColor})=> (
-        <Image source={require('../imgs/tab/home_off@2x.png')} style={[styles.icon,{tintColor:tintColor}]}/>
+      tabBarIcon:({focused,tintColor})=> (
+        focused ?
+        <Image source={require('../imgs/tab/discover_on@3x.png')} style={styles.icon}/>
+        :
+        <Image source={require('../imgs/tab/discover_off@3x.png')} style={styles.icon}/>
       )
     })
   },
@@ -77,16 +88,28 @@ const RootTabBarNavigator = TabNavigator({
     screen:ProfileScreen,
     navigationOptions:()=>({
       tabBarLabel:'Profile',
-      tabBarIcon:({tintColor})=> (
-        <Image source={require('../imgs/tab/home_off@2x.png')} style={[styles.icon,{tintColor:tintColor}]}/>
+      tabBarIcon:({focused,tintColor})=> (
+        focused ?
+          <Image source={require('../imgs/tab/cart_on@3x.png')} style={styles.icon}/>
+        :
+          <Image source={require('../imgs/tab/cart_off@3x.png')} style={styles.icon}/>
       )
     })
   }
 },{
   // tabBarPosition:'top',
   tabBarOptions:{
-    activeTintColor:'#ffb300',
-    activeBackgroundColor:'#0bad61'
+    activeTintColor:'#0bad61',
+    // showLabel:false
+    // activeBackgroundColor:'#0bad61'
+     style: {
+          backgroundColor: '#fff', // TabBar 背景色
+          borderTopWidth:onePixel,//ios 中的shadow image
+          borderTopColor: '#e0e0e0',//更改颜色
+      },
+      labelStyle: {
+             fontSize: 10, // 文字大小
+         },
   }
 })
 
@@ -97,8 +120,8 @@ const styles = StyleSheet.create({
     alignItems:'center',
   },
   icon:{
-    width:26,
-    height:26,
+    width:20,
+    height:20,
   }
 });
 
