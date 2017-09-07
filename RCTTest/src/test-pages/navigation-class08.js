@@ -1,5 +1,5 @@
 /* @flow */
-/*手势冲突fix */
+/*自定义 navigation header*/
 import React, { Component } from 'react';
 import {
   View,
@@ -8,13 +8,17 @@ import {
   StyleSheet,
   Image,
   Platform,
+  TextInput,
 } from 'react-native';
 const TYRCTModule = require('NativeModules').TYRCTModule
 import { TabNavigator,StackNavigator } from 'react-navigation'
-import { onePixel } from '../Config'
+import SearchHeader from '../components/SearchHeader'
+import { onePixel,screen_width } from '../Config'
  class HomeScreen extends Component {
    static navigationOptions = ({navigation}) =>({
-     title:'Home'
+     header:()=>{
+       return <SearchHeader />
+     }
    })
   render() {
     return (

@@ -6,7 +6,7 @@ import {
   View,
   Text,
 } from 'react-native';
-import App from './test-pages/navigation-class07'
+import App from './test-pages/navigation-class08'
 
 
 

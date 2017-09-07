@@ -44,7 +44,8 @@ var styles = StyleSheet.create({
       flexDirection:'row',
       alignItems:'center',
       borderBottomWidth:onePixel,
-      borderBottomColor:'#e0e0e0'
+      borderBottomColor:'#e0e0e0',
+      backgroundColor:'#fff'
     },
     leftIcon:{
       width:40,
