@@ -98,6 +98,7 @@
 		EB6501221F418F2300C0B89A /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6501211F418F2300C0B89A /* VideoToolbox.framework */; };
 		EB6712331F4C0FDE00642B72 /* String(Add).swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6712321F4C0FDE00642B72 /* String(Add).swift */; };
 		EB6712351F4C4CE500642B72 /* UIColor+RGBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6712341F4C4CE500642B72 /* UIColor+RGBA.swift */; };
+		EB6728881F6129C40089265A /* TYPoprosManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6728871F6129C40089265A /* TYPoprosManager.m */; };
 		EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */; };
 		EB714BCB1F4806190024C929 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EB714BA71F4806190024C929 /* LICENSE */; };
 		EB714BCC1F4806190024C929 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EB714BA81F4806190024C929 /* README.md */; };
@@ -281,6 +282,8 @@
 		EB6501281F419FAB00C0B89A /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = ../../../IJKMediaFramework.framework; sourceTree = "<group>"; };
 		EB6712321F4C0FDE00642B72 /* String(Add).swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String(Add).swift"; sourceTree = "<group>"; };
 		EB6712341F4C4CE500642B72 /* UIColor+RGBA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+RGBA.swift"; sourceTree = "<group>"; };
+		EB6728861F6129C40089265A /* TYPoprosManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPoprosManager.h; sourceTree = "<group>"; };
+		EB6728871F6129C40089265A /* TYPoprosManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPoprosManager.m; sourceTree = "<group>"; };
 		EB6C70D51F1745A700D5B7AD /* UIImage+Extentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extentions.h"; sourceTree = "<group>"; };
 		EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extentions.m"; sourceTree = "<group>"; };
 		EB714BA71F4806190024C929 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -763,6 +766,8 @@
 				EB5A2A3F1F03B40D00A19F2C /* TYRCTViewController.m */,
 				EB18D3E51F0F6B7700B44790 /* TYRCTModule.h */,
 				EB18D3E61F0F6B7700B44790 /* TYRCTModule.m */,
+				EB6728861F6129C40089265A /* TYPoprosManager.h */,
+				EB6728871F6129C40089265A /* TYPoprosManager.m */,
 			);
 			path = ServerRender;
 			sourceTree = "<group>";
@@ -1136,6 +1141,7 @@
 				EB714BEC1F4806190024C929 /* LayoutConstraintItem.swift in Sources */,
 				EB5865811F5570ED00598DA0 /* NSBundle+Extension.m in Sources */,
 				EB58658B1F55764200598DA0 /* TYShopViewController.m in Sources */,
+				EB6728881F6129C40089265A /* TYPoprosManager.m in Sources */,
 				EB27A5481F510EBB00B7D023 /* SearchView.swift in Sources */,
 				EB714BDE1F4806190024C929 /* ConstraintMakerFinalizable.swift in Sources */,
 				EB32F1431F4AE31C00D766AF /* TYSegmentItem.swift in Sources */,

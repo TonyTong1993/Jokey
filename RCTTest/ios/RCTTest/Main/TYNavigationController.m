@@ -8,7 +8,10 @@
 
 #import "TYNavigationController.h"
 #import "UIImage+Extentions.h"
-@interface TYNavigationController ()
+#import "TYPoprosManager.h"
+#import "TYShopViewController.h"
+
+@interface TYNavigationController ()<UIGestureRecognizerDelegate>
 
 @end
 
@@ -47,6 +50,19 @@
         
     }
     [super pushViewController:viewController animated:animated];
+}
+-(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    UIViewController *lastVC = self.childViewControllers.lastObject;
+    
+    if (self.childViewControllers.count == 2) {
+        NSInteger number = [TYPoprosManager sharePoprosManager].poproLeng;
+        if (number > 0) {
+            return false;
+        }else {
+            return true;
+        }
+    }
+    return YES;
 }
 
 @end
