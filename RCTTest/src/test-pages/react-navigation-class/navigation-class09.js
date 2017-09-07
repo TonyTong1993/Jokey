@@ -12,8 +12,8 @@ import {
 } from 'react-native';
 const TYRCTModule = require('NativeModules').TYRCTModule
 import { TabNavigator,StackNavigator } from 'react-navigation'
-import SearchHeader from '../components/SearchHeader'
-import { onePixel,screen_width } from '../Config'
+import SearchHeader from '../../components/SearchHeader'
+import { onePixel,screen_width } from '../../Config'
  class HomeScreen extends Component {
    static navigationOptions = ({navigation}) =>({
      header:()=>{
@@ -119,9 +119,9 @@ const RootTabBarNavigator = TabNavigator({
       tabBarLabel:'Home',
       tabBarIcon:({focused,tintColor})=> (
         focused ?
-        <Image source={require('../imgs/tab/home_on@3x.png')} style={styles.icon}/>
+        <Image source={require('../../imgs/tab/home_on@3x.png')} style={styles.icon}/>
         :
-        <Image source={require('../imgs/tab/home_off@3x.png')} style={styles.icon}/>
+        <Image source={require('../../imgs/tab/home_off@3x.png')} style={styles.icon}/>
       )
     })
   },
@@ -131,9 +131,9 @@ const RootTabBarNavigator = TabNavigator({
       tabBarLabel:'Contact',
       tabBarIcon:({focused,tintColor})=> (
         focused ?
-        <Image source={require('../imgs/tab/category_on@3x.png')} style={styles.icon}/>
+        <Image source={require('../../imgs/tab/category_on@3x.png')} style={styles.icon}/>
         :
-        <Image source={require('../imgs/tab/category_off@3x.png')} style={styles.icon}/>
+        <Image source={require('../../imgs/tab/category_off@3x.png')} style={styles.icon}/>
       )
     })
   },
@@ -143,9 +143,9 @@ const RootTabBarNavigator = TabNavigator({
       tabBarLabel:'Discover',
       tabBarIcon:({focused,tintColor})=> (
         focused ?
-        <Image source={require('../imgs/tab/discover_on@3x.png')} style={styles.icon}/>
+        <Image source={require('../../imgs/tab/discover_on@3x.png')} style={styles.icon}/>
         :
-        <Image source={require('../imgs/tab/discover_off@3x.png')} style={styles.icon}/>
+        <Image source={require('../../imgs/tab/discover_off@3x.png')} style={styles.icon}/>
       )
     })
   },
@@ -155,9 +155,9 @@ const RootTabBarNavigator = TabNavigator({
       tabBarLabel:'Profile',
       tabBarIcon:({focused,tintColor})=> (
         focused ?
-          <Image source={require('../imgs/tab/cart_on@3x.png')} style={styles.icon}/>
+          <Image source={require('../../imgs/tab/cart_on@3x.png')} style={styles.icon}/>
         :
-          <Image source={require('../imgs/tab/cart_off@3x.png')} style={styles.icon}/>
+          <Image source={require('../../imgs/tab/cart_off@3x.png')} style={styles.icon}/>
       )
     })
   }
