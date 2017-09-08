@@ -119,9 +119,9 @@ const RootTabBarNavigator = TabNavigator({
       tabBarLabel:'Home',
       tabBarIcon:({focused,tintColor})=> (
         focused ?
-        <Image source={require('../../imgs/tab/home_on@3x.png')} style={styles.icon}/>
+        <Image source={{uri:'tab_home_selected'}} style={styles.icon}/>
         :
-        <Image source={require('../../imgs/tab/home_off@3x.png')} style={styles.icon}/>
+        <Image source={{uri:'tab_home_normal'}} style={styles.icon}/>
       )
     })
   },
@@ -131,9 +131,9 @@ const RootTabBarNavigator = TabNavigator({
       tabBarLabel:'Contact',
       tabBarIcon:({focused,tintColor})=> (
         focused ?
-        <Image source={require('../../imgs/tab/category_on@3x.png')} style={styles.icon}/>
+        <Image source={{uri:'tab_category_selected'}} style={styles.icon}/>
         :
-        <Image source={require('../../imgs/tab/category_off@3x.png')} style={styles.icon}/>
+        <Image source={{uri:'tab_category_normal'}} style={styles.icon}/>
       )
     })
   },
@@ -143,9 +143,9 @@ const RootTabBarNavigator = TabNavigator({
       tabBarLabel:'Discover',
       tabBarIcon:({focused,tintColor})=> (
         focused ?
-        <Image source={require('../../imgs/tab/discover_on@3x.png')} style={styles.icon}/>
+        <Image source={{uri:'tab_cart_selected'}} style={styles.icon}/>
         :
-        <Image source={require('../../imgs/tab/discover_off@3x.png')} style={styles.icon}/>
+        <Image source={{uri:'tab_cart_normal'}} style={styles.icon}/>
       )
     })
   },
@@ -155,16 +155,16 @@ const RootTabBarNavigator = TabNavigator({
       tabBarLabel:'Profile',
       tabBarIcon:({focused,tintColor})=> (
         focused ?
-          <Image source={require('../../imgs/tab/cart_on@3x.png')} style={styles.icon}/>
+          <Image source={{uri:'tab_profile_selected'}} style={styles.icon}/>
         :
-          <Image source={require('../../imgs/tab/cart_off@3x.png')} style={styles.icon}/>
+          <Image source={{uri:'tab_profile_normal'}} style={styles.icon}/>
       )
     })
   }
 },{
   // tabBarPosition:'top',
   tabBarOptions:{
-    activeTintColor:'#0bad61',
+    activeTintColor:'#F8453C',
     // showLabel:false
     // activeBackgroundColor:'#0bad61'
      style: {
