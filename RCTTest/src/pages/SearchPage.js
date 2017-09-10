@@ -13,7 +13,7 @@ class SearchPage extends Component {
   render() {
     return (
      <View style={styles.container}>
-      	<Text> this is Category Page</Text>
+      	<Text> this is Search Page</Text>
       </View>
     );
   }

@@ -27,11 +27,11 @@ const data = [
                   ]
 
 class HomePage extends Component {
-	static navigationOptions = ({navigation}) =>{
-		return {
-			header:null,
-		}
-	}
+	static navigationOptions = ({navigation}) =>({
+     header:()=>{
+       return <SearchHeader headerCategoryClicked={()=>navigation.navigate('Search')}/>
+     }
+   })
  constructor(props){
     super(props)
     this.state = {
@@ -43,7 +43,7 @@ class HomePage extends Component {
        <View style={styles.container}>
          <FlatList
            automaticallyAdjustContentInsets={false}
-           contentContainerStyle={{paddingBottom:49}}
+           contentContainerStyle={{paddingBottom:49,paddingTop:0}}
            data={data}
            ListHeaderComponent={ReCycleView}
            renderItem={this._renderItem}
