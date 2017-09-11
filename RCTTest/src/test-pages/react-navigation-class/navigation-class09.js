@@ -17,7 +17,7 @@ import { onePixel,screen_width } from '../../Config'
  class HomeScreen extends Component {
    static navigationOptions = ({navigation}) =>({
      header:()=>{
-       return <SearchHeader />
+       return <SearchHeader headerCategoryClicked={()=>navigation.navigate('Detail')}/>
      }
    })
   render() {

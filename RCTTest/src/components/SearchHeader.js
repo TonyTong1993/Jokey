@@ -19,7 +19,7 @@ export default class SearchHeader extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <TouchableOpacity >
+        <TouchableOpacity onPress = {this.props.headerCategoryClicked}>
           <Image style={styles.leftIcon} source={require('../imgs/white_header-category.png')} resizeMode='center'/>
         </TouchableOpacity>
         <TouchableOpacity>
