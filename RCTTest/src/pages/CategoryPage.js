@@ -7,6 +7,7 @@ import {
   View,
   Text,
 } from 'react-native';
+import { NavigationOptions } from 'react-navigation'
 import CategoryHeader from '../components/categoryComponents/CategoryHeader.js'
 import CategoryNavigator from '../DrawerRoutesConfig.js'
 
@@ -17,6 +18,7 @@ class CategoryPage extends Component {
      }
    })
   render() {
+    console.log(NavigationOptions)
     return (
         <CategoryNavigator />
     );

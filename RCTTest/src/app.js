@@ -6,8 +6,5 @@ import {
   View,
   Text,
 } from 'react-native';
-// import App from './test-pages/react-navigation-class/navigation-class10'
 import App from './RouteConfig.js'
-
-
 export default App;

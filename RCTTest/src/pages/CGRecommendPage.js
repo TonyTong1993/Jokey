@@ -8,6 +8,7 @@ import {
   Text,
   Image,
   SectionList,
+  FlatList,
 } from 'react-native';
 import categories from '../category.json'
 import CGRItemCell from '../components/categoryComponents/CGRItemCell.js'
@@ -29,7 +30,7 @@ class CGRecommendPage extends Component {
       <Image
         source={{uri:'drawer_recommend_selected'}}
         style={styles.icon}
-      /> 
+      />
       :
       <Image
         source={{uri:'drawer_recommend_normal'}}
@@ -45,23 +46,20 @@ _keyExtractor = (item,index)=>{
   render() {
     return (
        <View style={styles.container}>
-      	  <SectionList 
-      	  		renderItem={({item})=><CGRItemCell item={item} />}
+      	  <SectionList
       	  		keyExtractor={this._keyExtractor}
-      	  		renderSectionHeader={({section})=> 
-      	  		<View 
+      	  		renderSectionHeader={({section})=>
+      	  		<View
       	  		style={{width:screen_width,height:28,justifyContent:'center'}}>
 	      	  		<Text>{section.key}</Text>
       	  		</View>}
       	  		sections={sections}
-      	  	    contentContainerStyle={styles.list}
-  				
+              renderItem={({item})=><CGRItemCell item={item} />}
+      	  	  contentContainerStyle={styles.list}
+
       	  />
        </View>
     );
-  }
-  componentDidMount() {
-  	
   }
 }
 
@@ -76,7 +74,7 @@ const styles = StyleSheet.create({
   },
   list: {
         //justifyContent: 'space-around',
-        flexDirection: 'row',//设置横向布局  
+        flexDirection: 'row',//设置横向布局
         flexWrap: 'wrap',  //设置换行显示
         alignItems: 'flex-start',
         backgroundColor: '#FFFFFF'

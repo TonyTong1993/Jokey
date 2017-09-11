@@ -9,6 +9,7 @@ import {
 
 export default class DetailPage extends Component {
   render() {
+    console.log('DetailPage')
     return (
       <View style={styles.container}>
         <Text>I'm the DetailPage component</Text>

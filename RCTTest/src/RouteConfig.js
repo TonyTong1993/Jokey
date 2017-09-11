@@ -85,8 +85,10 @@ const RootTabBarNavigator = TabNavigator({
       labelStyle: {
              fontSize: 10, // 文字大小
          },
-  }
+  },
+ lazy:true,
 })
+
 
 const RootStackNavigator = StackNavigator({
    Root:{screen:RootTabBarNavigator},

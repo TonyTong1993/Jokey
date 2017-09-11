@@ -30,7 +30,7 @@ const CategoryNavigator = DrawerNavigator({
 	drawerPosition:'right',
 	contentOptions:{
 		activeTintColor:themeColor,
-	}
+	},
 })
 
 export default CategoryNavigator
