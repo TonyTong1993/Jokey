@@ -5,7 +5,8 @@ import {
   Image,
   ScrollView,
   Text,
-  Dimensions
+  Dimensions,
+  TouchableOpacity,
 } from 'react-native';
 import Swiper from 'react-native-swiper'
 import Config from '../Config'
@@ -35,10 +36,14 @@ export default class ReCycleView extends React.Component{
     }
     _renderSlider(data:string,index:number) {
       return (
-         <Image
-         key={index}
-         style={styles.slide}
-         source={{uri:data}}/>
+        <TouchableOpacity
+            key={index}
+            onPress={this.props.onPress}>
+          <Image
+
+            style={styles.slide}
+            source={{uri:data}}/>
+        </TouchableOpacity>
         );
     }
 }

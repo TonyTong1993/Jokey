@@ -7,6 +7,7 @@ import {
   View,
   Text,
   StyleSheet,
+  TouchableOpacity,
 } from 'react-native';
 import {
   screen_width,
@@ -25,11 +26,13 @@ export default class RowBanner extends Component {
   }
   _renderItem(data: string, index: number) {
     return (
-      <View key={index} style={styles.item}>
-         <View style={styles.textContainer} >
-        <Text style={styles.textStyle}>{data}</Text>
+      <TouchableOpacity key={index} onPress={this.props.onPress}>
+        <View  style={styles.item}>
+          <View style={styles.textContainer} >
+            <Text style={styles.textStyle}>{data.key}</Text>
+          </View>
         </View>
-      </View>
+      </TouchableOpacity>
     );
   }
 }

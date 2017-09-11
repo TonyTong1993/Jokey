@@ -22,10 +22,10 @@ export default class SearchHeader extends React.Component {
         <TouchableOpacity onPress = {this.props.headerCategoryClicked}>
           <Image style={styles.leftIcon} source={require('../imgs/white_header-category.png')} resizeMode='center'/>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress = {this.props.headerSearchClicked}>
           <SearchView />
         </TouchableOpacity>
-        <TouchableOpacity >
+        <TouchableOpacity onPress = {this.props.headerMessageClicked}>
           <Image style={styles.rightIcon} source={require('../imgs/message.png')} resizeMode='center'/>
         </TouchableOpacity>
 

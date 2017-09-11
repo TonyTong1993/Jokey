@@ -8,6 +8,7 @@ import {
   FlatList,
   Image,
   Button,
+  TouchableOpacity,
 } from 'react-native';
 import ReCycleView from '../components/ShopHeader'
 import SearchHeader from '../components/SearchHeader'
@@ -18,18 +19,21 @@ import {screen_width,screen_height} from '../Config'
 
 const data = [
               {key:'http://img63.ddimg.cn/upload_img/00721/zjl/640x342_wzh_20170830.jpg'},
-              {key:['图书','电子书','网络文学','当当优品','当当优品',
-                    '童书','母婴','玩具','童装童鞋','创意文具',
-                    '女装','男装','内衣配饰','鞋靴箱包','户外活动',
-                    '美妆个护','食品','运营健康','珠宝手表','当当优选',
-                    '家居家纺','家电','Apple','手机数码','图书榜']},
+              {key:[{key:'图书'},{key:'电子书'},{key:'网络文学'},{key:'当当优品'},{key:'当当优品'},
+                    {key:'童书'},{key:'母婴'},{key:'玩具'},{key:'童装童鞋'},{key:'创意文具'},
+                    {key:'女装'},{key:'男装'},{key:'内衣配饰'},{key:'鞋靴箱包'},{key:'户外活动'},
+                    {key:'美妆个护'},{key:'食品'},{key:'运营健康'},{key:'珠宝手表'},{key:'当当优选'},
+                    {key:'家居家纺'},{key:'家电'},{key:'Apple'},{key:'手机数码'},{key:'图书榜'}]},
               {key:'商品---003'},
                   ]
 
 class HomePage extends Component {
 	static navigationOptions = ({navigation}) =>({
      header:()=>{
-       return <SearchHeader headerCategoryClicked={()=>navigation.navigate('Search')}/>
+       return <SearchHeader
+                headerCategoryClicked={()=>navigation.navigate('Search')}
+                headerSearchClicked={()=>navigation.navigate('Search')}
+                headerMessageClicked={()=>navigation.navigate('Search')}/>
      }
    })
  constructor(props){
@@ -45,7 +49,7 @@ class HomePage extends Component {
            automaticallyAdjustContentInsets={false}
            contentContainerStyle={{paddingBottom:49,paddingTop:0}}
            data={data}
-           ListHeaderComponent={ReCycleView}
+           ListHeaderComponent={this._ListHeaderComponent}
            renderItem={this._renderItem}
            refreshing={this.state.pulling}
            onRefresh={this._loadNewData.bind(this)}
@@ -54,24 +58,30 @@ class HomePage extends Component {
            }}
            onEndReachedThreshold={0.5}
          />
-    
+
       </View>
     );
   }
 
   /*private method*/
-  _renderItem(data:object) {
-    switch (data.index) {
+  _renderItem =({item,index}) =>{
+    console.log(item.key)
+    switch (index) {
       case 0:
-      return <View >
-        <Image style={styles.firstBanner} source={{uri:data.item.key}}/>
-      </View>
+      return   (
+          <TouchableOpacity onPress={this._headrCategoryClicked}>
+            <View >
+              <Image style={styles.firstBanner} source={{uri:item.key}}/>
+            </View>
+          </TouchableOpacity>
+           )
+
         break;
         case 1:
-        return <RowBanner data={data.item.key}/>
+        return <RowBanner  data={item.key} onPress={this._headrCategoryClicked}/>
           break;
         case 2:
-        return <ThirdBanner />
+        return <ThirdBanner onPress={this._headrCategoryClicked}/>
             break;
         case 3:
         return <RowBanner />
@@ -84,7 +94,10 @@ class HomePage extends Component {
     }
 
   }
-  _loadNewData(){
+  _ListHeaderComponent = ()=>{
+    return <ReCycleView onPress={this._headrCategoryClicked}/>
+  }
+  _loadNewData =()=>{
     this.setState({
       pulling:true
     });
