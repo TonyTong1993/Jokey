@@ -107,9 +107,6 @@ class ThirdScreen extends Component {
 }
 
 
-
-
-
 /*设置路由*/
 const RootTabBarNavigator = TabNavigator({
   Home:{
@@ -155,7 +152,7 @@ const RootTabBarNavigator = TabNavigator({
       tabBarLabel:'Profile',
       tabBarIcon:({focused,tintColor})=> (
         focused ?
-          <Image source={{uri:'tab_profile_selected'}} style={styles.icon}/>
+          <Image source={{uri:'tab_`${profile}`_selected'}} style={styles.icon}/>
         :
           <Image source={{uri:'tab_profile_normal'}} style={styles.icon}/>
       )
