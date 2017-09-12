@@ -10,6 +10,7 @@
 #import "NSBundle+Extension.h"
 #import <React/RCTRootView.h>
 #import "TYShopViewController.h"
+#import "TYProfileViewModel.h"
 @interface TYProfileViewController ()
 
 @end
@@ -20,7 +21,7 @@
     [super viewDidLoad];
     //添加测试数据
     NSDictionary *jsonDict = [NSBundle loadJsonFromBundle:@"Profile"];
-    self.dataSource = jsonDict[@"data"];
+    self.dataSource = [TYProfileViewModel mj_objectArrayWithKeyValuesArray:jsonDict[@"data"]];
 }
 
 -(void)setUpTableView {
@@ -30,10 +31,13 @@
     self.tableView.mj_header = nil;
     [self.tableView.mj_footer removeFromSuperview];
     self.tableView.mj_footer = nil;
+    self.tableView.backgroundColor = HEXCOLOR(0xf5f5f5);
 }
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.dataSource.count;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return ((NSArray *)self.dataSource[section]).count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *reuserIndentifier = @"cell";
@@ -41,9 +45,20 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuserIndentifier];
     }
-    cell.textLabel.text = self.dataSource[indexPath.row];
+    TYProfileViewModel *model = self.dataSource[indexPath.section][indexPath.row];
+    cell.textLabel.text = model.title;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
     return cell;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *header = section ? [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 20)] : nil;
+    header.backgroundColor = [UIColor clearColor];
+    return header;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return section ? 20 : 0;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSURL *jsCodeLocation = [NSURL URLWithString:@"http://192.168.10.40:8081/index.ios.bundle?platform=ios"];
@@ -51,10 +66,6 @@
     TYShopViewController *vc = [[TYShopViewController alloc] init];
     vc.view = rootView;
     [self.navigationController pushViewController:vc animated:YES];
-//    [self presentViewController:vc animated:true completion:^{
-//        
-//    }];
-    
     
 }
 @end

@@ -30,4 +30,6 @@ source 'https://github.com/CocoaPods/Specs.git'
     pod "RTRootNavigationController"
     pod "Masonry"
     pod "SDCycleScrollView"
+    pod "AMap3DMap"
+    pod "AMapLocation"
 end

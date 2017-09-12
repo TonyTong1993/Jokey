@@ -14,6 +14,11 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - AMap3DMap (5.3.0):
+    - AMapFoundation (~> 1.3)
+  - AMapFoundation (1.4.2)
+  - AMapLocation (2.4.0):
+    - AMapFoundation (~> 1.4)
   - IconFont (1.0.2)
   - Masonry (1.0.2)
   - MJExtension (3.0.13)
@@ -62,6 +67,8 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - AMap3DMap
+  - AMapLocation
   - IconFont
   - Masonry
   - MJExtension
@@ -93,6 +100,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AMap3DMap: 0614b5b7ed7a8b69f1d9ba7bc40ce30362497dc5
+  AMapFoundation: 6c0471c9a6a0ad17dad46e3d800ad56ca170f82a
+  AMapLocation: 47b62b5381a66e4d0c2931b70ffde72682427896
   IconFont: 97ff724bc6d26aac018678a2da4f8542600e5a67
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
@@ -104,6 +114,6 @@ SPEC CHECKSUMS:
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   Yoga: 2a70bc5ab41486a272b9fd5b76c482ba9268c5dd
 
-PODFILE CHECKSUM: e5c0393fdab98ba7a4ca0d24958a08bab0041b96
+PODFILE CHECKSUM: 284c1889270d73b2483a98685980b10de2b9aeee
 
 COCOAPODS: 1.3.1

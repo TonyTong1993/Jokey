@@ -11,7 +11,8 @@
 #import "TYTabBarController.h"
 #import "TYTheme.h"
 #import  "TBCityIconFont.h"
-
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import "Macro.h"
 @interface AppDelegate ()
 
 @end
@@ -31,6 +32,11 @@
     [self.window makeKeyAndVisible];
     //设置iconfont
     [TBCityIconFont setFontName:@"iconfont"];
+    
+//    设置高德地图的key
+    [[AMapServices sharedServices] setApiKey:AMapKey];
+//    支持https
+    [[AMapServices sharedServices] setEnableHTTPS:true];
     return YES;
 }
 
