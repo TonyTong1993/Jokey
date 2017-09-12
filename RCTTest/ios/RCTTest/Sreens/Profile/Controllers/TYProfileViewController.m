@@ -11,6 +11,7 @@
 #import <React/RCTRootView.h>
 #import "TYShopViewController.h"
 #import "TYProfileViewModel.h"
+#import "TYRunViewController.h"
 @interface TYProfileViewController ()
 
 @end
@@ -61,11 +62,20 @@
     return section ? 20 : 0;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://192.168.10.40:8081/index.ios.bundle?platform=ios"];
-    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:@"test" initialProperties:@{} launchOptions:nil];
-    TYShopViewController *vc = [[TYShopViewController alloc] init];
-    vc.view = rootView;
-    [self.navigationController pushViewController:vc animated:YES];
+     TYProfileViewModel *model = self.dataSource[indexPath.section][indexPath.row];
+    UIViewController *VC;
+    if ([model.className isEqualToString:@"TYShopViewController"]) {
+        NSURL *jsCodeLocation = [NSURL URLWithString:@"http://192.168.10.40:8081/index.ios.bundle?platform=ios"];
+        RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:@"test" initialProperties:@{} launchOptions:nil];
+        TYShopViewController *vc = [[TYShopViewController alloc] init];
+        vc.view = rootView;
+        VC = vc;
+    }else if ([model.className isEqualToString:@"TYRunViewController"]) {
+        VC = [[TYRunViewController alloc] init];
+    }else {
+        VC = [[UIViewController alloc] init];
+    }
+    [self.navigationController pushViewController:VC animated:YES];
     
 }
 @end

@@ -20,6 +20,7 @@
 		EB18D3F51F0F890700B44790 /* TYNetWorkingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3F41F0F890700B44790 /* TYNetWorkingTool.m */; };
 		EB18D3F81F0F89C500B44790 /* TYServiceApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3F71F0F89C500B44790 /* TYServiceApi.m */; };
 		EB2425F71F34C5D800E0ACE6 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2425F61F34C5D800E0ACE6 /* libReact.a */; };
+		EB25C5F11F6790FF00115214 /* TYRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB25C5F01F6790FF00115214 /* TYRunViewController.m */; };
 		EB266F4E1F3B29DA00949D40 /* TYModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB266F4D1F3B29DA00949D40 /* TYModelTest.m */; };
 		EB266F511F3B2B0400949D40 /* TYImageTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB266F501F3B2B0400949D40 /* TYImageTest.m */; };
 		EB266F541F3B2B5100949D40 /* TYMemberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB266F531F3B2B5100949D40 /* TYMemberTest.m */; };
@@ -167,6 +168,8 @@
 		EB18D3F61F0F89C500B44790 /* TYServiceApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYServiceApi.h; sourceTree = "<group>"; };
 		EB18D3F71F0F89C500B44790 /* TYServiceApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYServiceApi.m; sourceTree = "<group>"; };
 		EB2425F61F34C5D800E0ACE6 /* libReact.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libReact.a; path = "Pods/../build/Debug-iphoneos/React/libReact.a"; sourceTree = "<group>"; };
+		EB25C5EF1F6790FF00115214 /* TYRunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYRunViewController.h; sourceTree = "<group>"; };
+		EB25C5F01F6790FF00115214 /* TYRunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYRunViewController.m; sourceTree = "<group>"; };
 		EB266F4C1F3B29DA00949D40 /* TYModelTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYModelTest.h; sourceTree = "<group>"; };
 		EB266F4D1F3B29DA00949D40 /* TYModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYModelTest.m; sourceTree = "<group>"; };
 		EB266F4F1F3B2B0400949D40 /* TYImageTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYImageTest.h; sourceTree = "<group>"; };
@@ -631,6 +634,8 @@
 			children = (
 				EB5865891F55764200598DA0 /* TYShopViewController.h */,
 				EB58658A1F55764200598DA0 /* TYShopViewController.m */,
+				EB25C5EF1F6790FF00115214 /* TYRunViewController.h */,
+				EB25C5F01F6790FF00115214 /* TYRunViewController.m */,
 			);
 			path = RTCNativeControllers;
 			sourceTree = "<group>";
@@ -995,6 +1000,11 @@
 						DevelopmentTeam = NVZ53TTCA3;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -1152,6 +1162,7 @@
 				EB714BDE1F4806190024C929 /* ConstraintMakerFinalizable.swift in Sources */,
 				EB32F1431F4AE31C00D766AF /* TYSegmentItem.swift in Sources */,
 				EB714BE41F4806190024C929 /* ConstraintPriorityTarget.swift in Sources */,
+				EB25C5F11F6790FF00115214 /* TYRunViewController.m in Sources */,
 				EB714BCE1F4806190024C929 /* ConstraintAttributes.swift in Sources */,
 				EB714BD81F4806190024C929 /* ConstraintLayoutGuideDSL.swift in Sources */,
 				EB5D392B1F345DE90029085F /* TYSegementIndicatorView.m in Sources */,
