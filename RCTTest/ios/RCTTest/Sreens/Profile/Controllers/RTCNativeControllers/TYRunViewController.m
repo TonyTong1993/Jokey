@@ -32,7 +32,7 @@
     ///如果您需要进入地图就显示定位小蓝点，则需要下面两行代码
     _mapView.showsUserLocation = YES;
     _mapView.userTrackingMode = MAUserTrackingModeFollow;
-    _mapView.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    _mapView.desiredAccuracy = kCLLocationAccuracyBest;
     _mapView.delegate = self;
 //    MAUserLocationRepresentation *r = [[MAUserLocationRepresentation alloc] init];
 //    r.showsAccuracyRing = NO;///精度圈是否显示，默认YES
@@ -60,15 +60,16 @@
 -(void)mapInitComplete:(MAMapView *)mapView {
     [mapView setZoomLevel:19];
     //开启计时器
-    _timer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(handleUserTrackData) userInfo:nil repeats:YES];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(handleUserTrackData) userInfo:nil repeats:YES];
     
 }
 -(void)handleUserTrackData {
     
-      NSLog(@"userTrack.length = %lu",(unsigned long)self.userTrack.count);
-    for (MAUserLocation *location in self.userTrack) {
+     
+    for (MAUserLocation *userLocation in self.userTrack) {
         @autoreleasepool {
-            NSLog(@"location = %@",location);
+          NSString *user_track_path = [Root_Path stringByAppendingPathComponent:@"user_track.json"];
+            
         }
     }
     self.userTrack = nil;

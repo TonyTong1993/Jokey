@@ -28,3 +28,5 @@
  *
  */
 #define AMapKey @"8a597e525b6e4c076d6112d35afb736c"
+
+#define Root_Path [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true) lastObject]

@@ -32,4 +32,5 @@ source 'https://github.com/CocoaPods/Specs.git'
     pod "SDCycleScrollView"
     pod "AMap3DMap"
     pod "AMapLocation"
+    pod "FMDB"
 end
