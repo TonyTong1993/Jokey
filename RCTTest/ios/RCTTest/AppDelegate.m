@@ -13,7 +13,6 @@
 #import  "TBCityIconFont.h"
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import "Macro.h"
-#import "TYDBTool.h"
 @interface AppDelegate ()
 
 @end
@@ -38,7 +37,6 @@
     [[AMapServices sharedServices] setApiKey:AMapKey];
 //    支持https
     [[AMapServices sharedServices] setEnableHTTPS:true];
-    [TYDBTool shareInstance];
     return YES;
 }
 

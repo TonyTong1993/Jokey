@@ -8,6 +8,7 @@
 
 #import "TYRunViewController.h"
 #import <MAMapKit/MAMapKit.h>
+#import "TYDBTool+TYRunning.h"
 @interface TYRunViewController ()<MAMapViewDelegate>
 @property (nonatomic,strong) MAMapView *mapView;
 @property (nonatomic,strong) NSMutableArray *userTrack;
@@ -69,7 +70,7 @@
     for (MAUserLocation *userLocation in self.userTrack) {
         @autoreleasepool {
           
-         
+            [[TYDBTool shareInstance] updateUserTrackLocation:userLocation.location];
             
         }
     }

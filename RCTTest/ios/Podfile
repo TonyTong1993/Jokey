@@ -33,4 +33,5 @@ source 'https://github.com/CocoaPods/Specs.git'
     pod "AMap3DMap"
     pod "AMapLocation"
     pod "FMDB"
+    pod 'PNChart'
 end
