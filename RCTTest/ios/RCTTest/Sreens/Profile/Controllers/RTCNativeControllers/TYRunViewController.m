@@ -68,7 +68,8 @@
      
     for (MAUserLocation *userLocation in self.userTrack) {
         @autoreleasepool {
-          NSString *user_track_path = [Root_Path stringByAppendingPathComponent:@"user_track.json"];
+          
+         
             
         }
     }

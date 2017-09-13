@@ -76,6 +76,8 @@
 		EB5D39311F3464200029085F /* TYSegmentConst.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39301F3464200029085F /* TYSegmentConst.m */; };
 		EB5D39341F34657C0029085F /* TYSegmentTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39331F34657C0029085F /* TYSegmentTool.m */; };
 		EB5D39381F3491C30029085F /* TYSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5D39371F3491C30029085F /* TYSegmentViewController.m */; };
+		EB5E53451F68D19800E58026 /* TYDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5E53441F68D19800E58026 /* TYDBTool.m */; };
+		EB5E53481F68D8B000E58026 /* TYDBTool+TYRunning.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5E53471F68D8B000E58026 /* TYDBTool+TYRunning.m */; };
 		EB5EDB291F46964A00B218AF /* TYAttention.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EDB281F46964A00B218AF /* TYAttention.swift */; };
 		EB5EDB2B1F46C15200B218AF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EDB2A1F46C15200B218AF /* Config.swift */; };
 		EB5EDB2D1F46C21E00B218AF /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EDB2C1F46C21E00B218AF /* UIColor.swift */; };
@@ -261,6 +263,10 @@
 		EB5D39351F34717F0029085F /* TYSegmentControlDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSegmentControlDelegate.h; sourceTree = "<group>"; };
 		EB5D39361F3491C30029085F /* TYSegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSegmentViewController.h; sourceTree = "<group>"; };
 		EB5D39371F3491C30029085F /* TYSegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSegmentViewController.m; sourceTree = "<group>"; };
+		EB5E53431F68D19800E58026 /* TYDBTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYDBTool.h; sourceTree = "<group>"; };
+		EB5E53441F68D19800E58026 /* TYDBTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYDBTool.m; sourceTree = "<group>"; };
+		EB5E53461F68D8B000E58026 /* TYDBTool+TYRunning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TYDBTool+TYRunning.h"; sourceTree = "<group>"; };
+		EB5E53471F68D8B000E58026 /* TYDBTool+TYRunning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TYDBTool+TYRunning.m"; sourceTree = "<group>"; };
 		EB5EDB281F46964A00B218AF /* TYAttention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYAttention.swift; sourceTree = "<group>"; };
 		EB5EDB2A1F46C15200B218AF /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		EB5EDB2C1F46C21E00B218AF /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -725,6 +731,7 @@
 		EB5A2A0D1F0387AE00A19F2C /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				EB5E53421F68D14F00E58026 /* DBTool */,
 				EB18D3ED1F0F77EF00B44790 /* Theme */,
 			);
 			path = Global;
@@ -798,6 +805,17 @@
 				EB5A99FC1F3C06C30031C497 /* TYHomeUitl.m */,
 			);
 			name = Uitl;
+			sourceTree = "<group>";
+		};
+		EB5E53421F68D14F00E58026 /* DBTool */ = {
+			isa = PBXGroup;
+			children = (
+				EB5E53431F68D19800E58026 /* TYDBTool.h */,
+				EB5E53441F68D19800E58026 /* TYDBTool.m */,
+				EB5E53461F68D8B000E58026 /* TYDBTool+TYRunning.h */,
+				EB5E53471F68D8B000E58026 /* TYDBTool+TYRunning.m */,
+			);
+			name = DBTool;
 			sourceTree = "<group>";
 		};
 		EB60BB8D1F454DA20062DBC2 /* View */ = {
@@ -1191,6 +1209,7 @@
 				EB032D231F0251F300F32465 /* AppDelegate.m in Sources */,
 				EB9FF1E21F47DF2200EEBE11 /* TYTheme.m in Sources */,
 				EB714BD91F4806190024C929 /* ConstraintLayoutSupport.swift in Sources */,
+				EB5E53481F68D8B000E58026 /* TYDBTool+TYRunning.m in Sources */,
 				EB5865871F5575A300598DA0 /* TYProfileViewController.m in Sources */,
 				EB714BD01F4806190024C929 /* ConstraintConstantTarget.swift in Sources */,
 				EB6500E81F4182DE00C0B89A /* TYMessageViewController.swift in Sources */,
@@ -1199,6 +1218,7 @@
 				EB32F1451F4AE32D00D766AF /* TYSegmentView.swift in Sources */,
 				EB5D39341F34657C0029085F /* TYSegmentTool.m in Sources */,
 				EB3299CE1F1354420034D095 /* TYHomeViewController.m in Sources */,
+				EB5E53451F68D19800E58026 /* TYDBTool.m in Sources */,
 				EB032D201F0251F300F32465 /* main.m in Sources */,
 				EB266F571F3B2BEE00949D40 /* TYTopicTest.m in Sources */,
 				EB714BE61F4806190024C929 /* ConstraintRelation.swift in Sources */,
