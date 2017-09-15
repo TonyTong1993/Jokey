@@ -41,6 +41,9 @@ class TYSegmentView: UIView {
     
     fileprivate var detalTitleSizeW : CGFloat?
     
+    var number = 0;
+    
+    
     func setupSegmentItems(titles:[String]) -> [TYSegmentItem] {
         var segmentItems :[TYSegmentItem] = []
         for title in titles {
@@ -151,11 +154,31 @@ class TYSegmentView: UIView {
             rightItem = items![rightIndex]
         }
         //更新指示器的frame
-        let centerY = indicatorView.center.y;
-        let centerX = leftItem.center.x + ((rightItem?.center.x ?? 0) - leftItem.center.x) * scaleRight
-        indicatorView.center = CGPoint(x: centerX, y: centerY)
+//        let centerY = indicatorView.center.y;
+//        let centerX = leftItem.center.x + ((rightItem?.center.x ?? 0) - leftItem.center.x) * scaleRight
+//        indicatorView.center = CGPoint(x: centerX, y: centerY)
         
-
+//FIXME:更新指示器的frame
+        let offsetX = ((rightItem?.center.x ?? 0) - leftItem.center.x) * scaleRight; //水平偏移量
+        
+        let offsetWidth = ((rightItem?.titleSize.width ?? 0) - leftItem.titleSize.width) * scaleRight;//宽度偏移量
+        
+        let width = leftItem.titleSize.width  + offsetWidth //当前需要变化的宽度
+        
+        let originX = leftItem.mj_x + (leftItem.mj_w-leftItem.titleSize.width)/2 + offsetX //左标题起始位置 + 位置偏移量
+        
+        let originY = leftItem.frame.maxY;
+        
+        let origin = CGPoint(x: originX, y: originY)
+        
+         print(origin,width)
+        
+        indicatorView.frame = CGRect(origin: origin, size: CGSize(width: width, height: 2));
+        
+//        indicatorView.mj_w = width;
+        
+        print(indicatorView.frame)
+        
         //添加渐变颜色
        setupGradient(value: Int(scale), leftItem: leftItem, rightItem: rightItem, scale: scaleRight)
     }
