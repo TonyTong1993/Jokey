@@ -26,7 +26,7 @@ class TYSegmentView: UIView {
         let indicatorView = UIView(frame: CGRect())
         return indicatorView
     }()
-    var tmpwidth :CGFloat = 50
+  
     
     
     weak var delegate : TYSegmentViewDelegate?
@@ -37,11 +37,6 @@ class TYSegmentView: UIView {
     
     fileprivate var deltaRgbaComponents : [CGFloat]?
     
-    fileprivate  var indicatorViewWidth : CGFloat?
-    
-    fileprivate var detalTitleSizeW : CGFloat?
-    
-    var number = 0;
     
     
     func setupSegmentItems(titles:[String]) -> [TYSegmentItem] {
@@ -66,14 +61,14 @@ class TYSegmentView: UIView {
         items?.first?.isSelected = true
         //设置指示器的宽度
 
-        indicatorViewWidth = items?.first?.titleSize.width
+        let indicatorViewWidth = items?.first?.titleSize.width
         indicatorView.frame = CGRect(x: 0, y: frame.height-2, width: indicatorViewWidth ?? 0.0, height: 2)
         indicatorView.backgroundColor = seletedTitleColor
         addSubview(indicatorView)
         selectedRgbaComponents = seletedTitleColor.rgba()
         normalRgbaComponents = normalTitleColor.rgba()
         deltaRgbaComponents = UIColor.gradientRGBA(normalRgbaComponents: normalRgbaComponents,selectedRgbaComponents: selectedRgbaComponents)
-        detalTitleSizeW = (items?.last?.titleSize.width)! - (items?.first?.titleSize.width)!
+        setItems()
     }
     
     convenience init(frame: CGRect,ts: [String],ntc: UIColor,stc : UIColor) {
@@ -84,7 +79,7 @@ class TYSegmentView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
+    @objc func setItems() {
         super.layoutSubviews()
         guard let items = items else {
             return
@@ -141,7 +136,7 @@ class TYSegmentView: UIView {
         
         let leftIndex = Int(scale)
         let rightIndex = leftIndex+1
-        let scaleRight = scale - CGFloat(leftIndex)
+        let scaleRight = scale -  CGFloat(leftIndex)
         let scaleLeft = 1 - scaleRight
         if scaleLeft == 1 && scaleRight == 0 {
             return
@@ -159,7 +154,7 @@ class TYSegmentView: UIView {
 //        indicatorView.center = CGPoint(x: centerX, y: centerY)
         
 //FIXME:更新指示器的frame
-        let offsetX = ((rightItem?.center.x ?? 0) - leftItem.center.x) * scaleRight; //水平偏移量
+        let offsetX =  ((rightItem?.center.x ?? 0) - leftItem.center.x) * scaleRight; //水平偏移量
         
         let offsetWidth = ((rightItem?.titleSize.width ?? 0) - leftItem.titleSize.width) * scaleRight;//宽度偏移量
         
@@ -171,14 +166,15 @@ class TYSegmentView: UIView {
         
         let origin = CGPoint(x: originX, y: originY)
         
-         print(origin,width)
+        if scaleRight > 0.90 {
         
-        indicatorView.frame = CGRect(origin: origin, size: CGSize(width: width, height: 2));
-        
-//        indicatorView.mj_w = width;
-        
-        print(indicatorView.frame)
-        
+            let centerY = indicatorView.center.y;
+            let centerX = leftItem.center.x + ((rightItem?.center.x ?? 0) - leftItem.center.x) * scaleRight
+            indicatorView.center = CGPoint(x: centerX, y: centerY)
+           
+        }else {
+            indicatorView.frame = CGRect(origin: origin, size: CGSize(width: width, height: 2));
+        }
         //添加渐变颜色
        setupGradient(value: Int(scale), leftItem: leftItem, rightItem: rightItem, scale: scaleRight)
     }
@@ -210,6 +206,7 @@ class TYSegmentView: UIView {
             let orgin = indicatorView.frame.origin
             self.indicatorView.frame = CGRect(x: orgin.x, y: orgin.y, width: titleSize.width, height: 2)
             self.indicatorView.center.x = currentItem.center.x
+            print(indicatorView.frame)
         }
         
         for item in items ?? []  {
