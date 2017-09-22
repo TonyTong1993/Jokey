@@ -63,7 +63,6 @@
 		EB5A2A1A1F038C2E00A19F2C /* UIColor+LPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A191F038C2E00A19F2C /* UIColor+LPExtension.m */; };
 		EB5A2A1D1F038C4100A19F2C /* UIButton+LPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A1C1F038C4100A19F2C /* UIButton+LPExtension.m */; };
 		EB5A2A2A1F0390FB00A19F2C /* TYMailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A291F0390FB00A19F2C /* TYMailViewController.m */; };
-		EB5A2A3D1F03B3E800A19F2C /* TYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A3C1F03B3E800A19F2C /* TYLoginViewController.m */; };
 		EB5A2A401F03B40D00A19F2C /* TYRCTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A3F1F03B40D00A19F2C /* TYRCTViewController.m */; };
 		EB5A99FD1F3C06C30031C497 /* TYHomeUitl.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A99FC1F3C06C30031C497 /* TYHomeUitl.m */; };
 		EB5A9A011F3C4DC10031C497 /* TYImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A99FF1F3C4DC10031C497 /* TYImageViewCell.m */; };
@@ -99,6 +98,7 @@
 		EB65011E1F418F1200C0B89A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB65011D1F418F1200C0B89A /* QuartzCore.framework */; };
 		EB6501201F418F1800C0B89A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB65011F1F418F1800C0B89A /* UIKit.framework */; };
 		EB6501221F418F2300C0B89A /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6501211F418F2300C0B89A /* VideoToolbox.framework */; };
+		EB6592521F75022E0059A3B9 /* TYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6592511F75022E0059A3B9 /* TYLoginViewController.m */; };
 		EB6712331F4C0FDE00642B72 /* String(Add).swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6712321F4C0FDE00642B72 /* String(Add).swift */; };
 		EB6712351F4C4CE500642B72 /* UIColor+RGBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6712341F4C4CE500642B72 /* UIColor+RGBA.swift */; };
 		EB6728881F6129C40089265A /* TYPoprosManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6728871F6129C40089265A /* TYPoprosManager.m */; };
@@ -238,8 +238,6 @@
 		EB5A2A291F0390FB00A19F2C /* TYMailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYMailViewController.m; sourceTree = "<group>"; };
 		EB5A2A321F0392AB00A19F2C /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		EB5A2A361F03A45900A19F2C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		EB5A2A3B1F03B3E800A19F2C /* TYLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLoginViewController.h; sourceTree = "<group>"; };
-		EB5A2A3C1F03B3E800A19F2C /* TYLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYLoginViewController.m; sourceTree = "<group>"; };
 		EB5A2A3E1F03B40D00A19F2C /* TYRCTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYRCTViewController.h; sourceTree = "<group>"; };
 		EB5A2A3F1F03B40D00A19F2C /* TYRCTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYRCTViewController.m; sourceTree = "<group>"; };
 		EB5A99FB1F3C06C30031C497 /* TYHomeUitl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYHomeUitl.h; sourceTree = "<group>"; };
@@ -290,6 +288,8 @@
 		EB65011F1F418F1800C0B89A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EB6501211F418F2300C0B89A /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		EB6501281F419FAB00C0B89A /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = ../../../IJKMediaFramework.framework; sourceTree = "<group>"; };
+		EB6592501F75022E0059A3B9 /* TYLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLoginViewController.h; sourceTree = "<group>"; };
+		EB6592511F75022E0059A3B9 /* TYLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYLoginViewController.m; sourceTree = "<group>"; };
 		EB6712321F4C0FDE00642B72 /* String(Add).swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String(Add).swift"; sourceTree = "<group>"; };
 		EB6712341F4C4CE500642B72 /* UIColor+RGBA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+RGBA.swift"; sourceTree = "<group>"; };
 		EB6728861F6129C40089265A /* TYPoprosManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPoprosManager.h; sourceTree = "<group>"; };
@@ -792,8 +792,9 @@
 		EB5A2A3A1F03B3D100A19F2C /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				EB5A2A3B1F03B3E800A19F2C /* TYLoginViewController.h */,
-				EB5A2A3C1F03B3E800A19F2C /* TYLoginViewController.m */,
+				EB65924F1F75022E0059A3B9 /* Controller */,
+				EB65924E1F75022D0059A3B9 /* Model */,
+				EB65924D1F75022D0059A3B9 /* View */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -928,6 +929,29 @@
 			);
 			name = ThirdFramework;
 			path = RCTTest/ThirdFramework;
+			sourceTree = "<group>";
+		};
+		EB65924D1F75022D0059A3B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB65924E1F75022D0059A3B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EB65924F1F75022E0059A3B9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EB6592501F75022E0059A3B9 /* TYLoginViewController.h */,
+				EB6592511F75022E0059A3B9 /* TYLoginViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		EB714BA61F4806190024C929 /* SnapKit */ = {
@@ -1187,6 +1211,7 @@
 				EB5A2A101F0388D700A19F2C /* TYTabBarController.m in Sources */,
 				EB55658D1F42FEB0005BB5DC /* Bundle(Add).swift in Sources */,
 				EB714BCC1F4806190024C929 /* README.md in Sources */,
+				EB6592521F75022E0059A3B9 /* TYLoginViewController.m in Sources */,
 				EB60BB8F1F454DB60062DBC2 /* TYAttentionViewCell.swift in Sources */,
 				EB5D39381F3491C30029085F /* TYSegmentViewController.m in Sources */,
 				EBB77D691F677BD700A1C59C /* TYProfileViewModel.m in Sources */,
@@ -1196,7 +1221,6 @@
 				EB714BD41F4806190024C929 /* ConstraintInsetTarget.swift in Sources */,
 				EB18D3F51F0F890700B44790 /* TYNetWorkingTool.m in Sources */,
 				EB714BD61F4806190024C929 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
-				EB5A2A3D1F03B3E800A19F2C /* TYLoginViewController.m in Sources */,
 				EB54324F1F4D7D2B00683AA7 /* TYTestViewController.m in Sources */,
 				EB5432521F4D995900683AA7 /* TYStatusCommentView.m in Sources */,
 				EB18D3F81F0F89C500B44790 /* TYServiceApi.m in Sources */,
