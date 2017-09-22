@@ -29,4 +29,11 @@
  */
 #define AMapKey @"8a597e525b6e4c076d6112d35afb736c"
 
+#define APP_Login_Key @"login_key"
+/**
+ * APP 沙盒路径 Define
+ *
+ */
 #define Root_Path [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true) lastObject]
+
+

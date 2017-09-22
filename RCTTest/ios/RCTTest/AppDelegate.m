@@ -9,10 +9,10 @@
 #import "AppDelegate.h"
 #import "Macro.h"
 #import "TYTabBarController.h"
+#import "TYLoginViewController.h"
 #import "TYTheme.h"
 #import  "TBCityIconFont.h"
 #import <AMapFoundationKit/AMapFoundationKit.h>
-#import "Macro.h"
 @interface AppDelegate ()
 
 @end
@@ -22,13 +22,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //设置window
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
-    
     self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, width, height)];
     self.window.backgroundColor = [UIColor whiteColor];
-    TYTabBarController *root = [[TYTabBarController alloc] init];
-    self.window.rootViewController = root;
+    
+    //设置根视图
+    /*1.0检查登录状态；2.0检测版本状态*/
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:APP_Login_Key];
+    
+    UIViewController *rootVC;
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:APP_Login_Key]) {
+        rootVC = [[TYTabBarController alloc] init];
+    }else {
+        rootVC = [[TYLoginViewController alloc] init];
+        rootVC.view.backgroundColor = [UIColor randomColor];
+    }
+    self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
     //设置iconfont
     [TBCityIconFont setFontName:@"iconfont"];

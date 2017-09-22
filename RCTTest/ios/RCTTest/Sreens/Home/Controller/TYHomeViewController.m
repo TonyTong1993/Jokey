@@ -31,6 +31,7 @@
     [segmentView setIndicatorBackgroundColor:HEXCOLOR(0x55B1E6)];
     self.navigationItem.titleView = segmentView;
     self.segmentView = segmentView;
+    [self setUpTableView];
     [self loadNewData];
     
     
