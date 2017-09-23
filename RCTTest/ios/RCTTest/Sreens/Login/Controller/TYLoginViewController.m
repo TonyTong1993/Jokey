@@ -10,6 +10,8 @@
 #import "AppDelegate.h"
 #import "TYTabBarController.h"
 #import <CocoaSecurity/CocoaSecurity.h>
+#import  <MBProgressHUD/MBProgressHUD.h>
+#import "MBProgressHUD+MJ.h"
 @interface TYLoginViewController ()<UITextFieldDelegate>
 @property(strong ,nonatomic) UITextField* atextField;
 @property(strong ,nonatomic) UITextField* mtextField;
@@ -90,6 +92,7 @@
 -(void)loginAction {
     //用户名及密码检验
     if (_atextField.text.length < 3 && _mtextField.text.length < 3) {
+        [MBProgressHUD showError:@"请检查用户名或密码输入"];
         return;
     }
     
@@ -97,9 +100,16 @@
     CocoaSecurityResult *pwd = [CocoaSecurity md5:_mtextField.text];
     NSLog(@"pwd = %@",pwd.hex);
     
-    //模拟数据上传
+    //模拟数据上传上传状态提示
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    //修改hud样式
+
+    //显示hud
+    [hud showAnimated:YES];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
+        //隐藏hud
+        [hud hideAnimated:true];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:APP_Login_Key];
         
         //切换window视图
