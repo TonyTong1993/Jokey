@@ -37,7 +37,6 @@
         rootVC = [[TYTabBarController alloc] init];
     }else {
         rootVC = [[TYLoginViewController alloc] init];
-        rootVC.view.backgroundColor = [UIColor randomColor];
     }
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];

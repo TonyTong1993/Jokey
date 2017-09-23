@@ -9,22 +9,83 @@
 #import "TYLoginViewController.h"
 #import "AppDelegate.h"
 #import "TYTabBarController.h"
-@interface TYLoginViewController ()
-
+@interface TYLoginViewController ()<UITextFieldDelegate>
+@property(strong ,nonatomic) UITextField* atextField;
+@property(strong ,nonatomic) UITextField* mtextField;
 @end
 
 @implementation TYLoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIButton *loginBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    [loginBtn setTitle:@"登录" forState:UIControlStateNormal];
-    [loginBtn setTitleColor:HEXCOLOR(0x333333) forState:UIControlStateNormal];
-    [loginBtn addTarget:self action:@selector(loginAction) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view addSubview:loginBtn];
-}
+    UITextField *atextField = [[UITextField alloc] init];
+    atextField.delegate = self;
+    atextField.font = [UIFont fontWithName:[TYTheme themeFontFamilyName] size:14];
+    atextField.placeholder = @"请输入手机号";
+    atextField.keyboardType = UIKeyboardTypeNumberPad;
+    self.atextField = atextField;
+    UILabel *aLabel = [[UILabel alloc] init];
+    aLabel.font = [UIFont fontWithName:[TYTheme themeFontFamilyName] size:14];
+    aLabel.textColor  = HEXCOLOR(0x333);
+    aLabel.text = @"账号:";
+    
+    UIStackView *astackView = [[UIStackView alloc] initWithFrame:CGRectMake(0, 0, 250, 50)];
+    [astackView addArrangedSubview:atextField];
+    [astackView addArrangedSubview:aLabel];
+    [astackView insertArrangedSubview:atextField atIndex:1];
+    astackView.spacing = 4;
+    
+    UITextField *mtextField = [[UITextField alloc] init];
+    mtextField.delegate = self;
+    mtextField.font = [UIFont fontWithName:[TYTheme themeFontFamilyName] size:14];
+    mtextField.placeholder = @"请输入密码";
+    mtextField.secureTextEntry = YES;
+    mtextField.keyboardType = UIKeyboardTypeASCIICapable;
+    self.mtextField = mtextField;
+    UILabel *mLabel = [[UILabel alloc] init];
+    mLabel.font = [UIFont fontWithName:[TYTheme themeFontFamilyName] size:14];
+    mLabel.textColor  = HEXCOLOR(0x333);
+    mLabel.text = @"密码:";
+    UIStackView *mstackView = [[UIStackView alloc] initWithFrame:CGRectMake(0, 0, 250, 50)];
+    [mstackView addArrangedSubview:mtextField];
+    [mstackView addArrangedSubview:mLabel];
+    [mstackView insertArrangedSubview:mtextField atIndex:1];
+    mstackView.spacing = 4;
+    
+    UIButton *loginBtn = [[UIButton alloc] init];
+    [loginBtn setTitle:@"登录" forState:UIControlStateNormal];
+    [loginBtn setTitleColor:HEXCOLOR(0xffffff) forState:UIControlStateNormal];
+    [loginBtn addTarget:self action:@selector(loginAction) forControlEvents:UIControlEventTouchUpInside];
+    loginBtn.backgroundColor = HEXCOLOR(themeColorHexValue);
+    loginBtn.layer.cornerRadius = 20;
+    loginBtn.layer.masksToBounds = YES;
+    UIStackView *stackView = [[UIStackView alloc] initWithFrame:CGRectMake(0, 0, 250, 140)];
+    stackView.axis = UILayoutConstraintAxisVertical;
+    stackView.distribution = UIStackViewDistributionFillEqually;
+    stackView.spacing = 10;
+    [stackView addArrangedSubview:astackView];
+    [stackView addArrangedSubview:mstackView];
+    [stackView addArrangedSubview:loginBtn];
 
+    [self.view addSubview:stackView];
+    stackView.center = self.view.center;
+   
+    
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    if (_atextField.isFirstResponder) {
+        [_atextField resignFirstResponder];
+    }
+    if (_mtextField.isFirstResponder) {
+        [_mtextField resignFirstResponder];
+    }
+}
+-(void)dealloc {
+    NSLog(@"%s",__FUNCTION__);
+}
+/*1用户名及密码检验、2用户密码加密、3上传用户登录状态、4切换视图*/
 -(void)loginAction {
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:APP_Login_Key];
     
@@ -37,4 +98,15 @@
     
 };
 
+#pragma mark---UITextFieldDelegate
+-(void)textFieldDidBeginEditing:(UITextField *)textField {
+    
+}
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    //特殊字符过滤如空格
+    
+    //控制输入长度
+    
+    return YES;
+}
 @end
