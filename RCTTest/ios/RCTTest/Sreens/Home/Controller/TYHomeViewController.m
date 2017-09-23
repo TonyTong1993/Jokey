@@ -35,6 +35,12 @@
     [self loadNewData];
     
     
+    TBCityIconInfo *iconInfo = TBCityIconInfoMake(@"\U0000e6df", 24, [UIColor randomColor]);
+    UIImage *image = [UIImage iconWithInfo:iconInfo];
+    
+    UIBarButtonItem *rightBtn = [UIBarButtonItem barBtnItemWithNormalIcon:image highlightIcon:image target:self action:@selector(handleClick)];
+    self.navigationItem.rightBarButtonItem = rightBtn;
+    
 }
 -(void)setUpTableView {
     self.automaticallyAdjustsScrollViewInsets = false;

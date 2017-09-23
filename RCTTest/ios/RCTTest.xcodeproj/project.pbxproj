@@ -142,6 +142,7 @@
 		EB811C751F764273003552E9 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = EB811C741F764273003552E9 /* MBProgressHUD+MJ.m */; };
 		EB9FF1E21F47DF2200EEBE11 /* TYTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9FF1E11F47DF2200EEBE11 /* TYTheme.m */; };
 		EBB77D691F677BD700A1C59C /* TYProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB77D681F677BD700A1C59C /* TYProfileViewModel.m */; };
+		EBE0F7A41F76877D006F0AD8 /* TYSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0F7A31F76877D006F0AD8 /* TYSearchViewController.swift */; };
 		EDEBCEE583499B68DDF9A070 /* libPods-RCTTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4685E6D3869C8CFF7EF29817 /* libPods-RCTTest.a */; };
 /* End PBXBuildFile section */
 
@@ -340,6 +341,7 @@
 		EB9FF1E11F47DF2200EEBE11 /* TYTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTheme.m; sourceTree = "<group>"; };
 		EBB77D671F677BD700A1C59C /* TYProfileViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYProfileViewModel.h; sourceTree = "<group>"; };
 		EBB77D681F677BD700A1C59C /* TYProfileViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYProfileViewModel.m; sourceTree = "<group>"; };
+		EBE0F7A31F76877D006F0AD8 /* TYSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYSearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -910,6 +912,7 @@
 			isa = PBXGroup;
 			children = (
 				EB6500EF1F41839C00C0B89A /* TYDiscoverViewController.swift */,
+				EBE0F7A31F76877D006F0AD8 /* TYSearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1230,6 +1233,7 @@
 				EB714BCC1F4806190024C929 /* README.md in Sources */,
 				EB6592521F75022E0059A3B9 /* TYLoginViewController.m in Sources */,
 				EB60BB8F1F454DB60062DBC2 /* TYAttentionViewCell.swift in Sources */,
+				EBE0F7A41F76877D006F0AD8 /* TYSearchViewController.swift in Sources */,
 				EB5D39381F3491C30029085F /* TYSegmentViewController.m in Sources */,
 				EBB77D691F677BD700A1C59C /* TYProfileViewModel.m in Sources */,
 				EB714BE11F4806190024C929 /* ConstraintMultiplierTarget.swift in Sources */,

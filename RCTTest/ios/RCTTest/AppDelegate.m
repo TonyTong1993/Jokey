@@ -30,8 +30,7 @@
     
     //设置根视图
     /*1.0检查登录状态；2.0检测版本状态*/
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:APP_Login_Key];
-    
+
     UIViewController *rootVC;
     if ([[NSUserDefaults standardUserDefaults] boolForKey:APP_Login_Key]) {
         rootVC = [[TYTabBarController alloc] init];
