@@ -9,6 +9,7 @@
 #import "TYLoginViewController.h"
 #import "AppDelegate.h"
 #import "TYTabBarController.h"
+#import <CocoaSecurity/CocoaSecurity.h>
 @interface TYLoginViewController ()<UITextFieldDelegate>
 @property(strong ,nonatomic) UITextField* atextField;
 @property(strong ,nonatomic) UITextField* mtextField;
@@ -34,7 +35,7 @@
     [astackView addArrangedSubview:atextField];
     [astackView addArrangedSubview:aLabel];
     [astackView insertArrangedSubview:atextField atIndex:1];
-    astackView.spacing = 4;
+    astackView.spacing = 8;
     
     UITextField *mtextField = [[UITextField alloc] init];
     mtextField.delegate = self;
@@ -51,7 +52,7 @@
     [mstackView addArrangedSubview:mtextField];
     [mstackView addArrangedSubview:mLabel];
     [mstackView insertArrangedSubview:mtextField atIndex:1];
-    mstackView.spacing = 4;
+    mstackView.spacing = 8;
     
     UIButton *loginBtn = [[UIButton alloc] init];
     [loginBtn setTitle:@"登录" forState:UIControlStateNormal];
@@ -87,14 +88,28 @@
 }
 /*1用户名及密码检验、2用户密码加密、3上传用户登录状态、4切换视图*/
 -(void)loginAction {
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:APP_Login_Key];
+    //用户名及密码检验
+    if (_atextField.text.length < 3 && _mtextField.text.length < 3) {
+        return;
+    }
     
-    //切换window视图
-    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    UIWindow *window = app.window;
-    TYTabBarController *rootVC = [[TYTabBarController alloc] init];
-    window.rootViewController = rootVC;
-    [window makeKeyAndVisible];
+    //用户密码加密
+    CocoaSecurityResult *pwd = [CocoaSecurity md5:_mtextField.text];
+    NSLog(@"pwd = %@",pwd.hex);
+    
+    //模拟数据上传
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:APP_Login_Key];
+        
+        //切换window视图
+        AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        UIWindow *window = app.window;
+        TYTabBarController *rootVC = [[TYTabBarController alloc] init];
+        window.rootViewController = rootVC;
+        [window makeKeyAndVisible];
+    });
+    
     
 };
 
