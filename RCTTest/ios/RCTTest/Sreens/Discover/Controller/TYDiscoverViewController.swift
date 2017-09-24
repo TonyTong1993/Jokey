@@ -50,6 +50,20 @@ class TYDiscoverViewController: TYBaseViewController,SDCycleScrollViewDelegate {
         tableView.tableHeaderView = cycleScrollView
     }
 
-
-
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+         let width = view.frame.width
+        return TYTopicBanner(frame: CGRect(x: 0, y: 0, width: width, height: 40))
+    }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
 }
