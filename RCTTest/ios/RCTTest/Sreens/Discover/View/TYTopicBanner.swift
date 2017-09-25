@@ -8,9 +8,11 @@
 
 import UIKit
 
-class TYTopicBanner: UIView ,TYSegmentScrollViewDataSource{
+class TYTopicBanner: UIView ,TYSegmentScrollViewDataSource,UIScrollViewDelegate{
 
-   lazy var segmentView : TYSegmentScrollVIew = TYSegmentScrollVIew()
+    fileprivate lazy var segmentView : TYSegmentScrollVIew = TYSegmentScrollVIew()
+    
+   
     let dataSource = ["热门","搞笑","娱乐","互动","情感","萌物","资源","校园","动漫","科技","才艺","游戏","老司机"]
     
     
@@ -19,6 +21,7 @@ class TYTopicBanner: UIView ,TYSegmentScrollViewDataSource{
         
         //设置segmentView
         segmentView.dataSource = self
+        segmentView.delegate = self
         //设置右边按钮
         let rightBtn = UIButton()
         
@@ -42,5 +45,15 @@ class TYTopicBanner: UIView ,TYSegmentScrollViewDataSource{
     
     func titleForItem(segmentScrollView: UIView, index: Int) -> String {
         return dataSource[index]
+    }
+    //MARK----UIScrollViewDelegate
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+    }
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        
+    }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
     }
 }

@@ -14,16 +14,29 @@ protocol TYSegmentScrollViewDataSource :NSObjectProtocol{
 class TYSegmentScrollVIew: UIScrollView {
     var normalTitleColor = UIColor.hex(0x33333) {
         didSet {
-            
+            guard let items = items else {
+                return
+            }
+            for item in items {
+                item.setTitleColor(normalTitleColor, for: .normal)
+            }
         }
     }
    
     
     var selectedTitleColor = UIColor.hex(themeColorHexValue) {
         didSet {
-            
+            indicateView.backgroundColor = selectedTitleColor
+            guard let items = items else {
+                return
+            }
+            for item in items {
+                item.setTitleColor(normalTitleColor, for: .normal)
+            }
         }
     }
+    
+    fileprivate var indicateView = UIView()
     
     weak var dataSource:TYSegmentScrollViewDataSource? {
         didSet {
@@ -32,18 +45,22 @@ class TYSegmentScrollVIew: UIScrollView {
                 return
             }
             var items = [TYSegmentItem]()
-            var startX : CGFloat = 0
             
+            let padding : CGFloat = 5.0
+            var startX : CGFloat = padding
             for index in 0..<count {
                 if let title = dataSource?.titleForItem(segmentScrollView: self, index: index) {
                     
-                    let item = TYSegmentItem(title: title, normalTitleColor: normalTitleColor, selectedTitleColor: selectedTitleColor)
+                    let item = TYSegmentItem(title: title, normalTitleColor: normalTitleColor, selectedTitleColor: UIColor.white)
+                    item.segmentIndex = index
+                    item.addTarget(self, action: #selector(handleItemClicked(item:)), for: .touchUpInside)
                     //设置item的尺寸及位置 edgeInset（5，5，5，5）
                     
-                    let frame = CGRect(x: startX, y: 0, width: item.titleSize.width+10, height: item.titleSize.height+10)
+                    let frame = CGRect(x: startX, y: 0, width: item.titleSize.width+16, height: item.titleSize.height+10)
                     item.frame = frame
-                    startX = startX + item.titleSize.width+10
+                    startX = startX + item.titleSize.width+16 + padding
                     items.append(item)
+                   
                     addSubview(item)
                 }
             }
@@ -51,11 +68,39 @@ class TYSegmentScrollVIew: UIScrollView {
             if items.count > 0 {
                 self.items = items
                 self.contenSizeW = startX
+                let index = selectedIndex
+                
+                //设置默认选中项
+                let selectedItem = items[index]
+                indicateView.backgroundColor = selectedTitleColor
+                indicateView.layer.cornerRadius = selectedItem.titleSize.height/2
+                indicateView.layer.masksToBounds = true
+                updateIndicatorView(index: index)
+                
             }
         }
     }
-    
-     var selectedIndex : UInt8?
+    var currentIndex : Int = 0
+    var selectedIndex : Int {
+        get {
+            return currentIndex
+        }
+        set {
+            //还原原视图
+            guard let items = items else {
+                return
+            }
+            if currentIndex == newValue {
+                return
+            }
+            let currentItem = items[currentIndex]
+            currentItem.isSelected = false
+            currentIndex = newValue
+            //更新
+            updateIndicatorView(index: currentIndex)
+        }
+        
+    }
     
     fileprivate var items : [TYSegmentItem]?
     fileprivate var contenSizeW : CGFloat = 0
@@ -66,6 +111,7 @@ class TYSegmentScrollVIew: UIScrollView {
         showsVerticalScrollIndicator = false
         showsHorizontalScrollIndicator = false
         bounces = false
+        addSubview(indicateView)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -86,6 +132,39 @@ class TYSegmentScrollVIew: UIScrollView {
             item.center.y = self.center.y
         }
         
+    }
+    
+    @objc func handleItemClicked(item:TYSegmentItem) {
+        selectedIndex = item.segmentIndex
+    }
+    @objc func updateIndicatorView(index:Int) {
+        guard let items = items else {
+            return
+        }
+        let selectedItem = items[index]
+        selectedItem.isSelected = true
+        //设置指示器视图
+        indicateView.snp.remakeConstraints({ (maker) in
+            maker.centerY.equalTo(selectedItem.snp.centerY)
+            maker.centerX.equalTo(selectedItem.snp.centerX)
+            maker.width.equalTo(selectedItem.frame.width)
+            maker.height.equalTo(selectedItem.titleSize.height)
+        })
+     
+        //将按钮居中显示
+//        let midX = selectedItem.frame.midX
+//        if frame.width == 0 {
+//            return
+//        }
+//        let page  = midX/frame.width
+//        if page > 1 {
+//            let deltaX = midX - 3*page*frame.width/2
+//            let currentContentOffsetX = contentOffset.x
+//            let expContentOffsetX = currentContentOffsetX + deltaX
+//            let expContentOffsetY = contentOffset.y
+//            setContentOffset( CGPoint(x: expContentOffsetX, y: expContentOffsetY), animated: true)
+//        }
+      
     }
 
 }
