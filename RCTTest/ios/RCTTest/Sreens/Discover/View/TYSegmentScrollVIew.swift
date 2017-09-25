@@ -110,7 +110,6 @@ class TYSegmentScrollVIew: UIScrollView {
         
         showsVerticalScrollIndicator = false
         showsHorizontalScrollIndicator = false
-        bounces = false
         addSubview(indicateView)
     }
     
@@ -152,18 +151,22 @@ class TYSegmentScrollVIew: UIScrollView {
         })
      
         //将按钮居中显示
-//        let midX = selectedItem.frame.midX
-//        if frame.width == 0 {
-//            return
-//        }
-//        let page  = midX/frame.width
-//        if page > 1 {
-//            let deltaX = midX - 3*page*frame.width/2
-//            let currentContentOffsetX = contentOffset.x
-//            let expContentOffsetX = currentContentOffsetX + deltaX
-//            let expContentOffsetY = contentOffset.y
-//            setContentOffset( CGPoint(x: expContentOffsetX, y: expContentOffsetY), animated: true)
-//        }
+        let midX = selectedItem.frame.midX
+        if frame.width == 0 {
+            return
+        }
+        
+        if midX > frame.width/2  {
+            let deltaX = midX - contentOffset.x - frame.width/2
+            let currentContentOffsetX = contentOffset.x
+            var expContentOffsetX = currentContentOffsetX + deltaX
+            let width = expContentOffsetX + frame.width
+            if (width > contenSizeW) {
+                expContentOffsetX = contenSizeW - frame.width
+            }
+            let expContentOffsetY = contentOffset.y
+            setContentOffset( CGPoint(x: expContentOffsetX, y: expContentOffsetY), animated: true)
+        }
       
     }
 
