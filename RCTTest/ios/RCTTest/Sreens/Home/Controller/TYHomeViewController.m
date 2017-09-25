@@ -31,8 +31,15 @@
     [segmentView setIndicatorBackgroundColor:HEXCOLOR(0x55B1E6)];
     self.navigationItem.titleView = segmentView;
     self.segmentView = segmentView;
+    [self setUpTableView];
     [self loadNewData];
     
+    
+    TBCityIconInfo *iconInfo = TBCityIconInfoMake(@"\U0000e6df", 24, [UIColor randomColor]);
+    UIImage *image = [UIImage iconWithInfo:iconInfo];
+    
+    UIBarButtonItem *rightBtn = [UIBarButtonItem barBtnItemWithNormalIcon:image highlightIcon:image target:self action:@selector(handleClick)];
+    self.navigationItem.rightBarButtonItem = rightBtn;
     
 }
 -(void)setUpTableView {

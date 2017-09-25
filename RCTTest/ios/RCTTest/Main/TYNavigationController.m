@@ -44,7 +44,6 @@
     if (self.viewControllers.count >= 1) {
         //当非根视图时隐藏tabBar
         viewController.hidesBottomBarWhenPushed = YES;
-        viewController.title = @"测试标题";
         //自定义返回按钮
  
         

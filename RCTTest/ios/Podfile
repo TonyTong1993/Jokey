@@ -34,4 +34,6 @@ source 'https://github.com/CocoaPods/Specs.git'
     pod "AMapLocation"
     pod "FMDB"
     pod 'PNChart'
+    pod 'CocoaSecurity'
+    pod 'MBProgressHUD'
 end

@@ -20,6 +20,7 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setUpTableView];
 }
 -(void)setUpTableView {
     self.automaticallyAdjustsScrollViewInsets = false;

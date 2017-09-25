@@ -19,11 +19,13 @@ PODS:
   - AMapFoundation (1.4.2)
   - AMapLocation (2.4.0):
     - AMapFoundation (~> 1.4)
+  - CocoaSecurity (1.2.4)
   - FMDB (2.7.2):
     - FMDB/standard (= 2.7.2)
   - FMDB/standard (2.7.2)
   - IconFont (1.0.2)
   - Masonry (1.0.2)
+  - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
   - PNChart (0.8.9):
@@ -75,9 +77,11 @@ DEPENDENCIES:
   - AFNetworking
   - AMap3DMap
   - AMapLocation
+  - CocoaSecurity
   - FMDB
   - IconFont
   - Masonry
+  - MBProgressHUD
   - MJExtension
   - MJRefresh
   - PNChart
@@ -111,9 +115,11 @@ SPEC CHECKSUMS:
   AMap3DMap: 0614b5b7ed7a8b69f1d9ba7bc40ce30362497dc5
   AMapFoundation: 6c0471c9a6a0ad17dad46e3d800ad56ca170f82a
   AMapLocation: 47b62b5381a66e4d0c2931b70ffde72682427896
+  CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
   FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
   IconFont: 97ff724bc6d26aac018678a2da4f8542600e5a67
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
@@ -125,6 +131,6 @@ SPEC CHECKSUMS:
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
   Yoga: 2a70bc5ab41486a272b9fd5b76c482ba9268c5dd
 
-PODFILE CHECKSUM: 6154641241af7ff6e0ba26083de156c5aad0c1fe
+PODFILE CHECKSUM: 7af71c6d403a28fafefbbc70a80722ea5461b9b3
 
 COCOAPODS: 1.2.1

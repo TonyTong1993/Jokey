@@ -12,6 +12,7 @@ class TYCategaryViewController: TYBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpTableView()
         loadNewData()
         // Do any additional setup after loading the view.
     }

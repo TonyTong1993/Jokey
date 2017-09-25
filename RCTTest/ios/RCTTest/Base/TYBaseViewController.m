@@ -56,7 +56,6 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = false;
-    [self setUpTableView];
     [self setUpNavigationBar];
     self.dataSource = @[];
 }

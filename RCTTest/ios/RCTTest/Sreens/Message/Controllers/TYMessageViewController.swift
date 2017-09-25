@@ -12,7 +12,7 @@ class TYMessageViewController: TYBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpTableView();
         // Do any additional setup after loading the view.
     }
 
