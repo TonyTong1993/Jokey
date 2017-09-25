@@ -33,6 +33,8 @@ class TYTopicBanner: UIView ,TYSegmentScrollViewDataSource,UIScrollViewDelegate{
         stackView.addArrangedSubview(rightBtn)
         
         addSubview(stackView)
+        
+        backgroundColor = UIColor.white
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -14,6 +14,8 @@
 		EB032D291F0251F300F32465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB032D271F0251F300F32465 /* Main.storyboard */; };
 		EB032D2B1F0251F300F32465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB032D2A1F0251F300F32465 /* Assets.xcassets */; };
 		EB032D2E1F0251F300F32465 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB032D2C1F0251F300F32465 /* LaunchScreen.storyboard */; };
+		EB0964101F7927FA00417BB3 /* TYTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09640E1F7927FA00417BB3 /* TYTopicCell.swift */; };
+		EB0964111F7927FA00417BB3 /* TYTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB09640F1F7927FA00417BB3 /* TYTopicCell.xib */; };
 		EB18D3E41F0F427200B44790 /* RCTLocationObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3E31F0F427200B44790 /* RCTLocationObserver.m */; };
 		EB18D3E71F0F6B7700B44790 /* TYRCTModule.m in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3E61F0F6B7700B44790 /* TYRCTModule.m */; };
 		EB18D3EA1F0F725C00B44790 /* TYVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3E91F0F725C00B44790 /* TYVideoController.swift */; };
@@ -164,6 +166,9 @@
 		EB032D2A1F0251F300F32465 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB032D2D1F0251F300F32465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB032D2F1F0251F300F32465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB09640A1F79214600417BB3 /* list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
+		EB09640E1F7927FA00417BB3 /* TYTopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TYTopicCell.swift; sourceTree = "<group>"; };
+		EB09640F1F7927FA00417BB3 /* TYTopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TYTopicCell.xib; sourceTree = "<group>"; };
 		EB18D3E21F0F427200B44790 /* RCTLocationObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTLocationObserver.h; sourceTree = "<group>"; };
 		EB18D3E31F0F427200B44790 /* RCTLocationObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTLocationObserver.m; sourceTree = "<group>"; };
 		EB18D3E51F0F6B7700B44790 /* TYRCTModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYRCTModule.h; sourceTree = "<group>"; };
@@ -466,6 +471,7 @@
 		EB18D3E11F0F41FE00B44790 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				EB09640A1F79214600417BB3 /* list.json */,
 				EB58657D1F55706300598DA0 /* Profile.json */,
 				EB55658E1F43021C005BB5DC /* topic.json */,
 				EB266F5B1F3B317500949D40 /* recommend.json */,
@@ -934,6 +940,8 @@
 				EBE0F7A71F76ABCA006F0AD8 /* SearchView.swift */,
 				EBE0F7A81F76ABCA006F0AD8 /* TYTopicBanner.swift */,
 				EBE0F7AB1F773C83006F0AD8 /* TYSegmentScrollVIew.swift */,
+				EB09640E1F7927FA00417BB3 /* TYTopicCell.swift */,
+				EB09640F1F7927FA00417BB3 /* TYTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1104,6 +1112,7 @@
 				EB3299E31F1385B60034D095 /* MaterialCommunityIcons.ttf in Resources */,
 				EB714BCB1F4806190024C929 /* LICENSE in Resources */,
 				EB032D2E1F0251F300F32465 /* LaunchScreen.storyboard in Resources */,
+				EB0964111F7927FA00417BB3 /* TYTopicCell.xib in Resources */,
 				EB3299DE1F1385B60034D095 /* Entypo.ttf in Resources */,
 				EB55658F1F43021C005BB5DC /* topic.json in Resources */,
 				EB3299C81F1352710034D095 /* fontFamily.txt in Resources */,
@@ -1229,6 +1238,7 @@
 				EB6728881F6129C40089265A /* TYPoprosManager.m in Sources */,
 				EB714BDE1F4806190024C929 /* ConstraintMakerFinalizable.swift in Sources */,
 				EB32F1431F4AE31C00D766AF /* TYSegmentItem.swift in Sources */,
+				EB0964101F7927FA00417BB3 /* TYTopicCell.swift in Sources */,
 				EB714BE41F4806190024C929 /* ConstraintPriorityTarget.swift in Sources */,
 				EB25C5F11F6790FF00115214 /* TYRunViewController.m in Sources */,
 				EB714BCE1F4806190024C929 /* ConstraintAttributes.swift in Sources */,
