@@ -13,6 +13,7 @@
 #import "TYTheme.h"
 #import  "TBCityIconFont.h"
 #import <AMapFoundationKit/AMapFoundationKit.h>
+#import <UserNotifications/UserNotifications.h>
 @interface AppDelegate ()
 
 @end
@@ -41,11 +42,48 @@
     [self.window makeKeyAndVisible];
     //设置iconfont
     [TBCityIconFont setFontName:@"iconfont"];
-    
 //    设置高德地图的key
     [[AMapServices sharedServices] setApiKey:AMapKey];
 //    支持https
     [[AMapServices sharedServices] setEnableHTTPS:true];
+    //设置本地推送通知 步骤：1.注册本地通知
+    /*设置iOS11版本的推送通知*/
+    if (NSClassFromString(@"UNUserNotificationCenter")) {
+        UNAuthorizationOptions options = UNAuthorizationOptionAlert | UNAuthorizationOptionBadge | UNAuthorizationOptionSound;
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        [center requestAuthorizationWithOptions:options completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            
+        }];
+        [center setNotificationCategories:NULL];
+        [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+            
+        }];
+        UNNotificationContent *content = [[UNNotificationContent alloc] init];
+        NSTimeInterval timeInterval = 60*60*2;
+        UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:timeInterval repeats:YES];
+        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"" content:content trigger:trigger];
+        [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+            
+        }];
+        [center getPendingNotificationRequestsWithCompletionHandler:^(NSArray<UNNotificationRequest *> * _Nonnull requests) {
+            
+        }];
+    }else {
+        UIUserNotificationType type = UIUserNotificationTypeAlert;
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:type categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+        
+        // 处理退出后通知的点击，程序启动后获取通知对象，如果是首次启动还没有发送通知，那第一次通知对象为空，没必要去处理通知（如跳转到指定页面）
+        if (launchOptions[UIApplicationLaunchOptionsLocalNotificationKey]) {
+            UILocalNotification *localNotifi = launchOptions[UIApplicationLaunchOptionsLocalNotificationKey];
+            NSLog(@"localNotifi = %@",localNotifi);
+        }
+        UILocalNotification *notification = [[UILocalNotification alloc] init];
+        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+    }
+    
+    
+    
     return YES;
 }
 
@@ -75,6 +113,9 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
+//本地推送通知
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+     NSLog(@"localNotifi = %@",notification);
+}
 
 @end

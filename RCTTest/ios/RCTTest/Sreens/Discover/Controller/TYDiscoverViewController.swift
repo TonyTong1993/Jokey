@@ -85,6 +85,7 @@ class TYDiscoverViewController: TYBaseViewController,SDCycleScrollViewDelegate {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "KTYTopicCell") as! TYTopicCell
+        cell.selectionStyle = .none
         if  let dict = self.dataSource[indexPath.row] as? NSDictionary,
             let imageID = dict["cover"] as? UInt,
             let topic = dict["topic"] as? String,
