@@ -20,6 +20,10 @@ class TYTopicCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        attention.layer.cornerRadius = 12
+        attention.layer.masksToBounds = true
+        attention.layer.borderColor = UIColor.hex(0x7BC4F9).cgColor
+        attention.layer.borderWidth = 1
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

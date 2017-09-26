@@ -58,20 +58,20 @@ class TYDiscoverViewController: TYBaseViewController,SDCycleScrollViewDelegate {
     override func loadNewData() {
       self.tableView.mj_header.endRefreshing()
       self.dataSource = [
-            ["id":118719,"topic":"求大神P图","cover":95444072],
-            ["id":101883,"topic":"八卦来了","cover":151512301],
-            ["id":104785,"topic":"古风小院","cover":152261001],
-            ["id":101666,"topic":"那个叫学校的地方","cover":13864278],
-            ["id":100198,"topic":"汪了个喵","cover":31239125],
-            ["id":101610,"topic":"二次元聚集地","cover":33315076],
-            ["id":125921,"topic":"这个视频有毒","cover":13976240],
-            ["id":161794,"topic":"王者荣耀搞笑时刻","cover":20325511],
-            ["id":112357,"topic":"声控福利社","cover":22038816],
-            ["id":126160,"topic":"这特么都是套路","cover":15223171],
-            ["id":102219,"topic":"这是何等的卧槽","cover":19898116],
-            ["id":103495,"topic":"神评论集中营","cover":13986775],
+        ["id":118719,"topic":"求大神P图","cover":95444072,"addition":"429801个P图大神"],
+            ["id":101883,"topic":"八卦来了","cover":151512301,"addition":"242166个吃瓜群众"],
+            ["id":104785,"topic":"古风小院","cover":152261001,"addition":"283295个古庭友"],
+            ["id":101666,"topic":"那个叫学校的地方","cover":13864278,"addition":"418926个同学"],
+            ["id":100198,"topic":"汪了个喵","cover":31239125,"addition":"2228068个汪汪喵喵"],
+            ["id":101610,"topic":"二次元聚集地","cover":33315076,"addition":"190336个二次元"],
+            ["id":125921,"topic":"这个视频有毒","cover":13976240,"addition":"1982634个情人"],
+            ["id":161794,"topic":"王者荣耀搞笑时刻","cover":20325511,"addition":"198954个王者小坑货"],
+            ["id":112357,"topic":"声控福利社","cover":22038816,"addition":"2042877个声控小伙伴"],
+            ["id":126160,"topic":"这特么都是套路","cover":15223171,"addition":"1049417个套路君"],
+            ["id":102219,"topic":"这是何等的卧槽","cover":19898116,"addition":"395319个卧槽马"],
+            ["id":103495,"topic":"神评论集中营","cover":13986775,"addition":"671410个神评手"],
         ]
-//     let path = TYServiceApi.service(forImagePath: api_topic_cover, imageID: 95444072, size: 420)
+
     }
     override func loadMoreData() {
        self.tableView.mj_footer.endRefreshing()
@@ -88,10 +88,12 @@ class TYDiscoverViewController: TYBaseViewController,SDCycleScrollViewDelegate {
         if  let dict = self.dataSource[indexPath.row] as? NSDictionary,
             let imageID = dict["cover"] as? UInt,
             let topic = dict["topic"] as? String,
+            let addition = dict["addition"] as? String,
             let imagePath = TYServiceApi.service(forImagePath: api_topic_cover, imageID: imageID, size: 420) {
             let url = URL.init(string: imagePath)
             cell.avatarView.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "placeholder"))
             cell.titleLabel.text = topic
+            cell.detailLabel.text = addition
         }
         
         return cell

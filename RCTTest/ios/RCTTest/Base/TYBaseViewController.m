@@ -67,6 +67,7 @@
     self.tableView.delegate = self;
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 64, 0);
     self.tableView.backgroundColor = [UIColor colorWithHexString:@"#f0f0f8"];
+    self.tableView.separatorColor = HEXCOLOR(0xebebeb);
     //去除footer样式
     self.tableView.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:_tableView];
@@ -132,5 +133,13 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [[UITableViewCell alloc] init];
+}
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([cell respondsToSelector:@selector(setSeparatorColor:)]) {
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+    }
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
 }
 @end
