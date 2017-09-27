@@ -14,7 +14,7 @@
 #import  "TBCityIconFont.h"
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <UserNotifications/UserNotifications.h>
-@interface AppDelegate ()
+@interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
 @end
 
@@ -46,28 +46,23 @@
     [[AMapServices sharedServices] setApiKey:AMapKey];
 //    支持https
     [[AMapServices sharedServices] setEnableHTTPS:true];
-    //设置本地推送通知 步骤：1.注册本地通知
+    //设置本地推送通知 步骤：1.注册本地通知；2.设置本地推送消息；3.
     /*设置iOS11版本的推送通知*/
     if (NSClassFromString(@"UNUserNotificationCenter")) {
         UNAuthorizationOptions options = UNAuthorizationOptionAlert | UNAuthorizationOptionBadge | UNAuthorizationOptionSound;
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        center.delegate = self;
         [center requestAuthorizationWithOptions:options completionHandler:^(BOOL granted, NSError * _Nullable error) {
-            
+            NSLog(@"granted = %d",granted);
         }];
-        [center setNotificationCategories:NULL];
+//        [center setNotificationCategories:NULL];
         [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
-            
+           
         }];
-        UNNotificationContent *content = [[UNNotificationContent alloc] init];
-        NSTimeInterval timeInterval = 60*60*2;
-        UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:timeInterval repeats:YES];
-        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"" content:content trigger:trigger];
-        [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
-            
-        }];
-        [center getPendingNotificationRequestsWithCompletionHandler:^(NSArray<UNNotificationRequest *> * _Nonnull requests) {
-            
-        }];
+
+   
+            [self pushLocalNotification];
+     
     }else {
         UIUserNotificationType type = UIUserNotificationTypeAlert;
         UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:type categories:nil];
@@ -79,6 +74,13 @@
             NSLog(@"localNotifi = %@",localNotifi);
         }
         UILocalNotification *notification = [[UILocalNotification alloc] init];
+        NSDate *date = [NSDate dateWithTimeIntervalSinceNow:60];
+        notification.fireDate = date;
+        notification.timeZone = [NSTimeZone defaultTimeZone];
+        notification.repeatInterval = NSCalendarUnitDay;
+        notification.alertBody = @"起床啦！";
+        notification.userInfo = @{@"task":@"学习iOS课程"};
+        notification.applicationIconBadgeNumber = 1;
         [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
     }
     
@@ -86,7 +88,36 @@
     
     return YES;
 }
+-(void)pushLocalNotification {
+        UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
+    content.title = @"起床啦！";
+    content.subtitle = @"8:00洗漱";
+    content.body = @"完成之后学习iOS";
+    content.badge = @1;
+    
+//    NSString *identifier = @"0000-1111-0000-0000";
+//    NSURL *url = [[NSBundle mainBundle] pathForResource:@"icon_certification@2x" ofType:@"png"];
+//    NSError * __autoreleasing *error = NULL;
+//    UNNotificationAttachment *attachment = [UNNotificationAttachment attachmentWithIdentifier:identifier URL:url options:nil error:error];
+//    if (error) {
+//        NSLog(@"attachment error %@", error);
+//    }
+//    content.attachments = @[attachment];
+    content.launchImageName = @"icon_certification";
+    
+    // 2.设置声音
+    UNNotificationSound *sound = [UNNotificationSound defaultSound];
+    content.sound = sound;
+    
+    // 3.触发模式
+    UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:5 repeats:NO];
+    UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"TestRequest0" content:content trigger:trigger];
+    
+     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
 
+    }];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -117,5 +148,11 @@
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
      NSLog(@"localNotifi = %@",notification);
 }
-
+#pragma mark--UNUserNotificationCenterDelegate  ios version > 10.0
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
+      completionHandler(UNNotificationPresentationOptionAlert);
+}
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
+    completionHandler();
+}
 @end
