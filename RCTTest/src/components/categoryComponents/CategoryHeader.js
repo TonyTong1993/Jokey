@@ -16,11 +16,11 @@ class CategoryHeader extends Component {
     return (
       <View style={styles.contianer}>
       	<View style={styles.searchView}>
-      		<Image style={styles.icon} source={require('../../imgs/search-btn.png')}/>
+      		<Image style={styles.icon} source={{uri:'search-btn.png'}}/>
       		<Text>搜索内容</Text>
       	</View>
       	<View style={{width:32,height:32,justifyContent:'center'}}>
-      	<Image style={styles.qrCode} source={require('../../imgs/qrcode.png')}/>
+      	<Image style={styles.qrCode} source={{uri:'qrcode.png'}}/>
       	<Text style={{fontSize:8}}>扫一扫</Text>
       	</View>
       </View>

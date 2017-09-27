@@ -46,7 +46,7 @@
     [[AMapServices sharedServices] setApiKey:AMapKey];
 //    支持https
     [[AMapServices sharedServices] setEnableHTTPS:true];
-    //设置本地推送通知 步骤：1.注册本地通知；2.设置本地推送消息；3.
+    //设置本地推送通知 步骤：1.注册本地通知；2.设置本地推送消息；3.显示推送消息代理
     /*设置iOS11版本的推送通知*/
     if (NSClassFromString(@"UNUserNotificationCenter")) {
         UNAuthorizationOptions options = UNAuthorizationOptionAlert | UNAuthorizationOptionBadge | UNAuthorizationOptionSound;
@@ -74,14 +74,19 @@
             NSLog(@"localNotifi = %@",localNotifi);
         }
         UILocalNotification *notification = [[UILocalNotification alloc] init];
-        NSDate *date = [NSDate dateWithTimeIntervalSinceNow:60];
+        NSDate *date = [NSDate dateWithTimeIntervalSinceNow:10];
         notification.fireDate = date;
         notification.timeZone = [NSTimeZone defaultTimeZone];
         notification.repeatInterval = NSCalendarUnitDay;
+        notification.applicationIconBadgeNumber = 1;
+        // 通知被触发时播放的声音
+        notification.soundName = UILocalNotificationDefaultSoundName;
         notification.alertBody = @"起床啦！";
         notification.userInfo = @{@"task":@"学习iOS课程"};
         notification.applicationIconBadgeNumber = 1;
-        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+//        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+        // 执行通知注册
+        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
     }
     
     
@@ -95,14 +100,14 @@
     content.body = @"完成之后学习iOS";
     content.badge = @1;
     
-//    NSString *identifier = @"0000-1111-0000-0000";
-//    NSURL *url = [[NSBundle mainBundle] pathForResource:@"icon_certification@2x" ofType:@"png"];
-//    NSError * __autoreleasing *error = NULL;
-//    UNNotificationAttachment *attachment = [UNNotificationAttachment attachmentWithIdentifier:identifier URL:url options:nil error:error];
-//    if (error) {
-//        NSLog(@"attachment error %@", error);
-//    }
-//    content.attachments = @[attachment];
+    NSString *identifier = @"0000-1111-0000-0000";
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"icon_certification@2x" withExtension:@"png"];
+    NSError * __autoreleasing *error = NULL;
+    UNNotificationAttachment *attachment = [UNNotificationAttachment attachmentWithIdentifier:identifier URL:url options:nil error:error];
+    if (error) {
+        NSLog(@"attachment error %@", error);
+    }
+    content.attachments = @[attachment];
     content.launchImageName = @"icon_certification";
     
     // 2.设置声音
@@ -144,9 +149,29 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-//本地推送通知
+#pragma mark--本地推送通知 ios version 8-10
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-     NSLog(@"localNotifi = %@",notification);
+    // 这里真实需要处理交互的地方
+    // 获取通知所带的数据
+    NSString *notMess = [notification.userInfo objectForKey:@"key"];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"本地通知(前台)"
+                                                    message:notMess
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+    
+    // 更新显示的徽章个数
+    NSInteger badge = [UIApplication sharedApplication].applicationIconBadgeNumber;
+    badge--;
+    badge = badge >= 0 ? badge : 0;
+    [UIApplication sharedApplication].applicationIconBadgeNumber = badge;
+}
+-(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void (^)())completionHandler {
+    completionHandler();
+}
+-(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification withResponseInfo:(NSDictionary *)responseInfo completionHandler:(void (^)())completionHandler {
+    completionHandler();
 }
 #pragma mark--UNUserNotificationCenterDelegate  ios version > 10.0
 -(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {

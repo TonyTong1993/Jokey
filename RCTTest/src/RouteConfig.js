@@ -111,6 +111,7 @@ const RootStackNavigator = StackNavigator({
      TYRCTModule.rnGetPoprolengNotification({length:params.index})
     }
   },
+  headerMode:'screen'
 })
 const styles = StyleSheet.create({
   container: {

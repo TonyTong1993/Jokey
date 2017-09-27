@@ -139,6 +139,10 @@
 		EB714BEB1F4806190024C929 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB714BC81F4806190024C929 /* LayoutConstraint.swift */; };
 		EB714BEC1F4806190024C929 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB714BC91F4806190024C929 /* LayoutConstraintItem.swift */; };
 		EB714BED1F4806190024C929 /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB714BCA1F4806190024C929 /* UILayoutSupport+Extensions.swift */; };
+		EB777A3E1F7BB161000461B3 /* icon_certification.png in Resources */ = {isa = PBXBuildFile; fileRef = EB777A3A1F7B9C91000461B3 /* icon_certification.png */; };
+		EB777A3F1F7BB17F000461B3 /* icon_certification@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB777A381F7B9C90000461B3 /* icon_certification@2x.png */; };
+		EB777A401F7BB187000461B3 /* icon_certification@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB777A391F7B9C90000461B3 /* icon_certification@3x.png */; };
+		EB777A461F7BC7E5000461B3 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = EB777A451F7BC7C4000461B3 /* main.jsbundle */; };
 		EB811C711F763934003552E9 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB811C701F763934003552E9 /* libMBProgressHUD.a */; };
 		EB811C751F764273003552E9 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = EB811C741F764273003552E9 /* MBProgressHUD+MJ.m */; };
 		EB9FF1E21F47DF2200EEBE11 /* TYTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9FF1E11F47DF2200EEBE11 /* TYTheme.m */; };
@@ -343,6 +347,7 @@
 		EB777A381F7B9C90000461B3 /* icon_certification@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_certification@2x.png"; sourceTree = "<group>"; };
 		EB777A391F7B9C90000461B3 /* icon_certification@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_certification@3x.png"; sourceTree = "<group>"; };
 		EB777A3A1F7B9C91000461B3 /* icon_certification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_certification.png; sourceTree = "<group>"; };
+		EB777A451F7BC7C4000461B3 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		EB811C701F763934003552E9 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "Pods/../build/Debug-iphoneos/MBProgressHUD/libMBProgressHUD.a"; sourceTree = "<group>"; };
 		EB811C731F764273003552E9 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		EB811C741F764273003552E9 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
@@ -456,6 +461,7 @@
 				EB777A381F7B9C90000461B3 /* icon_certification@2x.png */,
 				EB777A391F7B9C90000461B3 /* icon_certification@3x.png */,
 				EB3299C71F1352710034D095 /* fontFamily.txt */,
+				EB777A451F7BC7C4000461B3 /* main.jsbundle */,
 				EB3299D31F1385B60034D095 /* Fonts */,
 				EB032D2A1F0251F300F32465 /* Assets.xcassets */,
 				EB032D2C1F0251F300F32465 /* LaunchScreen.storyboard */,
@@ -1113,6 +1119,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB777A461F7BC7E5000461B3 /* main.jsbundle in Resources */,
+				EB777A401F7BB187000461B3 /* icon_certification@3x.png in Resources */,
+				EB777A3F1F7BB17F000461B3 /* icon_certification@2x.png in Resources */,
+				EB777A3E1F7BB161000461B3 /* icon_certification.png in Resources */,
 				EB266F5C1F3B317500949D40 /* recommend.json in Resources */,
 				EB3299E21F1385B60034D095 /* Ionicons.ttf in Resources */,
 				EB3299E31F1385B60034D095 /* MaterialCommunityIcons.ttf in Resources */,
