@@ -9,6 +9,7 @@
 #import "TYTabBarController.h"
 #import "TYNavigationController.h"
 #import "RCTTest-Swift.h"
+CFAbsoluteTime StartTime;
 @interface TYTabBarController ()
 
 @end
@@ -16,6 +17,10 @@
 @implementation TYTabBarController
 
 - (void)viewDidLoad {
+    /*从main加载到这的时间*/
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"didload in %f sec",CFAbsoluteTimeGetCurrent() - StartTime);
+    });
     [super viewDidLoad];
     NSArray *barItemInfos = @[
                               @{@"className":@"TYHomeViewController",@"icon":@"tabbar_featured_24x24_",@"selectedIcon":@"tabbar_featured_hl_24x24_",@"title":@"首页"},
@@ -28,7 +33,12 @@
         [self addChildViewController:dict[@"className"] icon:dict[@"icon"] selectedIcon:dict[@"selectedIcon"] title:dict[@"title"]];
     }
 }
-
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"didAppear in %f sec",CFAbsoluteTimeGetCurrent() - StartTime);
+    });
+}
 -(void)addChildViewController:(NSString *)className icon:(NSString *)icon selectedIcon:(NSString *)selectedIcon title:(NSString *)title {
     UIViewController *childController = [[NSClassFromString(className) alloc] init];
     childController.title = title;

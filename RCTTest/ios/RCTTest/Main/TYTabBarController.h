@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+extern CFAbsoluteTime StartTime;//目前用于测试启动时间
 @interface TYTabBarController : UITabBarController
 
 @end
