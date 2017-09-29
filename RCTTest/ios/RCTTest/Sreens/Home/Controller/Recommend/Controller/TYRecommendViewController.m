@@ -11,6 +11,7 @@
 #import "Test.h"
 #import "TYHomeUitl.h"
 #import "TYCalculateFrameTool.h"
+#import "TYTestViewController.h"
 static NSString *reuserIndentifier = @"KTYStatusViewCell";
 @interface TYRecommendViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 @property (nonatomic,strong) UICollectionView *collectionView;
@@ -94,6 +95,11 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
 }
 -(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
     return 10;
+}
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    TYTestViewController *testVC = [[TYTestViewController alloc] init];
+    testVC.title = @"实践渐变颜色";
+    [self.navigationController pushViewController:testVC animated:YES];
 }
 @end
 

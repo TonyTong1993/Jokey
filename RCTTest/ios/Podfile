@@ -36,4 +36,5 @@ source 'https://github.com/CocoaPods/Specs.git'
     pod 'PNChart'
     pod 'CocoaSecurity'
     pod 'MBProgressHUD'
+    pod 'JPush'
 end
