@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Macro.h"
+#import "Config.h"
 #import "TYLoginViewController.h"
 #import "TYTheme.h"
 #import  "TBCityIconFont.h"
@@ -122,7 +123,7 @@
      apsForProduction:
      advertisingIdentifier:
      */
-    [JPUSHService setupWithOption:launchOptions appKey:@"203b08c36687d441ea4ffd0a"
+    [JPUSHService setupWithOption:launchOptions appKey:JSPUSHKey
                           channel:@""
                  apsForProduction:false
             advertisingIdentifier:advertisingId];

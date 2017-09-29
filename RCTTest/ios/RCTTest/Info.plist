@@ -30,9 +30,9 @@
 		<dict>
 			<key>jspush.cn</key>
 			<dict>
-				<key>NSIncludesSubdomains</key>
-				<true/>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
 				<true/>
 			</dict>
 			<key>localhost</key>
@@ -50,6 +50,10 @@
 		<string>FontAwesome.ttf</string>
 		<string>Ionicons.ttf</string>
 		<string>Foundation.ttf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>

@@ -308,6 +308,7 @@
 		EB6728861F6129C40089265A /* TYPoprosManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPoprosManager.h; sourceTree = "<group>"; };
 		EB6728871F6129C40089265A /* TYPoprosManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPoprosManager.m; sourceTree = "<group>"; };
 		EB67EF101F7E30F100FCED39 /* RCTTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RCTTest.entitlements; sourceTree = "<group>"; };
+		EB67EF111F7E38DC00FCED39 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		EB6C70D51F1745A700D5B7AD /* UIImage+Extentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extentions.h"; sourceTree = "<group>"; };
 		EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extentions.m"; sourceTree = "<group>"; };
 		EB714BA71F4806190024C929 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -694,6 +695,7 @@
 				EB32F1411F4AE2F300D766AF /* ScrollPageView(swift) */,
 				EB575A911F18621F007C1427 /* ScrollPageView */,
 				EB5A2A321F0392AB00A19F2C /* Macro.h */,
+				EB67EF111F7E38DC00FCED39 /* Config.h */,
 				EB5EDB2A1F46C15200B218AF /* Config.swift */,
 				EB5D39261F345D0A0029085F /* TYCalculateFrameTool.h */,
 				EB5D39271F345D0A0029085F /* TYCalculateFrameTool.m */,
@@ -1091,6 +1093,9 @@
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Maps.iOS = {
 								enabled = 0;
 							};
