@@ -128,10 +128,13 @@
                  apsForProduction:false
             advertisingIdentifier:advertisingId];
     
+    
+    /*更新运用的badge*/
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     return YES;
 }
 -(void)pushLocalNotification {
-        UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
+    UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
     content.title = @"起床啦！";
     content.subtitle = @"8:00洗漱";
     content.body = @"完成之后学习iOS";
