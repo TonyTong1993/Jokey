@@ -17,11 +17,12 @@ source 'https://github.com/CocoaPods/Specs.git'
       'RCTVibration',
       'RCTActionSheet',
       # 这个模块是用于调试功能的
-      # 在这里继续添加你所需要的模块
+      # 在这里继续添加你所需要的模块'CodePush',
     ]
     pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
     # 如果你的RN版本 >= 0.42.0，请加入下面这行
     pod "Yoga", :path => "../node_modules/react-native/ReactCommon/yoga"
+    pod 'CodePush', :path => '../node_modules/react-native-code-push'
     pod "MJExtension"
     pod "MJRefresh"
     pod "AFNetworking"

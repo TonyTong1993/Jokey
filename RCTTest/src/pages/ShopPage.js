@@ -12,7 +12,7 @@ import ShopFooter from '../components/ShopFooter'
 import RowBanner from '../components/RowBanner'
 import ThirdBanner from '../components/ThirdBanner'
 import {screen_width,screen_height} from '../Config'
-
+import codePush from 'react-native-code-push'
 const data = [
               {key:'http://img63.ddimg.cn/upload_img/00721/zjl/640x342_wzh_20170830.jpg'},
               {key:['图书','电子书','网络文学','当当优品','当当优品',

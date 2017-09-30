@@ -157,6 +157,7 @@
 
 /* Begin PBXFileReference section */
 		4685E6D3869C8CFF7EF29817 /* libPods-RCTTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RCTTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2D43798E3F0272AA1285130 /* Pods-RCTTest.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.staging.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.staging.xcconfig"; sourceTree = "<group>"; };
 		D502818BA0F8EC5DDC48C475 /* Pods-RCTTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.debug.xcconfig"; sourceTree = "<group>"; };
 		DC2E37739B2C59D2F6B877A9 /* Pods-RCTTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.release.xcconfig"; sourceTree = "<group>"; };
 		EB01F6191F36B635008CF290 /* UIColor+RGBA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RGBA.h"; sourceTree = "<group>"; };
@@ -398,6 +399,7 @@
 			children = (
 				D502818BA0F8EC5DDC48C475 /* Pods-RCTTest.debug.xcconfig */,
 				DC2E37739B2C59D2F6B877A9 /* Pods-RCTTest.release.xcconfig */,
+				B2D43798E3F0272AA1285130 /* Pods-RCTTest.staging.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1579,7 +1581,7 @@
 		};
 		EB89ABF81F7F510700D6E877 /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC2E37739B2C59D2F6B877A9 /* Pods-RCTTest.release.xcconfig */;
+			baseConfigurationReference = B2D43798E3F0272AA1285130 /* Pods-RCTTest.staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
