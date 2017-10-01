@@ -20,19 +20,13 @@ PODS:
   - AMapLocation (2.4.0):
     - AMapFoundation (~> 1.4)
   - CocoaSecurity (1.2.4)
-  - CodePush (5.1.1):
-    - CodePush/Base64 (= 5.1.1)
-    - CodePush/Core (= 5.1.1)
-    - CodePush/JWT (= 5.1.1)
-    - CodePush/SSZipArchive (= 5.1.1)
+  - CodePush (2.1.1):
+    - CodePush/Core (= 2.1.1)
+    - CodePush/SSZipArchive (= 2.1.1)
     - React
-  - CodePush/Base64 (5.1.1):
+  - CodePush/Core (2.1.1):
     - React
-  - CodePush/Core (5.1.1):
-    - React
-  - CodePush/JWT (5.1.1):
-    - React
-  - CodePush/SSZipArchive (5.1.1):
+  - CodePush/SSZipArchive (2.1.1):
     - React
   - FMDB (2.7.2):
     - FMDB/standard (= 2.7.2)
@@ -137,7 +131,7 @@ SPEC CHECKSUMS:
   AMapFoundation: 6c0471c9a6a0ad17dad46e3d800ad56ca170f82a
   AMapLocation: 47b62b5381a66e4d0c2931b70ffde72682427896
   CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
-  CodePush: 27e8b575f636af2b505243ab66384c7aeb70ed23
+  CodePush: f036690825602d227f4d0e119789fafbf9ee251c
   FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
   IconFont: 97ff724bc6d26aac018678a2da4f8542600e5a67
   JCore: 9bd9c770c877c583d98b90a68792b8361974c231
@@ -155,6 +149,6 @@ SPEC CHECKSUMS:
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
   Yoga: 2a70bc5ab41486a272b9fd5b76c482ba9268c5dd
 
-PODFILE CHECKSUM: 3395f96812f12510b0828ee9e2ff876b9ee21e37
+PODFILE CHECKSUM: cdd69cb5a79430c34701ab1e8170716bdefdd1d2
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.2.1

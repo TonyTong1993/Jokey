@@ -46,6 +46,7 @@
 		EB32F1431F4AE31C00D766AF /* TYSegmentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB32F1421F4AE31C00D766AF /* TYSegmentItem.swift */; };
 		EB32F1451F4AE32D00D766AF /* TYSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB32F1441F4AE32D00D766AF /* TYSegmentView.swift */; };
 		EB32F1481F4B030F00D766AF /* TYCategaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB32F1471F4B030F00D766AF /* TYCategaryViewController.swift */; };
+		EB3C474E1F80B0EE00902AD3 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = EB3C474D1F80B0EE00902AD3 /* main.jsbundle */; };
 		EB43475F1F3B51D100EC7AE9 /* TYStatusViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB43475D1F3B51D100EC7AE9 /* TYStatusViewCell.m */; };
 		EB4347601F3B51D100EC7AE9 /* TYStatusViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB43475E1F3B51D100EC7AE9 /* TYStatusViewCell.xib */; };
 		EB54324C1F4D634E00683AA7 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EB54324B1F4D634E00683AA7 /* UIBarButtonItem+Extension.m */; };
@@ -103,7 +104,6 @@
 		EB6712331F4C0FDE00642B72 /* String(Add).swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6712321F4C0FDE00642B72 /* String(Add).swift */; };
 		EB6712351F4C4CE500642B72 /* UIColor+RGBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6712341F4C4CE500642B72 /* UIColor+RGBA.swift */; };
 		EB6728881F6129C40089265A /* TYPoprosManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6728871F6129C40089265A /* TYPoprosManager.m */; };
-		EB67EF161F7E538D00FCED39 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB67EF151F7E538D00FCED39 /* IJKMediaFramework.framework */; };
 		EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */; };
 		EB714BCB1F4806190024C929 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EB714BA71F4806190024C929 /* LICENSE */; };
 		EB714BCC1F4806190024C929 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EB714BA81F4806190024C929 /* README.md */; };
@@ -143,11 +143,11 @@
 		EB777A3E1F7BB161000461B3 /* icon_certification.png in Resources */ = {isa = PBXBuildFile; fileRef = EB777A3A1F7B9C91000461B3 /* icon_certification.png */; };
 		EB777A3F1F7BB17F000461B3 /* icon_certification@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB777A381F7B9C90000461B3 /* icon_certification@2x.png */; };
 		EB777A401F7BB187000461B3 /* icon_certification@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB777A391F7B9C90000461B3 /* icon_certification@3x.png */; };
-		EB777A461F7BC7E5000461B3 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = EB777A451F7BC7C4000461B3 /* main.jsbundle */; };
 		EB811C711F763934003552E9 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB811C701F763934003552E9 /* libMBProgressHUD.a */; };
 		EB811C751F764273003552E9 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = EB811C741F764273003552E9 /* MBProgressHUD+MJ.m */; };
 		EB9FF1E21F47DF2200EEBE11 /* TYTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9FF1E11F47DF2200EEBE11 /* TYTheme.m */; };
 		EBB77D691F677BD700A1C59C /* TYProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB77D681F677BD700A1C59C /* TYProfileViewModel.m */; };
+		EBBA88A31F80809D0069A1A5 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBA88A21F80809D0069A1A5 /* IJKMediaFramework.framework */; };
 		EBE0F7A41F76877D006F0AD8 /* TYSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0F7A31F76877D006F0AD8 /* TYSearchViewController.swift */; };
 		EBE0F7A91F76ABCA006F0AD8 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0F7A71F76ABCA006F0AD8 /* SearchView.swift */; };
 		EBE0F7AA1F76ABCA006F0AD8 /* TYTopicBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0F7A81F76ABCA006F0AD8 /* TYTopicBanner.swift */; };
@@ -219,6 +219,7 @@
 		EB32F1421F4AE31C00D766AF /* TYSegmentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYSegmentItem.swift; sourceTree = "<group>"; };
 		EB32F1441F4AE32D00D766AF /* TYSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYSegmentView.swift; sourceTree = "<group>"; };
 		EB32F1471F4B030F00D766AF /* TYCategaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYCategaryViewController.swift; sourceTree = "<group>"; };
+		EB3C474D1F80B0EE00902AD3 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		EB43475C1F3B51D100EC7AE9 /* TYStatusViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYStatusViewCell.h; path = RCTTest/Common/TYStatusViewCell.h; sourceTree = SOURCE_ROOT; };
 		EB43475D1F3B51D100EC7AE9 /* TYStatusViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYStatusViewCell.m; path = RCTTest/Common/TYStatusViewCell.m; sourceTree = SOURCE_ROOT; };
 		EB43475E1F3B51D100EC7AE9 /* TYStatusViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TYStatusViewCell.xib; path = RCTTest/Common/TYStatusViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -311,7 +312,6 @@
 		EB6728871F6129C40089265A /* TYPoprosManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPoprosManager.m; sourceTree = "<group>"; };
 		EB67EF101F7E30F100FCED39 /* RCTTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RCTTest.entitlements; sourceTree = "<group>"; };
 		EB67EF111F7E38DC00FCED39 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
-		EB67EF151F7E538D00FCED39 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = IJK/IJKMediaFramework.framework; sourceTree = SOURCE_ROOT; };
 		EB6C70D51F1745A700D5B7AD /* UIImage+Extentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extentions.h"; sourceTree = "<group>"; };
 		EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extentions.m"; sourceTree = "<group>"; };
 		EB714BA71F4806190024C929 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -352,7 +352,6 @@
 		EB777A381F7B9C90000461B3 /* icon_certification@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_certification@2x.png"; sourceTree = "<group>"; };
 		EB777A391F7B9C90000461B3 /* icon_certification@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_certification@3x.png"; sourceTree = "<group>"; };
 		EB777A3A1F7B9C91000461B3 /* icon_certification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_certification.png; sourceTree = "<group>"; };
-		EB777A451F7BC7C4000461B3 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		EB811C701F763934003552E9 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "Pods/../build/Debug-iphoneos/MBProgressHUD/libMBProgressHUD.a"; sourceTree = "<group>"; };
 		EB811C731F764273003552E9 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		EB811C741F764273003552E9 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
@@ -360,6 +359,7 @@
 		EB9FF1E11F47DF2200EEBE11 /* TYTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTheme.m; sourceTree = "<group>"; };
 		EBB77D671F677BD700A1C59C /* TYProfileViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYProfileViewModel.h; sourceTree = "<group>"; };
 		EBB77D681F677BD700A1C59C /* TYProfileViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYProfileViewModel.m; sourceTree = "<group>"; };
+		EBBA88A21F80809D0069A1A5 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = IJK/IJKMediaFramework.framework; sourceTree = "<group>"; };
 		EBE0F7A31F76877D006F0AD8 /* TYSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYSearchViewController.swift; sourceTree = "<group>"; };
 		EBE0F7A71F76ABCA006F0AD8 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		EBE0F7A81F76ABCA006F0AD8 /* TYTopicBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYTopicBanner.swift; sourceTree = "<group>"; };
@@ -376,7 +376,7 @@
 				EB6501201F418F1800C0B89A /* UIKit.framework in Frameworks */,
 				EB65011E1F418F1200C0B89A /* QuartzCore.framework in Frameworks */,
 				EB65011C1F418F0A00C0B89A /* OpenGLES.framework in Frameworks */,
-				EB67EF161F7E538D00FCED39 /* IJKMediaFramework.framework in Frameworks */,
+				EBBA88A31F80809D0069A1A5 /* IJKMediaFramework.framework in Frameworks */,
 				EB65011A1F418F0100C0B89A /* MobileCoreServices.framework in Frameworks */,
 				EB6501181F418EF700C0B89A /* MediaPlayer.framework in Frameworks */,
 				EB6501161F418EED00C0B89A /* libz.tbd in Frameworks */,
@@ -469,10 +469,10 @@
 				EB777A381F7B9C90000461B3 /* icon_certification@2x.png */,
 				EB777A391F7B9C90000461B3 /* icon_certification@3x.png */,
 				EB3299C71F1352710034D095 /* fontFamily.txt */,
-				EB777A451F7BC7C4000461B3 /* main.jsbundle */,
 				EB3299D31F1385B60034D095 /* Fonts */,
 				EB032D2A1F0251F300F32465 /* Assets.xcassets */,
 				EB032D2C1F0251F300F32465 /* LaunchScreen.storyboard */,
+				EB3C474D1F80B0EE00902AD3 /* main.jsbundle */,
 				EB032D2F1F0251F300F32465 /* Info.plist */,
 				EB5A2A361F03A45900A19F2C /* PrefixHeader.pch */,
 				EB032D1E1F0251F300F32465 /* Supporting Files */,
@@ -970,7 +970,7 @@
 		EB6500F91F418DE500C0B89A /* ThirdFramework */ = {
 			isa = PBXGroup;
 			children = (
-				EB67EF151F7E538D00FCED39 /* IJKMediaFramework.framework */,
+				EBBA88A21F80809D0069A1A5 /* IJKMediaFramework.framework */,
 				EB811C721F764273003552E9 /* MBProgressHUD-MJ */,
 				EB714BA61F4806190024C929 /* SnapKit */,
 			);
@@ -1135,10 +1135,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB777A461F7BC7E5000461B3 /* main.jsbundle in Resources */,
 				EB777A401F7BB187000461B3 /* icon_certification@3x.png in Resources */,
 				EB777A3F1F7BB17F000461B3 /* icon_certification@2x.png in Resources */,
 				EB777A3E1F7BB161000461B3 /* icon_certification.png in Resources */,
+				EB3C474E1F80B0EE00902AD3 /* main.jsbundle in Resources */,
 				EB266F5C1F3B317500949D40 /* recommend.json in Resources */,
 				EB3299E21F1385B60034D095 /* Ionicons.ttf in Resources */,
 				EB3299E31F1385B60034D095 /* MaterialCommunityIcons.ttf in Resources */,
@@ -1244,7 +1244,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1486,6 +1486,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IJK",
+					"$(PROJECT_DIR)/RCTTest/ThirdFramework/IJK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RCTTest/PrefixHeader.pch;
@@ -1518,6 +1519,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IJK",
+					"$(PROJECT_DIR)/RCTTest/ThirdFramework/IJK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RCTTest/PrefixHeader.pch;
@@ -1592,6 +1594,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IJK",
+					"$(PROJECT_DIR)/RCTTest/ThirdFramework/IJK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RCTTest/PrefixHeader.pch;

@@ -12,7 +12,7 @@
 #import "TYShopViewController.h"
 #import "TYProfileViewModel.h"
 #import "TYRunViewController.h"
-
+#import <CodePush/CodePush.h>
 @interface TYProfileViewController ()
 
 @end
@@ -68,8 +68,13 @@
     UIViewController *VC;
     if ([model.className isEqualToString:@"TYShopViewController"]) {
 //         NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
-        NSURL *jsCodeLocation = [NSURL URLWithString:@"http://192.168.10.48:8081/index.ios.bundle?platform=ios"];
+        NSURL *jsCodeLocation;
+#ifdef DEBUG
+       jsCodeLocation = [NSURL URLWithString:@"http://192.168.10.48:8081/index.ios.bundle?platform=ios"];
         
+#else
+        jsCodeLocation = [CodePush bundleURL];
+#endif
         RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:@"test" initialProperties:@{} launchOptions:nil];
         TYShopViewController *vc = [[TYShopViewController alloc] init];
         vc.view = rootView;
