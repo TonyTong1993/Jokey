@@ -12,7 +12,7 @@
     "md5": "^2.2.1",
     "react": "^16.0.0-alpha.6",
     "react-native": "^0.43.4",
-    "react-native-code-push": "^5.1.1-beta",
+    "react-native-code-push": "^2.1.1-beta",
     "react-native-tab-navigator": "^0.3.4",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",

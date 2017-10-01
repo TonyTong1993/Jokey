@@ -10,6 +10,7 @@ import {
   Button,
   TouchableOpacity,
 } from 'react-native';
+
 import ReCycleView from '../components/ShopHeader'
 import SearchHeader from '../components/SearchHeader'
 import ShopFooter from '../components/ShopFooter'
@@ -45,7 +46,7 @@ class HomePage extends Component {
   render() {
     return (
        <View style={styles.container}>
-         <FlatList
+          <FlatList
            automaticallyAdjustContentInsets={false}
            contentContainerStyle={{paddingBottom:49,paddingTop:0}}
            data={data}
@@ -58,11 +59,12 @@ class HomePage extends Component {
            }}
            onEndReachedThreshold={0.5}
          />
-
       </View>
     );
   }
-
+componentDidMount() {
+  
+}
   /*private method*/
   _renderItem =({item,index}) =>{
     console.log(item.key)
@@ -116,6 +118,8 @@ _headrCategoryClicked = ()=>{
 const styles = StyleSheet.create({
  container:{
     flex:1,
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor:'#fff'
   },
   textStyle:{
