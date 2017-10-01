@@ -46,6 +46,7 @@
 		EB32F1431F4AE31C00D766AF /* TYSegmentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB32F1421F4AE31C00D766AF /* TYSegmentItem.swift */; };
 		EB32F1451F4AE32D00D766AF /* TYSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB32F1441F4AE32D00D766AF /* TYSegmentView.swift */; };
 		EB32F1481F4B030F00D766AF /* TYCategaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB32F1471F4B030F00D766AF /* TYCategaryViewController.swift */; };
+		EB3C474E1F80B0EE00902AD3 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = EB3C474D1F80B0EE00902AD3 /* main.jsbundle */; };
 		EB43475F1F3B51D100EC7AE9 /* TYStatusViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB43475D1F3B51D100EC7AE9 /* TYStatusViewCell.m */; };
 		EB4347601F3B51D100EC7AE9 /* TYStatusViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB43475E1F3B51D100EC7AE9 /* TYStatusViewCell.xib */; };
 		EB54324C1F4D634E00683AA7 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EB54324B1F4D634E00683AA7 /* UIBarButtonItem+Extension.m */; };
@@ -142,7 +143,6 @@
 		EB777A3E1F7BB161000461B3 /* icon_certification.png in Resources */ = {isa = PBXBuildFile; fileRef = EB777A3A1F7B9C91000461B3 /* icon_certification.png */; };
 		EB777A3F1F7BB17F000461B3 /* icon_certification@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB777A381F7B9C90000461B3 /* icon_certification@2x.png */; };
 		EB777A401F7BB187000461B3 /* icon_certification@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB777A391F7B9C90000461B3 /* icon_certification@3x.png */; };
-		EB777A461F7BC7E5000461B3 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = EB777A451F7BC7C4000461B3 /* main.jsbundle */; };
 		EB811C711F763934003552E9 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB811C701F763934003552E9 /* libMBProgressHUD.a */; };
 		EB811C751F764273003552E9 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = EB811C741F764273003552E9 /* MBProgressHUD+MJ.m */; };
 		EB9FF1E21F47DF2200EEBE11 /* TYTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9FF1E11F47DF2200EEBE11 /* TYTheme.m */; };
@@ -219,6 +219,7 @@
 		EB32F1421F4AE31C00D766AF /* TYSegmentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYSegmentItem.swift; sourceTree = "<group>"; };
 		EB32F1441F4AE32D00D766AF /* TYSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYSegmentView.swift; sourceTree = "<group>"; };
 		EB32F1471F4B030F00D766AF /* TYCategaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYCategaryViewController.swift; sourceTree = "<group>"; };
+		EB3C474D1F80B0EE00902AD3 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		EB43475C1F3B51D100EC7AE9 /* TYStatusViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYStatusViewCell.h; path = RCTTest/Common/TYStatusViewCell.h; sourceTree = SOURCE_ROOT; };
 		EB43475D1F3B51D100EC7AE9 /* TYStatusViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYStatusViewCell.m; path = RCTTest/Common/TYStatusViewCell.m; sourceTree = SOURCE_ROOT; };
 		EB43475E1F3B51D100EC7AE9 /* TYStatusViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TYStatusViewCell.xib; path = RCTTest/Common/TYStatusViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -351,7 +352,6 @@
 		EB777A381F7B9C90000461B3 /* icon_certification@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_certification@2x.png"; sourceTree = "<group>"; };
 		EB777A391F7B9C90000461B3 /* icon_certification@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_certification@3x.png"; sourceTree = "<group>"; };
 		EB777A3A1F7B9C91000461B3 /* icon_certification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_certification.png; sourceTree = "<group>"; };
-		EB777A451F7BC7C4000461B3 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		EB811C701F763934003552E9 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "Pods/../build/Debug-iphoneos/MBProgressHUD/libMBProgressHUD.a"; sourceTree = "<group>"; };
 		EB811C731F764273003552E9 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		EB811C741F764273003552E9 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
@@ -469,10 +469,10 @@
 				EB777A381F7B9C90000461B3 /* icon_certification@2x.png */,
 				EB777A391F7B9C90000461B3 /* icon_certification@3x.png */,
 				EB3299C71F1352710034D095 /* fontFamily.txt */,
-				EB777A451F7BC7C4000461B3 /* main.jsbundle */,
 				EB3299D31F1385B60034D095 /* Fonts */,
 				EB032D2A1F0251F300F32465 /* Assets.xcassets */,
 				EB032D2C1F0251F300F32465 /* LaunchScreen.storyboard */,
+				EB3C474D1F80B0EE00902AD3 /* main.jsbundle */,
 				EB032D2F1F0251F300F32465 /* Info.plist */,
 				EB5A2A361F03A45900A19F2C /* PrefixHeader.pch */,
 				EB032D1E1F0251F300F32465 /* Supporting Files */,
@@ -1135,10 +1135,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB777A461F7BC7E5000461B3 /* main.jsbundle in Resources */,
 				EB777A401F7BB187000461B3 /* icon_certification@3x.png in Resources */,
 				EB777A3F1F7BB17F000461B3 /* icon_certification@2x.png in Resources */,
 				EB777A3E1F7BB161000461B3 /* icon_certification.png in Resources */,
+				EB3C474E1F80B0EE00902AD3 /* main.jsbundle in Resources */,
 				EB266F5C1F3B317500949D40 /* recommend.json in Resources */,
 				EB3299E21F1385B60034D095 /* Ionicons.ttf in Resources */,
 				EB3299E31F1385B60034D095 /* MaterialCommunityIcons.ttf in Resources */,
