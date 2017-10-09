@@ -42,6 +42,14 @@
     self.navigationItem.rightBarButtonItem = rightBtn;
     
 }
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+}
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.hidden = NO;
+}
 -(void)setUpTableView {
     self.automaticallyAdjustsScrollViewInsets = false;
     

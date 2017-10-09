@@ -67,7 +67,6 @@
      TYProfileViewModel *model = self.dataSource[indexPath.section][indexPath.row];
     UIViewController *VC;
     if ([model.className isEqualToString:@"TYShopViewController"]) {
-//         NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
         NSURL *jsCodeLocation;
 #ifdef DEBUG
        jsCodeLocation = [NSURL URLWithString:@"http://192.168.10.48:8081/index.ios.bundle?platform=ios"];
