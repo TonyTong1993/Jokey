@@ -146,15 +146,33 @@
 		EB811C711F763934003552E9 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB811C701F763934003552E9 /* libMBProgressHUD.a */; };
 		EB811C751F764273003552E9 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = EB811C741F764273003552E9 /* MBProgressHUD+MJ.m */; };
 		EB9126C11F8B200D00F4263D /* TYTestSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9126C01F8B200C00F4263D /* TYTestSecondViewController.m */; };
+		EB9126D31F8B2D2C00F4263D /* RCTTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9126D21F8B2D2C00F4263D /* RCTTestUITests.m */; };
+		EB9126E21F8B2D4400F4263D /* RCTTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9126E11F8B2D4400F4263D /* RCTTestTests.m */; };
 		EB9FF1E21F47DF2200EEBE11 /* TYTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9FF1E11F47DF2200EEBE11 /* TYTheme.m */; };
 		EBB77D691F677BD700A1C59C /* TYProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB77D681F677BD700A1C59C /* TYProfileViewModel.m */; };
-		EBBA88A31F80809D0069A1A5 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBA88A21F80809D0069A1A5 /* IJKMediaFramework.framework */; };
 		EBE0F7A41F76877D006F0AD8 /* TYSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0F7A31F76877D006F0AD8 /* TYSearchViewController.swift */; };
 		EBE0F7A91F76ABCA006F0AD8 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0F7A71F76ABCA006F0AD8 /* SearchView.swift */; };
 		EBE0F7AA1F76ABCA006F0AD8 /* TYTopicBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0F7A81F76ABCA006F0AD8 /* TYTopicBanner.swift */; };
 		EBE0F7AC1F773C83006F0AD8 /* TYSegmentScrollVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0F7AB1F773C83006F0AD8 /* TYSegmentScrollVIew.swift */; };
 		EDEBCEE583499B68DDF9A070 /* libPods-RCTTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4685E6D3869C8CFF7EF29817 /* libPods-RCTTest.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EB9126D51F8B2D2C00F4263D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB032D131F0251F300F32465 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB032D1A1F0251F300F32465;
+			remoteInfo = RCTTest;
+		};
+		EB9126E41F8B2D4400F4263D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB032D131F0251F300F32465 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB032D1A1F0251F300F32465;
+			remoteInfo = RCTTest;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4685E6D3869C8CFF7EF29817 /* libPods-RCTTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RCTTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -304,7 +322,6 @@
 		EB65011D1F418F1200C0B89A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EB65011F1F418F1800C0B89A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EB6501211F418F2300C0B89A /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
-		EB6501281F419FAB00C0B89A /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = ../../../IJKMediaFramework.framework; sourceTree = "<group>"; };
 		EB6592501F75022E0059A3B9 /* TYLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLoginViewController.h; sourceTree = "<group>"; };
 		EB6592511F75022E0059A3B9 /* TYLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYLoginViewController.m; sourceTree = "<group>"; };
 		EB6712321F4C0FDE00642B72 /* String(Add).swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String(Add).swift"; sourceTree = "<group>"; };
@@ -358,11 +375,17 @@
 		EB811C741F764273003552E9 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		EB9126BF1F8B200C00F4263D /* TYTestSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYTestSecondViewController.h; sourceTree = "<group>"; };
 		EB9126C01F8B200C00F4263D /* TYTestSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYTestSecondViewController.m; sourceTree = "<group>"; };
+		EB9126C71F8B2A0500F4263D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EB9126D01F8B2D2B00F4263D /* RCTTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCTTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB9126D21F8B2D2C00F4263D /* RCTTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTTestUITests.m; sourceTree = "<group>"; };
+		EB9126D41F8B2D2C00F4263D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB9126DF1F8B2D4400F4263D /* RCTTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCTTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB9126E11F8B2D4400F4263D /* RCTTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTTestTests.m; sourceTree = "<group>"; };
+		EB9126E31F8B2D4400F4263D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB9FF1E01F47DF2200EEBE11 /* TYTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTheme.h; sourceTree = "<group>"; };
 		EB9FF1E11F47DF2200EEBE11 /* TYTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTheme.m; sourceTree = "<group>"; };
 		EBB77D671F677BD700A1C59C /* TYProfileViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYProfileViewModel.h; sourceTree = "<group>"; };
 		EBB77D681F677BD700A1C59C /* TYProfileViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYProfileViewModel.m; sourceTree = "<group>"; };
-		EBBA88A21F80809D0069A1A5 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = IJK/IJKMediaFramework.framework; sourceTree = "<group>"; };
 		EBE0F7A31F76877D006F0AD8 /* TYSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYSearchViewController.swift; sourceTree = "<group>"; };
 		EBE0F7A71F76ABCA006F0AD8 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		EBE0F7A81F76ABCA006F0AD8 /* TYTopicBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYTopicBanner.swift; sourceTree = "<group>"; };
@@ -379,7 +402,6 @@
 				EB6501201F418F1800C0B89A /* UIKit.framework in Frameworks */,
 				EB65011E1F418F1200C0B89A /* QuartzCore.framework in Frameworks */,
 				EB65011C1F418F0A00C0B89A /* OpenGLES.framework in Frameworks */,
-				EBBA88A31F80809D0069A1A5 /* IJKMediaFramework.framework in Frameworks */,
 				EB65011A1F418F0100C0B89A /* MobileCoreServices.framework in Frameworks */,
 				EB6501181F418EF700C0B89A /* MediaPlayer.framework in Frameworks */,
 				EB6501161F418EED00C0B89A /* libz.tbd in Frameworks */,
@@ -391,6 +413,20 @@
 				EB65010A1F418EB400C0B89A /* AudioToolbox.framework in Frameworks */,
 				EB2425F71F34C5D800E0ACE6 /* libReact.a in Frameworks */,
 				EDEBCEE583499B68DDF9A070 /* libPods-RCTTest.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB9126CD1F8B2D2B00F4263D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB9126DC1F8B2D4400F4263D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,8 +446,8 @@
 		C99CA68C2F5497E7F1256D9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB9126C71F8B2A0500F4263D /* XCTest.framework */,
 				EB811C701F763934003552E9 /* libMBProgressHUD.a */,
-				EB6501281F419FAB00C0B89A /* IJKMediaFramework.framework */,
 				EB6501211F418F2300C0B89A /* VideoToolbox.framework */,
 				EB65011F1F418F1800C0B89A /* UIKit.framework */,
 				EB65011D1F418F1200C0B89A /* QuartzCore.framework */,
@@ -436,6 +472,8 @@
 			children = (
 				EB6500F91F418DE500C0B89A /* ThirdFramework */,
 				EB032D1D1F0251F300F32465 /* RCTTest */,
+				EB9126D11F8B2D2C00F4263D /* RCTTestUITests */,
+				EB9126E01F8B2D4400F4263D /* RCTTestTests */,
 				EB032D1C1F0251F300F32465 /* Products */,
 				7953CC99AFBE83F484FADF8B /* Pods */,
 				C99CA68C2F5497E7F1256D9E /* Frameworks */,
@@ -446,6 +484,8 @@
 			isa = PBXGroup;
 			children = (
 				EB032D1B1F0251F300F32465 /* RCTTest.app */,
+				EB9126D01F8B2D2B00F4263D /* RCTTestUITests.xctest */,
+				EB9126DF1F8B2D4400F4263D /* RCTTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -478,6 +518,7 @@
 				EB3C474D1F80B0EE00902AD3 /* main.jsbundle */,
 				EB032D2F1F0251F300F32465 /* Info.plist */,
 				EB5A2A361F03A45900A19F2C /* PrefixHeader.pch */,
+				EB9126C91F8B2A6500F4263D /* RCTUITest */,
 				EB032D1E1F0251F300F32465 /* Supporting Files */,
 			);
 			path = RCTTest;
@@ -975,7 +1016,6 @@
 		EB6500F91F418DE500C0B89A /* ThirdFramework */ = {
 			isa = PBXGroup;
 			children = (
-				EBBA88A21F80809D0069A1A5 /* IJKMediaFramework.framework */,
 				EB811C721F764273003552E9 /* MBProgressHUD-MJ */,
 				EB714BA61F4806190024C929 /* SnapKit */,
 			);
@@ -1065,6 +1105,32 @@
 			path = "MBProgressHUD-MJ";
 			sourceTree = "<group>";
 		};
+		EB9126C91F8B2A6500F4263D /* RCTUITest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = RCTUITest;
+			path = RCTTest/RCTUITest;
+			sourceTree = SOURCE_ROOT;
+		};
+		EB9126D11F8B2D2C00F4263D /* RCTTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EB9126D21F8B2D2C00F4263D /* RCTTestUITests.m */,
+				EB9126D41F8B2D2C00F4263D /* Info.plist */,
+			);
+			path = RCTTestUITests;
+			sourceTree = "<group>";
+		};
+		EB9126E01F8B2D4400F4263D /* RCTTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB9126E11F8B2D4400F4263D /* RCTTestTests.m */,
+				EB9126E31F8B2D4400F4263D /* Info.plist */,
+			);
+			path = RCTTestTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1087,6 +1153,42 @@
 			productName = RCTTest;
 			productReference = EB032D1B1F0251F300F32465 /* RCTTest.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EB9126CF1F8B2D2B00F4263D /* RCTTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB9126D71F8B2D2C00F4263D /* Build configuration list for PBXNativeTarget "RCTTestUITests" */;
+			buildPhases = (
+				EB9126CC1F8B2D2B00F4263D /* Sources */,
+				EB9126CD1F8B2D2B00F4263D /* Frameworks */,
+				EB9126CE1F8B2D2B00F4263D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB9126D61F8B2D2C00F4263D /* PBXTargetDependency */,
+			);
+			name = RCTTestUITests;
+			productName = RCTTestUITests;
+			productReference = EB9126D01F8B2D2B00F4263D /* RCTTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		EB9126DE1F8B2D4400F4263D /* RCTTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB9126E61F8B2D4400F4263D /* Build configuration list for PBXNativeTarget "RCTTestTests" */;
+			buildPhases = (
+				EB9126DB1F8B2D4400F4263D /* Sources */,
+				EB9126DC1F8B2D4400F4263D /* Frameworks */,
+				EB9126DD1F8B2D4400F4263D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB9126E51F8B2D4400F4263D /* PBXTargetDependency */,
+			);
+			name = RCTTestTests;
+			productName = RCTTestTests;
+			productReference = EB9126DF1F8B2D4400F4263D /* RCTTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -1115,6 +1217,18 @@
 							};
 						};
 					};
+					EB9126CF1F8B2D2B00F4263D = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = NVZ53TTCA3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EB032D1A1F0251F300F32465;
+					};
+					EB9126DE1F8B2D4400F4263D = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = NVZ53TTCA3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EB032D1A1F0251F300F32465;
+					};
 				};
 			};
 			buildConfigurationList = EB032D161F0251F300F32465 /* Build configuration list for PBXProject "RCTTest" */;
@@ -1131,6 +1245,8 @@
 			projectRoot = "";
 			targets = (
 				EB032D1A1F0251F300F32465 /* RCTTest */,
+				EB9126CF1F8B2D2B00F4263D /* RCTTestUITests */,
+				EB9126DE1F8B2D4400F4263D /* RCTTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1167,6 +1283,20 @@
 				EB032D291F0251F300F32465 /* Main.storyboard in Resources */,
 				EB4347601F3B51D100EC7AE9 /* TYStatusViewCell.xib in Resources */,
 				EB5A9A041F3C64C30031C497 /* TestView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB9126CE1F8B2D2B00F4263D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB9126DD1F8B2D4400F4263D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1365,7 +1495,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EB9126CC1F8B2D2B00F4263D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB9126D31F8B2D2C00F4263D /* RCTTestUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB9126DB1F8B2D4400F4263D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB9126E21F8B2D4400F4263D /* RCTTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EB9126D61F8B2D2C00F4263D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB032D1A1F0251F300F32465 /* RCTTest */;
+			targetProxy = EB9126D51F8B2D2C00F4263D /* PBXContainerItemProxy */;
+		};
+		EB9126E51F8B2D4400F4263D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB032D1A1F0251F300F32465 /* RCTTest */;
+			targetProxy = EB9126E41F8B2D4400F4263D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EB032D271F0251F300F32465 /* Main.storyboard */ = {
@@ -1619,6 +1778,165 @@
 			};
 			name = Staging;
 		};
+		EB9126D81F8B2D2C00F4263D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NVZ53TTCA3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = RCTTestUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.RCTTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RCTTest;
+			};
+			name = Debug;
+		};
+		EB9126D91F8B2D2C00F4263D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NVZ53TTCA3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = RCTTestUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.RCTTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RCTTest;
+			};
+			name = Release;
+		};
+		EB9126DA1F8B2D2C00F4263D /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NVZ53TTCA3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = RCTTestUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.RCTTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RCTTest;
+			};
+			name = Staging;
+		};
+		EB9126E71F8B2D4400F4263D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NVZ53TTCA3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = RCTTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.RCTTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RCTTest.app/RCTTest";
+			};
+			name = Debug;
+		};
+		EB9126E81F8B2D4400F4263D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NVZ53TTCA3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = RCTTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.RCTTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RCTTest.app/RCTTest";
+			};
+			name = Release;
+		};
+		EB9126E91F8B2D4400F4263D /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NVZ53TTCA3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = RCTTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.RCTTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RCTTest.app/RCTTest";
+			};
+			name = Staging;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1638,6 +1956,26 @@
 				EB032D331F0251F300F32465 /* Debug */,
 				EB032D341F0251F300F32465 /* Release */,
 				EB89ABF81F7F510700D6E877 /* Staging */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB9126D71F8B2D2C00F4263D /* Build configuration list for PBXNativeTarget "RCTTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB9126D81F8B2D2C00F4263D /* Debug */,
+				EB9126D91F8B2D2C00F4263D /* Release */,
+				EB9126DA1F8B2D2C00F4263D /* Staging */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB9126E61F8B2D4400F4263D /* Build configuration list for PBXNativeTarget "RCTTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB9126E71F8B2D4400F4263D /* Debug */,
+				EB9126E81F8B2D4400F4263D /* Release */,
+				EB9126E91F8B2D4400F4263D /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
