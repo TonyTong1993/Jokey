@@ -10,6 +10,7 @@
 #import "TYNetWorkingTool.h"
 #import "TYSegmentView.h"
 #import "TYRecommendViewController.h"
+#import "TYTestViewController.h"
 @interface TYHomeViewController ()<TYSegmentControlDelegate,UIScrollViewDelegate>
 @property (nonatomic,strong) UIScrollView *scrollView;
 @property (nonatomic,strong) TYSegmentView *segmentView;
@@ -34,21 +35,19 @@
     [self setUpTableView];
     [self loadNewData];
     
+   
     
     TBCityIconInfo *iconInfo = TBCityIconInfoMake(@"\U0000e6df", 24, [UIColor randomColor]);
     UIImage *image = [UIImage iconWithInfo:iconInfo];
     
     UIBarButtonItem *rightBtn = [UIBarButtonItem barBtnItemWithNormalIcon:image highlightIcon:image target:self action:@selector(handleClick)];
     self.navigationItem.rightBarButtonItem = rightBtn;
-    
+ UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"Mune" style:UIBarButtonItemStylePlain target:self action:@selector(handleClick)];
+     self.navigationItem.leftBarButtonItem = leftItem;
 }
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    self.navigationController.navigationBar.hidden = YES;
-}
--(void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    self.navigationController.navigationBar.hidden = NO;
+-(void)handleClick {
+    TYTestViewController *testVC = [[TYTestViewController alloc] init];
+    [self.navigationController pushViewController:testVC animated:YES];
 }
 -(void)setUpTableView {
     self.automaticallyAdjustsScrollViewInsets = false;

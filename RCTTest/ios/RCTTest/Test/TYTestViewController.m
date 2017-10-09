@@ -39,14 +39,14 @@
 //    leftBtn.layer.masksToBounds = YES;
     [self setUpTableView];
     self.dataSource = @[
-                        @"测试数据----001",
-                        @"测试数据----002",
-                        @"测试数据----003",
-                        @"测试数据----004",
-                        @"测试数据----005",
-                        @"测试数据----006",
-                        @"测试数据----007",
-                        @"测试数据----008",
+                        @"test data----001",
+                        @"test data----002",
+                        @"test data----003",
+                        @"test data----004",
+                        @"test data----005",
+                        @"test data----006",
+                        @"test data----007",
+                        @"test data----008",
                         ];
 }
 -(void)viewWillAppear:(BOOL)animated {

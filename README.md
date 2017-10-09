@@ -10,7 +10,7 @@
 7.RN集成CodePush
 8.完成IJK生成framework,rtmp视频流播放
 9.完成高地地图framework的集成
-10.
+10.添加UIXCTest（学习ing）
 
 next to do!
 1.音视频开发

@@ -197,7 +197,9 @@
     self.items = items;
     __weak typeof(self) weakSelf = self;
     [items enumerateObjectsUsingBlock:^(UIButton *item, NSUInteger idx, BOOL * _Nonnull stop) {
+        item.accessibilityLabel = weakSelf.titles[idx];
         item.mj_origin = CGPointMake(itemW*idx, 0);
+        
         [item addTarget:self action:@selector(handleItemSelectedAtIndex:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:item];
         
@@ -206,7 +208,6 @@
             
             //更新指示器
             NSString *title = weakSelf.titles[idx];
-            
             [self updateIndicatorViewWithTitle:title animated:false];
             
         }

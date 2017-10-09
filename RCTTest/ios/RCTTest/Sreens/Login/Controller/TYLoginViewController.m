@@ -23,9 +23,10 @@
     [super viewDidLoad];
     
     UITextField *atextField = [[UITextField alloc] init];
+    atextField.accessibilityLabel = @"aTextField";
     atextField.delegate = self;
     atextField.font = [UIFont fontWithName:[TYTheme themeFontFamilyName] size:14];
-    atextField.placeholder = @"请输入手机号";
+    atextField.placeholder = @"please input phone number";
     atextField.keyboardType = UIKeyboardTypeNumberPad;
     self.atextField = atextField;
     UILabel *aLabel = [[UILabel alloc] init];
@@ -40,9 +41,10 @@
     astackView.spacing = 8;
     
     UITextField *mtextField = [[UITextField alloc] init];
+    mtextField.accessibilityLabel = @"pwTextField";
     mtextField.delegate = self;
     mtextField.font = [UIFont fontWithName:[TYTheme themeFontFamilyName] size:14];
-    mtextField.placeholder = @"请输入密码";
+    mtextField.placeholder = @"please input password";
     mtextField.secureTextEntry = YES;
     mtextField.keyboardType = UIKeyboardTypeASCIICapable;
     self.mtextField = mtextField;
@@ -57,6 +59,7 @@
     mstackView.spacing = 8;
     
     UIButton *loginBtn = [[UIButton alloc] init];
+    loginBtn.accessibilityLabel = @"login";
     [loginBtn setTitle:@"登录" forState:UIControlStateNormal];
     [loginBtn setTitleColor:HEXCOLOR(0xffffff) forState:UIControlStateNormal];
     [loginBtn addTarget:self action:@selector(loginAction) forControlEvents:UIControlEventTouchUpInside];
@@ -91,7 +94,19 @@
 /*1用户名及密码检验、2用户密码加密、3上传用户登录状态、4切换视图*/
 -(void)loginAction {
     //用户名及密码检验
-    if (_atextField.text.length < 3 && _mtextField.text.length < 3) {
+    int alength = (int)_atextField.text.length;
+    int mlength = (int)_mtextField.text.length;
+    if (!alength) {
+        [MBProgressHUD showError:@"请输入用户名"];
+        return;
+    }
+    
+    if (!mlength) {
+        [MBProgressHUD showError:@"请输入密码"];
+        return;
+    }
+    
+    if (alength < 3 || mlength < 3) {
         [MBProgressHUD showError:@"请检查用户名或密码输入"];
         return;
     }

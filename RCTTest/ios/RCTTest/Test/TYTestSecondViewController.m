@@ -20,7 +20,7 @@
     
     UIButton *leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 74, 25)];
     leftBtn.titleLabel.font = [UIFont systemFontOfSize:12];
-    [leftBtn setTitle:@"返回到底" forState:UIControlStateNormal];
+    [leftBtn setTitle:@"back root" forState:UIControlStateNormal];
     [leftBtn setTitleColor:HEXCOLOR(0xffffff) forState:UIControlStateNormal];
     [leftBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:leftBtn];

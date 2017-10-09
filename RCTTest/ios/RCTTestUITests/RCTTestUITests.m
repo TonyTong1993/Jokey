@@ -33,8 +33,63 @@
 }
 
 - (void)testExample {
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    XCUIElement *account = app.textFields[@"aTextField"];
+    XCUIElement *pwd = app.secureTextFields[@"pwTextField"];
+    XCUIElement *login = app.buttons[@"login"];
+    
+    int acc = arc4random() % 1000000 + 1000000;
+    int pw = arc4random() % 1000000 + 1000000;
+    
+    [login tap];
+    //预期效果
+    
+    [account tap];
+    [account typeText:[NSString stringWithFormat:@"%d",acc]];
+    [login tap];
+     //预期效果
+    
+    [pwd tap];
+    [pwd typeText:[NSString stringWithFormat:@"%d",pw]];
+    [login tap];
+      //预期效果
+    
+    [account tap];
+    [account typeText:[NSString stringWithFormat:@"%d",acc]];
+    [pwd tap];
+    [pwd typeText:[NSString stringWithFormat:@"%d",acc]];
+    [login tap];
+    //预期效果
+
+    
+}
+- (void)testAutoLoginModule {
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    XCUIElement *account = app.textFields[@"aTextField"];
+    XCUIElement *pwd = app.secureTextFields[@"pwTextField"];
+    //判断账号密码是否都是偶数 是则跳转 不是则直接下一次测试
+    //跳转后等待3s 返回登录界面
+    
+        int acc = arc4random() % 1000000 + 1000000;
+        int pw = arc4random() % 1000000 + 1000000;
+        [account tap];
+        [account typeText:[NSString stringWithFormat:@"%d",acc]];
+        [pwd tap];
+        [pwd typeText:[NSString stringWithFormat:@"%d",pw]];
+        
+        //点击登录
+        [app.buttons[@"login"] tap];
+        //模拟正常登录网络访问等待3s
+         [app.navigationBars.element pressForDuration:3];
+        //判断是否跳转到登录之后的界面 如果是 则登录成功
+        if ([app.navigationBars.element.identifier isEqualToString:@"首页"]) {
+            [app.navigationBars[@"首页"].buttons[@"Mune"] tap];
+        }else{
+            NSLog(@"登录失败");
+        }
+
 }
 
 @end

@@ -29,6 +29,7 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
     CGFloat height = self.view.frame.size.height-103;
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, width, height) collectionViewLayout:layout];
+    self.collectionView.accessibilityLabel = @"videoCollection";
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
     [self.view addSubview:_collectionView];

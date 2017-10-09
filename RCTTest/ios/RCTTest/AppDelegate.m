@@ -41,11 +41,11 @@
     /*1.0检查登录状态；2.0检测版本状态*/
 
     UIViewController *rootVC;
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:APP_Login_Key]) {
-        rootVC = [[TYTabBarController alloc] init];
-    }else {
+//    if ([[NSUserDefaults standardUserDefaults] boolForKey:APP_Login_Key]) {
+//        rootVC = [[TYTabBarController alloc] init];
+//    }else {
         rootVC = [[TYLoginViewController alloc] init];
-    }
+//    }
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
     //设置iconfont
