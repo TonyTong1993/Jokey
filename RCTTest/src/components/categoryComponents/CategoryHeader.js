@@ -30,9 +30,9 @@ class CategoryHeader extends Component {
 
 const styles = StyleSheet.create({
 	contianer:{
-		marginTop:20,
+		paddingTop:20,
 		width:screen_width,
-		height: 44,
+		height: 64,
 		backgroundColor: '#fff',
 		paddingLeft:10,
 		paddingRight:10,

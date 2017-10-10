@@ -34,33 +34,6 @@
 
 - (void)testExample {
     
-    XCUIApplication *app = [[XCUIApplication alloc] init];
-    XCUIElement *account = app.textFields[@"aTextField"];
-    XCUIElement *pwd = app.secureTextFields[@"pwTextField"];
-    XCUIElement *login = app.buttons[@"login"];
-    
-    int acc = arc4random() % 1000000 + 1000000;
-    int pw = arc4random() % 1000000 + 1000000;
-    
-    [login tap];
-    //预期效果
-    
-    [account tap];
-    [account typeText:[NSString stringWithFormat:@"%d",acc]];
-    [login tap];
-     //预期效果
-    
-    [pwd tap];
-    [pwd typeText:[NSString stringWithFormat:@"%d",pw]];
-    [login tap];
-      //预期效果
-    
-    [account tap];
-    [account typeText:[NSString stringWithFormat:@"%d",acc]];
-    [pwd tap];
-    [pwd typeText:[NSString stringWithFormat:@"%d",acc]];
-    [login tap];
-    //预期效果
 
     
 }

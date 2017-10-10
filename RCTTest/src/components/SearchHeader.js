@@ -39,8 +39,8 @@ SearchHeader.propTypes = {
 var styles = StyleSheet.create({
     container:{
       width:screen_width,
-      marginTop:20,
-      height:44,
+      height:64,
+      paddingTop:20,
       flexDirection:'row',
       alignItems:'center',
       borderBottomWidth:onePixel,
