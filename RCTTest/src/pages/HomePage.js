@@ -55,6 +55,7 @@ class HomePage extends Component {
            renderItem={this._renderItem}
            refreshing={this.state.pulling}
            onRefresh={this._loadNewData.bind(this)}
+           removeClippedSubviews = {false}
            onEndReached={()=>{
             console.log('onEndReached')
            }}

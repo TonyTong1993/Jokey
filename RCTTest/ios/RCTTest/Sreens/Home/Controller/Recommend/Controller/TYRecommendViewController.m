@@ -24,14 +24,12 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
     [self setUpTableView];
 }
 -(void)setUpTableView {
-    self.automaticallyAdjustsScrollViewInsets = false;
-    CGFloat width = self.view.frame.size.width;
-    CGFloat height = self.view.frame.size.height-103;
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, width, height) collectionViewLayout:layout];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     self.collectionView.accessibilityLabel = @"videoCollection";
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
+   _collectionView.contentInset = UIEdgeInsetsMake(0, 0, 125, 0);
     [self.view addSubview:_collectionView];
     
     //设置网络数据下啦刷新
@@ -64,6 +62,14 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
     [self.collectionView registerNib:[UINib nibWithNibName:@"TYStatusViewCell" bundle:nil] forCellWithReuseIdentifier:reuserIndentifier];
     
     [self.collectionView.mj_header beginRefreshing];
+ 
+    //ios11 适配
+    if (@available(iOS 11.0,*)) {
+        _collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        _collectionView.contentInset = UIEdgeInsetsMake(0, 0, 125, 0);
+        _collectionView.scrollIndicatorInsets = _collectionView.contentInset;
+    }
+   
 }
 
 

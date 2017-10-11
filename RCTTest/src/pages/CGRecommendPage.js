@@ -56,7 +56,7 @@ _keyExtractor = (item,index)=>{
       	  		sections={sections}
               renderItem={({item})=><CGRItemCell item={item} />}
       	  	  contentContainerStyle={styles.list}
-
+              removeClippedSubviews = {false}
       	  />
        </View>
     );

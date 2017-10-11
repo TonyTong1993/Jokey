@@ -65,7 +65,8 @@
     self.tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 64, 0);
+   
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 125, 0);
     self.tableView.backgroundColor = [UIColor colorWithHexString:@"#f0f0f8"];
     self.tableView.separatorColor = HEXCOLOR(0xebebeb);
     //去除footer样式
@@ -85,8 +86,7 @@
     header.lastUpdatedTimeLabel.hidden= YES;//如果不隐藏这个会默认 图片在最左边不是在中间
     header.stateLabel.hidden = YES;
     self.tableView.mj_header = header;
-    self.tableView.mj_header.mj_h = 74;
-    
+    self.tableView.separatorInset = UIEdgeInsetsMake(0, 12, 0, 12);
     //设置上拉加载更多数据
     MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
        
@@ -96,6 +96,20 @@
     self.tableView.mj_footer = footer;
     footer.refreshingTitleHidden = YES;
     footer.stateLabel.hidden = YES;
+    
+    
+    //ios11 适配
+    if (@available(iOS 11.0,*)) {
+        _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        _tableView.contentInset = UIEdgeInsetsMake(0, 0, 125, 0);
+        _tableView.scrollIndicatorInsets = _tableView.contentInset;
+        
+#pragma mark--在iOS 11中默认启用Self-Sizing 关闭方法
+        self.tableView.estimatedRowHeight = 0;
+        self.tableView.estimatedSectionHeaderHeight = 0;
+        self.tableView.estimatedSectionFooterHeight = 0;
+        
+    }
 }
 
 -(void)setUpNavigationBar {
@@ -133,13 +147,5 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [[UITableViewCell alloc] init];
-}
--(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([cell respondsToSelector:@selector(setSeparatorColor:)]) {
-        [cell setSeparatorInset:UIEdgeInsetsZero];
-    }
-    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
-        [cell setLayoutMargins:UIEdgeInsetsZero];
-    }
 }
 @end
