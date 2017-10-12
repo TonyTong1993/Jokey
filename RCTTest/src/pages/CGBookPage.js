@@ -27,9 +27,9 @@ class CGBookPage extends Component {
      drawerIcon: ({ focused,tintColor}) => (
     	focused ?
       <Image
-        source={{uri:'drawer_book_selected '}}
+        source={{uri:'drawer_book_selected'}}
         style={styles.icon}
-      /> 
+      />
       :
       <Image
         source={{uri:'drawer_book_normal'}}
@@ -43,17 +43,17 @@ class CGBookPage extends Component {
   render() {
     return (
      <View style={styles.container}>
-          <SectionList 
+          <SectionList
               renderItem={({item})=><CGRItemCell item={item} />}
               keyExtractor={this._keyExtractor}
-              renderSectionHeader={({section})=> 
-              <View 
+              renderSectionHeader={({section})=>
+              <View
               style={{width:screen_width,height:28,justifyContent:'center'}}>
                 <Text>{section.key}</Text>
               </View>}
               sections={sections}
                 contentContainerStyle={styles.list}
-          
+
           />
        </View>
     );
@@ -71,7 +71,7 @@ container: {
   },
   list: {
         //justifyContent: 'space-around',
-        flexDirection: 'row',//设置横向布局  
+        flexDirection: 'row',//设置横向布局
         flexWrap: 'wrap',  //设置换行显示
         alignItems: 'flex-start',
         backgroundColor: '#FFFFFF'

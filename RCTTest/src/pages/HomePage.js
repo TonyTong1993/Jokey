@@ -48,7 +48,7 @@ class HomePage extends Component {
     return (
        <View style={styles.container}>
         <FlatList
-          automaticallyAdjustContentInsets={false}
+           automaticallyAdjustContentInsets={false}
            contentContainerStyle={{paddingBottom:49,paddingTop:0}}
            data={data}
            ListHeaderComponent={this._ListHeaderComponent}
