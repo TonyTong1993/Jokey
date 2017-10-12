@@ -22,6 +22,10 @@ DerivedData
 *.xcuserstate
 project.xcworkspace
 
+#.gitignore  
+# ignore cocoaPods  
+/Pods  
+
 # Android/IntelliJ
 #
 build/

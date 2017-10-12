@@ -41,7 +41,6 @@
 @property (nonatomic, strong) UIFont *titleLabelTextFont;
 @property (nonatomic, strong) UIColor *titleLabelBackgroundColor;
 @property (nonatomic, assign) CGFloat titleLabelHeight;
-@property (nonatomic, assign) NSTextAlignment titleLabelTextAlignment;
 
 @property (nonatomic, assign) BOOL hasConfigured;
 

@@ -11,6 +11,7 @@
 #import "TYTabBarController.h"
 #import <CocoaSecurity/CocoaSecurity.h>
 #import  <MBProgressHUD/MBProgressHUD.h>
+#import <Hyphenate/Hyphenate.h>
 #import "MBProgressHUD+MJ.h"
 @interface TYLoginViewController ()<UITextFieldDelegate>
 @property(strong ,nonatomic) UITextField* atextField;
@@ -121,12 +122,22 @@
     //修改hud样式
 
     //显示hud
-    [hud showAnimated:YES];
+    [hud show:YES];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         //隐藏hud
-        [hud hideAnimated:true];
+        [hud hide:true];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:APP_Login_Key];
         
+        //登录环信
+        [[EMClient sharedClient] loginWithUsername:_atextField.text
+                                          password:_mtextField.text
+                                        completion:^(NSString *aUsername, EMError *aError) {
+                                            if (!aError) {
+                                                NSLog(@"登录成功");
+                                            } else {
+                                                NSLog(@"登录失败");
+                                            }
+                                        }];
         //切换window视图
         AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
         UIWindow *window = app.window;

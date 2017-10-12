@@ -37,4 +37,6 @@ source 'https://github.com/CocoaPods/Specs.git'
     pod 'CocoaSecurity'
     pod 'MBProgressHUD'
     pod 'JPush'
+    pod 'Hyphenate'
+    pod 'EaseUI', :git => 'https://github.com/easemob/easeui-ios-hyphenate-cocoapods.git'
 end

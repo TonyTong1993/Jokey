@@ -22,6 +22,8 @@
 #endif
 // 如果需要使用idfa功能所需要引入的头文件（可选）
 #import <AdSupport/AdSupport.h>
+//环信IM Full版本
+#import <Hyphenate/Hyphenate.h>
 @interface AppDelegate ()<UNUserNotificationCenterDelegate,JPUSHRegisterDelegate>
 
 @end
@@ -41,11 +43,11 @@
     /*1.0检查登录状态；2.0检测版本状态*/
 
     UIViewController *rootVC;
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:APP_Login_Key]) {
-        rootVC = [[TYTabBarController alloc] init];
-    }else {
+//    if ([[NSUserDefaults standardUserDefaults] boolForKey:APP_Login_Key]) {
+//        rootVC = [[TYTabBarController alloc] init];
+//    }else {
         rootVC = [[TYLoginViewController alloc] init];
-    }
+//    }
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
     //设置iconfont
@@ -128,9 +130,16 @@
                  apsForProduction:false
             advertisingIdentifier:advertisingId];
     
-    
     /*更新运用的badge*/
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    
+    //注册环信IM
+    //AppKey:注册的AppKey，详细见下面注释。
+    //apnsCertName:推送证书名（不需要加后缀），详细见下面注释。
+    EMOptions *options = [EMOptions optionsWithAppkey:EASEMOBKey];
+    options.apnsCertName = JSPUSHKey;
+    [[EMClient sharedClient] initializeSDKWithOptions:options];
+    
     return YES;
 }
 -(void)pushLocalNotification {
@@ -173,11 +182,14 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    [[EMClient sharedClient] applicationDidEnterBackground:application];
 }
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+     [[EMClient sharedClient] applicationWillEnterForeground:application];
 }
 
 

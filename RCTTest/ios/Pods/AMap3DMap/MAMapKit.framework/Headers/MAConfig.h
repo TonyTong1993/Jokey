@@ -45,6 +45,8 @@
 #define MA_CUSTOM_MAP 0
 #endif
 
-
+#ifndef MA_SCTX
+#define MA_SCTX 0
+#endif
 
 #endif /* MAConfig_h */

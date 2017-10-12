@@ -24,3 +24,10 @@
  */
 #define JSPUSHKey @"203b08c36687d441ea4ffd0a"
 
+
+/**
+ *  环信IM的key
+ *
+ */
+#define EASEMOBKey @"1132171011178564#rcttest"
+

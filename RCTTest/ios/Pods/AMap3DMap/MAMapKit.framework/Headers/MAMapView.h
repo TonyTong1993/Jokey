@@ -364,6 +364,23 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
  */
 - (void)clearDisk;
 
+/**
+ * @brief 重新加载内部纹理，在纹理被错误释放时可以执行此方法。（since 5.4.0）
+ */
+- (void)reloadInternalTexture;
+
+/**
+ * @brief 获取地图审图号。如果启用了“自定义样式”功能(customMapStyleEnabled 为 YES)，则返回nil。（since 5.4.0）
+ * @return 地图审图号
+ */
+- (NSString *)mapContentApprovalNumber;
+
+/**
+ * @brief 获取卫星图片审图号。（since 5.4.0）
+ * @return 卫星图片审图号
+ */
+- (NSString *)satelliteImageApprovalNumber;
+
 @end
 
 @interface MAMapView (Annotation)
@@ -377,7 +394,7 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
 ///annotation 可见区域
 @property (nonatomic, readonly) CGRect annotationVisibleRect;
 
-///是否允许对annotationView根据zIndex进行排序，默认为NO 注意：如果设置为YES，慎重重载MAAnnoationView的willMoveToSuperview:，内部排序时会调用removeFromSuperView. 注：从5.3.0版本开启此属性废弃，如果添加的annotationView有zIndex不为0的，则自动开启为YES，否则为NO。删除所有annotation后会重置。
+///是否允许对annotationView根据zIndex进行排序，默认为NO 注意：如果设置为YES，慎重重载MAAnnoationView的willMoveToSuperview:，内部排序时会调用removeFromSuperView. 注：从5.3.0版本开启此属性废弃，如果添加的annotationView有zIndex不为0的，则自动开启为YES，否则为NO。删除所有annotation后会重置。zIndex属性只有在viewForAnnotation或者didAddAnnotationViews回调中设置有效。
 @property (nonatomic, assign) BOOL allowsAnnotationViewSorting __attribute((deprecated("已废弃 since 5.3.0")));
 
 /**
