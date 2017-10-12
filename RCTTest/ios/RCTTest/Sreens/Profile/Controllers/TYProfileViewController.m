@@ -13,6 +13,7 @@
 #import "TYProfileViewModel.h"
 #import "TYRunViewController.h"
 #import <CodePush/CodePush.h>
+#import <EaseUI/EaseMessageViewController.h>
 @interface TYProfileViewController ()
 
 @end
@@ -81,7 +82,8 @@
     }else if ([model.className isEqualToString:@"TYRunViewController"]) {
         VC = [[TYRunViewController alloc] init];
     }else {
-        VC = [[UIViewController alloc] init];
+        EaseMessageViewController *chatController = [[EaseMessageViewController alloc] initWithConversationChatter:@"19011100528" conversationType:EMConversationTypeChat];
+       VC = chatController;
     }
     [self.navigationController pushViewController:VC animated:YES];
     

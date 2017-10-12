@@ -129,8 +129,8 @@
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:APP_Login_Key];
         
         //登录环信
-        [[EMClient sharedClient] loginWithUsername:_atextField.text
-                                          password:_mtextField.text
+        [[EMClient sharedClient] loginWithUsername:@"19011100527"
+                                          password:@"123456"
                                         completion:^(NSString *aUsername, EMError *aError) {
                                             if (!aError) {
                                                 NSLog(@"登录成功");
