@@ -43,11 +43,12 @@
     /*1.0检查登录状态；2.0检测版本状态*/
 
     UIViewController *rootVC;
-//    if ([[NSUserDefaults standardUserDefaults] boolForKey:APP_Login_Key]) {
-//        rootVC = [[TYTabBarController alloc] init];
-//    }else {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:APP_Login_Key]) {
+        rootVC = [[TYTabBarController alloc] init];
+   
+    }else {
         rootVC = [[TYLoginViewController alloc] init];
-//    }
+    }
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
     //设置iconfont
@@ -57,13 +58,19 @@
 //    支持https
     [[AMapServices sharedServices] setEnableHTTPS:true];
     //设置本地推送通知 步骤：1.注册本地通知；2.设置本地推送消息；3.显示推送消息代理
-    /*设置iOS11版本的推送通知*/
+    /*设置iOS10版本的推送通知*/
     if (NSClassFromString(@"UNUserNotificationCenter")) {
         UNAuthorizationOptions options = UNAuthorizationOptionAlert | UNAuthorizationOptionBadge | UNAuthorizationOptionSound;
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
         center.delegate = self;
         [center requestAuthorizationWithOptions:options completionHandler:^(BOOL granted, NSError * _Nullable error) {
-            NSLog(@"granted = %d",granted);
+
+            dispatch_async(dispatch_get_main_queue(), ^{
+                #if !TARGET_IPHONE_SIMULATOR
+                [[UIApplication sharedApplication] registerForRemoteNotifications];
+                #endif
+            });
+
         }];
 //        [center setNotificationCategories:NULL];
         [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
@@ -74,9 +81,21 @@
             [self pushLocalNotification];
      
     }else {
-        UIUserNotificationType type = UIUserNotificationTypeAlert;
-        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:type categories:nil];
+        UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
         [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+        if([application respondsToSelector:@selector(registerUserNotificationSettings:)])
+        {
+            UIUserNotificationType notificationTypes = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+            UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:notificationTypes categories:nil];
+            [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+        }
+        
+#if !TARGET_IPHONE_SIMULATOR
+            [application registerForRemoteNotifications];
+#endif
+        
+        
         
         // 处理退出后通知的点击，程序启动后获取通知对象，如果是首次启动还没有发送通知，那第一次通知对象为空，没必要去处理通知（如跳转到指定页面）
         if (launchOptions[UIApplicationLaunchOptionsLocalNotificationKey]) {
@@ -94,12 +113,11 @@
         notification.alertBody = @"起床啦！";
         notification.userInfo = @{@"task":@"学习iOS课程"};
         notification.applicationIconBadgeNumber = 1;
-//        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
         // 执行通知注册
         [[UIApplication sharedApplication] scheduleLocalNotification:notification];
     }
     
-    /*注册远程推送*/
+    /*注册JSPUSH远程推送*/
     //Required
     //notice: 3.0.0及以后版本注册可以这样写，也可以继续用之前的注册方式
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
@@ -110,12 +128,12 @@
         // NSSet<UIUserNotificationCategory *> *categories for iOS8 and iOS9
     }
     [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
-    
+
     // Optional
     // 获取IDFA
     // 如需使用IDFA功能请添加此代码并在初始化方法的advertisingIdentifier参数中填写对应值
     NSString *advertisingId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
-    
+
     /* Required
     // init Push
     // notice: 2.1.5版本的SDK新增的注册方法，改成可上报IDFA，如果没有使用IDFA直接传nil
@@ -137,7 +155,7 @@
     //AppKey:注册的AppKey，详细见下面注释。
     //apnsCertName:推送证书名（不需要加后缀），详细见下面注释。
     EMOptions *options = [EMOptions optionsWithAppkey:EASEMOBKey];
-    options.apnsCertName = JSPUSHKey;
+    options.apnsCertName = @"RCT_DEV_PUSH";
     [[EMClient sharedClient] initializeSDKWithOptions:options];
     
     return YES;
@@ -238,7 +256,10 @@
 didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     
     /// Required - 注册 DeviceToken
-    [JPUSHService registerDeviceToken:deviceToken];
+//    [JPUSHService registerDeviceToken:deviceToken];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [[EMClient sharedClient] bindDeviceToken:deviceToken];
+    });
 }
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     //Optional
@@ -269,14 +290,15 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     
     // Required, iOS 7 Support
-    [JPUSHService handleRemoteNotification:userInfo];
+//    [JPUSHService handleRemoteNotification:userInfo];
     completionHandler(UIBackgroundFetchResultNewData);
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     
     // Required,For systems with less than or equal to iOS6
-    [JPUSHService handleRemoteNotification:userInfo];
+//    [JPUSHService handleRemoteNotification:userInfo];
+    NSLog(@"%@",userInfo);
 }
 
 @end
