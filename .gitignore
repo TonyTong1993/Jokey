@@ -38,6 +38,7 @@ local.properties
 #
 node_modules/
 IJK/
+Pods/ 
 npm-debug.log
 yarn-error.log
 
