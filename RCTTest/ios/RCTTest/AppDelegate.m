@@ -256,7 +256,7 @@
 didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     
     /// Required - 注册 DeviceToken
-//    [JPUSHService registerDeviceToken:deviceToken];
+    [JPUSHService registerDeviceToken:deviceToken];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [[EMClient sharedClient] bindDeviceToken:deviceToken];
     });
@@ -290,14 +290,14 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     
     // Required, iOS 7 Support
-//    [JPUSHService handleRemoteNotification:userInfo];
+    [JPUSHService handleRemoteNotification:userInfo];
     completionHandler(UIBackgroundFetchResultNewData);
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     
     // Required,For systems with less than or equal to iOS6
-//    [JPUSHService handleRemoteNotification:userInfo];
+    [JPUSHService handleRemoteNotification:userInfo];
     NSLog(@"%@",userInfo);
 }
 

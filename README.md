@@ -11,7 +11,7 @@
 8.完成IJK生成framework,rtmp视频流播放
 9.完成高地地图framework的集成
 10.添加UIXCTest（学习ing）
-
+10.集成环信IM，测试完离线推送
 next to do!
 1.音视频开发
 2.高德地图完成运动轨迹
