@@ -11,8 +11,11 @@
 #import "TYTabBarController.h"
 #import <CocoaSecurity/CocoaSecurity.h>
 #import  <MBProgressHUD/MBProgressHUD.h>
-#import <Hyphenate/Hyphenate.h>
 #import "MBProgressHUD+MJ.h"
+#if !TARGET_IPHONE_SIMULATOR
+#import <Hyphenate/Hyphenate.h>
+#endif
+
 @interface TYLoginViewController ()<UITextFieldDelegate>
 @property(strong ,nonatomic) UITextField* atextField;
 @property(strong ,nonatomic) UITextField* mtextField;
@@ -35,6 +38,7 @@
     aLabel.textColor  = HEXCOLOR(0x333);
     aLabel.text = @"账号:";
     
+   
     UIStackView *astackView = [[UIStackView alloc] initWithFrame:CGRectMake(0, 0, 250, 50)];
     [astackView addArrangedSubview:atextField];
     [astackView addArrangedSubview:aLabel];
@@ -127,7 +131,7 @@
         //隐藏hud
         [hud hide:true];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:APP_Login_Key];
-        
+#if !TARGET_IPHONE_SIMULATOR
         //登录环信
         [[EMClient sharedClient] loginWithUsername:@"19011100528"
                                           password:@"123456"
@@ -138,6 +142,7 @@
                                                 NSLog(@"登录失败");
                                             }
                                         }];
+#endif
         //切换window视图
         AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
         UIWindow *window = app.window;

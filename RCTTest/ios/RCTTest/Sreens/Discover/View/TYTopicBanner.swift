@@ -28,11 +28,15 @@ class TYTopicBanner: UIView ,TYSegmentScrollViewDataSource,UIScrollViewDelegate{
         //调整按钮尺寸
         rightBtn.contentEdgeInsets = UIEdgeInsetsMake(5, 10, 5, 10)
         //添加stackView
-        let stackView = UIStackView(frame: frame)
-        stackView.addArrangedSubview(segmentView)
-        stackView.addArrangedSubview(rightBtn)
-        
-        addSubview(stackView)
+        if #available(iOS 9.0, *) {
+            let stackView = UIStackView(frame: frame)
+            stackView.addArrangedSubview(segmentView)
+            stackView.addArrangedSubview(rightBtn)
+            
+            addSubview(stackView)
+        } else {
+            // Fallback on earlier versions
+        }
         
         backgroundColor = UIColor.white
     }

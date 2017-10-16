@@ -13,7 +13,6 @@
 #import "TYProfileViewModel.h"
 #import "TYRunViewController.h"
 #import <CodePush/CodePush.h>
-#import <EaseUI/EaseMessageViewController.h>
 @interface TYProfileViewController ()
 
 @end
@@ -82,8 +81,13 @@
     }else if ([model.className isEqualToString:@"TYRunViewController"]) {
         VC = [[TYRunViewController alloc] init];
     }else {
+#if !TARGET_IPHONE_SIMULATOR
         EaseMessageViewController *chatController = [[EaseMessageViewController alloc] initWithConversationChatter:@"19011100528" conversationType:EMConversationTypeChat];
-       VC = chatController;
+        VC = chatController;
+#else
+        UIViewController *chatController = [[UIViewController alloc] init];
+        VC = chatController;
+#endif
     }
     [self.navigationController pushViewController:VC animated:YES];
     
