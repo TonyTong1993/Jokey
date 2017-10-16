@@ -10,9 +10,6 @@
 #import "TYNavigationController.h"
 #import "RCTTest-Swift.h"
 //环信IM Full版本
-#if !TARGET_IPONE_SIMULATOR
-#import <Hyphenate/Hyphenate.h>
-#endif
 
 CFAbsoluteTime StartTime;
 @interface TYTabBarController ()

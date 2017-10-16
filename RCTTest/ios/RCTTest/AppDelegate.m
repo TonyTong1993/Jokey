@@ -45,12 +45,12 @@
     /*1.0检查登录状态；2.0检测版本状态*/
 
     UIViewController *rootVC;
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:APP_Login_Key]) {
+//    if ([[NSUserDefaults standardUserDefaults] boolForKey:APP_Login_Key]) {
         rootVC = [[TYTabBarController alloc] init];
    
-    }else {
-        rootVC = [[TYLoginViewController alloc] init];
-    }
+//    }else {
+//        rootVC = [[TYLoginViewController alloc] init];
+//    }
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
     //设置iconfont
@@ -203,18 +203,18 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-#if !TARGET_IPHONE_SIMULATOR
- [[EMClient sharedClient] applicationDidEnterBackground:application];
-#endif
+
+ //[[EMClient sharedClient] applicationDidEnterBackground:application];
+
    
 }
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-#if !TARGET_IPHONE_SIMULATOR
-   [[EMClient sharedClient] applicationWillEnterForeground:application];
-#endif
+
+  // [[EMClient sharedClient] applicationWillEnterForeground:application];
+
 }
 
 

@@ -42,7 +42,7 @@ static NSString *themeColor;
     return themeColor;
 }
 +(NSString *)themeFontFamilyName {
-    return @"PingFangSC-Regular";
+    return @"Arial";
 }
 
 @end

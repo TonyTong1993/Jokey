@@ -153,16 +153,6 @@ THE SOFTWARE.</string>
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Hyphenate Inc. 2017</string>
-			<key>License</key>
-			<string>Copyright</string>
-			<key>Title</key>
-			<string>Hyphenate</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
 			<string>The MIT License (MIT)
 
 Copyright (c) 2015 Taodiandian

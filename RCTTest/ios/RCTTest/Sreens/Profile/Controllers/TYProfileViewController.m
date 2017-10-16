@@ -82,8 +82,8 @@
         VC = [[TYRunViewController alloc] init];
     }else {
 #if !TARGET_IPHONE_SIMULATOR
-        EaseMessageViewController *chatController = [[EaseMessageViewController alloc] initWithConversationChatter:@"19011100528" conversationType:EMConversationTypeChat];
-        VC = chatController;
+//        EaseMessageViewController *chatController = [[EaseMessageViewController alloc] initWithConversationChatter:@"19011100528" conversationType:EMConversationTypeChat];
+//        VC = chatController;
 #else
         UIViewController *chatController = [[UIViewController alloc] init];
         VC = chatController;
