@@ -21,7 +21,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
-
+IJK／
 # Android/IntelliJ
 #
 build/
@@ -34,7 +34,7 @@ local.properties
 #
 node_modules/
 Pods/
-IJK／
+
 npm-debug.log
 yarn-error.log
 
