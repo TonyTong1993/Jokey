@@ -1,20 +1,10 @@
 'use strict';
 
 import React from 'react';
-import App from './src/app';
-import { Provider } from 'react-redux'
-import store from './src/configStore'
-import { LOGIN,GetMovies,LOGIN_TYPE_NORMAL,LOGIN_TYPE_THIRD } from './src/actions/LoginAction'
+//import App from './src/app';//项目入口
+import ReduxPage from './src/test-pages/redux-class/redux-class-01';//测试入口
 import {
   AppRegistry,
-
 } from 'react-native';
 
-// store.dispatch(GetMovies('https://facebook.github.io/react-native/movies.json')).then(() =>
-//   console.log(store.getState())
-// );
-
-const app = ()=>{
-	return (<Provider store={store}><App /></Provider>)
-}
-AppRegistry.registerComponent('test', () =>app);
+AppRegistry.registerComponent('test', () =>ReduxPage);
