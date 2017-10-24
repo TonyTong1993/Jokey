@@ -87,17 +87,20 @@ let store = createStore(todoApp, window.STATE_FROM_SERVER)
  class ReduxPage extends Component {
   constructor(props) {
     super(props);
-  
+
     this.state = {
       text:'',
+      data:store.getState(),
     };
   }
   _textInput:any;
+  _unsubscribe:any;
    render() {
+     console.log(this.state.data);
      return (
        <View style={styles.container}>
        		<View style={styles.inputView}>
-            <TextInput 
+            <TextInput
             ref={component=>(this._textInput = component)}
             style={{flex:1,height:32,borderColor:'gray',borderWidth:1,borderRadius:16,paddingLeft:20}}
             placeholder='请添加待办事项'
@@ -106,23 +109,46 @@ let store = createStore(todoApp, window.STATE_FROM_SERVER)
             })}
             value={this.state.text}/>
             <Button
-            style={{backgroundColor:'green'}} 
+            style={{backgroundColor:'green'}}
             onPress={this._addTodo} title='addTodo'
             color="#841584"
            />
           </View>
+          <FlatList
+          data={this.state.data}
+          keyExtractor={this._keyExtractor}
+          renderItem={this._renderItem}/>
        </View>
      );
    }
-   _addTodo =(text)=> {
-      if (text.length == 0) {
+   componentDidMount() {
+    this._unsubscribe = store.subscribe(()=>{
+       var todos = store.getState()
+       this.setState({
+         data:todos
+       })
+     })
+   }
+   componentWillUnmount() {
+     this._unsubscribe();
+   }
+   _addTodo =()=> {
+      if (this.state.text.length == 0) {
         return;
       };
       this.setState({
-        text:'' 
+        text:''
       });
-      this._textInput.un
-      store.dispatch(addTodo(text))
+      this._textInput.blur();
+      store.dispatch(addTodo(this.state.text))
+   }
+   _renderItem = ({item})=> {
+     return <View>
+        <Text>{item}</Text>
+     </View>
+   }
+   _keyExtractor = (item,index)=>{
+     return `${item}-${index}`
    }
  }
 
