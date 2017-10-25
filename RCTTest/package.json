@@ -9,6 +9,7 @@
   "author": "tony",
   "license": "ISC",
   "dependencies": {
+    "leancloud-storage": "^3.3.0",
     "md5": "^2.2.1",
     "react": "^16.0.0-alpha.6",
     "react-native": "^0.43.4",

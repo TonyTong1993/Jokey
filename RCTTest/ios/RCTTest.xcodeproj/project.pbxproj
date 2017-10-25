@@ -1485,7 +1485,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/React",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MBProgressHUD",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo;
+				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo.company;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RCTTest/Sreens/Video/RCTTest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1513,7 +1513,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/React",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MBProgressHUD",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo;
+				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo.company;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RCTTest/Sreens/Video/RCTTest-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
