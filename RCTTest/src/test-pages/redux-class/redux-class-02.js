@@ -9,7 +9,7 @@ import {
   FlatList,
 } from 'react-native';
 import movieStore from '../../store/test/MovieStore';
-import { GetMovies } from '../../actions/test/LoadMoviesAction'
+import { GetMovies,FetchPosts } from '../../actions/test/LoadMoviesAction'
 
 class ReduxPage extends Component {
   _unsubscribe:any;
@@ -31,7 +31,8 @@ class ReduxPage extends Component {
     );
   }
   componentDidMount() {
-  movieStore.dispatch(GetMovies('https://facebook.github.io/react-native/movies.json'));
+  const { dispatch } = movieStore;
+  movieStore.dispatch(FetchPosts(dispatch,'https://facebook.github.io/react-native/movies.json'));
   this._unsubscribe = movieStore.subscribe(()=>{
      var obj = movieStore.getState();
      const { movies } = obj.payload;

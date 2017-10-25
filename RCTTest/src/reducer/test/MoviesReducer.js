@@ -16,7 +16,17 @@ const movies = (state,action)=>{
 			})
 		}
 		break;
+		case 'POST_FAILURE':
+		{
+			return Object.assign({},state,{
+				isFetching:action.isFetching
+			});
+		}
+		break;
 		default:
+		{
+			return state;
+		}
 		break;
 	}
 }
