@@ -7,6 +7,6 @@ import {createLogger} from 'redux-logger';
 
 const logger = createLogger();
 
-const store = createStore(movies,applyMiddleware(thunk,logger,promise))
+const store = createStore(movies,applyMiddleware(thunk,logger,promise));
 
-module.exports = store
+module.exports = store;

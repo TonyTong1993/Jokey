@@ -1,23 +1,5 @@
-export const LOGIN = 'LOGIN'
 
-export const LOGIN_TYPE_NORMAL = 'normal'
 
-export const LOGIN_TYPE_THIRD = 'third'
-
-export const LOGOUT = 'LOGOUT'
-
-export const REGISTER = 'REGISTER'
-
-/*
-export const loginAction = (loginType,userName,pwd)=>{
-	return {
-		type:LOGIN,
-		loginType,
-		userName,
-		pwd
-	}
-}
-*/
 export const GetMovies = (url)=>(dispatch,getState)=>{
 		dispatch({
 					type:'POST_START',

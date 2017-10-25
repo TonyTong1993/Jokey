@@ -7,4 +7,4 @@ import {
   AppRegistry,
 } from 'react-native';
 
-AppRegistry.registerComponent('test', () =>App);
+AppRegistry.registerComponent('test', () =>ReduxPage);
