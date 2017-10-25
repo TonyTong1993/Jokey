@@ -2,9 +2,8 @@
 
  import React, { Component } from 'react';
  import { createStore } from 'redux';
- import { Provider } from 'react-redux';
  import { todos } from '../../reducer/test/TodoReducer';
- import { addTodo } from '../../actions/test/TodoAction'
+ import { addTodo } from '../../actions/test/TodoAction';
  import {
    StyleSheet,
    View,
