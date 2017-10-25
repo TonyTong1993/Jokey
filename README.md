@@ -7,7 +7,8 @@
 4.RN的入口在‘我的’京东商城，模仿当当构建的UI，RN引入redux进行数据状态的管理，使用react-navigation管理路由
 5.大量使用了自定义视图，特别是使用OC和swift完成了segmentInterface视图，RN的将在以后实现
 6.深入学习redux之基础篇，使用ReduxPage完成Todoapp的添加待办事项
-7.深入学习redux之中级篇，使用redux-thunk完成异步数据下载，及数据和UI更新
+7.深入学习redux之中级篇，使用redux-thunk／redux-promise完成异步数据下载，及数据和UI更新
+8.通过leanStorage服务管理用户数据
 next to do!
 1.填充发现数据
 2.本地推送
