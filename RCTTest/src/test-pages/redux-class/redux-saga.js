@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
-
+import store from '../../store/test/SagasStore.js';
 import {
   StyleSheet,
   View,
