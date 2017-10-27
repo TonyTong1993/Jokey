@@ -12,9 +12,9 @@
 #import <CocoaSecurity/CocoaSecurity.h>
 #import  <MBProgressHUD/MBProgressHUD.h>
 #import "MBProgressHUD+MJ.h"
-#if !TARGET_IPHONE_SIMULATOR
-#import <Hyphenate/Hyphenate.h>
-#endif
+//#if !TARGET_IPHONE_SIMULATOR
+//#import <Hyphenate/Hyphenate.h>
+//#endif
 
 @interface TYLoginViewController ()<UITextFieldDelegate>
 @property(strong ,nonatomic) UITextField* atextField;
@@ -131,18 +131,18 @@
         //隐藏hud
         [hud hide:true];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:APP_Login_Key];
-#if !TARGET_IPHONE_SIMULATOR
-        //登录环信
-        [[EMClient sharedClient] loginWithUsername:@"19011100528"
-                                          password:@"123456"
-                                        completion:^(NSString *aUsername, EMError *aError) {
-                                            if (!aError) {
-                                                NSLog(@"登录成功");
-                                            } else {
-                                                NSLog(@"登录失败");
-                                            }
-                                        }];
-#endif
+//#if !TARGET_IPHONE_SIMULATOR
+//        //登录环信
+//        [[EMClient sharedClient] loginWithUsername:@"19011100528"
+//                                          password:@"123456"
+//                                        completion:^(NSString *aUsername, EMError *aError) {
+//                                            if (!aError) {
+//                                                NSLog(@"登录成功");
+//                                            } else {
+//                                                NSLog(@"登录失败");
+//                                            }
+//                                        }];
+//#endif
         //切换window视图
         AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
         UIWindow *window = app.window;
