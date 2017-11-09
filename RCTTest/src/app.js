@@ -3,7 +3,6 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import store from './configStore';
-import { LOGIN,GetMovies,LOGIN_TYPE_NORMAL,LOGIN_TYPE_THIRD } from './actions/LoginAction';
 import {
   View,
   Text,
