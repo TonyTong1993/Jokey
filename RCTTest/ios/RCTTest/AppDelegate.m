@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Macro.h"
-#import "Config.h"
+#import "RCTConfig.h"
 #import "TYLoginViewController.h"
 #import "TYTheme.h"
 #import  "TBCityIconFont.h"

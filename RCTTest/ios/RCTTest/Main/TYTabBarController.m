@@ -9,7 +9,7 @@
 #import "TYTabBarController.h"
 #import "TYNavigationController.h"
 #import "RCTTest-Swift.h"
-CFAbsoluteTime StartTime;
+
 @interface TYTabBarController ()
 
 @end

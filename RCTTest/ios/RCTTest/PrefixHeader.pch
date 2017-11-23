@@ -20,4 +20,5 @@
 #import "TYTheme.h"
 #import "Macro.h"
 #import "NSString+Extension.h"
+static CFAbsoluteTime StartTime;
 #endif /* PrefixHeader_pch */

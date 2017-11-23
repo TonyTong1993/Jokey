@@ -37,4 +37,5 @@ source 'https://github.com/CocoaPods/Specs.git'
     pod 'CocoaSecurity'
     pod 'MBProgressHUD'
     pod 'JPush'
+    pod "FDStackView", "1.0"
 end

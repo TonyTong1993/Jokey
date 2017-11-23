@@ -57,12 +57,21 @@ class SearchView: UIView {
         addBtn.setImage(icon, for: .normal)
         addBtn.imageEdgeInsets = UIEdgeInsetsMake(7, 3, 7, 3)//图片视图的padding
         addBtn.contentEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 5)//按钮视图的padding
-
-        let stackView = UIStackView(frame: frame)
-        stackView.addArrangedSubview(likeInputView)
-        stackView.addArrangedSubview(addBtn)
-        stackView.spacing = 10
-        addSubview(stackView)
+       
+        if #available(iOS 9.0, *) {
+           let  stackView = UIStackView(frame: frame)
+            stackView.addArrangedSubview(likeInputView)
+            stackView.addArrangedSubview(addBtn)
+            stackView.spacing = 10
+            addSubview(stackView)
+        } else {
+          let stackView = FDStackView(frame: frame)
+            stackView.addArrangedSubview(likeInputView)
+            stackView.addArrangedSubview(addBtn)
+            stackView.spacing = 10
+            addSubview(stackView)
+        }
+       
     }
     
     required init?(coder aDecoder: NSCoder) {
