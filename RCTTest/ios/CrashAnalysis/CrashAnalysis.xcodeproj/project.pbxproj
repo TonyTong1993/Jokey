@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB64A7421FCEB46200E8546E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB64A7411FCEB46200E8546E /* main.m */; };
-		EB69D9651FCFD17000CAE612 /* TYObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EB69D9641FCFD17000CAE612 /* TYObject.m */; };
+		EB2460C61FD4FB9C0054B2D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB2460C51FD4FB9C0054B2D9 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EB64A73C1FCEB46200E8546E /* CopyFiles */ = {
+		EB2460C01FD4FB9C0054B2D9 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -24,14 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EB64A73E1FCEB46200E8546E /* MemoryManager */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MemoryManager; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB64A7411FCEB46200E8546E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EB69D9631FCFD17000CAE612 /* TYObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYObject.h; sourceTree = "<group>"; };
-		EB69D9641FCFD17000CAE612 /* TYObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYObject.m; sourceTree = "<group>"; };
+		EB2460C21FD4FB9C0054B2D9 /* CrashAnalysis */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CrashAnalysis; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB2460C51FD4FB9C0054B2D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EB64A73B1FCEB46200E8546E /* Frameworks */ = {
+		EB2460BF1FD4FB9C0054B2D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,98 +38,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EB64A7351FCEB46200E8546E = {
+		EB2460B91FD4FB9C0054B2D9 = {
 			isa = PBXGroup;
 			children = (
-				EB64A7401FCEB46200E8546E /* MemoryManager */,
-				EB64A73F1FCEB46200E8546E /* Products */,
+				EB2460C41FD4FB9C0054B2D9 /* CrashAnalysis */,
+				EB2460C31FD4FB9C0054B2D9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EB64A73F1FCEB46200E8546E /* Products */ = {
+		EB2460C31FD4FB9C0054B2D9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EB64A73E1FCEB46200E8546E /* MemoryManager */,
+				EB2460C21FD4FB9C0054B2D9 /* CrashAnalysis */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EB64A7401FCEB46200E8546E /* MemoryManager */ = {
+		EB2460C41FD4FB9C0054B2D9 /* CrashAnalysis */ = {
 			isa = PBXGroup;
 			children = (
-				EB64A7411FCEB46200E8546E /* main.m */,
-				EB69D9631FCFD17000CAE612 /* TYObject.h */,
-				EB69D9641FCFD17000CAE612 /* TYObject.m */,
+				EB2460C51FD4FB9C0054B2D9 /* main.m */,
 			);
-			path = MemoryManager;
+			path = CrashAnalysis;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EB64A73D1FCEB46200E8546E /* MemoryManager */ = {
+		EB2460C11FD4FB9C0054B2D9 /* CrashAnalysis */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EB64A7451FCEB46200E8546E /* Build configuration list for PBXNativeTarget "MemoryManager" */;
+			buildConfigurationList = EB2460C91FD4FB9C0054B2D9 /* Build configuration list for PBXNativeTarget "CrashAnalysis" */;
 			buildPhases = (
-				EB64A73A1FCEB46200E8546E /* Sources */,
-				EB64A73B1FCEB46200E8546E /* Frameworks */,
-				EB64A73C1FCEB46200E8546E /* CopyFiles */,
+				EB2460BE1FD4FB9C0054B2D9 /* Sources */,
+				EB2460BF1FD4FB9C0054B2D9 /* Frameworks */,
+				EB2460C01FD4FB9C0054B2D9 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MemoryManager;
-			productName = MemoryManager;
-			productReference = EB64A73E1FCEB46200E8546E /* MemoryManager */;
+			name = CrashAnalysis;
+			productName = CrashAnalysis;
+			productReference = EB2460C21FD4FB9C0054B2D9 /* CrashAnalysis */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EB64A7361FCEB46200E8546E /* Project object */ = {
+		EB2460BA1FD4FB9C0054B2D9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "童万华";
 				TargetAttributes = {
-					EB64A73D1FCEB46200E8546E = {
+					EB2460C11FD4FB9C0054B2D9 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = EB64A7391FCEB46200E8546E /* Build configuration list for PBXProject "MemoryManager" */;
+			buildConfigurationList = EB2460BD1FD4FB9C0054B2D9 /* Build configuration list for PBXProject "CrashAnalysis" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = EB64A7351FCEB46200E8546E;
-			productRefGroup = EB64A73F1FCEB46200E8546E /* Products */;
+			mainGroup = EB2460B91FD4FB9C0054B2D9;
+			productRefGroup = EB2460C31FD4FB9C0054B2D9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EB64A73D1FCEB46200E8546E /* MemoryManager */,
+				EB2460C11FD4FB9C0054B2D9 /* CrashAnalysis */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EB64A73A1FCEB46200E8546E /* Sources */ = {
+		EB2460BE1FD4FB9C0054B2D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB64A7421FCEB46200E8546E /* main.m in Sources */,
-				EB69D9651FCFD17000CAE612 /* TYObject.m in Sources */,
+				EB2460C61FD4FB9C0054B2D9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		EB64A7431FCEB46200E8546E /* Debug */ = {
+		EB2460C71FD4FB9C0054B2D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -187,7 +181,7 @@
 			};
 			name = Debug;
 		};
-		EB64A7441FCEB46200E8546E /* Release */ = {
+		EB2460C81FD4FB9C0054B2D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -235,20 +229,18 @@
 			};
 			name = Release;
 		};
-		EB64A7461FCEB46200E8546E /* Debug */ = {
+		EB2460CA1FD4FB9C0054B2D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NVZ53TTCA3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		EB64A7471FCEB46200E8546E /* Release */ = {
+		EB2460CB1FD4FB9C0054B2D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NVZ53TTCA3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -258,25 +250,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EB64A7391FCEB46200E8546E /* Build configuration list for PBXProject "MemoryManager" */ = {
+		EB2460BD1FD4FB9C0054B2D9 /* Build configuration list for PBXProject "CrashAnalysis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EB64A7431FCEB46200E8546E /* Debug */,
-				EB64A7441FCEB46200E8546E /* Release */,
+				EB2460C71FD4FB9C0054B2D9 /* Debug */,
+				EB2460C81FD4FB9C0054B2D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EB64A7451FCEB46200E8546E /* Build configuration list for PBXNativeTarget "MemoryManager" */ = {
+		EB2460C91FD4FB9C0054B2D9 /* Build configuration list for PBXNativeTarget "CrashAnalysis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EB64A7461FCEB46200E8546E /* Debug */,
-				EB64A7471FCEB46200E8546E /* Release */,
+				EB2460CA1FD4FB9C0054B2D9 /* Debug */,
+				EB2460CB1FD4FB9C0054B2D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EB64A7361FCEB46200E8546E /* Project object */;
+	rootObject = EB2460BA1FD4FB9C0054B2D9 /* Project object */;
 }
