@@ -81,7 +81,7 @@ static CGFloat const kDefaultThumbnailWidth = 100;
     // 照片群组数组
     NSMutableArray *groups = [NSMutableArray array];
     
-    dispatch_sync(self.concurrentQueue, ^{
+    dispatch_async(self.concurrentQueue, ^{
         // 获取系统相册
         PHFetchResult <PHAssetCollection *>*systemAlbums = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
         // 获取用户自定义相册

@@ -10,6 +10,9 @@
 #import "TYNetWorkingTool.h"
 #import "TYSegmentView.h"
 #import "TYRecommendViewController.h"
+#import "TYPublicViewController.h"
+/*测试相册功能*/
+
 @interface TYHomeViewController ()<TYSegmentControlDelegate,UIScrollViewDelegate>
 @property (nonatomic,strong) UIScrollView *scrollView;
 @property (nonatomic,strong) TYSegmentView *segmentView;
@@ -38,7 +41,7 @@
     TBCityIconInfo *iconInfo = TBCityIconInfoMake(@"\U0000e6df", 24, [UIColor randomColor]);
     UIImage *image = [UIImage iconWithInfo:iconInfo];
     
-    UIBarButtonItem *rightBtn = [UIBarButtonItem barBtnItemWithNormalIcon:image highlightIcon:image target:self action:@selector(handleClick)];
+    UIBarButtonItem *rightBtn = [UIBarButtonItem barBtnItemWithNormalIcon:image highlightIcon:image target:self action:@selector(handleRightItemClick)];
     self.navigationItem.rightBarButtonItem = rightBtn;
     
 }
@@ -104,5 +107,11 @@
     int index = scrollView.contentOffset.x / scrollView.frame.size.width;
     [self.segmentView updateSelectedItemIndex:index];
     
+}
+#pragma Private Method
+
+-(void)handleRightItemClick {
+    TYPublicViewController *publicVC = [[TYPublicViewController alloc] init];
+    [self.navigationController pushViewController:publicVC animated:YES];
 }
 @end

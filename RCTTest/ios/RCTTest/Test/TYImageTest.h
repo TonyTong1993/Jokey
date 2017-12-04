@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TYImageTest : NSObject
+@interface TYImageTest : NSObject<NSCopying>
 @property (nonatomic,assign) NSUInteger imageID;
 @property (nonatomic,assign) NSUInteger h;
 @property (nonatomic,assign) NSUInteger w;

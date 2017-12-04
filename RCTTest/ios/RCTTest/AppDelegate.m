@@ -22,6 +22,8 @@
 #endif
 // 如果需要使用idfa功能所需要引入的头文件（可选）
 #import <AdSupport/AdSupport.h>
+//实验文件入口
+#import "TYMemoryManager.h"
 @interface AppDelegate ()<UNUserNotificationCenterDelegate,JPUSHRegisterDelegate>
 
 @end
@@ -69,7 +71,7 @@
         }];
 
    
-            [self pushLocalNotification];
+//            [self pushLocalNotification];
      
     }else {
         UIUserNotificationType type = UIUserNotificationTypeAlert;
@@ -127,6 +129,9 @@
                           channel:@""
                  apsForProduction:false
             advertisingIdentifier:advertisingId];
+    
+    
+    [[TYMemoryManager alloc] init];
     
     return YES;
 }

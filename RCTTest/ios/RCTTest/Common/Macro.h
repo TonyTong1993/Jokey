@@ -11,8 +11,8 @@
 
 
 #endif /* Macro_h */
-#define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
-#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define SCREEN_WIDTH   [[UIApplication sharedApplication].delegate window].rootViewController.view.bounds.size.width
+#define SCREEN_HEIGHT  [[UIApplication sharedApplication].delegate window].rootViewController.view.bounds.size.height
 #define SCREEN_WIDTH_SCALE SCREEN_WIDTH / 375.0f
 
 

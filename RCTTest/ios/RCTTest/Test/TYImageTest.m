@@ -12,4 +12,7 @@
 +(NSDictionary *)mj_replacedKeyFromPropertyName {
     return @{@"imageID":@"id"};
 }
+-(id)copyWithZone:(NSZone *)zone {
+    return [[[self class] alloc] init];
+}
 @end
