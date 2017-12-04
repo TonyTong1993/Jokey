@@ -1,6 +1,6 @@
 /* @flow */
 
-import React, { Component ,PropTypes} from 'react';
+import React, { Component } from 'react';
 import {
   View,
   Text,
@@ -38,25 +38,8 @@ testObject.save({
 })
 
 */
-//定义一个类
-var TestObject = AV.Object.extend('DataTypeTest');
-var number = 2017;
-var string = 'famous film name is' + number;
-var date = new Date();
-var array = [string,number];
-var object = {number:number,string:string};
-var testObject = new TestObject();
-testObject.set('testNumber',number);
-testObject.set('testString',string);
-testObject.set('testDate',date);
-testObject.set('testArray',array);
-testObject.set('testObject',object);
-testObject.set('TestNull',null);
-testObject.save().then((testObject)=>{
-    console.log('success');
-},(error)=>{
-  console.log('failure');
-});
+
+
 
 
 
