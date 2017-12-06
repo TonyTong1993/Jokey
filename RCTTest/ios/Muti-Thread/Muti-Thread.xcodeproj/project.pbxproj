@@ -25,10 +25,18 @@
 /* Begin PBXFileReference section */
 		EB2460A91FD4F0260054B2D9 /* Muti-Thread */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Muti-Thread"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2460AC1FD4F0260054B2D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EB7C64521FD64A950018AC3A /* XCThreadTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCThreadTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EB2460A61FD4F0260054B2D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB7C644F1FD64A950018AC3A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -50,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				EB2460A91FD4F0260054B2D9 /* Muti-Thread */,
+				EB7C64521FD64A950018AC3A /* XCThreadTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +91,23 @@
 			productReference = EB2460A91FD4F0260054B2D9 /* Muti-Thread */;
 			productType = "com.apple.product-type.tool";
 		};
+		EB7C64511FD64A950018AC3A /* XCThreadTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB7C64591FD64A950018AC3A /* Build configuration list for PBXNativeTarget "XCThreadTest" */;
+			buildPhases = (
+				EB7C644E1FD64A950018AC3A /* Sources */,
+				EB7C644F1FD64A950018AC3A /* Frameworks */,
+				EB7C64501FD64A950018AC3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XCThreadTest;
+			productName = XCThreadTest;
+			productReference = EB7C64521FD64A950018AC3A /* XCThreadTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +118,10 @@
 				ORGANIZATIONNAME = "童万华";
 				TargetAttributes = {
 					EB2460A81FD4F0260054B2D9 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					EB7C64511FD64A950018AC3A = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
@@ -110,9 +140,20 @@
 			projectRoot = "";
 			targets = (
 				EB2460A81FD4F0260054B2D9 /* Muti-Thread */,
+				EB7C64511FD64A950018AC3A /* XCThreadTest */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB7C64501FD64A950018AC3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EB2460A51FD4F0260054B2D9 /* Sources */ = {
@@ -120,6 +161,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB2460AD1FD4F0260054B2D9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB7C644E1FD64A950018AC3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +295,39 @@
 			};
 			name = Release;
 		};
+		EB7C64571FD64A950018AC3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NVZ53TTCA3;
+				INFOPLIST_FILE = XCThreadTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.XCThreadTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EB7C64581FD64A950018AC3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NVZ53TTCA3;
+				INFOPLIST_FILE = XCThreadTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.XCThreadTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -264,6 +345,15 @@
 			buildConfigurations = (
 				EB2460B11FD4F0260054B2D9 /* Debug */,
 				EB2460B21FD4F0260054B2D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB7C64591FD64A950018AC3A /* Build configuration list for PBXNativeTarget "XCThreadTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB7C64571FD64A950018AC3A /* Debug */,
+				EB7C64581FD64A950018AC3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

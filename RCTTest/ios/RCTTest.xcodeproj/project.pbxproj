@@ -149,6 +149,10 @@
 		EB777A3F1F7BB17F000461B3 /* icon_certification@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB777A381F7B9C90000461B3 /* icon_certification@2x.png */; };
 		EB777A401F7BB187000461B3 /* icon_certification@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB777A391F7B9C90000461B3 /* icon_certification@3x.png */; };
 		EB777A461F7BC7E5000461B3 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = EB777A451F7BC7C4000461B3 /* main.jsbundle */; };
+		EB7C64431FD63F720018AC3A /* RCTTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7C64421FD63F720018AC3A /* RCTTestTests.m */; };
+		EB7C644D1FD646F70018AC3A /* TYNumberOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7C644C1FD646F70018AC3A /* TYNumberOperations.m */; };
+		EB7C64601FD67BBB0018AC3A /* TestSortModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7C645E1FD67BBB0018AC3A /* TestSortModel.m */; };
+		EB7C64621FD681E60018AC3A /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB7C64611FD681E60018AC3A /* libOCMock.a */; };
 		EB811C711F763934003552E9 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB811C701F763934003552E9 /* libMBProgressHUD.a */; };
 		EB811C751F764273003552E9 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = EB811C741F764273003552E9 /* MBProgressHUD+MJ.m */; };
 		EB8B73A21FC6CF2C00B9DE66 /* TYPublicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8B73A11FC6CF2C00B9DE66 /* TYPublicViewController.m */; };
@@ -183,6 +187,16 @@
 		EBE0F7AC1F773C83006F0AD8 /* TYSegmentScrollVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0F7AB1F773C83006F0AD8 /* TYSegmentScrollVIew.swift */; };
 		EDEBCEE583499B68DDF9A070 /* libPods-RCTTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4685E6D3869C8CFF7EF29817 /* libPods-RCTTest.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EB7C64451FD63F720018AC3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB032D131F0251F300F32465 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB032D1A1F0251F300F32465;
+			remoteInfo = RCTTest;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4685E6D3869C8CFF7EF29817 /* libPods-RCTTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RCTTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -390,6 +404,24 @@
 		EB777A391F7B9C90000461B3 /* icon_certification@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_certification@3x.png"; sourceTree = "<group>"; };
 		EB777A3A1F7B9C91000461B3 /* icon_certification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_certification.png; sourceTree = "<group>"; };
 		EB777A451F7BC7C4000461B3 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		EB7C64401FD63F720018AC3A /* RCTTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCTTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB7C64421FD63F720018AC3A /* RCTTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTTestTests.m; sourceTree = "<group>"; };
+		EB7C64441FD63F720018AC3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB7C644B1FD646F70018AC3A /* TYNumberOperations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYNumberOperations.h; sourceTree = "<group>"; };
+		EB7C644C1FD646F70018AC3A /* TYNumberOperations.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYNumberOperations.m; sourceTree = "<group>"; };
+		EB7C645E1FD67BBB0018AC3A /* TestSortModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSortModel.m; sourceTree = "<group>"; };
+		EB7C645F1FD67BBB0018AC3A /* TestSortModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSortModel.h; sourceTree = "<group>"; };
+		EB7C64611FD681E60018AC3A /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = lib/libOCMock.a; sourceTree = SOURCE_ROOT; };
+		EB7C64641FD682AD0018AC3A /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		EB7C64651FD682AD0018AC3A /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		EB7C64661FD682AD0018AC3A /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		EB7C64671FD682AD0018AC3A /* OCMFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMFunctions.h; sourceTree = "<group>"; };
+		EB7C64681FD682AD0018AC3A /* OCMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMLocation.h; sourceTree = "<group>"; };
+		EB7C64691FD682AD0018AC3A /* OCMMacroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMMacroState.h; sourceTree = "<group>"; };
+		EB7C646A1FD682AD0018AC3A /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		EB7C646B1FD682AD0018AC3A /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		EB7C646C1FD682AD0018AC3A /* OCMRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMRecorder.h; sourceTree = "<group>"; };
+		EB7C646D1FD682AD0018AC3A /* OCMStubRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMStubRecorder.h; sourceTree = "<group>"; };
 		EB811C701F763934003552E9 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "Pods/../build/Debug-iphoneos/MBProgressHUD/libMBProgressHUD.a"; sourceTree = "<group>"; };
 		EB811C731F764273003552E9 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		EB811C741F764273003552E9 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
@@ -480,6 +512,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EB7C643D1FD63F720018AC3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB7C64621FD681E60018AC3A /* libOCMock.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -521,6 +561,7 @@
 			children = (
 				EB6500F91F418DE500C0B89A /* ThirdFramework */,
 				EB032D1D1F0251F300F32465 /* RCTTest */,
+				EB7C64411FD63F720018AC3A /* RCTTestTests */,
 				EB032D1C1F0251F300F32465 /* Products */,
 				7953CC99AFBE83F484FADF8B /* Pods */,
 				C99CA68C2F5497E7F1256D9E /* Frameworks */,
@@ -531,6 +572,7 @@
 			isa = PBXGroup;
 			children = (
 				EB032D1B1F0251F300F32465 /* RCTTest.app */,
+				EB7C64401FD63F720018AC3A /* RCTTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -580,6 +622,7 @@
 		EB18D3E11F0F41FE00B44790 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				EB7C644A1FD645220018AC3A /* XCTestModel */,
 				EB09640A1F79214600417BB3 /* list.json */,
 				EB58657D1F55706300598DA0 /* Profile.json */,
 				EB55658E1F43021C005BB5DC /* topic.json */,
@@ -1231,6 +1274,46 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		EB7C64411FD63F720018AC3A /* RCTTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB7C64631FD682AD0018AC3A /* OCMock */,
+				EB7C64611FD681E60018AC3A /* libOCMock.a */,
+				EB7C64421FD63F720018AC3A /* RCTTestTests.m */,
+				EB7C64441FD63F720018AC3A /* Info.plist */,
+			);
+			path = RCTTestTests;
+			sourceTree = "<group>";
+		};
+		EB7C644A1FD645220018AC3A /* XCTestModel */ = {
+			isa = PBXGroup;
+			children = (
+				EB7C645F1FD67BBB0018AC3A /* TestSortModel.h */,
+				EB7C645E1FD67BBB0018AC3A /* TestSortModel.m */,
+				EB7C644B1FD646F70018AC3A /* TYNumberOperations.h */,
+				EB7C644C1FD646F70018AC3A /* TYNumberOperations.m */,
+			);
+			path = XCTestModel;
+			sourceTree = "<group>";
+		};
+		EB7C64631FD682AD0018AC3A /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				EB7C64641FD682AD0018AC3A /* NSNotificationCenter+OCMAdditions.h */,
+				EB7C64651FD682AD0018AC3A /* OCMArg.h */,
+				EB7C64661FD682AD0018AC3A /* OCMConstraint.h */,
+				EB7C64671FD682AD0018AC3A /* OCMFunctions.h */,
+				EB7C64681FD682AD0018AC3A /* OCMLocation.h */,
+				EB7C64691FD682AD0018AC3A /* OCMMacroState.h */,
+				EB7C646A1FD682AD0018AC3A /* OCMock.h */,
+				EB7C646B1FD682AD0018AC3A /* OCMockObject.h */,
+				EB7C646C1FD682AD0018AC3A /* OCMRecorder.h */,
+				EB7C646D1FD682AD0018AC3A /* OCMStubRecorder.h */,
+			);
+			name = OCMock;
+			path = usr/include/OCMock;
+			sourceTree = SOURCE_ROOT;
+		};
 		EB811C721F764273003552E9 /* MBProgressHUD-MJ */ = {
 			isa = PBXGroup;
 			children = (
@@ -1425,6 +1508,24 @@
 			productReference = EB032D1B1F0251F300F32465 /* RCTTest.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EB7C643F1FD63F720018AC3A /* RCTTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB7C64491FD63F720018AC3A /* Build configuration list for PBXNativeTarget "RCTTestTests" */;
+			buildPhases = (
+				EB7C643C1FD63F720018AC3A /* Sources */,
+				EB7C643D1FD63F720018AC3A /* Frameworks */,
+				EB7C643E1FD63F720018AC3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB7C64461FD63F720018AC3A /* PBXTargetDependency */,
+			);
+			name = RCTTestTests;
+			productName = RCTTestTests;
+			productReference = EB7C64401FD63F720018AC3A /* RCTTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1452,6 +1553,12 @@
 							};
 						};
 					};
+					EB7C643F1FD63F720018AC3A = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = NVZ53TTCA3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EB032D1A1F0251F300F32465;
+					};
 				};
 			};
 			buildConfigurationList = EB032D161F0251F300F32465 /* Build configuration list for PBXProject "RCTTest" */;
@@ -1468,6 +1575,7 @@
 			projectRoot = "";
 			targets = (
 				EB032D1A1F0251F300F32465 /* RCTTest */,
+				EB7C643F1FD63F720018AC3A /* RCTTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1505,6 +1613,13 @@
 				EB032D291F0251F300F32465 /* Main.storyboard in Resources */,
 				EB4347601F3B51D100EC7AE9 /* TYStatusViewCell.xib in Resources */,
 				EB5A9A041F3C64C30031C497 /* TestView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB7C643E1FD63F720018AC3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1635,6 +1750,7 @@
 				EB55658D1F42FEB0005BB5DC /* Bundle(Add).swift in Sources */,
 				EB714BCC1F4806190024C929 /* README.md in Sources */,
 				EB6592521F75022E0059A3B9 /* TYLoginViewController.m in Sources */,
+				EB7C644D1FD646F70018AC3A /* TYNumberOperations.m in Sources */,
 				EB60BB8F1F454DB60062DBC2 /* TYAttentionViewCell.swift in Sources */,
 				EBE0F7A41F76877D006F0AD8 /* TYSearchViewController.swift in Sources */,
 				EB5D39381F3491C30029085F /* TYSegmentViewController.m in Sources */,
@@ -1670,6 +1786,7 @@
 				EB6500E81F4182DE00C0B89A /* TYMessageViewController.swift in Sources */,
 				EB5A2A131F03890100A19F2C /* TYNavigationController.m in Sources */,
 				EB5D39311F3464200029085F /* TYSegmentConst.m in Sources */,
+				EB7C64601FD67BBB0018AC3A /* TestSortModel.m in Sources */,
 				EB32F1451F4AE32D00D766AF /* TYSegmentView.swift in Sources */,
 				EB5D39341F34657C0029085F /* TYSegmentTool.m in Sources */,
 				EB3299CE1F1354420034D095 /* TYHomeViewController.m in Sources */,
@@ -1732,7 +1849,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EB7C643C1FD63F720018AC3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB7C64431FD63F720018AC3A /* RCTTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EB7C64461FD63F720018AC3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB032D1A1F0251F300F32465 /* RCTTest */;
+			targetProxy = EB7C64451FD63F720018AC3A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EB032D271F0251F300F32465 /* Main.storyboard */ = {
@@ -1899,6 +2032,72 @@
 			};
 			name = Release;
 		};
+		EB7C64471FD63F720018AC3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NVZ53TTCA3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/usr/include";
+				INFOPLIST_FILE = RCTTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.RCTTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RCTTest.app/RCTTest";
+			};
+			name = Debug;
+		};
+		EB7C64481FD63F720018AC3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NVZ53TTCA3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/usr/include";
+				INFOPLIST_FILE = RCTTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.RCTTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RCTTest.app/RCTTest";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1916,6 +2115,15 @@
 			buildConfigurations = (
 				EB032D331F0251F300F32465 /* Debug */,
 				EB032D341F0251F300F32465 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB7C64491FD63F720018AC3A /* Build configuration list for PBXNativeTarget "RCTTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB7C64471FD63F720018AC3A /* Debug */,
+				EB7C64481FD63F720018AC3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

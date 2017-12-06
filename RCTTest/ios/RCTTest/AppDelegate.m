@@ -131,8 +131,6 @@
             advertisingIdentifier:advertisingId];
     
     
-    [[TYMemoryManager alloc] init];
-    
     return YES;
 }
 -(void)pushLocalNotification {
