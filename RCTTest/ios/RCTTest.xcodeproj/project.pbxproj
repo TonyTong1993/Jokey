@@ -145,6 +145,8 @@
 		EB714BEB1F4806190024C929 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB714BC81F4806190024C929 /* LayoutConstraint.swift */; };
 		EB714BEC1F4806190024C929 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB714BC91F4806190024C929 /* LayoutConstraintItem.swift */; };
 		EB714BED1F4806190024C929 /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB714BCA1F4806190024C929 /* UILayoutSupport+Extensions.swift */; };
+		EB74A44F1FDE6902009D6579 /* TYMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB74A44E1FDE6902009D6579 /* TYMapView.m */; };
+		EB74A4521FDE6D26009D6579 /* TYMapViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB74A4511FDE6D26009D6579 /* TYMapViewDelegate.m */; };
 		EB777A3E1F7BB161000461B3 /* icon_certification.png in Resources */ = {isa = PBXBuildFile; fileRef = EB777A3A1F7B9C91000461B3 /* icon_certification.png */; };
 		EB777A3F1F7BB17F000461B3 /* icon_certification@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB777A381F7B9C90000461B3 /* icon_certification@2x.png */; };
 		EB777A401F7BB187000461B3 /* icon_certification@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB777A391F7B9C90000461B3 /* icon_certification@3x.png */; };
@@ -400,6 +402,10 @@
 		EB714BC81F4806190024C929 /* LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraint.swift; sourceTree = "<group>"; };
 		EB714BC91F4806190024C929 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraintItem.swift; sourceTree = "<group>"; };
 		EB714BCA1F4806190024C929 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
+		EB74A44D1FDE6902009D6579 /* TYMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYMapView.h; sourceTree = "<group>"; };
+		EB74A44E1FDE6902009D6579 /* TYMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYMapView.m; sourceTree = "<group>"; };
+		EB74A4501FDE6D26009D6579 /* TYMapViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYMapViewDelegate.h; sourceTree = "<group>"; };
+		EB74A4511FDE6D26009D6579 /* TYMapViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYMapViewDelegate.m; sourceTree = "<group>"; };
 		EB777A381F7B9C90000461B3 /* icon_certification@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_certification@2x.png"; sourceTree = "<group>"; };
 		EB777A391F7B9C90000461B3 /* icon_certification@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_certification@3x.png"; sourceTree = "<group>"; };
 		EB777A3A1F7B9C91000461B3 /* icon_certification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_certification.png; sourceTree = "<group>"; };
@@ -797,6 +803,8 @@
 			children = (
 				EBB77D671F677BD700A1C59C /* TYProfileViewModel.h */,
 				EBB77D681F677BD700A1C59C /* TYProfileViewModel.m */,
+				EB74A4501FDE6D26009D6579 /* TYMapViewDelegate.h */,
+				EB74A4511FDE6D26009D6579 /* TYMapViewDelegate.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -804,6 +812,8 @@
 		EB5865861F5575A300598DA0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EB74A44D1FDE6902009D6579 /* TYMapView.h */,
+				EB74A44E1FDE6902009D6579 /* TYMapView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1753,6 +1763,7 @@
 				EB7C644D1FD646F70018AC3A /* TYNumberOperations.m in Sources */,
 				EB60BB8F1F454DB60062DBC2 /* TYAttentionViewCell.swift in Sources */,
 				EBE0F7A41F76877D006F0AD8 /* TYSearchViewController.swift in Sources */,
+				EB74A44F1FDE6902009D6579 /* TYMapView.m in Sources */,
 				EB5D39381F3491C30029085F /* TYSegmentViewController.m in Sources */,
 				EBB77D691F677BD700A1C59C /* TYProfileViewModel.m in Sources */,
 				EBA8F87F1FC66D12005A2B84 /* LLBrowserImageView.m in Sources */,
@@ -1826,6 +1837,7 @@
 				EB266F651F3B38AE00949D40 /* TYRecommendViewController.m in Sources */,
 				EB714BD11F4806190024C929 /* ConstraintDescription.swift in Sources */,
 				EBA8F8811FC66D12005A2B84 /* LLSelectButton.m in Sources */,
+				EB74A4521FDE6D26009D6579 /* TYMapViewDelegate.m in Sources */,
 				EB266F4E1F3B29DA00949D40 /* TYModelTest.m in Sources */,
 				EB714BE31F4806190024C929 /* ConstraintPriority.swift in Sources */,
 				EB714BD71F4806190024C929 /* ConstraintLayoutGuide.swift in Sources */,

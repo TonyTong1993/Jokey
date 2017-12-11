@@ -10,5 +10,5 @@
 #import <FMDB/FMDB.h>
 @interface TYDBTool : NSObject
 +(instancetype)shareInstance;
-@property (nonatomic,strong) FMDatabase *db;
+@property (nonatomic,strong) FMDatabaseQueue *dbQueue;
 @end

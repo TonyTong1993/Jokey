@@ -13,7 +13,9 @@
 #import "TYProfileViewModel.h"
 #import "TYRunViewController.h"
 @interface TYProfileViewController ()
-
+{
+    NSTimeInterval time;
+}
 @end
 
 @implementation TYProfileViewController
@@ -24,6 +26,24 @@
     //添加测试数据
     NSDictionary *jsonDict = [NSBundle loadJsonFromBundle:@"Profile"];
     self.dataSource = [TYProfileViewModel mj_objectArrayWithKeyValuesArray:jsonDict[@"data"]];
+    
+  NSTimer *timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(scheduledTimer) userInfo:nil repeats:false];
+  [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    time = 0;
+    [timer fire];
+
+}
+
+-(void)scheduledTimer {
+  
+   TYProfileViewModel *model = [[self.dataSource firstObject] firstObject];
+   NSString *title = [NSString stringWithFormat:@"-----%lf",time++];
+    model.title = title;
+    NSLog(@"%@",[NSThread currentThread]);
+//   NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+//    });
 }
 
 -(void)setUpTableView {
@@ -66,8 +86,8 @@
      TYProfileViewModel *model = self.dataSource[indexPath.section][indexPath.row];
     UIViewController *VC;
     if ([model.className isEqualToString:@"TYShopViewController"]) {
-         NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
-//        NSURL *jsCodeLocation = [NSURL URLWithString:@"http://192.168.10.48:8081/index.ios.bundle?platform=ios"];
+//         NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+        NSURL *jsCodeLocation = [NSURL URLWithString:@"http://192.168.10.40:8081/index.ios.bundle?platform=ios"];
         RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:@"test" initialProperties:@{} launchOptions:nil];
         TYShopViewController *vc = [[TYShopViewController alloc] init];
         vc.view = rootView;
