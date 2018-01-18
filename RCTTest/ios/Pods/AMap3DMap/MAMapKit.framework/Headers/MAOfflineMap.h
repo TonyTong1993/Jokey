@@ -18,7 +18,7 @@
 ///离线地图下载状态
 typedef NS_ENUM(NSInteger, MAOfflineMapDownloadStatus)
 {
-    MAOfflineMapDownloadStatusWaiting,       ///< 以插入队列，等待中
+    MAOfflineMapDownloadStatusWaiting = 0,       ///< 以插入队列，等待中
     MAOfflineMapDownloadStatusStart,         ///< 开始下载
     MAOfflineMapDownloadStatusProgress,      ///< 下载过程中
     MAOfflineMapDownloadStatusCompleted,     ///< 下载成功
@@ -117,8 +117,9 @@ typedef void(^MAOfflineMapNewestVersionBlock)(BOOL hasNewestVersion);
 /**
  * @brief 暂停下载
  * @param item 条目
+ * @return 是否在执行了cancel，如果该item并未在下载中，则返回NO
  */
-- (void)pauseItem:(MAOfflineItem *)item;
+- (BOOL)pauseItem:(MAOfflineItem *)item;
 
 /**
  * @brief 删除item对应离线地图数据

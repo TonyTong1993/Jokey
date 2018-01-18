@@ -38,6 +38,14 @@ typedef NS_ENUM(NSInteger, AMapLocationRegionState)
     AMapLocationRegionStateOutside = 2,         ///<在范围外
 };
 
+///AMapLocation Region Language
+typedef NS_ENUM(NSInteger, AMapLocationReGeocodeLanguage)
+{
+    AMapLocationReGeocodeLanguageDefault = 0,          ///<默认，根据地区选择语言
+    AMapLocationReGeocodeLanguageChinse = 1,           ///<中文
+    AMapLocationReGeocodeLanguageEnglish = 2,          ///<英文
+};
+
 ///逆地理信息
 @interface AMapLocationReGeocode : NSObject<NSCopying,NSCoding>
 

@@ -76,7 +76,7 @@ static NSString *reuseIndentifier = @"KTYImageViewCell";
     _model = model;
     TYMemberTest *member = [TYMemberTest mj_objectWithKeyValues:model.member];
     NSString *avatarPath = [TYServiceApi serviceForImagePath:api_common_avatar imageID:member.avatar size:228];
-    [_avatarView sd_setImageWithURL:[NSURL URLWithString:avatarPath]];
+    [_avatarView sd_setImageWithURL:[NSURL URLWithString:avatarPath] placeholderImage:nil];
     _nameLabel.text = member.name;
     _contentLabel.text = model.content;
     CGFloat collectionViewheight = [TYHomeUitl homeUitlGetCollectionViewHeight:model.imgs.count];

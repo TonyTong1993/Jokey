@@ -28,7 +28,7 @@ typedef NS_ENUM(NSInteger, MAAnnotationViewDragState)
 ///复用标识
 @property (nonatomic, readonly, copy) NSString *reuseIdentifier;
 
-///z值，大值在上，默认为0。类似CALayer的zPosition
+///z值，大值在上，默认为0。类似CALayer的zPosition。zIndex属性只有在viewForAnnotation或者didAddAnnotationViews回调中设置有效。
 @property (nonatomic, assign) NSInteger zIndex;
 
 ///关联的annotation

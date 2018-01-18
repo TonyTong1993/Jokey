@@ -22,6 +22,13 @@ typedef NS_OPTIONS(NSUInteger, AMapGeoFenceActiveAction)
     AMapGeoFenceActiveActionStayed   = 1 << 2,  ///< 停留(在范围内超过10分钟)
 };
 
+///地理围栏任务状态类型
+typedef NS_OPTIONS(NSUInteger, AMapGeoFenceRegionActiveStatus)
+{
+    AMapGeoFenceRegionActiveUNMonitor   = 0,       ///< 未注册
+    AMapGeoFenceRegionActiveMonitoring  = 1 << 0,  ///< 正在监控
+    AMapGeoFenceRegionActivePaused      = 1 << 1,  ///< 暂停监控
+};
 
 ///地理围栏管理类（since 2.3.0）
 @interface AMapGeoFenceManager : NSObject
@@ -94,14 +101,63 @@ typedef NS_OPTIONS(NSUInteger, AMapGeoFenceActiveAction)
  */
 - (void)addDistrictRegionForMonitoringWithDistrictName:(NSString *)districtName customID:(NSString *)customID;
 
+/**
+ * @brief 获取指定围栏的运行状态
+ * @param region 要获取运行状态的围栏
+ * @return 返回指定围栏的运行状态
+ */
+- (AMapGeoFenceRegionActiveStatus)statusWithGeoFenceRegion:(AMapGeoFenceRegion *)region;
 
 /**
- * @brief 根据customID获得指定的围栏，如果customID传nil，则返回全部围栏
+ * @brief 根据customID获得所有已经注册的围栏，如果customID传nil，则返回全部已注册围栏
  * @param customID 用户执行添加围栏函数时传入的customID
  * @return 获得的围栏构成的数组，如果没有结果，返回nil
  */
 - (NSArray *)geoFenceRegionsWithCustomID:(NSString *)customID;
 
+/**
+ * @brief 根据customID获得所有正在监控的围栏，如果customID传nil，则返回全部正在监控的围栏
+ * @param customID 用户执行添加围栏函数时传入的customID
+ * @return 获得的围栏构成的数组，如果没有结果，返回nil
+ */
+- (NSArray *)monitoringGeoFenceRegionsWithCustomID:(NSString *)customID;
+
+/**
+ * @brief 根据customID获得所有已经暂停的围栏，如果customID传nil，则返回全部已经暂停的围栏
+ * @param customID 用户执行添加围栏函数时传入的customID
+ * @return 获得的围栏构成的数组，如果没有结果，返回nil
+ */
+- (NSArray *)pausedGeoFenceRegionsWithCustomID:(NSString *)customID;
+
+
+/**
+ * @brief 暂停指定customID的围栏
+ * @param customID 用户执行添加围栏函数时传入的customID
+ * @return 返回被暂停围栏的数组，如果没有围栏被暂停，返回nil
+ */
+- (NSArray *)pauseGeoFenceRegionsWithCustomID:(NSString *)customID;
+
+
+/**
+ * @brief 暂停指定围栏
+ * @param region 要暂停监控的围栏
+ * @return 返回指定围栏是否被暂停，如果指定围栏没有注册，则返回NO
+ */
+- (BOOL)pauseTheGeoFenceRegion:(AMapGeoFenceRegion *)region;
+
+/**
+ * @brief 根据customID开始监控已经暂停的围栏
+ * @param customID 用户执行添加围栏函数时传入的customID
+ * @return 返回开始监控的围栏构成的数组
+ */
+- (NSArray *)startGeoFenceRegionsWithCustomID:(NSString *)customID;
+
+/**
+ * @brief 开始监控指定围栏
+ * @param region 要开始监控的围栏
+ * @return 返回指定围栏是否开始监控，如果指定围栏没有注册，则返回NO
+ */
+- (BOOL)startTheGeoFenceRegion:(AMapGeoFenceRegion *)region;
 
 /**
  * @brief 移除指定围栏

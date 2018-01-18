@@ -121,25 +121,30 @@
     
 }
 -(void)updateSelectedItemIndex:(NSUInteger)selectedItemIndex {
-    if (selectedItemIndex != _selectedItemIndex) {
-        UIButton *preItem = _items[_selectedItemIndex];
-        UIButton *lastItem = _items[selectedItemIndex];
+    UIButton *preItem = _items[_selectedItemIndex];
+    UIButton *lastItem = _items[selectedItemIndex];
+    if (preItem != lastItem) {
         [preItem setSelected:false];
         [lastItem setSelected:true];
         _selectedItemIndex = selectedItemIndex;
-       
+        
+        [self setTitleNormalColor:_titleNormalColor item:preItem];
+        [self setTitleSelectedColor:_titleSelectedColor item:preItem];
+        
+        [self setTitleNormalColor:_titleNormalColor item:lastItem];
+        [self setTitleSelectedColor:_titleSelectedColor item:lastItem];
     }
-    [_items enumerateObjectsUsingBlock:^(UIButton*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-       [self setTitleNormalColor:_titleNormalColor item:obj];
-       [self setTitleSelectedColor:_titleSelectedColor item:obj];
-    }];
+    
+//       [self setTitleNormalColor:_titleNormalColor item:preItem];
+//       [self setTitleSelectedColor:_titleSelectedColor item:preItem];
+    
 }
 -(void)setIndicatorBackgroundColor:(UIColor *)color {
     self.indicatorView.backgroundColor = color;
 }
 -(void)setIndicatorViewScrollOffSetX:(UIScrollView *)scrollView {
     NSUInteger count = self.titles.count;
-    CGFloat value = scrollView.contentOffset.x / scrollView.frame.size.width;
+    CGFloat value = (scrollView.contentOffset.x+0.5)/ scrollView.frame.size.width;
     if (value >= count - 1) return;
     if (value <= 0) return;
     CGFloat scaleRight = 0;
@@ -157,10 +162,10 @@
     CGFloat originalY =  _indicatorView.center.y;
     CGFloat centerX = leftItem.center.x + (rightItem.center.x - leftItem.center.x) * scaleRight;
     _indicatorView.center = CGPointMake(centerX, originalY);
-    [self setupGramientWithValueTag:value leftItem:leftItem rightItem:rightItem scaleRight:scaleRight];
+    [self setupGradientWithValueTag:value leftItem:leftItem rightItem:rightItem scaleRight:scaleRight];
     
 }
--(void)setupGramientWithValueTag:(NSInteger)value leftItem:(UIButton*)leftItem rightItem:(UIButton*)rightItem scaleRight:(CGFloat)scaleRight
+-(void)setupGradientWithValueTag:(NSInteger)value leftItem:(UIButton*)leftItem rightItem:(UIButton*)rightItem scaleRight:(CGFloat)scaleRight
 {
     if (value > _selectedItemIndex || value == _selectedItemIndex) {
         [self setTitleSelectedColor:[UIColor oldColorWithSelectedColorRGBA:self.selectedColorRgbaArr deltaRGBA:self.gradientRgbaArr scale:scaleRight] item:leftItem];
@@ -217,7 +222,7 @@
 -(void)handleItemSelectedAtIndex:(UIButton *)selectedItem {
     if (selectedItem.indexInSegmentView != self.selectedItemIndex) {
         UIButton *currentSeletedItem = _items[_selectedItemIndex];
-        [currentSeletedItem setSelected:false];
+        [currentSeletedItem setSelected:NO];
         [selectedItem setSelected:YES];
         _selectedItemIndex = selectedItem.indexInSegmentView;
         //更新指示器

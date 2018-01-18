@@ -21,6 +21,7 @@
 		EB18D3EA1F0F725C00B44790 /* TYVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3E91F0F725C00B44790 /* TYVideoController.swift */; };
 		EB18D3F51F0F890700B44790 /* TYNetWorkingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3F41F0F890700B44790 /* TYNetWorkingTool.m */; };
 		EB18D3F81F0F89C500B44790 /* TYServiceApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3F71F0F89C500B44790 /* TYServiceApi.m */; };
+		EB1DD95E200F82D300E860BD /* UIFont+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1DD95D200F82D300E860BD /* UIFont+Extension.m */; };
 		EB2425F71F34C5D800E0ACE6 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2425F61F34C5D800E0ACE6 /* libReact.a */; };
 		EB25C5F11F6790FF00115214 /* TYRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB25C5F01F6790FF00115214 /* TYRunViewController.m */; };
 		EB266F4E1F3B29DA00949D40 /* TYModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB266F4D1F3B29DA00949D40 /* TYModelTest.m */; };
@@ -30,19 +31,10 @@
 		EB266F5A1F3B2D2000949D40 /* TYReviewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB266F591F3B2D2000949D40 /* TYReviewTest.m */; };
 		EB266F5C1F3B317500949D40 /* recommend.json in Resources */ = {isa = PBXBuildFile; fileRef = EB266F5B1F3B317500949D40 /* recommend.json */; };
 		EB266F651F3B38AE00949D40 /* TYRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB266F641F3B38AE00949D40 /* TYRecommendViewController.m */; };
-		EB3299C81F1352710034D095 /* fontFamily.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB3299C71F1352710034D095 /* fontFamily.txt */; };
+		EB26737B2010720A008FA02C /* pingfang.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB26737A2010720A008FA02C /* pingfang.ttf */; };
 		EB3299CE1F1354420034D095 /* TYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3299CD1F1354420034D095 /* TYHomeViewController.m */; };
 		EB3299D01F136B860034D095 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299CF1F136B860034D095 /* iconfont.ttf */; };
-		EB3299DE1F1385B60034D095 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299D41F1385B60034D095 /* Entypo.ttf */; };
-		EB3299DF1F1385B60034D095 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299D51F1385B60034D095 /* EvilIcons.ttf */; };
-		EB3299E01F1385B60034D095 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299D61F1385B60034D095 /* FontAwesome.ttf */; };
-		EB3299E11F1385B60034D095 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299D71F1385B60034D095 /* Foundation.ttf */; };
 		EB3299E21F1385B60034D095 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299D81F1385B60034D095 /* Ionicons.ttf */; };
-		EB3299E31F1385B60034D095 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299D91F1385B60034D095 /* MaterialCommunityIcons.ttf */; };
-		EB3299E41F1385B60034D095 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299DA1F1385B60034D095 /* MaterialIcons.ttf */; };
-		EB3299E51F1385B60034D095 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299DB1F1385B60034D095 /* Octicons.ttf */; };
-		EB3299E61F1385B60034D095 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299DC1F1385B60034D095 /* SimpleLineIcons.ttf */; };
-		EB3299E71F1385B60034D095 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299DD1F1385B60034D095 /* Zocial.ttf */; };
 		EB32F1431F4AE31C00D766AF /* TYSegmentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB32F1421F4AE31C00D766AF /* TYSegmentItem.swift */; };
 		EB32F1451F4AE32D00D766AF /* TYSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB32F1441F4AE32D00D766AF /* TYSegmentView.swift */; };
 		EB32F1481F4B030F00D766AF /* TYCategaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB32F1471F4B030F00D766AF /* TYCategaryViewController.swift */; };
@@ -229,6 +221,8 @@
 		EB18D3F41F0F890700B44790 /* TYNetWorkingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYNetWorkingTool.m; sourceTree = "<group>"; };
 		EB18D3F61F0F89C500B44790 /* TYServiceApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYServiceApi.h; sourceTree = "<group>"; };
 		EB18D3F71F0F89C500B44790 /* TYServiceApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYServiceApi.m; sourceTree = "<group>"; };
+		EB1DD95C200F82D300E860BD /* UIFont+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extension.h"; sourceTree = "<group>"; };
+		EB1DD95D200F82D300E860BD /* UIFont+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extension.m"; sourceTree = "<group>"; };
 		EB2425F61F34C5D800E0ACE6 /* libReact.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libReact.a; path = "Pods/../build/Debug-iphoneos/React/libReact.a"; sourceTree = "<group>"; };
 		EB25C5EF1F6790FF00115214 /* TYRunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYRunViewController.h; sourceTree = "<group>"; };
 		EB25C5F01F6790FF00115214 /* TYRunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYRunViewController.m; sourceTree = "<group>"; };
@@ -246,20 +240,11 @@
 		EB266F5D1F3B33B000949D40 /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		EB266F631F3B38AE00949D40 /* TYRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYRecommendViewController.h; sourceTree = "<group>"; };
 		EB266F641F3B38AE00949D40 /* TYRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYRecommendViewController.m; sourceTree = "<group>"; };
-		EB3299C71F1352710034D095 /* fontFamily.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fontFamily.txt; sourceTree = "<group>"; };
+		EB26737A2010720A008FA02C /* pingfang.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pingfang.ttf; sourceTree = "<group>"; };
 		EB3299CC1F1354420034D095 /* TYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYHomeViewController.h; sourceTree = "<group>"; };
 		EB3299CD1F1354420034D095 /* TYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYHomeViewController.m; sourceTree = "<group>"; };
 		EB3299CF1F136B860034D095 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
-		EB3299D41F1385B60034D095 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
-		EB3299D51F1385B60034D095 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
-		EB3299D61F1385B60034D095 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
-		EB3299D71F1385B60034D095 /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
 		EB3299D81F1385B60034D095 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
-		EB3299D91F1385B60034D095 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
-		EB3299DA1F1385B60034D095 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
-		EB3299DB1F1385B60034D095 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
-		EB3299DC1F1385B60034D095 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
-		EB3299DD1F1385B60034D095 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
 		EB32F1421F4AE31C00D766AF /* TYSegmentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYSegmentItem.swift; sourceTree = "<group>"; };
 		EB32F1441F4AE32D00D766AF /* TYSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYSegmentView.swift; sourceTree = "<group>"; };
 		EB32F1471F4B030F00D766AF /* TYCategaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYCategaryViewController.swift; sourceTree = "<group>"; };
@@ -605,7 +590,6 @@
 				EB777A3A1F7B9C91000461B3 /* icon_certification.png */,
 				EB777A381F7B9C90000461B3 /* icon_certification@2x.png */,
 				EB777A391F7B9C90000461B3 /* icon_certification@3x.png */,
-				EB3299C71F1352710034D095 /* fontFamily.txt */,
 				EB777A451F7BC7C4000461B3 /* main.jsbundle */,
 				EB3299D31F1385B60034D095 /* Fonts */,
 				EB032D2A1F0251F300F32465 /* Assets.xcassets */,
@@ -734,16 +718,8 @@
 		EB3299D31F1385B60034D095 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				EB3299D41F1385B60034D095 /* Entypo.ttf */,
-				EB3299D51F1385B60034D095 /* EvilIcons.ttf */,
-				EB3299D61F1385B60034D095 /* FontAwesome.ttf */,
-				EB3299D71F1385B60034D095 /* Foundation.ttf */,
+				EB26737A2010720A008FA02C /* pingfang.ttf */,
 				EB3299D81F1385B60034D095 /* Ionicons.ttf */,
-				EB3299D91F1385B60034D095 /* MaterialCommunityIcons.ttf */,
-				EB3299DA1F1385B60034D095 /* MaterialIcons.ttf */,
-				EB3299DB1F1385B60034D095 /* Octicons.ttf */,
-				EB3299DC1F1385B60034D095 /* SimpleLineIcons.ttf */,
-				EB3299DD1F1385B60034D095 /* Zocial.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -908,6 +884,8 @@
 				EB6712321F4C0FDE00642B72 /* String(Add).swift */,
 				EB58657F1F5570ED00598DA0 /* NSBundle+Extension.h */,
 				EB5865801F5570ED00598DA0 /* NSBundle+Extension.m */,
+				EB1DD95C200F82D300E860BD /* UIFont+Extension.h */,
+				EB1DD95D200F82D300E860BD /* UIFont+Extension.m */,
 			);
 			path = Categry;
 			sourceTree = "<group>";
@@ -1601,23 +1579,14 @@
 				EB777A3E1F7BB161000461B3 /* icon_certification.png in Resources */,
 				EB266F5C1F3B317500949D40 /* recommend.json in Resources */,
 				EB3299E21F1385B60034D095 /* Ionicons.ttf in Resources */,
-				EB3299E31F1385B60034D095 /* MaterialCommunityIcons.ttf in Resources */,
 				EB714BCB1F4806190024C929 /* LICENSE in Resources */,
 				EB032D2E1F0251F300F32465 /* LaunchScreen.storyboard in Resources */,
 				EB0964111F7927FA00417BB3 /* TYTopicCell.xib in Resources */,
-				EB3299DE1F1385B60034D095 /* Entypo.ttf in Resources */,
 				EB55658F1F43021C005BB5DC /* topic.json in Resources */,
-				EB3299C81F1352710034D095 /* fontFamily.txt in Resources */,
-				EB3299E61F1385B60034D095 /* SimpleLineIcons.ttf in Resources */,
 				EB5A9A021F3C4DC10031C497 /* TYImageViewCell.xib in Resources */,
-				EB3299E11F1385B60034D095 /* Foundation.ttf in Resources */,
-				EB3299E71F1385B60034D095 /* Zocial.ttf in Resources */,
-				EB3299E01F1385B60034D095 /* FontAwesome.ttf in Resources */,
-				EB3299DF1F1385B60034D095 /* EvilIcons.ttf in Resources */,
-				EB3299E41F1385B60034D095 /* MaterialIcons.ttf in Resources */,
 				EB032D2B1F0251F300F32465 /* Assets.xcassets in Resources */,
-				EB3299E51F1385B60034D095 /* Octicons.ttf in Resources */,
 				EB58657E1F55706300598DA0 /* Profile.json in Resources */,
+				EB26737B2010720A008FA02C /* pingfang.ttf in Resources */,
 				EB3299D01F136B860034D095 /* iconfont.ttf in Resources */,
 				EB5B52FB1FCD420D00C1F455 /* TYPhotoCollectionViewCell.xib in Resources */,
 				EB032D291F0251F300F32465 /* Main.storyboard in Resources */,
@@ -1733,6 +1702,7 @@
 				EB6712351F4C4CE500642B72 /* UIColor+RGBA.swift in Sources */,
 				EB714BE51F4806190024C929 /* ConstraintRelatableTarget.swift in Sources */,
 				EB714BE71F4806190024C929 /* ConstraintView+Extensions.swift in Sources */,
+				EB1DD95E200F82D300E860BD /* UIFont+Extension.m in Sources */,
 				EB714BD21F4806190024C929 /* ConstraintDSL.swift in Sources */,
 				EB714BEC1F4806190024C929 /* LayoutConstraintItem.swift in Sources */,
 				EBE0F7A91F76ABCA006F0AD8 /* SearchView.swift in Sources */,

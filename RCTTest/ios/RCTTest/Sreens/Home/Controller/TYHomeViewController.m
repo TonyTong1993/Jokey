@@ -27,7 +27,7 @@
     TYSegmentView *segmentView = [[TYSegmentView alloc] initWithTitles:titles];
     
     [segmentView setTitleFont:[UIFont fontWithName:[TYTheme themeFontFamilyName] size:16]];
-    [segmentView setTitleColor:HEXCOLOR(0x333333) state:SegmentControlStateNormal];
+    [segmentView setTitleColor:HEXCOLOR(0x000000) state:SegmentControlStateNormal];
     [segmentView setTitleColor:HEXCOLOR(0x55B1E6) state:SegmentControlStateSelected];
     segmentView.delegate = self;
     [segmentView setSelectedItemIndex:0];

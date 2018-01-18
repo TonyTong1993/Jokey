@@ -52,10 +52,8 @@
 	<string>Jokey想访问您的位置信息</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>iconfont.ttf</string>
-		<string>FontAwesome.ttf</string>
+		<string>pingfang.ttf</string>
 		<string>Ionicons.ttf</string>
-		<string>Foundation.ttf</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>

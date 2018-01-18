@@ -27,11 +27,15 @@
 }
 
 -(void)scheduledTimer {
-   
+    NSLog(@"%@",[NSThread currentThread]);
     //保存数据
+    
+    
+    
     [_userTracks enumerateObjectsUsingBlock:^(MAUserLocation *obj, NSUInteger idx, BOOL * _Nonnull stop) {
          [[TYDBTool shareInstance] updateUserTrackLocation:obj.location];
     }];
+
    //清理userTracks
     [_userTracks removeAllObjects];
 }

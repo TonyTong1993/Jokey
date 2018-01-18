@@ -19,7 +19,7 @@
 #import <MAMapKit/MAPointAnnotation.h>
 #import <MAMapKit/MAAnimatedAnnotation.h>
 #import <MAMapKit/MAPinAnnotationView.h>
-#import <MAMapKit/MAUserlocation.h>
+#import <MAMapKit/MAUserLocation.h>
 #import <MAMapKit/MAOverlay.h>
 #import <MAMapKit/MAOverlayPathRenderer.h>
 #import <MAMapKit/MAOverlayRenderer.h>
@@ -53,6 +53,8 @@
 #import <MAMapKit/MAOfflineItemMunicipality.h>
 #import <MAMapKit/MAOfflineItemNationWide.h>
 #import <MAMapKit/MAOfflineProvince.h>
+#import <MAMapKit/MAOfflineMapViewController.h>
+
 #import <MAMapKit/MAUserLocationRepresentation.h>
 #import <MAMapKit/MACustomCalloutView.h>
 #import <MAMapKit/MATraceLocation.h>
