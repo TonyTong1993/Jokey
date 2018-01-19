@@ -66,8 +66,8 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 64, 0);
-    self.tableView.backgroundColor = [UIColor colorWithHexString:@"#f0f0f8"];
-    self.tableView.separatorColor = HEXCOLOR(0xebebeb);
+    self.tableView.backgroundColor = HEXCOLOR(backgroundColorHexValue);
+    self.tableView.separatorColor = HEXCOLOR(separatorColorHexValue);
     //去除footer样式
     self.tableView.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:_tableView];

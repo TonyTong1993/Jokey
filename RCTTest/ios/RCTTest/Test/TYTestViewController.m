@@ -27,8 +27,8 @@
     /*背景渐变*/
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
     
-    gradientLayer.colors = @[(__bridge id)[UIColor colorWithHexString:@"#2cda89"].CGColor,
-                             (__bridge id)[UIColor colorWithHexString:@"#0dc870"].CGColor,];
+    gradientLayer.colors = @[(__bridge id)HEXCOLOR(0x2cda89).CGColor,
+                             (__bridge id)HEXCOLOR(0x0dc870).CGColor,];
     gradientLayer.locations = @[@0.2, @1.0];
     gradientLayer.startPoint = CGPointMake(0, 0);
     gradientLayer.endPoint = CGPointMake(1, 0);

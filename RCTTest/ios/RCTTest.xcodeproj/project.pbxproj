@@ -53,7 +53,6 @@
 		EB593FF01F161DDC0093EF63 /* TYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB593FEF1F161DDC0093EF63 /* TYBaseViewController.m */; };
 		EB5A2A101F0388D700A19F2C /* TYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A0F1F0388D700A19F2C /* TYTabBarController.m */; };
 		EB5A2A131F03890100A19F2C /* TYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A121F03890100A19F2C /* TYNavigationController.m */; };
-		EB5A2A1A1F038C2E00A19F2C /* UIColor+LPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A191F038C2E00A19F2C /* UIColor+LPExtension.m */; };
 		EB5A2A1D1F038C4100A19F2C /* UIButton+LPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A1C1F038C4100A19F2C /* UIButton+LPExtension.m */; };
 		EB5A2A2A1F0390FB00A19F2C /* TYMailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A291F0390FB00A19F2C /* TYMailViewController.m */; };
 		EB5A2A401F03B40D00A19F2C /* TYRCTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5A2A3F1F03B40D00A19F2C /* TYRCTViewController.m */; };
@@ -149,6 +148,7 @@
 		EB7C64621FD681E60018AC3A /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB7C64611FD681E60018AC3A /* libOCMock.a */; };
 		EB811C711F763934003552E9 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB811C701F763934003552E9 /* libMBProgressHUD.a */; };
 		EB811C751F764273003552E9 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = EB811C741F764273003552E9 /* MBProgressHUD+MJ.m */; };
+		EB82C27D20119A8B005C97BE /* TYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB82C27C20119A8B005C97BE /* TYFPSLabel.m */; };
 		EB8B73A21FC6CF2C00B9DE66 /* TYPublicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8B73A11FC6CF2C00B9DE66 /* TYPublicViewController.m */; };
 		EB9FF1E21F47DF2200EEBE11 /* TYTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9FF1E11F47DF2200EEBE11 /* TYTheme.m */; };
 		EBA8F8731FC66D12005A2B84 /* ALAsset+LLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F8371FC66D12005A2B84 /* ALAsset+LLAdd.m */; };
@@ -175,6 +175,7 @@
 		EBA8F8881FC66D12005A2B84 /* LLMessageDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F86F1FC66D12005A2B84 /* LLMessageDialog.m */; };
 		EBA8F8891FC66D12005A2B84 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F8721FC66D12005A2B84 /* Utils.m */; };
 		EBB77D691F677BD700A1C59C /* TYProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB77D681F677BD700A1C59C /* TYProfileViewModel.m */; };
+		EBBBF6E42011A37D0011B4DF /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBBF6E32011A37D0011B4DF /* UIColor+Extension.m */; };
 		EBE0F7A41F76877D006F0AD8 /* TYSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0F7A31F76877D006F0AD8 /* TYSearchViewController.swift */; };
 		EBE0F7A91F76ABCA006F0AD8 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0F7A71F76ABCA006F0AD8 /* SearchView.swift */; };
 		EBE0F7AA1F76ABCA006F0AD8 /* TYTopicBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0F7A81F76ABCA006F0AD8 /* TYTopicBanner.swift */; };
@@ -274,8 +275,6 @@
 		EB5A2A0F1F0388D700A19F2C /* TYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTabBarController.m; sourceTree = "<group>"; };
 		EB5A2A111F03890100A19F2C /* TYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYNavigationController.h; sourceTree = "<group>"; };
 		EB5A2A121F03890100A19F2C /* TYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYNavigationController.m; sourceTree = "<group>"; };
-		EB5A2A181F038C2E00A19F2C /* UIColor+LPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LPExtension.h"; sourceTree = "<group>"; };
-		EB5A2A191F038C2E00A19F2C /* UIColor+LPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LPExtension.m"; sourceTree = "<group>"; };
 		EB5A2A1B1F038C4100A19F2C /* UIButton+LPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+LPExtension.h"; sourceTree = "<group>"; };
 		EB5A2A1C1F038C4100A19F2C /* UIButton+LPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LPExtension.m"; sourceTree = "<group>"; };
 		EB5A2A281F0390FB00A19F2C /* TYMailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYMailViewController.h; sourceTree = "<group>"; };
@@ -416,6 +415,8 @@
 		EB811C701F763934003552E9 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "Pods/../build/Debug-iphoneos/MBProgressHUD/libMBProgressHUD.a"; sourceTree = "<group>"; };
 		EB811C731F764273003552E9 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		EB811C741F764273003552E9 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		EB82C27B20119A8B005C97BE /* TYFPSLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYFPSLabel.h; sourceTree = "<group>"; };
+		EB82C27C20119A8B005C97BE /* TYFPSLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYFPSLabel.m; sourceTree = "<group>"; };
 		EB8B73A01FC6CF2C00B9DE66 /* TYPublicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPublicViewController.h; sourceTree = "<group>"; };
 		EB8B73A11FC6CF2C00B9DE66 /* TYPublicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYPublicViewController.m; sourceTree = "<group>"; };
 		EB9FF1E01F47DF2200EEBE11 /* TYTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTheme.h; sourceTree = "<group>"; };
@@ -473,6 +474,8 @@
 		EBA8F88A1FC68043005A2B84 /* RCTConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTConfig.h; sourceTree = "<group>"; };
 		EBB77D671F677BD700A1C59C /* TYProfileViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYProfileViewModel.h; sourceTree = "<group>"; };
 		EBB77D681F677BD700A1C59C /* TYProfileViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYProfileViewModel.m; sourceTree = "<group>"; };
+		EBBBF6E22011A37D0011B4DF /* UIColor+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		EBBBF6E32011A37D0011B4DF /* UIColor+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		EBE0F7A31F76877D006F0AD8 /* TYSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYSearchViewController.swift; sourceTree = "<group>"; };
 		EBE0F7A71F76ABCA006F0AD8 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		EBE0F7A81F76ABCA006F0AD8 /* TYTopicBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYTopicBanner.swift; sourceTree = "<group>"; };
@@ -817,6 +820,7 @@
 		EB5A29F51F03860000A19F2C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				EB82C27A20119A54005C97BE /* UIKit */,
 				EBA8F88A1FC68043005A2B84 /* RCTConfig.h */,
 				EB32F1411F4AE2F300D766AF /* ScrollPageView(swift) */,
 				EB575A911F18621F007C1427 /* ScrollPageView */,
@@ -875,8 +879,6 @@
 				EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */,
 				EB5A2A1B1F038C4100A19F2C /* UIButton+LPExtension.h */,
 				EB5A2A1C1F038C4100A19F2C /* UIButton+LPExtension.m */,
-				EB5A2A181F038C2E00A19F2C /* UIColor+LPExtension.h */,
-				EB5A2A191F038C2E00A19F2C /* UIColor+LPExtension.m */,
 				EB6500F11F4186D500C0B89A /* NSString+Extension.h */,
 				EB6500F21F4186D500C0B89A /* NSString+Extension.m */,
 				EB55658C1F42FEB0005BB5DC /* Bundle(Add).swift */,
@@ -886,6 +888,8 @@
 				EB5865801F5570ED00598DA0 /* NSBundle+Extension.m */,
 				EB1DD95C200F82D300E860BD /* UIFont+Extension.h */,
 				EB1DD95D200F82D300E860BD /* UIFont+Extension.m */,
+				EBBBF6E22011A37D0011B4DF /* UIColor+Extension.h */,
+				EBBBF6E32011A37D0011B4DF /* UIColor+Extension.m */,
 			);
 			path = Categry;
 			sourceTree = "<group>";
@@ -1309,6 +1313,15 @@
 				EB811C741F764273003552E9 /* MBProgressHUD+MJ.m */,
 			);
 			path = "MBProgressHUD-MJ";
+			sourceTree = "<group>";
+		};
+		EB82C27A20119A54005C97BE /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				EB82C27B20119A8B005C97BE /* TYFPSLabel.h */,
+				EB82C27C20119A8B005C97BE /* TYFPSLabel.m */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		EB8B739F1FC6CDBE00B9DE66 /* Public */ = {
@@ -1739,6 +1752,7 @@
 				EBA8F87F1FC66D12005A2B84 /* LLBrowserImageView.m in Sources */,
 				EBA8F8741FC66D12005A2B84 /* UIImage+LLAdd.m in Sources */,
 				EB714BE11F4806190024C929 /* ConstraintMultiplierTarget.swift in Sources */,
+				EB82C27D20119A8B005C97BE /* TYFPSLabel.m in Sources */,
 				EB01F61B1F36B635008CF290 /* UIColor+RGBA.m in Sources */,
 				EB5EDB291F46964A00B218AF /* TYAttention.swift in Sources */,
 				EB714BD41F4806190024C929 /* ConstraintInsetTarget.swift in Sources */,
@@ -1812,6 +1826,7 @@
 				EB714BE31F4806190024C929 /* ConstraintPriority.swift in Sources */,
 				EB714BD71F4806190024C929 /* ConstraintLayoutGuide.swift in Sources */,
 				EB593FF01F161DDC0093EF63 /* TYBaseViewController.m in Sources */,
+				EBBBF6E42011A37D0011B4DF /* UIColor+Extension.m in Sources */,
 				EB5D39281F345D0A0029085F /* TYCalculateFrameTool.m in Sources */,
 				EB18D3E71F0F6B7700B44790 /* TYRCTModule.m in Sources */,
 				EB5B52FA1FCD420D00C1F455 /* TYPhotoCollectionViewCell.m in Sources */,
@@ -1825,7 +1840,6 @@
 				EB5A2A1D1F038C4100A19F2C /* UIButton+LPExtension.m in Sources */,
 				EB266F5A1F3B2D2000949D40 /* TYReviewTest.m in Sources */,
 				EB18D3E41F0F427200B44790 /* RCTLocationObserver.m in Sources */,
-				EB5A2A1A1F038C2E00A19F2C /* UIColor+LPExtension.m in Sources */,
 				EB8B73A21FC6CF2C00B9DE66 /* TYPublicViewController.m in Sources */,
 				EB714BE91F4806190024C929 /* ConstraintViewDSL.swift in Sources */,
 			);
@@ -1913,6 +1927,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PURE_UI_KEY = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1954,6 +1969,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PURE_UI_KEY = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1981,6 +1997,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PURE_UI_DEBUG = "$(APP_PURE_UI)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RCTTest/Sreens/Video/RCTTest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -2009,6 +2026,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PURE_UI_DEBUG = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RCTTest/Sreens/Video/RCTTest-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
@@ -2080,6 +2098,117 @@
 			};
 			name = Release;
 		};
+		EBAB32762010A1F300DDE88E /* PureUI */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PURE_UI_KEY = "";
+				SDKROOT = iphoneos;
+			};
+			name = PureUI;
+		};
+		EBAB32772010A1F300DDE88E /* PureUI */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D502818BA0F8EC5DDC48C475 /* Pods-RCTTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = RCTTest/RCTTest.entitlements;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = NVZ53TTCA3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = RCTTest/PrefixHeader.pch;
+				INFOPLIST_FILE = RCTTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/React",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/MBProgressHUD",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PURE_UI_DEBUG = "$(APP_PURE_UI)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RCTTest/Sreens/Video/RCTTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = PureUI;
+		};
+		EBAB32782010A1F300DDE88E /* PureUI */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NVZ53TTCA3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/usr/include";
+				INFOPLIST_FILE = RCTTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.RCTTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RCTTest.app/RCTTest";
+			};
+			name = PureUI;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2087,6 +2216,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EB032D301F0251F300F32465 /* Debug */,
+				EBAB32762010A1F300DDE88E /* PureUI */,
 				EB032D311F0251F300F32465 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -2096,6 +2226,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EB032D331F0251F300F32465 /* Debug */,
+				EBAB32772010A1F300DDE88E /* PureUI */,
 				EB032D341F0251F300F32465 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -2105,6 +2236,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EB7C64471FD63F720018AC3A /* Debug */,
+				EBAB32782010A1F300DDE88E /* PureUI */,
 				EB7C64481FD63F720018AC3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

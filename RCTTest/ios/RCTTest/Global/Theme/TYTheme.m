@@ -11,6 +11,7 @@
 NSInteger const themeColorHexValue = 0x55B1E6;//主题颜色
 NSInteger const separatorColorHexValue = 0xebebeb;//间隔线
 NSInteger const textTint = 0x333333;//文本默认颜色
+NSInteger const backgroundColorHexValue = 0xf0f0f0;
 CGFloat const textFont = 14;//文本默认大小
 @implementation TYTheme
 static NSString *themeColor;

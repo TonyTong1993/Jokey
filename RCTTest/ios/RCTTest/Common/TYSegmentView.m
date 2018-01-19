@@ -37,7 +37,6 @@
 -(instancetype)initWithTitles:(NSArray<NSString *> *)titles {
     self = [super init];
     if (self) {
-        self.titles = titles;
         
         CGSize defaultSize = [TYSegmentTool caculateTitlesDefaultFrameWithTitles:titles];
         
@@ -50,6 +49,10 @@
         _titleFont = [UIFont systemFontOfSize:16];
         _titleNormalColor = [UIColor blackColor];
         _titleSelectedColor = [UIColor blueColor];
+        
+        
+        self.titles = titles;
+       [self addItemsWithTitles:titles];
     }
     
     return self;
@@ -57,7 +60,6 @@
 -(instancetype)initWithFrame:(CGRect)frame titles:(NSArray<NSString *> *)titles {
     self = [super initWithFrame:frame];
     if (self) {
-        self.titles = titles;
         CGSize defaultSize = [TYSegmentTool caculateTitlesDefaultFrameWithTitles:titles];
         CGFloat width = defaultSize.width > frame.size.width ? defaultSize.width : frame.size.width;
         CGFloat height = defaultSize.height > frame.size.height ? defaultSize.height : frame.size.height;
@@ -67,10 +69,29 @@
         _titleFont = [UIFont systemFontOfSize:16];
         _titleNormalColor = [UIColor blackColor];
         _titleSelectedColor = [UIColor blueColor];
+        
+        self.titles = titles;
+        [self addItemsWithTitles:titles];
     }
     return self;
 }
-
+-(void)addItemsWithTitles:(NSArray<NSString *> *)titles {
+    CGFloat itemW = self.frame.size.width/self.titles.count;
+    CGFloat itemH = self.frame.size.height;
+    
+    
+    NSArray *items = [UIButton buttonWithTitles:self.titles normalColor:self.titleNormalColor selectedColor:self.titleSelectedColor font:self.titleFont frame:CGRectMake(0, 0, itemW, itemH)];
+    self.items = items;
+    [items enumerateObjectsUsingBlock:^(UIButton *item, NSUInteger idx, BOOL * _Nonnull stop) {
+        item.mj_origin = CGPointMake(itemW*idx, 0);
+        [item addTarget:self action:@selector(handleItemSelectedAtIndex:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:item];
+        
+        if (idx == self.selectedItemIndex) {
+            [item setSelected:YES];
+        }
+    }];
+}
 
 -(void)setTitleFont:(UIFont *)font {
     _titleFont = font;
@@ -78,17 +99,39 @@
     CGSize defaultSize = [TYSegmentTool caculateTitlesDefaultFrameWithTitles:_titles withFont:font];
     CGFloat width = defaultSize.width > self.frame.size.width ? defaultSize.width : self.frame.size.width;
     CGFloat height = defaultSize.height > self.frame.size.height ? defaultSize.height : self.frame.size.height;
-    
     self.frame = CGRectMake(0, 0,width, height>44?44:height);
+    
+    CGFloat itemW = self.frame.size.width/self.titles.count;
+    CGFloat itemH = self.frame.size.height;
+    
+    [_items enumerateObjectsUsingBlock:^(UIButton *item, NSUInteger idx, BOOL * _Nonnull stop) {
+        item.mj_origin = CGPointMake(itemW*idx, 0);
+        item.frame = CGRectMake(itemW*idx, 0, itemW, itemH);
+    }];
+    
+    
 }
 
 -(void)setTitleColor:(UIColor *)color state:(SegmentControlState)state {
     switch (state) {
         case SegmentControlStateNormal:
+        {
             _titleNormalColor = color;
+            [_items enumerateObjectsUsingBlock:^(UIButton *item, NSUInteger idx, BOOL * _Nonnull stop) {
+                  [self setTitleNormalColor:_titleNormalColor item:item];
+            }];
+        }
             break;
         case SegmentControlStateSelected:
+        {
             _titleSelectedColor = color;
+            [_items enumerateObjectsUsingBlock:^(UIButton *item, NSUInteger idx, BOOL * _Nonnull stop) {
+                if (idx == self.selectedItemIndex) {
+                    [self setTitleSelectedColor:_titleSelectedColor item:item];
+                    *stop = YES ;
+                }
+            }];
+        }
             break;
     }
 }
@@ -134,9 +177,6 @@
         [self setTitleNormalColor:_titleNormalColor item:lastItem];
         [self setTitleSelectedColor:_titleSelectedColor item:lastItem];
     }
-    
-//       [self setTitleNormalColor:_titleNormalColor item:preItem];
-//       [self setTitleSelectedColor:_titleSelectedColor item:preItem];
     
 }
 -(void)setIndicatorBackgroundColor:(UIColor *)color {
@@ -191,32 +231,11 @@
 -(void)setTitleSelectedColor:(UIColor *)selectedColor item:(UIButton *)item{
      [item setTitleColor:selectedColor forState:UIControlStateSelected];
 }
--(void)layoutSubviews {
-    [super layoutSubviews];
-    
-    CGFloat itemW = self.frame.size.width/self.titles.count;
-    CGFloat itemH = self.frame.size.height;
-    
-    
-    NSArray *items = [UIButton buttonWithTitles:self.titles normalColor:self.titleNormalColor selectedColor:self.titleSelectedColor font:self.titleFont frame:CGRectMake(0, 0, itemW, itemH)];
-    self.items = items;
-    __weak typeof(self) weakSelf = self;
-    [items enumerateObjectsUsingBlock:^(UIButton *item, NSUInteger idx, BOOL * _Nonnull stop) {
-        item.mj_origin = CGPointMake(itemW*idx, 0);
-        [item addTarget:self action:@selector(handleItemSelectedAtIndex:) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:item];
-        
-        if (item.indexInSegmentView == weakSelf.selectedItemIndex) {
-            [item setSelected:YES];
-            
-            //更新指示器
-            NSString *title = weakSelf.titles[idx];
-            
-            [self updateIndicatorViewWithTitle:title animated:false];
-            
-        }
-    }];
-    
+-(void)willMoveToSuperview:(UIView *)newSuperview {
+    [super willMoveToSuperview:newSuperview];
+    //更新指示器
+    NSString *title = _titles[_selectedItemIndex];
+    [self updateIndicatorViewWithTitle:title animated:true];
 }
 
 -(void)handleItemSelectedAtIndex:(UIButton *)selectedItem {

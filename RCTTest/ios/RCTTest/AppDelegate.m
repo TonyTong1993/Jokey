@@ -12,7 +12,13 @@
 #import "TYLoginViewController.h"
 #import "TYTheme.h"
 #import  "TBCityIconFont.h"
+
+#ifdef PUREUI
+
+#else
 #import <AMapFoundationKit/AMapFoundationKit.h>
+// 如果需要使用idfa功能所需要引入的头文件（可选）
+#import <AdSupport/AdSupport.h>
 #import <UserNotifications/UserNotifications.h>
 // 引入JPush功能所需头文件
 #import "JPUSHService.h"
@@ -20,8 +26,8 @@
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
 #import <UserNotifications/UserNotifications.h>
 #endif
-// 如果需要使用idfa功能所需要引入的头文件（可选）
-#import <AdSupport/AdSupport.h>
+
+#endif
 //实验文件入口
 #import "TYMemoryManager.h"
 @interface AppDelegate ()<UNUserNotificationCenterDelegate,JPUSHRegisterDelegate>
@@ -52,9 +58,12 @@
     [self.window makeKeyAndVisible];
     //设置iconfont
     [TBCityIconFont setFontName:@"iconfont"];
-//    设置高德地图的key
+#ifdef PUREUI
+    
+#else
+    //    设置高德地图的key
     [[AMapServices sharedServices] setApiKey:AMapKey];
-//    支持https
+    //    支持https
     [[AMapServices sharedServices] setEnableHTTPS:true];
     //设置本地推送通知 步骤：1.注册本地通知；2.设置本地推送消息；3.显示推送消息代理
     /*设置iOS11版本的推送通知*/
@@ -65,14 +74,14 @@
         [center requestAuthorizationWithOptions:options completionHandler:^(BOOL granted, NSError * _Nullable error) {
             NSLog(@"granted = %d",granted);
         }];
-//        [center setNotificationCategories:NULL];
+        //        [center setNotificationCategories:NULL];
         [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
-           
+            
         }];
-
-   
-//            [self pushLocalNotification];
-     
+        
+        
+        //            [self pushLocalNotification];
+        
     }else {
         UIUserNotificationType type = UIUserNotificationTypeAlert;
         UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:type categories:nil];
@@ -94,7 +103,7 @@
         notification.alertBody = @"起床啦！";
         notification.userInfo = @{@"task":@"学习iOS课程"};
         notification.applicationIconBadgeNumber = 1;
-//        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+        //        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
         // 执行通知注册
         [[UIApplication sharedApplication] scheduleLocalNotification:notification];
     }
@@ -117,9 +126,9 @@
     NSString *advertisingId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     
     /* Required
-    // init Push
-    // notice: 2.1.5版本的SDK新增的注册方法，改成可上报IDFA，如果没有使用IDFA直接传nil
-    // 如需继续使用pushConfig.plist文件声明appKey等配置内容，请依旧使用[JPUSHService setupWithOption:launchOptions]方式初始化。
+     // init Push
+     // notice: 2.1.5版本的SDK新增的注册方法，改成可上报IDFA，如果没有使用IDFA直接传nil
+     // 如需继续使用pushConfig.plist文件声明appKey等配置内容，请依旧使用[JPUSHService setupWithOption:launchOptions]方式初始化。
      appKey:
      channel:
      apsForProduction:
@@ -129,8 +138,8 @@
                           channel:@""
                  apsForProduction:false
             advertisingIdentifier:advertisingId];
-    
-    
+#endif
+
     return YES;
 }
 -(void)pushLocalNotification {
