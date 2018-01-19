@@ -31,7 +31,7 @@
 - (void)rightBarButton:(NSString *)aTitle selector:(SEL)sel {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setTitle:aTitle forState:UIControlStateNormal];
-    [button setTitleColor:HEXCOLOR(0x333333) forState:UIControlStateNormal];
+    [button setTitleColor:HEXCOLOR(textTint) forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont systemFontOfSize:16];
     float width = 50;
     if ([aTitle length] > 2) {
@@ -54,7 +54,7 @@
 - (void)rightBarButton:(NSString *)aTitle selector:(SEL)sel delegate:(id)delegate {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setTitle:aTitle forState:UIControlStateNormal];
-    [button setTitleColor:HEXCOLOR(0x333333) forState:UIControlStateNormal];
+    [button setTitleColor:HEXCOLOR(textTint) forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont systemFontOfSize:16];
     float width = 50;
     if ([aTitle length] > 2) {
@@ -111,7 +111,7 @@
 - (void)leftBarButton:(NSString *)aTitle selector:(SEL)sel {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setTitle:aTitle forState:UIControlStateNormal];
-    [button setTitleColor:HEXCOLOR(0x333333) forState:UIControlStateNormal];
+    [button setTitleColor:HEXCOLOR(textTint) forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont systemFontOfSize:16];
     float width = 50;
     if ([aTitle length] > 2) {
@@ -164,7 +164,7 @@
     UILabel *titleLabel = [[UILabel alloc] init];
     titleLabel.size = CGSizeMake(100, 33);
     titleLabel.font = BoldFont(18);
-    titleLabel.textColor = HEXCOLOR(0x333333);
+    titleLabel.textColor = HEXCOLOR(textTint);
     titleLabel.textAlignment = 1;
     titleLabel.numberOfLines = 1;
     titleLabel.text = title;

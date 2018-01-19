@@ -34,8 +34,6 @@
     [navBar setBackgroundImage:[UIImage imageNamed:@"nav_bg_1x64_"] forBarMetrics:UIBarMetricsDefault];
     [navBar setShadowImage:[UIImage singleLineImageWithColor:HEXCOLOR(0xe0e0e0)]];
     
-    [[UITabBar appearance] setBackgroundImage:[[UIImage imageNamed:@"tabbar_bg_1x49_"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    [[UITabBar appearance] setShadowImage:[UIImage singleLineImageWithColor:HEXCOLOR(0xe0e0e0)]];
 }
 
 #pragma mark---自定义push

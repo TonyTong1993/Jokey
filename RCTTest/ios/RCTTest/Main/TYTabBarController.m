@@ -22,6 +22,12 @@
         NSLog(@"didload in %f sec",CFAbsoluteTimeGetCurrent() - StartTime);
     });
     [super viewDidLoad];
+    
+    
+    //设置UITabBar主题
+    [[UITabBar appearance] setBackgroundImage:[[UIImage imageNamed:@"tabbar_bg_1x49_"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [[UITabBar appearance] setShadowImage:[UIImage singleLineImageWithColor:HEXCOLOR(separatorColorHexValue)]];
+    //添加子视图控制器
     NSArray *barItemInfos = @[
                               @{@"className":@"TYHomeViewController",@"icon":@"tabbar_featured_24x24_",@"selectedIcon":@"tabbar_featured_hl_24x24_",@"title":@"首页"},
                               @{@"className":[NSString nameSpaceWrapedClassNameInSwift:@"TYAttentionViewController"],@"icon":@"tabbar_follow_24x24_",@"selectedIcon":@"tabbar_follow_hl_24x24_",@"title":@"关注"},
@@ -47,7 +53,7 @@
     [barItem setImage:[[UIImage imageNamed:icon] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [barItem setSelectedImage:[[UIImage imageNamed:selectedIcon] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [barItem setTitle:title];
-    [barItem setTitleTextAttributes:@{NSForegroundColorAttributeName:HEXCOLOR(0x52B5EF)} forState:UIControlStateSelected];
+    [barItem setTitleTextAttributes:@{NSForegroundColorAttributeName:HEXCOLOR(themeColorHexValue)} forState:UIControlStateSelected];
     [barItem setTitleTextAttributes:@{NSForegroundColorAttributeName:HEXCOLOR(0xB3B2BA)} forState:UIControlStateNormal];
     [self addChildViewController:nav];
 }

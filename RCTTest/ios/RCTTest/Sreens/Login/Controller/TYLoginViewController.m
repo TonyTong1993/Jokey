@@ -30,7 +30,7 @@
     self.atextField = atextField;
     UILabel *aLabel = [[UILabel alloc] init];
     aLabel.font = [UIFont fontWithName:[TYTheme themeFontFamilyName] size:14];
-    aLabel.textColor  = HEXCOLOR(0x333);
+    aLabel.textColor  = HEXCOLOR(textTint);
     aLabel.text = @"账号:";
     
     UIStackView *astackView = [[UIStackView alloc] initWithFrame:CGRectMake(0, 0, 250, 50)];

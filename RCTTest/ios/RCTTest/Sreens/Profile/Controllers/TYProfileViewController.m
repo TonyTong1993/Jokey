@@ -53,7 +53,7 @@
     self.tableView.mj_header = nil;
     [self.tableView.mj_footer removeFromSuperview];
     self.tableView.mj_footer = nil;
-    self.tableView.backgroundColor = HEXCOLOR(0xf5f5f5);
+    self.tableView.backgroundColor = HEXCOLOR(backgroundColorHexValue);
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.dataSource.count;

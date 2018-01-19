@@ -107,7 +107,7 @@
                                           action:(SEL)action
 {
     
-    UIImage *image = [UIImage iconWithInfo:TBCityIconInfoMake(@"\U0000e720;",24, HEXCOLOR(0x333333))];
+    UIImage *image = [UIImage iconWithInfo:TBCityIconInfoMake(@"\U0000e720;",24, HEXCOLOR(textTint))];
     return  [UIBarButtonItem barBtnItemWithNormalIcon:image
                                         highlightIcon:image
                                                target: target

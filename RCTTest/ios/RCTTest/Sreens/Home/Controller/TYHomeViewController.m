@@ -27,11 +27,11 @@
     TYSegmentView *segmentView = [[TYSegmentView alloc] initWithTitles:titles];
     
     [segmentView setTitleFont:[UIFont fontWithName:[TYTheme themeFontFamilyName] size:16]];
-    [segmentView setTitleColor:HEXCOLOR(0x000000) state:SegmentControlStateNormal];
-    [segmentView setTitleColor:HEXCOLOR(0x55B1E6) state:SegmentControlStateSelected];
+    [segmentView setTitleColor:HEXCOLOR(textTint) state:SegmentControlStateNormal];
+    [segmentView setTitleColor:HEXCOLOR(themeColorHexValue) state:SegmentControlStateSelected];
     segmentView.delegate = self;
     [segmentView setSelectedItemIndex:0];
-    [segmentView setIndicatorBackgroundColor:HEXCOLOR(0x55B1E6)];
+    [segmentView setIndicatorBackgroundColor:HEXCOLOR(themeColorHexValue)];
     self.navigationItem.titleView = segmentView;
     self.segmentView = segmentView;
     [self setUpTableView];

@@ -32,7 +32,7 @@
     
     UIButton *addPhotoButton =  [[UIButton alloc] init];
     [addPhotoButton setTitle:@"访问相册" forState:UIControlStateNormal];
-    [addPhotoButton setTitleColor:HEXCOLOR(0x333333) forState:UIControlStateNormal];
+    [addPhotoButton setTitleColor:HEXCOLOR(textTint) forState:UIControlStateNormal];
     [addPhotoButton sizeToFit];
     [self.view addSubview:addPhotoButton];
     [addPhotoButton addTarget:self action:@selector(enterPhotoPicker) forControlEvents:UIControlEventTouchUpInside];
