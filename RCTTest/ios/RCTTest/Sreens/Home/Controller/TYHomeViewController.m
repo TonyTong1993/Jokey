@@ -46,12 +46,8 @@
     
 }
 -(void)setUpTableView {
-    self.automaticallyAdjustsScrollViewInsets = false;
-    
-    CGFloat width = self.view.frame.size.width;
-    CGFloat height = self.view.frame.size.height-64-49;
     //设置scrollView
-    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     self.scrollView.pagingEnabled = YES;
     self.scrollView.showsVerticalScrollIndicator = false;
     self.scrollView.showsHorizontalScrollIndicator = false;
@@ -64,6 +60,8 @@
         [self addChildViewController:vc];
     }
     CGFloat startX = 0;
+    CGFloat width = self.view.bounds.size.width;
+    CGFloat height = self.view.bounds.size.height;
     CGFloat startY = 0;
     NSUInteger index = 0;
     NSUInteger count = self.childViewControllers.count;

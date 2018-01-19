@@ -30,17 +30,17 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
     [_fpsLabel sizeToFit];
     _fpsLabel.bottom = self.view.height - kWBCellPadding;
     _fpsLabel.left = kWBCellPadding;
-    _fpsLabel.alpha = 1.0;
+    _fpsLabel.alpha = 0.0f;
     [self.view addSubview:_fpsLabel];
     
 }
 -(void)setUpTableView {
-    self.automaticallyAdjustsScrollViewInsets = false;
-   
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
+    _collectionView.contentInset = UIEdgeInsetsMake(0, 0, 70, 0);
+    _collectionView.scrollIndicatorInsets = _collectionView.contentInset;
     [self.view addSubview:_collectionView];
     
     //设置网络数据下啦刷新
@@ -73,6 +73,8 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
     [self.collectionView registerNib:[UINib nibWithNibName:@"TYStatusViewCell" bundle:nil] forCellWithReuseIdentifier:reuserIndentifier];
     
     [self.collectionView.mj_header beginRefreshing];
+    
+    
 }
 
 
@@ -154,7 +156,11 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
     NSDictionary *dataDict = dict[@"data"];
-    NSMutableArray *dataSource = [TYModelTest mj_objectArrayWithKeyValuesArray:dataDict[@"list"]];
+    NSMutableArray *dataSource = [NSMutableArray array];
+    for (int i = 0; i<5; i++) {
+         NSMutableArray *datas = [TYModelTest mj_objectArrayWithKeyValuesArray:dataDict[@"list"]];
+        [dataSource addObjectsFromArray:datas];
+    }
     self.dataSource = dataSource;
     [self.collectionView.mj_header endRefreshing];
     [self.collectionView reloadData];

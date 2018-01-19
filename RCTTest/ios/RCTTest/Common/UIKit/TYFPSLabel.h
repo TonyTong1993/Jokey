@@ -13,7 +13,7 @@
  The maximum fps on iPhone is 59.97.
  The maxmium fps on iPad is 60.0.
  */
-#define kWBCellPadding 200       // cell 内边距
+#define kWBCellPadding 120       // cell 内边距
 @interface TYFPSLabel : UILabel
 
 @end

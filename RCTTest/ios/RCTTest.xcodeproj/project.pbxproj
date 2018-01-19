@@ -176,6 +176,7 @@
 		EBA8F8891FC66D12005A2B84 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F8721FC66D12005A2B84 /* Utils.m */; };
 		EBB77D691F677BD700A1C59C /* TYProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB77D681F677BD700A1C59C /* TYProfileViewModel.m */; };
 		EBBBF6E42011A37D0011B4DF /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBBF6E32011A37D0011B4DF /* UIColor+Extension.m */; };
+		EBBBF6E72011CB420011B4DF /* UIImageView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBBF6E62011CB420011B4DF /* UIImageView+Extension.m */; };
 		EBE0F7A41F76877D006F0AD8 /* TYSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0F7A31F76877D006F0AD8 /* TYSearchViewController.swift */; };
 		EBE0F7A91F76ABCA006F0AD8 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0F7A71F76ABCA006F0AD8 /* SearchView.swift */; };
 		EBE0F7AA1F76ABCA006F0AD8 /* TYTopicBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0F7A81F76ABCA006F0AD8 /* TYTopicBanner.swift */; };
@@ -476,6 +477,8 @@
 		EBB77D681F677BD700A1C59C /* TYProfileViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYProfileViewModel.m; sourceTree = "<group>"; };
 		EBBBF6E22011A37D0011B4DF /* UIColor+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		EBBBF6E32011A37D0011B4DF /* UIColor+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		EBBBF6E52011CB420011B4DF /* UIImageView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Extension.h"; sourceTree = "<group>"; };
+		EBBBF6E62011CB420011B4DF /* UIImageView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Extension.m"; sourceTree = "<group>"; };
 		EBE0F7A31F76877D006F0AD8 /* TYSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYSearchViewController.swift; sourceTree = "<group>"; };
 		EBE0F7A71F76ABCA006F0AD8 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		EBE0F7A81F76ABCA006F0AD8 /* TYTopicBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYTopicBanner.swift; sourceTree = "<group>"; };
@@ -890,6 +893,8 @@
 				EB1DD95D200F82D300E860BD /* UIFont+Extension.m */,
 				EBBBF6E22011A37D0011B4DF /* UIColor+Extension.h */,
 				EBBBF6E32011A37D0011B4DF /* UIColor+Extension.m */,
+				EBBBF6E52011CB420011B4DF /* UIImageView+Extension.h */,
+				EBBBF6E62011CB420011B4DF /* UIImageView+Extension.m */,
 			);
 			path = Categry;
 			sourceTree = "<group>";
@@ -1709,6 +1714,7 @@
 				EB32F1481F4B030F00D766AF /* TYCategaryViewController.swift in Sources */,
 				EB266F541F3B2B5100949D40 /* TYMemberTest.m in Sources */,
 				EB714BE01F4806190024C929 /* ConstraintMakerRelatable.swift in Sources */,
+				EBBBF6E72011CB420011B4DF /* UIImageView+Extension.m in Sources */,
 				EBA8F87D1FC66D12005A2B84 /* LLImageGroupCell.m in Sources */,
 				EB64A7341FCE911B00E8546E /* TYMemoryManager.m in Sources */,
 				EB714BDB1F4806190024C929 /* ConstraintMaker.swift in Sources */,

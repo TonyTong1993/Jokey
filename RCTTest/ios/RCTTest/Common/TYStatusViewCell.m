@@ -15,6 +15,7 @@
 #import "TYImageViewCell.h"
 #import "TestView.h"
 #import "TYStatusCommentView.h"
+#import "UIImageView+Extension.h"
 static NSString *reuseIndentifier = @"KTYImageViewCell";
 @interface TYStatusViewCell()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UIImageView *avatarView;
@@ -39,8 +40,6 @@ static NSString *reuseIndentifier = @"KTYImageViewCell";
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    self.avatarView.layer.cornerRadius = _avatarView.mj_w/2;
-    self.avatarView.layer.masksToBounds = YES;
     self.shareBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 12, 0, 0);
     self.reviewBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 12, 0, 0);
     self.topicLabel.backgroundColor = HEXCOLOR(0x39B4FF);
@@ -76,7 +75,7 @@ static NSString *reuseIndentifier = @"KTYImageViewCell";
     _model = model;
     TYMemberTest *member = [TYMemberTest mj_objectWithKeyValues:model.member];
     NSString *avatarPath = [TYServiceApi serviceForImagePath:api_common_avatar imageID:member.avatar size:228];
-    [_avatarView sd_setImageWithURL:[NSURL URLWithString:avatarPath] placeholderImage:nil];
+    [_avatarView sd_setAvatarImageWithURL:[NSURL URLWithString:avatarPath] andRoundRadius:114];
     _nameLabel.text = member.name;
     _contentLabel.text = model.content;
     CGFloat collectionViewheight = [TYHomeUitl homeUitlGetCollectionViewHeight:model.imgs.count];

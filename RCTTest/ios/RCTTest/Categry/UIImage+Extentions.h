@@ -73,5 +73,5 @@
  */
 +(UIImage *)singleLineImageWithColor:(UIColor *)color;
 
-
+- (UIImage *)imageByRoundCornerRadius:(CGFloat)radius;
 @end
