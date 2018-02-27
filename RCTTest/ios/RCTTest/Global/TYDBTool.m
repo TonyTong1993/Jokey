@@ -20,7 +20,7 @@
 -(instancetype)init {
     self = [super init];
     if (self) {
-       NSString *dbPath = [Root_Path stringByAppendingPathComponent:@"com.joeky.db"];
+       NSString *dbPath = [[SandBoxHelper docPath] stringByAppendingPathComponent:@"com.joeky.db"];
         _dbQueue = [FMDatabaseQueue databaseQueueWithPath:dbPath];
         BOOL open = [_dbQueue openFlags];
         NSAssert(open, @"打开数据库失败");

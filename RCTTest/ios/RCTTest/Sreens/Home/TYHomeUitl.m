@@ -15,31 +15,31 @@
     
     switch (itemCount) {
         case 1:
-            height = 185*SCREEN_WIDTH_SCALE;
+            height = kRealValue(185);
             break;
         case 2:
-            height = 164*SCREEN_WIDTH_SCALE;
+            height = kRealValue(164);
             break;
         case 3:
-             height = 110*SCREEN_WIDTH_SCALE;;
+             height = kRealValue(110);
             break;
         case 4:
-             height = 230*SCREEN_WIDTH_SCALE;
+             height = kRealValue(110);
             break;
         case 5:
-             height = 230*SCREEN_WIDTH_SCALE;
+             height = kRealValue(110);
             break;
         case 6:
-             height = 230*SCREEN_WIDTH_SCALE;
+             height = kRealValue(230);
             break;
         case 7:
-             height = 200*SCREEN_WIDTH_SCALE;
+             height = kRealValue(200);
             break;
         case 8:
-             height = 200*SCREEN_WIDTH_SCALE;
+             height = kRealValue(200);
             break;
         default:
-             height = 200*SCREEN_WIDTH_SCALE;
+             height = kRealValue(200);
             break;
     }
     return height;

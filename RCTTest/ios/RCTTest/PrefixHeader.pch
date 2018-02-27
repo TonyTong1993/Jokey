@@ -20,6 +20,7 @@
 #import "TYServiceApi.h"
 #import "TYTheme.h"
 #import "Macro.h"
+#import "SandBoxHelper.h"
 #import "NSString+Extension.h"
 static CFAbsoluteTime StartTime;
 #endif /* PrefixHeader_pch */

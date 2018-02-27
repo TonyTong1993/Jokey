@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EB01F61B1F36B635008CF290 /* UIColor+RGBA.m in Sources */ = {isa = PBXBuildFile; fileRef = EB01F61A1F36B635008CF290 /* UIColor+RGBA.m */; };
 		EB032D201F0251F300F32465 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB032D1F1F0251F300F32465 /* main.m */; };
-		EB032D231F0251F300F32465 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB032D221F0251F300F32465 /* AppDelegate.m */; };
 		EB032D261F0251F300F32465 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB032D251F0251F300F32465 /* ViewController.m */; };
 		EB032D291F0251F300F32465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB032D271F0251F300F32465 /* Main.storyboard */; };
 		EB032D2B1F0251F300F32465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB032D2A1F0251F300F32465 /* Assets.xcassets */; };
@@ -149,6 +148,11 @@
 		EB811C711F763934003552E9 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB811C701F763934003552E9 /* libMBProgressHUD.a */; };
 		EB811C751F764273003552E9 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = EB811C741F764273003552E9 /* MBProgressHUD+MJ.m */; };
 		EB82C27D20119A8B005C97BE /* TYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB82C27C20119A8B005C97BE /* TYFPSLabel.m */; };
+		EB8841742045349400EDFAF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8841722045349300EDFAF5 /* AppDelegate.m */; };
+		EB884177204534CD00EDFAF5 /* AppDelegate+AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = EB884176204534CD00EDFAF5 /* AppDelegate+AppService.m */; };
+		EB88417A204534EC00EDFAF5 /* AppDelegate+PushService.m in Sources */ = {isa = PBXBuildFile; fileRef = EB884179204534EC00EDFAF5 /* AppDelegate+PushService.m */; };
+		EB88417E204538CB00EDFAF5 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB88417D204538CB00EDFAF5 /* AppManager.m */; };
+		EB88418320453E0700EDFAF5 /* SandBoxHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EB88418220453E0700EDFAF5 /* SandBoxHelper.m */; };
 		EB8B73A21FC6CF2C00B9DE66 /* TYPublicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8B73A11FC6CF2C00B9DE66 /* TYPublicViewController.m */; };
 		EB9FF1E21F47DF2200EEBE11 /* TYTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9FF1E11F47DF2200EEBE11 /* TYTheme.m */; };
 		EBA8F8731FC66D12005A2B84 /* ALAsset+LLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F8371FC66D12005A2B84 /* ALAsset+LLAdd.m */; };
@@ -198,12 +202,11 @@
 		4685E6D3869C8CFF7EF29817 /* libPods-RCTTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RCTTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D502818BA0F8EC5DDC48C475 /* Pods-RCTTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.debug.xcconfig"; sourceTree = "<group>"; };
 		DC2E37739B2C59D2F6B877A9 /* Pods-RCTTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.release.xcconfig"; sourceTree = "<group>"; };
+		DCEF8753A3129DD7F8B4D947 /* Pods-RCTTest.pureui.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.pureui.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.pureui.xcconfig"; sourceTree = "<group>"; };
 		EB01F6191F36B635008CF290 /* UIColor+RGBA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RGBA.h"; sourceTree = "<group>"; };
 		EB01F61A1F36B635008CF290 /* UIColor+RGBA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RGBA.m"; sourceTree = "<group>"; };
 		EB032D1B1F0251F300F32465 /* RCTTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCTTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB032D1F1F0251F300F32465 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EB032D211F0251F300F32465 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		EB032D221F0251F300F32465 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EB032D241F0251F300F32465 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EB032D251F0251F300F32465 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EB032D281F0251F300F32465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -418,6 +421,16 @@
 		EB811C741F764273003552E9 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		EB82C27B20119A8B005C97BE /* TYFPSLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYFPSLabel.h; sourceTree = "<group>"; };
 		EB82C27C20119A8B005C97BE /* TYFPSLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYFPSLabel.m; sourceTree = "<group>"; };
+		EB8841722045349300EDFAF5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EB8841732045349300EDFAF5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EB884175204534CD00EDFAF5 /* AppDelegate+AppService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AppService.h"; sourceTree = "<group>"; };
+		EB884176204534CD00EDFAF5 /* AppDelegate+AppService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AppService.m"; sourceTree = "<group>"; };
+		EB884178204534EC00EDFAF5 /* AppDelegate+PushService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+PushService.h"; sourceTree = "<group>"; };
+		EB884179204534EC00EDFAF5 /* AppDelegate+PushService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+PushService.m"; sourceTree = "<group>"; };
+		EB88417C204538CB00EDFAF5 /* AppManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppManager.h; sourceTree = "<group>"; };
+		EB88417D204538CB00EDFAF5 /* AppManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppManager.m; sourceTree = "<group>"; };
+		EB88418120453E0700EDFAF5 /* SandBoxHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SandBoxHelper.h; sourceTree = "<group>"; };
+		EB88418220453E0700EDFAF5 /* SandBoxHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SandBoxHelper.m; sourceTree = "<group>"; };
 		EB8B73A01FC6CF2C00B9DE66 /* TYPublicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPublicViewController.h; sourceTree = "<group>"; };
 		EB8B73A11FC6CF2C00B9DE66 /* TYPublicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYPublicViewController.m; sourceTree = "<group>"; };
 		EB9FF1E01F47DF2200EEBE11 /* TYTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTheme.h; sourceTree = "<group>"; };
@@ -525,6 +538,7 @@
 			children = (
 				D502818BA0F8EC5DDC48C475 /* Pods-RCTTest.debug.xcconfig */,
 				DC2E37739B2C59D2F6B877A9 /* Pods-RCTTest.release.xcconfig */,
+				DCEF8753A3129DD7F8B4D947 /* Pods-RCTTest.pureui.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -577,6 +591,9 @@
 		EB032D1D1F0251F300F32465 /* RCTTest */ = {
 			isa = PBXGroup;
 			children = (
+				EB88417F20453DDC00EDFAF5 /* Utils */,
+				EB88417B204538A800EDFAF5 /* Manager */,
+				EB8841712045345800EDFAF5 /* AppDelegate */,
 				EB64A72A1FCE8C8600E8546E /* Laboratory */,
 				EB67EF101F7E30F100FCED39 /* RCTTest.entitlements */,
 				EB593FED1F161D890093EF63 /* Base */,
@@ -587,8 +604,6 @@
 				EB5A2A0A1F03876700A19F2C /* Sreens */,
 				EB5A2A091F03873E00A19F2C /* Main */,
 				EB5A29F51F03860000A19F2C /* Common */,
-				EB032D211F0251F300F32465 /* AppDelegate.h */,
-				EB032D221F0251F300F32465 /* AppDelegate.m */,
 				EB032D241F0251F300F32465 /* ViewController.h */,
 				EB032D251F0251F300F32465 /* ViewController.m */,
 				EB032D271F0251F300F32465 /* Main.storyboard */,
@@ -1329,6 +1344,45 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		EB8841712045345800EDFAF5 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				EB8841732045349300EDFAF5 /* AppDelegate.h */,
+				EB8841722045349300EDFAF5 /* AppDelegate.m */,
+				EB884175204534CD00EDFAF5 /* AppDelegate+AppService.h */,
+				EB884176204534CD00EDFAF5 /* AppDelegate+AppService.m */,
+				EB884178204534EC00EDFAF5 /* AppDelegate+PushService.h */,
+				EB884179204534EC00EDFAF5 /* AppDelegate+PushService.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		EB88417B204538A800EDFAF5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EB88417C204538CB00EDFAF5 /* AppManager.h */,
+				EB88417D204538CB00EDFAF5 /* AppManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EB88417F20453DDC00EDFAF5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EB88418020453DEB00EDFAF5 /* SandBoxHelper */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		EB88418020453DEB00EDFAF5 /* SandBoxHelper */ = {
+			isa = PBXGroup;
+			children = (
+				EB88418120453E0700EDFAF5 /* SandBoxHelper.h */,
+				EB88418220453E0700EDFAF5 /* SandBoxHelper.m */,
+			);
+			path = SandBoxHelper;
+			sourceTree = "<group>";
+		};
 		EB8B739F1FC6CDBE00B9DE66 /* Public */ = {
 			isa = PBXGroup;
 			children = (
@@ -1742,6 +1796,7 @@
 				EBA8F8801FC66D12005A2B84 /* LLBrowserScrollView.m in Sources */,
 				EB25C5F11F6790FF00115214 /* TYRunViewController.m in Sources */,
 				EB714BCE1F4806190024C929 /* ConstraintAttributes.swift in Sources */,
+				EB88417E204538CB00EDFAF5 /* AppManager.m in Sources */,
 				EB714BD81F4806190024C929 /* ConstraintLayoutGuideDSL.swift in Sources */,
 				EB5D392B1F345DE90029085F /* TYSegementIndicatorView.m in Sources */,
 				EBA8F8881FC66D12005A2B84 /* LLMessageDialog.m in Sources */,
@@ -1774,10 +1829,10 @@
 				EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */,
 				EB43475F1F3B51D100EC7AE9 /* TYStatusViewCell.m in Sources */,
 				EBE0F7AC1F773C83006F0AD8 /* TYSegmentScrollVIew.swift in Sources */,
+				EB88417A204534EC00EDFAF5 /* AppDelegate+PushService.m in Sources */,
 				EB5D39251F345C490029085F /* TYSegmentView.m in Sources */,
 				EB5A99FD1F3C06C30031C497 /* TYHomeUitl.m in Sources */,
 				EBA8F87A1FC66D12005A2B84 /* LLImageSelectHandler.m in Sources */,
-				EB032D231F0251F300F32465 /* AppDelegate.m in Sources */,
 				EBA8F8771FC66D12005A2B84 /* UIView+LLAdd.m in Sources */,
 				EB9FF1E21F47DF2200EEBE11 /* TYTheme.m in Sources */,
 				EB714BD91F4806190024C929 /* ConstraintLayoutSupport.swift in Sources */,
@@ -1803,10 +1858,12 @@
 				EB714BDC1F4806190024C929 /* ConstraintMakerEditable.swift in Sources */,
 				EB5D392E1F3460750029085F /* UIButton+TYExtension.m in Sources */,
 				EBA8F8821FC66D12005A2B84 /* LLToolbar.m in Sources */,
+				EB8841742045349400EDFAF5 /* AppDelegate.m in Sources */,
 				EB5EDB2D1F46C21E00B218AF /* UIColor.swift in Sources */,
 				EBA8F8761FC66D12005A2B84 /* UIScrollView+LLAdd.m in Sources */,
 				EBA8F8781FC66D12005A2B84 /* LLBaseViewController.m in Sources */,
 				EB55658B1F42EC6B005BB5DC /* TestView.m in Sources */,
+				EB884177204534CD00EDFAF5 /* AppDelegate+AppService.m in Sources */,
 				EB5B52F61FCD3CB900C1F455 /* TYPhotoCollectionViewController.m in Sources */,
 				EB714BE81F4806190024C929 /* ConstraintView.swift in Sources */,
 				EB6500EA1F4182FE00C0B89A /* TYAttentionViewController.swift in Sources */,
@@ -1840,6 +1897,7 @@
 				EB54324C1F4D634E00683AA7 /* UIBarButtonItem+Extension.m in Sources */,
 				EBA8F87E1FC66D12005A2B84 /* LLBlackToolbar.m in Sources */,
 				EBA8F8851FC66D12005A2B84 /* LLImageCollectionController.m in Sources */,
+				EB88418320453E0700EDFAF5 /* SandBoxHelper.m in Sources */,
 				EB5EDB2B1F46C15200B218AF /* Config.swift in Sources */,
 				EB714BCD1F4806190024C929 /* Constraint.swift in Sources */,
 				EB714BEB1F4806190024C929 /* LayoutConstraint.swift in Sources */,
@@ -2155,7 +2213,7 @@
 		};
 		EBAB32772010A1F300DDE88E /* PureUI */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D502818BA0F8EC5DDC48C475 /* Pods-RCTTest.debug.xcconfig */;
+			baseConfigurationReference = DCEF8753A3129DD7F8B4D947 /* Pods-RCTTest.pureui.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
