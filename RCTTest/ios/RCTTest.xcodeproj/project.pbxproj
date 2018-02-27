@@ -431,6 +431,8 @@
 		EB88417D204538CB00EDFAF5 /* AppManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppManager.m; sourceTree = "<group>"; };
 		EB88418120453E0700EDFAF5 /* SandBoxHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SandBoxHelper.h; sourceTree = "<group>"; };
 		EB88418220453E0700EDFAF5 /* SandBoxHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SandBoxHelper.m; sourceTree = "<group>"; };
+		EB8841842045576400EDFAF5 /* CommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
+		EB88418520455AFD00EDFAF5 /* URLMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLMacros.h; sourceTree = "<group>"; };
 		EB8B73A01FC6CF2C00B9DE66 /* TYPublicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPublicViewController.h; sourceTree = "<group>"; };
 		EB8B73A11FC6CF2C00B9DE66 /* TYPublicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYPublicViewController.m; sourceTree = "<group>"; };
 		EB9FF1E01F47DF2200EEBE11 /* TYTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTheme.h; sourceTree = "<group>"; };
@@ -846,6 +848,8 @@
 				EB5EDB2A1F46C15200B218AF /* Config.swift */,
 				EB5D39261F345D0A0029085F /* TYCalculateFrameTool.h */,
 				EB5D39271F345D0A0029085F /* TYCalculateFrameTool.m */,
+				EB8841842045576400EDFAF5 /* CommonMacros.h */,
+				EB88418520455AFD00EDFAF5 /* URLMacros.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
