@@ -135,6 +135,7 @@
 		EB714BEB1F4806190024C929 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB714BC81F4806190024C929 /* LayoutConstraint.swift */; };
 		EB714BEC1F4806190024C929 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB714BC91F4806190024C929 /* LayoutConstraintItem.swift */; };
 		EB714BED1F4806190024C929 /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB714BCA1F4806190024C929 /* UILayoutSupport+Extensions.swift */; };
+		EB729DFB2046941800EE9A44 /* AdPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB729DFA2046941800EE9A44 /* AdPageView.m */; };
 		EB74A44F1FDE6902009D6579 /* TYMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB74A44E1FDE6902009D6579 /* TYMapView.m */; };
 		EB74A4521FDE6D26009D6579 /* TYMapViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB74A4511FDE6D26009D6579 /* TYMapViewDelegate.m */; };
 		EB777A3E1F7BB161000461B3 /* icon_certification.png in Resources */ = {isa = PBXBuildFile; fileRef = EB777A3A1F7B9C91000461B3 /* icon_certification.png */; };
@@ -390,6 +391,8 @@
 		EB714BC81F4806190024C929 /* LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraint.swift; sourceTree = "<group>"; };
 		EB714BC91F4806190024C929 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraintItem.swift; sourceTree = "<group>"; };
 		EB714BCA1F4806190024C929 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
+		EB729DF92046941800EE9A44 /* AdPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdPageView.h; sourceTree = "<group>"; };
+		EB729DFA2046941800EE9A44 /* AdPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdPageView.m; sourceTree = "<group>"; };
 		EB74A44D1FDE6902009D6579 /* TYMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYMapView.h; sourceTree = "<group>"; };
 		EB74A44E1FDE6902009D6579 /* TYMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYMapView.m; sourceTree = "<group>"; };
 		EB74A4501FDE6D26009D6579 /* TYMapViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYMapViewDelegate.h; sourceTree = "<group>"; };
@@ -1290,6 +1293,15 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		EB729DF8204693BF00EE9A44 /* AdPage */ = {
+			isa = PBXGroup;
+			children = (
+				EB729DF92046941800EE9A44 /* AdPageView.h */,
+				EB729DFA2046941800EE9A44 /* AdPageView.m */,
+			);
+			path = AdPage;
+			sourceTree = "<group>";
+		};
 		EB7C64411FD63F720018AC3A /* RCTTestTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -1373,6 +1385,7 @@
 		EB88417F20453DDC00EDFAF5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EB729DF8204693BF00EE9A44 /* AdPage */,
 				EB88418020453DEB00EDFAF5 /* SandBoxHelper */,
 			);
 			path = Utils;
@@ -1908,6 +1921,7 @@
 				EB5A2A1D1F038C4100A19F2C /* UIButton+LPExtension.m in Sources */,
 				EB266F5A1F3B2D2000949D40 /* TYReviewTest.m in Sources */,
 				EB18D3E41F0F427200B44790 /* RCTLocationObserver.m in Sources */,
+				EB729DFB2046941800EE9A44 /* AdPageView.m in Sources */,
 				EB8B73A21FC6CF2C00B9DE66 /* TYPublicViewController.m in Sources */,
 				EB714BE91F4806190024C929 /* ConstraintViewDSL.swift in Sources */,
 			);

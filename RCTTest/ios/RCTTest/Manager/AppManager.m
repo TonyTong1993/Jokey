@@ -7,10 +7,14 @@
 //
 
 #import "AppManager.h"
-
+#import "AdPageView.h"
 @implementation AppManager
 +(void)appADStart {
-    
+    //加载广告
+    AdPageView *adView = [[AdPageView alloc] initWithFrame:[UIScreen mainScreen].bounds withTapBlock:^{
+     
+    }];
+     adView = adView;
 }
 +(void)showFPS {
     
