@@ -40,6 +40,7 @@
  */
 -(void)monitorNetWorkStatus;
 
++ (AppDelegate *)shareAppDelegate;
 /**
  返回window上栈顶的viewController
 
@@ -48,10 +49,10 @@
 -(UIViewController *)topViewController;
 
 /**
- 返回window顶层的容器类型的viewController
+ 返回window顶层的容器类型的rootViewController
 
  @return like tabBarViewController or navigationViewController
  */
--(UIViewController *)topContainerViewController;
+-(UIViewController *)rootViewController;
 
 @end

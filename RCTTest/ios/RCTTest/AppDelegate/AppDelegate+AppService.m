@@ -71,4 +71,54 @@
         }
     }];
 }
+-(void)initUmeng {
+    
+}
++ (AppDelegate *)shareAppDelegate{
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
+-(UIViewController *)rootViewController {
+    UIViewController *result = nil;
+    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+    if (keyWindow.windowLevel != UIWindowLevelNormal) {
+        NSArray *windows = [[UIApplication sharedApplication] windows];
+        for (UIWindow *window in windows) {
+            if (window.windowLevel == UIWindowLevelNormal) {
+                keyWindow = window;
+                break;
+            }
+        }
+    }
+    UIView *frontView = [[keyWindow subviews] objectAtIndex:0];
+    id nextResponder = [frontView nextResponder];
+    if ([nextResponder isKindOfClass:[UIViewController class]]) {
+        result = nextResponder;
+    }else {
+        result = keyWindow.rootViewController;
+    }
+    return result;
+}
+-(UIViewController *)topViewController {
+    UIViewController *superVC = [self rootViewController];
+    
+    if ([superVC isKindOfClass:[UITabBarController class]]) {
+        UIViewController *tabSelectVC = [(UITabBarController *)superVC selectedViewController];
+        if ([tabSelectVC isKindOfClass:[UINavigationController class]]) {
+            return [(UINavigationController *)tabSelectVC topViewController];
+        }else {
+            return tabSelectVC;
+        }
+    }else
+        if ([superVC isKindOfClass:[UINavigationController class]]) {
+            return [(UINavigationController *)superVC topViewController];
+        }
+        return superVC;
+}
+#pragma mark---notification
+-(void)loginStateChange:(NSNotification *)notification {
+    
+}
+-(void)netWorkStateChange:(NSNotification *)notification {
+    
+}
 @end

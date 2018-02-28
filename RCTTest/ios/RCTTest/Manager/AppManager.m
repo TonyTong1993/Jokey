@@ -9,5 +9,10 @@
 #import "AppManager.h"
 
 @implementation AppManager
-
++(void)appADStart {
+    
+}
++(void)showFPS {
+    
+}
 @end

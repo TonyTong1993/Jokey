@@ -52,6 +52,8 @@
     [self initService];
     //初始化用户系统
     [self initUserManager];
+    //网络监听
+    [self monitorNetWorkStatus];
     //开启启动广告
     [AppManager appADStart];
     
