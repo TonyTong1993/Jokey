@@ -86,8 +86,8 @@
      TYProfileViewModel *model = self.dataSource[indexPath.section][indexPath.row];
     UIViewController *VC;
     if ([model.className isEqualToString:@"TYShopViewController"]) {
-//         NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
-        NSURL *jsCodeLocation = [NSURL URLWithString:@"http://192.168.10.40:8081/index.ios.bundle?platform=ios"];
+         NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+//        NSURL *jsCodeLocation = [NSURL URLWithString:@"http://192.168.10.40:8081/index.ios.bundle?platform=ios"];
         RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:@"test" initialProperties:@{} launchOptions:nil];
         TYShopViewController *vc = [[TYShopViewController alloc] init];
         vc.view = rootView;

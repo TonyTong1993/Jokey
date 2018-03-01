@@ -41,8 +41,6 @@ static int const showtime = 5;
         [_adView addGestureRecognizer:tapGesture];
         [self addSubview:_adView];
     
-       
-        
         // 2.跳过按钮
         CGFloat btnW = 60;
         CGFloat btnH = 30;

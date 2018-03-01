@@ -8,50 +8,14 @@
 
 #import "TYBaseViewController.h"
 #import "UIImage+Extentions.h"
-
+#import "UIScrollView+Refresh.h"
 @interface TYBaseViewController ()
 
 @end
 
 @implementation TYBaseViewController
 #pragma mark---getter and setter
-- (NSMutableArray *)normalImages
-{
-    if (_normalImages == nil) {
-        _normalImages = [[NSMutableArray alloc] init];
-        for (int i = 0; i < 10; i++) {
-            UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"pull_to_refresh_%d_54x54_",i+1]];
-            [_normalImages addObject:image];
-        }
-        
-    }
-    return _normalImages;
-}
-- (NSMutableArray *)pullingImages
-{
-    if (_pullingImages == nil) {
-        _pullingImages = [[NSMutableArray alloc] init];
-        for (int i = 0; i < 10; i++) {
-            UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"pull_to_refresh_%d_54x54_",i+1]];
-            [_pullingImages addObject:image];
-        }
-        
-    }
-    return _pullingImages;
-}
-//正在刷新状态下的图片
-- (NSMutableArray *)refreshImages
-{
-    if (_refreshImages == nil) {
-        _refreshImages = [[NSMutableArray alloc] init];
-        
-        for (int i = 0; i < 10; i++) {
-            UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"pull_to_refresh_%d_54x54_",i+1]];
-            [_refreshImages addObject:image];
-        }
-    }
-    return _refreshImages;
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -72,30 +36,18 @@
     self.tableView.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:_tableView];
     
-    //设置网络数据下啦刷新
-    __weak typeof(self) weakSelf = self;
-   MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingBlock:^{
-      
-           [weakSelf loadNewData];
-       
-    }];
-    [header setImages:self.normalImages forState:MJRefreshStateIdle];
-    [header setImages:self.pullingImages  forState:MJRefreshStatePulling];
-    [header setImages:self.refreshImages  forState:MJRefreshStateRefreshing];
-    header.lastUpdatedTimeLabel.hidden= YES;//如果不隐藏这个会默认 图片在最左边不是在中间
-    header.stateLabel.hidden = YES;
-    self.tableView.mj_header = header;
-    self.tableView.mj_header.mj_h = 74;
-    
-    //设置上拉加载更多数据
-    MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-       
-        [weakSelf loadMoreData];
-        
-    }];
-    self.tableView.mj_footer = footer;
-    footer.refreshingTitleHidden = YES;
-    footer.stateLabel.hidden = YES;
+    /*
+     //设置网络数据下啦刷新
+     __weak typeof(self) weakSelf = self;
+     [self.tableView addHeaderRefreshWithBlock:^{
+     [weakSelf loadNewData];
+     }];
+     
+     //设置上拉加载更多数据
+     [self.tableView addFooterRefreshWithBlock:^{
+     [weakSelf loadMoreData];
+     }];
+     */
 }
 
 -(void)setUpNavigationBar {

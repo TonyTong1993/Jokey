@@ -24,8 +24,7 @@ class TYCategaryViewController: TYBaseViewController {
         tableView.register(TYAttentionViewCell.classForCoder(), forCellReuseIdentifier: "cell")
         //style
         tableView.separatorColor = UIColor(hex:NSInteger(separatorColorHexValue))
-        tableView.mj_header.removeFromSuperview()
-        tableView.mj_footer.removeFromSuperview()
+      
     }
     
 }

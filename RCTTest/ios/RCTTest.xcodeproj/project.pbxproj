@@ -97,6 +97,7 @@
 		EB6712331F4C0FDE00642B72 /* String(Add).swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6712321F4C0FDE00642B72 /* String(Add).swift */; };
 		EB6712351F4C4CE500642B72 /* UIColor+RGBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6712341F4C4CE500642B72 /* UIColor+RGBA.swift */; };
 		EB6728881F6129C40089265A /* TYPoprosManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6728871F6129C40089265A /* TYPoprosManager.m */; };
+		EB6A84E62047AB6600DE7224 /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6A84E52047AB6600DE7224 /* UIScrollView+Refresh.m */; };
 		EB6AC57A1FC6BD4200A6B63F /* TYPhotoPickerViewControlller.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6AC5791FC6BD4200A6B63F /* TYPhotoPickerViewControlller.m */; };
 		EB6AC57E1FC6BDF500A6B63F /* TYPhotoHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6AC57D1FC6BDF500A6B63F /* TYPhotoHandler.m */; };
 		EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */; };
@@ -350,6 +351,8 @@
 		EB6728861F6129C40089265A /* TYPoprosManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPoprosManager.h; sourceTree = "<group>"; };
 		EB6728871F6129C40089265A /* TYPoprosManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPoprosManager.m; sourceTree = "<group>"; };
 		EB67EF101F7E30F100FCED39 /* RCTTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RCTTest.entitlements; sourceTree = "<group>"; };
+		EB6A84E42047AB6600DE7224 /* UIScrollView+Refresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Refresh.h"; sourceTree = "<group>"; };
+		EB6A84E52047AB6600DE7224 /* UIScrollView+Refresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Refresh.m"; sourceTree = "<group>"; };
 		EB6AC5781FC6BD4200A6B63F /* TYPhotoPickerViewControlller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPhotoPickerViewControlller.h; sourceTree = "<group>"; };
 		EB6AC5791FC6BD4200A6B63F /* TYPhotoPickerViewControlller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPhotoPickerViewControlller.m; sourceTree = "<group>"; };
 		EB6AC57C1FC6BDF500A6B63F /* TYPhotoHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPhotoHandler.h; sourceTree = "<group>"; };
@@ -596,6 +599,7 @@
 		EB032D1D1F0251F300F32465 /* RCTTest */ = {
 			isa = PBXGroup;
 			children = (
+				EB729DFC2046B37100EE9A44 /* Bundle */,
 				EB88417F20453DDC00EDFAF5 /* Utils */,
 				EB88417B204538A800EDFAF5 /* Manager */,
 				EB8841712045345800EDFAF5 /* AppDelegate */,
@@ -917,6 +921,8 @@
 				EBBBF6E32011A37D0011B4DF /* UIColor+Extension.m */,
 				EBBBF6E52011CB420011B4DF /* UIImageView+Extension.h */,
 				EBBBF6E62011CB420011B4DF /* UIImageView+Extension.m */,
+				EB6A84E42047AB6600DE7224 /* UIScrollView+Refresh.h */,
+				EB6A84E52047AB6600DE7224 /* UIScrollView+Refresh.m */,
 			);
 			path = Categry;
 			sourceTree = "<group>";
@@ -1300,6 +1306,13 @@
 				EB729DFA2046941800EE9A44 /* AdPageView.m */,
 			);
 			path = AdPage;
+			sourceTree = "<group>";
+		};
+		EB729DFC2046B37100EE9A44 /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Bundle;
 			sourceTree = "<group>";
 		};
 		EB7C64411FD63F720018AC3A /* RCTTestTests */ = {
@@ -1848,6 +1861,7 @@
 				EBE0F7AC1F773C83006F0AD8 /* TYSegmentScrollVIew.swift in Sources */,
 				EB88417A204534EC00EDFAF5 /* AppDelegate+PushService.m in Sources */,
 				EB5D39251F345C490029085F /* TYSegmentView.m in Sources */,
+				EB6A84E62047AB6600DE7224 /* UIScrollView+Refresh.m in Sources */,
 				EB5A99FD1F3C06C30031C497 /* TYHomeUitl.m in Sources */,
 				EBA8F87A1FC66D12005A2B84 /* LLImageSelectHandler.m in Sources */,
 				EBA8F8771FC66D12005A2B84 /* UIView+LLAdd.m in Sources */,

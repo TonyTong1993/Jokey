@@ -13,7 +13,7 @@
 #import "TYHomeUitl.h"
 #import "TYCalculateFrameTool.h"
 #import "TYTestViewController.h"
-
+#import "UIScrollView+Refresh.h"
 static NSString *reuserIndentifier = @"KTYStatusViewCell";
 @interface TYRecommendViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 @property (nonatomic,strong) UICollectionView *collectionView;
@@ -45,31 +45,18 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
     
     //设置网络数据下啦刷新
     __weak typeof(self) weakSelf = self;
-    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingBlock:^{
-        
-        [weakSelf loadNewData];
-        
-    }];
     self.collectionView.backgroundColor = HEXCOLOR(0xEFF0F6);
-    [header setImages:self.normalImages forState:MJRefreshStateIdle];
-    [header setImages:self.pullingImages  forState:MJRefreshStatePulling];
-    [header setImages:self.refreshImages  forState:MJRefreshStateRefreshing];
-    header.lastUpdatedTimeLabel.hidden= YES;//如果不隐藏这个会默认 图片在最左边不是在中间
-    header.stateLabel.hidden = YES;
-    self.collectionView.mj_header = header;
-    self.collectionView.mj_header.mj_h = 74;
+    
+    [self.collectionView addHeaderRefreshWithBlock:^{
+        [weakSelf loadNewData];
+    }];
     
     //设置上拉加载更多数据
-    MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        
-        [weakSelf loadMoreData];
-        
-    }];
-    self.collectionView.mj_footer = footer;
-    footer.refreshingTitleHidden = YES;
-    footer.stateLabel.hidden = YES;
-
     
+    [self.collectionView addFooterRefreshWithBlock:^{
+        [weakSelf loadMoreData];
+    }];
+
     [self.collectionView registerNib:[UINib nibWithNibName:@"TYStatusViewCell" bundle:nil] forCellWithReuseIdentifier:reuserIndentifier];
     
     [self.collectionView.mj_header beginRefreshing];
