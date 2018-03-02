@@ -40,4 +40,7 @@ source 'https://github.com/CocoaPods/Specs.git'
     pod 'JPush'
     pod 'YTKNetwork'
     pod "FDStackView", "1.0"
+    pod 'UMCAnalytics'
+    pod 'UMCCommon'
+    pod 'UMCErrorCatch'
 end

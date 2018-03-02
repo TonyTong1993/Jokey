@@ -107,7 +107,7 @@
 
     //显示hud
     [hud showAnimated:YES];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         //隐藏hud
         [hud hideAnimated:true];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:APP_Login_Key];
@@ -118,6 +118,12 @@
         TYTabBarController *rootVC = [[TYTabBarController alloc] init];
         window.rootViewController = rootVC;
         [window makeKeyAndVisible];
+        
+        CATransition *transition = [CATransition animation];
+        transition.type = kCATransitionPush;
+        transition.subtype = kCATransitionFromLeft;
+        transition.duration = 0.3f;
+        [window.layer addAnimation:transition forKey:@"revealAnimation"];
     });
     
     

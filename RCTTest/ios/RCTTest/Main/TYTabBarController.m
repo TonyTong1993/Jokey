@@ -28,7 +28,7 @@
     [[UITabBar appearance] setShadowImage:[UIImage singleLineImageWithColor:HEXCOLOR(separatorColorHexValue)]];
     //添加子视图控制器
     NSArray *barItemInfos = @[
-                              @{@"className":@"TYHomeViewController",@"icon":@"tabbar_featured_24x24_",@"selectedIcon":@"tabbar_featured_hl_24x24_",@"title":@"首页"},
+                          @{@"className":@"TYHomeViewController",@"icon":@"tabbar_featured_24x24_",@"selectedIcon":@"tabbar_featured_hl_24x24_",@"title":@"首页"},
                               @{@"className":[NSString nameSpaceWrapedClassNameInSwift:@"TYAttentionViewController"],@"icon":@"tabbar_follow_24x24_",@"selectedIcon":@"tabbar_follow_hl_24x24_",@"title":@"关注"},
                               @{@"className":[NSString nameSpaceWrapedClassNameInSwift:@"TYDiscoverViewController"],@"icon":@"tabbar_explore_24x24_",@"selectedIcon":@"tabbar_explore_hl_24x24_",@"title":@"发现"},
                              @{@"className":[NSString nameSpaceWrapedClassNameInSwift:@"TYMessageViewController"],@"icon":@"tabbar_remind_24x24_",@"selectedIcon":@"tabbar_remind_hl_24x24_",@"title":@"消息"},
