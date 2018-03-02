@@ -9,7 +9,7 @@
 #import "TYTabBarController.h"
 #import "TYNavigationController.h"
 #import "RCTTest-Swift.h"
-
+#import "AppManager.h"
 @interface TYTabBarController ()
 
 @end
@@ -22,8 +22,7 @@
         NSLog(@"didload in %f sec",CFAbsoluteTimeGetCurrent() - StartTime);
     });
     [super viewDidLoad];
-    
-    
+
     //设置UITabBar主题
     [[UITabBar appearance] setBackgroundImage:[[UIImage imageNamed:@"tabbar_bg_1x49_"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [[UITabBar appearance] setShadowImage:[UIImage singleLineImageWithColor:HEXCOLOR(separatorColorHexValue)]];

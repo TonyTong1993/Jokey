@@ -8,7 +8,6 @@
 
 #import "TYRecommendViewController.h"
 #import "TYStatusViewCell.h"
-#import "TYFPSLabel.h"
 #import "Test.h"
 #import "TYHomeUitl.h"
 #import "TYCalculateFrameTool.h"
@@ -17,7 +16,6 @@
 static NSString *reuserIndentifier = @"KTYStatusViewCell";
 @interface TYRecommendViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 @property (nonatomic,strong) UICollectionView *collectionView;
-@property (nonatomic, strong) TYFPSLabel *fpsLabel;
 @end
 
 @implementation TYRecommendViewController
@@ -25,14 +23,7 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpTableView];
-    
-    _fpsLabel = [TYFPSLabel new];
-    [_fpsLabel sizeToFit];
-    _fpsLabel.bottom = self.view.height - kWBCellPadding;
-    _fpsLabel.left = kWBCellPadding;
-    _fpsLabel.alpha = 0.0f;
-    [self.view addSubview:_fpsLabel];
-    
+    self.navigationController.view.backgroundColor = [UIColor randomColor];
 }
 -(void)setUpTableView {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
@@ -99,40 +90,6 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
     TYTestViewController *testVC = [[TYTestViewController alloc] init];
     testVC.title = @"实践渐变颜色";
     [self.navigationController pushViewController:testVC animated:YES];
-}
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    if (_fpsLabel.alpha == 0) {
-        [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-            _fpsLabel.alpha = 1;
-        } completion:NULL];
-    }
-}
-
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    if (!decelerate) {
-        if (_fpsLabel.alpha != 0) {
-            [UIView animateWithDuration:1 delay:2 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-                _fpsLabel.alpha = 0;
-            } completion:NULL];
-        }
-    }
-}
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    if (_fpsLabel.alpha != 0) {
-        [UIView animateWithDuration:1 delay:2 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-            _fpsLabel.alpha = 0;
-        } completion:NULL];
-    }
-}
-
-- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView {
-    if (_fpsLabel.alpha == 0) {
-        [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-            _fpsLabel.alpha = 1;
-        } completion:^(BOOL finished) {
-        }];
-    }
 }
 @end
 

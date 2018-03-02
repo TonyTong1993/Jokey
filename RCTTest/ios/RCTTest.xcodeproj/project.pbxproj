@@ -75,6 +75,7 @@
 		EB5EDB2B1F46C15200B218AF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EDB2A1F46C15200B218AF /* Config.swift */; };
 		EB5EDB2D1F46C21E00B218AF /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5EDB2C1F46C21E00B218AF /* UIColor.swift */; };
 		EB60BB8F1F454DB60062DBC2 /* TYAttentionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60BB8E1F454DB60062DBC2 /* TYAttentionViewCell.swift */; };
+		EB61FD6E2048E8FF006CA65F /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB61FD6C2048E8FF006CA65F /* YYFPSLabel.m */; };
 		EB64A7341FCE911B00E8546E /* TYMemoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB64A7331FCE911B00E8546E /* TYMemoryManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EB6500E81F4182DE00C0B89A /* TYMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6500E71F4182DE00C0B89A /* TYMessageViewController.swift */; };
 		EB6500EA1F4182FE00C0B89A /* TYAttentionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6500E91F4182FE00C0B89A /* TYAttentionViewController.swift */; };
@@ -98,6 +99,8 @@
 		EB6712351F4C4CE500642B72 /* UIColor+RGBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6712341F4C4CE500642B72 /* UIColor+RGBA.swift */; };
 		EB6728881F6129C40089265A /* TYPoprosManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6728871F6129C40089265A /* TYPoprosManager.m */; };
 		EB6A84E62047AB6600DE7224 /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6A84E52047AB6600DE7224 /* UIScrollView+Refresh.m */; };
+		EB6A84E92047B33100DE7224 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6A84E82047B33100DE7224 /* UserManager.m */; };
+		EB6A84ED2047B35F00DE7224 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6A84EC2047B35F00DE7224 /* UserInfo.m */; };
 		EB6AC57A1FC6BD4200A6B63F /* TYPhotoPickerViewControlller.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6AC5791FC6BD4200A6B63F /* TYPhotoPickerViewControlller.m */; };
 		EB6AC57E1FC6BDF500A6B63F /* TYPhotoHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6AC57D1FC6BDF500A6B63F /* TYPhotoHandler.m */; };
 		EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */; };
@@ -149,7 +152,6 @@
 		EB7C64621FD681E60018AC3A /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB7C64611FD681E60018AC3A /* libOCMock.a */; };
 		EB811C711F763934003552E9 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB811C701F763934003552E9 /* libMBProgressHUD.a */; };
 		EB811C751F764273003552E9 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = EB811C741F764273003552E9 /* MBProgressHUD+MJ.m */; };
-		EB82C27D20119A8B005C97BE /* TYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB82C27C20119A8B005C97BE /* TYFPSLabel.m */; };
 		EB8841742045349400EDFAF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8841722045349300EDFAF5 /* AppDelegate.m */; };
 		EB884177204534CD00EDFAF5 /* AppDelegate+AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = EB884176204534CD00EDFAF5 /* AppDelegate+AppService.m */; };
 		EB88417A204534EC00EDFAF5 /* AppDelegate+PushService.m in Sources */ = {isa = PBXBuildFile; fileRef = EB884179204534EC00EDFAF5 /* AppDelegate+PushService.m */; };
@@ -323,6 +325,8 @@
 		EB5EDB2A1F46C15200B218AF /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		EB5EDB2C1F46C21E00B218AF /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		EB60BB8E1F454DB60062DBC2 /* TYAttentionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYAttentionViewCell.swift; sourceTree = "<group>"; };
+		EB61FD6C2048E8FF006CA65F /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		EB61FD6D2048E8FF006CA65F /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
 		EB64A7321FCE911B00E8546E /* TYMemoryManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYMemoryManager.h; sourceTree = "<group>"; };
 		EB64A7331FCE911B00E8546E /* TYMemoryManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYMemoryManager.m; sourceTree = "<group>"; };
 		EB6500E71F4182DE00C0B89A /* TYMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYMessageViewController.swift; sourceTree = "<group>"; };
@@ -353,6 +357,10 @@
 		EB67EF101F7E30F100FCED39 /* RCTTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RCTTest.entitlements; sourceTree = "<group>"; };
 		EB6A84E42047AB6600DE7224 /* UIScrollView+Refresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Refresh.h"; sourceTree = "<group>"; };
 		EB6A84E52047AB6600DE7224 /* UIScrollView+Refresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Refresh.m"; sourceTree = "<group>"; };
+		EB6A84E72047B33100DE7224 /* UserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		EB6A84E82047B33100DE7224 /* UserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
+		EB6A84EB2047B35F00DE7224 /* UserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		EB6A84EC2047B35F00DE7224 /* UserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		EB6AC5781FC6BD4200A6B63F /* TYPhotoPickerViewControlller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPhotoPickerViewControlller.h; sourceTree = "<group>"; };
 		EB6AC5791FC6BD4200A6B63F /* TYPhotoPickerViewControlller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPhotoPickerViewControlller.m; sourceTree = "<group>"; };
 		EB6AC57C1FC6BDF500A6B63F /* TYPhotoHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPhotoHandler.h; sourceTree = "<group>"; };
@@ -425,8 +433,6 @@
 		EB811C701F763934003552E9 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "Pods/../build/Debug-iphoneos/MBProgressHUD/libMBProgressHUD.a"; sourceTree = "<group>"; };
 		EB811C731F764273003552E9 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		EB811C741F764273003552E9 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
-		EB82C27B20119A8B005C97BE /* TYFPSLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYFPSLabel.h; sourceTree = "<group>"; };
-		EB82C27C20119A8B005C97BE /* TYFPSLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYFPSLabel.m; sourceTree = "<group>"; };
 		EB8841722045349300EDFAF5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EB8841732045349300EDFAF5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EB884175204534CD00EDFAF5 /* AppDelegate+AppService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AppService.h"; sourceTree = "<group>"; };
@@ -1038,6 +1044,7 @@
 		EB64A72B1FCE8CD600E8546E /* Objc */ = {
 			isa = PBXGroup;
 			children = (
+				EB6A84EE2048080900DE7224 /* WebView */,
 				EB64A7311FCE906A00E8546E /* Animation */,
 				EB64A7301FCE904100E8546E /* Performance */,
 				EB64A72F1FCE900800E8546E /* NetWorking */,
@@ -1225,6 +1232,22 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		EB6A84EA2047B34900DE7224 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB6A84EB2047B35F00DE7224 /* UserInfo.h */,
+				EB6A84EC2047B35F00DE7224 /* UserInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EB6A84EE2048080900DE7224 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		EB6AC5741FC6BC3D00A6B63F /* PhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -1367,8 +1390,6 @@
 		EB82C27A20119A54005C97BE /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				EB82C27B20119A8B005C97BE /* TYFPSLabel.h */,
-				EB82C27C20119A8B005C97BE /* TYFPSLabel.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1389,8 +1410,11 @@
 		EB88417B204538A800EDFAF5 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				EB6A84EA2047B34900DE7224 /* Model */,
 				EB88417C204538CB00EDFAF5 /* AppManager.h */,
 				EB88417D204538CB00EDFAF5 /* AppManager.m */,
+				EB6A84E72047B33100DE7224 /* UserManager.h */,
+				EB6A84E82047B33100DE7224 /* UserManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -1398,6 +1422,8 @@
 		EB88417F20453DDC00EDFAF5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EB61FD6D2048E8FF006CA65F /* YYFPSLabel.h */,
+				EB61FD6C2048E8FF006CA65F /* YYFPSLabel.m */,
 				EB729DF8204693BF00EE9A44 /* AdPage */,
 				EB88418020453DEB00EDFAF5 /* SandBoxHelper */,
 			);
@@ -1830,6 +1856,7 @@
 				EB714BD81F4806190024C929 /* ConstraintLayoutGuideDSL.swift in Sources */,
 				EB5D392B1F345DE90029085F /* TYSegementIndicatorView.m in Sources */,
 				EBA8F8881FC66D12005A2B84 /* LLMessageDialog.m in Sources */,
+				EB61FD6E2048E8FF006CA65F /* YYFPSLabel.m in Sources */,
 				EB5A2A101F0388D700A19F2C /* TYTabBarController.m in Sources */,
 				EB55658D1F42FEB0005BB5DC /* Bundle(Add).swift in Sources */,
 				EB714BCC1F4806190024C929 /* README.md in Sources */,
@@ -1843,7 +1870,6 @@
 				EBA8F87F1FC66D12005A2B84 /* LLBrowserImageView.m in Sources */,
 				EBA8F8741FC66D12005A2B84 /* UIImage+LLAdd.m in Sources */,
 				EB714BE11F4806190024C929 /* ConstraintMultiplierTarget.swift in Sources */,
-				EB82C27D20119A8B005C97BE /* TYFPSLabel.m in Sources */,
 				EB01F61B1F36B635008CF290 /* UIColor+RGBA.m in Sources */,
 				EB5EDB291F46964A00B218AF /* TYAttention.swift in Sources */,
 				EB714BD41F4806190024C929 /* ConstraintInsetTarget.swift in Sources */,
@@ -1856,6 +1882,7 @@
 				EB18D3F81F0F89C500B44790 /* TYServiceApi.m in Sources */,
 				EB032D261F0251F300F32465 /* ViewController.m in Sources */,
 				EB6500F31F4186D500C0B89A /* NSString+Extension.m in Sources */,
+				EB6A84E92047B33100DE7224 /* UserManager.m in Sources */,
 				EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */,
 				EB43475F1F3B51D100EC7AE9 /* TYStatusViewCell.m in Sources */,
 				EBE0F7AC1F773C83006F0AD8 /* TYSegmentScrollVIew.swift in Sources */,
@@ -1895,6 +1922,7 @@
 				EBA8F8781FC66D12005A2B84 /* LLBaseViewController.m in Sources */,
 				EB55658B1F42EC6B005BB5DC /* TestView.m in Sources */,
 				EB884177204534CD00EDFAF5 /* AppDelegate+AppService.m in Sources */,
+				EB6A84ED2047B35F00DE7224 /* UserInfo.m in Sources */,
 				EB5B52F61FCD3CB900C1F455 /* TYPhotoCollectionViewController.m in Sources */,
 				EB714BE81F4806190024C929 /* ConstraintView.swift in Sources */,
 				EB6500EA1F4182FE00C0B89A /* TYAttentionViewController.swift in Sources */,

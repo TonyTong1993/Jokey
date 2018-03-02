@@ -8,6 +8,7 @@
 
 #import "AppManager.h"
 #import "AdPageView.h"
+#import "YYFPSLabel.h"
 @implementation AppManager
 +(void)appADStart {
     //加载广告
@@ -17,6 +18,14 @@
      adView = adView;
 }
 +(void)showFPS {
-    
+    CGFloat width = 52.0f;
+    CGFloat height = 20.0f;
+    CGSize size = [UIScreen mainScreen].bounds.size;
+    CGRect frame = CGRectMake(size.width - width - 20, size.height-kTabBarHeight-40, width, height);
+    YYFPSLabel *fpsLabel = [[YYFPSLabel alloc] initWithFrame:frame];
+    fpsLabel.backgroundColor = [UIColor randomColor];
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    [keyWindow addSubview:fpsLabel];
+    [keyWindow bringSubviewToFront:fpsLabel];
 }
 @end

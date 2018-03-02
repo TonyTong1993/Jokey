@@ -35,6 +35,7 @@ source 'https://github.com/CocoaPods/Specs.git'
     pod "FMDB"
     pod 'PNChart'
     pod 'CocoaSecurity'
+    pod 'YYKit'
     pod 'MBProgressHUD'
     pod 'JPush'
     pod 'YTKNetwork'

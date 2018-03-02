@@ -56,7 +56,10 @@
     [self monitorNetWorkStatus];
     //开启启动广告
     [AppManager appADStart];
+#if DEBUG
+    [AppManager showFPS];
     
+#endif
    
 
    
