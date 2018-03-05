@@ -117,20 +117,11 @@
         case SegmentControlStateNormal:
         {
             _titleNormalColor = color;
-            [_items enumerateObjectsUsingBlock:^(UIButton *item, NSUInteger idx, BOOL * _Nonnull stop) {
-                  [self setTitleNormalColor:_titleNormalColor item:item];
-            }];
         }
             break;
         case SegmentControlStateSelected:
         {
             _titleSelectedColor = color;
-            [_items enumerateObjectsUsingBlock:^(UIButton *item, NSUInteger idx, BOOL * _Nonnull stop) {
-                if (idx == self.selectedItemIndex) {
-                    [self setTitleSelectedColor:_titleSelectedColor item:item];
-                    *stop = YES ;
-                }
-            }];
         }
             break;
     }
@@ -236,6 +227,10 @@
     //更新指示器
     NSString *title = _titles[_selectedItemIndex];
     [self updateIndicatorViewWithTitle:title animated:true];
+    [self.items enumerateObjectsUsingBlock:^(UIButton *item, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self setTitleNormalColor:_titleNormalColor item:item];
+        [self setTitleSelectedColor:_titleSelectedColor item:(UIButton *)item];
+    }];
 }
 
 -(void)handleItemSelectedAtIndex:(UIButton *)selectedItem {

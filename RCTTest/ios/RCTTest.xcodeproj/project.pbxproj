@@ -31,6 +31,7 @@
 		EB266F5C1F3B317500949D40 /* recommend.json in Resources */ = {isa = PBXBuildFile; fileRef = EB266F5B1F3B317500949D40 /* recommend.json */; };
 		EB266F651F3B38AE00949D40 /* TYRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB266F641F3B38AE00949D40 /* TYRecommendViewController.m */; };
 		EB26737B2010720A008FA02C /* pingfang.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB26737A2010720A008FA02C /* pingfang.ttf */; };
+		EB2C570F2049364500A4E271 /* UIViewController+MobClick.m in Sources */ = {isa = PBXBuildFile; fileRef = EB2C570E2049364500A4E271 /* UIViewController+MobClick.m */; };
 		EB3299CE1F1354420034D095 /* TYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3299CD1F1354420034D095 /* TYHomeViewController.m */; };
 		EB3299D01F136B860034D095 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299CF1F136B860034D095 /* iconfont.ttf */; };
 		EB3299E21F1385B60034D095 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299D81F1385B60034D095 /* Ionicons.ttf */; };
@@ -250,6 +251,9 @@
 		EB266F631F3B38AE00949D40 /* TYRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYRecommendViewController.h; sourceTree = "<group>"; };
 		EB266F641F3B38AE00949D40 /* TYRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYRecommendViewController.m; sourceTree = "<group>"; };
 		EB26737A2010720A008FA02C /* pingfang.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pingfang.ttf; sourceTree = "<group>"; };
+		EB2C570C20492D7100A4E271 /* ThirdPartKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdPartKey.h; sourceTree = "<group>"; };
+		EB2C570D2049364500A4E271 /* UIViewController+MobClick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MobClick.h"; sourceTree = "<group>"; };
+		EB2C570E2049364500A4E271 /* UIViewController+MobClick.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MobClick.m"; sourceTree = "<group>"; };
 		EB3299CC1F1354420034D095 /* TYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYHomeViewController.h; sourceTree = "<group>"; };
 		EB3299CD1F1354420034D095 /* TYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYHomeViewController.m; sourceTree = "<group>"; };
 		EB3299CF1F136B860034D095 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
@@ -863,6 +867,7 @@
 				EB5D39271F345D0A0029085F /* TYCalculateFrameTool.m */,
 				EB8841842045576400EDFAF5 /* CommonMacros.h */,
 				EB88418520455AFD00EDFAF5 /* URLMacros.h */,
+				EB2C570C20492D7100A4E271 /* ThirdPartKey.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -929,6 +934,8 @@
 				EBBBF6E62011CB420011B4DF /* UIImageView+Extension.m */,
 				EB6A84E42047AB6600DE7224 /* UIScrollView+Refresh.h */,
 				EB6A84E52047AB6600DE7224 /* UIScrollView+Refresh.m */,
+				EB2C570D2049364500A4E271 /* UIViewController+MobClick.h */,
+				EB2C570E2049364500A4E271 /* UIViewController+MobClick.m */,
 			);
 			path = Categry;
 			sourceTree = "<group>";
@@ -1956,6 +1963,7 @@
 				EB54324C1F4D634E00683AA7 /* UIBarButtonItem+Extension.m in Sources */,
 				EBA8F87E1FC66D12005A2B84 /* LLBlackToolbar.m in Sources */,
 				EBA8F8851FC66D12005A2B84 /* LLImageCollectionController.m in Sources */,
+				EB2C570F2049364500A4E271 /* UIViewController+MobClick.m in Sources */,
 				EB88418320453E0700EDFAF5 /* SandBoxHelper.m in Sources */,
 				EB5EDB2B1F46C15200B218AF /* Config.swift in Sources */,
 				EB714BCD1F4806190024C929 /* Constraint.swift in Sources */,

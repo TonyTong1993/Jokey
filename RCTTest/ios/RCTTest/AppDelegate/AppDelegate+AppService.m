@@ -10,6 +10,9 @@
 #import "TYLoginViewController.h"
 #import "TYTabBarController.h"
 #import "TYNetWorkingTool.h"
+#import <UMCommon/UMCommon.h>
+#import <UMAnalytics/MobClick.h>
+#import <UMErrorCatch/UMErrorCatch.h>
 @implementation AppDelegate (AppService)
 -(void)initService {
     //注册登录状态监听
@@ -71,7 +74,11 @@
         }
     }];
 }
+//TODO:通过黑魔法完成页面统计
 -(void)initUmeng {
+    [UMConfigure initWithAppkey:UMAppKey channel:AppChannel];
+    [UMConfigure setEncryptEnabled:YES];
+    [UMErrorCatch initErrorCatch];
     
 }
 + (AppDelegate *)shareAppDelegate{

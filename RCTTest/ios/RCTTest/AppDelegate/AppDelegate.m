@@ -8,11 +8,8 @@
 
 #import "AppDelegate.h"
 #import "Macro.h"
-
-
 #import "TYTheme.h"
 #import  "TBCityIconFont.h"
-
 #import "AppDelegate+AppService.h"
 #import "AppDelegate+PushService.h"
 #import "AppManager.h"

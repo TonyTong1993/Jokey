@@ -24,7 +24,7 @@
 #define DevelopSever    1
 #define TestSever       0
 #define ProductSever    0
-
+#define AppChannel    @"Zuizuo"
 #if DevelopSever
 
 /**开发服务器*/

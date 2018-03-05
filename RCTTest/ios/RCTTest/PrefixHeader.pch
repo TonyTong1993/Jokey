@@ -22,6 +22,7 @@
 #import "TYTheme.h"
 #import "Macro.h"
 #import "CommonMacros.h"
+#import "ThirdPartKey.h"
 #import "URLMacros.h"
 #import "SandBoxHelper.h"
 #import "NSString+Extension.h"
