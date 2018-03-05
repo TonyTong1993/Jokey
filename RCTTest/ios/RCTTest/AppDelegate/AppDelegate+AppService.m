@@ -13,6 +13,8 @@
 #import <UMCommon/UMCommon.h>
 #import <UMAnalytics/MobClick.h>
 #import <UMErrorCatch/UMErrorCatch.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import "RCTConfig.h"
 @implementation AppDelegate (AppService)
 -(void)initService {
     //注册登录状态监听
@@ -26,6 +28,11 @@
                                              selector:@selector(netWorkStateChange:)
                                                  name:KNotificationNetWorkStateChange
                                                object:nil];
+    
+    //    设置高德地图的key
+    [[AMapServices sharedServices] setApiKey:AMapKey];
+    //    支持https
+    [[AMapServices sharedServices] setEnableHTTPS:true];
 }
 -(void)initWindow {
    

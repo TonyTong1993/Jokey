@@ -7,13 +7,10 @@
 //
 
 #import "AppDelegate+PushService.h"
-
+#import "RCTConfig.h"
 @implementation AppDelegate (PushService)
 -(void)initRemoteNotification:(NSDictionary *)launchOptions {
-    //    设置高德地图的key
-    [[AMapServices sharedServices] setApiKey:AMapKey];
-    //    支持https
-    [[AMapServices sharedServices] setEnableHTTPS:true];
+  
     //设置本地推送通知 步骤：1.注册本地通知；2.设置本地推送消息；3.显示推送消息代理
     /*设置iOS11版本的推送通知*/
     if (NSClassFromString(@"UNUserNotificationCenter")) {
