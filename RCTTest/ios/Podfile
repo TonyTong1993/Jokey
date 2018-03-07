@@ -43,4 +43,5 @@ source 'https://github.com/CocoaPods/Specs.git'
     pod 'UMCAnalytics'
     pod 'UMCCommon'
     pod 'UMCErrorCatch'
+    pod 'WebViewJavascriptBridge'
 end

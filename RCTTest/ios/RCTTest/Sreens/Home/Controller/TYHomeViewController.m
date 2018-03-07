@@ -13,6 +13,8 @@
 #import "TYPublicViewController.h"
 /*测试相册功能*/
 
+/*测试webView*/
+#import "CustomWebViewController.h"
 @interface TYHomeViewController ()<TYSegmentControlDelegate,UIScrollViewDelegate>
 @property (nonatomic,strong) UIScrollView *scrollView;
 @property (nonatomic,strong) TYSegmentView *segmentView;
@@ -71,7 +73,7 @@
         UIView *view =  viewController.view;
         view.frame = CGRectMake(startX, startY, width, height);
         [self.scrollView addSubview:view];
-        index++;
+        index++;            
     }
 }
 
@@ -109,7 +111,7 @@
 #pragma Private Method
 
 -(void)handleRightItemClick {
-    TYPublicViewController *publicVC = [[TYPublicViewController alloc] init];
-    [self.navigationController pushViewController:publicVC animated:YES];
+    CustomWebViewController *testWebView = [[CustomWebViewController alloc] init];
+    [self.navigationController pushViewController:testWebView animated:YES];
 }
 @end

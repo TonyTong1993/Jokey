@@ -147,6 +147,7 @@
 		EB777A3F1F7BB17F000461B3 /* icon_certification@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB777A381F7B9C90000461B3 /* icon_certification@2x.png */; };
 		EB777A401F7BB187000461B3 /* icon_certification@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB777A391F7B9C90000461B3 /* icon_certification@3x.png */; };
 		EB777A461F7BC7E5000461B3 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = EB777A451F7BC7C4000461B3 /* main.jsbundle */; };
+		EB77A585204E383A009103B3 /* CustomWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB77A583204E383A009103B3 /* CustomWebViewController.m */; };
 		EB7C64431FD63F720018AC3A /* RCTTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7C64421FD63F720018AC3A /* RCTTestTests.m */; };
 		EB7C644D1FD646F70018AC3A /* TYNumberOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7C644C1FD646F70018AC3A /* TYNumberOperations.m */; };
 		EB7C64601FD67BBB0018AC3A /* TestSortModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7C645E1FD67BBB0018AC3A /* TestSortModel.m */; };
@@ -158,6 +159,7 @@
 		EB88417A204534EC00EDFAF5 /* AppDelegate+PushService.m in Sources */ = {isa = PBXBuildFile; fileRef = EB884179204534EC00EDFAF5 /* AppDelegate+PushService.m */; };
 		EB88417E204538CB00EDFAF5 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB88417D204538CB00EDFAF5 /* AppManager.m */; };
 		EB88418320453E0700EDFAF5 /* SandBoxHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EB88418220453E0700EDFAF5 /* SandBoxHelper.m */; };
+		EB89F3C6204D451B00469ECD /* TYURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = EB89F3C5204D451B00469ECD /* TYURLProtocol.m */; };
 		EB8B73A21FC6CF2C00B9DE66 /* TYPublicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8B73A11FC6CF2C00B9DE66 /* TYPublicViewController.m */; };
 		EB9FF1E21F47DF2200EEBE11 /* TYTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9FF1E11F47DF2200EEBE11 /* TYTheme.m */; };
 		EBA8F8731FC66D12005A2B84 /* ALAsset+LLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F8371FC66D12005A2B84 /* ALAsset+LLAdd.m */; };
@@ -416,6 +418,8 @@
 		EB777A391F7B9C90000461B3 /* icon_certification@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_certification@3x.png"; sourceTree = "<group>"; };
 		EB777A3A1F7B9C91000461B3 /* icon_certification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_certification.png; sourceTree = "<group>"; };
 		EB777A451F7BC7C4000461B3 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		EB77A582204E383A009103B3 /* CustomWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomWebViewController.h; sourceTree = "<group>"; };
+		EB77A583204E383A009103B3 /* CustomWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomWebViewController.m; sourceTree = "<group>"; };
 		EB7C64401FD63F720018AC3A /* RCTTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCTTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB7C64421FD63F720018AC3A /* RCTTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTTestTests.m; sourceTree = "<group>"; };
 		EB7C64441FD63F720018AC3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -449,6 +453,8 @@
 		EB88418220453E0700EDFAF5 /* SandBoxHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SandBoxHelper.m; sourceTree = "<group>"; };
 		EB8841842045576400EDFAF5 /* CommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
 		EB88418520455AFD00EDFAF5 /* URLMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLMacros.h; sourceTree = "<group>"; };
+		EB89F3C4204D451B00469ECD /* TYURLProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYURLProtocol.h; sourceTree = "<group>"; };
+		EB89F3C5204D451B00469ECD /* TYURLProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYURLProtocol.m; sourceTree = "<group>"; };
 		EB8B73A01FC6CF2C00B9DE66 /* TYPublicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPublicViewController.h; sourceTree = "<group>"; };
 		EB8B73A11FC6CF2C00B9DE66 /* TYPublicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYPublicViewController.m; sourceTree = "<group>"; };
 		EB9FF1E01F47DF2200EEBE11 /* TYTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTheme.h; sourceTree = "<group>"; };
@@ -1251,6 +1257,10 @@
 		EB6A84EE2048080900DE7224 /* WebView */ = {
 			isa = PBXGroup;
 			children = (
+				EB89F3C4204D451B00469ECD /* TYURLProtocol.h */,
+				EB89F3C5204D451B00469ECD /* TYURLProtocol.m */,
+				EB77A582204E383A009103B3 /* CustomWebViewController.h */,
+				EB77A583204E383A009103B3 /* CustomWebViewController.m */,
 			);
 			path = WebView;
 			sourceTree = "<group>";
@@ -1831,6 +1841,7 @@
 				EB32F1481F4B030F00D766AF /* TYCategaryViewController.swift in Sources */,
 				EB266F541F3B2B5100949D40 /* TYMemberTest.m in Sources */,
 				EB714BE01F4806190024C929 /* ConstraintMakerRelatable.swift in Sources */,
+				EB77A585204E383A009103B3 /* CustomWebViewController.m in Sources */,
 				EBBBF6E72011CB420011B4DF /* UIImageView+Extension.m in Sources */,
 				EBA8F87D1FC66D12005A2B84 /* LLImageGroupCell.m in Sources */,
 				EB64A7341FCE911B00E8546E /* TYMemoryManager.m in Sources */,
@@ -1883,6 +1894,7 @@
 				EB18D3F51F0F890700B44790 /* TYNetWorkingTool.m in Sources */,
 				EB714BD61F4806190024C929 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				EB54324F1F4D7D2B00683AA7 /* TYTestViewController.m in Sources */,
+				EB89F3C6204D451B00469ECD /* TYURLProtocol.m in Sources */,
 				EBA8F87C1FC66D12005A2B84 /* LLImageCollectionCell.m in Sources */,
 				EBA8F8831FC66D12005A2B84 /* LLCameraViewController.m in Sources */,
 				EB5432521F4D995900683AA7 /* TYStatusCommentView.m in Sources */,

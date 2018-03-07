@@ -12,4 +12,10 @@
 +(NSString *)nameSpaceWrapedClassNameInSwift:(NSString *)className {
     return [NSString stringWithFormat:@"%@.%@",[NSBundle mainBundle].infoDictionary[@"CFBundleExecutable"],className];
 }
++(BOOL)isEmptyOrNil:(NSString *)string {
+    if([string length] == 0) { //string is empty or nil
+        return YES;
+    }
+    return NO;
+}
 @end
