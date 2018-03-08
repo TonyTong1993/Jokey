@@ -10,7 +10,7 @@
 #import "TYNetWorkingTool.h"
 #import "TYSegmentView.h"
 #import "TYRecommendViewController.h"
-#import "TYPublicViewController.h"
+#import "TYPhotoAlbumViewController.h"
 /*测试相册功能*/
 
 /*测试webView*/
@@ -40,7 +40,7 @@
     [self loadNewData];
     
     
-    TBCityIconInfo *iconInfo = TBCityIconInfoMake(@"\U0000e6df", 24, [UIColor randomColor]);
+    TBCityIconInfo *iconInfo = TBCityIconInfoMake(@"\U0000e6df", 36, [UIColor randomColor]);
     UIImage *image = [UIImage iconWithInfo:iconInfo];
     
     UIBarButtonItem *rightBtn = [UIBarButtonItem barBtnItemWithNormalIcon:image highlightIcon:image target:self action:@selector(handleRightItemClick)];
@@ -56,25 +56,25 @@
     self.scrollView.delegate = self;
     self.scrollView.bounces = false;
     [self.view addSubview:_scrollView];
-    
-    for (int i  = 0; i < 3; i++) {
-        TYRecommendViewController *vc = [[TYRecommendViewController alloc] init];
-        [self addChildViewController:vc];
-    }
-    CGFloat startX = 0;
+    NSUInteger count = 3;
+    CGFloat height = self.view.bounds.size.height;
+    self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH*count, height);
+    [self renderSegmentViewWithIndex:0];
+
+}
+-(void)renderSegmentViewWithIndex:(NSInteger)index {
+    NSInteger count = (NSInteger)self.childViewControllers.count;
+    if ((count-1) >= index) return;
+    TYRecommendViewController *vc = [[TYRecommendViewController alloc] init];
+    [self addChildViewController:vc];
     CGFloat width = self.view.bounds.size.width;
     CGFloat height = self.view.bounds.size.height;
+    CGFloat startX = index*width;
     CGFloat startY = 0;
-    NSUInteger index = 0;
-    NSUInteger count = self.childViewControllers.count;
-    self.scrollView.contentSize = CGSizeMake(width*count, height);
-    for (UIViewController *viewController in self.childViewControllers) {
-        startX = index*width;
-        UIView *view =  viewController.view;
-        view.frame = CGRectMake(startX, startY, width, height);
-        [self.scrollView addSubview:view];
-        index++;            
-    }
+
+    UIView *view =  vc.view;
+    view.frame = CGRectMake(startX, startY, width, height);
+    [self.scrollView addSubview:view];
 }
 
 #pragma mark---
@@ -82,6 +82,13 @@
 -(void)segmentConrol:(UIView *)segmentView didSelectedItemAtIndex:(NSUInteger)index {
       CGFloat width = self.scrollView.frame.size.width;
     [self.scrollView setContentOffset:CGPointMake(width*index, 0) animated:false];
+    
+    [self renderSegmentViewWithIndex:index];
+    
+
+
+
+
 }
 #pragma mark---
 #pragma mark---UIScrollViewDelegate
@@ -106,12 +113,14 @@
 {
     int index = scrollView.contentOffset.x / scrollView.frame.size.width;
     [self.segmentView updateSelectedItemIndex:index];
+    [self renderSegmentViewWithIndex:index];
+    
     
 }
 #pragma Private Method
 
 -(void)handleRightItemClick {
-    CustomWebViewController *testWebView = [[CustomWebViewController alloc] init];
-    [self.navigationController pushViewController:testWebView animated:YES];
+    TYPhotoAlbumViewController *testPhotoAlbum = [[TYPhotoAlbumViewController alloc] init];
+    [self.navigationController pushViewController:testPhotoAlbum animated:YES];
 }
 @end

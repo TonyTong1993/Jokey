@@ -30,8 +30,18 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
-    _collectionView.contentInset = UIEdgeInsetsMake(0, 0, 70, 0);
-    _collectionView.scrollIndicatorInsets = _collectionView.contentInset;
+    CGFloat bottomOffset = 0.0f;
+    if (@available(iOS 11, *)) {
+       
+        bottomOffset = is_iPhoneX ? (88.0f+83.0f):(49.0f+64.0f);
+        
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = false;
+        bottomOffset = 49.0f+64.0f;
+    }
+    self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, bottomOffset, 0);
+    self.collectionView.scrollIndicatorInsets = self.collectionView.contentInset;
+    
     [self.view addSubview:_collectionView];
     
     //设置网络数据下啦刷新

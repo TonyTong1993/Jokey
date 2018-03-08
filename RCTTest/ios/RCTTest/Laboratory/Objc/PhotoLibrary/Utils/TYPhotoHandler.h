@@ -43,11 +43,6 @@ typedef NS_ENUM(NSInteger, TYAuthorizationStatus) {
 @end
 
 @interface PHAssetCollection (LLAdd)
-
-- (void)posterImage:(void(^)(UIImage *result, NSDictionary *info))resultHandler;
-
-- (void)posterImage:(CGSize)targetSize resultHandler:(void(^)(UIImage *result, NSDictionary *info))resultHandler;
-
 - (NSInteger)numberOfAssets;
 
 @end

@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.automaticallyAdjustsScrollViewInsets = false;
+    
     [self setUpNavigationBar];
     self.dataSource = @[];
 }
@@ -29,25 +29,26 @@
     self.tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 64, 0);
+    
     self.tableView.backgroundColor = HEXCOLOR(backgroundColorHexValue);
     self.tableView.separatorColor = HEXCOLOR(separatorColorHexValue);
     //去除footer样式
     self.tableView.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:_tableView];
     
-    /*
-     //设置网络数据下啦刷新
-     __weak typeof(self) weakSelf = self;
-     [self.tableView addHeaderRefreshWithBlock:^{
-     [weakSelf loadNewData];
-     }];
-     
-     //设置上拉加载更多数据
-     [self.tableView addFooterRefreshWithBlock:^{
-     [weakSelf loadMoreData];
-     }];
-     */
+    CGFloat bottomOffset = 0.0f;
+    if (@available(iOS 11, *)) {
+         //关闭Self-Sizing
+        self.tableView.estimatedRowHeight = 0;
+        self.tableView.estimatedSectionFooterHeight = 0;
+        self.tableView.estimatedSectionHeaderHeight = 0;
+        bottomOffset = is_iPhoneX?83.0f:64.0f;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = false;
+        bottomOffset = 64.0f;
+    }
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, bottomOffset, 0);
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
 }
 
 -(void)setUpNavigationBar {

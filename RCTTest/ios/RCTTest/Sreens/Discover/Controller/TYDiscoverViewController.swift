@@ -51,8 +51,16 @@ class TYDiscoverViewController: TYBaseViewController,SDCycleScrollViewDelegate {
         cycleScrollView?.autoScrollTimeInterval = 3.0
         tableView.tableHeaderView = cycleScrollView
         tableView.rowHeight = 80
+        var bottomOffest:CGFloat = 0.0
         //注册cell
         self.tableView.register(UINib.init(nibName: "TYTopicCell", bundle: nil), forCellReuseIdentifier: "KTYTopicCell")
+        if #available(iOS 11, *) {
+            bottomOffest = (UIScreen.main.bounds.size.width == 375.0 && UIScreen.main.bounds.size.height == 812.0) ?(88.0 + 83.0):(64.0 + 49.0)
+        } else {
+            bottomOffest = 64.0 + 49.0
+        }
+        tableView.contentInset = UIEdgeInsetsMake(0, 0, bottomOffest, 0)
+        tableView.scrollIndicatorInsets = tableView.contentInset;
        
     }
     override func loadNewData() {

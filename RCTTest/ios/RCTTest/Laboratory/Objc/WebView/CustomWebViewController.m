@@ -8,11 +8,13 @@
 
 #import "CustomWebViewController.h"
 #import <WebKit/WebKit.h>
-#import "TYURLProtocol.h"
 #import <CocoaSecurity.h>
+#import <YYKit/NSObject+YYAddForKVO.h>
+#import <WebViewJavascriptBridge/WKWebViewJavascriptBridge.h>
 @interface CustomWebViewController ()<WKUIDelegate,WKNavigationDelegate>
-@property (nonatomic,weak) WKWebView *webView;
+@property (nonatomic,strong) WKWebView *webView;
 @property (nonatomic,strong) UIProgressView *progressView;
+@property (nonatomic,strong) WKWebViewJavascriptBridge *bridge;
 @end
 
 @implementation CustomWebViewController
@@ -26,6 +28,7 @@
         _progressView.trackTintColor = HEXCOLOR(separatorColorHexValue);
         CGRect frame = CGRectMake(0, 0, SCREEN_WIDTH, 2);
         _progressView.frame = frame;
+        _progressView.transform = CGAffineTransformMakeScale(1.0, 1.5f);
     }
     return _progressView;
 }
@@ -33,23 +36,46 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-//    [NSURLProtocol registerClass:[TYURLProtocol class]];
+    self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
+    self.webView.navigationDelegate = self;
+    self.webView.UIDelegate = self;
+    [self.view addSubview:self.webView];
+    [WebViewJavascriptBridgeBase enableLogging];
+    //添加WebViewJavascriptBridge
+    _bridge = [WKWebViewJavascriptBridge bridgeForWebView:self.webView];
+    [_bridge setWebViewDelegate:self];
     
-    WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
-    NSURL *url = [NSURL URLWithString:@"http://192.168.10.41:8020/bdtm/index.html?__hbt=1520245467770#"];
+    [_bridge registerHandler:@"testObjcCallback" handler:^(id data, WVJBResponseCallback responseCallback) {
+        NSLog(@"testObjcCallback called: %@", data);
+        responseCallback(@"处理完js端的data后回传给js的data");
+    }];
+    
+    [_bridge callHandler:@"testJavascriptHandler" data:@"native传给js处理的data"];
+    
+    NSURL *url = [NSURL URLWithString:@"http://192.168.10.46:8020/bdtm/index.html"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [webView loadRequest:request];
-    webView.UIDelegate = self;
-    webView.navigationDelegate = self;
-    [self.view addSubview:webView];
-    self.webView = webView;
-
+    [self.webView loadRequest:request];
+    
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"✅" style:UIBarButtonItemStylePlain target:self action:@selector(handleClicked)];
     self.navigationItem.rightBarButtonItem = rightItem;
     
     [self.view addSubview:self.progressView];
-    [_progressView setProgress:0.5 animated:YES];
+    __weak typeof(self) weakSelf = self;
+    [self.webView addObserverBlockForKeyPath:@"estimatedProgress" block:^(id  _Nonnull obj, id  _Nullable oldVal, id  _Nullable newVal) {
+        weakSelf.progressView.progress = weakSelf.webView.estimatedProgress;
+        if (weakSelf.progressView.progress == 1) {
+            
+            [UIView animateWithDuration:0.25f animations:^{
+                weakSelf.progressView.transform = CGAffineTransformMakeScale(1.0f, 1.4f);
+            } completion:^(BOOL finished) {
+                weakSelf.progressView.hidden = YES;
+            }];
+        }
+    }];
 
+}
+- (void)dealloc {
+    [self.webView removeObserverBlocksForKeyPath:@"estimatedProgress"];
 }
 -(void)handleClicked {
     NSString *script = @"showAlert()";
@@ -58,7 +84,9 @@
     }];
 }
 
--(void)webViewDidClose:(WKWebView *)webView {
+
+#pragma mark--WKNavigationDelegate
+-(void)webViewDidClose:(WKWebView *)webView {//ios 9.0
      NSLog(@"%s", __FUNCTION__);
 }
 
@@ -105,39 +133,34 @@
     [self presentViewController:alert animated:YES completion:NULL];
     
 }
-- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
-    //  在发送请求之前，决定是否跳转
-    NSLog(@"%s",__func__);
-    WKNavigationActionPolicy policy;
-    if (_isPush) {
-        policy = WKNavigationActionPolicyCancel;
-        [self.navigationController pushViewController:[[self class] new] animated:YES];
-    }else {
-        _isPush = YES;
-        policy = WKNavigationActionPolicyAllow;
-    }
-    decisionHandler(policy);
+#pragma mark--WKUIDelegate
 
-}
-
+//- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
+//    //  在发送请求之前，决定是否跳转
+//
+////    WKNavigationActionPolicy policy;
+////    if (_isPush) {
+////        policy = WKNavigationActionPolicyCancel;
+////        [self.navigationController pushViewController:[[self class] new] animated:YES];
+////    }else {
+////        _isPush = YES;
+////        policy = WKNavigationActionPolicyAllow;
+////    }
+//    decisionHandler(WKNavigationActionPolicyAllow);
+//
+//}
+//
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(null_unspecified WKNavigation *)navigation{
-    
+
     // 页面开始加载时调用
-   
-    [_progressView setProgress:0.9 animated:YES];
-}
 
+    //开始加载网页时展示出progressView
+    self.progressView.hidden = NO;
+    //开始加载网页的时候将progressView的Height恢复为1.5倍
+    self.progressView.transform = CGAffineTransformMakeScale(1.0f, 1.5f);
+    //防止progressView被网页挡住
+    [self.view bringSubviewToFront:self.progressView];
 
-//以下三个是连续调用
-
-
-
-- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler{
-    
-    // 在收到响应后，决定是否跳转和发送请求之前那个允许配套使用
-    decisionHandler(WKNavigationResponsePolicyAllow);
-   
-    
 }
 
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
@@ -145,31 +168,32 @@
     [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self.navigationController popViewControllerAnimated:YES];
     }]];
-    
+
     [self presentViewController:alert animated:YES completion:NULL];
 }
 
 - (void)webView:(WKWebView *)webView didCommitNavigation:(null_unspecified WKNavigation *)navigation {
-    
+
     // 当内容开始返回时调用
-  
-    
-    
+
+
+
 }
 
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation {
     // 页面加载完成之后调用
       self.title = webView.title;
-    [_progressView setProgress:1.0 animated:YES];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [_progressView removeFromSuperview];
-        _progressView = nil;
-    });
-    
+
+
 }
 - (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
-     NSLog(@"%s",__func__);
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"您访问的网页似乎已经不存在了" preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }]];
+
+    [self presentViewController:alert animated:YES completion:NULL];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

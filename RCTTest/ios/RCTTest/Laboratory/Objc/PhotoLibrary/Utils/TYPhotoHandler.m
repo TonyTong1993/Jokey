@@ -24,29 +24,32 @@
 
 @implementation TYPhotoHandler(PHAssets)
 +(void)enumeratePHAssetCollectionsWithResultHandler:(void(^)(NSArray <PHAssetCollection *>*result))resultHandler {
-     // 照片群组数组
-     NSMutableArray *groups = [NSMutableArray array];
-     PHFetchOptions *fetchOptions = [[PHFetchOptions alloc] init];
-     PHFetchResult<PHAssetCollection *> *systemAlbums =  [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:fetchOptions];
-     PHFetchResult<PHAssetCollection *> *userAlbums =  [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum subtype:PHAssetCollectionSubtypeSmartAlbumUserLibrary options:fetchOptions];
-    [systemAlbums enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(PHAssetCollection * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj numberOfAssets] > 0) {
-            [groups addObject:obj];
-        }
-    }];
-    
-    [userAlbums enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(PHAssetCollection * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj numberOfAssets] > 0) {
-            [groups addObject:obj];
-        }
-    }];
-    
-    //排序相册
-    [groups sortUsingComparator:^NSComparisonResult(PHAssetCollection *obj1, PHAssetCollection * obj2) {
-        return  [obj1 numberOfAssets] < [obj2 numberOfAssets];
-    }];
-    
-    resultHandler(groups);
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // 照片群组数组
+        NSMutableArray *groups = [NSMutableArray array];
+        PHFetchOptions *fetchOptions = [[PHFetchOptions alloc] init];
+        PHFetchResult<PHAssetCollection *> *systemAlbums =  [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:fetchOptions];
+        PHFetchResult<PHAssetCollection *> *userAlbums =  [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum subtype:PHAssetCollectionSubtypeSmartAlbumUserLibrary options:fetchOptions];
+        [systemAlbums enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(PHAssetCollection * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ([obj numberOfAssets] > 0) {
+                [groups addObject:obj];
+            }
+        }];
+        
+        [userAlbums enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(PHAssetCollection * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ([obj numberOfAssets] > 0) {
+                [groups addObject:obj];
+            }
+        }];
+        
+        //排序相册
+        [groups sortUsingComparator:^NSComparisonResult(PHAssetCollection *obj1, PHAssetCollection * obj2) {
+            return  [obj1 numberOfAssets] < [obj2 numberOfAssets];
+        }];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            resultHandler(groups);
+        });
+    });
 }
 + (void)enumerateAssetsInAssetCollection:(PHAssetCollection *)collection finishBlock:(void(^)(NSArray <PHAsset *>*result))finishBlock {
      NSMutableArray <PHAsset *>*results = [NSMutableArray array];
@@ -98,4 +101,5 @@
     PHFetchResult<PHAsset *> *result = [PHAsset fetchAssetsInAssetCollection:self options:fetchOptions];
     return result.count;
 }
+
 @end

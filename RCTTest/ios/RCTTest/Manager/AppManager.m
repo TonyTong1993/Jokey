@@ -23,6 +23,7 @@
     CGSize size = [UIScreen mainScreen].bounds.size;
     CGRect frame = CGRectMake(size.width - width - 20, size.height-kTabBarHeight-40, width, height);
     YYFPSLabel *fpsLabel = [[YYFPSLabel alloc] initWithFrame:frame];
+    fpsLabel.opaque = YES;
     fpsLabel.backgroundColor = [UIColor randomColor];
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
     [keyWindow addSubview:fpsLabel];
