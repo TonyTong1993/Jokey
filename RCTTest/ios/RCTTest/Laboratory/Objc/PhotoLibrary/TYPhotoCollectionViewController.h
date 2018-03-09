@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TYPhotoPresent.h"
 @interface TYPhotoCollectionViewController : UIViewController
-
+@property (nonatomic,strong) PHFetchResult<PHAsset *> *fetchResult;
 @end

@@ -10,10 +10,12 @@
 #import "TYPhotoPresent.h"
 #import "TYPhotoAlbumViewCell.h"
 #import "PHAssetCollection+Poster.h"
+#import <MBProgressHUD.h>
 @interface TYPhotoAlbumViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) TYPhotoPresent *present;
 @property (nonatomic,strong) NSArray *phcollections;
 @property (nonatomic,strong) UITableView *tableView;
+@property (nonatomic,strong) MBProgressHUD *hud;
 @end
 
 @implementation TYPhotoAlbumViewController
@@ -26,12 +28,22 @@
              weakSelf.phcollections = result;
             if (weakSelf.tableView) {
                [weakSelf.tableView reloadData];
-                
+            }
+            if (weakSelf.hud) {
+                [weakSelf.hud hideAnimated:YES];
             }
             
         }];
     }
     return self;
+}
+
+#pragma mark--Getter and Setter
+-(MBProgressHUD *)hud {
+    if (!_hud) {
+        _hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    }
+    return _hud;
 }
 
 - (void)viewDidLoad {
@@ -63,6 +75,13 @@
     }
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, bottomOffset, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    
+    //设置加载相册的进度
+    if (!self.phcollections.count) {
+        
+        [self.hud showAnimated:YES];
+        
+    }
    
 }
 

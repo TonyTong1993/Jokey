@@ -36,6 +36,7 @@ typedef NS_ENUM(NSInteger, TYAuthorizationStatus) {
 @interface TYPhotoHandler(PHAssets)
 +(void)enumeratePHAssetCollectionsWithResultHandler:(void(^)(NSArray <PHAssetCollection *>*result))resultHandler;
 + (void)enumerateAssetsInAssetCollection:(PHAssetCollection *)collection finishBlock:(void(^)(NSArray <PHAsset *>*result))finishBlock ;
++(void)enumerateAllAssetsInCollectionsWithfinishBlock:(void(^)(PHFetchResult <PHAsset *>*result))finishBlock;
 @end
 
 @interface TYPhotoHandler(ALAssets)

@@ -30,8 +30,6 @@ typedef void (^ComplicationHanlder)(NSMutableArray *results);
 
 -(void)requestAuthorization:(void (^)(NSMutableArray *result))hanlder  {
      self.handler = hanlder;
-    
-
         [TYPhotoHandler requestAuthorization:^(TYAuthorizationStatus status) {
             switch (status) {
                 case TYAuthorizationStatusDenied:
@@ -71,6 +69,9 @@ typedef void (^ComplicationHanlder)(NSMutableArray *results);
             }
         }];
 
+}
+-(void)requestAllPhAssets:(void(^)(PHFetchResult <PHAsset *>*result))finishBlock {
+    [TYPhotoHandler enumerateAllAssetsInCollectionsWithfinishBlock:finishBlock];
 }
 
 -(void)dealloc {

@@ -10,9 +10,10 @@
 #import "TYNetWorkingTool.h"
 #import "TYSegmentView.h"
 #import "TYRecommendViewController.h"
-#import "TYPhotoAlbumViewController.h"
-/*测试相册功能*/
 
+/*测试相册功能*/
+#import "TYPhotoCollectionViewController.h"
+#import "TYPhotoAlbumViewController.h"
 /*测试webView*/
 #import "CustomWebViewController.h"
 @interface TYHomeViewController ()<TYSegmentControlDelegate,UIScrollViewDelegate>
@@ -120,7 +121,7 @@
 #pragma Private Method
 
 -(void)handleRightItemClick {
-    TYPhotoAlbumViewController *testPhotoAlbum = [[TYPhotoAlbumViewController alloc] init];
+    TYPhotoCollectionViewController *testPhotoAlbum = [[TYPhotoCollectionViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:testPhotoAlbum];
     [self presentViewController:nav animated:YES completion:nil];
 }

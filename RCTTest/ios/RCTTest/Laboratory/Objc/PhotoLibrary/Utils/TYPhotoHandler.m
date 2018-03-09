@@ -57,25 +57,9 @@
     }];
     finishBlock(results);
 }
--(void)enumerateTransientGroupsForGroups {
-    
-    PHFetchResult<PHCollectionList *> *fetchResultList1 =  [PHCollectionList fetchCollectionListsWithType:PHCollectionListTypeMomentList subtype:PHCollectionListSubtypeMomentListCluster options:nil];
-    PHFetchResult<PHCollectionList *> *fetchResultList2 =  [PHCollectionList fetchCollectionListsWithType:PHCollectionListTypeFolder subtype:PHCollectionListSubtypeRegularFolder options:nil];
-    
-    PHFetchResult<PHCollectionList *> *fetchResultList3 =  [PHCollectionList fetchCollectionListsWithType:PHCollectionListTypeSmartFolder subtype:PHCollectionListSubtypeSmartFolderEvents options:nil];
-    
-    [fetchResultList1 enumerateObjectsUsingBlock:^(PHCollectionList * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-       PHFetchResult<PHCollection *> *collectionResult =  [PHCollection fetchCollectionsInCollectionList:obj options:nil];
-        [PHCollectionList transientCollectionListWithCollectionsFetchResult:collectionResult title:nil];
-    }];
-    
-    [fetchResultList2 enumerateObjectsUsingBlock:^(PHCollectionList * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
-    }];
-    
-    [fetchResultList3 enumerateObjectsUsingBlock:^(PHCollectionList * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-       
-    }];
++(void)enumerateAllAssetsInCollectionsWithfinishBlock:(void(^)(PHFetchResult <PHAsset *>*result))finishBlock {
+    PHFetchResult<PHAsset *> *results = [PHAsset fetchAssetsWithMediaType:PHAssetMediaTypeImage options:nil];
+    finishBlock(results);
 }
 @end
 @implementation TYPhotoHandler(ALAssets)
