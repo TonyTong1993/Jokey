@@ -14,8 +14,9 @@ static CGFloat const kDefaultThumbnailWidth = 100;
     [self posterImage:defaultSize resultHandler:resultHandler];
 }
 -(void)posterImage:(CGSize)targetSize resultHandler:(void (^)(UIImage *, NSDictionary *))resultHandler {
-    PHFetchResult *fetchResult = [PHAsset fetchAssetsInAssetCollection:self options:nil];
-    if (fetchResult.count > 0) { } else {
+    PHFetchResult *fetchResult = [PHAsset fetchKeyAssetsInAssetCollection:self options:nil];
+    if (fetchResult.count == 0) {
+          resultHandler(nil, nil);
         return;
     }
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
@@ -59,6 +60,22 @@ static CGFloat const kDefaultThumbnailWidth = 100;
     }
     if([englishName isEqualToString:@"Recently Deleted"]) {
         return @"最近删除";
+    }
+    if([englishName isEqualToString:@"Time-lapse"]) {
+        return @"延时摄影";
+    } if([englishName isEqualToString:@"Slo-mo"]) {
+        return @"慢动作";
+    } if([englishName isEqualToString:@"Hidden"]) {
+        return @"已隐藏";
+    }
+    if([englishName isEqualToString:@"Depth Effect"]) {
+        return @"深景效果";
+    }
+    if([englishName isEqualToString:@"Animated"]) {
+        return @"动画";
+    }
+    if([englishName isEqualToString:@"Long Exposure"]) {
+        return @"长曝光";
     }
     return englishName;
 }

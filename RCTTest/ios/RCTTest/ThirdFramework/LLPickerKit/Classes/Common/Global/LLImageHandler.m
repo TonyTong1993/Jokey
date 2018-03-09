@@ -209,6 +209,7 @@ static CGFloat const kDefaultThumbnailWidth = 100;
 - (void)posterImage:(CGSize)targetSize resultHandler:(void(^)(UIImage *result, NSDictionary *info))resultHandler {
     PHFetchResult *fetchResult = [PHAsset fetchAssetsInAssetCollection:self options:nil];
     if (fetchResult.count > 0) { } else {
+         resultHandler(nil, nil);
         return;
     }
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
@@ -217,18 +218,19 @@ static CGFloat const kDefaultThumbnailWidth = 100;
         CGSize size = CGSizeMake(targetSize.width * scale, targetSize.height * scale);
         [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:size contentMode:PHImageContentModeDefault options:nil resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                Block_exe(resultHandler, result, info);
+                resultHandler(result, info);
             });
         }];
     });
 }
 
 - (NSInteger)numberOfAssets {
-    PHFetchOptions *fetchOptions = [[PHFetchOptions alloc] init];
-    // 注意 %zd 这里不识别，直接导致崩溃
-    fetchOptions.predicate = [NSPredicate predicateWithFormat:@"mediaType == %d", PHAssetMediaTypeImage];
-    PHFetchResult<PHAsset *> *result = [PHAsset fetchAssetsInAssetCollection:self options:fetchOptions];
-    return result.count;
+//    PHFetchOptions *fetchOptions = [[PHFetchOptions alloc] init];
+//    // 注意 %zd 这里不识别，直接导致崩溃
+//    fetchOptions.predicate = [NSPredicate predicateWithFormat:@"mediaType == %d", PHAssetMediaTypeImage];
+//    PHFetchResult<PHAsset *> *result = [PHAsset fetchAssetsInAssetCollection:self options:fetchOptions];
+//    return result.count;
+    return 1;
 }
 -(void)setAssetCount:(NSUInteger)assetCount {
     

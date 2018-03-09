@@ -7,7 +7,7 @@
 //
 
 #import "TYPhotoPresent.h"
-typedef void (^ComplicationHanlder)(NSArray *results);
+typedef void (^ComplicationHanlder)(NSMutableArray *results);
 @interface TYPhotoPresent()<PHPhotoLibraryChangeObserver>
 @property (nonatomic,copy) ComplicationHanlder handler;
 @end
@@ -28,7 +28,7 @@ typedef void (^ComplicationHanlder)(NSArray *results);
     return self;
 }
 
--(void)requestAuthorization:(void (^)(NSArray *result))hanlder  {
+-(void)requestAuthorization:(void (^)(NSMutableArray *result))hanlder  {
      self.handler = hanlder;
     
 
@@ -64,7 +64,7 @@ typedef void (^ComplicationHanlder)(NSArray *results);
                     [TYPhotoHandler enumeratePHAssetCollectionsWithResultHandler:^(NSArray<PHAssetCollection *> *result) {
                         if (result.count == 0) return;
                             if (self.handler) {
-                                self.handler(result);
+                                self.handler((NSMutableArray *)result);
                             }
                     }];
                     break;
@@ -82,7 +82,7 @@ typedef void (^ComplicationHanlder)(NSArray *results);
         [TYPhotoHandler enumeratePHAssetCollectionsWithResultHandler:^(NSArray<PHAssetCollection *> *result) {
              if (result.count == 0) return;
                 if (self.handler) {
-                    self.handler(result);
+                    self.handler((NSMutableArray *)result);
                 }
         }];
     });

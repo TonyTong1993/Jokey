@@ -17,13 +17,30 @@
 @end
 
 @implementation TYPhotoAlbumViewController
+-(instancetype)init {
+    self = [super init];
+    if (self) {
+        self.present = [[TYPhotoPresent alloc] initWithPresenter:self];
+        __weak typeof(self) weakSelf = self;
+        [self.present requestAuthorization:^(NSMutableArray<PHAssetCollection *> *result) {
+             weakSelf.phcollections = result;
+            if (weakSelf.tableView) {
+               [weakSelf.tableView reloadData];
+                
+            }
+            
+        }];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"我的相册";
-    self.view.backgroundColor = [UIColor randomColor];
     
+    UIBarButtonItem *leftBarItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(finish)];
+    self.navigationItem.leftBarButtonItem = leftBarItem;
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
@@ -46,15 +63,11 @@
     }
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, bottomOffset, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
-
-    
-    self.present = [[TYPhotoPresent alloc] initWithPresenter:self];
-    __weak typeof(self) weakSelf = self;
-    [self.present requestAuthorization:^(NSArray *result) {
    
-        weakSelf.phcollections = result;
-        [weakSelf.tableView reloadData];
-    }];
+}
+
+-(void)finish {
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark---UITableViewDataSource--UITableViewDelegate
@@ -62,13 +75,15 @@
     return self.phcollections.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    PHAssetCollection *phAsset = self.phcollections[indexPath.row];
+    PHAssetCollection *collection = self.phcollections[indexPath.row];
    TYPhotoAlbumViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PHAssetCollectionPosterViewIdentifier"];
-    [phAsset posterImage:^(UIImage *result, NSDictionary *info) {
-        cell.posterView.image = result;
+    [collection posterImage:^(UIImage *result, NSDictionary *info) {
+        cell.posterView.image = result?:[UIImage imageNamed:@"placeholder"];
     }];
-   NSString *text = [PHAssetCollection replaceEnglishAssetCollectionNamme:phAsset.localizedTitle];
+   NSString *text = [PHAssetCollection replaceEnglishAssetCollectionNamme:collection.localizedTitle];
+   NSString *number = [NSString stringWithFormat:@"(%ld)",collection.numberOfAssets];
     cell.titleLabel.text = text;
+    cell.numberLabel.text = number;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }

@@ -27,25 +27,21 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         // 照片群组数组
         NSMutableArray *groups = [NSMutableArray array];
-        PHFetchOptions *fetchOptions = [[PHFetchOptions alloc] init];
-        PHFetchResult<PHAssetCollection *> *systemAlbums =  [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:fetchOptions];
-        PHFetchResult<PHAssetCollection *> *userAlbums =  [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum subtype:PHAssetCollectionSubtypeSmartAlbumUserLibrary options:fetchOptions];
+        PHFetchResult<PHCollection *> *userAlbums = [PHCollectionList fetchTopLevelUserCollectionsWithOptions:nil];
+        
+        PHFetchResult<PHAssetCollection *> *systemAlbums =  [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
+       
+        [userAlbums enumerateObjectsUsingBlock:^(PHCollection * _Nonnull collection, NSUInteger idx, BOOL * _Nonnull stop) {
+                [groups addObject:collection];
+        }];
         [systemAlbums enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(PHAssetCollection * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            if ([obj numberOfAssets] > 0) {
+            if (!([obj.localizedTitle isEqualToString:@"Recently Deleted"] ||
+                  [obj.localizedTitle isEqualToString:@"Videos"]||[obj.localizedTitle isEqualToString:@"Hidden"]||[obj.localizedTitle isEqualToString:@"Portrait"])) {
                 [groups addObject:obj];
             }
         }];
-        
-        [userAlbums enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(PHAssetCollection * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            if ([obj numberOfAssets] > 0) {
-                [groups addObject:obj];
-            }
-        }];
-        
-        //排序相册
-        [groups sortUsingComparator:^NSComparisonResult(PHAssetCollection *obj1, PHAssetCollection * obj2) {
-            return  [obj1 numberOfAssets] < [obj2 numberOfAssets];
-        }];
+
+   
         dispatch_async(dispatch_get_main_queue(), ^{
             resultHandler(groups);
         });
@@ -83,22 +79,13 @@
 }
 @end
 @implementation TYPhotoHandler(ALAssets)
--(void)test {
-    [[[ALAssetsLibrary alloc] init] enumerateGroupsWithTypes:ALAssetsGroupAlbum usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
-        
-    } failureBlock:^(NSError *error) {
-        
-    }];
- 
-}
+
 @end
 
 @implementation PHAssetCollection (LLAdd)
 - (NSInteger)numberOfAssets {
-    PHFetchOptions *fetchOptions = [[PHFetchOptions alloc] init];
     // 注意 %zd 这里不识别，直接导致崩溃
-    fetchOptions.predicate = [NSPredicate predicateWithFormat:@"mediaType == %d", PHAssetMediaTypeImage];
-    PHFetchResult<PHAsset *> *result = [PHAsset fetchAssetsInAssetCollection:self options:fetchOptions];
+    PHFetchResult<PHAsset *> *result = [PHAsset fetchAssetsInAssetCollection:self options:nil];
     return result.count;
 }
 

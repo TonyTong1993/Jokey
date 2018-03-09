@@ -26,21 +26,31 @@
                             <constraint firstAttribute="width" constant="100" id="oC2-gh-hdp"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94e-bl-mdH">
+                    <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94e-bl-mdH">
                         <rect key="frame" x="138" y="50" width="42" height="21"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TvY-d2-Zhe">
+                        <rect key="frame" x="188" y="52" width="35.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="94e-bl-mdH" firstAttribute="leading" secondItem="3fU-67-uGT" secondAttribute="trailing" constant="20" id="6hg-Av-993"/>
+                    <constraint firstItem="TvY-d2-Zhe" firstAttribute="leading" secondItem="94e-bl-mdH" secondAttribute="trailing" constant="8" id="92S-t8-ISj"/>
                     <constraint firstItem="3fU-67-uGT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="Bot-aN-Xwj"/>
                     <constraint firstItem="94e-bl-mdH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ncf-eI-DNx"/>
+                    <constraint firstItem="TvY-d2-Zhe" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="h1t-FN-9h5"/>
                     <constraint firstItem="3fU-67-uGT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pIF-5b-nLH"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="numberLabel" destination="TvY-d2-Zhe" id="0Do-56-YlM"/>
                 <outlet property="posterView" destination="3fU-67-uGT" id="njG-ui-HLY"/>
                 <outlet property="titleLabel" destination="94e-bl-mdH" id="aaC-9H-4vK"/>
             </connections>

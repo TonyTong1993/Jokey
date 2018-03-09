@@ -121,6 +121,7 @@
 
 -(void)handleRightItemClick {
     TYPhotoAlbumViewController *testPhotoAlbum = [[TYPhotoAlbumViewController alloc] init];
-    [self.navigationController pushViewController:testPhotoAlbum animated:YES];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:testPhotoAlbum];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 @end

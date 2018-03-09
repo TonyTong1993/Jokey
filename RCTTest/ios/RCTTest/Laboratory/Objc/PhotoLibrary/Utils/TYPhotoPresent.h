@@ -10,6 +10,6 @@
 #import "TYPhotoHandler.h"
 @interface TYPhotoPresent : NSObject
 -(instancetype)initWithPresenter:(UIViewController *)presenter;
--(void)requestAuthorization:(void (^)(NSArray *result))hanlder;
+-(void)requestAuthorization:(void (^)(NSMutableArray *result))hanlder;
 @property (nonatomic,weak) UIViewController *viewController;
 @end
