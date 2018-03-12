@@ -9,7 +9,9 @@
 #import "TYPhotoCollectionViewController.h"
 #import "TYPhotoCollectionViewCell.h"
 #import <TBCityIconFont.h>
-@interface TYPhotoCollectionViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+#import <YYKit/NSArray+YYAdd.h>
+#import "TYPhotoSelectedHandler.h"
+@interface TYPhotoCollectionViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,TYPhotoCollectionViewCellDelegate>
 @property (nonatomic,strong) TYPhotoPresent *present;
 @property (nonatomic,strong) UICollectionView *collectionView;
 @end
@@ -65,6 +67,7 @@ static CGFloat margin = 4.0f;
     [self.view addSubview:self.collectionView];
     
 }
+
 #pragma mark---action response
 -(void)finish {
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
@@ -86,9 +89,44 @@ static CGFloat margin = 4.0f;
     TBCityIconInfo *iconInfo = TBCityIconInfoMake(@"\U0000e8f7", 24, [UIColor whiteColor]);
     UIImage *image = [UIImage iconWithInfo:iconInfo];
     [cell.check setImage:image forState:UIControlStateNormal];
+    cell.delegate = self;
+    cell.indexPath = indexPath;
+    NSMutableArray *selectedPhotos = [TYPhotoSelectedHandler sharedTYPhotoSelectedHandler].selectedPhotos;
+    if ([selectedPhotos containsObject:phAsset]) {
+        int index = (int)[selectedPhotos indexOfObject:phAsset];
+        [cell addSelectedShapeLayer:index+1];
+    }else {
+        [cell removeSelectedShaperLayer];
+    }
     return cell;
 }
-
+#pragma mark---TYPhotoCollectionViewCellDelegate
+-(void)photocell:(TYPhotoCollectionViewCell *)cell didSelectedAtIndexPath:(NSIndexPath *)indexPath {
+    PHAsset *phAsset = [self.fetchResult objectAtIndex:indexPath.item];
+    NSMutableArray *selectedPhotos = [TYPhotoSelectedHandler sharedTYPhotoSelectedHandler].selectedPhotos;
+    BOOL isSelected = [selectedPhotos containsObject:phAsset];
+    NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:8];
+    if (!isSelected) {
+        [selectedPhotos addObject:phAsset];
+        [indexPaths addObject:indexPath];
+    }else {
+        NSUInteger index = [selectedPhotos indexOfObject:phAsset];
+        NSUInteger count = selectedPhotos.count;
+        NSUInteger len = count-1 - index;
+        NSArray *subArray = [selectedPhotos subarrayWithRange:NSMakeRange(index+1, len)];
+        [subArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSUInteger index = [self.fetchResult indexOfObject:obj];
+            NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:0];
+            [indexPaths addObject:indexPath];
+        }];
+        [selectedPhotos removeObject:phAsset];
+        [cell removeSelectedShaperLayer];
+    }
+    if (indexPaths.count) {
+        [self.collectionView reloadItemsAtIndexPaths:indexPaths];
+    }
+    
+}
 
 
 @end

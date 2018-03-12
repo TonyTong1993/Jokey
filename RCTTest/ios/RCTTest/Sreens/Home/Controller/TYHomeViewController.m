@@ -55,6 +55,7 @@
     self.navigationItem.rightBarButtonItem = rightBtn;
     
 }
+
 -(void)setUpTableView {
     //设置scrollView
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];

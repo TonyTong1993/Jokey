@@ -189,6 +189,7 @@
 		EBA8F8881FC66D12005A2B84 /* LLMessageDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F86F1FC66D12005A2B84 /* LLMessageDialog.m */; };
 		EBA8F8891FC66D12005A2B84 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F8721FC66D12005A2B84 /* Utils.m */; };
 		EBB1E5552056446100956B7F /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB1E5542056446100956B7F /* iconfont.ttf */; };
+		EBB1E5582056721700956B7F /* TYPhotoSelectedHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB1E5572056721700956B7F /* TYPhotoSelectedHandler.m */; };
 		EBB77D691F677BD700A1C59C /* TYProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB77D681F677BD700A1C59C /* TYProfileViewModel.m */; };
 		EBBBF6E42011A37D0011B4DF /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBBF6E32011A37D0011B4DF /* UIColor+Extension.m */; };
 		EBBBF6E72011CB420011B4DF /* UIImageView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBBF6E62011CB420011B4DF /* UIImageView+Extension.m */; };
@@ -520,6 +521,8 @@
 		EBA8F8721FC66D12005A2B84 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		EBA8F88A1FC68043005A2B84 /* RCTConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTConfig.h; sourceTree = "<group>"; };
 		EBB1E5542056446100956B7F /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		EBB1E5562056721700956B7F /* TYPhotoSelectedHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPhotoSelectedHandler.h; sourceTree = "<group>"; };
+		EBB1E5572056721700956B7F /* TYPhotoSelectedHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYPhotoSelectedHandler.m; sourceTree = "<group>"; };
 		EBB77D671F677BD700A1C59C /* TYProfileViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYProfileViewModel.h; sourceTree = "<group>"; };
 		EBB77D681F677BD700A1C59C /* TYProfileViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYProfileViewModel.m; sourceTree = "<group>"; };
 		EBBBF6E22011A37D0011B4DF /* UIColor+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
@@ -1294,6 +1297,8 @@
 				EB6D11A020510BC500715160 /* TYPhotoHandler.m */,
 				EB6D11A2205125B500715160 /* TYPhotoPresent.h */,
 				EB6D11A3205125B500715160 /* TYPhotoPresent.m */,
+				EBB1E5562056721700956B7F /* TYPhotoSelectedHandler.h */,
+				EBB1E5572056721700956B7F /* TYPhotoSelectedHandler.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1880,6 +1885,7 @@
 				EB1DD95E200F82D300E860BD /* UIFont+Extension.m in Sources */,
 				EB714BD21F4806190024C929 /* ConstraintDSL.swift in Sources */,
 				EB6DE6F6205297BC009290F0 /* TYPhotoCollectionViewCell.m in Sources */,
+				EBB1E5582056721700956B7F /* TYPhotoSelectedHandler.m in Sources */,
 				EB714BEC1F4806190024C929 /* LayoutConstraintItem.swift in Sources */,
 				EBE0F7A91F76ABCA006F0AD8 /* SearchView.swift in Sources */,
 				EB5865811F5570ED00598DA0 /* NSBundle+Extension.m in Sources */,

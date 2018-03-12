@@ -8,6 +8,10 @@
 
 #import "TYPhotoCollectionViewCell.h"
 #import <CoreText/CoreText.h>
+@interface TYPhotoCollectionViewCell()
+@property (nonatomic,strong) CAShapeLayer *shapeLayer;
+@property (nonatomic,strong) CATextLayer *textLayer;
+@end
 @implementation TYPhotoCollectionViewCell
 
 - (void)awakeFromNib {
@@ -15,18 +19,18 @@
     // Initialization code
 }
 - (IBAction)checkOnClicked:(UIButton *)sender {
-    sender.selected = !sender.isSelected;
-    if (sender.selected) {
-        [self addSelectedShapeLayer:1];
-    }else {
-        [self removeSelectedShaperLayer];
+    if (_delegate&&[_delegate respondsToSelector:@selector(photocell:didSelectedAtIndexPath:)]) {
+        [_delegate photocell:self didSelectedAtIndexPath:self.indexPath];
     }
-    
-    
 }
+
 
 -(void)addSelectedShapeLayer:(int)count{
     NSString *text = [NSString stringWithFormat:@"%d",count];
+    if (self.shapeLayer){
+        self.textLayer.string = text;
+        return;
+    }
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     CGMutablePathRef mpath =  CGPathCreateMutable();
     CGAffineTransform transform = CGAffineTransformMakeScale(1.0, 1.0);
@@ -45,10 +49,17 @@
     textLayer.truncationMode = kCATruncationMiddle;
     textLayer.frame = rect;
     [shapeLayer addSublayer:textLayer];
+    self.textLayer = textLayer;
     [self.check.layer addSublayer:shapeLayer];
+    self.shapeLayer = shapeLayer;
     
 }
 -(void)removeSelectedShaperLayer {
-    [[[self.check.layer sublayers] lastObject] removeFromSuperlayer];
+    if (self.shapeLayer) {
+        [self.textLayer removeFromSuperlayer];
+        [self.shapeLayer removeFromSuperlayer];
+        self.shapeLayer = nil;
+        self.textLayer = nil;
+    }
 }
 @end
