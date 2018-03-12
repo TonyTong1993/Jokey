@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <Photos/Photos.h>
-
+#import "PHAsset+Image.h"
 /*
     1.获取当前授权状态
     2.查询相册

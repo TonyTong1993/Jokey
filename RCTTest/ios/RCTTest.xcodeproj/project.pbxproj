@@ -107,6 +107,9 @@
 		EB6D11A8205133FE00715160 /* PHAssetCollection+Poster.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6D11A7205133FE00715160 /* PHAssetCollection+Poster.m */; };
 		EB6D11AD20513ADA00715160 /* TYPhotoAlbumViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6D11AB20513ADA00715160 /* TYPhotoAlbumViewCell.m */; };
 		EB6D11AE20513ADA00715160 /* TYPhotoAlbumViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6D11AC20513ADA00715160 /* TYPhotoAlbumViewCell.xib */; };
+		EB6DE6F6205297BC009290F0 /* TYPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6DE6F4205297BC009290F0 /* TYPhotoCollectionViewCell.m */; };
+		EB6DE6F7205297BC009290F0 /* TYPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6DE6F5205297BC009290F0 /* TYPhotoCollectionViewCell.xib */; };
+		EB6DE6FA205299B4009290F0 /* PHAsset+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6DE6F9205299B4009290F0 /* PHAsset+Image.m */; };
 		EB6FA841204FE6DD0027923B /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = EB6FA840204FE62F0027923B /* index.html */; };
 		EB714BCB1F4806190024C929 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EB714BA71F4806190024C929 /* LICENSE */; };
 		EB714BCC1F4806190024C929 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EB714BA81F4806190024C929 /* README.md */; };
@@ -378,6 +381,11 @@
 		EB6D11AA20513ADA00715160 /* TYPhotoAlbumViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPhotoAlbumViewCell.h; sourceTree = "<group>"; };
 		EB6D11AB20513ADA00715160 /* TYPhotoAlbumViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYPhotoAlbumViewCell.m; sourceTree = "<group>"; };
 		EB6D11AC20513ADA00715160 /* TYPhotoAlbumViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TYPhotoAlbumViewCell.xib; sourceTree = "<group>"; };
+		EB6DE6F3205297BC009290F0 /* TYPhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		EB6DE6F4205297BC009290F0 /* TYPhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		EB6DE6F5205297BC009290F0 /* TYPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TYPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		EB6DE6F8205299B4009290F0 /* PHAsset+Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PHAsset+Image.h"; sourceTree = "<group>"; };
+		EB6DE6F9205299B4009290F0 /* PHAsset+Image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PHAsset+Image.m"; sourceTree = "<group>"; };
 		EB6FA840204FE62F0027923B /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		EB714BA71F4806190024C929 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		EB714BA81F4806190024C929 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -1295,6 +1303,8 @@
 			children = (
 				EB6D11A6205133FE00715160 /* PHAssetCollection+Poster.h */,
 				EB6D11A7205133FE00715160 /* PHAssetCollection+Poster.m */,
+				EB6DE6F8205299B4009290F0 /* PHAsset+Image.h */,
+				EB6DE6F9205299B4009290F0 /* PHAsset+Image.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1305,6 +1315,9 @@
 				EB6D11AA20513ADA00715160 /* TYPhotoAlbumViewCell.h */,
 				EB6D11AB20513ADA00715160 /* TYPhotoAlbumViewCell.m */,
 				EB6D11AC20513ADA00715160 /* TYPhotoAlbumViewCell.xib */,
+				EB6DE6F3205297BC009290F0 /* TYPhotoCollectionViewCell.h */,
+				EB6DE6F4205297BC009290F0 /* TYPhotoCollectionViewCell.m */,
+				EB6DE6F5205297BC009290F0 /* TYPhotoCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1732,6 +1745,7 @@
 				EB6D11AE20513ADA00715160 /* TYPhotoAlbumViewCell.xib in Resources */,
 				EB6FA841204FE6DD0027923B /* index.html in Resources */,
 				EB777A461F7BC7E5000461B3 /* main.jsbundle in Resources */,
+				EB6DE6F7205297BC009290F0 /* TYPhotoCollectionViewCell.xib in Resources */,
 				EB777A401F7BB187000461B3 /* icon_certification@3x.png in Resources */,
 				EB777A3F1F7BB17F000461B3 /* icon_certification@2x.png in Resources */,
 				EB777A3E1F7BB161000461B3 /* icon_certification.png in Resources */,
@@ -1865,6 +1879,7 @@
 				EB714BE71F4806190024C929 /* ConstraintView+Extensions.swift in Sources */,
 				EB1DD95E200F82D300E860BD /* UIFont+Extension.m in Sources */,
 				EB714BD21F4806190024C929 /* ConstraintDSL.swift in Sources */,
+				EB6DE6F6205297BC009290F0 /* TYPhotoCollectionViewCell.m in Sources */,
 				EB714BEC1F4806190024C929 /* LayoutConstraintItem.swift in Sources */,
 				EBE0F7A91F76ABCA006F0AD8 /* SearchView.swift in Sources */,
 				EB5865811F5570ED00598DA0 /* NSBundle+Extension.m in Sources */,
@@ -1955,6 +1970,7 @@
 				EBA8F8761FC66D12005A2B84 /* UIScrollView+LLAdd.m in Sources */,
 				EBA8F8781FC66D12005A2B84 /* LLBaseViewController.m in Sources */,
 				EB55658B1F42EC6B005BB5DC /* TestView.m in Sources */,
+				EB6DE6FA205299B4009290F0 /* PHAsset+Image.m in Sources */,
 				EB884177204534CD00EDFAF5 /* AppDelegate+AppService.m in Sources */,
 				EB6A84ED2047B35F00DE7224 /* UserInfo.m in Sources */,
 				EB714BE81F4806190024C929 /* ConstraintView.swift in Sources */,
