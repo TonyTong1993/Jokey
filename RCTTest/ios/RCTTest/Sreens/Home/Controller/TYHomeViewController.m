@@ -19,10 +19,17 @@
 @interface TYHomeViewController ()<TYSegmentControlDelegate,UIScrollViewDelegate>
 @property (nonatomic,strong) UIScrollView *scrollView;
 @property (nonatomic,strong) TYSegmentView *segmentView;
+@property (nonatomic,strong) NSMutableDictionary *pageCache;
 @end
 
 @implementation TYHomeViewController
-
+#pragma mark---Getter and Setter
+-(NSMutableArray *)pageCache {
+    if (!_pageCache) {
+        _pageCache = [NSMutableDictionary dictionaryWithCapacity:3];
+    }
+    return _pageCache;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -64,18 +71,21 @@
 
 }
 -(void)renderSegmentViewWithIndex:(NSInteger)index {
-    NSInteger count = (NSInteger)self.childViewControllers.count;
-    if ((count-1) >= index) return;
-    TYRecommendViewController *vc = [[TYRecommendViewController alloc] init];
-    [self addChildViewController:vc];
-    CGFloat width = self.view.bounds.size.width;
-    CGFloat height = self.view.bounds.size.height;
-    CGFloat startX = index*width;
-    CGFloat startY = 0;
+     NSString *keyString = [NSString stringWithFormat:@"%ld",(long)index];
+     NSString *className = [self.pageCache valueForKey:keyString];
+    if (!className) {
+        TYRecommendViewController *vc = [[TYRecommendViewController alloc] init];
+        [self addChildViewController:vc];
+        CGFloat width = self.view.bounds.size.width;
+        CGFloat height = self.view.bounds.size.height;
+        CGFloat startX = index*width;
+        CGFloat startY = 0;
+        UIView *view =  vc.view;
+        view.frame = CGRectMake(startX, startY, width, height);
+        [self.scrollView addSubview:view];
+        [self.pageCache setValue:NSStringFromClass([TYRecommendViewController class]) forKey:keyString];
+    }
 
-    UIView *view =  vc.view;
-    view.frame = CGRectMake(startX, startY, width, height);
-    [self.scrollView addSubview:view];
 }
 
 #pragma mark---
@@ -94,11 +104,7 @@
 #pragma mark---
 #pragma mark---UIScrollViewDelegate
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
-   
     [self.segmentView setIndicatorViewScrollOffSetX:scrollView];
-    
-    
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate;
