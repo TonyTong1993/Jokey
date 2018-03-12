@@ -33,7 +33,6 @@
 		EB26737B2010720A008FA02C /* pingfang.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB26737A2010720A008FA02C /* pingfang.ttf */; };
 		EB2C570F2049364500A4E271 /* UIViewController+MobClick.m in Sources */ = {isa = PBXBuildFile; fileRef = EB2C570E2049364500A4E271 /* UIViewController+MobClick.m */; };
 		EB3299CE1F1354420034D095 /* TYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3299CD1F1354420034D095 /* TYHomeViewController.m */; };
-		EB3299D01F136B860034D095 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299CF1F136B860034D095 /* iconfont.ttf */; };
 		EB3299E21F1385B60034D095 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3299D81F1385B60034D095 /* Ionicons.ttf */; };
 		EB32F1431F4AE31C00D766AF /* TYSegmentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB32F1421F4AE31C00D766AF /* TYSegmentItem.swift */; };
 		EB32F1451F4AE32D00D766AF /* TYSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB32F1441F4AE32D00D766AF /* TYSegmentView.swift */; };
@@ -189,6 +188,7 @@
 		EBA8F8871FC66D12005A2B84 /* LLImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F86C1FC66D12005A2B84 /* LLImagePickerController.m */; };
 		EBA8F8881FC66D12005A2B84 /* LLMessageDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F86F1FC66D12005A2B84 /* LLMessageDialog.m */; };
 		EBA8F8891FC66D12005A2B84 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F8721FC66D12005A2B84 /* Utils.m */; };
+		EBB1E5552056446100956B7F /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB1E5542056446100956B7F /* iconfont.ttf */; };
 		EBB77D691F677BD700A1C59C /* TYProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB77D681F677BD700A1C59C /* TYProfileViewModel.m */; };
 		EBBBF6E42011A37D0011B4DF /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBBF6E32011A37D0011B4DF /* UIColor+Extension.m */; };
 		EBBBF6E72011CB420011B4DF /* UIImageView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBBF6E62011CB420011B4DF /* UIImageView+Extension.m */; };
@@ -262,7 +262,6 @@
 		EB2C570E2049364500A4E271 /* UIViewController+MobClick.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MobClick.m"; sourceTree = "<group>"; };
 		EB3299CC1F1354420034D095 /* TYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYHomeViewController.h; sourceTree = "<group>"; };
 		EB3299CD1F1354420034D095 /* TYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYHomeViewController.m; sourceTree = "<group>"; };
-		EB3299CF1F136B860034D095 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		EB3299D81F1385B60034D095 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
 		EB32F1421F4AE31C00D766AF /* TYSegmentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYSegmentItem.swift; sourceTree = "<group>"; };
 		EB32F1441F4AE32D00D766AF /* TYSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYSegmentView.swift; sourceTree = "<group>"; };
@@ -520,6 +519,7 @@
 		EBA8F8711FC66D12005A2B84 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		EBA8F8721FC66D12005A2B84 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		EBA8F88A1FC68043005A2B84 /* RCTConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTConfig.h; sourceTree = "<group>"; };
+		EBB1E5542056446100956B7F /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		EBB77D671F677BD700A1C59C /* TYProfileViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYProfileViewModel.h; sourceTree = "<group>"; };
 		EBB77D681F677BD700A1C59C /* TYProfileViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYProfileViewModel.m; sourceTree = "<group>"; };
 		EBBBF6E22011A37D0011B4DF /* UIColor+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
@@ -642,7 +642,6 @@
 				EB032D241F0251F300F32465 /* ViewController.h */,
 				EB032D251F0251F300F32465 /* ViewController.m */,
 				EB032D271F0251F300F32465 /* Main.storyboard */,
-				EB3299CF1F136B860034D095 /* iconfont.ttf */,
 				EB777A3A1F7B9C91000461B3 /* icon_certification.png */,
 				EB777A381F7B9C90000461B3 /* icon_certification@2x.png */,
 				EB777A391F7B9C90000461B3 /* icon_certification@3x.png */,
@@ -772,6 +771,7 @@
 		EB3299D31F1385B60034D095 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				EBB1E5542056446100956B7F /* iconfont.ttf */,
 				EB26737A2010720A008FA02C /* pingfang.ttf */,
 				EB3299D81F1385B60034D095 /* Ionicons.ttf */,
 			);
@@ -1744,6 +1744,7 @@
 			files = (
 				EB6D11AE20513ADA00715160 /* TYPhotoAlbumViewCell.xib in Resources */,
 				EB6FA841204FE6DD0027923B /* index.html in Resources */,
+				EBB1E5552056446100956B7F /* iconfont.ttf in Resources */,
 				EB777A461F7BC7E5000461B3 /* main.jsbundle in Resources */,
 				EB6DE6F7205297BC009290F0 /* TYPhotoCollectionViewCell.xib in Resources */,
 				EB777A401F7BB187000461B3 /* icon_certification@3x.png in Resources */,
@@ -1759,7 +1760,6 @@
 				EB032D2B1F0251F300F32465 /* Assets.xcassets in Resources */,
 				EB58657E1F55706300598DA0 /* Profile.json in Resources */,
 				EB26737B2010720A008FA02C /* pingfang.ttf in Resources */,
-				EB3299D01F136B860034D095 /* iconfont.ttf in Resources */,
 				EB032D291F0251F300F32465 /* Main.storyboard in Resources */,
 				EB4347601F3B51D100EC7AE9 /* TYStatusViewCell.xib in Resources */,
 				EB5A9A041F3C64C30031C497 /* TestView.xib in Resources */,

@@ -10,5 +10,6 @@
 
 @interface TYPhotoCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnail;
+@property (weak, nonatomic) IBOutlet UIButton *check;
 
 @end

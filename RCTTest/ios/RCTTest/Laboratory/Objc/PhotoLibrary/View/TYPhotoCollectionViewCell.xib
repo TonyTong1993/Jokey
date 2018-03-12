@@ -21,15 +21,29 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X2t-y3-KNW">
                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDL-zI-lIm">
+                        <rect key="frame" x="48" y="0.0" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="FHE-gh-zOT"/>
+                            <constraint firstAttribute="width" constant="32" id="JaW-hg-NG0"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="4"/>
+                        <connections>
+                            <action selector="checkOnClicked:" destination="gTV-IL-0wX" eventType="touchUpInside" id="B3q-vS-G1s"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="X2t-y3-KNW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="BmO-Ou-2GO"/>
                 <constraint firstItem="X2t-y3-KNW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Bnp-xK-CgH"/>
                 <constraint firstAttribute="bottom" secondItem="X2t-y3-KNW" secondAttribute="bottom" id="HnE-FK-Wvj"/>
+                <constraint firstItem="gDL-zI-lIm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Tum-ix-Ia4"/>
+                <constraint firstAttribute="trailing" secondItem="gDL-zI-lIm" secondAttribute="trailing" id="VNO-h5-c7k"/>
                 <constraint firstAttribute="trailing" secondItem="X2t-y3-KNW" secondAttribute="trailing" id="fMV-Oq-aHc"/>
             </constraints>
             <connections>
+                <outlet property="check" destination="gDL-zI-lIm" id="Arc-4F-dgb"/>
                 <outlet property="thumbnail" destination="X2t-y3-KNW" id="pmF-Sc-gQ5"/>
             </connections>
         </collectionViewCell>

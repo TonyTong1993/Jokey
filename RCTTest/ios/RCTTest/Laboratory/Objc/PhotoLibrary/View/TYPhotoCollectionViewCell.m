@@ -14,5 +14,7 @@
     [super awakeFromNib];
     // Initialization code
 }
+- (IBAction)checkOnClicked:(id)sender {
+}
 
 @end

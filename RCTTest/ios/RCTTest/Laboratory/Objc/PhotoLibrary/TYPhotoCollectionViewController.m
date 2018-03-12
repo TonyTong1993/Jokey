@@ -8,6 +8,7 @@
 
 #import "TYPhotoCollectionViewController.h"
 #import "TYPhotoCollectionViewCell.h"
+#import <TBCityIconFont.h>
 @interface TYPhotoCollectionViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong) TYPhotoPresent *present;
 @property (nonatomic,strong) UICollectionView *collectionView;
@@ -81,6 +82,10 @@ static CGFloat margin = 4.0f;
     [phAsset requestThumbnailWithTargetSize:cell.size complicationhandler:^(UIImage *result, NSDictionary *info) {
         cell.thumbnail.image = result;
     }];
+    //&#xe8f7;e6df
+    TBCityIconInfo *iconInfo = TBCityIconInfoMake(@"\U0000e8f7", 24, [UIColor whiteColor]);
+    UIImage *image = [UIImage iconWithInfo:iconInfo];
+    [cell.check setImage:image forState:UIControlStateNormal];
     return cell;
 }
 
