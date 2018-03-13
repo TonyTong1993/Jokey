@@ -11,7 +11,9 @@
 #import "TYTheme.h"
 #import  "TBCityIconFont.h"
 #import "AppDelegate+AppService.h"
+#if !TARGET_IPHONE_SIMULATOR
 #import "AppDelegate+PushService.h"
+#endif
 #import "AppManager.h"
 
 #ifdef PUREUI

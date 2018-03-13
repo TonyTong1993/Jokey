@@ -11,4 +11,5 @@
 @interface TYPhotoSelectedHandler : NSObject
 SINGLETON_FOR_HEADER(TYPhotoSelectedHandler)
 @property (nonatomic,strong) NSMutableArray *selectedPhotos;
+@property (nonatomic,assign) NSUInteger maxSelectedCount;
 @end

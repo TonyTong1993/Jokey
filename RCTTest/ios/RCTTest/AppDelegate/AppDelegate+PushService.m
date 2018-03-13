@@ -9,6 +9,7 @@
 #import "AppDelegate+PushService.h"
 #import "RCTConfig.h"
 @implementation AppDelegate (PushService)
+
 -(void)initRemoteNotification:(NSDictionary *)launchOptions {
   
     //设置本地推送通知 步骤：1.注册本地通知；2.设置本地推送消息；3.显示推送消息代理
@@ -57,6 +58,7 @@
     /*注册远程推送*/
     //Required
     //notice: 3.0.0及以后版本注册可以这样写，也可以继续用之前的注册方式
+#if !TARGET_IPHONE_SIMULATOR
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
     entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
@@ -84,6 +86,7 @@
                           channel:@""
                  apsForProduction:false
             advertisingIdentifier:advertisingId];
+#endif
 }
 
 -(void)pushLocalNotification {
@@ -149,6 +152,7 @@
 }
 
 #pragma mark--remote notification
+#if !TARGET_IPHONE_SIMULATOR
 - (void)application:(UIApplication *)application
 didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     
@@ -193,4 +197,5 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // Required,For systems with less than or equal to iOS6
     [JPUSHService handleRemoteNotification:userInfo];
 }
+#endif
 @end

@@ -40,9 +40,7 @@
 }
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"didAppear in %f sec",CFAbsoluteTimeGetCurrent() - StartTime);
-    });
+ 
 }
 -(void)addChildViewController:(NSString *)className icon:(NSString *)icon selectedIcon:(NSString *)selectedIcon title:(NSString *)title {
     UIViewController *childController = [[NSClassFromString(className) alloc] init];

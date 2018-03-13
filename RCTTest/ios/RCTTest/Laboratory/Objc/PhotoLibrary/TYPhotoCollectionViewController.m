@@ -11,9 +11,12 @@
 #import <TBCityIconFont.h>
 #import <YYKit/NSArray+YYAdd.h>
 #import "TYPhotoSelectedHandler.h"
-@interface TYPhotoCollectionViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,TYPhotoCollectionViewCellDelegate>
+#import "MBProgressHUD+MJ.h"
+@interface TYPhotoCollectionViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,TYPhotoCollectionViewCellDelegate,UIToolbarDelegate>
 @property (nonatomic,strong) TYPhotoPresent *present;
 @property (nonatomic,strong) UICollectionView *collectionView;
+@property (nonatomic,weak) UIToolbar *toolBar;
+@property (nonatomic,strong) MBProgressHUD *hud;
 @end
 static NSString *reuseIdentifier = @"UICollectionViewCell";
 static CGFloat margin = 4.0f;
@@ -23,7 +26,6 @@ static CGFloat margin = 4.0f;
 -(UICollectionView *)collectionView {
     if (!_collectionView) {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-        
         int rowCount = 4;
         CGFloat square = floorf((SCREEN_WIDTH - margin*(rowCount+1))/rowCount);
         layout.sectionInset = UIEdgeInsetsMake(0, margin, 0, margin);
@@ -38,12 +40,37 @@ static CGFloat margin = 4.0f;
         [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
         [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([TYPhotoCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
         
-        CGFloat bottomEdgeInset =is_iPhoneX?83.0f:64.0f;
+        CGFloat bottomEdgeInset = kTopHeight+kTabBarHeight;
         _collectionView.contentInset = UIEdgeInsetsMake(0, 0, bottomEdgeInset, 0);
         _collectionView.scrollIndicatorInsets = _collectionView.contentInset;
        
     }
     return _collectionView;
+}
+-(MBProgressHUD *)hud {
+    if (!_hud) {
+        _hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    }
+    return _hud;
+}
+-(instancetype)init {
+    self = [super init];
+    if (self) {
+        self.present = [[TYPhotoPresent alloc] initWithPresenter:self];
+        __weak typeof(self) weakSelf = self;
+        [self.present requestAllPhAssets:^(PHFetchResult<PHAsset *> *result) {
+            weakSelf.fetchResult = result;
+            
+            if (weakSelf.collectionView) {
+                [weakSelf.collectionView reloadData];
+            }
+            
+            if (weakSelf.hud) {
+                [weakSelf.hud hideAnimated:YES];
+            }
+        }];
+    }
+    return self;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -56,16 +83,48 @@ static CGFloat margin = 4.0f;
     UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(finish)];
     self.navigationItem.rightBarButtonItem = rightBarItem;
     
-    self.present = [[TYPhotoPresent alloc] initWithPresenter:self];
-    __weak typeof(self) weakSelf = self;
-    [self.present requestAllPhAssets:^(PHFetchResult<PHAsset *> *result) {
-        weakSelf.fetchResult = result;
-    }];
+   
     
-    //
-    if (!self.fetchResult.count) return;
     [self.view addSubview:self.collectionView];
+   
+   CGRect frame = CGRectMake(0,SCREEN_HEIGHT-kTopHeight-kTabBarHeight, SCREEN_WIDTH, kTabBarHeight);
+   UIToolbar *toolBar = [[UIToolbar alloc] initWithFrame:frame];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"预览" style:UIBarButtonItemStylePlain target:self action:@selector(goPreview)];
+    leftItem.tintColor = HEXCOLOR(themeColorHexValue);
+    //normal &#xe96b; selected &#xe96a;
     
+    CGRect rect = CGRectMake(0, 0, 80, 49);
+    UIButton *middleBtn = [[UIButton alloc] initWithFrame:rect];
+    [middleBtn setTitle:@"原图" forState:UIControlStateNormal];
+    TBCityIconInfo *iconInfo = TBCityIconInfoMake(@"\U0000e96b", 22, HEXCOLOR(themeColorHexValue));
+    UIImage *image = [UIImage iconWithInfo:iconInfo];
+    [middleBtn setImage:image forState:UIControlStateNormal];
+    TBCityIconInfo *iconSelectedInfo = TBCityIconInfoMake(@"\U0000e96a", 22,HEXCOLOR(themeColorHexValue));
+    UIImage *selectedImage = [UIImage iconWithInfo:iconSelectedInfo];
+    [middleBtn setImage:selectedImage forState:UIControlStateSelected];
+    [middleBtn setTitleColor:HEXCOLOR(themeColorHexValue) forState:UIControlStateNormal];
+    middleBtn.titleLabel.font = [UIFont systemFontOfSize:17];
+    [middleBtn addTarget:self action:@selector(chooseOriginal:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *middleItem = [[UIBarButtonItem alloc] initWithCustomView:middleBtn];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"发送" style:UIBarButtonItemStylePlain target:self action:@selector(sendPhotos)];
+    rightItem.tintColor = HEXCOLOR(themeColorHexValue);
+    UIBarButtonItem *flexibleitem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:(UIBarButtonSystemItemFlexibleSpace) target:self action:nil];
+    NSArray *items = @[leftItem,flexibleitem,middleItem,flexibleitem,rightItem];
+    [toolBar setItems:items];
+    
+    toolBar.barTintColor = [UIColor grayColor];
+   [self.view addSubview:toolBar];
+    self.toolBar = toolBar;
+    
+    [TYPhotoSelectedHandler sharedTYPhotoSelectedHandler].maxSelectedCount = 6;
+    
+    
+    //设置加载相册的进度
+    if (!self.fetchResult.count) {
+        
+        [self.hud showAnimated:YES];
+        
+    }
 }
 
 #pragma mark---action response
@@ -74,6 +133,15 @@ static CGFloat margin = 4.0f;
 }
 -(void)goBack {
     [self.navigationController popViewControllerAnimated:YES];
+}
+-(void)goPreview {
+    NSLog(@"%s",__func__);
+}
+-(void)chooseOriginal:(UIButton *)sender {
+    sender.selected = !sender.isSelected;
+}
+-(void)sendPhotos {
+     NSLog(@"%s",__func__);
 }
 #pragma mark--UICollectionViewDelegate,UICollectionViewDataSource
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -85,7 +153,6 @@ static CGFloat margin = 4.0f;
     [phAsset requestThumbnailWithTargetSize:cell.size complicationhandler:^(UIImage *result, NSDictionary *info) {
         cell.thumbnail.image = result;
     }];
-    //&#xe8f7;e6df
     TBCityIconInfo *iconInfo = TBCityIconInfoMake(@"\U0000e8f7", 24, [UIColor whiteColor]);
     UIImage *image = [UIImage iconWithInfo:iconInfo];
     [cell.check setImage:image forState:UIControlStateNormal];
@@ -104,14 +171,27 @@ static CGFloat margin = 4.0f;
 -(void)photocell:(TYPhotoCollectionViewCell *)cell didSelectedAtIndexPath:(NSIndexPath *)indexPath {
     PHAsset *phAsset = [self.fetchResult objectAtIndex:indexPath.item];
     NSMutableArray *selectedPhotos = [TYPhotoSelectedHandler sharedTYPhotoSelectedHandler].selectedPhotos;
+    NSUInteger count = selectedPhotos.count;
     BOOL isSelected = [selectedPhotos containsObject:phAsset];
     NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:8];
+    BOOL isMax = (count >= [TYPhotoSelectedHandler sharedTYPhotoSelectedHandler].maxSelectedCount);
     if (!isSelected) {
+      
+        if (isMax) {
+            UIAlertController *alerVC = [UIAlertController alertControllerWithTitle:nil message:[NSString stringWithFormat:@"你最多只能选择%u照片",(unsigned)count] preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"我知道了" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                
+            }];
+            [alerVC addAction:sureAction];
+            [self presentViewController:alerVC animated:YES completion:nil];
+            return;
+        }
+        
+        
         [selectedPhotos addObject:phAsset];
         [indexPaths addObject:indexPath];
     }else {
         NSUInteger index = [selectedPhotos indexOfObject:phAsset];
-        NSUInteger count = selectedPhotos.count;
         NSUInteger len = count-1 - index;
         NSArray *subArray = [selectedPhotos subarrayWithRange:NSMakeRange(index+1, len)];
         [subArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -121,12 +201,12 @@ static CGFloat margin = 4.0f;
         }];
         [selectedPhotos removeObject:phAsset];
         [cell removeSelectedShaperLayer];
+        
     }
     if (indexPaths.count) {
         [self.collectionView reloadItemsAtIndexPaths:indexPaths];
     }
     
 }
-
 
 @end

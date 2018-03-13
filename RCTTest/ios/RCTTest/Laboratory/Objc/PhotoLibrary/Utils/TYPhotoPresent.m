@@ -71,7 +71,14 @@ typedef void (^ComplicationHanlder)(NSMutableArray *results);
 
 }
 -(void)requestAllPhAssets:(void(^)(PHFetchResult <PHAsset *>*result))finishBlock {
-    [TYPhotoHandler enumerateAllAssetsInCollectionsWithfinishBlock:finishBlock];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [TYPhotoHandler enumerateAllAssetsInCollectionsWithfinishBlock:^(PHFetchResult<PHAsset *> *result) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                finishBlock(result);
+            });
+        }];
+    });
+   
 }
 
 -(void)dealloc {
