@@ -11,6 +11,7 @@
 #import "TYSegmentView.h"
 #import "TYRecommendViewController.h"
 
+#import "TYOCTestListViewController.h"
 /*测试相册功能*/
 #import "TYPhotoCollectionViewController.h"
 #import "TYPhotoAlbumViewController.h"
@@ -128,8 +129,8 @@
 #pragma Private Method
 
 -(void)handleRightItemClick {
-    TYPhotoCollectionViewController *testPhotoAlbum = [[TYPhotoCollectionViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:testPhotoAlbum];
-    [self presentViewController:nav animated:YES completion:nil];
+    
+    TYOCTestListViewController *testListVC = [[TYOCTestListViewController alloc] init];
+    [self.navigationController pushViewController:testListVC animated:YES];
 }
 @end

@@ -12,11 +12,13 @@
 #import <YYKit/NSArray+YYAdd.h>
 #import "TYPhotoSelectedHandler.h"
 #import "MBProgressHUD+MJ.h"
+#import "TYPhotoGroupView.h"
 @interface TYPhotoCollectionViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,TYPhotoCollectionViewCellDelegate,UIToolbarDelegate>
 @property (nonatomic,strong) TYPhotoPresent *present;
 @property (nonatomic,strong) UICollectionView *collectionView;
 @property (nonatomic,weak) UIToolbar *toolBar;
 @property (nonatomic,strong) MBProgressHUD *hud;
+@property (nonatomic,strong) TYPhotoGroupView *photoGroupView;
 @end
 static NSString *reuseIdentifier = @"UICollectionViewCell";
 static CGFloat margin = 4.0f;
@@ -52,6 +54,12 @@ static CGFloat margin = 4.0f;
         _hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     }
     return _hud;
+}
+-(TYPhotoGroupView *)photoGroupView {
+    if (!_photoGroupView) {
+        _photoGroupView = [[TYPhotoGroupView alloc] init];
+    }
+    return _photoGroupView;
 }
 -(instancetype)init {
     self = [super init];
@@ -178,7 +186,7 @@ static CGFloat margin = 4.0f;
     if (!isSelected) {
       
         if (isMax) {
-            UIAlertController *alerVC = [UIAlertController alertControllerWithTitle:nil message:[NSString stringWithFormat:@"你最多只能选择%u照片",(unsigned)count] preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alerVC = [UIAlertController alertControllerWithTitle:nil message:[NSString stringWithFormat:@"你最多只能选择%u张照片",(unsigned)count] preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"我知道了" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 
             }];

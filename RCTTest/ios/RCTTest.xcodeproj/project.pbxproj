@@ -98,6 +98,12 @@
 		EB6A84E62047AB6600DE7224 /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6A84E52047AB6600DE7224 /* UIScrollView+Refresh.m */; };
 		EB6A84E92047B33100DE7224 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6A84E82047B33100DE7224 /* UserManager.m */; };
 		EB6A84ED2047B35F00DE7224 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6A84EC2047B35F00DE7224 /* UserInfo.m */; };
+		EB6C0A282058D512004E0CFC /* TYPhotoGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C0A272058D512004E0CFC /* TYPhotoGroupView.m */; };
+		EB6C0A2D2058DA93004E0CFC /* TYBlurEffectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C0A2B2058DA93004E0CFC /* TYBlurEffectViewController.m */; };
+		EB6C0A2E2058DA93004E0CFC /* TYBlurEffectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6C0A2C2058DA93004E0CFC /* TYBlurEffectViewController.xib */; };
+		EB6C0A342058DDD7004E0CFC /* laboratoryList.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB6C0A332058DDD7004E0CFC /* laboratoryList.plist */; };
+		EB6C0A372058F1DD004E0CFC /* TYOCTestListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C0A362058F1DD004E0CFC /* TYOCTestListViewController.m */; };
+		EB6C0A382058FF88004E0CFC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6C0A2F2058DC83004E0CFC /* background.png */; };
 		EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */; };
 		EB6D11942050E7D300715160 /* TYPhotoAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6D11932050E7D300715160 /* TYPhotoAlbumViewController.m */; };
 		EB6D11972050E7F300715160 /* TYPhotoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6D11962050E7F300715160 /* TYPhotoCollectionViewController.m */; };
@@ -366,6 +372,15 @@
 		EB6A84E82047B33100DE7224 /* UserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		EB6A84EB2047B35F00DE7224 /* UserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
 		EB6A84EC2047B35F00DE7224 /* UserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		EB6C0A262058D512004E0CFC /* TYPhotoGroupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPhotoGroupView.h; sourceTree = "<group>"; };
+		EB6C0A272058D512004E0CFC /* TYPhotoGroupView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYPhotoGroupView.m; sourceTree = "<group>"; };
+		EB6C0A2A2058DA93004E0CFC /* TYBlurEffectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYBlurEffectViewController.h; sourceTree = "<group>"; };
+		EB6C0A2B2058DA93004E0CFC /* TYBlurEffectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYBlurEffectViewController.m; sourceTree = "<group>"; };
+		EB6C0A2C2058DA93004E0CFC /* TYBlurEffectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TYBlurEffectViewController.xib; sourceTree = "<group>"; };
+		EB6C0A2F2058DC83004E0CFC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		EB6C0A332058DDD7004E0CFC /* laboratoryList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = laboratoryList.plist; sourceTree = "<group>"; };
+		EB6C0A352058F1DD004E0CFC /* TYOCTestListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYOCTestListViewController.h; sourceTree = "<group>"; };
+		EB6C0A362058F1DD004E0CFC /* TYOCTestListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYOCTestListViewController.m; sourceTree = "<group>"; };
 		EB6C70D51F1745A700D5B7AD /* UIImage+Extentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extentions.h"; sourceTree = "<group>"; };
 		EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extentions.m"; sourceTree = "<group>"; };
 		EB6D11922050E7D300715160 /* TYPhotoAlbumViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPhotoAlbumViewController.h; sourceTree = "<group>"; };
@@ -628,6 +643,7 @@
 		EB032D1D1F0251F300F32465 /* RCTTest */ = {
 			isa = PBXGroup;
 			children = (
+				EB6C0A302058DD41004E0CFC /* Src */,
 				EB729DFC2046B37100EE9A44 /* Bundle */,
 				EB88417F20453DDC00EDFAF5 /* Utils */,
 				EB88417B204538A800EDFAF5 /* Manager */,
@@ -1075,6 +1091,8 @@
 				EB64A72F1FCE900800E8546E /* NetWorking */,
 				EB64A72E1FCE8FFF00E8546E /* Algorithm */,
 				EB64A72D1FCE8D2B00E8546E /* Memory management */,
+				EB6C0A352058F1DD004E0CFC /* TYOCTestListViewController.h */,
+				EB6C0A362058F1DD004E0CFC /* TYOCTestListViewController.m */,
 			);
 			path = Objc;
 			sourceTree = "<group>";
@@ -1276,6 +1294,25 @@
 			path = WebView;
 			sourceTree = "<group>";
 		};
+		EB6C0A292058DA57004E0CFC /* 毛玻璃特效实现 */ = {
+			isa = PBXGroup;
+			children = (
+				EB6C0A2F2058DC83004E0CFC /* background.png */,
+				EB6C0A2A2058DA93004E0CFC /* TYBlurEffectViewController.h */,
+				EB6C0A2B2058DA93004E0CFC /* TYBlurEffectViewController.m */,
+				EB6C0A2C2058DA93004E0CFC /* TYBlurEffectViewController.xib */,
+			);
+			path = "毛玻璃特效实现";
+			sourceTree = "<group>";
+		};
+		EB6C0A302058DD41004E0CFC /* Src */ = {
+			isa = PBXGroup;
+			children = (
+				EB6C0A332058DDD7004E0CFC /* laboratoryList.plist */,
+			);
+			path = Src;
+			sourceTree = "<group>";
+		};
 		EB6D11912050E18D00715160 /* PhotoLibrary */ = {
 			isa = PBXGroup;
 			children = (
@@ -1317,12 +1354,15 @@
 		EB6D11A920513A7300715160 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EB6C0A292058DA57004E0CFC /* 毛玻璃特效实现 */,
 				EB6D11AA20513ADA00715160 /* TYPhotoAlbumViewCell.h */,
 				EB6D11AB20513ADA00715160 /* TYPhotoAlbumViewCell.m */,
 				EB6D11AC20513ADA00715160 /* TYPhotoAlbumViewCell.xib */,
 				EB6DE6F3205297BC009290F0 /* TYPhotoCollectionViewCell.h */,
 				EB6DE6F4205297BC009290F0 /* TYPhotoCollectionViewCell.m */,
 				EB6DE6F5205297BC009290F0 /* TYPhotoCollectionViewCell.xib */,
+				EB6C0A262058D512004E0CFC /* TYPhotoGroupView.h */,
+				EB6C0A272058D512004E0CFC /* TYPhotoGroupView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1747,9 +1787,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB6C0A382058FF88004E0CFC /* background.png in Resources */,
 				EB6D11AE20513ADA00715160 /* TYPhotoAlbumViewCell.xib in Resources */,
 				EB6FA841204FE6DD0027923B /* index.html in Resources */,
 				EBB1E5552056446100956B7F /* iconfont.ttf in Resources */,
+				EB6C0A2E2058DA93004E0CFC /* TYBlurEffectViewController.xib in Resources */,
 				EB777A461F7BC7E5000461B3 /* main.jsbundle in Resources */,
 				EB6DE6F7205297BC009290F0 /* TYPhotoCollectionViewCell.xib in Resources */,
 				EB777A401F7BB187000461B3 /* icon_certification@3x.png in Resources */,
@@ -1766,6 +1808,7 @@
 				EB58657E1F55706300598DA0 /* Profile.json in Resources */,
 				EB26737B2010720A008FA02C /* pingfang.ttf in Resources */,
 				EB032D291F0251F300F32465 /* Main.storyboard in Resources */,
+				EB6C0A342058DDD7004E0CFC /* laboratoryList.plist in Resources */,
 				EB4347601F3B51D100EC7AE9 /* TYStatusViewCell.xib in Resources */,
 				EB5A9A041F3C64C30031C497 /* TestView.xib in Resources */,
 			);
@@ -1886,6 +1929,7 @@
 				EB714BD21F4806190024C929 /* ConstraintDSL.swift in Sources */,
 				EB6DE6F6205297BC009290F0 /* TYPhotoCollectionViewCell.m in Sources */,
 				EBB1E5582056721700956B7F /* TYPhotoSelectedHandler.m in Sources */,
+				EB6C0A282058D512004E0CFC /* TYPhotoGroupView.m in Sources */,
 				EB714BEC1F4806190024C929 /* LayoutConstraintItem.swift in Sources */,
 				EBE0F7A91F76ABCA006F0AD8 /* SearchView.swift in Sources */,
 				EB5865811F5570ED00598DA0 /* NSBundle+Extension.m in Sources */,
@@ -1939,6 +1983,7 @@
 				EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */,
 				EB43475F1F3B51D100EC7AE9 /* TYStatusViewCell.m in Sources */,
 				EBE0F7AC1F773C83006F0AD8 /* TYSegmentScrollVIew.swift in Sources */,
+				EB6C0A372058F1DD004E0CFC /* TYOCTestListViewController.m in Sources */,
 				EB88417A204534EC00EDFAF5 /* AppDelegate+PushService.m in Sources */,
 				EB6D11A8205133FE00715160 /* PHAssetCollection+Poster.m in Sources */,
 				EB5D39251F345C490029085F /* TYSegmentView.m in Sources */,
@@ -2014,6 +2059,7 @@
 				EB88418320453E0700EDFAF5 /* SandBoxHelper.m in Sources */,
 				EB5EDB2B1F46C15200B218AF /* Config.swift in Sources */,
 				EB714BCD1F4806190024C929 /* Constraint.swift in Sources */,
+				EB6C0A2D2058DA93004E0CFC /* TYBlurEffectViewController.m in Sources */,
 				EB714BEB1F4806190024C929 /* LayoutConstraint.swift in Sources */,
 				EB5A2A1D1F038C4100A19F2C /* UIButton+LPExtension.m in Sources */,
 				EB266F5A1F3B2D2000949D40 /* TYReviewTest.m in Sources */,

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TYBlurEffectViewController">
+            <connections>
+                <outlet property="dark" destination="Mha-FF-r71" id="2Hw-ea-tZK"/>
+                <outlet property="extraLight" destination="6sy-29-R6V" id="bZW-Xs-Sbl"/>
+                <outlet property="light" destination="dBu-nu-I5C" id="Yw2-z2-b8C"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6sy-29-R6V">
+                    <rect key="frame" x="67" y="60" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="6Lb-Z5-gqD"/>
+                        <constraint firstAttribute="height" constant="128" id="LSj-e8-yAg"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dBu-nu-I5C">
+                    <rect key="frame" x="67" y="218" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="6bw-kJ-p8I"/>
+                        <constraint firstAttribute="height" constant="128" id="aap-fa-bY5"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mha-FF-r71">
+                    <rect key="frame" x="67" y="376" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="LmK-uL-Ml3"/>
+                        <constraint firstAttribute="width" constant="240" id="Oev-8J-UGM"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dBu-nu-I5C" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6Er-iW-45y"/>
+                <constraint firstItem="Mha-FF-r71" firstAttribute="top" secondItem="dBu-nu-I5C" secondAttribute="bottom" constant="30" id="IvO-6Q-bGG"/>
+                <constraint firstItem="Mha-FF-r71" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MBg-Lj-xlb"/>
+                <constraint firstItem="6sy-29-R6V" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XsX-zg-dB5"/>
+                <constraint firstItem="dBu-nu-I5C" firstAttribute="top" secondItem="6sy-29-R6V" secondAttribute="bottom" constant="30" id="l5v-5j-3VG"/>
+                <constraint firstItem="6sy-29-R6V" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="rGy-lG-WIO"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
