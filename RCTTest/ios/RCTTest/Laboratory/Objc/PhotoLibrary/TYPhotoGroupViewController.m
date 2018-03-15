@@ -23,20 +23,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor randomColor];
     [self.view addSubview:self.photoGroupView];
-    
  
 }
-
+// WARNING: if set  self.navigationController.navigationBarHidden = YES; 会出现缝隙合龙的效果
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = YES;
-
-}
--(void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
