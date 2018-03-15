@@ -43,16 +43,16 @@
     self.frame = [UIScreen mainScreen].bounds;
     CGRect frame = CGRectMake(0, 0, SCREEN_WIDTH, 64);
     self.topToolBar = [[UIToolbar alloc] initWithFrame:frame];
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"timg" ofType:@"jpeg"];
-//    UIImage *backgroundImage = [[UIImage alloc] initWithContentsOfFile:path];
-//    [self.topToolBar setBackgroundImage:backgroundImage
-//                  forToolbarPosition:UIBarPositionAny
-//                          barMetrics:UIBarMetricsDefault];
-//    [self.topToolBar setShadowImage:[UIImage new]
-//              forToolbarPosition:UIToolbarPositionAny];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"timg" ofType:@"jpeg"];
+    UIImage *backgroundImage = [[UIImage alloc] initWithContentsOfFile:path];
+    [self.topToolBar setBackgroundImage:backgroundImage
+                  forToolbarPosition:UIBarPositionAny
+                          barMetrics:UIBarMetricsDefault];
+    [self.topToolBar setShadowImage:[UIImage new]
+              forToolbarPosition:UIToolbarPositionAny];
     
-    self.topToolBar.barStyle = UIBarStyleDefault;
-    self.topToolBar.translucent = YES;
+ 
+
     
      UIButton *backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
      backBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
@@ -75,7 +75,7 @@
     
     NSArray *items = @[backItem,flexiableSpaceItem,checkItem];
     
-    [self.topToolBar setItems:items];
+//    [self.topToolBar setItems:items];
     
    
     

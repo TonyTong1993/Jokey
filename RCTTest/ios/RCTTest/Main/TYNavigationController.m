@@ -32,7 +32,7 @@
     [navBar setBarTintColor:HEXCOLOR(themeColorHexValue)];
     [navBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:[UIFont fontWithName:[TYTheme themeFontFamilyName] size:15]}];
     [navBar setBackgroundImage:[UIImage imageNamed:@"nav_bg_1x64_"] forBarMetrics:UIBarMetricsDefault];
-    [navBar setShadowImage:[UIImage singleLineImageWithColor:HEXCOLOR(0xe0e0e0)]];
+    [navBar setShadowImage:[UIImage imageWithColor:HEXCOLOR(0xe0e0e0)]];
     
 }
 

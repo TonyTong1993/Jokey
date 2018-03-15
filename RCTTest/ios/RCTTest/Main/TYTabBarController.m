@@ -25,7 +25,7 @@
 
     //设置UITabBar主题
     [[UITabBar appearance] setBackgroundImage:[[UIImage imageNamed:@"tabbar_bg_1x49_"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    [[UITabBar appearance] setShadowImage:[UIImage singleLineImageWithColor:HEXCOLOR(separatorColorHexValue)]];
+    [[UITabBar appearance] setShadowImage:[UIImage imageWithColor:HEXCOLOR(separatorColorHexValue)]];
     //添加子视图控制器
     NSArray *barItemInfos = @[
                           @{@"className":@"TYHomeViewController",@"icon":@"tabbar_featured_24x24_",@"selectedIcon":@"tabbar_featured_hl_24x24_",@"title":@"首页"},

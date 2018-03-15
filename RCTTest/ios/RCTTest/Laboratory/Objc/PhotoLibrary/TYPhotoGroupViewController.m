@@ -25,6 +25,8 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor randomColor];
     [self.view addSubview:self.photoGroupView];
+    
+ 
 }
 
 -(void)viewWillAppear:(BOOL)animated {

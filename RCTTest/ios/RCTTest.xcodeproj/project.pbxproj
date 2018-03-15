@@ -173,29 +173,6 @@
 		EB88417E204538CB00EDFAF5 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB88417D204538CB00EDFAF5 /* AppManager.m */; };
 		EB88418320453E0700EDFAF5 /* SandBoxHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EB88418220453E0700EDFAF5 /* SandBoxHelper.m */; };
 		EB9FF1E21F47DF2200EEBE11 /* TYTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9FF1E11F47DF2200EEBE11 /* TYTheme.m */; };
-		EBA8F8731FC66D12005A2B84 /* ALAsset+LLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F8371FC66D12005A2B84 /* ALAsset+LLAdd.m */; };
-		EBA8F8741FC66D12005A2B84 /* UIImage+LLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F8391FC66D12005A2B84 /* UIImage+LLAdd.m */; };
-		EBA8F8751FC66D12005A2B84 /* UINavigationBar+LLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F83B1FC66D12005A2B84 /* UINavigationBar+LLAdd.m */; };
-		EBA8F8761FC66D12005A2B84 /* UIScrollView+LLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F83D1FC66D12005A2B84 /* UIScrollView+LLAdd.m */; };
-		EBA8F8771FC66D12005A2B84 /* UIView+LLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F83F1FC66D12005A2B84 /* UIView+LLAdd.m */; };
-		EBA8F8781FC66D12005A2B84 /* LLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F8491FC66D12005A2B84 /* LLBaseViewController.m */; };
-		EBA8F8791FC66D12005A2B84 /* LLImageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F84C1FC66D12005A2B84 /* LLImageHandler.m */; };
-		EBA8F87A1FC66D12005A2B84 /* LLImageSelectHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F84E1FC66D12005A2B84 /* LLImageSelectHandler.m */; };
-		EBA8F87B1FC66D12005A2B84 /* LLBrowserCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F8521FC66D12005A2B84 /* LLBrowserCollectionCell.m */; };
-		EBA8F87C1FC66D12005A2B84 /* LLImageCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F8541FC66D12005A2B84 /* LLImageCollectionCell.m */; };
-		EBA8F87D1FC66D12005A2B84 /* LLImageGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F8561FC66D12005A2B84 /* LLImageGroupCell.m */; };
-		EBA8F87E1FC66D12005A2B84 /* LLBlackToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F8591FC66D12005A2B84 /* LLBlackToolbar.m */; };
-		EBA8F87F1FC66D12005A2B84 /* LLBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F85B1FC66D12005A2B84 /* LLBrowserImageView.m */; };
-		EBA8F8801FC66D12005A2B84 /* LLBrowserScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F85D1FC66D12005A2B84 /* LLBrowserScrollView.m */; };
-		EBA8F8811FC66D12005A2B84 /* LLSelectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F85F1FC66D12005A2B84 /* LLSelectButton.m */; };
-		EBA8F8821FC66D12005A2B84 /* LLToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F8611FC66D12005A2B84 /* LLToolbar.m */; };
-		EBA8F8831FC66D12005A2B84 /* LLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F8641FC66D12005A2B84 /* LLCameraViewController.m */; };
-		EBA8F8841FC66D12005A2B84 /* LLImageBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F8661FC66D12005A2B84 /* LLImageBrowserController.m */; };
-		EBA8F8851FC66D12005A2B84 /* LLImageCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F8681FC66D12005A2B84 /* LLImageCollectionController.m */; };
-		EBA8F8861FC66D12005A2B84 /* LLImageGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F86A1FC66D12005A2B84 /* LLImageGroupController.m */; };
-		EBA8F8871FC66D12005A2B84 /* LLImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F86C1FC66D12005A2B84 /* LLImagePickerController.m */; };
-		EBA8F8881FC66D12005A2B84 /* LLMessageDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F86F1FC66D12005A2B84 /* LLMessageDialog.m */; };
-		EBA8F8891FC66D12005A2B84 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA8F8721FC66D12005A2B84 /* Utils.m */; };
 		EBB1E5552056446100956B7F /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB1E5542056446100956B7F /* iconfont.ttf */; };
 		EBB1E5582056721700956B7F /* TYPhotoSelectedHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB1E5572056721700956B7F /* TYPhotoSelectedHandler.m */; };
 		EBB77D691F677BD700A1C59C /* TYProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB77D681F677BD700A1C59C /* TYProfileViewModel.m */; };
@@ -489,56 +466,6 @@
 		EB88418520455AFD00EDFAF5 /* URLMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLMacros.h; sourceTree = "<group>"; };
 		EB9FF1E01F47DF2200EEBE11 /* TYTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTheme.h; sourceTree = "<group>"; };
 		EB9FF1E11F47DF2200EEBE11 /* TYTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTheme.m; sourceTree = "<group>"; };
-		EBA8F8361FC66D12005A2B84 /* ALAsset+LLAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAsset+LLAdd.h"; sourceTree = "<group>"; };
-		EBA8F8371FC66D12005A2B84 /* ALAsset+LLAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAsset+LLAdd.m"; sourceTree = "<group>"; };
-		EBA8F8381FC66D12005A2B84 /* UIImage+LLAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LLAdd.h"; sourceTree = "<group>"; };
-		EBA8F8391FC66D12005A2B84 /* UIImage+LLAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LLAdd.m"; sourceTree = "<group>"; };
-		EBA8F83A1FC66D12005A2B84 /* UINavigationBar+LLAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+LLAdd.h"; sourceTree = "<group>"; };
-		EBA8F83B1FC66D12005A2B84 /* UINavigationBar+LLAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+LLAdd.m"; sourceTree = "<group>"; };
-		EBA8F83C1FC66D12005A2B84 /* UIScrollView+LLAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+LLAdd.h"; sourceTree = "<group>"; };
-		EBA8F83D1FC66D12005A2B84 /* UIScrollView+LLAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+LLAdd.m"; sourceTree = "<group>"; };
-		EBA8F83E1FC66D12005A2B84 /* UIView+LLAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LLAdd.h"; sourceTree = "<group>"; };
-		EBA8F83F1FC66D12005A2B84 /* UIView+LLAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LLAdd.m"; sourceTree = "<group>"; };
-		EBA8F8431FC66D12005A2B84 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
-		EBA8F8441FC66D12005A2B84 /* ConstDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstDefine.h; sourceTree = "<group>"; };
-		EBA8F8451FC66D12005A2B84 /* FunctionDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionDefines.h; sourceTree = "<group>"; };
-		EBA8F8461FC66D12005A2B84 /* iPhoneVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneVersion.h; sourceTree = "<group>"; };
-		EBA8F8481FC66D12005A2B84 /* LLBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLBaseViewController.h; sourceTree = "<group>"; };
-		EBA8F8491FC66D12005A2B84 /* LLBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLBaseViewController.m; sourceTree = "<group>"; };
-		EBA8F84B1FC66D12005A2B84 /* LLImageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLImageHandler.h; sourceTree = "<group>"; };
-		EBA8F84C1FC66D12005A2B84 /* LLImageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLImageHandler.m; sourceTree = "<group>"; };
-		EBA8F84D1FC66D12005A2B84 /* LLImageSelectHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLImageSelectHandler.h; sourceTree = "<group>"; };
-		EBA8F84E1FC66D12005A2B84 /* LLImageSelectHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLImageSelectHandler.m; sourceTree = "<group>"; };
-		EBA8F8511FC66D12005A2B84 /* LLBrowserCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLBrowserCollectionCell.h; sourceTree = "<group>"; };
-		EBA8F8521FC66D12005A2B84 /* LLBrowserCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLBrowserCollectionCell.m; sourceTree = "<group>"; };
-		EBA8F8531FC66D12005A2B84 /* LLImageCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLImageCollectionCell.h; sourceTree = "<group>"; };
-		EBA8F8541FC66D12005A2B84 /* LLImageCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLImageCollectionCell.m; sourceTree = "<group>"; };
-		EBA8F8551FC66D12005A2B84 /* LLImageGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLImageGroupCell.h; sourceTree = "<group>"; };
-		EBA8F8561FC66D12005A2B84 /* LLImageGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLImageGroupCell.m; sourceTree = "<group>"; };
-		EBA8F8581FC66D12005A2B84 /* LLBlackToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLBlackToolbar.h; sourceTree = "<group>"; };
-		EBA8F8591FC66D12005A2B84 /* LLBlackToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLBlackToolbar.m; sourceTree = "<group>"; };
-		EBA8F85A1FC66D12005A2B84 /* LLBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLBrowserImageView.h; sourceTree = "<group>"; };
-		EBA8F85B1FC66D12005A2B84 /* LLBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLBrowserImageView.m; sourceTree = "<group>"; };
-		EBA8F85C1FC66D12005A2B84 /* LLBrowserScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLBrowserScrollView.h; sourceTree = "<group>"; };
-		EBA8F85D1FC66D12005A2B84 /* LLBrowserScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLBrowserScrollView.m; sourceTree = "<group>"; };
-		EBA8F85E1FC66D12005A2B84 /* LLSelectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLSelectButton.h; sourceTree = "<group>"; };
-		EBA8F85F1FC66D12005A2B84 /* LLSelectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLSelectButton.m; sourceTree = "<group>"; };
-		EBA8F8601FC66D12005A2B84 /* LLToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLToolbar.h; sourceTree = "<group>"; };
-		EBA8F8611FC66D12005A2B84 /* LLToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLToolbar.m; sourceTree = "<group>"; };
-		EBA8F8631FC66D12005A2B84 /* LLCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLCameraViewController.h; sourceTree = "<group>"; };
-		EBA8F8641FC66D12005A2B84 /* LLCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCameraViewController.m; sourceTree = "<group>"; };
-		EBA8F8651FC66D12005A2B84 /* LLImageBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLImageBrowserController.h; sourceTree = "<group>"; };
-		EBA8F8661FC66D12005A2B84 /* LLImageBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLImageBrowserController.m; sourceTree = "<group>"; };
-		EBA8F8671FC66D12005A2B84 /* LLImageCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLImageCollectionController.h; sourceTree = "<group>"; };
-		EBA8F8681FC66D12005A2B84 /* LLImageCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLImageCollectionController.m; sourceTree = "<group>"; };
-		EBA8F8691FC66D12005A2B84 /* LLImageGroupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLImageGroupController.h; sourceTree = "<group>"; };
-		EBA8F86A1FC66D12005A2B84 /* LLImageGroupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLImageGroupController.m; sourceTree = "<group>"; };
-		EBA8F86B1FC66D12005A2B84 /* LLImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLImagePickerController.h; sourceTree = "<group>"; };
-		EBA8F86C1FC66D12005A2B84 /* LLImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLImagePickerController.m; sourceTree = "<group>"; };
-		EBA8F86E1FC66D12005A2B84 /* LLMessageDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLMessageDialog.h; sourceTree = "<group>"; };
-		EBA8F86F1FC66D12005A2B84 /* LLMessageDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLMessageDialog.m; sourceTree = "<group>"; };
-		EBA8F8711FC66D12005A2B84 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
-		EBA8F8721FC66D12005A2B84 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		EBA8F88A1FC68043005A2B84 /* RCTConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTConfig.h; sourceTree = "<group>"; };
 		EBB1E5542056446100956B7F /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		EBB1E5562056721700956B7F /* TYPhotoSelectedHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPhotoSelectedHandler.h; sourceTree = "<group>"; };
@@ -1249,7 +1176,6 @@
 		EB6500F91F418DE500C0B89A /* ThirdFramework */ = {
 			isa = PBXGroup;
 			children = (
-				EBA8F8341FC66D12005A2B84 /* LLPickerKit */,
 				EB811C721F764273003552E9 /* MBProgressHUD-MJ */,
 				EB714BA61F4806190024C929 /* SnapKit */,
 			);
@@ -1542,159 +1468,6 @@
 			path = SandBoxHelper;
 			sourceTree = "<group>";
 		};
-		EBA8F8341FC66D12005A2B84 /* LLPickerKit */ = {
-			isa = PBXGroup;
-			children = (
-				EBA8F8351FC66D12005A2B84 /* Category */,
-				EBA8F8401FC66D12005A2B84 /* Classes */,
-				EBA8F86D1FC66D12005A2B84 /* CommonView */,
-				EBA8F8701FC66D12005A2B84 /* Utils */,
-			);
-			path = LLPickerKit;
-			sourceTree = "<group>";
-		};
-		EBA8F8351FC66D12005A2B84 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				EBA8F8361FC66D12005A2B84 /* ALAsset+LLAdd.h */,
-				EBA8F8371FC66D12005A2B84 /* ALAsset+LLAdd.m */,
-				EBA8F8381FC66D12005A2B84 /* UIImage+LLAdd.h */,
-				EBA8F8391FC66D12005A2B84 /* UIImage+LLAdd.m */,
-				EBA8F83A1FC66D12005A2B84 /* UINavigationBar+LLAdd.h */,
-				EBA8F83B1FC66D12005A2B84 /* UINavigationBar+LLAdd.m */,
-				EBA8F83C1FC66D12005A2B84 /* UIScrollView+LLAdd.h */,
-				EBA8F83D1FC66D12005A2B84 /* UIScrollView+LLAdd.m */,
-				EBA8F83E1FC66D12005A2B84 /* UIView+LLAdd.h */,
-				EBA8F83F1FC66D12005A2B84 /* UIView+LLAdd.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		EBA8F8401FC66D12005A2B84 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				EBA8F8411FC66D12005A2B84 /* Common */,
-				EBA8F84F1FC66D12005A2B84 /* Module */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		EBA8F8411FC66D12005A2B84 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				EBA8F8421FC66D12005A2B84 /* AppGenernal */,
-				EBA8F8471FC66D12005A2B84 /* Base */,
-				EBA8F84A1FC66D12005A2B84 /* Global */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		EBA8F8421FC66D12005A2B84 /* AppGenernal */ = {
-			isa = PBXGroup;
-			children = (
-				EBA8F8431FC66D12005A2B84 /* Config.h */,
-				EBA8F8441FC66D12005A2B84 /* ConstDefine.h */,
-				EBA8F8451FC66D12005A2B84 /* FunctionDefines.h */,
-				EBA8F8461FC66D12005A2B84 /* iPhoneVersion.h */,
-			);
-			path = AppGenernal;
-			sourceTree = "<group>";
-		};
-		EBA8F8471FC66D12005A2B84 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				EBA8F8481FC66D12005A2B84 /* LLBaseViewController.h */,
-				EBA8F8491FC66D12005A2B84 /* LLBaseViewController.m */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		EBA8F84A1FC66D12005A2B84 /* Global */ = {
-			isa = PBXGroup;
-			children = (
-				EBA8F84B1FC66D12005A2B84 /* LLImageHandler.h */,
-				EBA8F84C1FC66D12005A2B84 /* LLImageHandler.m */,
-				EBA8F84D1FC66D12005A2B84 /* LLImageSelectHandler.h */,
-				EBA8F84E1FC66D12005A2B84 /* LLImageSelectHandler.m */,
-			);
-			path = Global;
-			sourceTree = "<group>";
-		};
-		EBA8F84F1FC66D12005A2B84 /* Module */ = {
-			isa = PBXGroup;
-			children = (
-				EBA8F8501FC66D12005A2B84 /* Cell */,
-				EBA8F8571FC66D12005A2B84 /* View */,
-				EBA8F8621FC66D12005A2B84 /* ViewController */,
-			);
-			path = Module;
-			sourceTree = "<group>";
-		};
-		EBA8F8501FC66D12005A2B84 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				EBA8F8511FC66D12005A2B84 /* LLBrowserCollectionCell.h */,
-				EBA8F8521FC66D12005A2B84 /* LLBrowserCollectionCell.m */,
-				EBA8F8531FC66D12005A2B84 /* LLImageCollectionCell.h */,
-				EBA8F8541FC66D12005A2B84 /* LLImageCollectionCell.m */,
-				EBA8F8551FC66D12005A2B84 /* LLImageGroupCell.h */,
-				EBA8F8561FC66D12005A2B84 /* LLImageGroupCell.m */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		EBA8F8571FC66D12005A2B84 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EBA8F8581FC66D12005A2B84 /* LLBlackToolbar.h */,
-				EBA8F8591FC66D12005A2B84 /* LLBlackToolbar.m */,
-				EBA8F85A1FC66D12005A2B84 /* LLBrowserImageView.h */,
-				EBA8F85B1FC66D12005A2B84 /* LLBrowserImageView.m */,
-				EBA8F85C1FC66D12005A2B84 /* LLBrowserScrollView.h */,
-				EBA8F85D1FC66D12005A2B84 /* LLBrowserScrollView.m */,
-				EBA8F85E1FC66D12005A2B84 /* LLSelectButton.h */,
-				EBA8F85F1FC66D12005A2B84 /* LLSelectButton.m */,
-				EBA8F8601FC66D12005A2B84 /* LLToolbar.h */,
-				EBA8F8611FC66D12005A2B84 /* LLToolbar.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		EBA8F8621FC66D12005A2B84 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				EBA8F8631FC66D12005A2B84 /* LLCameraViewController.h */,
-				EBA8F8641FC66D12005A2B84 /* LLCameraViewController.m */,
-				EBA8F8651FC66D12005A2B84 /* LLImageBrowserController.h */,
-				EBA8F8661FC66D12005A2B84 /* LLImageBrowserController.m */,
-				EBA8F8671FC66D12005A2B84 /* LLImageCollectionController.h */,
-				EBA8F8681FC66D12005A2B84 /* LLImageCollectionController.m */,
-				EBA8F8691FC66D12005A2B84 /* LLImageGroupController.h */,
-				EBA8F86A1FC66D12005A2B84 /* LLImageGroupController.m */,
-				EBA8F86B1FC66D12005A2B84 /* LLImagePickerController.h */,
-				EBA8F86C1FC66D12005A2B84 /* LLImagePickerController.m */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		EBA8F86D1FC66D12005A2B84 /* CommonView */ = {
-			isa = PBXGroup;
-			children = (
-				EBA8F86E1FC66D12005A2B84 /* LLMessageDialog.h */,
-				EBA8F86F1FC66D12005A2B84 /* LLMessageDialog.m */,
-			);
-			path = CommonView;
-			sourceTree = "<group>";
-		};
-		EBA8F8701FC66D12005A2B84 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				EBA8F8711FC66D12005A2B84 /* Utils.h */,
-				EBA8F8721FC66D12005A2B84 /* Utils.m */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1928,7 +1701,6 @@
 				EB714BE01F4806190024C929 /* ConstraintMakerRelatable.swift in Sources */,
 				EB77A585204E383A009103B3 /* CustomWebViewController.m in Sources */,
 				EBBBF6E72011CB420011B4DF /* UIImageView+Extension.m in Sources */,
-				EBA8F87D1FC66D12005A2B84 /* LLImageGroupCell.m in Sources */,
 				EB64A7341FCE911B00E8546E /* TYMemoryManager.m in Sources */,
 				EB714BDB1F4806190024C929 /* ConstraintMaker.swift in Sources */,
 				EB6712351F4C4CE500642B72 /* UIColor+RGBA.swift in Sources */,
@@ -1942,25 +1714,17 @@
 				EB714BEC1F4806190024C929 /* LayoutConstraintItem.swift in Sources */,
 				EBE0F7A91F76ABCA006F0AD8 /* SearchView.swift in Sources */,
 				EB5865811F5570ED00598DA0 /* NSBundle+Extension.m in Sources */,
-				EBA8F8891FC66D12005A2B84 /* Utils.m in Sources */,
-				EBA8F8751FC66D12005A2B84 /* UINavigationBar+LLAdd.m in Sources */,
 				EB58658B1F55764200598DA0 /* TYShopViewController.m in Sources */,
 				EB6728881F6129C40089265A /* TYPoprosManager.m in Sources */,
-				EBA8F8841FC66D12005A2B84 /* LLImageBrowserController.m in Sources */,
 				EB714BDE1F4806190024C929 /* ConstraintMakerFinalizable.swift in Sources */,
 				EB32F1431F4AE31C00D766AF /* TYSegmentItem.swift in Sources */,
-				EBA8F8861FC66D12005A2B84 /* LLImageGroupController.m in Sources */,
-				EBA8F8731FC66D12005A2B84 /* ALAsset+LLAdd.m in Sources */,
 				EB0964101F7927FA00417BB3 /* TYTopicCell.swift in Sources */,
-				EBA8F8791FC66D12005A2B84 /* LLImageHandler.m in Sources */,
 				EB714BE41F4806190024C929 /* ConstraintPriorityTarget.swift in Sources */,
-				EBA8F8801FC66D12005A2B84 /* LLBrowserScrollView.m in Sources */,
 				EB25C5F11F6790FF00115214 /* TYRunViewController.m in Sources */,
 				EB714BCE1F4806190024C929 /* ConstraintAttributes.swift in Sources */,
 				EB88417E204538CB00EDFAF5 /* AppManager.m in Sources */,
 				EB714BD81F4806190024C929 /* ConstraintLayoutGuideDSL.swift in Sources */,
 				EB5D392B1F345DE90029085F /* TYSegementIndicatorView.m in Sources */,
-				EBA8F8881FC66D12005A2B84 /* LLMessageDialog.m in Sources */,
 				EB61FD6E2048E8FF006CA65F /* YYFPSLabel.m in Sources */,
 				EB5A2A101F0388D700A19F2C /* TYTabBarController.m in Sources */,
 				EB55658D1F42FEB0005BB5DC /* Bundle(Add).swift in Sources */,
@@ -1972,8 +1736,6 @@
 				EB74A44F1FDE6902009D6579 /* TYMapView.m in Sources */,
 				EB5D39381F3491C30029085F /* TYSegmentViewController.m in Sources */,
 				EBB77D691F677BD700A1C59C /* TYProfileViewModel.m in Sources */,
-				EBA8F87F1FC66D12005A2B84 /* LLBrowserImageView.m in Sources */,
-				EBA8F8741FC66D12005A2B84 /* UIImage+LLAdd.m in Sources */,
 				EB714BE11F4806190024C929 /* ConstraintMultiplierTarget.swift in Sources */,
 				EB01F61B1F36B635008CF290 /* UIColor+RGBA.m in Sources */,
 				EB5EDB291F46964A00B218AF /* TYAttention.swift in Sources */,
@@ -1982,8 +1744,6 @@
 				EB18D3F51F0F890700B44790 /* TYNetWorkingTool.m in Sources */,
 				EB714BD61F4806190024C929 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				EB54324F1F4D7D2B00683AA7 /* TYTestViewController.m in Sources */,
-				EBA8F87C1FC66D12005A2B84 /* LLImageCollectionCell.m in Sources */,
-				EBA8F8831FC66D12005A2B84 /* LLCameraViewController.m in Sources */,
 				EB5432521F4D995900683AA7 /* TYStatusCommentView.m in Sources */,
 				EB18D3F81F0F89C500B44790 /* TYServiceApi.m in Sources */,
 				EB032D261F0251F300F32465 /* ViewController.m in Sources */,
@@ -1998,8 +1758,6 @@
 				EB5D39251F345C490029085F /* TYSegmentView.m in Sources */,
 				EB6A84E62047AB6600DE7224 /* UIScrollView+Refresh.m in Sources */,
 				EB5A99FD1F3C06C30031C497 /* TYHomeUitl.m in Sources */,
-				EBA8F87A1FC66D12005A2B84 /* LLImageSelectHandler.m in Sources */,
-				EBA8F8771FC66D12005A2B84 /* UIView+LLAdd.m in Sources */,
 				EB9FF1E21F47DF2200EEBE11 /* TYTheme.m in Sources */,
 				EB714BD91F4806190024C929 /* ConstraintLayoutSupport.swift in Sources */,
 				EB5E53481F68D8B000E58026 /* TYDBTool+TYRunning.m in Sources */,
@@ -2024,11 +1782,8 @@
 				EB18D3EA1F0F725C00B44790 /* TYVideoController.swift in Sources */,
 				EB714BDC1F4806190024C929 /* ConstraintMakerEditable.swift in Sources */,
 				EB5D392E1F3460750029085F /* UIButton+TYExtension.m in Sources */,
-				EBA8F8821FC66D12005A2B84 /* LLToolbar.m in Sources */,
 				EB8841742045349400EDFAF5 /* AppDelegate.m in Sources */,
 				EB5EDB2D1F46C21E00B218AF /* UIColor.swift in Sources */,
-				EBA8F8761FC66D12005A2B84 /* UIScrollView+LLAdd.m in Sources */,
-				EBA8F8781FC66D12005A2B84 /* LLBaseViewController.m in Sources */,
 				EB55658B1F42EC6B005BB5DC /* TestView.m in Sources */,
 				EB6DE6FA205299B4009290F0 /* PHAsset+Image.m in Sources */,
 				EB884177204534CD00EDFAF5 /* AppDelegate+AppService.m in Sources */,
@@ -2037,9 +1792,7 @@
 				EB6C0A3B20592784004E0CFC /* TYPhotoGroupViewController.m in Sources */,
 				EB6500EA1F4182FE00C0B89A /* TYAttentionViewController.swift in Sources */,
 				EB714BDA1F4806190024C929 /* ConstraintLayoutSupportDSL.swift in Sources */,
-				EBA8F87B1FC66D12005A2B84 /* LLBrowserCollectionCell.m in Sources */,
 				EB6712331F4C0FDE00642B72 /* String(Add).swift in Sources */,
-				EBA8F8871FC66D12005A2B84 /* LLImagePickerController.m in Sources */,
 				EB714BDF1F4806190024C929 /* ConstraintMakerPriortizable.swift in Sources */,
 				EB714BE21F4806190024C929 /* ConstraintOffsetTarget.swift in Sources */,
 				EB714BD31F4806190024C929 /* ConstraintInsets.swift in Sources */,
@@ -2051,7 +1804,6 @@
 				EB714BED1F4806190024C929 /* UILayoutSupport+Extensions.swift in Sources */,
 				EB266F651F3B38AE00949D40 /* TYRecommendViewController.m in Sources */,
 				EB714BD11F4806190024C929 /* ConstraintDescription.swift in Sources */,
-				EBA8F8811FC66D12005A2B84 /* LLSelectButton.m in Sources */,
 				EB74A4521FDE6D26009D6579 /* TYMapViewDelegate.m in Sources */,
 				EB6D11972050E7F300715160 /* TYPhotoCollectionViewController.m in Sources */,
 				EB266F4E1F3B29DA00949D40 /* TYModelTest.m in Sources */,
@@ -2063,8 +1815,6 @@
 				EB18D3E71F0F6B7700B44790 /* TYRCTModule.m in Sources */,
 				EB266F511F3B2B0400949D40 /* TYImageTest.m in Sources */,
 				EB54324C1F4D634E00683AA7 /* UIBarButtonItem+Extension.m in Sources */,
-				EBA8F87E1FC66D12005A2B84 /* LLBlackToolbar.m in Sources */,
-				EBA8F8851FC66D12005A2B84 /* LLImageCollectionController.m in Sources */,
 				EB2C570F2049364500A4E271 /* UIViewController+MobClick.m in Sources */,
 				EB88418320453E0700EDFAF5 /* SandBoxHelper.m in Sources */,
 				EB5EDB2B1F46C15200B218AF /* Config.swift in Sources */,
