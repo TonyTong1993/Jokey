@@ -10,20 +10,6 @@
 
 @interface UIImage (Extentions)
 
+- (UIImage *)imageByApplyingAlpha:(CGFloat) alpha;
 
-
-
-/**
- 添加水印
-
- @param text 水印文字
- @param position  绘制的位置
- */
--(UIImage *)drawText:(NSString *)text position:(CGPoint)position attributes:(NSDictionary *)attributes;
-
-
-
-
-
-- (UIImage *)imageByRoundCornerRadius:(CGFloat)radius;
 @end
