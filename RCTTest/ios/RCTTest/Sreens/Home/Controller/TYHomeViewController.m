@@ -98,10 +98,6 @@
     
     [self renderSegmentViewWithIndex:index];
     
-
-
-
-
 }
 #pragma mark---
 #pragma mark---UIScrollViewDelegate
@@ -129,8 +125,8 @@
 #pragma Private Method
 
 -(void)handleRightItemClick {
-    
-    TYOCTestListViewController *testListVC = [[TYOCTestListViewController alloc] init];
-    [self.navigationController pushViewController:testListVC animated:YES];
+    TYPhotoCollectionViewController *testPhotoAlbum = [[TYPhotoCollectionViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:testPhotoAlbum];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 @end

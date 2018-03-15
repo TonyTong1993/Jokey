@@ -104,6 +104,7 @@
 		EB6C0A342058DDD7004E0CFC /* laboratoryList.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB6C0A332058DDD7004E0CFC /* laboratoryList.plist */; };
 		EB6C0A372058F1DD004E0CFC /* TYOCTestListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C0A362058F1DD004E0CFC /* TYOCTestListViewController.m */; };
 		EB6C0A382058FF88004E0CFC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6C0A2F2058DC83004E0CFC /* background.png */; };
+		EB6C0A3B20592784004E0CFC /* TYPhotoGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C0A3A20592784004E0CFC /* TYPhotoGroupViewController.m */; };
 		EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */; };
 		EB6D11942050E7D300715160 /* TYPhotoAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6D11932050E7D300715160 /* TYPhotoAlbumViewController.m */; };
 		EB6D11972050E7F300715160 /* TYPhotoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6D11962050E7F300715160 /* TYPhotoCollectionViewController.m */; };
@@ -151,6 +152,7 @@
 		EB714BEB1F4806190024C929 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB714BC81F4806190024C929 /* LayoutConstraint.swift */; };
 		EB714BEC1F4806190024C929 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB714BC91F4806190024C929 /* LayoutConstraintItem.swift */; };
 		EB714BED1F4806190024C929 /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB714BCA1F4806190024C929 /* UILayoutSupport+Extensions.swift */; };
+		EB7277F3205A16BE00DD96EC /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EB7277F2205A16A700DD96EC /* timg.jpeg */; };
 		EB729DFB2046941800EE9A44 /* AdPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB729DFA2046941800EE9A44 /* AdPageView.m */; };
 		EB74A44F1FDE6902009D6579 /* TYMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB74A44E1FDE6902009D6579 /* TYMapView.m */; };
 		EB74A4521FDE6D26009D6579 /* TYMapViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB74A4511FDE6D26009D6579 /* TYMapViewDelegate.m */; };
@@ -381,6 +383,8 @@
 		EB6C0A332058DDD7004E0CFC /* laboratoryList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = laboratoryList.plist; sourceTree = "<group>"; };
 		EB6C0A352058F1DD004E0CFC /* TYOCTestListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYOCTestListViewController.h; sourceTree = "<group>"; };
 		EB6C0A362058F1DD004E0CFC /* TYOCTestListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYOCTestListViewController.m; sourceTree = "<group>"; };
+		EB6C0A3920592784004E0CFC /* TYPhotoGroupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPhotoGroupViewController.h; sourceTree = "<group>"; };
+		EB6C0A3A20592784004E0CFC /* TYPhotoGroupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYPhotoGroupViewController.m; sourceTree = "<group>"; };
 		EB6C70D51F1745A700D5B7AD /* UIImage+Extentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extentions.h"; sourceTree = "<group>"; };
 		EB6C70D61F1745A700D5B7AD /* UIImage+Extentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extentions.m"; sourceTree = "<group>"; };
 		EB6D11922050E7D300715160 /* TYPhotoAlbumViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPhotoAlbumViewController.h; sourceTree = "<group>"; };
@@ -437,6 +441,7 @@
 		EB714BC81F4806190024C929 /* LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraint.swift; sourceTree = "<group>"; };
 		EB714BC91F4806190024C929 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraintItem.swift; sourceTree = "<group>"; };
 		EB714BCA1F4806190024C929 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
+		EB7277F2205A16A700DD96EC /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
 		EB729DF92046941800EE9A44 /* AdPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdPageView.h; sourceTree = "<group>"; };
 		EB729DFA2046941800EE9A44 /* AdPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdPageView.m; sourceTree = "<group>"; };
 		EB74A44D1FDE6902009D6579 /* TYMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYMapView.h; sourceTree = "<group>"; };
@@ -1308,6 +1313,7 @@
 		EB6C0A302058DD41004E0CFC /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				EB7277F2205A16A700DD96EC /* timg.jpeg */,
 				EB6C0A332058DDD7004E0CFC /* laboratoryList.plist */,
 			);
 			path = Src;
@@ -1323,6 +1329,8 @@
 				EB6D11932050E7D300715160 /* TYPhotoAlbumViewController.m */,
 				EB6D11952050E7F300715160 /* TYPhotoCollectionViewController.h */,
 				EB6D11962050E7F300715160 /* TYPhotoCollectionViewController.m */,
+				EB6C0A3920592784004E0CFC /* TYPhotoGroupViewController.h */,
+				EB6C0A3A20592784004E0CFC /* TYPhotoGroupViewController.m */,
 			);
 			path = PhotoLibrary;
 			sourceTree = "<group>";
@@ -1787,6 +1795,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB7277F3205A16BE00DD96EC /* timg.jpeg in Resources */,
 				EB6C0A382058FF88004E0CFC /* background.png in Resources */,
 				EB6D11AE20513ADA00715160 /* TYPhotoAlbumViewCell.xib in Resources */,
 				EB6FA841204FE6DD0027923B /* index.html in Resources */,
@@ -2025,6 +2034,7 @@
 				EB884177204534CD00EDFAF5 /* AppDelegate+AppService.m in Sources */,
 				EB6A84ED2047B35F00DE7224 /* UserInfo.m in Sources */,
 				EB714BE81F4806190024C929 /* ConstraintView.swift in Sources */,
+				EB6C0A3B20592784004E0CFC /* TYPhotoGroupViewController.m in Sources */,
 				EB6500EA1F4182FE00C0B89A /* TYAttentionViewController.swift in Sources */,
 				EB714BDA1F4806190024C929 /* ConstraintLayoutSupportDSL.swift in Sources */,
 				EBA8F87B1FC66D12005A2B84 /* LLBrowserCollectionCell.m in Sources */,

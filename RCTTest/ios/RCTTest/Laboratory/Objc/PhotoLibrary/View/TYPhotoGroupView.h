@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol TYPhotoGroupViewDelegate<NSObject>
+-(void)photoGroupViewDissmissActionResponder;
+-(void)photoGroupViewCheckActionResponder;
+@end
+
 @interface TYPhotoGroupItem : NSObject
+
 
 @end
 
@@ -16,7 +22,7 @@
 @property (nonatomic,readonly) NSArray *groupItems;
 @property (nonatomic,readonly) NSInteger currentPage;
 
-
+@property (nonatomic,weak) id<TYPhotoGroupViewDelegate> delegate;
 
 -(instancetype)init;
 @end
