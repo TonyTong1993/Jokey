@@ -7,10 +7,10 @@
 //
 
 #import "TYRunViewController.h"
-#import <MAMapKit/MAMapKit.h>
+//#import <MAMapKit/MAMapKit.h>
 #import "TYDBTool+TYRunning.h"
-@interface TYRunViewController ()<MAMapViewDelegate>
-@property (nonatomic,strong) MAMapView *mapView;
+@interface TYRunViewController ()//<MAMapViewDelegate>
+//@property (nonatomic,strong) MAMapView *mapView;
 @property (nonatomic,strong) NSMutableArray *userTrack;
 @property (nonatomic,strong) NSTimer *timer;
 @end
@@ -28,13 +28,13 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view.
-    _mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:_mapView];
-    ///如果您需要进入地图就显示定位小蓝点，则需要下面两行代码
-    _mapView.showsUserLocation = YES;
-    _mapView.userTrackingMode = MAUserTrackingModeFollow;
-    _mapView.desiredAccuracy = kCLLocationAccuracyBest;
-    _mapView.delegate = self;
+//    _mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
+//    [self.view addSubview:_mapView];
+//    ///如果您需要进入地图就显示定位小蓝点，则需要下面两行代码
+//    _mapView.showsUserLocation = YES;
+//    _mapView.userTrackingMode = MAUserTrackingModeFollow;
+//    _mapView.desiredAccuracy = kCLLocationAccuracyBest;
+//    _mapView.delegate = self;
 //    MAUserLocationRepresentation *r = [[MAUserLocationRepresentation alloc] init];
 //    r.showsAccuracyRing = NO;///精度圈是否显示，默认YES
 //    r.showsHeadingIndicator = NO;///是否显示方向指示(MAUserTrackingModeFollowWithHeading模式开启)。默认为YES
@@ -58,34 +58,34 @@
     NSLog(@"TYRunViewController");
 }
 
--(void)mapInitComplete:(MAMapView *)mapView {
-    [mapView setZoomLevel:19];
-    //开启计时器
-    _timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(handleUserTrackData) userInfo:nil repeats:YES];
-    
-}
--(void)handleUserTrackData {
-    
-     
-    for (MAUserLocation *userLocation in self.userTrack) {
-        @autoreleasepool {
-          
-            [[TYDBTool shareInstance] updateUserTrackLocation:userLocation.location];
-            
-        }
-    }
-    self.userTrack = nil;
-}
-
--(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation {
-    
-    if (updatingLocation) {
-        [self.userTrack addObject:userLocation];
-//        NSLog(@"userLoaction = %@",[userLocation description]);
-        
-    }else {
-//         NSLog(@"updatingLocation= false-userLoaction = %@",[userLocation description]);
-    }
-}
+//-(void)mapInitComplete:(MAMapView *)mapView {
+//    [mapView setZoomLevel:19];
+//    //开启计时器
+//    _timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(handleUserTrackData) userInfo:nil repeats:YES];
+//
+//}
+//-(void)handleUserTrackData {
+//
+//
+//    for (MAUserLocation *userLocation in self.userTrack) {
+//        @autoreleasepool {
+//
+//            [[TYDBTool shareInstance] updateUserTrackLocation:userLocation.location];
+//
+//        }
+//    }
+//    self.userTrack = nil;
+//}
+//
+//-(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation {
+//
+//    if (updatingLocation) {
+//        [self.userTrack addObject:userLocation];
+////        NSLog(@"userLoaction = %@",[userLocation description]);
+//
+//    }else {
+////         NSLog(@"updatingLocation= false-userLoaction = %@",[userLocation description]);
+//    }
+//}
 
 @end

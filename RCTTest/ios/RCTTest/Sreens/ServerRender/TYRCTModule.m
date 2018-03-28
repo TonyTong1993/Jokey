@@ -7,7 +7,7 @@
 //
 
 #import "TYRCTModule.h"
-#import "RCTBridge.h"
+#import <React/RCTBridge.h>
 #import "TYPoprosManager.h"
 @implementation TYRCTModule
 

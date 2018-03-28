@@ -11,7 +11,7 @@
 #import "TYTabBarController.h"
 #import <CocoaSecurity/CocoaSecurity.h>
 #import  <MBProgressHUD/MBProgressHUD.h>
-#import <Hyphenate/Hyphenate.h>
+//#import <Hyphenate/Hyphenate.h>
 #import "MBProgressHUD+MJ.h"
 @interface TYLoginViewController ()<UITextFieldDelegate>
 @property(strong ,nonatomic) UITextField* atextField;
@@ -129,15 +129,15 @@
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:APP_Login_Key];
         
         //登录环信
-        [[EMClient sharedClient] loginWithUsername:@"19011100528"
-                                          password:@"123456"
-                                        completion:^(NSString *aUsername, EMError *aError) {
-                                            if (!aError) {
-                                                NSLog(@"登录成功");
-                                            } else {
-                                                NSLog(@"登录失败");
-                                            }
-                                        }];
+//        [[EMClient sharedClient] loginWithUsername:@"19011100528"
+//                                          password:@"123456"
+//                                        completion:^(NSString *aUsername, EMError *aError) {
+//                                            if (!aError) {
+//                                                NSLog(@"登录成功");
+//                                            } else {
+//                                                NSLog(@"登录失败");
+//                                            }
+//                                        }];
         //切换window视图
         AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
         UIWindow *window = app.window;

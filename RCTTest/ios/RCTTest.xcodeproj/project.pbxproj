@@ -1202,7 +1202,7 @@
 				TargetAttributes = {
 					EB032D1A1F0251F300F32465 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = NVZ53TTCA3;
+						DevelopmentTeam = ZA734EWL3T;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -1328,25 +1328,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest-resources.sh",
-				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
-				"${PODS_ROOT}/EaseUI/EaseUI/resources/EaseUIResource.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				$PODS_CONFIGURATION_BUILD_DIR/MWPhotoBrowser/MWPhotoBrowser.bundle,
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1636,7 +1622,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RCTTest/RCTTest.entitlements;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = NVZ53TTCA3;
+				DEVELOPMENT_TEAM = ZA734EWL3T;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IJK",
@@ -1652,7 +1638,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/React",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MBProgressHUD",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo;
+				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RCTTest/Sreens/Video/RCTTest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1669,7 +1655,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RCTTest/RCTTest.entitlements;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = NVZ53TTCA3;
+				DEVELOPMENT_TEAM = ZA734EWL3T;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IJK",
@@ -1685,7 +1671,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/React",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MBProgressHUD",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo;
+				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RCTTest/Sreens/Video/RCTTest-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -1744,7 +1730,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RCTTest/RCTTest.entitlements;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = NVZ53TTCA3;
+				DEVELOPMENT_TEAM = ZA734EWL3T;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IJK",
@@ -1760,7 +1746,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/React",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MBProgressHUD",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo;
+				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RCTTest/Sreens/Video/RCTTest-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

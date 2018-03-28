@@ -10,7 +10,7 @@
 #define PrefixHeader_pch
 
 #import "TYBaseViewController.h"
-#import <MJExtension/MJExtension.h>
+#import <YYKit.h>
 #import <MJRefresh/MJRefresh.h>
 #import <Masonry/Masonry.h>
 #import <SDWebImage/UIImageView+WebCache.h>

@@ -4,39 +4,37 @@ target 'RCTTest' do
 source 'https://github.com/CocoaPods/Specs.git'
 
    # 但是如果你的结构不同，那你就要根据实际路径修改下面的`:path`
-    pod 'React', :path => '../node_modules/react-native', :subspecs => [
-      'Core',
-      'DevSupport', # 如果RN版本 >= 0.43，则需要加入此行才能开启开发者菜单
-      'RCTText',
-      'RCTImage',
-      'RCTNetwork',
-      'RCTWebSocket',
-      'RCTAnimation',
-      'RCTSettings',
-      'RCTLinkingIOS',
-      'RCTVibration',
-      'RCTActionSheet',
-      # 这个模块是用于调试功能的
-    ]
-    pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
-    # 如果你的RN版本 >= 0.42.0，请加入下面这行
-    pod "Yoga", :path => "../node_modules/react-native/ReactCommon/yoga"
-    pod 'CodePush', :path => '../node_modules/react-native-code-push'
-    pod "MJExtension"
-    pod "MJRefresh"
-    pod "AFNetworking"
-    pod "SDWebImage"
-    pod 'IconFont'
-    pod "RTRootNavigationController"
-    pod "Masonry"
-    pod "SDCycleScrollView"
-    pod "AMap3DMap"
-    pod "AMapLocation"
-    pod "FMDB"
-    pod 'PNChart'
-    pod 'CocoaSecurity'
-    pod 'MBProgressHUD'
-    pod 'JPush'
-    pod 'Hyphenate'
-    pod 'EaseUI', :git => 'https://github.com/easemob/easeui-ios-hyphenate-cocoapods.git'
+  pod 'React', :path => '../node_modules/react-native', :subspecs => [
+    'Core',
+    'CxxBridge', # Include this for RN >= 0.47
+    'DevSupport', # Include this to enable In-App Devmenu if RN >= 0.43
+    'RCTText',
+    'RCTNetwork',
+    'RCTWebSocket', # needed for debugging
+    # Add any other subspecs you want to use in your project
+  ]
+  # Explicitly include Yoga if you are using RN >= 0.42.0
+  pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
+
+  # Third party deps podspec link
+  pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+  pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
+  pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+  pod 'YYKit'
+  pod "MJRefresh"
+  pod "AFNetworking"
+  pod "SDWebImage"
+  pod 'IconFont'
+  pod "RTRootNavigationController"
+  pod "Masonry"
+  pod "SDCycleScrollView"
+#  pod "AMap3DMap"
+#  pod "AMapLocation"
+  pod "FMDB"
+#  pod 'PNChart'
+  pod 'CocoaSecurity'
+  pod 'MBProgressHUD'
+#  pod 'JPush'
+#  pod 'Hyphenate'
+#  pod 'EaseUI', :git => 'https://github.com/easemob/easeui-ios-hyphenate-cocoapods.git'
 end

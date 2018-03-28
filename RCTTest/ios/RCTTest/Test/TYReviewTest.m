@@ -9,7 +9,8 @@
 #import "TYReviewTest.h"
 
 @implementation TYReviewTest
-+(NSDictionary *)mj_objectClassInArray {
-    return @{@"imgs":[TYImageTest class]};
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"imgs" : @"TYImageTest"};
 }
+
 @end

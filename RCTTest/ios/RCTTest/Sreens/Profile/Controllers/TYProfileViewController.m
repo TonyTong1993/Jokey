@@ -12,8 +12,8 @@
 #import "TYShopViewController.h"
 #import "TYProfileViewModel.h"
 #import "TYRunViewController.h"
-#import <CodePush/CodePush.h>
-#import <EaseUI/EaseMessageViewController.h>
+//#import <CodePush/CodePush.h>
+//#import <EaseUI/EaseMessageViewController.h>
 @interface TYProfileViewController ()
 
 @end
@@ -25,7 +25,7 @@
     [self setUpTableView];
     //添加测试数据
     NSDictionary *jsonDict = [NSBundle loadJsonFromBundle:@"Profile"];
-    self.dataSource = [TYProfileViewModel mj_objectArrayWithKeyValuesArray:jsonDict[@"data"]];
+    self.dataSource = [NSArray modelArrayWithClass:[TYProfileViewModel class] json:jsonDict];//[TYProfileViewModel mj_objectArrayWithKeyValuesArray:jsonDict[@"data"]];
 }
 
 -(void)setUpTableView {
@@ -82,8 +82,8 @@
     }else if ([model.className isEqualToString:@"TYRunViewController"]) {
         VC = [[TYRunViewController alloc] init];
     }else {
-        EaseMessageViewController *chatController = [[EaseMessageViewController alloc] initWithConversationChatter:@"19011100528" conversationType:EMConversationTypeChat];
-       VC = chatController;
+//        EaseMessageViewController *chatController = [[EaseMessageViewController alloc] initWithConversationChatter:@"19011100528" conversationType:EMConversationTypeChat];
+//       VC = chatController;
     }
     [self.navigationController pushViewController:VC animated:YES];
     
