@@ -1518,7 +1518,7 @@
 				TargetAttributes = {
 					EB032D1A1F0251F300F32465 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = NVZ53TTCA3;
+						DevelopmentTeam = ZA734EWL3T;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -1657,7 +1657,19 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1964,7 +1976,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RCTTest/RCTTest.entitlements;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = NVZ53TTCA3;
+				DEVELOPMENT_TEAM = ZA734EWL3T;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RCTTest/PrefixHeader.pch;
 				INFOPLIST_FILE = RCTTest/Info.plist;
@@ -1975,7 +1987,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/React",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MBProgressHUD",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo;
+				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PURE_UI_DEBUG = "$(APP_PURE_UI)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RCTTest/Sreens/Video/RCTTest-Bridging-Header.h";
@@ -1993,7 +2005,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RCTTest/RCTTest.entitlements;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = NVZ53TTCA3;
+				DEVELOPMENT_TEAM = ZA734EWL3T;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RCTTest/PrefixHeader.pch;
 				INFOPLIST_FILE = RCTTest/Info.plist;
@@ -2004,7 +2016,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/React",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MBProgressHUD",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo;
+				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PURE_UI_DEBUG = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RCTTest/Sreens/Video/RCTTest-Bridging-Header.h";
@@ -2136,7 +2148,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RCTTest/RCTTest.entitlements;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = NVZ53TTCA3;
+				DEVELOPMENT_TEAM = ZA734EWL3T;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RCTTest/PrefixHeader.pch;
 				INFOPLIST_FILE = RCTTest/Info.plist;
@@ -2147,7 +2159,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/React",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MBProgressHUD",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo;
+				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PURE_UI_DEBUG = "$(APP_PURE_UI)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RCTTest/Sreens/Video/RCTTest-Bridging-Header.h";

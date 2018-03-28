@@ -6,22 +6,16 @@
   "scripts": {
     "start": "node ./node_modules/react-native/local-cli/cli.js start"
   },
-  "author": "tony",
-  "license": "ISC",
   "dependencies": {
-    "md5": "^2.2.1",
-    "react": "^16.0.0-alpha.6",
-    "react-native": "^0.43.4",
-    "react-native-tab-navigator": "^0.3.4",
-    "react-redux": "^5.0.6",
+    "react": "^16.2.0",
+    "react-native": "^0.54.3",
+    "react-native-swiper": "^1.5.13",
+    "react-native-vector-icons": "^4.5.0",
+    "react-navigation": "^1.5.8",
+    "react-redux": "^5.0.7",
     "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0"
-  },
-  "devDependencies": {
-    "react-native-swiper": "^1.5.10",
-    "react-native-vector-icons": "^4.2.0",
-    "react-navigation": "^1.0.0-beta.11",
     "redux-logger": "^3.0.6",
-    "redux-promise": "^0.5.3"
+    "redux-promise": "^0.5.3",
+    "redux-thunk": "^2.2.0"
   }
 }
