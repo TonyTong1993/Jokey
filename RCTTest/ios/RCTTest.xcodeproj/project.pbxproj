@@ -525,6 +525,41 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AF6D6B62209AC14A0001A40D /* Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Algorithm;
+			sourceTree = "<group>";
+		};
+		AF6D6B63209AC14A0001A40D /* NetWorking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetWorking;
+			sourceTree = "<group>";
+		};
+		AF6D6B64209AC14A0001A40D /* Preformance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Preformance;
+			sourceTree = "<group>";
+		};
+		AF6D6B65209AC14A0001A40D /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		AF6D6B66209AC1E60001A40D /* Build */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Build;
+			sourceTree = "<group>";
+		};
 		C99CA68C2F5497E7F1256D9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -573,8 +608,8 @@
 		EB032D1D1F0251F300F32465 /* RCTTest */ = {
 			isa = PBXGroup;
 			children = (
+				AF6D6B66209AC1E60001A40D /* Build */,
 				EB6C0A302058DD41004E0CFC /* Src */,
-				EB729DFC2046B37100EE9A44 /* Bundle */,
 				EB88417F20453DDC00EDFAF5 /* Utils */,
 				EB88417B204538A800EDFAF5 /* Manager */,
 				EB8841712045345800EDFAF5 /* AppDelegate */,
@@ -1005,7 +1040,6 @@
 		EB64A72A1FCE8C8600E8546E /* Laboratory */ = {
 			isa = PBXGroup;
 			children = (
-				EB64A72C1FCE8CFA00E8546E /* Swift */,
 				EB64A72B1FCE8CD600E8546E /* Objc */,
 			);
 			path = Laboratory;
@@ -1014,24 +1048,17 @@
 		EB64A72B1FCE8CD600E8546E /* Objc */ = {
 			isa = PBXGroup;
 			children = (
+				AF6D6B62209AC14A0001A40D /* Algorithm */,
+				AF6D6B65209AC14A0001A40D /* Animation */,
+				AF6D6B63209AC14A0001A40D /* NetWorking */,
+				AF6D6B64209AC14A0001A40D /* Preformance */,
 				EB6D11912050E18D00715160 /* PhotoLibrary */,
 				EB6A84EE2048080900DE7224 /* WebView */,
-				EB64A7311FCE906A00E8546E /* Animation */,
-				EB64A7301FCE904100E8546E /* Performance */,
-				EB64A72F1FCE900800E8546E /* NetWorking */,
-				EB64A72E1FCE8FFF00E8546E /* Algorithm */,
 				EB64A72D1FCE8D2B00E8546E /* Memory management */,
 				EB6C0A352058F1DD004E0CFC /* TYOCTestListViewController.h */,
 				EB6C0A362058F1DD004E0CFC /* TYOCTestListViewController.m */,
 			);
 			path = Objc;
-			sourceTree = "<group>";
-		};
-		EB64A72C1FCE8CFA00E8546E /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Swift;
 			sourceTree = "<group>";
 		};
 		EB64A72D1FCE8D2B00E8546E /* Memory management */ = {
@@ -1041,34 +1068,6 @@
 				EB64A7331FCE911B00E8546E /* TYMemoryManager.m */,
 			);
 			path = "Memory management";
-			sourceTree = "<group>";
-		};
-		EB64A72E1FCE8FFF00E8546E /* Algorithm */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Algorithm;
-			sourceTree = "<group>";
-		};
-		EB64A72F1FCE900800E8546E /* NetWorking */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NetWorking;
-			sourceTree = "<group>";
-		};
-		EB64A7301FCE904100E8546E /* Performance */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Performance;
-			sourceTree = "<group>";
-		};
-		EB64A7311FCE906A00E8546E /* Animation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Animation;
 			sourceTree = "<group>";
 		};
 		EB6500DF1F4180CB00C0B89A /* Message */ = {
@@ -1355,13 +1354,6 @@
 				EB729DFA2046941800EE9A44 /* AdPageView.m */,
 			);
 			path = AdPage;
-			sourceTree = "<group>";
-		};
-		EB729DFC2046B37100EE9A44 /* Bundle */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Bundle;
 			sourceTree = "<group>";
 		};
 		EB7C64411FD63F720018AC3A /* RCTTestTests */ = {
