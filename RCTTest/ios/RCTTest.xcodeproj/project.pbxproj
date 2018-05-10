@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF03854A20A41A4E00746CCD /* TYKalmanFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF03854920A41A4E00746CCD /* TYKalmanFilter.m */; };
 		AFB50D1520A2EB4E006302C3 /* TYRunningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB50D1420A2EB4E006302C3 /* TYRunningViewController.m */; };
 		EB01F61B1F36B635008CF290 /* UIColor+RGBA.m in Sources */ = {isa = PBXBuildFile; fileRef = EB01F61A1F36B635008CF290 /* UIColor+RGBA.m */; };
 		EB032D201F0251F300F32465 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB032D1F1F0251F300F32465 /* main.m */; };
@@ -197,6 +198,8 @@
 
 /* Begin PBXFileReference section */
 		4685E6D3869C8CFF7EF29817 /* libPods-RCTTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RCTTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF03854820A41A4E00746CCD /* TYKalmanFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYKalmanFilter.h; sourceTree = "<group>"; };
+		AF03854920A41A4E00746CCD /* TYKalmanFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYKalmanFilter.m; sourceTree = "<group>"; };
 		AFB50D1320A2EB4E006302C3 /* TYRunningViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYRunningViewController.h; sourceTree = "<group>"; };
 		AFB50D1420A2EB4E006302C3 /* TYRunningViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYRunningViewController.m; sourceTree = "<group>"; };
 		D502818BA0F8EC5DDC48C475 /* Pods-RCTTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -568,6 +571,8 @@
 			children = (
 				AFB50D1320A2EB4E006302C3 /* TYRunningViewController.h */,
 				AFB50D1420A2EB4E006302C3 /* TYRunningViewController.m */,
+				AF03854820A41A4E00746CCD /* TYKalmanFilter.h */,
+				AF03854920A41A4E00746CCD /* TYKalmanFilter.m */,
 			);
 			path = RunningTrace;
 			sourceTree = "<group>";
@@ -1827,6 +1832,7 @@
 				EBBBF6E42011A37D0011B4DF /* UIColor+Extension.m in Sources */,
 				EB5D39281F345D0A0029085F /* TYCalculateFrameTool.m in Sources */,
 				EB18D3E71F0F6B7700B44790 /* TYRCTModule.m in Sources */,
+				AF03854A20A41A4E00746CCD /* TYKalmanFilter.m in Sources */,
 				EB266F511F3B2B0400949D40 /* TYImageTest.m in Sources */,
 				EB54324C1F4D634E00683AA7 /* UIBarButtonItem+Extension.m in Sources */,
 				EB2C570F2049364500A4E271 /* UIViewController+MobClick.m in Sources */,
