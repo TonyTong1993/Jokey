@@ -12,6 +12,7 @@
 #import "TYShopViewController.h"
 #import "TYProfileViewModel.h"
 #import "TYRunViewController.h"
+
 @interface TYProfileViewController ()
 {
     NSTimeInterval time;
@@ -27,12 +28,16 @@
     NSDictionary *jsonDict = [NSBundle loadJsonFromBundle:@"Profile"];
     self.dataSource = [TYProfileViewModel mj_objectArrayWithKeyValuesArray:jsonDict[@"data"]];
     
-  NSTimer *timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(scheduledTimer) userInfo:nil repeats:false];
-  [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
-    time = 0;
-    [timer fire];
+//  NSTimer *timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(scheduledTimer) userInfo:nil repeats:false];
+//  [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+//    time = 0;
+//    [timer fire];
+    
+ 
 
 }
+
+
 
 -(void)scheduledTimer {
   
@@ -92,8 +97,10 @@
         TYShopViewController *vc = [[TYShopViewController alloc] init];
         vc.view = rootView;
         VC = vc;
-    }else if ([model.className isEqualToString:@"TYRunViewController"]) {
-        VC = [[TYRunViewController alloc] init];
+    }else if ([model.className isEqualToString:@"TYRunningViewController"]) {
+        
+        VC = [[NSClassFromString(model.className) alloc] init];
+        VC.title = @"运动";
     }else {
         VC = [[UIViewController alloc] init];
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AFB50D1520A2EB4E006302C3 /* TYRunningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB50D1420A2EB4E006302C3 /* TYRunningViewController.m */; };
 		EB01F61B1F36B635008CF290 /* UIColor+RGBA.m in Sources */ = {isa = PBXBuildFile; fileRef = EB01F61A1F36B635008CF290 /* UIColor+RGBA.m */; };
 		EB032D201F0251F300F32465 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB032D1F1F0251F300F32465 /* main.m */; };
 		EB032D261F0251F300F32465 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB032D251F0251F300F32465 /* ViewController.m */; };
@@ -196,6 +197,8 @@
 
 /* Begin PBXFileReference section */
 		4685E6D3869C8CFF7EF29817 /* libPods-RCTTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RCTTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFB50D1320A2EB4E006302C3 /* TYRunningViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYRunningViewController.h; sourceTree = "<group>"; };
+		AFB50D1420A2EB4E006302C3 /* TYRunningViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYRunningViewController.m; sourceTree = "<group>"; };
 		D502818BA0F8EC5DDC48C475 /* Pods-RCTTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.debug.xcconfig"; sourceTree = "<group>"; };
 		DC2E37739B2C59D2F6B877A9 /* Pods-RCTTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.release.xcconfig"; sourceTree = "<group>"; };
 		DCEF8753A3129DD7F8B4D947 /* Pods-RCTTest.pureui.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.pureui.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.pureui.xcconfig"; sourceTree = "<group>"; };
@@ -558,6 +561,15 @@
 			children = (
 			);
 			path = Build;
+			sourceTree = "<group>";
+		};
+		AFB50D1220A2EAFD006302C3 /* RunningTrace */ = {
+			isa = PBXGroup;
+			children = (
+				AFB50D1320A2EB4E006302C3 /* TYRunningViewController.h */,
+				AFB50D1420A2EB4E006302C3 /* TYRunningViewController.m */,
+			);
+			path = RunningTrace;
 			sourceTree = "<group>";
 		};
 		C99CA68C2F5497E7F1256D9E /* Frameworks */ = {
@@ -1048,6 +1060,7 @@
 		EB64A72B1FCE8CD600E8546E /* Objc */ = {
 			isa = PBXGroup;
 			children = (
+				AFB50D1220A2EAFD006302C3 /* RunningTrace */,
 				AF6D6B62209AC14A0001A40D /* Algorithm */,
 				AF6D6B65209AC14A0001A40D /* Animation */,
 				AF6D6B63209AC14A0001A40D /* NetWorking */,
@@ -1724,6 +1737,7 @@
 				EB714BCE1F4806190024C929 /* ConstraintAttributes.swift in Sources */,
 				EB88417E204538CB00EDFAF5 /* AppManager.m in Sources */,
 				EB714BD81F4806190024C929 /* ConstraintLayoutGuideDSL.swift in Sources */,
+				AFB50D1520A2EB4E006302C3 /* TYRunningViewController.m in Sources */,
 				EB5D392B1F345DE90029085F /* TYSegementIndicatorView.m in Sources */,
 				EB61FD6E2048E8FF006CA65F /* YYFPSLabel.m in Sources */,
 				EB5A2A101F0388D700A19F2C /* TYTabBarController.m in Sources */,
