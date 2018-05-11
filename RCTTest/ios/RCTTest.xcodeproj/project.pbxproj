@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		AF03854A20A41A4E00746CCD /* TYKalmanFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF03854920A41A4E00746CCD /* TYKalmanFilter.m */; };
+		AF5D396220A5988C00B6B1BF /* trace.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF5D396120A5988B00B6B1BF /* trace.txt */; };
+		AF5D396A20A59CE800B6B1BF /* CoordTrans.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5D396520A59CE700B6B1BF /* CoordTrans.m */; };
+		AF5D396B20A59CE800B6B1BF /* GaoDeCoorTrans.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5D396720A59CE700B6B1BF /* GaoDeCoorTrans.m */; };
+		AF5D396C20A59CE800B6B1BF /* MercatorTrans.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5D396920A59CE700B6B1BF /* MercatorTrans.m */; };
 		AFB50D1520A2EB4E006302C3 /* TYRunningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB50D1420A2EB4E006302C3 /* TYRunningViewController.m */; };
 		EB01F61B1F36B635008CF290 /* UIColor+RGBA.m in Sources */ = {isa = PBXBuildFile; fileRef = EB01F61A1F36B635008CF290 /* UIColor+RGBA.m */; };
 		EB032D201F0251F300F32465 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB032D1F1F0251F300F32465 /* main.m */; };
@@ -200,6 +204,13 @@
 		4685E6D3869C8CFF7EF29817 /* libPods-RCTTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RCTTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF03854820A41A4E00746CCD /* TYKalmanFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYKalmanFilter.h; sourceTree = "<group>"; };
 		AF03854920A41A4E00746CCD /* TYKalmanFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYKalmanFilter.m; sourceTree = "<group>"; };
+		AF5D396120A5988B00B6B1BF /* trace.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trace.txt; sourceTree = "<group>"; };
+		AF5D396420A59CE700B6B1BF /* CoordTrans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordTrans.h; sourceTree = "<group>"; };
+		AF5D396520A59CE700B6B1BF /* CoordTrans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordTrans.m; sourceTree = "<group>"; };
+		AF5D396620A59CE700B6B1BF /* GaoDeCoorTrans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaoDeCoorTrans.h; sourceTree = "<group>"; };
+		AF5D396720A59CE700B6B1BF /* GaoDeCoorTrans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaoDeCoorTrans.m; sourceTree = "<group>"; };
+		AF5D396820A59CE700B6B1BF /* MercatorTrans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MercatorTrans.h; sourceTree = "<group>"; };
+		AF5D396920A59CE700B6B1BF /* MercatorTrans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MercatorTrans.m; sourceTree = "<group>"; };
 		AFB50D1320A2EB4E006302C3 /* TYRunningViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYRunningViewController.h; sourceTree = "<group>"; };
 		AFB50D1420A2EB4E006302C3 /* TYRunningViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYRunningViewController.m; sourceTree = "<group>"; };
 		D502818BA0F8EC5DDC48C475 /* Pods-RCTTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -531,6 +542,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AF5D396320A59CE700B6B1BF /* CoordTrans */ = {
+			isa = PBXGroup;
+			children = (
+				AF5D396420A59CE700B6B1BF /* CoordTrans.h */,
+				AF5D396520A59CE700B6B1BF /* CoordTrans.m */,
+				AF5D396620A59CE700B6B1BF /* GaoDeCoorTrans.h */,
+				AF5D396720A59CE700B6B1BF /* GaoDeCoorTrans.m */,
+				AF5D396820A59CE700B6B1BF /* MercatorTrans.h */,
+				AF5D396920A59CE700B6B1BF /* MercatorTrans.m */,
+			);
+			path = CoordTrans;
+			sourceTree = "<group>";
+		};
 		AF6D6B62209AC14A0001A40D /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
@@ -569,6 +593,7 @@
 		AFB50D1220A2EAFD006302C3 /* RunningTrace */ = {
 			isa = PBXGroup;
 			children = (
+				AF5D396320A59CE700B6B1BF /* CoordTrans */,
 				AFB50D1320A2EB4E006302C3 /* TYRunningViewController.h */,
 				AFB50D1420A2EB4E006302C3 /* TYRunningViewController.m */,
 				AF03854820A41A4E00746CCD /* TYKalmanFilter.h */,
@@ -1254,6 +1279,7 @@
 		EB6C0A302058DD41004E0CFC /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				AF5D396120A5988B00B6B1BF /* trace.txt */,
 				EB6C0A332058DDD7004E0CFC /* laboratoryList.plist */,
 			);
 			path = Src;
@@ -1596,6 +1622,7 @@
 				EB58657E1F55706300598DA0 /* Profile.json in Resources */,
 				EB26737B2010720A008FA02C /* pingfang.ttf in Resources */,
 				EB032D291F0251F300F32465 /* Main.storyboard in Resources */,
+				AF5D396220A5988C00B6B1BF /* trace.txt in Resources */,
 				EB6C0A342058DDD7004E0CFC /* laboratoryList.plist in Resources */,
 				EB4347601F3B51D100EC7AE9 /* TYStatusViewCell.xib in Resources */,
 				EB5A9A041F3C64C30031C497 /* TestView.xib in Resources */,
@@ -1733,6 +1760,7 @@
 				EBE0F7A91F76ABCA006F0AD8 /* SearchView.swift in Sources */,
 				EB5865811F5570ED00598DA0 /* NSBundle+Extension.m in Sources */,
 				EB58658B1F55764200598DA0 /* TYShopViewController.m in Sources */,
+				AF5D396A20A59CE800B6B1BF /* CoordTrans.m in Sources */,
 				EB6728881F6129C40089265A /* TYPoprosManager.m in Sources */,
 				EB714BDE1F4806190024C929 /* ConstraintMakerFinalizable.swift in Sources */,
 				EB32F1431F4AE31C00D766AF /* TYSegmentItem.swift in Sources */,
@@ -1771,6 +1799,7 @@
 				EB6C70D71F1745A700D5B7AD /* UIImage+Extentions.m in Sources */,
 				EB43475F1F3B51D100EC7AE9 /* TYStatusViewCell.m in Sources */,
 				EBE0F7AC1F773C83006F0AD8 /* TYSegmentScrollVIew.swift in Sources */,
+				AF5D396C20A59CE800B6B1BF /* MercatorTrans.m in Sources */,
 				EB6C0A372058F1DD004E0CFC /* TYOCTestListViewController.m in Sources */,
 				EB88417A204534EC00EDFAF5 /* AppDelegate+PushService.m in Sources */,
 				EB6D11A8205133FE00715160 /* PHAssetCollection+Poster.m in Sources */,
@@ -1838,6 +1867,7 @@
 				EB2C570F2049364500A4E271 /* UIViewController+MobClick.m in Sources */,
 				EB88418320453E0700EDFAF5 /* SandBoxHelper.m in Sources */,
 				EB5EDB2B1F46C15200B218AF /* Config.swift in Sources */,
+				AF5D396B20A59CE800B6B1BF /* GaoDeCoorTrans.m in Sources */,
 				EB714BCD1F4806190024C929 /* Constraint.swift in Sources */,
 				EB6C0A2D2058DA93004E0CFC /* TYBlurEffectViewController.m in Sources */,
 				EB714BEB1F4806190024C929 /* LayoutConstraint.swift in Sources */,

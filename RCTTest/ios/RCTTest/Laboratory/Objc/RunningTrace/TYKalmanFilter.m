@@ -7,6 +7,11 @@
 //
 
 #import "TYKalmanFilter.h"
+
+@implementation KFCoordinate
+
+@end
+
 @interface TYKalmanFilter(){
     double variance;
 }

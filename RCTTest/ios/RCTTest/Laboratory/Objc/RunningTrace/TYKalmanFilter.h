@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+@interface KFCoordinate : NSObject
+@property (nonatomic,assign) double latitude;
+@property (nonatomic,assign) double longitude;
+@end
 @interface TYKalmanFilter : NSObject
 - (NSArray <CLLocation *>*)kalmanFilter:(NSArray <CLLocation *>*)locations;
 
