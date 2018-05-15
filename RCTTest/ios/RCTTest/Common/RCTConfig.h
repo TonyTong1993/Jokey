@@ -17,7 +17,7 @@
  *  高德地图的key
  *
  */
-#define AMapKey @"257cb6e3f0d8cc2e463a4cafefeceb34"
+#define AMapKey @"23ac2370f676fa5336d833ff9ff266d2"
 /**
  *  JSPUSH的key
  *

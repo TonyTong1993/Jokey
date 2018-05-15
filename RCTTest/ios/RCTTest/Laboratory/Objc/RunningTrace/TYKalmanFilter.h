@@ -9,10 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 @interface KFCoordinate : NSObject
+@property (nonatomic,strong) NSDate *timeStamp;
+@property (nonatomic,assign) double speed;
+@property (nonatomic,assign) double course;
+@property (nonatomic,assign) double accuracy;
 @property (nonatomic,assign) double latitude;
 @property (nonatomic,assign) double longitude;
 @end
 @interface TYKalmanFilter : NSObject
-- (NSArray <CLLocation *>*)kalmanFilter:(NSArray <CLLocation *>*)locations;
+- (NSArray <KFCoordinate *>*)kalmanFilter:(NSArray <KFCoordinate *>*)locations;
 
 @end

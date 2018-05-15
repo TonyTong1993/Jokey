@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		AF03854A20A41A4E00746CCD /* TYKalmanFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF03854920A41A4E00746CCD /* TYKalmanFilter.m */; };
-		AF5D396220A5988C00B6B1BF /* trace.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF5D396120A5988B00B6B1BF /* trace.txt */; };
+		AF2684EA20A98FB3003814A4 /* trace.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF2684E920A98FB3003814A4 /* trace.txt */; };
+		AF5A1E4C20AA6EB30024DBE5 /* KalmanFiter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5A1E4B20AA6EB30024DBE5 /* KalmanFiter.m */; };
+		AF5A1E4F20AAAFAE0024DBE5 /* SavitzkyGolay.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5A1E4E20AAAFAE0024DBE5 /* SavitzkyGolay.m */; };
+		AF5A1E5120AAD2B80024DBE5 /* 01.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF5A1E5020AAD2B80024DBE5 /* 01.txt */; };
 		AF5D396A20A59CE800B6B1BF /* CoordTrans.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5D396520A59CE700B6B1BF /* CoordTrans.m */; };
 		AF5D396B20A59CE800B6B1BF /* GaoDeCoorTrans.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5D396720A59CE700B6B1BF /* GaoDeCoorTrans.m */; };
 		AF5D396C20A59CE800B6B1BF /* MercatorTrans.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5D396920A59CE700B6B1BF /* MercatorTrans.m */; };
@@ -204,7 +207,12 @@
 		4685E6D3869C8CFF7EF29817 /* libPods-RCTTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RCTTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF03854820A41A4E00746CCD /* TYKalmanFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYKalmanFilter.h; sourceTree = "<group>"; };
 		AF03854920A41A4E00746CCD /* TYKalmanFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYKalmanFilter.m; sourceTree = "<group>"; };
-		AF5D396120A5988B00B6B1BF /* trace.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trace.txt; sourceTree = "<group>"; };
+		AF2684E920A98FB3003814A4 /* trace.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = trace.txt; path = "../../../../../技术演进/GPSEngineTest/GPSEngineTest/trace.txt"; sourceTree = "<group>"; };
+		AF5A1E4A20AA6EB30024DBE5 /* KalmanFiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalmanFiter.h; sourceTree = "<group>"; };
+		AF5A1E4B20AA6EB30024DBE5 /* KalmanFiter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalmanFiter.m; sourceTree = "<group>"; };
+		AF5A1E4D20AAAFAE0024DBE5 /* SavitzkyGolay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SavitzkyGolay.h; sourceTree = "<group>"; };
+		AF5A1E4E20AAAFAE0024DBE5 /* SavitzkyGolay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SavitzkyGolay.m; sourceTree = "<group>"; };
+		AF5A1E5020AAD2B80024DBE5 /* 01.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 01.txt; sourceTree = "<group>"; };
 		AF5D396420A59CE700B6B1BF /* CoordTrans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordTrans.h; sourceTree = "<group>"; };
 		AF5D396520A59CE700B6B1BF /* CoordTrans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordTrans.m; sourceTree = "<group>"; };
 		AF5D396620A59CE700B6B1BF /* GaoDeCoorTrans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaoDeCoorTrans.h; sourceTree = "<group>"; };
@@ -598,6 +606,10 @@
 				AFB50D1420A2EB4E006302C3 /* TYRunningViewController.m */,
 				AF03854820A41A4E00746CCD /* TYKalmanFilter.h */,
 				AF03854920A41A4E00746CCD /* TYKalmanFilter.m */,
+				AF5A1E4A20AA6EB30024DBE5 /* KalmanFiter.h */,
+				AF5A1E4B20AA6EB30024DBE5 /* KalmanFiter.m */,
+				AF5A1E4D20AAAFAE0024DBE5 /* SavitzkyGolay.h */,
+				AF5A1E4E20AAAFAE0024DBE5 /* SavitzkyGolay.m */,
 			);
 			path = RunningTrace;
 			sourceTree = "<group>";
@@ -1279,7 +1291,8 @@
 		EB6C0A302058DD41004E0CFC /* Src */ = {
 			isa = PBXGroup;
 			children = (
-				AF5D396120A5988B00B6B1BF /* trace.txt */,
+				AF5A1E5020AAD2B80024DBE5 /* 01.txt */,
+				AF2684E920A98FB3003814A4 /* trace.txt */,
 				EB6C0A332058DDD7004E0CFC /* laboratoryList.plist */,
 			);
 			path = Src;
@@ -1609,10 +1622,12 @@
 				EB777A461F7BC7E5000461B3 /* main.jsbundle in Resources */,
 				EB6DE6F7205297BC009290F0 /* TYPhotoCollectionViewCell.xib in Resources */,
 				EB777A401F7BB187000461B3 /* icon_certification@3x.png in Resources */,
+				AF2684EA20A98FB3003814A4 /* trace.txt in Resources */,
 				EB777A3F1F7BB17F000461B3 /* icon_certification@2x.png in Resources */,
 				EB777A3E1F7BB161000461B3 /* icon_certification.png in Resources */,
 				EB266F5C1F3B317500949D40 /* recommend.json in Resources */,
 				EB3299E21F1385B60034D095 /* Ionicons.ttf in Resources */,
+				AF5A1E5120AAD2B80024DBE5 /* 01.txt in Resources */,
 				EB714BCB1F4806190024C929 /* LICENSE in Resources */,
 				EB032D2E1F0251F300F32465 /* LaunchScreen.storyboard in Resources */,
 				EB0964111F7927FA00417BB3 /* TYTopicCell.xib in Resources */,
@@ -1622,7 +1637,6 @@
 				EB58657E1F55706300598DA0 /* Profile.json in Resources */,
 				EB26737B2010720A008FA02C /* pingfang.ttf in Resources */,
 				EB032D291F0251F300F32465 /* Main.storyboard in Resources */,
-				AF5D396220A5988C00B6B1BF /* trace.txt in Resources */,
 				EB6C0A342058DDD7004E0CFC /* laboratoryList.plist in Resources */,
 				EB4347601F3B51D100EC7AE9 /* TYStatusViewCell.xib in Resources */,
 				EB5A9A041F3C64C30031C497 /* TestView.xib in Resources */,
@@ -1789,6 +1803,7 @@
 				EB714BD41F4806190024C929 /* ConstraintInsetTarget.swift in Sources */,
 				EB6D11A120510BC600715160 /* TYPhotoHandler.m in Sources */,
 				EB18D3F51F0F890700B44790 /* TYNetWorkingTool.m in Sources */,
+				AF5A1E4F20AAAFAE0024DBE5 /* SavitzkyGolay.m in Sources */,
 				EB714BD61F4806190024C929 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				EB54324F1F4D7D2B00683AA7 /* TYTestViewController.m in Sources */,
 				EB5432521F4D995900683AA7 /* TYStatusCommentView.m in Sources */,
@@ -1803,6 +1818,7 @@
 				EB6C0A372058F1DD004E0CFC /* TYOCTestListViewController.m in Sources */,
 				EB88417A204534EC00EDFAF5 /* AppDelegate+PushService.m in Sources */,
 				EB6D11A8205133FE00715160 /* PHAssetCollection+Poster.m in Sources */,
+				AF5A1E4C20AA6EB30024DBE5 /* KalmanFiter.m in Sources */,
 				EB5D39251F345C490029085F /* TYSegmentView.m in Sources */,
 				EB6A84E62047AB6600DE7224 /* UIScrollView+Refresh.m in Sources */,
 				EB5A99FD1F3C06C30031C497 /* TYHomeUitl.m in Sources */,

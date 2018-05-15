@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class KFCoordinate;
 @interface TYRunningViewController : UIViewController
 
 @end
+
+@interface TYRunningViewController (RecordTrace)
+-(void)initCLLocationManager;
+-(void)startTimer;
+@end
+
+@interface TYRunningViewController (OptimizedMethod)
+-(void)correctTraceWithCoordinates:(NSArray <KFCoordinate *>*)coordinates;
+@end
+
