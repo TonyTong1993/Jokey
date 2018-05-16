@@ -23,17 +23,6 @@
     self = [super init];
     if (self) {
         self.present = [[TYPhotoPresent alloc] initWithPresenter:self];
-        __weak typeof(self) weakSelf = self;
-        [self.present requestAuthorization:^(NSMutableArray<PHAssetCollection *> *result) {
-             weakSelf.phcollections = result;
-            if (weakSelf.tableView) {
-               [weakSelf.tableView reloadData];
-            }
-            if (weakSelf.hud) {
-                [weakSelf.hud hideAnimated:YES];
-            }
-            
-        }];
     }
     return self;
 }
@@ -50,7 +39,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"我的相册";
-    
+    [self initUI];
+    //设置加载相册的进度
+
+    __weak typeof(self) weakSelf = self;
+    [self.present requestAuthorization:^{
+        [weakSelf.hud showAnimated:true];
+        [TYPhotoHandler enumeratePHAssetCollectionsWithResultHandler:^(NSArray<PHAssetCollection *> *result) {
+            [weakSelf.hud hideAnimated:true];
+            weakSelf.phcollections = result;
+            [weakSelf.tableView  reloadData];
+        }];
+    }];
+   
+}
+
+#pragma mark--- init UI
+-(void)initUI {
     UIBarButtonItem *leftBarItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(finish)];
     self.navigationItem.leftBarButtonItem = leftBarItem;
     
@@ -75,14 +80,6 @@
     }
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, bottomOffset, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
-    
-    //设置加载相册的进度
-    if (!self.phcollections.count) {
-        
-        [self.hud showAnimated:YES];
-        
-    }
-   
 }
 
 -(void)finish {

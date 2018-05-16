@@ -13,6 +13,7 @@
 #import "TYPhotoSelectedHandler.h"
 #import "MBProgressHUD+MJ.h"
 #import "TYPhotoGroupViewController.h"
+#import "TYPhotoAlbumViewController.h"
 @interface TYPhotoCollectionViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,TYPhotoCollectionViewCellDelegate,UIToolbarDelegate>
 @property (nonatomic,strong) TYPhotoPresent *present;
 @property (nonatomic,strong) UICollectionView *collectionView;
@@ -58,18 +59,6 @@ static CGFloat margin = 4.0f;
     self = [super init];
     if (self) {
         self.present = [[TYPhotoPresent alloc] initWithPresenter:self];
-        __weak typeof(self) weakSelf = self;
-        [self.present requestAllPhAssets:^(PHFetchResult<PHAsset *> *result) {
-            weakSelf.fetchResult = result;
-            
-            if (weakSelf.collectionView) {
-                [weakSelf.collectionView reloadData];
-            }
-            
-            if (weakSelf.hud) {
-                [weakSelf.hud hideAnimated:YES];
-            }
-        }];
     }
     return self;
 }
@@ -78,18 +67,54 @@ static CGFloat margin = 4.0f;
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"我的照片";
     self.view.backgroundColor = [UIColor whiteColor];
+    [self initUI];
+    
+    //设置默认最大选择数量
+    [TYPhotoSelectedHandler sharedTYPhotoSelectedHandler].maxSelectedCount = 6;
+    
+    //监听相册的授权变化
+    __weak typeof(self) weakSelf = self;
+    [self.present requestAuthorization:^{
+        [weakSelf.hud showAnimated:true];
+        __strong typeof(weakSelf) strongSelf = self;
+        dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_async(globalQueue, ^{
+            [TYPhotoHandler enumerateAllAssetsInCollectionsWithfinishBlock:^(PHFetchResult<PHAsset *> *result) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [strongSelf.hud hideAnimated:true];
+                    strongSelf.fetchResult = result;
+                    [strongSelf.collectionView reloadData];
+                });
+            }];
+
+        });
+    }];
+    
+    //添加相册视图到栈低
+    NSArray *stacks = [self.navigationController viewControllers];
+    NSMutableArray *newStacks = [[NSMutableArray alloc] initWithArray:stacks];
+    TYPhotoAlbumViewController *vc0 = [[TYPhotoAlbumViewController alloc] init];
+    [newStacks insertObject:vc0 atIndex:0];
+    [self.navigationController setViewControllers:newStacks];
+    
+    
+}
+
+#pragma mark--- init UI
+
+-(void)initUI {
     UIBarButtonItem *leftBarItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
     self.navigationItem.leftBarButtonItem = leftBarItem;
     
     UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(finish)];
     self.navigationItem.rightBarButtonItem = rightBarItem;
     
-   
+    
     
     [self.view addSubview:self.collectionView];
-   
-   CGRect frame = CGRectMake(0,SCREEN_HEIGHT-kTopHeight-kTabBarHeight, SCREEN_WIDTH, kTabBarHeight);
-   UIToolbar *toolBar = [[UIToolbar alloc] initWithFrame:frame];
+    
+    CGRect frame = CGRectMake(0,SCREEN_HEIGHT-kTopHeight-kTabBarHeight, SCREEN_WIDTH, kTabBarHeight);
+    UIToolbar *toolBar = [[UIToolbar alloc] initWithFrame:frame];
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"预览" style:UIBarButtonItemStylePlain target:self action:@selector(goPreview)];
     leftItem.tintColor = HEXCOLOR(themeColorHexValue);
     //normal &#xe96b; selected &#xe96a;
@@ -114,18 +139,8 @@ static CGFloat margin = 4.0f;
     [toolBar setItems:items];
     
     toolBar.barTintColor = [UIColor grayColor];
-   [self.view addSubview:toolBar];
+    [self.view addSubview:toolBar];
     self.toolBar = toolBar;
-    
-    [TYPhotoSelectedHandler sharedTYPhotoSelectedHandler].maxSelectedCount = 6;
-    
-    
-    //设置加载相册的进度
-    if (!self.fetchResult.count) {
-        
-        [self.hud showAnimated:YES];
-        
-    }
 }
 
 #pragma mark---action response

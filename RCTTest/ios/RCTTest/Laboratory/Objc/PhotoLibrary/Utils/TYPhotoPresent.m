@@ -7,7 +7,7 @@
 //
 
 #import "TYPhotoPresent.h"
-typedef void (^ComplicationHanlder)(NSMutableArray *results);
+typedef void (^ComplicationHanlder)();
 @interface TYPhotoPresent()<PHPhotoLibraryChangeObserver>
 @property (nonatomic,copy) ComplicationHanlder handler;
 @end
@@ -28,7 +28,7 @@ typedef void (^ComplicationHanlder)(NSMutableArray *results);
     return self;
 }
 
--(void)requestAuthorization:(void (^)(NSMutableArray *result))hanlder  {
+-(void)requestAuthorization:(void (^)())hanlder  {
      self.handler = hanlder;
         [TYPhotoHandler requestAuthorization:^(TYAuthorizationStatus status) {
             switch (status) {
@@ -58,13 +58,9 @@ typedef void (^ComplicationHanlder)(NSMutableArray *results);
                     break;
                 case TYAuthorizationStatusAuthorized:
                 case TYAuthorizationStatusNotDetermined:
-                    
-                    [TYPhotoHandler enumeratePHAssetCollectionsWithResultHandler:^(NSArray<PHAssetCollection *> *result) {
-                        if (result.count == 0) return;
-                            if (self.handler) {
-                                self.handler((NSMutableArray *)result);
-                            }
-                    }];
+                    if (self.handler) {
+                        self.handler();
+                    }
                     break;
             }
         }];
@@ -86,14 +82,10 @@ typedef void (^ComplicationHanlder)(NSMutableArray *results);
 }
 #pragma mark--PHPhotoLibraryChangeObserver
 -(void)photoLibraryDidChange:(PHChange *)changeInstance {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [TYPhotoHandler enumeratePHAssetCollectionsWithResultHandler:^(NSArray<PHAssetCollection *> *result) {
-             if (result.count == 0) return;
-                if (self.handler) {
-                    self.handler((NSMutableArray *)result);
-                }
-        }];
-    });
-    
+    if (self.handler) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.handler();
+        });
+    }
 }
 @end

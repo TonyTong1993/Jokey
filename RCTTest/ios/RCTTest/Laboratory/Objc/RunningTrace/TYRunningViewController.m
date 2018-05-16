@@ -167,7 +167,7 @@
 
 - (void)loadTracePoints {
     
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"01.txt" ofType:nil];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"02.txt" ofType:nil];
     NSData *fileData = [NSData dataWithContentsOfFile:filePath];
     NSString *str = [[NSString alloc] initWithData:fileData encoding:NSUTF8StringEncoding];
     NSArray *arr = [str componentsSeparatedByString:@"\n"];

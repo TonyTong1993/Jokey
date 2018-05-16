@@ -11,10 +11,11 @@
 		AF2684EA20A98FB3003814A4 /* trace.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF2684E920A98FB3003814A4 /* trace.txt */; };
 		AF5A1E4C20AA6EB30024DBE5 /* KalmanFiter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5A1E4B20AA6EB30024DBE5 /* KalmanFiter.m */; };
 		AF5A1E4F20AAAFAE0024DBE5 /* SavitzkyGolay.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5A1E4E20AAAFAE0024DBE5 /* SavitzkyGolay.m */; };
-		AF5A1E5120AAD2B80024DBE5 /* 01.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF5A1E5020AAD2B80024DBE5 /* 01.txt */; };
 		AF5D396A20A59CE800B6B1BF /* CoordTrans.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5D396520A59CE700B6B1BF /* CoordTrans.m */; };
 		AF5D396B20A59CE800B6B1BF /* GaoDeCoorTrans.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5D396720A59CE700B6B1BF /* GaoDeCoorTrans.m */; };
 		AF5D396C20A59CE800B6B1BF /* MercatorTrans.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5D396920A59CE700B6B1BF /* MercatorTrans.m */; };
+		AF8A309B20ABC4CF00EED7CD /* 01.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF8A309A20ABC4CF00EED7CD /* 01.txt */; };
+		AF8A309D20ABC9C200EED7CD /* 02.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF8A309C20ABC9C200EED7CD /* 02.txt */; };
 		AFB50D1520A2EB4E006302C3 /* TYRunningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB50D1420A2EB4E006302C3 /* TYRunningViewController.m */; };
 		EB01F61B1F36B635008CF290 /* UIColor+RGBA.m in Sources */ = {isa = PBXBuildFile; fileRef = EB01F61A1F36B635008CF290 /* UIColor+RGBA.m */; };
 		EB032D201F0251F300F32465 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB032D1F1F0251F300F32465 /* main.m */; };
@@ -212,13 +213,14 @@
 		AF5A1E4B20AA6EB30024DBE5 /* KalmanFiter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalmanFiter.m; sourceTree = "<group>"; };
 		AF5A1E4D20AAAFAE0024DBE5 /* SavitzkyGolay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SavitzkyGolay.h; sourceTree = "<group>"; };
 		AF5A1E4E20AAAFAE0024DBE5 /* SavitzkyGolay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SavitzkyGolay.m; sourceTree = "<group>"; };
-		AF5A1E5020AAD2B80024DBE5 /* 01.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 01.txt; sourceTree = "<group>"; };
 		AF5D396420A59CE700B6B1BF /* CoordTrans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordTrans.h; sourceTree = "<group>"; };
 		AF5D396520A59CE700B6B1BF /* CoordTrans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordTrans.m; sourceTree = "<group>"; };
 		AF5D396620A59CE700B6B1BF /* GaoDeCoorTrans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaoDeCoorTrans.h; sourceTree = "<group>"; };
 		AF5D396720A59CE700B6B1BF /* GaoDeCoorTrans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaoDeCoorTrans.m; sourceTree = "<group>"; };
 		AF5D396820A59CE700B6B1BF /* MercatorTrans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MercatorTrans.h; sourceTree = "<group>"; };
 		AF5D396920A59CE700B6B1BF /* MercatorTrans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MercatorTrans.m; sourceTree = "<group>"; };
+		AF8A309A20ABC4CF00EED7CD /* 01.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 01.txt; sourceTree = "<group>"; };
+		AF8A309C20ABC9C200EED7CD /* 02.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 02.txt; sourceTree = "<group>"; };
 		AFB50D1320A2EB4E006302C3 /* TYRunningViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYRunningViewController.h; sourceTree = "<group>"; };
 		AFB50D1420A2EB4E006302C3 /* TYRunningViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYRunningViewController.m; sourceTree = "<group>"; };
 		D502818BA0F8EC5DDC48C475 /* Pods-RCTTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1291,7 +1293,8 @@
 		EB6C0A302058DD41004E0CFC /* Src */ = {
 			isa = PBXGroup;
 			children = (
-				AF5A1E5020AAD2B80024DBE5 /* 01.txt */,
+				AF8A309C20ABC9C200EED7CD /* 02.txt */,
+				AF8A309A20ABC4CF00EED7CD /* 01.txt */,
 				AF2684E920A98FB3003814A4 /* trace.txt */,
 				EB6C0A332058DDD7004E0CFC /* laboratoryList.plist */,
 			);
@@ -1624,10 +1627,11 @@
 				EB777A401F7BB187000461B3 /* icon_certification@3x.png in Resources */,
 				AF2684EA20A98FB3003814A4 /* trace.txt in Resources */,
 				EB777A3F1F7BB17F000461B3 /* icon_certification@2x.png in Resources */,
+				AF8A309D20ABC9C200EED7CD /* 02.txt in Resources */,
 				EB777A3E1F7BB161000461B3 /* icon_certification.png in Resources */,
 				EB266F5C1F3B317500949D40 /* recommend.json in Resources */,
 				EB3299E21F1385B60034D095 /* Ionicons.ttf in Resources */,
-				AF5A1E5120AAD2B80024DBE5 /* 01.txt in Resources */,
+				AF8A309B20ABC4CF00EED7CD /* 01.txt in Resources */,
 				EB714BCB1F4806190024C929 /* LICENSE in Resources */,
 				EB032D2E1F0251F300F32465 /* LaunchScreen.storyboard in Resources */,
 				EB0964111F7927FA00417BB3 /* TYTopicCell.xib in Resources */,
