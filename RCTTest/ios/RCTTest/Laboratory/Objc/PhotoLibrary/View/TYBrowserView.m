@@ -6,10 +6,13 @@
 //  Copyright © 2018年 童万华. All rights reserved.
 //
 
-#import "TYPhotoGroupView.h"
+#import "TYBrowserView.h"
 #import <TBCityIconFont.h>
 #import "UIImage+Extentions.h"
-@interface TYPhotoGroupView() <UIScrollViewDelegate, UIGestureRecognizerDelegate>
+#import "TYPhoto.h"
+#import "TYPhotoView.h"
+
+@interface TYBrowserView() <UIScrollViewDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, weak) UIView *fromView;
 @property (nonatomic, weak) UIView *toContainerView;
@@ -35,7 +38,7 @@
 @property (nonatomic, strong) UIPanGestureRecognizer *panGesture;
 @property (nonatomic, assign) CGPoint panGestureBeginPoint;
 @end
-@implementation TYPhotoGroupView
+@implementation TYBrowserView
 #pragma mark---getter and setter
 
 -(UIToolbar *)topToolBar {
@@ -73,23 +76,15 @@
     if (!self) return nil;
     
     self.frame = [UIScreen mainScreen].bounds;
-    self.backgroundColor = [UIColor randomColor];
-//    _background = UIImageView.new;
-//    _background.frame = self.bounds;
-//    _background.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-//    
-//    _blurBackground = UIImageView.new;
-//    _blurBackground.frame = self.bounds;
-//    _blurBackground.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-//
-//    _contentView = UIView.new;
-//    _contentView.frame = self.bounds;
-//    _contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-//
-//    [self addSubview:_background];
-//    [self addSubview:_blurBackground];
-//    [self addSubview:_contentView];
+    _scrollView = [UIScrollView new];
+    _scrollView.frame = [UIScreen mainScreen].bounds;
+    _scrollView.pagingEnabled = true;
+    _scrollView.delegate = self;
+    _scrollView.backgroundColor = [UIColor randomColor];
+
+    [self addSubview:_scrollView];
     [self addSubview:self.topToolBar];
+    
     
     return self;
 }
@@ -105,9 +100,44 @@
     
     
 }
--(void)dissmiss {
-    if (_delegate&&[_delegate respondsToSelector:@selector(photoGroupViewDissmissActionResponder)]) {
-        [_delegate photoGroupViewDissmissActionResponder];
+-(void)setDataSource:(id<TYBrowserViewDataSource>)dataSource {
+    _dataSource = dataSource;
+    NSMutableArray <TYPhoto *> *datas = [NSMutableArray array];
+    CGFloat startCenterX = self.size.width / 2;
+    CGFloat startCenterY = self.size.height / 2;
+    
+    NSUInteger count = [_dataSource numberOfPhotosInBrowserView];
+    self.scrollView.contentSize = CGSizeMake(self.size.width * count, self.size.height);
+    for (int i = 0; i < [_dataSource numberOfPhotosInBrowserView]; i++) {
+        NSAssert([[_dataSource browserView:self photoForRowAtIndex:i] isKindOfClass:[TYPhoto class]], @"类型不匹配");
+        TYPhoto *photo = [_dataSource browserView:self photoForRowAtIndex:i];
+        [datas addObject:photo];
+        TYPhotoView *photoView = [TYPhotoView new];
+        photoView.backgroundColor = [UIColor randomColor];
+        photoView.photo = photo;
+        photoView.center = CGPointMake(startCenterX+(i*self.size.width), startCenterY);
+        [self.scrollView addSubview:photoView];
     }
+    
+    
+      _groupItems = datas;
+}
+-(void)setDelegate:(id<TYBrowserViewDelegate>)delegate {
+    _delegate = delegate;
+    if ([_delegate respondsToSelector:@selector(selectedIndexInBrowserView)]) {
+        CGPoint contentOffset = CGPointMake(self.size.width * [_delegate selectedIndexInBrowserView], 0);
+        [self.scrollView setContentOffset:contentOffset];
+      
+    }
+}
+-(void)dissmiss {
+    if (_delegate&&[_delegate respondsToSelector:@selector(photoBrowserViewDissmissActionResponder)]) {
+        [_delegate photoBrowserViewDissmissActionResponder];
+    }
+}
+
+#pragma mark---
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
 }
 @end

@@ -7,16 +7,17 @@
 //
 
 #import "TYPhotoGroupViewController.h"
-#import "TYPhotoGroupView.h"
-@interface TYPhotoGroupViewController ()<TYPhotoGroupViewDelegate>
-@property (nonatomic,strong) TYPhotoGroupView *photoGroupView;
+#import "TYBrowserView.h"
+@interface TYPhotoGroupViewController ()<TYBrowserViewDelegate,TYBrowserViewDataSource>
+@property (nonatomic,strong) TYBrowserView *photoGroupView;
 @end
 
 @implementation TYPhotoGroupViewController
--(TYPhotoGroupView *)photoGroupView {
+-(TYBrowserView *)photoGroupView {
     if (!_photoGroupView) {
-        _photoGroupView = [[TYPhotoGroupView alloc] init];
+        _photoGroupView = [[TYBrowserView alloc] init];
         _photoGroupView.delegate = self;
+        _photoGroupView.dataSource  = self;
     }
     return _photoGroupView;
 }
@@ -40,11 +41,20 @@
     return YES;
 }
 #pragma mark---TYPhotoGroupViewDelegate
--(void)photoGroupViewDissmissActionResponder {
+-(void)photoBrowserViewDissmissActionResponder {
     [self.navigationController popViewControllerAnimated:YES];
 }
--(void)photoGroupViewCheckActionResponder {
+-(void)photoBrowserViewCheckActionResponder {
     
+}
+-(NSUInteger)selectedIndexInBrowserView {
+    return self.selectedIndex;
+}
+-(NSUInteger)numberOfPhotosInBrowserView {
+    return self.photos.count;
+}
+-(TYPhoto *)browserView:(UIView *)browserView photoForRowAtIndex:(NSUInteger)index {
+    return self.photos[index];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -22,4 +22,18 @@
         }];
     });
 }
+-(void)getPreViewImage:(void (^)(UIImage *result, NSDictionary *))resultHandler {
+    PHImageRequestOptions *options = [PHImageRequestOptions new];
+    options.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
+//    options.progressHandler = ^(double progress, NSError * _Nullable error, BOOL * _Nonnull stop, NSDictionary * _Nullable info) {
+//
+//    };
+//    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+//    CGFloat height = [UIScreen mainScreen].bounds.size.width;
+//    CGSize size = CGSizeMake(width/2 , height/2);
+    [[PHImageManager defaultManager] requestImageForAsset:self targetSize:PHImageManagerMaximumSize contentMode:PHImageContentModeAspectFit options:options resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+        
+        resultHandler(result,info);
+    }];
+}
 @end

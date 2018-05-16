@@ -16,6 +16,10 @@
 		AF5D396C20A59CE800B6B1BF /* MercatorTrans.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5D396920A59CE700B6B1BF /* MercatorTrans.m */; };
 		AF8A309B20ABC4CF00EED7CD /* 01.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF8A309A20ABC4CF00EED7CD /* 01.txt */; };
 		AF8A309D20ABC9C200EED7CD /* 02.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF8A309C20ABC9C200EED7CD /* 02.txt */; };
+		AF8A30A120AC054700EED7CD /* TYPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8A30A020AC054700EED7CD /* TYPhoto.m */; };
+		AF8A30A420AC0E7100EED7CD /* TYPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8A30A320AC0E7100EED7CD /* TYPhotoView.m */; };
+		AF8A30A720AC11EB00EED7CD /* TYLocalAlbumPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8A30A620AC11EB00EED7CD /* TYLocalAlbumPhoto.m */; };
+		AF8A30AA20AC120400EED7CD /* TYRemotePhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8A30A920AC120400EED7CD /* TYRemotePhoto.m */; };
 		AFB50D1520A2EB4E006302C3 /* TYRunningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB50D1420A2EB4E006302C3 /* TYRunningViewController.m */; };
 		EB01F61B1F36B635008CF290 /* UIColor+RGBA.m in Sources */ = {isa = PBXBuildFile; fileRef = EB01F61A1F36B635008CF290 /* UIColor+RGBA.m */; };
 		EB032D201F0251F300F32465 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB032D1F1F0251F300F32465 /* main.m */; };
@@ -108,7 +112,7 @@
 		EB6A84E62047AB6600DE7224 /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6A84E52047AB6600DE7224 /* UIScrollView+Refresh.m */; };
 		EB6A84E92047B33100DE7224 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6A84E82047B33100DE7224 /* UserManager.m */; };
 		EB6A84ED2047B35F00DE7224 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6A84EC2047B35F00DE7224 /* UserInfo.m */; };
-		EB6C0A282058D512004E0CFC /* TYPhotoGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C0A272058D512004E0CFC /* TYPhotoGroupView.m */; };
+		EB6C0A282058D512004E0CFC /* TYBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C0A272058D512004E0CFC /* TYBrowserView.m */; };
 		EB6C0A2D2058DA93004E0CFC /* TYBlurEffectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C0A2B2058DA93004E0CFC /* TYBlurEffectViewController.m */; };
 		EB6C0A2E2058DA93004E0CFC /* TYBlurEffectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6C0A2C2058DA93004E0CFC /* TYBlurEffectViewController.xib */; };
 		EB6C0A342058DDD7004E0CFC /* laboratoryList.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB6C0A332058DDD7004E0CFC /* laboratoryList.plist */; };
@@ -221,6 +225,14 @@
 		AF5D396920A59CE700B6B1BF /* MercatorTrans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MercatorTrans.m; sourceTree = "<group>"; };
 		AF8A309A20ABC4CF00EED7CD /* 01.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 01.txt; sourceTree = "<group>"; };
 		AF8A309C20ABC9C200EED7CD /* 02.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 02.txt; sourceTree = "<group>"; };
+		AF8A309F20AC054700EED7CD /* TYPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPhoto.h; sourceTree = "<group>"; };
+		AF8A30A020AC054700EED7CD /* TYPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYPhoto.m; sourceTree = "<group>"; };
+		AF8A30A220AC0E7100EED7CD /* TYPhotoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPhotoView.h; sourceTree = "<group>"; };
+		AF8A30A320AC0E7100EED7CD /* TYPhotoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYPhotoView.m; sourceTree = "<group>"; };
+		AF8A30A520AC11EB00EED7CD /* TYLocalAlbumPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYLocalAlbumPhoto.h; sourceTree = "<group>"; };
+		AF8A30A620AC11EB00EED7CD /* TYLocalAlbumPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYLocalAlbumPhoto.m; sourceTree = "<group>"; };
+		AF8A30A820AC120400EED7CD /* TYRemotePhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYRemotePhoto.h; sourceTree = "<group>"; };
+		AF8A30A920AC120400EED7CD /* TYRemotePhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYRemotePhoto.m; sourceTree = "<group>"; };
 		AFB50D1320A2EB4E006302C3 /* TYRunningViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYRunningViewController.h; sourceTree = "<group>"; };
 		AFB50D1420A2EB4E006302C3 /* TYRunningViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYRunningViewController.m; sourceTree = "<group>"; };
 		D502818BA0F8EC5DDC48C475 /* Pods-RCTTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -377,8 +389,8 @@
 		EB6A84E82047B33100DE7224 /* UserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		EB6A84EB2047B35F00DE7224 /* UserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
 		EB6A84EC2047B35F00DE7224 /* UserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
-		EB6C0A262058D512004E0CFC /* TYPhotoGroupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPhotoGroupView.h; sourceTree = "<group>"; };
-		EB6C0A272058D512004E0CFC /* TYPhotoGroupView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYPhotoGroupView.m; sourceTree = "<group>"; };
+		EB6C0A262058D512004E0CFC /* TYBrowserView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYBrowserView.h; sourceTree = "<group>"; };
+		EB6C0A272058D512004E0CFC /* TYBrowserView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYBrowserView.m; sourceTree = "<group>"; };
 		EB6C0A2A2058DA93004E0CFC /* TYBlurEffectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYBlurEffectViewController.h; sourceTree = "<group>"; };
 		EB6C0A2B2058DA93004E0CFC /* TYBlurEffectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYBlurEffectViewController.m; sourceTree = "<group>"; };
 		EB6C0A2C2058DA93004E0CFC /* TYBlurEffectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TYBlurEffectViewController.xib; sourceTree = "<group>"; };
@@ -598,6 +610,19 @@
 			children = (
 			);
 			path = Build;
+			sourceTree = "<group>";
+		};
+		AF8A309E20AC052800EED7CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF8A309F20AC054700EED7CD /* TYPhoto.h */,
+				AF8A30A020AC054700EED7CD /* TYPhoto.m */,
+				AF8A30A520AC11EB00EED7CD /* TYLocalAlbumPhoto.h */,
+				AF8A30A620AC11EB00EED7CD /* TYLocalAlbumPhoto.m */,
+				AF8A30A820AC120400EED7CD /* TYRemotePhoto.h */,
+				AF8A30A920AC120400EED7CD /* TYRemotePhoto.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		AFB50D1220A2EAFD006302C3 /* RunningTrace */ = {
@@ -1304,6 +1329,7 @@
 		EB6D11912050E18D00715160 /* PhotoLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				AF8A309E20AC052800EED7CD /* Model */,
 				EB6D11A920513A7300715160 /* View */,
 				EB6D11A5205133D000715160 /* Category */,
 				EB6D11982050E81F00715160 /* Utils */,
@@ -1351,8 +1377,10 @@
 				EB6DE6F3205297BC009290F0 /* TYPhotoCollectionViewCell.h */,
 				EB6DE6F4205297BC009290F0 /* TYPhotoCollectionViewCell.m */,
 				EB6DE6F5205297BC009290F0 /* TYPhotoCollectionViewCell.xib */,
-				EB6C0A262058D512004E0CFC /* TYPhotoGroupView.h */,
-				EB6C0A272058D512004E0CFC /* TYPhotoGroupView.m */,
+				EB6C0A262058D512004E0CFC /* TYBrowserView.h */,
+				EB6C0A272058D512004E0CFC /* TYBrowserView.m */,
+				AF8A30A220AC0E7100EED7CD /* TYPhotoView.h */,
+				AF8A30A320AC0E7100EED7CD /* TYPhotoView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1773,7 +1801,7 @@
 				EB714BD21F4806190024C929 /* ConstraintDSL.swift in Sources */,
 				EB6DE6F6205297BC009290F0 /* TYPhotoCollectionViewCell.m in Sources */,
 				EBB1E5582056721700956B7F /* TYPhotoSelectedHandler.m in Sources */,
-				EB6C0A282058D512004E0CFC /* TYPhotoGroupView.m in Sources */,
+				EB6C0A282058D512004E0CFC /* TYBrowserView.m in Sources */,
 				EB714BEC1F4806190024C929 /* LayoutConstraintItem.swift in Sources */,
 				EBE0F7A91F76ABCA006F0AD8 /* SearchView.swift in Sources */,
 				EB5865811F5570ED00598DA0 /* NSBundle+Extension.m in Sources */,
@@ -1811,6 +1839,7 @@
 				EB714BD61F4806190024C929 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				EB54324F1F4D7D2B00683AA7 /* TYTestViewController.m in Sources */,
 				EB5432521F4D995900683AA7 /* TYStatusCommentView.m in Sources */,
+				AF8A30A120AC054700EED7CD /* TYPhoto.m in Sources */,
 				EB18D3F81F0F89C500B44790 /* TYServiceApi.m in Sources */,
 				EB032D261F0251F300F32465 /* ViewController.m in Sources */,
 				EB6500F31F4186D500C0B89A /* NSString+Extension.m in Sources */,
@@ -1835,6 +1864,7 @@
 				EB5A2A131F03890100A19F2C /* TYNavigationController.m in Sources */,
 				EB5D39311F3464200029085F /* TYSegmentConst.m in Sources */,
 				EB7C64601FD67BBB0018AC3A /* TestSortModel.m in Sources */,
+				AF8A30A720AC11EB00EED7CD /* TYLocalAlbumPhoto.m in Sources */,
 				EB32F1451F4AE32D00D766AF /* TYSegmentView.swift in Sources */,
 				EB5D39341F34657C0029085F /* TYSegmentTool.m in Sources */,
 				EB3299CE1F1354420034D095 /* TYHomeViewController.m in Sources */,
@@ -1843,6 +1873,7 @@
 				EB6D11A4205125B500715160 /* TYPhotoPresent.m in Sources */,
 				EB266F571F3B2BEE00949D40 /* TYTopicTest.m in Sources */,
 				EB714BE61F4806190024C929 /* ConstraintRelation.swift in Sources */,
+				AF8A30A420AC0E7100EED7CD /* TYPhotoView.m in Sources */,
 				EB5A9A011F3C4DC10031C497 /* TYImageViewCell.m in Sources */,
 				EB811C751F764273003552E9 /* MBProgressHUD+MJ.m in Sources */,
 				EB714BDD1F4806190024C929 /* ConstraintMakerExtendable.swift in Sources */,
@@ -1878,6 +1909,7 @@
 				EB714BE31F4806190024C929 /* ConstraintPriority.swift in Sources */,
 				EB714BD71F4806190024C929 /* ConstraintLayoutGuide.swift in Sources */,
 				EB593FF01F161DDC0093EF63 /* TYBaseViewController.m in Sources */,
+				AF8A30AA20AC120400EED7CD /* TYRemotePhoto.m in Sources */,
 				EBBBF6E42011A37D0011B4DF /* UIColor+Extension.m in Sources */,
 				EB5D39281F345D0A0029085F /* TYCalculateFrameTool.m in Sources */,
 				EB18D3E71F0F6B7700B44790 /* TYRCTModule.m in Sources */,

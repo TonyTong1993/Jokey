@@ -11,4 +11,5 @@
 @interface PHAsset (Image)
 -(void)requestThumbnailWithTargetSize:(CGSize)targetSize
                   complicationhandler:(void (^)(UIImage *result, NSDictionary *))resultHandler;
+-(void)getPreViewImage:(void (^)(UIImage *result, NSDictionary *))resultHandler;
 @end

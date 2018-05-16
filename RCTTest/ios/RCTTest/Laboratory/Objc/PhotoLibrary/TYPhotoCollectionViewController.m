@@ -14,6 +14,7 @@
 #import "MBProgressHUD+MJ.h"
 #import "TYPhotoGroupViewController.h"
 #import "TYPhotoAlbumViewController.h"
+#import "TYLocalAlbumPhoto.h"
 @interface TYPhotoCollectionViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,TYPhotoCollectionViewCellDelegate,UIToolbarDelegate>
 @property (nonatomic,strong) TYPhotoPresent *present;
 @property (nonatomic,strong) UICollectionView *collectionView;
@@ -185,9 +186,18 @@ static CGFloat margin = 4.0f;
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     TYPhotoGroupViewController *groupView = [[TYPhotoGroupViewController alloc] init];
+  
+    NSMutableArray *photos = [NSMutableArray array];
+    [self.fetchResult enumerateObjectsUsingBlock:^(PHAsset * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        @autoreleasepool {
+            TYLocalAlbumPhoto *photo = [TYLocalAlbumPhoto new];
+            photo.phAsset = obj;
+            [photos addObject:photo];
+        }
+    }];
+    groupView.photos = photos;
+    groupView.selectedIndex = indexPath.item;
     [self.navigationController pushViewController:groupView animated:YES];
-    
-    //动画
 }
 #pragma mark---TYPhotoCollectionViewCellDelegate
 -(void)photocell:(TYPhotoCollectionViewCell *)cell didSelectedAtIndexPath:(NSIndexPath *)indexPath {

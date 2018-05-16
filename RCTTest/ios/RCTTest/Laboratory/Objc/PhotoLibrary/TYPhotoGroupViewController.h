@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class TYPhoto;
 @interface TYPhotoGroupViewController : UIViewController
-
+@property (nonatomic,copy) NSArray <TYPhoto *>* photos;
+@property (nonatomic,assign) NSInteger selectedIndex;
 @end
