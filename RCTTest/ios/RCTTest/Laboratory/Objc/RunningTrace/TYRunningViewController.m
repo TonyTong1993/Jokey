@@ -27,8 +27,6 @@
 @property (nonatomic,strong)  KalmanFiter *kalmanFilter;
 @property (nonatomic, strong) MAPolyline *origTrace;
 @property (nonatomic, strong) MAPolyline *optimizedTrace;
-@property (nonatomic, strong) KFCoordinate *weight;
-@property (nonatomic, strong) KFCoordinate *weight2;
 @property (nonatomic, strong) UISwitch *onTraceSwitch;
 
 
@@ -398,6 +396,7 @@
     
     
     
+    
     [self.allTrace addObject:newLocation];
 }
 
@@ -414,87 +413,6 @@
     } failedCallback:^(int errorCode, NSString *errorDesc) {
         NSLog(@"error = %@",errorDesc);
     }];
-}
-
-
-
-
-- (NSArray <CLLocation *>*)filterLocations:(NSArray <CLLocation *>*)locations {
-    NSUInteger count = locations.count;
-    if (count <= 2) return locations;
-    
-    CLLocation *firstLoc = locations[0];
-    self.weight = [KFCoordinate new];
-    _weight.latitude = firstLoc.coordinate.latitude;
-    _weight.longitude = firstLoc.coordinate.longitude;
-    _weight.timeStamp = firstLoc.timestamp;
-    _weight.speed = firstLoc.speed;
-    _weight.accuracy = firstLoc.horizontalAccuracy;
-    
-    //记录权重点
-    
-    for (int i = 1 ; i < count; i++) {
-        CLLocation *curLoc = locations[i];
-        if ([self filterPosition:curLoc]) {
-            
-        }else {
-            
-        }
-    }
-    
-    
-    
-    return  nil;
-    
-}
--(BOOL)filterPosition:(CLLocation *)location {
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = @"yyyy-mm-dd HH:mm:ss";
-    NSString *dateString = [dateFormatter stringFromDate:location.timestamp];
-    
-    
-    //从第二点开始
-    //过滤静态点
-    if (location.speed < 1) {
-        
-        return false;
-    }
-    
-    //就算第二个权重点
-    if (nil == self.weight2) {
-        double offsetTimeMils = [location.timestamp timeIntervalSinceDate:self.weight.timeStamp];
-        double maxDistance = offsetTimeMils * 5;
-        MAMapPoint a = MAMapPointForCoordinate(location.coordinate);
-        MAMapPoint b = MAMapPointForCoordinate(CLLocationCoordinate2DMake(self.weight.latitude, self.weight.longitude));
-        double distance = MAMetersBetweenMapPoints(a, b);
-        if (distance > maxDistance) {
-            self.weight2 = [KFCoordinate new];
-            _weight2.latitude = location.coordinate.latitude;
-            _weight2.longitude = location.coordinate.longitude;
-            _weight2.timeStamp = location.timestamp;
-            _weight2.speed = location.speed;
-            _weight2.accuracy = location.horizontalAccuracy;
-            
-            return  false;
-        }else {
-            KFCoordinate *point = [KFCoordinate new];
-            point.latitude = location.coordinate.latitude;
-            point.longitude = location.coordinate.longitude;
-            point.timeStamp = location.timestamp;
-            point.speed = location.speed;
-            point.accuracy = location.horizontalAccuracy;
-            
-            //添加到显示坐标点中
-            
-            
-            //更新w1点的权重
-            
-            
-        }
-    }
-    
-    return false;
-    
 }
 @end
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF03854A20A41A4E00746CCD /* TYKalmanFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF03854920A41A4E00746CCD /* TYKalmanFilter.m */; };
+		AF06DD9120AD538600EC34FF /* Tracker1D.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06DD9020AD538600EC34FF /* Tracker1D.m */; };
 		AF2684EA20A98FB3003814A4 /* trace.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF2684E920A98FB3003814A4 /* trace.txt */; };
 		AF5A1E4C20AA6EB30024DBE5 /* KalmanFiter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5A1E4B20AA6EB30024DBE5 /* KalmanFiter.m */; };
 		AF5A1E4F20AAAFAE0024DBE5 /* SavitzkyGolay.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5A1E4E20AAAFAE0024DBE5 /* SavitzkyGolay.m */; };
@@ -212,6 +213,8 @@
 		4685E6D3869C8CFF7EF29817 /* libPods-RCTTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RCTTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF03854820A41A4E00746CCD /* TYKalmanFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYKalmanFilter.h; sourceTree = "<group>"; };
 		AF03854920A41A4E00746CCD /* TYKalmanFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYKalmanFilter.m; sourceTree = "<group>"; };
+		AF06DD8F20AD538600EC34FF /* Tracker1D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tracker1D.h; sourceTree = "<group>"; };
+		AF06DD9020AD538600EC34FF /* Tracker1D.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tracker1D.m; sourceTree = "<group>"; };
 		AF2684E920A98FB3003814A4 /* trace.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = trace.txt; path = "../../../../../技术演进/GPSEngineTest/GPSEngineTest/trace.txt"; sourceTree = "<group>"; };
 		AF5A1E4A20AA6EB30024DBE5 /* KalmanFiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalmanFiter.h; sourceTree = "<group>"; };
 		AF5A1E4B20AA6EB30024DBE5 /* KalmanFiter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalmanFiter.m; sourceTree = "<group>"; };
@@ -637,6 +640,8 @@
 				AF5A1E4B20AA6EB30024DBE5 /* KalmanFiter.m */,
 				AF5A1E4D20AAAFAE0024DBE5 /* SavitzkyGolay.h */,
 				AF5A1E4E20AAAFAE0024DBE5 /* SavitzkyGolay.m */,
+				AF06DD8F20AD538600EC34FF /* Tracker1D.h */,
+				AF06DD9020AD538600EC34FF /* Tracker1D.m */,
 			);
 			path = RunningTrace;
 			sourceTree = "<group>";
@@ -1823,6 +1828,7 @@
 				EB55658D1F42FEB0005BB5DC /* Bundle(Add).swift in Sources */,
 				EB714BCC1F4806190024C929 /* README.md in Sources */,
 				EB6592521F75022E0059A3B9 /* TYLoginViewController.m in Sources */,
+				AF06DD9120AD538600EC34FF /* Tracker1D.m in Sources */,
 				EB7C644D1FD646F70018AC3A /* TYNumberOperations.m in Sources */,
 				EB60BB8F1F454DB60062DBC2 /* TYAttentionViewCell.swift in Sources */,
 				EBE0F7A41F76877D006F0AD8 /* TYSearchViewController.swift in Sources */,
