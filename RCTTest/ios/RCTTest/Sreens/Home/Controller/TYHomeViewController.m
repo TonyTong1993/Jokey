@@ -25,7 +25,7 @@
 
 @implementation TYHomeViewController
 #pragma mark---Getter and Setter
--(NSMutableArray *)pageCache {
+-(NSMutableDictionary *)pageCache {
     if (!_pageCache) {
         _pageCache = [NSMutableDictionary dictionaryWithCapacity:3];
     }
