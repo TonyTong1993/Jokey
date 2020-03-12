@@ -143,12 +143,12 @@ class TYSegmentScrollVIew: UIScrollView {
         let selectedItem = items[index]
         selectedItem.isSelected = true
         //设置指示器视图
-        indicateView.snp.remakeConstraints({ (maker) in
-            maker.centerY.equalTo(selectedItem.snp.centerY)
-            maker.centerX.equalTo(selectedItem.snp.centerX)
-            maker.width.equalTo(selectedItem.frame.width)
-            maker.height.equalTo(selectedItem.titleSize.height)
-        })
+//        indicateView.snp.remakeConstraints({ (maker) in
+//            maker.centerY.equalTo(selectedItem.snp.centerY)
+//            maker.centerX.equalTo(selectedItem.snp.centerX)
+//            maker.width.equalTo(selectedItem.frame.width)
+//            maker.height.equalTo(selectedItem.titleSize.height)
+//        })
      
         //将按钮居中显示
         let midX = selectedItem.frame.midX

@@ -10,4 +10,5 @@
 
 @interface NSString (Extension)
 +(NSString *)nameSpaceWrapedClassNameInSwift:(NSString *)className;
++(BOOL)isEmptyOrNil:(NSString *)string;
 @end

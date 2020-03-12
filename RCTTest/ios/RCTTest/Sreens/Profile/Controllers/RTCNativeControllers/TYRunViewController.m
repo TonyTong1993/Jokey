@@ -7,25 +7,33 @@
 //
 
 #import "TYRunViewController.h"
+<<<<<<< HEAD
 //#import <MAMapKit/MAMapKit.h>
 #import "TYDBTool+TYRunning.h"
 @interface TYRunViewController ()//<MAMapViewDelegate>
 //@property (nonatomic,strong) MAMapView *mapView;
 @property (nonatomic,strong) NSMutableArray *userTrack;
 @property (nonatomic,strong) NSTimer *timer;
+=======
+#import <MAMapKit/MAMapKit.h>
+#import "TYMapViewDelegate.h"
+#import "TYMapView.h"
+@interface TYRunViewController ()<MAMapViewDelegate>
+@property (nonatomic) TYMapViewDelegate *delegate;
+>>>>>>> origin/dev
 @end
 
 @implementation TYRunViewController
 #pragma mark---getter and setter
--(NSMutableArray *)userTrack {
-    if (!_userTrack) {
-        _userTrack = [NSMutableArray arrayWithCapacity:100];
+-(TYMapViewDelegate *)delegate {
+    if (!_delegate) {
+        _delegate = [[TYMapViewDelegate alloc] init];
     }
-    
-    return _userTrack;
+    return _delegate;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+<<<<<<< HEAD
     
     // Do any additional setup after loading the view.
 //    _mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
@@ -43,21 +51,25 @@
 //    r.lineWidth = 2;///精度圈 边线宽度，默认0
 //    r.locationDotBgColor = [UIColor greenColor];///定位点背景色，不设置默认白色
 //    [self.mapView updateUserLocationRepresentation:r];
+=======
+    TYMapView *mapView = [[TYMapView alloc] initWithFrame:self.view.bounds];
+    self.view = mapView;
+    [mapView setMapViewDelegate:self.delegate];
+>>>>>>> origin/dev
 }
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-//    self.navigationController.navigationBarHidden = YES;
+
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    [self.timer invalidate];
-
-//    self.navigationController.navigationBarHidden = NO;
+    [_delegate stopTimer];
 }
 -(void)dealloc {
-    NSLog(@"TYRunViewController");
+    NSLog(@"%s",__func__);
 }
 
+<<<<<<< HEAD
 //-(void)mapInitComplete:(MAMapView *)mapView {
 //    [mapView setZoomLevel:19];
 //    //开启计时器
@@ -87,5 +99,12 @@
 ////         NSLog(@"updatingLocation= false-userLoaction = %@",[userLocation description]);
 //    }
 //}
+=======
+
+
+
+
+
+>>>>>>> origin/dev
 
 @end

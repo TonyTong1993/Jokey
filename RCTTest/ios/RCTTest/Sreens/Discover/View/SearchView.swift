@@ -40,14 +40,14 @@ class SearchView: UIView {
         likeInputView.addSubview(searchView)
         likeInputView.addSubview(placeLabel)
         //使用snap布局
-        searchView.snp.updateConstraints { (make) in
-            make.centerY.equalTo(likeInputView.snp.centerY)
-            make.left.equalTo(likeInputView.snp.left).offset(10)
-        }
-        placeLabel.snp.makeConstraints { (maker) in
-            maker.left.equalTo(searchView.snp.right).offset(10)
-            maker.centerY.equalTo(likeInputView.snp.centerY)
-        }
+//        searchView.snp.updateConstraints { (make) in
+//            make.centerY.equalTo(likeInputView.snp.centerY)
+//            make.left.equalTo(likeInputView.snp.left).offset(10)
+//        }
+//        placeLabel.snp.makeConstraints { (maker) in
+//            maker.left.equalTo(searchView.snp.right).offset(10)
+//            maker.centerY.equalTo(likeInputView.snp.centerY)
+//        }
 
         let addBtn = UIButton()
         //添加点击事件
@@ -55,14 +55,23 @@ class SearchView: UIView {
         //添加样式
         let icon = UIImage(named:"nav_add");
         addBtn.setImage(icon, for: .normal)
-        addBtn.imageEdgeInsets = UIEdgeInsetsMake(7, 3, 7, 3)//图片视图的padding
-        addBtn.contentEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 5)//按钮视图的padding
-
-        let stackView = UIStackView(frame: frame)
-        stackView.addArrangedSubview(likeInputView)
-        stackView.addArrangedSubview(addBtn)
-        stackView.spacing = 10
-        addSubview(stackView)
+        addBtn.imageEdgeInsets = UIEdgeInsets(top: 7, left: 3, bottom: 7, right: 3)//图片视图的padding
+        addBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)//按钮视图的padding
+       
+        if #available(iOS 9.0, *) {
+           let  stackView = UIStackView(frame: frame)
+            stackView.addArrangedSubview(likeInputView)
+            stackView.addArrangedSubview(addBtn)
+            stackView.spacing = 10
+            addSubview(stackView)
+        } else {
+          let stackView = FDStackView(frame: frame)
+            stackView.addArrangedSubview(likeInputView)
+            stackView.addArrangedSubview(addBtn)
+            stackView.spacing = 10
+            addSubview(stackView)
+        }
+       
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -72,10 +81,10 @@ class SearchView: UIView {
         print("deallco")
     }
     /*privite method*/
-    func handleTapGesture()  {
+    @objc func handleTapGesture()  {
        handleTapGestureBlock(.search)
     }
-    func handleAddClicked()  {
+    @objc func handleAddClicked()  {
         handleTapGestureBlock(.add)
     }
     

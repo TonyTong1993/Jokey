@@ -115,7 +115,7 @@ class TYSegmentView: UIView {
         guard let font = UIFont(name: TYTheme.themeFontFamilyName(), size: 16) else {
             return
         }
-         let titleSize = titles[segmentItem.segmentIndex].size(attributes: [NSFontAttributeName:font])
+    let titleSize = titles[segmentItem.segmentIndex].size(withAttributes: [NSAttributedString.Key.font:font])
          let orgin = indicatorView.frame.origin
          UIView.animate(withDuration: 0.25) {
             self.indicatorView.frame = CGRect(x: orgin.x, y: orgin.y, width: titleSize.width, height: 2)
@@ -202,7 +202,7 @@ class TYSegmentView: UIView {
             currentIndex = index
             
             //fIXME:动态更新指示器的width
-            let titleSize = titles[index].size(attributes: [NSFontAttributeName:font])
+            let titleSize = titles[index].size(attributes: [NSAttributedString.Key.font:font])
             let orgin = indicatorView.frame.origin
             self.indicatorView.frame = CGRect(x: orgin.x, y: orgin.y, width: titleSize.width, height: 2)
             self.indicatorView.center.x = currentItem.center.x

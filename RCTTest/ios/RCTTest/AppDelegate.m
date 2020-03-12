@@ -1,12 +1,12 @@
-//
-//  AppDelegate.m
-//  RCTTest
-//
-//  Created by 童万华 on 2017/6/27.
-//  Copyright © 2017年 童万华. All rights reserved.
-//
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 
 #import "AppDelegate.h"
+<<<<<<< HEAD
 #import "Macro.h"
 #import "Config.h"
 #import "TYLoginViewController.h"
@@ -27,10 +27,19 @@
 //@interface AppDelegate ()<UNUserNotificationCenterDelegate,JPUSHRegisterDelegate>
 //
 //@end
+=======
+
+#import <React/RCTBundleURLProvider.h>
+#import <React/RCTRootView.h>
+>>>>>>> origin/dev
 
 @implementation AppDelegate
 
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+  NSURL *jsCodeLocation;
 
+<<<<<<< HEAD
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     //设置window
@@ -300,5 +309,22 @@
 //    [JPUSHService handleRemoteNotification:userInfo];
 //    NSLog(@"%@",userInfo);
 //}
+=======
+  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+
+  RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
+                                                      moduleName:@"RCTTest"
+                                               initialProperties:nil
+                                                   launchOptions:launchOptions];
+  rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
+
+  self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+  UIViewController *rootViewController = [UIViewController new];
+  rootViewController.view = rootView;
+  self.window.rootViewController = rootViewController;
+  [self.window makeKeyAndVisible];
+  return YES;
+}
+>>>>>>> origin/dev
 
 @end

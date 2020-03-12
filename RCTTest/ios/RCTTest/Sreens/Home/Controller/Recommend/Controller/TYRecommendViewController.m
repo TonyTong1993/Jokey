@@ -12,6 +12,7 @@
 #import "TYHomeUitl.h"
 #import "TYCalculateFrameTool.h"
 #import "TYTestViewController.h"
+#import "UIScrollView+Refresh.h"
 static NSString *reuserIndentifier = @"KTYStatusViewCell";
 @interface TYRecommendViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 @property (nonatomic,strong) UICollectionView *collectionView;
@@ -22,46 +23,52 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpTableView];
+    self.navigationController.view.backgroundColor = [UIColor randomColor];
 }
 -(void)setUpTableView {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+<<<<<<< HEAD
     self.collectionView.accessibilityLabel = @"videoCollection";
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
    _collectionView.contentInset = UIEdgeInsetsMake(0, 0, 125, 0);
+=======
+    _collectionView.dataSource = self;
+    _collectionView.delegate = self;
+    CGFloat bottomOffset = 0.0f;
+    if (@available(iOS 11, *)) {
+       
+        bottomOffset = is_iPhoneX ? (88.0f+83.0f):(49.0f+64.0f);
+        
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = false;
+        bottomOffset = 49.0f+64.0f;
+    }
+    self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, bottomOffset, 0);
+    self.collectionView.scrollIndicatorInsets = self.collectionView.contentInset;
+    
+>>>>>>> origin/dev
     [self.view addSubview:_collectionView];
     
     //设置网络数据下啦刷新
     __weak typeof(self) weakSelf = self;
-    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingBlock:^{
-        
-        [weakSelf loadNewData];
-        
-    }];
     self.collectionView.backgroundColor = HEXCOLOR(0xEFF0F6);
-    [header setImages:self.normalImages forState:MJRefreshStateIdle];
-    [header setImages:self.pullingImages  forState:MJRefreshStatePulling];
-    [header setImages:self.refreshImages  forState:MJRefreshStateRefreshing];
-    header.lastUpdatedTimeLabel.hidden= YES;//如果不隐藏这个会默认 图片在最左边不是在中间
-    header.stateLabel.hidden = YES;
-    self.collectionView.mj_header = header;
-    self.collectionView.mj_header.mj_h = 74;
+    
+    [self.collectionView addHeaderRefreshWithBlock:^{
+        [weakSelf loadNewData];
+    }];
     
     //设置上拉加载更多数据
-    MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        
-        [weakSelf loadMoreData];
-        
-    }];
-    self.collectionView.mj_footer = footer;
-    footer.refreshingTitleHidden = YES;
-    footer.stateLabel.hidden = YES;
-
     
+    [self.collectionView addFooterRefreshWithBlock:^{
+        [weakSelf loadMoreData];
+    }];
+
     [self.collectionView registerNib:[UINib nibWithNibName:@"TYStatusViewCell" bundle:nil] forCellWithReuseIdentifier:reuserIndentifier];
     
     [self.collectionView.mj_header beginRefreshing];
+<<<<<<< HEAD
  
     //ios11 适配
     if (@available(iOS 11.0,*)) {
@@ -70,6 +77,10 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
         _collectionView.scrollIndicatorInsets = _collectionView.contentInset;
     }
    
+=======
+    
+    
+>>>>>>> origin/dev
 }
 
 
@@ -117,8 +128,16 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
     NSDictionary *dataDict = dict[@"data"];
+<<<<<<< HEAD
     NSArray *list = [dataDict valueForKey:@"list"];
     NSArray *dataSource =  [NSArray modelArrayWithClass:[TYModelTest class] json:list];
+=======
+    NSMutableArray *dataSource = [NSMutableArray array];
+    for (int i = 0; i<5; i++) {
+         NSMutableArray *datas = [TYModelTest mj_objectArrayWithKeyValuesArray:dataDict[@"list"]];
+        [dataSource addObjectsFromArray:datas];
+    }
+>>>>>>> origin/dev
     self.dataSource = dataSource;
     [self.collectionView.mj_header endRefreshing];
     [self.collectionView reloadData];

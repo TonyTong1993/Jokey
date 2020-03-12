@@ -9,95 +9,102 @@
 #import "UIImage+Extentions.h"
 
 @implementation UIImage (Extentions)
-
-//FIXME:需要进行大量测试
-+(UIImage *)screenShot{
- //获取根视图控制器
-  UIWindow *keyWindow = [[UIApplication sharedApplication].delegate window];
-  UIView *screen = keyWindow.rootViewController.view ;
-    return [UIImage imageWithView:screen];
-}
-
-+(UIImage *)imageWithView:(UIView *)view {
-    CGSize size = view.frame.size;
-    UIGraphicsBeginImageContextWithOptions(size,NO, [UIScreen mainScreen].scale*2);
-    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
-}
-
--(UIImage *)drawLogo:(UIImage *)logo position:(CGPoint)position {
+- (UIImage *)imageByApplyingAlpha:(CGFloat) alpha {
+    UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0f);
     
-    UIGraphicsBeginImageContextWithOptions(self.size, NO, [UIScreen mainScreen].scale*2);
-    //绘制原图
-    [self drawInRect:CGRectMake(0, 0, self.size.width, self.size.height)];
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGRect area = CGRectMake(0, 0, self.size.width, self.size.height);
     
-    //绘制Logo
-    [logo drawAtPoint:position];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+    CGContextScaleCTM(ctx, 1, -1);
+    CGContextTranslateCTM(ctx, 0, -area.size.height);
     
-    return image;
-}
-
--(UIImage *)drawText:(NSString *)text position:(CGPoint)position attributes:(NSDictionary *)attributes{
-    UIGraphicsBeginImageContextWithOptions(self.size, NO, [UIScreen mainScreen].scale*2);
-    //绘制原图
-    [self drawInRect:CGRectMake(0, 0, self.size.width, self.size.height)];
-
-    //绘制Logo
-    [text drawAtPoint:position withAttributes:attributes];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+    CGContextSetBlendMode(ctx, kCGBlendModeMultiply);
     
-    return image;
-}
-
--(UIImage *)cornerRadius:(CGFloat)radius {
-    UIGraphicsBeginImageContextWithOptions(self.size, NO, [UIScreen mainScreen].scale*2);
-    //绘制原图
-  
-    UIBezierPath *bezierPath =[UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, self.size.width, self.size.height) cornerRadius:radius];
-    [bezierPath addClip];
-    [self drawInRect:CGRectMake(0, 0, self.size.width, self.size.height)];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
-}
--(UIImage *)cornerRadius:(CGFloat)radius withRoundingCorners:(UIRectCorner)corners {
-    UIGraphicsBeginImageContextWithOptions(self.size, NO, [UIScreen mainScreen].scale*2);
-    //绘制原图
-    UIBezierPath *bezierPath =[UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, self.size.width, self.size.height) byRoundingCorners:corners cornerRadii:CGSizeMake(radius, radius)];
-    [bezierPath addClip];
-    [self drawInRect:CGRectMake(0, 0, self.size.width, self.size.height)];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
-}
-
-
-+(UIImage*) OriginImage:(UIImage *)image scaleToSize:(CGSize)size
-{
-    UIGraphicsBeginImageContext(size);  //size 为CGSize类型，即你所需要的图片尺寸
+    CGContextSetAlpha(ctx, alpha);
     
-    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    CGContextDrawImage(ctx, area, self.CGImage);
     
-    UIImage* scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     
     UIGraphicsEndImageContext();
     
-    return scaledImage;   //返回的就是已经改变的图片
+    return newImage;
 }
-+(UIImage *)singleLineImageWithColor:(UIColor *)color{
-    CGRect rect=CGRectMake(0.0f, 0.0f, 1/[UIScreen mainScreen].scale,1/[UIScreen mainScreen].scale);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, [color CGColor]);
-    CGContextFillRect(context, rect);
-    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return theImage;
+
+
+@end
+
+@implementation UIImage (Photo)
+- (UIImage *)fixOrientation {
+    if (self.imageOrientation == UIImageOrientationUp) return self;
+    
+    CGAffineTransform transform = CGAffineTransformIdentity;
+    
+    switch (self.imageOrientation) {
+        case UIImageOrientationDown:
+        case UIImageOrientationDownMirrored:
+            transform = CGAffineTransformTranslate(transform, self.size.width, self.size.height);
+            transform = CGAffineTransformRotate(transform, M_PI);
+            break;
+            
+        case UIImageOrientationLeft:
+        case UIImageOrientationLeftMirrored:
+            transform = CGAffineTransformTranslate(transform, self.size.width, 0);
+            transform = CGAffineTransformRotate(transform, M_PI_2);
+            break;
+            
+        case UIImageOrientationRight:
+        case UIImageOrientationRightMirrored:
+            transform = CGAffineTransformTranslate(transform, 0, self.size.height);
+            transform = CGAffineTransformRotate(transform, -M_PI_2);
+            break;
+        default:
+            break;
+    }
+    
+    switch (self.imageOrientation) {
+        case UIImageOrientationUpMirrored:
+        case UIImageOrientationDownMirrored:
+            transform = CGAffineTransformTranslate(transform, self.size.width, 0);
+            transform = CGAffineTransformScale(transform, -1, 1);
+            break;
+            
+        case UIImageOrientationLeftMirrored:
+        case UIImageOrientationRightMirrored:
+            transform = CGAffineTransformTranslate(transform, self.size.height, 0);
+            transform = CGAffineTransformScale(transform, -1, 1);
+            break;
+        default:
+            break;
+    }
+    
+    // Now we draw the underlying CGImage into a new context, applying the transform
+    // calculated above.
+    CGContextRef ctx = CGBitmapContextCreate(NULL, self.size.width, self.size.height,
+                                             CGImageGetBitsPerComponent(self.CGImage), 0,
+                                             CGImageGetColorSpace(self.CGImage),
+                                             CGImageGetBitmapInfo(self.CGImage));
+    CGContextConcatCTM(ctx, transform);
+    switch (self.imageOrientation) {
+        case UIImageOrientationLeft:
+        case UIImageOrientationLeftMirrored:
+        case UIImageOrientationRight:
+        case UIImageOrientationRightMirrored:
+            // Grr...
+            CGContextDrawImage(ctx, CGRectMake(0,0,self.size.height,self.size.width), self.CGImage);
+            break;
+            
+        default:
+            CGContextDrawImage(ctx, CGRectMake(0,0,self.size.width,self.size.height), self.CGImage);
+            break;
+    }
+    
+    // And now we just create a new UIImage from the drawing context
+    CGImageRef cgimg = CGBitmapContextCreateImage(ctx);
+    UIImage *img = [UIImage imageWithCGImage:cgimg];
+    CGContextRelease(ctx);
+    CGImageRelease(cgimg);
+    return img;
     
 }
 @end

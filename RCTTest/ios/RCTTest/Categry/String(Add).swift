@@ -9,7 +9,7 @@
 import Foundation
 
 extension String {
-    func size(attributes:[String:Any]?) -> CGSize{
+    func size(attributes:[NSAttributedString.Key:Any]?) -> CGSize{
         let string = self as NSString
         return  string.boundingRect(with:  CGSize(width: CGFloat(MAXFLOAT), height: CGFloat(MAXFLOAT)),
                                     options:[.usesLineFragmentOrigin,.usesFontLeading],

@@ -20,13 +20,15 @@
 -(instancetype)init {
     self = [super init];
     if (self) {
-       NSString *dbPath = [Root_Path stringByAppendingPathComponent:@"com.joeky.db"];
-        _db = [FMDatabase databaseWithPath:dbPath];
-        BOOL open = [_db open];
+       NSString *dbPath = [[SandBoxHelper docPath] stringByAppendingPathComponent:@"com.joeky.db"];
+        _dbQueue = [FMDatabaseQueue databaseQueueWithPath:dbPath];
+        BOOL open = [_dbQueue openFlags];
         NSAssert(open, @"打开数据库失败");
-        NSString *sql = @"create table if not exists user_track_table (id INTEGER PRIMARY KEY AUTOINCREMENT, latitude double,longitude double)";
-       BOOL success =  [_db executeUpdate:sql];
-       NSAssert(success, @"创建user_track失败");
+        NSString *sql = @"create table if not exists user_track_table (id INTEGER PRIMARY KEY AUTOINCREMENT, latitude double,longitude double,altitude double,horizontalAccuracy double,verticalAccuracy double,speed double,timestamp int)";
+        [_dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
+            BOOL success =  [db executeUpdate:sql];
+            NSAssert(success, @"创建user_track失败");
+        }];
     }
     return self;
 }

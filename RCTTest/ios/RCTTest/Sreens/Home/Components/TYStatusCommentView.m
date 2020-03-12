@@ -21,10 +21,13 @@
         _bgView = [[UIImageView alloc] init];
         _bgView.image = [UIImage imageNamed:@"bg_best_reply_150x62_"];
         _upBtn = [[UIButton alloc] init];
+        _upBtn.opaque = YES;
         [_upBtn setImage:[UIImage imageNamed:@"best_reply_like_12x12_"] forState:UIControlStateNormal];
         _downBtn = [[UIButton alloc] init];
+        _downBtn.opaque = YES;
          [_downBtn setImage:[UIImage imageNamed:@"best_reply_hate_12x12_"] forState:UIControlStateNormal];
         _countLabel = [[UILabel alloc] init];
+        _countLabel.opaque = YES;
         _countLabel.font = [UIFont fontWithName:[TYTheme themeFontFamilyName] size:11];
         _countLabel.textColor = HEXCOLOR(themeColorHexValue);
         _countLabel.text = @"2048";

@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:CrashAnalysis/CrashAnalysis.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Muti-Thread/Muti-Thread.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MemoryManager/MemoryManager.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:RCTTest.xcodeproj">
    </FileRef>
    <FileRef

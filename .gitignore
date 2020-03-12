@@ -5,6 +5,7 @@
 # Xcode
 #
 build/
+RCTTest/ios/Pods/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -21,11 +22,16 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
+<<<<<<< HEAD
 
 #.gitignore  
 # ignore cocoaPods  
 /Pods  
 
+=======
+Pods/
+export PATH=$OCLINT_HOME/bin:$PATH
+>>>>>>> origin/dev
 # Android/IntelliJ
 #
 build/

@@ -1,0 +1,34 @@
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.8	//
+module.exports.onePixel	Config.js	/^   onePixel:onePixel$/;"	p
+module.exports.screen_height	Config.js	/^   screen_height:screen_height,$/;"	p
+module.exports.screen_width	Config.js	/^   screen_width:screen_width,$/;"	p
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+this.state.selectedTab	TabBarIOS-NavigatorIOS.js	/^      selectedTab:'首页'$/;"	p
+this.state.selectedTab	TabNavigator.js	/^      selectedTab:'home'$/;"	p
+state.text	components/SearchHeader.js	/^    this.state = { text: 'Useless Placeholder' };$/;"	p
+styles	components/SwiperView.js	/^var styles = StyleSheet.create({$/;"	v
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+class.drawerIcon	pages/CGBookPage.js	/^     drawerIcon: ({ focused,tintColor}) => ($/;"	p
+class.drawerLabel	pages/CGBookPage.js	/^    drawerLabel: '智慧结晶',$/;"	p
+drawerIcon	pages/CGFruitPage.js	/^    drawerIcon: ({ focused,tintColor }) => ($/;"	p
+drawerLabel	pages/CGFruitPage.js	/^    drawerLabel: '美味水果',$/;"	p
+class.drawerIcon	pages/CGRecommendPage.js	/^     drawerIcon: ({ focused,tintColor }) => ($/;"	p
+class.drawerLabel	pages/CGRecommendPage.js	/^    drawerLabel: '推荐内容',$/;"	p
+super.state.pulling	pages/HomePage.js	/^      pulling:false$/;"	p
+Component.state.pulling	pages/ShopPage.js	/^      pulling:false$/;"	p
+class.Component.title	test-pages/react-navigation-class/navigation-class01.js	/^    title: 'SecondScreen',$/;"	p
+from.Component.title	test-pages/react-navigation-class/navigation-class01.js	/^    title: 'Welcome',$/;"	p
+from.Component.title	test-pages/react-navigation-class/navigation-class02.js	/^    title: '通讯录',$/;"	p
+state.name	test-pages/react-navigation-class/navigation-class02.js	/^      name:''$/;"	p
+MianTabNavigator.navigationOptions.title	test-pages/react-navigation-class/navigation-class03.js	/^  title: 'My Chats',$/;"	p
+from.Component.title	test-pages/react-navigation-class/navigation-class03.js	/^    title: '通讯录',$/;"	p
+state.name	test-pages/react-navigation-class/navigation-class03.js	/^      name:''$/;"	p
+from.Component.title	test-pages/react-navigation-class/navigation-class04.js	/^    title: '通讯录',$/;"	p
+state.name	test-pages/react-navigation-class/navigation-class04.js	/^      name:''$/;"	p
+class.Component.drawerIcon	test-pages/react-navigation-class/navigation-class10.js	/^    drawerIcon: ({ tintColor }) => ($/;"	p
+class.Component.drawerLabel	test-pages/react-navigation-class/navigation-class10.js	/^    drawerLabel: 'Notifications',$/;"	p
+from.Component.drawerIcon	test-pages/react-navigation-class/navigation-class10.js	/^    drawerIcon: ({ tintColor }) => ($/;"	p
+from.Component.drawerLabel	test-pages/react-navigation-class/navigation-class10.js	/^    drawerLabel: 'Home',$/;"	p

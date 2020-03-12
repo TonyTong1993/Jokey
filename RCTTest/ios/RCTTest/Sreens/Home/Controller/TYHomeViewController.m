@@ -10,26 +10,43 @@
 #import "TYNetWorkingTool.h"
 #import "TYSegmentView.h"
 #import "TYRecommendViewController.h"
+<<<<<<< HEAD
 #import "TYTestViewController.h"
+=======
+
+#import "TYOCTestListViewController.h"
+/*测试相册功能*/
+#import "TYPhotoCollectionViewController.h"
+#import "TYPhotoAlbumViewController.h"
+/*测试webView*/
+#import "CustomWebViewController.h"
+>>>>>>> origin/dev
 @interface TYHomeViewController ()<TYSegmentControlDelegate,UIScrollViewDelegate>
 @property (nonatomic,strong) UIScrollView *scrollView;
 @property (nonatomic,strong) TYSegmentView *segmentView;
+@property (nonatomic,strong) NSMutableDictionary *pageCache;
 @end
 
 @implementation TYHomeViewController
-
+#pragma mark---Getter and Setter
+-(NSMutableDictionary *)pageCache {
+    if (!_pageCache) {
+        _pageCache = [NSMutableDictionary dictionaryWithCapacity:3];
+    }
+    return _pageCache;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     NSArray *titles = @[@"推荐",@"视频",@"图文"];
     TYSegmentView *segmentView = [[TYSegmentView alloc] initWithTitles:titles];
     
-    [segmentView setTitleFont:[UIFont fontWithName:[TYTheme themeFontFamilyName] size:16]];
-    [segmentView setTitleColor:HEXCOLOR(0x333333) state:SegmentControlStateNormal];
-    [segmentView setTitleColor:HEXCOLOR(0x55B1E6) state:SegmentControlStateSelected];
+    [segmentView setTitleFont:[UIFont systemFontOfSize:16]];
+    [segmentView setTitleColor:HEXCOLOR(textTint) state:SegmentControlStateNormal];
+    [segmentView setTitleColor:HEXCOLOR(themeColorHexValue) state:SegmentControlStateSelected];
     segmentView.delegate = self;
     [segmentView setSelectedItemIndex:0];
-    [segmentView setIndicatorBackgroundColor:HEXCOLOR(0x55B1E6)];
+    [segmentView setIndicatorBackgroundColor:HEXCOLOR(themeColorHexValue)];
     self.navigationItem.titleView = segmentView;
     self.segmentView = segmentView;
     [self setUpTableView];
@@ -37,6 +54,7 @@
     
    
     
+<<<<<<< HEAD
 //    TBCityIconInfo *iconInfo = TBCityIconInfoMake(@"\U0000e6df", 24, [UIColor randomColor]);
 //    UIImage *image = [UIImage iconWithInfo:iconInfo];
 //
@@ -48,37 +66,47 @@
 -(void)handleClick {
     TYTestViewController *testVC = [[TYTestViewController alloc] init];
     [self.navigationController pushViewController:testVC animated:YES];
-}
--(void)setUpTableView {
-    self.automaticallyAdjustsScrollViewInsets = false;
+=======
+    TBCityIconInfo *iconInfo = TBCityIconInfoMake(@"\U0000e6df", 36, [UIColor randomColor]);
+    UIImage *image = [UIImage iconWithInfo:iconInfo];
     
-    CGFloat width = self.view.frame.size.width;
-    CGFloat height = self.view.frame.size.height-64-49;
+    UIBarButtonItem *rightBtn = [UIBarButtonItem barBtnItemWithNormalIcon:image highlightIcon:image target:self action:@selector(handleRightItemClick)];
+    self.navigationItem.rightBarButtonItem = rightBtn;
+    
+>>>>>>> origin/dev
+}
+
+-(void)setUpTableView {
     //设置scrollView
-    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     self.scrollView.pagingEnabled = YES;
     self.scrollView.showsVerticalScrollIndicator = false;
     self.scrollView.showsHorizontalScrollIndicator = false;
     self.scrollView.delegate = self;
     self.scrollView.bounces = false;
     [self.view addSubview:_scrollView];
-    
-    for (int i  = 0; i < 3; i++) {
+    NSUInteger count = 3;
+    CGFloat height = self.view.bounds.size.height;
+    self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH*count, height);
+    [self renderSegmentViewWithIndex:0];
+
+}
+-(void)renderSegmentViewWithIndex:(NSInteger)index {
+     NSString *keyString = [NSString stringWithFormat:@"%ld",(long)index];
+     NSString *className = [self.pageCache valueForKey:keyString];
+    if (!className) {
         TYRecommendViewController *vc = [[TYRecommendViewController alloc] init];
         [self addChildViewController:vc];
-    }
-    CGFloat startX = 0;
-    CGFloat startY = 0;
-    NSUInteger index = 0;
-    NSUInteger count = self.childViewControllers.count;
-    self.scrollView.contentSize = CGSizeMake(width*count, height);
-    for (UIViewController *viewController in self.childViewControllers) {
-        startX = index*width;
-        UIView *view =  viewController.view;
+        CGFloat width = self.view.bounds.size.width;
+        CGFloat height = self.view.bounds.size.height;
+        CGFloat startX = index*width;
+        CGFloat startY = 0;
+        UIView *view =  vc.view;
         view.frame = CGRectMake(startX, startY, width, height);
         [self.scrollView addSubview:view];
-        index++;
+        [self.pageCache setValue:NSStringFromClass([TYRecommendViewController class]) forKey:keyString];
     }
+
 }
 
 #pragma mark---
@@ -86,15 +114,14 @@
 -(void)segmentConrol:(UIView *)segmentView didSelectedItemAtIndex:(NSUInteger)index {
       CGFloat width = self.scrollView.frame.size.width;
     [self.scrollView setContentOffset:CGPointMake(width*index, 0) animated:false];
+    
+    [self renderSegmentViewWithIndex:index];
+    
 }
 #pragma mark---
 #pragma mark---UIScrollViewDelegate
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
-   
     [self.segmentView setIndicatorViewScrollOffSetX:scrollView];
-    
-    
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate;
@@ -110,6 +137,15 @@
 {
     int index = scrollView.contentOffset.x / scrollView.frame.size.width;
     [self.segmentView updateSelectedItemIndex:index];
+    [self renderSegmentViewWithIndex:index];
     
+    
+}
+#pragma Private Method
+
+-(void)handleRightItemClick {
+    TYPhotoCollectionViewController *testPhotoAlbum = [[TYPhotoCollectionViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:testPhotoAlbum];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 @end

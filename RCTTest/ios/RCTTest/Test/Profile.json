@@ -11,7 +11,7 @@
              {"icon":"icon","title":"NOW直播","className":"className"},
              {"icon":"icon","title":"热门活动","className":"className"}],
             [
-             {"icon":"icon","title":"运动","className":"TYRunViewController"},
+             {"icon":"icon","title":"运动","className":"TYRunningViewController"},
              {"icon":"icon","title":"吃喝玩乐","className":"className"},
              {"icon":"icon","title":"同城服务","className":"className"},
              ],

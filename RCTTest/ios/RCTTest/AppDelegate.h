@@ -1,17 +1,14 @@
-//
-//  AppDelegate.h
-//  RCTTest
-//
-//  Created by 童万华 on 2017/6/27.
-//  Copyright © 2017年 童万华. All rights reserved.
-//
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 
 #import <UIKit/UIKit.h>
-#import "TYTabBarController.h"
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
-
+@property (nonatomic, strong) UIWindow *window;
 
 @end
-

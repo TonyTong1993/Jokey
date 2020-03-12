@@ -12,10 +12,17 @@
 #import "TYShopViewController.h"
 #import "TYProfileViewModel.h"
 #import "TYRunViewController.h"
+<<<<<<< HEAD
 //#import <CodePush/CodePush.h>
 //#import <EaseUI/EaseMessageViewController.h>
 @interface TYProfileViewController ()
+=======
+>>>>>>> origin/dev
 
+@interface TYProfileViewController ()
+{
+    NSTimeInterval time;
+}
 @end
 
 @implementation TYProfileViewController
@@ -25,7 +32,33 @@
     [self setUpTableView];
     //添加测试数据
     NSDictionary *jsonDict = [NSBundle loadJsonFromBundle:@"Profile"];
+<<<<<<< HEAD
     self.dataSource = [NSArray modelArrayWithClass:[TYProfileViewModel class] json:jsonDict];//[TYProfileViewModel mj_objectArrayWithKeyValuesArray:jsonDict[@"data"]];
+=======
+    self.dataSource = [TYProfileViewModel mj_objectArrayWithKeyValuesArray:jsonDict[@"data"]];
+    
+//  NSTimer *timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(scheduledTimer) userInfo:nil repeats:false];
+//  [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+//    time = 0;
+//    [timer fire];
+    
+ 
+
+}
+
+
+
+-(void)scheduledTimer {
+  
+   TYProfileViewModel *model = [[self.dataSource firstObject] firstObject];
+   NSString *title = [NSString stringWithFormat:@"-----%lf",time++];
+    model.title = title;
+    NSLog(@"%@",[NSThread currentThread]);
+//   NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+//    });
+>>>>>>> origin/dev
 }
 
 -(void)setUpTableView {
@@ -35,7 +68,7 @@
     self.tableView.mj_header = nil;
     [self.tableView.mj_footer removeFromSuperview];
     self.tableView.mj_footer = nil;
-    self.tableView.backgroundColor = HEXCOLOR(0xf5f5f5);
+    self.tableView.backgroundColor = HEXCOLOR(backgroundColorHexValue);
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.dataSource.count;
@@ -68,6 +101,7 @@
      TYProfileViewModel *model = self.dataSource[indexPath.section][indexPath.row];
     UIViewController *VC;
     if ([model.className isEqualToString:@"TYShopViewController"]) {
+<<<<<<< HEAD
         NSURL *jsCodeLocation;
 #ifdef DEBUG
        jsCodeLocation = [NSURL URLWithString:@"http://192.168.10.50:8081/index.ios.bundle?platform=ios"];
@@ -75,12 +109,18 @@
 #else
         jsCodeLocation = [CodePush bundleURL];
 #endif
+=======
+//         NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+        NSURL *jsCodeLocation = [NSURL URLWithString:@"http://192.168.0.104:8081/index.ios.bundle?platform=ios"];
+>>>>>>> origin/dev
         RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:@"test" initialProperties:@{} launchOptions:nil];
         TYShopViewController *vc = [[TYShopViewController alloc] init];
         vc.view = rootView;
         VC = vc;
-    }else if ([model.className isEqualToString:@"TYRunViewController"]) {
-        VC = [[TYRunViewController alloc] init];
+    }else if ([model.className isEqualToString:@"TYRunningViewController"]) {
+        
+        VC = [[NSClassFromString(model.className) alloc] init];
+        VC.title = @"运动";
     }else {
 //        EaseMessageViewController *chatController = [[EaseMessageViewController alloc] initWithConversationChatter:@"19011100528" conversationType:EMConversationTypeChat];
 //       VC = chatController;

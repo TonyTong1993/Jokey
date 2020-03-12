@@ -43,7 +43,7 @@ class TYAttentionViewController: TYBaseViewController,TYSegmentViewDelegate {
             vc.view.backgroundColor = UIColor.green
             vc.view.frame = CGRect(x: CGFloat(i)*width, y: 0, width: width, height: height)
             scrollView.addSubview(vc.view)
-            addChildViewController(vc)
+            addChild(vc)
         }
         
     }

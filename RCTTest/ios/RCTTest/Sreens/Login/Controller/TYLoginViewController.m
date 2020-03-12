@@ -32,7 +32,7 @@
     self.atextField = atextField;
     UILabel *aLabel = [[UILabel alloc] init];
     aLabel.font = [UIFont fontWithName:[TYTheme themeFontFamilyName] size:14];
-    aLabel.textColor  = HEXCOLOR(0x333);
+    aLabel.textColor  = HEXCOLOR(textTint);
     aLabel.text = @"账号:";
     
     UIStackView *astackView = [[UIStackView alloc] initWithFrame:CGRectMake(0, 0, 250, 50)];
@@ -122,8 +122,13 @@
     //修改hud样式
 
     //显示hud
+<<<<<<< HEAD
     [hud show:YES];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+=======
+    [hud showAnimated:YES];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+>>>>>>> origin/dev
         //隐藏hud
         [hud hide:true];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:APP_Login_Key];
@@ -144,6 +149,12 @@
         TYTabBarController *rootVC = [[TYTabBarController alloc] init];
         window.rootViewController = rootVC;
         [window makeKeyAndVisible];
+        
+        CATransition *transition = [CATransition animation];
+        transition.type = kCATransitionPush;
+        transition.subtype = kCATransitionFromLeft;
+        transition.duration = 0.3f;
+        [window.layer addAnimation:transition forKey:@"revealAnimation"];
     });
     
     

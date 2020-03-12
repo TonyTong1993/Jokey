@@ -51,14 +51,22 @@ class TYDiscoverViewController: TYBaseViewController,SDCycleScrollViewDelegate {
         cycleScrollView?.autoScrollTimeInterval = 3.0
         tableView.tableHeaderView = cycleScrollView
         tableView.rowHeight = 80
+        var bottomOffest:CGFloat = 0.0
         //注册cell
         self.tableView.register(UINib.init(nibName: "TYTopicCell", bundle: nil), forCellReuseIdentifier: "KTYTopicCell")
+        if #available(iOS 11, *) {
+            bottomOffest = (UIScreen.main.bounds.size.width == 375.0 && UIScreen.main.bounds.size.height == 812.0) ?(88.0 + 83.0):(64.0 + 49.0)
+        } else {
+            bottomOffest = 64.0 + 49.0
+        }
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: bottomOffest, right: 0)
+        tableView.scrollIndicatorInsets = tableView.contentInset;
        
     }
     override func loadNewData() {
-      self.tableView.mj_header.endRefreshing()
+
       self.dataSource = [
-        ["id":118719,"topic":"求大神P图","cover":95444072,"addition":"429801个P图大神"],
+            ["id":118719,"topic":"求大神P图","cover":95444072,"addition":"429801个P图大神"],
             ["id":101883,"topic":"八卦来了","cover":151512301,"addition":"242166个吃瓜群众"],
             ["id":104785,"topic":"古风小院","cover":152261001,"addition":"283295个古庭友"],
             ["id":101666,"topic":"那个叫学校的地方","cover":13864278,"addition":"418926个同学"],
@@ -74,7 +82,7 @@ class TYDiscoverViewController: TYBaseViewController,SDCycleScrollViewDelegate {
 
     }
     override func loadMoreData() {
-       self.tableView.mj_footer.endRefreshing()
+
      
     }
 

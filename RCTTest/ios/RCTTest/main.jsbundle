@@ -1241,6 +1241,7 @@ var _app = require(45         ); // 45 = ./src/app
 
 var _app2 = babelHelpers.interopRequireDefault(_app);
 
+<<<<<<< HEAD
 var _reactRedux = require(517          ); // 517 = react-redux
 
 var _configStore = require(553                ); // 553 = ./src/configStore
@@ -1248,6 +1249,15 @@ var _configStore = require(553                ); // 553 = ./src/configStore
 var _configStore2 = babelHelpers.interopRequireDefault(_configStore);
 
 var _LoginAction = require(564                        ); // 564 = ./src/actions/LoginAction
+=======
+var _reactRedux = require(510          ); // 510 = react-redux
+
+var _configStore = require(546                ); // 546 = ./src/configStore
+
+var _configStore2 = babelHelpers.interopRequireDefault(_configStore);
+
+var _LoginAction = require(557                        ); // 557 = ./src/actions/LoginAction
+>>>>>>> origin/dev
 
 var _reactNative = require(46            ); // 46 = react-native
 
@@ -53138,6 +53148,7 @@ var _reactNative = require(46            ); // 46 = react-native
 
 var _reactNavigation = require(426               ); // 426 = react-navigation
 
+<<<<<<< HEAD
 var _SearchHeader = require(493                        ); // 493 = ./components/SearchHeader
 
 var _SearchHeader2 = babelHelpers.interopRequireDefault(_SearchHeader);
@@ -53161,6 +53172,31 @@ var _ProfilePage = require(515                     ); // 515 = ./pages/ProfilePa
 var _ProfilePage2 = babelHelpers.interopRequireDefault(_ProfilePage);
 
 var _SearchPage = require(516                    ); // 516 = ./pages/SearchPage.js
+=======
+var _SearchHeader = require(486                        ); // 486 = ./components/SearchHeader
+
+var _SearchHeader2 = babelHelpers.interopRequireDefault(_SearchHeader);
+
+var _Config = require(487       ); // 487 = ./Config
+
+var _HomePage = require(491                  ); // 491 = ./pages/HomePage.js
+
+var _HomePage2 = babelHelpers.interopRequireDefault(_HomePage);
+
+var _CategoryPage = require(498                      ); // 498 = ./pages/CategoryPage.js
+
+var _CategoryPage2 = babelHelpers.interopRequireDefault(_CategoryPage);
+
+var _CartPage = require(507                  ); // 507 = ./pages/CartPage.js
+
+var _CartPage2 = babelHelpers.interopRequireDefault(_CartPage);
+
+var _ProfilePage = require(508                     ); // 508 = ./pages/ProfilePage.js
+
+var _ProfilePage2 = babelHelpers.interopRequireDefault(_ProfilePage);
+
+var _SearchPage = require(509                    ); // 509 = ./pages/SearchPage.js
+>>>>>>> origin/dev
 
 var _SearchPage2 = babelHelpers.interopRequireDefault(_SearchPage);
 
@@ -53328,6 +53364,7 @@ module.exports = {
   },
 
   get createNavigator() {
+<<<<<<< HEAD
     return require(433                           ).default; // 433 = ./navigators/createNavigator
   },
   get StackNavigator() {
@@ -53389,6 +53426,69 @@ module.exports = {
 
   get withNavigation() {
     return require(491                     ).default; // 491 = ./views/withNavigation
+=======
+    return require(425                           ).default; // 425 = ./navigators/createNavigator
+  },
+  get StackNavigator() {
+    return require(426                          ).default; // 426 = ./navigators/StackNavigator
+  },
+  get TabNavigator() {
+    return require(461                        ).default; // 461 = ./navigators/TabNavigator
+  },
+  get DrawerNavigator() {
+    return require(477                           ).default; // 477 = ./navigators/DrawerNavigator
+  },
+
+  get StackRouter() {
+    return require(452                    ).default; // 452 = ./routers/StackRouter
+  },
+  get TabRouter() {
+    return require(462                  ).default; // 462 = ./routers/TabRouter
+  },
+
+  get Transitioner() {
+    return require(449                   ).default; // 449 = ./views/Transitioner
+  },
+  get CardStackTransitioner() {
+    return require(427                                      ).default; // 427 = ./views/CardStack/CardStackTransitioner
+  },
+  get CardStack() {
+    return require(428                          ).default; // 428 = ./views/CardStack/CardStack
+  },
+  get Card() {
+    return require(430                     ).default; // 430 = ./views/CardStack/Card
+  },
+
+  get Header() {
+    return require(433                    ).default; // 433 = ./views/Header/Header
+  },
+  get HeaderTitle() {
+    return require(434                         ).default; // 434 = ./views/Header/HeaderTitle
+  },
+  get HeaderBackButton() {
+    return require(435                              ).default; // 435 = ./views/Header/HeaderBackButton
+  },
+
+  get DrawerView() {
+    return require(479                        ).default; // 479 = ./views/Drawer/DrawerView
+  },
+  get DrawerItems() {
+    return require(484                                  ).default; // 484 = ./views/Drawer/DrawerNavigatorItems
+  },
+
+  get TabView() {
+    return require(463                      ).default; // 463 = ./views/TabView/TabView
+  },
+  get TabBarTop() {
+    return require(474                        ).default; // 474 = ./views/TabView/TabBarTop
+  },
+  get TabBarBottom() {
+    return require(476                           ).default; // 476 = ./views/TabView/TabBarBottom
+  },
+
+  get withNavigation() {
+    return require(485                     ).default; // 485 = ./views/withNavigation
+>>>>>>> origin/dev
   }
 };
 }, 426, null, "react-navigation/src/react-navigation.js");
@@ -53402,11 +53502,15 @@ var _react = require(12     ); // 12 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
+<<<<<<< HEAD
 var _invariant = require(428                ); // 428 = ./utils/invariant
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
 
 var _PlatformHelpers = require(429                ); // 429 = ./PlatformHelpers
+=======
+var _PlatformHelpers = require(420                ); // 420 = ./PlatformHelpers
+>>>>>>> origin/dev
 
 var _NavigationActions = require(430                  ); // 430 = ./NavigationActions
 
@@ -53485,7 +53589,9 @@ function createNavigationContainer(Component) {
 
         var keys = Object.keys(containerProps);
 
-        (0, _invariant2.default)(keys.length === 0, 'This navigator has both navigation and container props, so it is ' + ('unclear if it should own its own state. Remove props: "' + keys.join(', ') + '" ') + 'if the navigator should get its state from the navigation prop. If the ' + 'navigator should maintain its own state, do not pass a navigation prop.');
+        if (keys.length !== 0) {
+          throw new Error('This navigator has both navigation and container props, so it is ' + ('unclear if it should own its own state. Remove props: "' + keys.join(', ') + '" ') + 'if the navigator should get its state from the navigation prop. If the ' + 'navigator should maintain its own state, do not pass a navigation prop.');
+        }
       }
     }, {
       key: '_urlToPathAndParams',
@@ -53738,7 +53844,11 @@ __d(/* react-navigation/src/StateUtils.js */function(global, require, module, ex
   value: true
 });
 
+<<<<<<< HEAD
 var _invariant = require(428                ); // 428 = ./utils/invariant
+=======
+var _invariant = require(424                ); // 424 = ./utils/invariant
+>>>>>>> origin/dev
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
 
@@ -53847,11 +53957,56 @@ var StateUtils = {
 };
 
 exports.default = StateUtils;
+<<<<<<< HEAD
 }, 432, null, "react-navigation/src/StateUtils.js");
 __d(/* react-navigation/src/navigators/createNavigator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var _jsxFileName = 'H:\\git-project\\Jokey\\RCTTest\\node_modules\\react-navigation\\src\\navigators\\createNavigator.js';
+=======
+}, 423, null, "react-navigation/src/StateUtils.js");
+__d(/* react-navigation/src/utils/invariant.js */function(global, require, module, exports) {
+
+'use strict';
+
+var validateFormat = function validateFormat(format) {};
+
+if (__DEV__) {
+  validateFormat = function validateFormat(format) {
+    if (format === undefined) {
+      throw new Error('invariant requires an error message argument');
+    }
+  };
+}
+
+function invariant(condition, format, a, b, c, d, e, f) {
+  validateFormat(format);
+
+  if (!condition) {
+    var error;
+    if (format === undefined) {
+      error = new Error('Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.');
+    } else {
+      var args = [a, b, c, d, e, f];
+      var argIndex = 0;
+      error = new Error(format.replace(/%s/g, function () {
+        return args[argIndex++];
+      }));
+      error.name = 'Invariant Violation';
+    }
+
+    error.framesToPop = 1;
+    throw error;
+  }
+}
+
+module.exports = invariant;
+}, 424, null, "react-navigation/src/utils/invariant.js");
+__d(/* react-navigation/src/navigators/createNavigator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = '/Users/tongwanhua/Desktop/Jokey/RCTTest/node_modules/react-navigation/src/navigators/createNavigator.js';
+>>>>>>> origin/dev
 exports.default = createNavigator;
 
 var _react = require(12     ); // 12 = react
@@ -53890,7 +54045,11 @@ function createNavigator(router, routeConfigs, navigatorConfig, navigatorType) {
     return Navigator;
   };
 }
+<<<<<<< HEAD
 }, 433, null, "react-navigation/src/navigators/createNavigator.js");
+=======
+}, 425, null, "react-navigation/src/navigators/createNavigator.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/navigators/StackNavigator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -53904,6 +54063,7 @@ var _createNavigationContainer = require(427                           ); // 427
 
 var _createNavigationContainer2 = babelHelpers.interopRequireDefault(_createNavigationContainer);
 
+<<<<<<< HEAD
 var _createNavigator = require(433                ); // 433 = ./createNavigator
 
 var _createNavigator2 = babelHelpers.interopRequireDefault(_createNavigator);
@@ -53917,6 +54077,21 @@ var _StackRouter = require(458                     ); // 458 = ../routers/StackR
 var _StackRouter2 = babelHelpers.interopRequireDefault(_StackRouter);
 
 var _NavigatorTypes = require(466               ); // 466 = ./NavigatorTypes
+=======
+var _createNavigator = require(425                ); // 425 = ./createNavigator
+
+var _createNavigator2 = babelHelpers.interopRequireDefault(_createNavigator);
+
+var _CardStackTransitioner = require(427                                       ); // 427 = ../views/CardStack/CardStackTransitioner
+
+var _CardStackTransitioner2 = babelHelpers.interopRequireDefault(_CardStackTransitioner);
+
+var _StackRouter = require(452                     ); // 452 = ../routers/StackRouter
+
+var _StackRouter2 = babelHelpers.interopRequireDefault(_StackRouter);
+
+var _NavigatorTypes = require(460               ); // 460 = ./NavigatorTypes
+>>>>>>> origin/dev
 
 var _NavigatorTypes2 = babelHelpers.interopRequireDefault(_NavigatorTypes);
 
@@ -53960,11 +54135,19 @@ exports.default = function (routeConfigMap) {
 
   return (0, _createNavigationContainer2.default)(navigator);
 };
+<<<<<<< HEAD
 }, 434, null, "react-navigation/src/navigators/StackNavigator.js");
 __d(/* react-navigation/src/views/CardStack/CardStackTransitioner.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var _jsxFileName = 'H:\\git-project\\Jokey\\RCTTest\\node_modules\\react-navigation\\src\\views\\CardStack\\CardStackTransitioner.js';
+=======
+}, 426, null, "react-navigation/src/navigators/StackNavigator.js");
+__d(/* react-navigation/src/views/CardStack/CardStackTransitioner.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = '/Users/tongwanhua/Desktop/Jokey/RCTTest/node_modules/react-navigation/src/views/CardStack/CardStackTransitioner.js';
+>>>>>>> origin/dev
 
 var _react = require(12     ); // 12 = react
 
@@ -53972,6 +54155,7 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _CardStack = require(436          ); // 436 = ./CardStack
 
 var _CardStack2 = babelHelpers.interopRequireDefault(_CardStack);
@@ -53985,6 +54169,21 @@ var _Transitioner = require(455              ); // 455 = ../Transitioner
 var _Transitioner2 = babelHelpers.interopRequireDefault(_Transitioner);
 
 var _TransitionConfigs = require(453                  ); // 453 = ./TransitionConfigs
+=======
+var _CardStack = require(428          ); // 428 = ./CardStack
+
+var _CardStack2 = babelHelpers.interopRequireDefault(_CardStack);
+
+var _CardStackStyleInterpolator = require(448                           ); // 448 = ./CardStackStyleInterpolator
+
+var _CardStackStyleInterpolator2 = babelHelpers.interopRequireDefault(_CardStackStyleInterpolator);
+
+var _Transitioner = require(449              ); // 449 = ../Transitioner
+
+var _Transitioner2 = babelHelpers.interopRequireDefault(_Transitioner);
+
+var _TransitionConfigs = require(447                  ); // 447 = ./TransitionConfigs
+>>>>>>> origin/dev
 
 var _TransitionConfigs2 = babelHelpers.interopRequireDefault(_TransitionConfigs);
 
@@ -54063,22 +54262,35 @@ CardStackTransitioner.defaultProps = {
   mode: 'card'
 };
 exports.default = CardStackTransitioner;
+<<<<<<< HEAD
 }, 435, null, "react-navigation/src/views/CardStack/CardStackTransitioner.js");
 __d(/* react-navigation/src/views/CardStack/CardStack.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var _jsxFileName = 'H:\\git-project\\Jokey\\RCTTest\\node_modules\\react-navigation\\src\\views\\CardStack\\CardStack.js';
+=======
+}, 427, null, "react-navigation/src/views/CardStack/CardStackTransitioner.js");
+__d(/* react-navigation/src/views/CardStack/CardStack.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = '/Users/tongwanhua/Desktop/Jokey/RCTTest/node_modules/react-navigation/src/views/CardStack/CardStack.js';
+>>>>>>> origin/dev
 
 var _react = require(12     ); // 12 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
+<<<<<<< HEAD
 var _clamp = require(437    ); // 437 = clamp
+=======
+var _clamp = require(429    ); // 429 = clamp
+>>>>>>> origin/dev
 
 var _clamp2 = babelHelpers.interopRequireDefault(_clamp);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _Card = require(438     ); // 438 = ./Card
 
 var _Card2 = babelHelpers.interopRequireDefault(_Card);
@@ -54100,6 +54312,29 @@ var _SceneView = require(447           ); // 447 = ../SceneView
 var _SceneView2 = babelHelpers.interopRequireDefault(_SceneView);
 
 var _TransitionConfigs = require(453                  ); // 453 = ./TransitionConfigs
+=======
+var _Card = require(430     ); // 430 = ./Card
+
+var _Card2 = babelHelpers.interopRequireDefault(_Card);
+
+var _Header = require(433               ); // 433 = ../Header/Header
+
+var _Header2 = babelHelpers.interopRequireDefault(_Header);
+
+var _NavigationActions = require(421                      ); // 421 = ../../NavigationActions
+
+var _NavigationActions2 = babelHelpers.interopRequireDefault(_NavigationActions);
+
+var _addNavigationHelpers = require(422                         ); // 422 = ../../addNavigationHelpers
+
+var _addNavigationHelpers2 = babelHelpers.interopRequireDefault(_addNavigationHelpers);
+
+var _SceneView = require(441           ); // 441 = ../SceneView
+
+var _SceneView2 = babelHelpers.interopRequireDefault(_SceneView);
+
+var _TransitionConfigs = require(447                  ); // 447 = ./TransitionConfigs
+>>>>>>> origin/dev
 
 var _TransitionConfigs2 = babelHelpers.interopRequireDefault(_TransitionConfigs);
 
@@ -54481,17 +54716,29 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = CardStack;
+<<<<<<< HEAD
 }, 436, null, "react-navigation/src/views/CardStack/CardStack.js");
+=======
+}, 428, null, "react-navigation/src/views/CardStack/CardStack.js");
+>>>>>>> origin/dev
 __d(/* clamp/index.js */function(global, require, module, exports) {module.exports = clamp;
 
 function clamp(value, min, max) {
   return min < max ? value < min ? min : value > max ? max : value : value < max ? max : value > min ? min : value;
 }
+<<<<<<< HEAD
 }, 437, null, "clamp/index.js");
 __d(/* react-navigation/src/views/CardStack/Card.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var _jsxFileName = 'H:\\git-project\\Jokey\\RCTTest\\node_modules\\react-navigation\\src\\views\\CardStack\\Card.js';
+=======
+}, 429, null, "clamp/index.js");
+__d(/* react-navigation/src/views/CardStack/Card.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = '/Users/tongwanhua/Desktop/Jokey/RCTTest/node_modules/react-navigation/src/views/CardStack/Card.js';
+>>>>>>> origin/dev
 
 var _react = require(12     ); // 12 = react
 
@@ -54499,7 +54746,11 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _PointerEventsContainer = require(439                       ); // 439 = ./PointerEventsContainer
+=======
+var _PointerEventsContainer = require(431                       ); // 431 = ./PointerEventsContainer
+>>>>>>> origin/dev
 
 var _PointerEventsContainer2 = babelHelpers.interopRequireDefault(_PointerEventsContainer);
 
@@ -54555,22 +54806,38 @@ var styles = _reactNative.StyleSheet.create({
 Card = (0, _PointerEventsContainer2.default)(Card);
 
 exports.default = Card;
+<<<<<<< HEAD
 }, 438, null, "react-navigation/src/views/CardStack/Card.js");
 __d(/* react-navigation/src/views/CardStack/PointerEventsContainer.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var _jsxFileName = 'H:\\git-project\\Jokey\\RCTTest\\node_modules\\react-navigation\\src\\views\\CardStack\\PointerEventsContainer.js';
+=======
+}, 430, null, "react-navigation/src/views/CardStack/Card.js");
+__d(/* react-navigation/src/views/CardStack/PointerEventsContainer.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = '/Users/tongwanhua/Desktop/Jokey/RCTTest/node_modules/react-navigation/src/views/CardStack/PointerEventsContainer.js';
+>>>>>>> origin/dev
 exports.default = create;
 
 var _react = require(12     ); // 12 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
+<<<<<<< HEAD
 var _invariant = require(428                    ); // 428 = ../../utils/invariant
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
 
 var _AnimatedValueSubscription = require(440                           ); // 440 = ../AnimatedValueSubscription
+=======
+var _invariant = require(424                    ); // 424 = ../../utils/invariant
+
+var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
+
+var _AnimatedValueSubscription = require(432                           ); // 432 = ../AnimatedValueSubscription
+>>>>>>> origin/dev
 
 var _AnimatedValueSubscription2 = babelHelpers.interopRequireDefault(_AnimatedValueSubscription);
 
@@ -54674,7 +54941,11 @@ function create(Component) {
 
   return Container;
 }
+<<<<<<< HEAD
 }, 439, null, "react-navigation/src/views/CardStack/PointerEventsContainer.js");
+=======
+}, 431, null, "react-navigation/src/views/CardStack/PointerEventsContainer.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/views/AnimatedValueSubscription.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -54699,7 +54970,11 @@ var AnimatedValueSubscription = function () {
 }();
 
 exports.default = AnimatedValueSubscription;
+<<<<<<< HEAD
 }, 440, null, "react-navigation/src/views/AnimatedValueSubscription.js");
+=======
+}, 432, null, "react-navigation/src/views/AnimatedValueSubscription.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/views/Header/Header.js */function(global, require, module, exports) {
 
 'no babel-plugin-flow-react-proptypes';
@@ -54707,7 +54982,11 @@ __d(/* react-navigation/src/views/Header/Header.js */function(global, require, m
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+<<<<<<< HEAD
 var _jsxFileName = 'H:\\git-project\\Jokey\\RCTTest\\node_modules\\react-navigation\\src\\views\\Header\\Header.js';
+=======
+var _jsxFileName = '/Users/tongwanhua/Desktop/Jokey/RCTTest/node_modules/react-navigation/src/views/Header/Header.js';
+>>>>>>> origin/dev
 
 var _react = require(12     ); // 12 = react
 
@@ -54715,6 +54994,7 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _HeaderTitle = require(442            ); // 442 = ./HeaderTitle
 
 var _HeaderTitle2 = babelHelpers.interopRequireDefault(_HeaderTitle);
@@ -54724,8 +55004,23 @@ var _HeaderBackButton = require(443                 ); // 443 = ./HeaderBackButt
 var _HeaderBackButton2 = babelHelpers.interopRequireDefault(_HeaderBackButton);
 
 var _HeaderStyleInterpolator = require(446                        ); // 446 = ./HeaderStyleInterpolator
+=======
+var _HeaderTitle = require(434            ); // 434 = ./HeaderTitle
+
+var _HeaderTitle2 = babelHelpers.interopRequireDefault(_HeaderTitle);
+
+var _HeaderBackButton = require(435                 ); // 435 = ./HeaderBackButton
+
+var _HeaderBackButton2 = babelHelpers.interopRequireDefault(_HeaderBackButton);
+
+var _HeaderStyleInterpolator = require(438                        ); // 438 = ./HeaderStyleInterpolator
+>>>>>>> origin/dev
 
 var _HeaderStyleInterpolator2 = babelHelpers.interopRequireDefault(_HeaderStyleInterpolator);
+
+var _withOrientation = require(439                 ); // 439 = ../withOrientation
+
+var _withOrientation2 = babelHelpers.interopRequireDefault(_withOrientation);
 
 var APPBAR_HEIGHT = _reactNative.Platform.OS === 'ios' ? 44 : 56;
 var STATUSBAR_HEIGHT = _reactNative.Platform.OS === 'ios' ? 20 : 0;
@@ -54759,6 +55054,7 @@ var Header = function (_React$PureComponent) {
 
       var titleStyle = details.options.headerTitleStyle;
       var color = details.options.headerTintColor;
+      var allowFontScaling = details.options.headerTitleAllowFontScaling;
 
       var onLayoutIOS = _reactNative.Platform.OS === 'ios' ? function (e) {
         _this.setState({
@@ -54770,10 +55066,15 @@ var Header = function (_React$PureComponent) {
         _HeaderTitle2.default,
         {
           onLayout: onLayoutIOS,
+          allowFontScaling: allowFontScaling == null ? true : allowFontScaling,
           style: [color ? { color: color } : null, titleStyle],
           __source: {
             fileName: _jsxFileName,
+<<<<<<< HEAD
             lineNumber: 110
+=======
+            lineNumber: 112
+>>>>>>> origin/dev
           }
         },
         titleString
@@ -54799,7 +55100,11 @@ var Header = function (_React$PureComponent) {
         width: width,
         __source: {
           fileName: _jsxFileName,
+<<<<<<< HEAD
           lineNumber: 135
+=======
+          lineNumber: 138
+>>>>>>> origin/dev
         }
       });
     }, _this._renderRightComponent = function (props) {
@@ -54906,7 +55211,11 @@ var Header = function (_React$PureComponent) {
           style: [styles.item, styles[name], props.style, styleInterpolator(babelHelpers.extends({}, this.props, props))],
           __source: {
             fileName: _jsxFileName,
+<<<<<<< HEAD
             lineNumber: 217
+=======
+            lineNumber: 220
+>>>>>>> origin/dev
           }
         },
         subView
@@ -54929,7 +55238,11 @@ var Header = function (_React$PureComponent) {
           key: 'scene_' + props.scene.key,
           __source: {
             fileName: _jsxFileName,
+<<<<<<< HEAD
             lineNumber: 245
+=======
+            lineNumber: 248
+>>>>>>> origin/dev
           }
         },
         title,
@@ -54968,25 +55281,39 @@ var Header = function (_React$PureComponent) {
           screenProps = _props.screenProps,
           progress = _props.progress,
           style = _props.style,
-          rest = babelHelpers.objectWithoutProperties(_props, ['scenes', 'scene', 'position', 'screenProps', 'progress', 'style']);
+          isLandscape = _props.isLandscape,
+          rest = babelHelpers.objectWithoutProperties(_props, ['scenes', 'scene', 'position', 'screenProps', 'progress', 'style', 'isLandscape']);
 
       var _props$getScreenDetai = this.props.getScreenDetails(scene),
           options = _props$getScreenDetai.options;
 
       var headerStyle = options.headerStyle;
+      var landscapeAwareStatusBarHeight = isLandscape ? 0 : STATUSBAR_HEIGHT;
+      var containerStyles = [styles.container, {
+        paddingTop: landscapeAwareStatusBarHeight,
+        height: APPBAR_HEIGHT + landscapeAwareStatusBarHeight
+      }, headerStyle, style];
 
       return _react2.default.createElement(
         _reactNative.Animated.View,
-        babelHelpers.extends({}, rest, { style: [styles.container, headerStyle, style], __source: {
+        babelHelpers.extends({}, rest, { style: containerStyles, __source: {
             fileName: _jsxFileName,
+<<<<<<< HEAD
             lineNumber: 291
+=======
+            lineNumber: 305
+>>>>>>> origin/dev
           }
         }),
         _react2.default.createElement(
           _reactNative.View,
           { style: styles.appBar, __source: {
               fileName: _jsxFileName,
+<<<<<<< HEAD
               lineNumber: 292
+=======
+              lineNumber: 306
+>>>>>>> origin/dev
             }
           },
           appBar
@@ -55020,9 +55347,13 @@ if (_reactNative.Platform.OS === 'ios') {
 
 var styles = _reactNative.StyleSheet.create({
   container: babelHelpers.extends({
+<<<<<<< HEAD
     paddingTop: STATUSBAR_HEIGHT,
     backgroundColor: _reactNative.Platform.OS === 'ios' ? '#F7F7F7' : '#FFF',
     height: STATUSBAR_HEIGHT + APPBAR_HEIGHT
+=======
+    backgroundColor: _reactNative.Platform.OS === 'ios' ? '#F7F7F7' : '#FFF'
+>>>>>>> origin/dev
   }, platformContainerStyles),
   appBar: {
     flex: 1
@@ -55057,12 +55388,21 @@ var styles = _reactNative.StyleSheet.create({
   }
 });
 
+<<<<<<< HEAD
 exports.default = Header;
 }, 441, null, "react-navigation/src/views/Header/Header.js");
 __d(/* react-navigation/src/views/Header/HeaderTitle.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var _jsxFileName = 'H:\\git-project\\Jokey\\RCTTest\\node_modules\\react-navigation\\src\\views\\Header\\HeaderTitle.js';
+=======
+exports.default = (0, _withOrientation2.default)(Header);
+}, 433, null, "react-navigation/src/views/Header/Header.js");
+__d(/* react-navigation/src/views/Header/HeaderTitle.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = '/Users/tongwanhua/Desktop/Jokey/RCTTest/node_modules/react-navigation/src/views/Header/HeaderTitle.js';
+>>>>>>> origin/dev
 
 var _react = require(12     ); // 12 = react
 
@@ -55098,11 +55438,19 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = HeaderTitle;
+<<<<<<< HEAD
 }, 442, null, "react-navigation/src/views/Header/HeaderTitle.js");
 __d(/* react-navigation/src/views/Header/HeaderBackButton.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var _jsxFileName = 'H:\\git-project\\Jokey\\RCTTest\\node_modules\\react-navigation\\src\\views\\Header\\HeaderBackButton.js';
+=======
+}, 434, null, "react-navigation/src/views/Header/HeaderTitle.js");
+__d(/* react-navigation/src/views/Header/HeaderBackButton.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = '/Users/tongwanhua/Desktop/Jokey/RCTTest/node_modules/react-navigation/src/views/Header/HeaderBackButton.js';
+>>>>>>> origin/dev
 
 var _react = require(12     ); // 12 = react
 
@@ -55110,7 +55458,11 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _TouchableItem = require(444               ); // 444 = ../TouchableItem
+=======
+var _TouchableItem = require(436               ); // 436 = ../TouchableItem
+>>>>>>> origin/dev
 
 var _TouchableItem2 = babelHelpers.interopRequireDefault(_TouchableItem);
 
@@ -55155,7 +55507,11 @@ var HeaderBackButton = function (_React$PureComponent) {
 
       var backButtonTitle = renderTruncated ? truncatedTitle : title;
 
+<<<<<<< HEAD
       var asset = require(445                      ); // 445 = ../assets/back-icon.png
+=======
+      var asset = require(437                      ); // 437 = ../assets/back-icon.png
+>>>>>>> origin/dev
 
       return _react2.default.createElement(
         _TouchableItem2.default,
@@ -55249,7 +55605,11 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = HeaderBackButton;
+<<<<<<< HEAD
 }, 443, null, "react-navigation/src/views/Header/HeaderBackButton.js");
+=======
+}, 435, null, "react-navigation/src/views/Header/HeaderBackButton.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/views/TouchableItem.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -55321,9 +55681,15 @@ TouchableItem.defaultProps = {
   pressColor: 'rgba(0, 0, 0, .32)'
 };
 exports.default = TouchableItem;
+<<<<<<< HEAD
 }, 444, null, "react-navigation/src/views/TouchableItem.js");
 __d(/* react-navigation/src/views/assets/back-icon.png */function(global, require, module, exports) {module.exports = require(240                                         ).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/node_modules/react-navigation/src/views/assets","width":13,"height":21,"scales":[1,1.5,2,3,4],"hash":"23ea5876dd37198284f126df9ba165c8","name":"back-icon","type":"png"}); // 240 = react-native/Libraries/Image/AssetRegistry
 }, 445, null, "react-navigation/src/views/assets/back-icon.png");
+=======
+}, 436, null, "react-navigation/src/views/TouchableItem.js");
+__d(/* react-navigation/src/views/assets/back-icon.png */function(global, require, module, exports) {module.exports = require(240                                         ).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/node_modules/react-navigation/src/views/assets","width":13,"height":21,"scales":[1,1.5,2,3,4],"hash":"23ea5876dd37198284f126df9ba165c8","name":"back-icon","type":"png"}); // 240 = react-native/Libraries/Image/AssetRegistry
+}, 437, null, "react-navigation/src/views/assets/back-icon.png");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/views/Header/HeaderStyleInterpolator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -55380,7 +55746,150 @@ exports.default = {
   forCenter: forCenter,
   forRight: forRight
 };
+<<<<<<< HEAD
 }, 446, null, "react-navigation/src/views/Header/HeaderStyleInterpolator.js");
+=======
+}, 438, null, "react-navigation/src/views/Header/HeaderStyleInterpolator.js");
+__d(/* react-navigation/src/views/withOrientation.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.isOrientationLandscape = undefined;
+var _jsxFileName = '/Users/tongwanhua/Desktop/Jokey/RCTTest/node_modules/react-navigation/src/views/withOrientation.js';
+
+exports.default = function (WrappedComponent) {
+  var withOrientation = function (_React$Component) {
+    babelHelpers.inherits(withOrientation, _React$Component);
+
+    function withOrientation() {
+      babelHelpers.classCallCheck(this, withOrientation);
+
+      var _this = babelHelpers.possibleConstructorReturn(this, (withOrientation.__proto__ || Object.getPrototypeOf(withOrientation)).call(this));
+
+      _initialiseProps.call(_this);
+
+      var isLandscape = isOrientationLandscape(_reactNative.Dimensions.get('window'));
+      _this.state = { isLandscape: isLandscape };
+      return _this;
+    }
+
+    babelHelpers.createClass(withOrientation, [{
+      key: 'componentDidMount',
+      value: function componentDidMount() {
+        _reactNative.Dimensions.addEventListener('change', this.handleOrientationChange);
+      }
+    }, {
+      key: 'componentWillUnmount',
+      value: function componentWillUnmount() {
+        _reactNative.Dimensions.removeEventListener('change', this.handleOrientationChange);
+      }
+    }, {
+      key: 'render',
+      value: function render() {
+        return _react2.default.createElement(WrappedComponent, babelHelpers.extends({}, this.props, this.state, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 50
+          }
+        }));
+      }
+    }]);
+    return withOrientation;
+  }(_react2.default.Component);
+
+  var _initialiseProps = function _initialiseProps() {
+    var _this2 = this;
+
+    this.handleOrientationChange = function (_ref2) {
+      var window = _ref2.window;
+
+      var isLandscape = isOrientationLandscape(window);
+      _this2.setState({ isLandscape: isLandscape });
+    };
+  };
+
+  return (0, _hoistNonReactStatics2.default)(withOrientation, WrappedComponent);
+};
+
+var _react = require(12     ); // 12 = react
+
+var _react2 = babelHelpers.interopRequireDefault(_react);
+
+var _reactNative = require(46            ); // 46 = react-native
+
+var _hoistNonReactStatics = require(440                      ); // 440 = hoist-non-react-statics
+
+var _hoistNonReactStatics2 = babelHelpers.interopRequireDefault(_hoistNonReactStatics);
+
+var isOrientationLandscape = exports.isOrientationLandscape = function isOrientationLandscape(_ref) {
+  var width = _ref.width,
+      height = _ref.height;
+  return width > height;
+};
+}, 439, null, "react-navigation/src/views/withOrientation.js");
+__d(/* hoist-non-react-statics/index.js */function(global, require, module, exports) {
+'use strict';
+
+var REACT_STATICS = {
+    childContextTypes: true,
+    contextTypes: true,
+    defaultProps: true,
+    displayName: true,
+    getDefaultProps: true,
+    mixins: true,
+    propTypes: true,
+    type: true
+};
+
+var KNOWN_STATICS = {
+    name: true,
+    length: true,
+    prototype: true,
+    caller: true,
+    callee: true,
+    arguments: true,
+    arity: true
+};
+
+var defineProperty = Object.defineProperty;
+var getOwnPropertyNames = Object.getOwnPropertyNames;
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+var getPrototypeOf = Object.getPrototypeOf;
+var objectPrototype = getPrototypeOf && getPrototypeOf(Object);
+
+module.exports = function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
+    if (typeof sourceComponent !== 'string') {
+
+        if (objectPrototype) {
+            var inheritedComponent = getPrototypeOf(sourceComponent);
+            if (inheritedComponent && inheritedComponent !== objectPrototype) {
+                hoistNonReactStatics(targetComponent, inheritedComponent, blacklist);
+            }
+        }
+
+        var keys = getOwnPropertyNames(sourceComponent);
+
+        if (getOwnPropertySymbols) {
+            keys = keys.concat(getOwnPropertySymbols(sourceComponent));
+        }
+
+        for (var i = 0; i < keys.length; ++i) {
+            var key = keys[i];
+            if (!REACT_STATICS[key] && !KNOWN_STATICS[key] && (!blacklist || !blacklist[key])) {
+                var descriptor = getOwnPropertyDescriptor(sourceComponent, key);
+                try {
+                    defineProperty(targetComponent, key, descriptor);
+                } catch (e) {}
+            }
+        }
+
+        return targetComponent;
+    }
+
+    return targetComponent;
+};
+}, 440, null, "hoist-non-react-statics/index.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/views/SceneView.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -55390,7 +55899,11 @@ var _react = require(12     ); // 12 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
+<<<<<<< HEAD
 var _propTypes = require(448         ); // 448 = prop-types
+=======
+var _propTypes = require(442         ); // 442 = prop-types
+>>>>>>> origin/dev
 
 var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
@@ -55432,7 +55945,11 @@ SceneView.childContextTypes = {
   navigation: _propTypes2.default.object.isRequired
 };
 exports.default = SceneView;
+<<<<<<< HEAD
 }, 447, null, "react-navigation/src/views/SceneView.js");
+=======
+}, 441, null, "react-navigation/src/views/SceneView.js");
+>>>>>>> origin/dev
 __d(/* prop-types/index.js */function(global, require, module, exports) {
 
 if (process.env.NODE_ENV !== 'production') {
@@ -55443,11 +55960,19 @@ if (process.env.NODE_ENV !== 'production') {
   };
 
   var throwOnDirectAccess = true;
+<<<<<<< HEAD
   module.exports = require(449                        )(isValidElement, throwOnDirectAccess); // 449 = ./factoryWithTypeCheckers
 } else {
   module.exports = require(452                         )(); // 452 = ./factoryWithThrowingShims
 }
 }, 448, null, "prop-types/index.js");
+=======
+  module.exports = require(443                        )(isValidElement, throwOnDirectAccess); // 443 = ./factoryWithTypeCheckers
+} else {
+  module.exports = require(446                         )(); // 446 = ./factoryWithThrowingShims
+}
+}, 442, null, "prop-types/index.js");
+>>>>>>> origin/dev
 __d(/* prop-types/factoryWithTypeCheckers.js */function(global, require, module, exports) {
 
 'use strict';
@@ -55457,8 +55982,13 @@ var invariant = require(22                  ); // 22 = fbjs/lib/invariant
 var warning = require(18                ); // 18 = fbjs/lib/warning
 var assign = require(16             ); // 16 = object-assign
 
+<<<<<<< HEAD
 var ReactPropTypesSecret = require(450                         ); // 450 = ./lib/ReactPropTypesSecret
 var checkPropTypes = require(451               ); // 451 = ./checkPropTypes
+=======
+var ReactPropTypesSecret = require(444                         ); // 444 = ./lib/ReactPropTypesSecret
+var checkPropTypes = require(445               ); // 445 = ./checkPropTypes
+>>>>>>> origin/dev
 
 module.exports = function (isValidElement, throwOnDirectAccess) {
   var ITERATOR_SYMBOL = typeof Symbol === 'function' && (typeof Symbol === 'function' ? Symbol.iterator : '@@iterator');
@@ -55856,7 +56386,11 @@ module.exports = function (isValidElement, throwOnDirectAccess) {
 
   return ReactPropTypes;
 };
+<<<<<<< HEAD
 }, 449, null, "prop-types/factoryWithTypeCheckers.js");
+=======
+}, 443, null, "prop-types/factoryWithTypeCheckers.js");
+>>>>>>> origin/dev
 __d(/* prop-types/lib/ReactPropTypesSecret.js */function(global, require, module, exports) {
 
 'use strict';
@@ -55864,7 +56398,11 @@ __d(/* prop-types/lib/ReactPropTypesSecret.js */function(global, require, module
 var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
+<<<<<<< HEAD
 }, 450, null, "prop-types/lib/ReactPropTypesSecret.js");
+=======
+}, 444, null, "prop-types/lib/ReactPropTypesSecret.js");
+>>>>>>> origin/dev
 __d(/* prop-types/checkPropTypes.js */function(global, require, module, exports) {
 
 'use strict';
@@ -55872,7 +56410,11 @@ __d(/* prop-types/checkPropTypes.js */function(global, require, module, exports)
 if (process.env.NODE_ENV !== 'production') {
   var invariant = require(22                  ); // 22 = fbjs/lib/invariant
   var warning = require(18                ); // 18 = fbjs/lib/warning
+<<<<<<< HEAD
   var ReactPropTypesSecret = require(450                         ); // 450 = ./lib/ReactPropTypesSecret
+=======
+  var ReactPropTypesSecret = require(444                         ); // 444 = ./lib/ReactPropTypesSecret
+>>>>>>> origin/dev
   var loggedTypeFailures = {};
 }
 
@@ -55902,14 +56444,22 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 }
 
 module.exports = checkPropTypes;
+<<<<<<< HEAD
 }, 451, null, "prop-types/checkPropTypes.js");
+=======
+}, 445, null, "prop-types/checkPropTypes.js");
+>>>>>>> origin/dev
 __d(/* prop-types/factoryWithThrowingShims.js */function(global, require, module, exports) {
 
 'use strict';
 
 var emptyFunction = require(19                      ); // 19 = fbjs/lib/emptyFunction
 var invariant = require(22                  ); // 22 = fbjs/lib/invariant
+<<<<<<< HEAD
 var ReactPropTypesSecret = require(450                         ); // 450 = ./lib/ReactPropTypesSecret
+=======
+var ReactPropTypesSecret = require(444                         ); // 444 = ./lib/ReactPropTypesSecret
+>>>>>>> origin/dev
 
 module.exports = function () {
   function shim(props, propName, componentName, location, propFullName, secret) {
@@ -55949,14 +56499,22 @@ module.exports = function () {
 
   return ReactPropTypes;
 };
+<<<<<<< HEAD
 }, 452, null, "prop-types/factoryWithThrowingShims.js");
+=======
+}, 446, null, "prop-types/factoryWithThrowingShims.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/views/CardStack/TransitionConfigs.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _CardStackStyleInterpolator = require(454                           ); // 454 = ./CardStackStyleInterpolator
+=======
+var _CardStackStyleInterpolator = require(448                           ); // 448 = ./CardStackStyleInterpolator
+>>>>>>> origin/dev
 
 var _CardStackStyleInterpolator2 = babelHelpers.interopRequireDefault(_CardStackStyleInterpolator);
 
@@ -56026,7 +56584,11 @@ exports.default = {
   defaultTransitionConfig: defaultTransitionConfig,
   getTransitionConfig: getTransitionConfig
 };
+<<<<<<< HEAD
 }, 453, null, "react-navigation/src/views/CardStack/TransitionConfigs.js");
+=======
+}, 447, null, "react-navigation/src/views/CardStack/TransitionConfigs.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/views/CardStack/CardStackStyleInterpolator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -56151,7 +56713,11 @@ exports.default = {
   forFadeFromBottomAndroid: forFadeFromBottomAndroid,
   canUseNativeDriver: canUseNativeDriver
 };
+<<<<<<< HEAD
 }, 454, null, "react-navigation/src/views/CardStack/CardStackStyleInterpolator.js");
+=======
+}, 448, null, "react-navigation/src/views/CardStack/CardStackStyleInterpolator.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/views/Transitioner.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -56163,11 +56729,19 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _invariant = require(428                 ); // 428 = ../utils/invariant
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
 
 var _ScenesReducer = require(456              ); // 456 = ./ScenesReducer
+=======
+var _invariant = require(424                 ); // 424 = ../utils/invariant
+
+var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
+
+var _ScenesReducer = require(450              ); // 450 = ./ScenesReducer
+>>>>>>> origin/dev
 
 var _ScenesReducer2 = babelHelpers.interopRequireDefault(_ScenesReducer);
 
@@ -56390,17 +56964,29 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = Transitioner;
+<<<<<<< HEAD
 }, 455, null, "react-navigation/src/views/Transitioner.js");
+=======
+}, 449, null, "react-navigation/src/views/Transitioner.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/views/ScenesReducer.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = ScenesReducer;
 
+<<<<<<< HEAD
 var _invariant = require(428                 ); // 428 = ../utils/invariant
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
 
 var _shallowEqual = require(457                    ); // 457 = ../utils/shallowEqual
+=======
+var _invariant = require(424                 ); // 424 = ../utils/invariant
+
+var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
+
+var _shallowEqual = require(451                    ); // 451 = ../utils/shallowEqual
+>>>>>>> origin/dev
 
 var _shallowEqual2 = babelHelpers.interopRequireDefault(_shallowEqual);
 
@@ -56542,7 +57128,11 @@ function ScenesReducer(scenes, nextState, prevState) {
 
   return scenes;
 }
+<<<<<<< HEAD
 }, 456, null, "react-navigation/src/views/ScenesReducer.js");
+=======
+}, 450, null, "react-navigation/src/views/ScenesReducer.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/utils/shallowEqual.js */function(global, require, module, exports) {
 
 'use strict';
@@ -56582,12 +57172,20 @@ function shallowEqual(objA, objB) {
 }
 
 module.exports = shallowEqual;
+<<<<<<< HEAD
 }, 457, null, "react-navigation/src/utils/shallowEqual.js");
+=======
+}, 451, null, "react-navigation/src/utils/shallowEqual.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/routers/StackRouter.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+<<<<<<< HEAD
 var _pathToRegexp = require(459             ); // 459 = path-to-regexp
+=======
+var _pathToRegexp = require(453             ); // 453 = path-to-regexp
+>>>>>>> origin/dev
 
 var _pathToRegexp2 = babelHelpers.interopRequireDefault(_pathToRegexp);
 
@@ -56595,11 +57193,19 @@ var _NavigationActions = require(430                   ); // 430 = ../Navigation
 
 var _NavigationActions2 = babelHelpers.interopRequireDefault(_NavigationActions);
 
+<<<<<<< HEAD
 var _createConfigGetter = require(461                   ); // 461 = ./createConfigGetter
 
 var _createConfigGetter2 = babelHelpers.interopRequireDefault(_createConfigGetter);
 
 var _getScreenForRouteName = require(462                      ); // 462 = ./getScreenForRouteName
+=======
+var _createConfigGetter = require(455                   ); // 455 = ./createConfigGetter
+
+var _createConfigGetter2 = babelHelpers.interopRequireDefault(_createConfigGetter);
+
+var _getScreenForRouteName = require(456                      ); // 456 = ./getScreenForRouteName
+>>>>>>> origin/dev
 
 var _getScreenForRouteName2 = babelHelpers.interopRequireDefault(_getScreenForRouteName);
 
@@ -56607,11 +57213,19 @@ var _StateUtils = require(432            ); // 432 = ../StateUtils
 
 var _StateUtils2 = babelHelpers.interopRequireDefault(_StateUtils);
 
+<<<<<<< HEAD
 var _validateRouteConfigMap = require(464                       ); // 464 = ./validateRouteConfigMap
 
 var _validateRouteConfigMap2 = babelHelpers.interopRequireDefault(_validateRouteConfigMap);
 
 var _getScreenConfigDeprecated = require(465                          ); // 465 = ./getScreenConfigDeprecated
+=======
+var _validateRouteConfigMap = require(458                       ); // 458 = ./validateRouteConfigMap
+
+var _validateRouteConfigMap2 = babelHelpers.interopRequireDefault(_validateRouteConfigMap);
+
+var _getScreenConfigDeprecated = require(459                          ); // 459 = ./getScreenConfigDeprecated
+>>>>>>> origin/dev
 
 var _getScreenConfigDeprecated2 = babelHelpers.interopRequireDefault(_getScreenConfigDeprecated);
 
@@ -56896,8 +57510,9 @@ exports.default = function (routeConfigs) {
       }
 
       var nestedAction = void 0;
+      var nestedQueryString = queryString ? '?' + queryString : '';
       if (childRouters[matchedRouteName]) {
-        nestedAction = childRouters[matchedRouteName].getActionForPathAndParams(pathMatch.slice(pathMatchKeys.length).join('/'));
+        nestedAction = childRouters[matchedRouteName].getActionForPathAndParams(pathMatch.slice(pathMatchKeys.length).join('/') + nestedQueryString);
       }
 
       var queryParams = (queryString || '').split('&').reduce(function (result, item) {
@@ -56937,8 +57552,13 @@ exports.default = function (routeConfigs) {
     getScreenConfig: _getScreenConfigDeprecated2.default
   };
 };
+<<<<<<< HEAD
 }, 458, null, "react-navigation/src/routers/StackRouter.js");
 __d(/* path-to-regexp/index.js */function(global, require, module, exports) {var isarray = require(460      ); // 460 = isarray
+=======
+}, 452, null, "react-navigation/src/routers/StackRouter.js");
+__d(/* path-to-regexp/index.js */function(global, require, module, exports) {var isarray = require(454      ); // 454 = isarray
+>>>>>>> origin/dev
 
 module.exports = pathToRegexp;
 module.exports.parse = parse;
@@ -57233,20 +57853,36 @@ function pathToRegexp(path, keys, options) {
 
   return stringToRegexp(path, keys, options);
 }
+<<<<<<< HEAD
 }, 459, null, "path-to-regexp/index.js");
 __d(/* isarray/index.js */function(global, require, module, exports) {module.exports = Array.isArray || function (arr) {
   return Object.prototype.toString.call(arr) == '[object Array]';
 };
 }, 460, null, "isarray/index.js");
+=======
+}, 453, null, "path-to-regexp/index.js");
+__d(/* isarray/index.js */function(global, require, module, exports) {module.exports = Array.isArray || function (arr) {
+  return Object.prototype.toString.call(arr) == '[object Array]';
+};
+}, 454, null, "isarray/index.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/routers/createConfigGetter.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+<<<<<<< HEAD
 var _invariant = require(428                 ); // 428 = ../utils/invariant
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
 
 var _getScreenForRouteName = require(462                      ); // 462 = ./getScreenForRouteName
+=======
+var _invariant = require(424                 ); // 424 = ../utils/invariant
+
+var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
+
+var _getScreenForRouteName = require(456                      ); // 456 = ./getScreenForRouteName
+>>>>>>> origin/dev
 
 var _getScreenForRouteName2 = babelHelpers.interopRequireDefault(_getScreenForRouteName);
 
@@ -57254,7 +57890,11 @@ var _addNavigationHelpers = require(431                      ); // 431 = ../addN
 
 var _addNavigationHelpers2 = babelHelpers.interopRequireDefault(_addNavigationHelpers);
 
+<<<<<<< HEAD
 var _validateScreenOptions = require(463                      ); // 463 = ./validateScreenOptions
+=======
+var _validateScreenOptions = require(457                      ); // 457 = ./validateScreenOptions
+>>>>>>> origin/dev
 
 var _validateScreenOptions2 = babelHelpers.interopRequireDefault(_validateScreenOptions);
 
@@ -57288,7 +57928,9 @@ exports.default = function (routeConfigs, navigatorScreenConfig) {
     var outputConfig = {};
 
     if (Component.router) {
-      (0, _invariant2.default)(route && routes && index != null, 'Expect nav state to have routes and index, ' + JSON.stringify(route));
+      if (!route || !routes || index == null) {
+        throw new Error('Expect nav state to have routes and index, ' + JSON.stringify(route));
+      }
       var childRoute = routes[index];
       var childNavigation = (0, _addNavigationHelpers2.default)({
         state: childRoute,
@@ -57313,22 +57955,32 @@ exports.default = function (routeConfigs, navigatorScreenConfig) {
     return outputConfig;
   };
 };
+<<<<<<< HEAD
 }, 461, null, "react-navigation/src/routers/createConfigGetter.js");
+=======
+}, 455, null, "react-navigation/src/routers/createConfigGetter.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/routers/getScreenForRouteName.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = getScreenForRouteName;
 
+<<<<<<< HEAD
 var _invariant = require(428                 ); // 428 = ../utils/invariant
+=======
+var _invariant = require(424                 ); // 424 = ../utils/invariant
+>>>>>>> origin/dev
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
 
 function getScreenForRouteName(routeConfigs, routeName) {
   var routeConfig = routeConfigs[routeName];
 
-  (0, _invariant2.default)(routeConfig, 'There is no route defined for key ' + routeName + '.\n' + ('Must be one of: ' + Object.keys(routeConfigs).map(function (a) {
-    return '\'' + a + '\'';
-  }).join(',')));
+  if (!routeConfig) {
+    throw new Error('There is no route defined for key ' + routeName + '.\n' + ('Must be one of: ' + Object.keys(routeConfigs).map(function (a) {
+      return '\'' + a + '\'';
+    }).join(',')));
+  }
 
   if (routeConfig.screen) {
     return routeConfig.screen;
@@ -57340,16 +57992,23 @@ function getScreenForRouteName(routeConfigs, routeName) {
     return screen;
   }
 
-  (0, _invariant2.default)(false, 'Route ' + routeName + ' must define a screen or a getScreen.');
+  throw new Error('Route ' + routeName + ' must define a screen or a getScreen.');
 }
+<<<<<<< HEAD
 }, 462, null, "react-navigation/src/routers/getScreenForRouteName.js");
+=======
+}, 456, null, "react-navigation/src/routers/getScreenForRouteName.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/routers/validateScreenOptions.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+<<<<<<< HEAD
 var _invariant = require(428                 ); // 428 = ../utils/invariant
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
+=======
+>>>>>>> origin/dev
 
 var deprecatedKeys = ['tabBar'];
 
@@ -57361,27 +58020,35 @@ exports.default = function (screenOptions, route) {
   });
 
   if (typeof screenOptions.title === 'function') {
-    (0, _invariant2.default)(false, ['`title` cannot be defined as a function in navigation options for `' + route.routeName + '` screen. \n', 'Try replacing the following:', '{', '    title: ({ state }) => state...', '}', '', 'with:', '({ navigation }) => ({', '    title: navigation.state...', '})'].join('\n'));
+    throw new Error(['`title` cannot be defined as a function in navigation options for `' + route.routeName + '` screen. \n', 'Try replacing the following:', '{', '    title: ({ state }) => state...', '}', '', 'with:', '({ navigation }) => ({', '    title: navigation.state...', '})'].join('\n'));
   }
 
   if (deprecatedKey && typeof screenOptions[deprecatedKey] === 'function') {
-    (0, _invariant2.default)(false, ['`' + deprecatedKey + '` cannot be defined as a function in navigation options for `' + route.routeName + '` screen. \n', 'Try replacing the following:', '{', '    ' + deprecatedKey + ': ({ state }) => ({', '         key: state...', '    })', '}', '', 'with:', '({ navigation }) => ({', '    ' + deprecatedKey + 'Key: navigation.state...', '})'].join('\n'));
+    throw new Error(['`' + deprecatedKey + '` cannot be defined as a function in navigation options for `' + route.routeName + '` screen. \n', 'Try replacing the following:', '{', '    ' + deprecatedKey + ': ({ state }) => ({', '         key: state...', '    })', '}', '', 'with:', '({ navigation }) => ({', '    ' + deprecatedKey + 'Key: navigation.state...', '})'].join('\n'));
   }
 
   if (deprecatedKey && typeof screenOptions[deprecatedKey] === 'object') {
-    (0, _invariant2.default)(false, ['Invalid key `' + deprecatedKey + '` defined in navigation options for `' + route.routeName + '` screen.', '\n', 'Try replacing the following navigation options:', '{', '    ' + deprecatedKey + ': {'].concat(babelHelpers.toConsumableArray(Object.keys(screenOptions[deprecatedKey]).map(function (key) {
+    throw new Error(['Invalid key `' + deprecatedKey + '` defined in navigation options for `' + route.routeName + '` screen.', '\n', 'Try replacing the following navigation options:', '{', '    ' + deprecatedKey + ': {'].concat(babelHelpers.toConsumableArray(Object.keys(screenOptions[deprecatedKey]).map(function (key) {
       return '        ' + key + ': ...,';
     })), ['    },', '}', '\n', 'with:', '{'], babelHelpers.toConsumableArray(Object.keys(screenOptions[deprecatedKey]).map(function (key) {
       return '    ' + (deprecatedKey + key[0].toUpperCase() + key.slice(1)) + ': ...,';
     })), ['}']).join('\n'));
   }
 };
+<<<<<<< HEAD
 }, 463, null, "react-navigation/src/routers/validateScreenOptions.js");
+=======
+}, 457, null, "react-navigation/src/routers/validateScreenOptions.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/routers/validateRouteConfigMap.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+<<<<<<< HEAD
 var _invariant = require(428                 ); // 428 = ../utils/invariant
+=======
+var _invariant = require(424                 ); // 424 = ../utils/invariant
+>>>>>>> origin/dev
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
 
@@ -57392,32 +58059,49 @@ function validateRouteConfigMap(routeConfigs) {
   routeNames.forEach(function (routeName) {
     var routeConfig = routeConfigs[routeName];
 
-    (0, _invariant2.default)(routeConfig.screen || routeConfig.getScreen, 'Route \'' + routeName + '\' should declare a screen. ' + 'For example:\n\n' + "import MyScreen from './MyScreen';\n" + '...\n' + (routeName + ': {\n') + '  screen: MyScreen,\n' + '}');
-
-    if (routeConfig.screen && routeConfig.getScreen) {
-      (0, _invariant2.default)(false, 'Route \'' + routeName + '\' should declare a screen or ' + 'a getScreen, not both.');
+    if (!routeConfig.screen && !routeConfig.getScreen) {
+      throw new Error('Route \'' + routeName + '\' should declare a screen. ' + 'For example:\n\n' + "import MyScreen from './MyScreen';\n" + '...\n' + (routeName + ': {\n') + '  screen: MyScreen,\n' + '}');
+    } else if (routeConfig.screen && routeConfig.getScreen) {
+      throw new Error('Route \'' + routeName + '\' should declare a screen or ' + 'a getScreen, not both.');
     }
 
+<<<<<<< HEAD
     if (routeConfig.screen) {
       (0, _invariant2.default)(typeof routeConfig.screen === 'function', 'The component for route \'' + routeName + '\' must be a ' + 'React component. For example:\n\n' + "import MyScreen from './MyScreen';\n" + '...\n' + (routeName + ': {\n') + '  screen: MyScreen,\n' + '}\n\n' + 'You can also use a navigator:\n\n' + "import MyNavigator from './MyNavigator';\n" + '...\n' + (routeName + ': {\n') + '  screen: MyNavigator,\n' + '}');
+=======
+    if (routeConfig.screen && typeof routeConfig.screen !== 'function') {
+      throw new Error('The component for route \'' + routeName + '\' must be a ' + 'React component. For example:\n\n' + "import MyScreen from './MyScreen';\n" + '...\n' + (routeName + ': {\n') + '  screen: MyScreen,\n' + '}\n\n' + 'You can also use a navigator:\n\n' + "import MyNavigator from './MyNavigator';\n" + '...\n' + (routeName + ': {\n') + '  screen: MyNavigator,\n' + '}');
+>>>>>>> origin/dev
     }
   });
 }
 
 exports.default = validateRouteConfigMap;
+<<<<<<< HEAD
 }, 464, null, "react-navigation/src/routers/validateRouteConfigMap.js");
+=======
+}, 458, null, "react-navigation/src/routers/validateRouteConfigMap.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/routers/getScreenConfigDeprecated.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+<<<<<<< HEAD
 var _invariant = require(428                 ); // 428 = ../utils/invariant
+=======
+var _invariant = require(424                 ); // 424 = ../utils/invariant
+>>>>>>> origin/dev
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
 
 exports.default = function () {
   return (0, _invariant2.default)(false, '`getScreenConfig` has been replaced with `getScreenOptions`');
 };
+<<<<<<< HEAD
 }, 465, null, "react-navigation/src/routers/getScreenConfigDeprecated.js");
+=======
+}, 459, null, "react-navigation/src/routers/getScreenConfigDeprecated.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/navigators/NavigatorTypes.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -57432,7 +58116,11 @@ exports.default = {
   TABS: TABS,
   DRAWER: DRAWER
 };
+<<<<<<< HEAD
 }, 466, null, "react-navigation/src/navigators/NavigatorTypes.js");
+=======
+}, 460, null, "react-navigation/src/navigators/NavigatorTypes.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/navigators/TabNavigator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -57444,7 +58132,11 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _createNavigator = require(433                ); // 433 = ./createNavigator
+=======
+var _createNavigator = require(425                ); // 425 = ./createNavigator
+>>>>>>> origin/dev
 
 var _createNavigator2 = babelHelpers.interopRequireDefault(_createNavigator);
 
@@ -57452,6 +58144,7 @@ var _createNavigationContainer = require(427                           ); // 427
 
 var _createNavigationContainer2 = babelHelpers.interopRequireDefault(_createNavigationContainer);
 
+<<<<<<< HEAD
 var _TabRouter = require(468                   ); // 468 = ../routers/TabRouter
 
 var _TabRouter2 = babelHelpers.interopRequireDefault(_TabRouter);
@@ -57469,6 +58162,25 @@ var _TabBarBottom = require(482                            ); // 482 = ../views/
 var _TabBarBottom2 = babelHelpers.interopRequireDefault(_TabBarBottom);
 
 var _NavigatorTypes = require(466               ); // 466 = ./NavigatorTypes
+=======
+var _TabRouter = require(462                   ); // 462 = ../routers/TabRouter
+
+var _TabRouter2 = babelHelpers.interopRequireDefault(_TabRouter);
+
+var _TabView = require(463                       ); // 463 = ../views/TabView/TabView
+
+var _TabView2 = babelHelpers.interopRequireDefault(_TabView);
+
+var _TabBarTop = require(474                         ); // 474 = ../views/TabView/TabBarTop
+
+var _TabBarTop2 = babelHelpers.interopRequireDefault(_TabBarTop);
+
+var _TabBarBottom = require(476                            ); // 476 = ../views/TabView/TabBarBottom
+
+var _TabBarBottom2 = babelHelpers.interopRequireDefault(_TabBarBottom);
+
+var _NavigatorTypes = require(460               ); // 460 = ./NavigatorTypes
+>>>>>>> origin/dev
 
 var _NavigatorTypes2 = babelHelpers.interopRequireDefault(_NavigatorTypes);
 
@@ -57529,11 +58241,16 @@ TabNavigator.Presets = {
 };
 
 exports.default = TabNavigator;
+<<<<<<< HEAD
 }, 467, null, "react-navigation/src/navigators/TabNavigator.js");
+=======
+}, 461, null, "react-navigation/src/navigators/TabNavigator.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/routers/TabRouter.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+<<<<<<< HEAD
 var _invariant = require(428                 ); // 428 = ../utils/invariant
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
@@ -57543,6 +58260,17 @@ var _getScreenForRouteName = require(462                      ); // 462 = ./getS
 var _getScreenForRouteName2 = babelHelpers.interopRequireDefault(_getScreenForRouteName);
 
 var _createConfigGetter = require(461                   ); // 461 = ./createConfigGetter
+=======
+var _invariant = require(424                 ); // 424 = ../utils/invariant
+
+var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
+
+var _getScreenForRouteName = require(456                      ); // 456 = ./getScreenForRouteName
+
+var _getScreenForRouteName2 = babelHelpers.interopRequireDefault(_getScreenForRouteName);
+
+var _createConfigGetter = require(455                   ); // 455 = ./createConfigGetter
+>>>>>>> origin/dev
 
 var _createConfigGetter2 = babelHelpers.interopRequireDefault(_createConfigGetter);
 
@@ -57550,11 +58278,19 @@ var _NavigationActions = require(430                   ); // 430 = ../Navigation
 
 var _NavigationActions2 = babelHelpers.interopRequireDefault(_NavigationActions);
 
+<<<<<<< HEAD
 var _validateRouteConfigMap = require(464                       ); // 464 = ./validateRouteConfigMap
 
 var _validateRouteConfigMap2 = babelHelpers.interopRequireDefault(_validateRouteConfigMap);
 
 var _getScreenConfigDeprecated = require(465                          ); // 465 = ./getScreenConfigDeprecated
+=======
+var _validateRouteConfigMap = require(458                       ); // 458 = ./validateRouteConfigMap
+
+var _validateRouteConfigMap2 = babelHelpers.interopRequireDefault(_validateRouteConfigMap);
+
+var _getScreenConfigDeprecated = require(459                          ); // 459 = ./getScreenConfigDeprecated
+>>>>>>> origin/dev
 
 var _getScreenConfigDeprecated2 = babelHelpers.interopRequireDefault(_getScreenConfigDeprecated);
 
@@ -57578,9 +58314,11 @@ exports.default = function (routeConfigs) {
       tabRouters[routeName] = routeConfig.screen.router;
     }
   });
-  (0, _invariant2.default)(initialRouteIndex !== -1, 'Invalid initialRouteName \'' + initialRouteName + '\' for TabRouter. ' + ('Should be one of ' + order.map(function (n) {
-    return '"' + n + '"';
-  }).join(', ')));
+  if (initialRouteIndex === -1) {
+    throw new Error('Invalid initialRouteName \'' + initialRouteName + '\' for TabRouter. ' + ('Should be one of ' + order.map(function (n) {
+      return '"' + n + '"';
+    }).join(', ')));
+  }
   return {
     getStateForAction: function getStateForAction(action, inputState) {
       action = _NavigationActions2.default.mapDeprecatedActionAndWarn(action);
@@ -57796,7 +58534,11 @@ exports.default = function (routeConfigs) {
     getScreenConfig: _getScreenConfigDeprecated2.default
   };
 };
+<<<<<<< HEAD
 }, 468, null, "react-navigation/src/routers/TabRouter.js");
+=======
+}, 462, null, "react-navigation/src/routers/TabRouter.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/views/TabView/TabView.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -57808,6 +58550,7 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _reactNativeTabView = require(470                    ); // 470 = react-native-tab-view
 
 var _SceneView = require(447           ); // 447 = ../SceneView
@@ -57815,6 +58558,15 @@ var _SceneView = require(447           ); // 447 = ../SceneView
 var _SceneView2 = babelHelpers.interopRequireDefault(_SceneView);
 
 var _withCachedChildNavigation = require(479                              ); // 479 = ../../withCachedChildNavigation
+=======
+var _reactNativeTabView = require(464                    ); // 464 = react-native-tab-view
+
+var _SceneView = require(441           ); // 441 = ../SceneView
+
+var _SceneView2 = babelHelpers.interopRequireDefault(_SceneView);
+
+var _withCachedChildNavigation = require(473                              ); // 473 = ../../withCachedChildNavigation
+>>>>>>> origin/dev
 
 var _withCachedChildNavigation2 = babelHelpers.interopRequireDefault(_withCachedChildNavigation);
 
@@ -57881,10 +58633,23 @@ var TabView = function (_PureComponent) {
       var options = _this.props.router.getScreenOptions(_this.props.childNavigationProps[route.key], _this.props.screenProps || {});
 
       return options.tabBarOnPress;
+<<<<<<< HEAD
     }, _this._renderIcon = function (_ref5) {
       var focused = _ref5.focused,
           route = _ref5.route,
           tintColor = _ref5.tintColor;
+=======
+    }, _this._getTestIDProps = function (_ref5) {
+      var route = _ref5.route;
+
+      var options = _this.props.router.getScreenOptions(_this.props.childNavigationProps[route.key], _this.props.screenProps || {});
+
+      return options.tabBarTestIDProps;
+    }, _this._renderIcon = function (_ref6) {
+      var focused = _ref6.focused,
+          route = _ref6.route,
+          tintColor = _ref6.tintColor;
+>>>>>>> origin/dev
 
       var options = _this.props.router.getScreenOptions(_this.props.childNavigationProps[route.key], _this.props.screenProps || {});
       if (options.tabBarIcon) {
@@ -57904,19 +58669,31 @@ var TabView = function (_PureComponent) {
         screenProps: _this.props.screenProps,
         navigation: _this.props.navigation,
         getLabel: _this._getLabel,
+<<<<<<< HEAD
+=======
+        getTestIDProps: _this._getTestIDProps,
+>>>>>>> origin/dev
         getOnPress: _this._getOnPress,
         renderIcon: _this._renderIcon,
         animationEnabled: animationEnabled,
         __source: {
           fileName: _jsxFileName,
+<<<<<<< HEAD
           lineNumber: 130
+=======
+          lineNumber: 139
+>>>>>>> origin/dev
         }
       }));
     }, _this._renderPager = function (props) {
       return _react2.default.createElement(_reactNativeTabView.TabViewPagerPan, babelHelpers.extends({}, props, {
         __source: {
           fileName: _jsxFileName,
+<<<<<<< HEAD
           lineNumber: 143
+=======
+          lineNumber: 153
+>>>>>>> origin/dev
         }
       }));
     }, _temp), babelHelpers.possibleConstructorReturn(_this, _ret);
@@ -57974,7 +58751,11 @@ var TabView = function (_PureComponent) {
       return _react2.default.createElement(_reactNativeTabView.TabViewAnimated, babelHelpers.extends({}, props, {
         __source: {
           fileName: _jsxFileName,
+<<<<<<< HEAD
           lineNumber: 195
+=======
+          lineNumber: 205
+>>>>>>> origin/dev
         }
       }));
     }
@@ -57995,11 +58776,16 @@ var styles = _reactNative.StyleSheet.create({
     overflow: 'hidden'
   }
 });
+<<<<<<< HEAD
 }, 469, null, "react-navigation/src/views/TabView/TabView.js");
+=======
+}, 463, null, "react-navigation/src/views/TabView/TabView.js");
+>>>>>>> origin/dev
 __d(/* react-native-tab-view/src/index.js */function(global, require, module, exports) {
 
 module.exports = {
   get TabViewAnimated() {
+<<<<<<< HEAD
     return require(471                ).default; // 471 = ./TabViewAnimated
   },
   get TabViewPagerPan() {
@@ -58019,6 +58805,27 @@ module.exports = {
   }
 };
 }, 470, null, "react-native-tab-view/src/index.js");
+=======
+    return require(465                ).default; // 465 = ./TabViewAnimated
+  },
+  get TabViewPagerPan() {
+    return require(469                ).default; // 469 = ./TabViewPagerPan
+  },
+  get TabViewPagerScroll() {
+    return require(468                   ).default; // 468 = ./TabViewPagerScroll
+  },
+  get TabViewPagerAndroid() {
+    return require(467                    ).default; // 467 = ./TabViewPagerAndroid
+  },
+  get TabBar() {
+    return require(470       ).default; // 470 = ./TabBar
+  },
+  get SceneMap() {
+    return require(472         ).default; // 472 = ./SceneMap
+  }
+};
+}, 464, null, "react-native-tab-view/src/index.js");
+>>>>>>> origin/dev
 __d(/* react-native-tab-view/src/TabViewAnimated.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -58028,18 +58835,27 @@ var _react = require(12     ); // 12 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
+<<<<<<< HEAD
 var _propTypes = require(448         ); // 448 = prop-types
+=======
+var _propTypes = require(442         ); // 442 = prop-types
+>>>>>>> origin/dev
 
 var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _TabViewPropTypes = require(472                 ); // 472 = ./TabViewPropTypes
+=======
+var _TabViewPropTypes = require(466                 ); // 466 = ./TabViewPropTypes
+>>>>>>> origin/dev
 
 var TabViewPager = void 0;
 
 switch (_reactNative.Platform.OS) {
   case 'android':
+<<<<<<< HEAD
     TabViewPager = require(473                    ).default; // 473 = ./TabViewPagerAndroid
     break;
   case 'ios':
@@ -58047,6 +58863,15 @@ switch (_reactNative.Platform.OS) {
     break;
   default:
     TabViewPager = require(475                ).default; // 475 = ./TabViewPagerPan
+=======
+    TabViewPager = require(467                    ).default; // 467 = ./TabViewPagerAndroid
+    break;
+  case 'ios':
+    TabViewPager = require(468                   ).default; // 468 = ./TabViewPagerScroll
+    break;
+  default:
+    TabViewPager = require(469                ).default; // 469 = ./TabViewPagerPan
+>>>>>>> origin/dev
     break;
 }
 
@@ -58314,13 +59139,21 @@ var styles = _reactNative.StyleSheet.create({
     overflow: 'hidden'
   }
 });
+<<<<<<< HEAD
 }, 471, null, "react-native-tab-view/src/TabViewAnimated.js");
+=======
+}, 465, null, "react-native-tab-view/src/TabViewAnimated.js");
+>>>>>>> origin/dev
 __d(/* react-native-tab-view/src/TabViewPropTypes.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.SceneRendererPropType = exports.NavigationStatePropType = exports.NavigationRoutePropType = undefined;
 
+<<<<<<< HEAD
 var _propTypes = require(448         ); // 448 = prop-types
+=======
+var _propTypes = require(442         ); // 442 = prop-types
+>>>>>>> origin/dev
 
 var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
@@ -58348,7 +59181,11 @@ var SceneRendererPropType = exports.SceneRendererPropType = {
   getLastPosition: _propTypes2.default.func.isRequired,
   subscribe: _propTypes2.default.func.isRequired
 };
+<<<<<<< HEAD
 }, 472, null, "react-native-tab-view/src/TabViewPropTypes.js");
+=======
+}, 466, null, "react-native-tab-view/src/TabViewPropTypes.js");
+>>>>>>> origin/dev
 __d(/* react-native-tab-view/src/TabViewPagerAndroid.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -58358,13 +59195,21 @@ var _react = require(12     ); // 12 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
+<<<<<<< HEAD
 var _propTypes = require(448         ); // 448 = prop-types
+=======
+var _propTypes = require(442         ); // 442 = prop-types
+>>>>>>> origin/dev
 
 var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _TabViewPropTypes = require(472                 ); // 472 = ./TabViewPropTypes
+=======
+var _TabViewPropTypes = require(466                 ); // 466 = ./TabViewPropTypes
+>>>>>>> origin/dev
 
 var TabViewPagerAndroid = function (_PureComponent) {
   babelHelpers.inherits(TabViewPagerAndroid, _PureComponent);
@@ -58539,7 +59384,11 @@ var styles = _reactNative.StyleSheet.create({
     overflow: 'hidden'
   }
 });
+<<<<<<< HEAD
 }, 473, null, "react-native-tab-view/src/TabViewPagerAndroid.js");
+=======
+}, 467, null, "react-native-tab-view/src/TabViewPagerAndroid.js");
+>>>>>>> origin/dev
 __d(/* react-native-tab-view/src/TabViewPagerScroll.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -58549,13 +59398,21 @@ var _react = require(12     ); // 12 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
+<<<<<<< HEAD
 var _propTypes = require(448         ); // 448 = prop-types
+=======
+var _propTypes = require(442         ); // 442 = prop-types
+>>>>>>> origin/dev
 
 var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _TabViewPropTypes = require(472                 ); // 472 = ./TabViewPropTypes
+=======
+var _TabViewPropTypes = require(466                 ); // 466 = ./TabViewPropTypes
+>>>>>>> origin/dev
 
 var TabViewPagerScroll = function (_PureComponent) {
   babelHelpers.inherits(TabViewPagerScroll, _PureComponent);
@@ -58705,7 +59562,11 @@ var styles = _reactNative.StyleSheet.create({
     overflow: 'hidden'
   }
 });
+<<<<<<< HEAD
 }, 474, null, "react-native-tab-view/src/TabViewPagerScroll.js");
+=======
+}, 468, null, "react-native-tab-view/src/TabViewPagerScroll.js");
+>>>>>>> origin/dev
 __d(/* react-native-tab-view/src/TabViewPagerPan.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -58715,13 +59576,21 @@ var _react = require(12     ); // 12 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
+<<<<<<< HEAD
 var _propTypes = require(448         ); // 448 = prop-types
+=======
+var _propTypes = require(442         ); // 442 = prop-types
+>>>>>>> origin/dev
 
 var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _TabViewPropTypes = require(472                 ); // 472 = ./TabViewPropTypes
+=======
+var _TabViewPropTypes = require(466                 ); // 466 = ./TabViewPropTypes
+>>>>>>> origin/dev
 
 var DEAD_ZONE = 12;
 
@@ -58971,7 +59840,11 @@ var styles = _reactNative.StyleSheet.create({
     alignItems: 'stretch'
   }
 });
+<<<<<<< HEAD
 }, 475, null, "react-native-tab-view/src/TabViewPagerPan.js");
+=======
+}, 469, null, "react-native-tab-view/src/TabViewPagerPan.js");
+>>>>>>> origin/dev
 __d(/* react-native-tab-view/src/TabBar.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -58981,17 +59854,29 @@ var _react = require(12     ); // 12 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
+<<<<<<< HEAD
 var _propTypes = require(448         ); // 448 = prop-types
+=======
+var _propTypes = require(442         ); // 442 = prop-types
+>>>>>>> origin/dev
 
 var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _TouchableItem = require(477              ); // 477 = ./TouchableItem
 
 var _TouchableItem2 = babelHelpers.interopRequireDefault(_TouchableItem);
 
 var _TabViewPropTypes = require(472                 ); // 472 = ./TabViewPropTypes
+=======
+var _TouchableItem = require(471              ); // 471 = ./TouchableItem
+
+var _TouchableItem2 = babelHelpers.interopRequireDefault(_TouchableItem);
+
+var _TabViewPropTypes = require(466                 ); // 466 = ./TabViewPropTypes
+>>>>>>> origin/dev
 
 var TabBar = function (_PureComponent) {
   babelHelpers.inherits(TabBar, _PureComponent);
@@ -59515,7 +60400,11 @@ var styles = _reactNative.StyleSheet.create({
     height: 2
   }
 });
+<<<<<<< HEAD
 }, 476, null, "react-native-tab-view/src/TabBar.js");
+=======
+}, 470, null, "react-native-tab-view/src/TabBar.js");
+>>>>>>> origin/dev
 __d(/* react-native-tab-view/src/TouchableItem.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -59525,7 +60414,11 @@ var _react = require(12     ); // 12 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
+<<<<<<< HEAD
 var _propTypes = require(448         ); // 448 = prop-types
+=======
+var _propTypes = require(442         ); // 442 = prop-types
+>>>>>>> origin/dev
 
 var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
@@ -59616,7 +60509,11 @@ TouchableItem.defaultProps = {
   pressColor: 'rgba(255, 255, 255, .4)'
 };
 exports.default = TouchableItem;
+<<<<<<< HEAD
 }, 477, null, "react-native-tab-view/src/TouchableItem.js");
+=======
+}, 471, null, "react-native-tab-view/src/TouchableItem.js");
+>>>>>>> origin/dev
 __d(/* react-native-tab-view/src/SceneMap.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -59654,7 +60551,11 @@ function SceneMap(scenes) {
     });
   };
 }
+<<<<<<< HEAD
 }, 478, null, "react-native-tab-view/src/SceneMap.js");
+=======
+}, 472, null, "react-native-tab-view/src/SceneMap.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/withCachedChildNavigation.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -59727,7 +60628,11 @@ function withCachedChildNavigation(Comp) {
     return _class;
   }(_react.PureComponent), _class.displayName = 'withCachedChildNavigation(' + (Comp.displayName || Comp.name) + ')', _temp2;
 }
+<<<<<<< HEAD
 }, 479, null, "react-navigation/src/withCachedChildNavigation.js");
+=======
+}, 473, null, "react-navigation/src/withCachedChildNavigation.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/views/TabView/TabBarTop.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -59739,9 +60644,15 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _reactNativeTabView = require(470                    ); // 470 = react-native-tab-view
 
 var _TabBarIcon = require(481           ); // 481 = ./TabBarIcon
+=======
+var _reactNativeTabView = require(464                    ); // 464 = react-native-tab-view
+
+var _TabBarIcon = require(475           ); // 475 = ./TabBarIcon
+>>>>>>> origin/dev
 
 var _TabBarIcon2 = babelHelpers.interopRequireDefault(_TabBarIcon);
 
@@ -59767,7 +60678,8 @@ var TabBarTop = function (_PureComponent) {
           inactiveTintColor = _this$props.inactiveTintColor,
           showLabel = _this$props.showLabel,
           upperCaseLabel = _this$props.upperCaseLabel,
-          labelStyle = _this$props.labelStyle;
+          labelStyle = _this$props.labelStyle,
+          allowFontScaling = _this$props.allowFontScaling;
 
       if (showLabel === false) {
         return null;
@@ -59791,9 +60703,16 @@ var TabBarTop = function (_PureComponent) {
       if (typeof label === 'string') {
         return _react2.default.createElement(
           _reactNative.Animated.Text,
-          { style: [styles.label, { color: color }, labelStyle], __source: {
+          {
+            style: [styles.label, { color: color }, labelStyle],
+            allowFontScaling: allowFontScaling,
+            __source: {
               fileName: _jsxFileName,
+<<<<<<< HEAD
               lineNumber: 89
+=======
+              lineNumber: 93
+>>>>>>> origin/dev
             }
           },
           upperCaseLabel ? label.toUpperCase() : label
@@ -59827,7 +60746,11 @@ var TabBarTop = function (_PureComponent) {
         style: [styles.icon, iconStyle],
         __source: {
           fileName: _jsxFileName,
+<<<<<<< HEAD
           lineNumber: 115
+=======
+          lineNumber: 122
+>>>>>>> origin/dev
         }
       });
     }, _this._handleOnPress = function (scene) {
@@ -59858,7 +60781,11 @@ var TabBarTop = function (_PureComponent) {
         renderLabel: this._renderLabel,
         __source: {
           fileName: _jsxFileName,
+<<<<<<< HEAD
           lineNumber: 144
+=======
+          lineNumber: 151
+>>>>>>> origin/dev
         }
       }));
     }
@@ -59871,7 +60798,8 @@ TabBarTop.defaultProps = {
   inactiveTintColor: '#fff',
   showIcon: false,
   showLabel: true,
-  upperCaseLabel: true
+  upperCaseLabel: true,
+  allowFontScaling: true
 };
 exports.default = TabBarTop;
 
@@ -59888,7 +60816,11 @@ var styles = _reactNative.StyleSheet.create({
     backgroundColor: 'transparent'
   }
 });
+<<<<<<< HEAD
 }, 480, null, "react-navigation/src/views/TabView/TabBarTop.js");
+=======
+}, 474, null, "react-navigation/src/views/TabView/TabBarTop.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/views/TabView/TabBarIcon.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -59993,7 +60925,11 @@ var styles = _reactNative.StyleSheet.create({
     justifyContent: 'center'
   }
 });
+<<<<<<< HEAD
 }, 481, null, "react-navigation/src/views/TabView/TabBarIcon.js");
+=======
+}, 475, null, "react-navigation/src/views/TabView/TabBarIcon.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/views/TabView/TabBarBottom.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -60005,9 +60941,21 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _TabBarIcon = require(481           ); // 481 = ./TabBarIcon
+=======
+var _TabBarIcon = require(475           ); // 475 = ./TabBarIcon
+>>>>>>> origin/dev
 
 var _TabBarIcon2 = babelHelpers.interopRequireDefault(_TabBarIcon);
+
+var _withOrientation = require(439                 ); // 439 = ../withOrientation
+
+var _withOrientation2 = babelHelpers.interopRequireDefault(_withOrientation);
+
+var majorVersion = parseInt(_reactNative.Platform.Version, 10);
+var isIos = _reactNative.Platform.OS === 'ios';
+var useHorizontalTabs = majorVersion >= 11 && isIos;
 
 var TabBarBottom = function (_PureComponent) {
   babelHelpers.inherits(TabBarBottom, _PureComponent);
@@ -60030,7 +60978,10 @@ var TabBarBottom = function (_PureComponent) {
           activeTintColor = _this$props.activeTintColor,
           inactiveTintColor = _this$props.inactiveTintColor,
           labelStyle = _this$props.labelStyle,
-          showLabel = _this$props.showLabel;
+          showLabel = _this$props.showLabel,
+          showIcon = _this$props.showIcon,
+          isLandscape = _this$props.isLandscape,
+          allowFontScaling = _this$props.allowFontScaling;
 
       if (showLabel === false) {
         return null;
@@ -60051,12 +61002,28 @@ var TabBarBottom = function (_PureComponent) {
 
       var tintColor = scene.focused ? activeTintColor : inactiveTintColor;
       var label = _this.props.getLabel(babelHelpers.extends({}, scene, { tintColor: tintColor }));
+      var marginLeft = 0;
+      if (isLandscape && showIcon && useHorizontalTabs) {
+        marginLeft = LABEL_LEFT_MARGIN;
+      }
+      var marginTop = 0;
+      if (!isLandscape && showIcon && useHorizontalTabs) {
+        marginTop = LABEL_TOP_MARGIN;
+      }
+
       if (typeof label === 'string') {
         return _react2.default.createElement(
           _reactNative.Animated.Text,
-          { style: [styles.label, { color: color }, labelStyle], __source: {
+          {
+            style: [styles.label, { color: color, marginLeft: marginLeft, marginTop: marginTop }, labelStyle],
+            allowFontScaling: allowFontScaling,
+            __source: {
               fileName: _jsxFileName,
+<<<<<<< HEAD
               lineNumber: 92
+=======
+              lineNumber: 118
+>>>>>>> origin/dev
             }
           },
           label
@@ -60075,7 +61042,8 @@ var TabBarBottom = function (_PureComponent) {
           activeTintColor = _this$props2.activeTintColor,
           inactiveTintColor = _this$props2.inactiveTintColor,
           renderIcon = _this$props2.renderIcon,
-          showIcon = _this$props2.showIcon;
+          showIcon = _this$props2.showIcon,
+          showLabel = _this$props2.showLabel;
 
       if (showIcon === false) {
         return null;
@@ -60087,12 +61055,19 @@ var TabBarBottom = function (_PureComponent) {
         inactiveTintColor: inactiveTintColor,
         renderIcon: renderIcon,
         scene: scene,
-        style: styles.icon,
+        style: showLabel && useHorizontalTabs ? {} : styles.icon,
         __source: {
           fileName: _jsxFileName,
+<<<<<<< HEAD
           lineNumber: 118
+=======
+          lineNumber: 148
+>>>>>>> origin/dev
         }
       });
+    }, _this._renderTestIDProps = function (scene) {
+      var testIDProps = _this.props.getTestIDProps && _this.props.getTestIDProps(scene);
+      return testIDProps;
     }, _temp), babelHelpers.possibleConstructorReturn(_this, _ret);
   }
 
@@ -60106,10 +61081,19 @@ var TabBarBottom = function (_PureComponent) {
           navigation = _props.navigation,
           jumpToIndex = _props.jumpToIndex,
           getOnPress = _props.getOnPress,
+<<<<<<< HEAD
           activeBackgroundColor = _props.activeBackgroundColor,
           inactiveBackgroundColor = _props.inactiveBackgroundColor,
           style = _props.style,
           tabStyle = _props.tabStyle;
+=======
+          getTestIDProps = _props.getTestIDProps,
+          activeBackgroundColor = _props.activeBackgroundColor,
+          inactiveBackgroundColor = _props.inactiveBackgroundColor,
+          style = _props.style,
+          tabStyle = _props.tabStyle,
+          isLandscape = _props.isLandscape;
+>>>>>>> origin/dev
       var routes = navigation.state.routes;
 
       var inputRange = [-1].concat(babelHelpers.toConsumableArray(routes.map(function (x, i) {
@@ -60119,7 +61103,11 @@ var TabBarBottom = function (_PureComponent) {
         _reactNative.Animated.View,
         { style: [styles.tabBar, style], __source: {
             fileName: _jsxFileName,
+<<<<<<< HEAD
             lineNumber: 145
+=======
+            lineNumber: 183
+>>>>>>> origin/dev
           }
         },
         routes.map(function (route, index) {
@@ -60133,26 +61121,45 @@ var TabBarBottom = function (_PureComponent) {
             inputRange: inputRange,
             outputRange: outputRange
           });
+
           var justifyContent = _this2.props.showIcon ? 'flex-end' : 'center';
+          var extraProps = _this2._renderTestIDProps(scene) || {};
+          var testID = extraProps.testID,
+              accessibilityLabel = extraProps.accessibilityLabel;
+
+
           return _react2.default.createElement(
             _reactNative.TouchableWithoutFeedback,
             {
               key: route.key,
+              testID: testID,
+              accessibilityLabel: accessibilityLabel,
               onPress: function onPress() {
                 return _onPress ? _onPress(scene, jumpToIndex) : jumpToIndex(index);
               },
               __source: {
                 fileName: _jsxFileName,
+<<<<<<< HEAD
                 lineNumber: 162
+=======
+                lineNumber: 204
+>>>>>>> origin/dev
               }
             },
             _react2.default.createElement(
               _reactNative.Animated.View,
               {
+<<<<<<< HEAD
                 style: [styles.tab, { backgroundColor: backgroundColor, justifyContent: justifyContent }, tabStyle],
                 __source: {
                   fileName: _jsxFileName,
                   lineNumber: 167
+=======
+                style: [styles.tab, isLandscape && useHorizontalTabs && styles.tabLandscape, !isLandscape && useHorizontalTabs && styles.tabPortrait, { backgroundColor: backgroundColor }, tabStyle],
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 211
+>>>>>>> origin/dev
                 }
               },
               _this2._renderIcon(scene),
@@ -60172,11 +61179,13 @@ TabBarBottom.defaultProps = {
   inactiveTintColor: '#929292',
   inactiveBackgroundColor: 'transparent',
   showLabel: true,
-  showIcon: true
+  showIcon: true,
+  allowFontScaling: true
 };
-exports.default = TabBarBottom;
 
 
+var LABEL_LEFT_MARGIN = 20;
+var LABEL_TOP_MARGIN = 15;
 var styles = _reactNative.StyleSheet.create({
   tabBar: {
     height: 49,
@@ -60186,8 +61195,16 @@ var styles = _reactNative.StyleSheet.create({
     backgroundColor: '#F7F7F7' },
   tab: {
     flex: 1,
-    alignItems: 'stretch',
+    alignItems: isIos ? 'center' : 'stretch',
     justifyContent: 'flex-end'
+  },
+  tabPortrait: {
+    justifyContent: 'flex-end',
+    flexDirection: 'column'
+  },
+  tabLandscape: {
+    justifyContent: 'center',
+    flexDirection: 'row'
   },
   icon: {
     flexGrow: 1
@@ -60199,7 +61216,13 @@ var styles = _reactNative.StyleSheet.create({
     backgroundColor: 'transparent'
   }
 });
+<<<<<<< HEAD
 }, 482, null, "react-navigation/src/views/TabView/TabBarBottom.js");
+=======
+
+exports.default = (0, _withOrientation2.default)(TabBarBottom);
+}, 476, null, "react-navigation/src/views/TabView/TabBarBottom.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/navigators/DrawerNavigator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -60211,7 +61234,11 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _createNavigator = require(433                ); // 433 = ./createNavigator
+=======
+var _createNavigator = require(425                ); // 425 = ./createNavigator
+>>>>>>> origin/dev
 
 var _createNavigator2 = babelHelpers.interopRequireDefault(_createNavigator);
 
@@ -60219,6 +61246,7 @@ var _createNavigationContainer = require(427                           ); // 427
 
 var _createNavigationContainer2 = babelHelpers.interopRequireDefault(_createNavigationContainer);
 
+<<<<<<< HEAD
 var _TabRouter = require(468                   ); // 468 = ../routers/TabRouter
 
 var _TabRouter2 = babelHelpers.interopRequireDefault(_TabRouter);
@@ -60236,13 +61264,40 @@ var _DrawerNavigatorItems = require(490                                   ); // 
 var _DrawerNavigatorItems2 = babelHelpers.interopRequireDefault(_DrawerNavigatorItems);
 
 var _NavigatorTypes = require(466               ); // 466 = ./NavigatorTypes
+=======
+var _TabRouter = require(462                   ); // 462 = ../routers/TabRouter
+
+var _TabRouter2 = babelHelpers.interopRequireDefault(_TabRouter);
+
+var _DrawerScreen = require(478                           ); // 478 = ../views/Drawer/DrawerScreen
+
+var _DrawerScreen2 = babelHelpers.interopRequireDefault(_DrawerScreen);
+
+var _DrawerView = require(479                         ); // 479 = ../views/Drawer/DrawerView
+
+var _DrawerView2 = babelHelpers.interopRequireDefault(_DrawerView);
+
+var _DrawerNavigatorItems = require(484                                   ); // 484 = ../views/Drawer/DrawerNavigatorItems
+
+var _DrawerNavigatorItems2 = babelHelpers.interopRequireDefault(_DrawerNavigatorItems);
+
+var _NavigatorTypes = require(460               ); // 460 = ./NavigatorTypes
+>>>>>>> origin/dev
 
 var _NavigatorTypes2 = babelHelpers.interopRequireDefault(_NavigatorTypes);
 
+var _Dimensions$get = _reactNative.Dimensions.get('window'),
+    height = _Dimensions$get.height,
+    width = _Dimensions$get.width;
+
 var DefaultDrawerConfig = {
-  drawerWidth: _reactNative.Dimensions.get('window').width - (_reactNative.Platform.OS === 'android' ? 56 : 64),
+  drawerWidth: Math.min(height, width) - (_reactNative.Platform.OS === 'android' ? 56 : 64),
   contentComponent: _DrawerNavigatorItems2.default,
   drawerPosition: 'left',
+<<<<<<< HEAD
+=======
+  drawerBackgroundColor: 'white',
+>>>>>>> origin/dev
   useNativeAnimations: true
 };
 
@@ -60257,7 +61312,12 @@ var DrawerNavigator = function DrawerNavigator(routeConfigs) {
       contentOptions = mergedConfig.contentOptions,
       drawerPosition = mergedConfig.drawerPosition,
       useNativeAnimations = mergedConfig.useNativeAnimations,
+<<<<<<< HEAD
       tabsConfig = babelHelpers.objectWithoutProperties(mergedConfig, ['containerConfig', 'drawerWidth', 'drawerLockMode', 'contentComponent', 'contentOptions', 'drawerPosition', 'useNativeAnimations']);
+=======
+      drawerBackgroundColor = mergedConfig.drawerBackgroundColor,
+      tabsConfig = babelHelpers.objectWithoutProperties(mergedConfig, ['containerConfig', 'drawerWidth', 'drawerLockMode', 'contentComponent', 'contentOptions', 'drawerPosition', 'useNativeAnimations', 'drawerBackgroundColor']);
+>>>>>>> origin/dev
 
 
   var contentRouter = (0, _TabRouter2.default)(routeConfigs, tabsConfig);
@@ -60268,7 +61328,11 @@ var DrawerNavigator = function DrawerNavigator(routeConfigs) {
         return _react2.default.createElement(_DrawerScreen2.default, babelHelpers.extends({}, props, {
           __source: {
             fileName: _jsxFileName,
+<<<<<<< HEAD
             lineNumber: 64
+=======
+            lineNumber: 67
+>>>>>>> origin/dev
           }
         }));
       })
@@ -60289,6 +61353,10 @@ var DrawerNavigator = function DrawerNavigator(routeConfigs) {
 
   var navigator = (0, _createNavigator2.default)(drawerRouter, routeConfigs, config, _NavigatorTypes2.default.DRAWER)(function (props) {
     return _react2.default.createElement(_DrawerView2.default, babelHelpers.extends({}, props, {
+<<<<<<< HEAD
+=======
+      drawerBackgroundColor: drawerBackgroundColor,
+>>>>>>> origin/dev
       drawerLockMode: drawerLockMode,
       useNativeAnimations: useNativeAnimations,
       drawerWidth: drawerWidth,
@@ -60297,7 +61365,11 @@ var DrawerNavigator = function DrawerNavigator(routeConfigs) {
       drawerPosition: drawerPosition,
       __source: {
         fileName: _jsxFileName,
+<<<<<<< HEAD
         lineNumber: 84
+=======
+        lineNumber: 87
+>>>>>>> origin/dev
       }
     }));
   });
@@ -60306,7 +61378,11 @@ var DrawerNavigator = function DrawerNavigator(routeConfigs) {
 };
 
 exports.default = DrawerNavigator;
+<<<<<<< HEAD
 }, 483, null, "react-navigation/src/navigators/DrawerNavigator.js");
+=======
+}, 477, null, "react-navigation/src/navigators/DrawerNavigator.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/views/Drawer/DrawerScreen.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -60316,11 +61392,19 @@ var _react = require(12     ); // 12 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
+<<<<<<< HEAD
 var _SceneView = require(447           ); // 447 = ../SceneView
 
 var _SceneView2 = babelHelpers.interopRequireDefault(_SceneView);
 
 var _withCachedChildNavigation = require(479                              ); // 479 = ../../withCachedChildNavigation
+=======
+var _SceneView = require(441           ); // 441 = ../SceneView
+
+var _SceneView2 = babelHelpers.interopRequireDefault(_SceneView);
+
+var _withCachedChildNavigation = require(473                              ); // 473 = ../../withCachedChildNavigation
+>>>>>>> origin/dev
 
 var _withCachedChildNavigation2 = babelHelpers.interopRequireDefault(_withCachedChildNavigation);
 
@@ -60361,7 +61445,11 @@ var DrawerScreen = function (_PureComponent) {
 }(_react.PureComponent);
 
 exports.default = (0, _withCachedChildNavigation2.default)(DrawerScreen);
+<<<<<<< HEAD
 }, 484, null, "react-navigation/src/views/Drawer/DrawerScreen.js");
+=======
+}, 478, null, "react-navigation/src/views/Drawer/DrawerScreen.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/views/Drawer/DrawerView.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -60371,7 +61459,11 @@ var _react = require(12     ); // 12 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
+<<<<<<< HEAD
 var _reactNativeDrawerLayoutPolyfill = require(486                                  ); // 486 = react-native-drawer-layout-polyfill
+=======
+var _reactNativeDrawerLayoutPolyfill = require(480                                  ); // 480 = react-native-drawer-layout-polyfill
+>>>>>>> origin/dev
 
 var _reactNativeDrawerLayoutPolyfill2 = babelHelpers.interopRequireDefault(_reactNativeDrawerLayoutPolyfill);
 
@@ -60379,7 +61471,11 @@ var _addNavigationHelpers = require(431                         ); // 431 = ../.
 
 var _addNavigationHelpers2 = babelHelpers.interopRequireDefault(_addNavigationHelpers);
 
+<<<<<<< HEAD
 var _DrawerSidebar = require(489              ); // 489 = ./DrawerSidebar
+=======
+var _DrawerSidebar = require(483              ); // 483 = ./DrawerSidebar
+>>>>>>> origin/dev
 
 var _DrawerSidebar2 = babelHelpers.interopRequireDefault(_DrawerSidebar);
 
@@ -60440,7 +61536,11 @@ var DrawerView = function (_PureComponent) {
         style: _this.props.style,
         __source: {
           fileName: _jsxFileName,
+<<<<<<< HEAD
           lineNumber: 127
+=======
+          lineNumber: 128
+>>>>>>> origin/dev
         }
       });
     }, _temp), babelHelpers.possibleConstructorReturn(_this, _ret);
@@ -60494,6 +61594,10 @@ var DrawerView = function (_PureComponent) {
             _this2._drawer = c;
           },
           drawerLockMode: this.props.screenProps && this.props.screenProps.drawerLockMode || config && config.drawerLockMode,
+<<<<<<< HEAD
+=======
+          drawerBackgroundColor: this.props.drawerBackgroundColor,
+>>>>>>> origin/dev
           drawerWidth: this.props.drawerWidth,
           onDrawerOpen: this._handleDrawerOpen,
           onDrawerClose: this._handleDrawerClose,
@@ -60502,7 +61606,11 @@ var DrawerView = function (_PureComponent) {
           drawerPosition: this.props.drawerPosition === 'right' ? _reactNativeDrawerLayoutPolyfill2.default.positions.Right : _reactNativeDrawerLayoutPolyfill2.default.positions.Left,
           __source: {
             fileName: _jsxFileName,
+<<<<<<< HEAD
             lineNumber: 155
+=======
+            lineNumber: 156
+>>>>>>> origin/dev
           }
         },
         _react2.default.createElement(DrawerScreen, {
@@ -60510,7 +61618,11 @@ var DrawerView = function (_PureComponent) {
           navigation: this._screenNavigationProp,
           __source: {
             fileName: _jsxFileName,
+<<<<<<< HEAD
             lineNumber: 174
+=======
+            lineNumber: 176
+>>>>>>> origin/dev
           }
         })
       );
@@ -60520,11 +61632,19 @@ var DrawerView = function (_PureComponent) {
 }(_react.PureComponent);
 
 exports.default = DrawerView;
+<<<<<<< HEAD
 }, 485, null, "react-navigation/src/views/Drawer/DrawerView.js");
 __d(/* react-native-drawer-layout-polyfill/dist/index.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", { value: true });var _reactNativeDrawerLayout = require(487                         );var _reactNativeDrawerLayout2 = _interopRequireDefault(_reactNativeDrawerLayout);function _interopRequireDefault(obj) { // 487 = react-native-drawer-layout
   return obj && obj.__esModule ? obj : { default: obj };
 }exports.default = _reactNativeDrawerLayout2.default;
 }, 486, null, "react-native-drawer-layout-polyfill/dist/index.js");
+=======
+}, 479, null, "react-navigation/src/views/Drawer/DrawerView.js");
+__d(/* react-native-drawer-layout-polyfill/dist/index.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", { value: true });var _reactNativeDrawerLayout = require(481                         );var _reactNativeDrawerLayout2 = _interopRequireDefault(_reactNativeDrawerLayout);function _interopRequireDefault(obj) { // 481 = react-native-drawer-layout
+  return obj && obj.__esModule ? obj : { default: obj };
+}exports.default = _reactNativeDrawerLayout2.default;
+}, 480, null, "react-native-drawer-layout-polyfill/dist/index.js");
+>>>>>>> origin/dev
 __d(/* react-native-drawer-layout/dist/DrawerLayout.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = undefined;var _extends = Object.assign || function (target) {
   for (var i = 1; i < arguments.length; i++) {
     var source = arguments[i];for (var key in source) {
@@ -60543,7 +61663,11 @@ __d(/* react-native-drawer-layout/dist/DrawerLayout.js */function(global, requir
   };
 }();var _class, _temp;
 var _react = require(12     );var _react2 = _interopRequireDefault(_react); // 12 = react
+<<<<<<< HEAD
 var _reactNativeDismissKeyboard = require(488                            );var _reactNativeDismissKeyboard2 = _interopRequireDefault(_reactNativeDismissKeyboard); // 488 = react-native-dismiss-keyboard
+=======
+var _reactNativeDismissKeyboard = require(482                            );var _reactNativeDismissKeyboard2 = _interopRequireDefault(_reactNativeDismissKeyboard); // 482 = react-native-dismiss-keyboard
+>>>>>>> origin/dev
 var _reactNative = require(46            );function _interopRequireDefault(obj) { // 46 = react-native
   return obj && obj.__esModule ? obj : { default: obj };
 }function _classCallCheck(instance, Constructor) {
@@ -60766,7 +61890,11 @@ var styles = _reactNative.StyleSheet.create({
     bottom: 0,
     right: 0,
     zIndex: 1000 } });
+<<<<<<< HEAD
 }, 487, null, "react-native-drawer-layout/dist/DrawerLayout.js");
+=======
+}, 481, null, "react-native-drawer-layout/dist/DrawerLayout.js");
+>>>>>>> origin/dev
 __d(/* react-native-dismiss-keyboard/dist/index.js */function(global, require, module, exports) {Object.defineProperty(exports, '__esModule', {
   value: true
 });
@@ -60781,7 +61909,11 @@ function dismissKeyboard() {
 }
 
 module.exports = exports.default;
+<<<<<<< HEAD
 }, 488, null, "react-native-dismiss-keyboard/dist/index.js");
+=======
+}, 482, null, "react-native-dismiss-keyboard/dist/index.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/views/Drawer/DrawerSidebar.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -60793,11 +61925,19 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _withCachedChildNavigation = require(479                              ); // 479 = ../../withCachedChildNavigation
 
 var _withCachedChildNavigation2 = babelHelpers.interopRequireDefault(_withCachedChildNavigation);
 
 var _NavigationActions = require(430                      ); // 430 = ../../NavigationActions
+=======
+var _withCachedChildNavigation = require(473                              ); // 473 = ../../withCachedChildNavigation
+
+var _withCachedChildNavigation2 = babelHelpers.interopRequireDefault(_withCachedChildNavigation);
+
+var _NavigationActions = require(421                      ); // 421 = ../../NavigationActions
+>>>>>>> origin/dev
 
 var _NavigationActions2 = babelHelpers.interopRequireDefault(_NavigationActions);
 
@@ -60909,11 +62049,14 @@ exports.default = (0, _withCachedChildNavigation2.default)(DrawerSidebar);
 
 var styles = _reactNative.StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff'
+    flex: 1
   }
 });
+<<<<<<< HEAD
 }, 489, null, "react-navigation/src/views/Drawer/DrawerSidebar.js");
+=======
+}, 483, null, "react-navigation/src/views/Drawer/DrawerSidebar.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/views/Drawer/DrawerNavigatorItems.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -60925,7 +62068,11 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _TouchableItem = require(444               ); // 444 = ../TouchableItem
+=======
+var _TouchableItem = require(436               ); // 436 = ../TouchableItem
+>>>>>>> origin/dev
 
 var _TouchableItem2 = babelHelpers.interopRequireDefault(_TouchableItem);
 
@@ -61033,7 +62180,11 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = DrawerNavigatorItems;
+<<<<<<< HEAD
 }, 490, null, "react-navigation/src/views/Drawer/DrawerNavigatorItems.js");
+=======
+}, 484, null, "react-navigation/src/views/Drawer/DrawerNavigatorItems.js");
+>>>>>>> origin/dev
 __d(/* react-navigation/src/views/withNavigation.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -61044,11 +62195,19 @@ var _react = require(12     ); // 12 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
+<<<<<<< HEAD
 var _propTypes = require(448         ); // 448 = prop-types
 
 var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _hoistNonReactStatics = require(492                      ); // 492 = hoist-non-react-statics
+=======
+var _propTypes = require(442         ); // 442 = prop-types
+
+var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+
+var _hoistNonReactStatics = require(440                      ); // 440 = hoist-non-react-statics
+>>>>>>> origin/dev
 
 var _hoistNonReactStatics2 = babelHelpers.interopRequireDefault(_hoistNonReactStatics);
 
@@ -61070,6 +62229,7 @@ function withNavigation(Component) {
 
   return (0, _hoistNonReactStatics2.default)(componentWithNavigation, Component);
 }
+<<<<<<< HEAD
 }, 491, null, "react-navigation/src/views/withNavigation.js");
 __d(/* hoist-non-react-statics/index.js */function(global, require, module, exports) {
 'use strict';
@@ -61134,6 +62294,9 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
     return targetComponent;
 };
 }, 492, null, "hoist-non-react-statics/index.js");
+=======
+}, 485, null, "react-navigation/src/views/withNavigation.js");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/components/SearchHeader.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -61145,9 +62308,15 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _Config = require(494        ); // 494 = ../Config
 
 var _SearchView = require(495           ); // 495 = ./SearchView
+=======
+var _Config = require(487        ); // 487 = ../Config
+
+var _SearchView = require(488           ); // 488 = ./SearchView
+>>>>>>> origin/dev
 
 var _SearchView2 = babelHelpers.interopRequireDefault(_SearchView);
 
@@ -61246,7 +62415,11 @@ var styles = _reactNative.StyleSheet.create({
   }
 
 });
+<<<<<<< HEAD
 }, 493, null, "RCTTest/src/components/SearchHeader.js");
+=======
+}, 486, null, "RCTTest/src/components/SearchHeader.js");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/Config.js */function(global, require, module, exports) {var _reactNative = require(46            ); // 46 = react-native
 
 var screen_width = _reactNative.Dimensions.get('window').width;
@@ -61257,7 +62430,11 @@ module.exports = {
   screen_height: screen_height,
   onePixel: onePixel
 };
+<<<<<<< HEAD
 }, 494, null, "RCTTest/src/Config.js");
+=======
+}, 487, null, "RCTTest/src/Config.js");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/components/SearchView.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -61269,7 +62446,11 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _Config = require(494        ); // 494 = ../Config
+=======
+var _Config = require(487        ); // 487 = ../Config
+>>>>>>> origin/dev
 
 var SearchView = function (_React$Component) {
   babelHelpers.inherits(SearchView, _React$Component);
@@ -61289,7 +62470,11 @@ var SearchView = function (_React$Component) {
             lineNumber: 18
           }
         },
+<<<<<<< HEAD
         _react2.default.createElement(_reactNative.Image, { style: styles.icon, source: require(496                     ), resizeMode: 'center', __source: { // 496 = ../imgs/search-btn.png
+=======
+        _react2.default.createElement(_reactNative.Image, { style: styles.icon, source: require(489                     ), resizeMode: 'center', __source: { // 489 = ../imgs/search-btn.png
+>>>>>>> origin/dev
             fileName: _jsxFileName,
             lineNumber: 19
           }
@@ -61311,7 +62496,11 @@ var SearchView = function (_React$Component) {
             '\u5F00\u5B66\u5927\u4FC3\u6BCF\u6EE1200\u51CF100'
           )
         ),
+<<<<<<< HEAD
         _react2.default.createElement(_reactNative.Image, { style: styles.icon, source: require(497                        ), resizeMode: 'center', __source: { // 497 = ../imgs/bar-code-scan.png
+=======
+        _react2.default.createElement(_reactNative.Image, { style: styles.icon, source: require(490                        ), resizeMode: 'center', __source: { // 490 = ../imgs/bar-code-scan.png
+>>>>>>> origin/dev
             fileName: _jsxFileName,
             lineNumber: 23
           }
@@ -61355,11 +62544,19 @@ var styles = _reactNative.StyleSheet.create({
     textAlign: 'left'
   }
 });
+<<<<<<< HEAD
 }, 495, null, "RCTTest/src/components/SearchView.js");
 __d(/* RCTTest/src/imgs/search-btn.png */function(global, require, module, exports) {module.exports = require(240                                         ).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/src/imgs","width":27,"height":27,"scales":[1],"hash":"536235efc3af3861c1398eab5ed920e2","name":"search-btn","type":"png"}); // 240 = react-native/Libraries/Image/AssetRegistry
 }, 496, null, "RCTTest/src/imgs/search-btn.png");
 __d(/* RCTTest/src/imgs/bar-code-scan.png */function(global, require, module, exports) {module.exports = require(240                                         ).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/src/imgs","width":32,"height":32,"scales":[1],"hash":"d7c10bc60b4fb554c1c61929b58a0ef2","name":"bar-code-scan","type":"png"}); // 240 = react-native/Libraries/Image/AssetRegistry
 }, 497, null, "RCTTest/src/imgs/bar-code-scan.png");
+=======
+}, 488, null, "RCTTest/src/components/SearchView.js");
+__d(/* RCTTest/src/imgs/search-btn.png */function(global, require, module, exports) {module.exports = require(240                                         ).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/src/imgs","width":27,"height":27,"scales":[1],"hash":"536235efc3af3861c1398eab5ed920e2","name":"search-btn","type":"png"}); // 240 = react-native/Libraries/Image/AssetRegistry
+}, 489, null, "RCTTest/src/imgs/search-btn.png");
+__d(/* RCTTest/src/imgs/bar-code-scan.png */function(global, require, module, exports) {module.exports = require(240                                         ).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/src/imgs","width":32,"height":32,"scales":[1],"hash":"d7c10bc60b4fb554c1c61929b58a0ef2","name":"bar-code-scan","type":"png"}); // 240 = react-native/Libraries/Image/AssetRegistry
+}, 490, null, "RCTTest/src/imgs/bar-code-scan.png");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/pages/HomePage.js */function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -61373,6 +62570,7 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _ShopHeader = require(499                       ); // 499 = ../components/ShopHeader
 
 var _ShopHeader2 = babelHelpers.interopRequireDefault(_ShopHeader);
@@ -61394,6 +62592,29 @@ var _ThirdBanner = require(504                        ); // 504 = ../components/
 var _ThirdBanner2 = babelHelpers.interopRequireDefault(_ThirdBanner);
 
 var _Config = require(494        ); // 494 = ../Config
+=======
+var _ShopHeader = require(492                       ); // 492 = ../components/ShopHeader
+
+var _ShopHeader2 = babelHelpers.interopRequireDefault(_ShopHeader);
+
+var _SearchHeader = require(486                         ); // 486 = ../components/SearchHeader
+
+var _SearchHeader2 = babelHelpers.interopRequireDefault(_SearchHeader);
+
+var _ShopFooter = require(495                       ); // 495 = ../components/ShopFooter
+
+var _ShopFooter2 = babelHelpers.interopRequireDefault(_ShopFooter);
+
+var _RowBanner = require(496                      ); // 496 = ../components/RowBanner
+
+var _RowBanner2 = babelHelpers.interopRequireDefault(_RowBanner);
+
+var _ThirdBanner = require(497                        ); // 497 = ../components/ThirdBanner
+
+var _ThirdBanner2 = babelHelpers.interopRequireDefault(_ThirdBanner);
+
+var _Config = require(487        ); // 487 = ../Config
+>>>>>>> origin/dev
 
 var data = [{ key: 'http://img63.ddimg.cn/upload_img/00721/zjl/640x342_wzh_20170830.jpg' }, { key: [{ key: '图书' }, { key: '电子书' }, { key: '网络文学' }, { key: '当当优品' }, { key: '当当优品' }, { key: '童书' }, { key: '母婴' }, { key: '玩具' }, { key: '童装童鞋' }, { key: '创意文具' }, { key: '女装' }, { key: '男装' }, { key: '内衣配饰' }, { key: '鞋靴箱包' }, { key: '户外活动' }, { key: '美妆个护' }, { key: '食品' }, { key: '运营健康' }, { key: '珠宝手表' }, { key: '当当优选' }, { key: '家居家纺' }, { key: '家电' }, { key: 'Apple' }, { key: '手机数码' }, { key: '图书榜' }] }, { key: '商品---003' }];
 
@@ -61589,7 +62810,11 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = HomePage;
+<<<<<<< HEAD
 }, 498, null, "RCTTest/src/pages/HomePage.js");
+=======
+}, 491, null, "RCTTest/src/pages/HomePage.js");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/components/ShopHeader.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -61601,11 +62826,19 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _reactNativeSwiper = require(500                  ); // 500 = react-native-swiper
 
 var _reactNativeSwiper2 = babelHelpers.interopRequireDefault(_reactNativeSwiper);
 
 var _Config = require(494        ); // 494 = ../Config
+=======
+var _reactNativeSwiper = require(493                  ); // 493 = react-native-swiper
+
+var _reactNativeSwiper2 = babelHelpers.interopRequireDefault(_reactNativeSwiper);
+
+var _Config = require(487        ); // 487 = ../Config
+>>>>>>> origin/dev
 
 var _Config2 = babelHelpers.interopRequireDefault(_Config);
 
@@ -61688,13 +62921,22 @@ var styles = _reactNative.StyleSheet.create({
     height: 166.4
   }
 });
+<<<<<<< HEAD
 }, 499, null, "RCTTest/src/components/ShopHeader.js");
 __d(/* react-native-swiper/index.js */function(global, require, module, exports) {var _src = require(501     ); // 501 = ./src/
+=======
+}, 492, null, "RCTTest/src/components/ShopHeader.js");
+__d(/* react-native-swiper/index.js */function(global, require, module, exports) {var _src = require(494     ); // 494 = ./src/
+>>>>>>> origin/dev
 
 var _src2 = babelHelpers.interopRequireDefault(_src);
 
 module.exports = _src2.default;
+<<<<<<< HEAD
 }, 500, null, "react-native-swiper/index.js");
+=======
+}, 493, null, "react-native-swiper/index.js");
+>>>>>>> origin/dev
 __d(/* react-native-swiper/src/index.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -61704,15 +62946,15 @@ var _react = require(12     ); // 12 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
+<<<<<<< HEAD
 var _propTypes = require(448         ); // 448 = prop-types
+=======
+var _propTypes = require(442         ); // 442 = prop-types
+>>>>>>> origin/dev
 
 var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _reactNative = require(46            ); // 46 = react-native
-
-var _Dimensions$get = _reactNative.Dimensions.get('window'),
-    width = _Dimensions$get.width,
-    height = _Dimensions$get.height;
 
 var styles = {
   container: {
@@ -61804,7 +63046,7 @@ var _class = function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = babelHelpers.possibleConstructorReturn(this, (_ref = _class.__proto__ || Object.getPrototypeOf(_class)).call.apply(_ref, [this].concat(args))), _this), _this.state = _this.initState(_this.props), _this.autoplayTimer = null, _this.loopJumpTimer = null, _this.onLayout = function (event) {
+    return _ret = (_temp = (_this = babelHelpers.possibleConstructorReturn(this, (_ref = _class.__proto__ || Object.getPrototypeOf(_class)).call.apply(_ref, [this].concat(args))), _this), _this.state = _this.initState(_this.props), _this.initialRender = true, _this.autoplayTimer = null, _this.loopJumpTimer = null, _this.onLayout = function (event) {
       var _event$nativeEvent$la = event.nativeEvent.layout,
           width = _event$nativeEvent$la.width,
           height = _event$nativeEvent$la.height;
@@ -61823,6 +63065,14 @@ var _class = function (_Component) {
       if (!_this.state.offset || width !== _this.state.width || height !== _this.state.height) {
         state.offset = offset;
       }
+
+      if (_reactNative.Platform.OS === 'ios') {
+        if (_this.initialRender && _this.state.total > 1) {
+          _this.scrollView.scrollTo(babelHelpers.extends({}, offset, { animated: false }));
+          _this.initialRender = false;
+        }
+      }
+
       _this.setState(state);
     }, _this.loopJump = function () {
       if (!_this.state.loopJump) return;
@@ -61979,7 +63229,11 @@ var _class = function (_Component) {
           marginBottom: 3
         }, _this.props.activeDotStyle], __source: {
           fileName: _jsxFileName,
+<<<<<<< HEAD
           lineNumber: 490
+=======
+          lineNumber: 527
+>>>>>>> origin/dev
         }
       });
       var Dot = _this.props.dot || _react2.default.createElement(_reactNative.View, { style: [{
@@ -61993,7 +63247,11 @@ var _class = function (_Component) {
           marginBottom: 3
         }, _this.props.dotStyle], __source: {
           fileName: _jsxFileName,
+<<<<<<< HEAD
           lineNumber: 500
+=======
+          lineNumber: 537
+>>>>>>> origin/dev
         }
       });
       for (var i = 0; i < _this.state.total; i++) {
@@ -62004,7 +63262,11 @@ var _class = function (_Component) {
         _reactNative.View,
         { pointerEvents: 'none', style: [styles['pagination_' + _this.state.dir], _this.props.paginationStyle], __source: {
             fileName: _jsxFileName,
+<<<<<<< HEAD
             lineNumber: 518
+=======
+            lineNumber: 555
+>>>>>>> origin/dev
           }
         },
         dots
@@ -62016,7 +63278,11 @@ var _class = function (_Component) {
         _reactNative.View,
         { style: styles.title, __source: {
             fileName: _jsxFileName,
+<<<<<<< HEAD
             lineNumber: 528
+=======
+            lineNumber: 565
+>>>>>>> origin/dev
           }
         },
         _this.props.children[_this.state.index].props.title
@@ -62029,7 +63295,11 @@ var _class = function (_Component) {
           _reactNative.Text,
           { style: styles.buttonText, __source: {
               fileName: _jsxFileName,
+<<<<<<< HEAD
               lineNumber: 539
+=======
+              lineNumber: 576
+>>>>>>> origin/dev
             }
           },
           '\u203A'
@@ -62045,7 +63315,11 @@ var _class = function (_Component) {
           disabled: _this.props.disableNextButton,
           __source: {
             fileName: _jsxFileName,
+<<<<<<< HEAD
             lineNumber: 543
+=======
+            lineNumber: 580
+>>>>>>> origin/dev
           }
         },
         _react2.default.createElement(
@@ -62053,7 +63327,11 @@ var _class = function (_Component) {
           {
             __source: {
               fileName: _jsxFileName,
+<<<<<<< HEAD
               lineNumber: 547
+=======
+              lineNumber: 584
+>>>>>>> origin/dev
             }
           },
           button
@@ -62067,7 +63345,11 @@ var _class = function (_Component) {
           _reactNative.Text,
           { style: styles.buttonText, __source: {
               fileName: _jsxFileName,
+<<<<<<< HEAD
               lineNumber: 558
+=======
+              lineNumber: 595
+>>>>>>> origin/dev
             }
           },
           '\u2039'
@@ -62080,7 +63362,11 @@ var _class = function (_Component) {
             return button !== null && _this.scrollBy(-1);
           }, __source: {
             fileName: _jsxFileName,
+<<<<<<< HEAD
             lineNumber: 562
+=======
+            lineNumber: 599
+>>>>>>> origin/dev
           }
         },
         _react2.default.createElement(
@@ -62088,7 +63374,11 @@ var _class = function (_Component) {
           {
             __source: {
               fileName: _jsxFileName,
+<<<<<<< HEAD
               lineNumber: 563
+=======
+              lineNumber: 600
+>>>>>>> origin/dev
             }
           },
           button
@@ -62102,7 +63392,11 @@ var _class = function (_Component) {
             height: _this.state.height
           }, _this.props.buttonWrapperStyle], __source: {
             fileName: _jsxFileName,
+<<<<<<< HEAD
             lineNumber: 572
+=======
+            lineNumber: 609
+>>>>>>> origin/dev
           }
         },
         _this.renderPrevButton(),
@@ -62120,9 +63414,14 @@ var _class = function (_Component) {
             contentOffset: _this.state.offset,
             onScrollBeginDrag: _this.onScrollBegin,
             onMomentumScrollEnd: _this.onScrollEnd,
-            onScrollEndDrag: _this.onScrollEndDrag, __source: {
+            onScrollEndDrag: _this.onScrollEndDrag,
+            style: _this.props.scrollViewStyle, __source: {
               fileName: _jsxFileName,
+<<<<<<< HEAD
               lineNumber: 589
+=======
+              lineNumber: 626
+>>>>>>> origin/dev
             }
           }),
           pages
@@ -62137,7 +63436,11 @@ var _class = function (_Component) {
           key: pages.length,
           style: [styles.wrapperAndroid, _this.props.style], __source: {
             fileName: _jsxFileName,
+<<<<<<< HEAD
             lineNumber: 602
+=======
+            lineNumber: 640
+>>>>>>> origin/dev
           }
         }),
         pages
@@ -62188,9 +63491,33 @@ var _class = function (_Component) {
         initState.index = initState.total > 1 ? Math.min(props.index, initState.total - 1) : 0;
       }
 
+      var _Dimensions$get = _reactNative.Dimensions.get('window'),
+          width = _Dimensions$get.width,
+          height = _Dimensions$get.height;
+
       initState.dir = props.horizontal === false ? 'y' : 'x';
+<<<<<<< HEAD
       initState.width = props.width || width;
       initState.height = props.height || height;
+=======
+
+      if (props.width) {
+        initState.width = props.width;
+      } else if (this.state && this.state.width) {
+        initState.width = this.state.width;
+      } else {
+        initState.width = width;
+      }
+
+      if (props.height) {
+        initState.height = props.height;
+      } else if (this.state && this.state.height) {
+        initState.height = this.state.height;
+      } else {
+        initState.height = height;
+      }
+
+>>>>>>> origin/dev
       initState.offset[initState.dir] = initState.dir === 'y' ? height * props.index : width * props.index;
 
       this.internals = babelHelpers.extends({}, this.internals, {
@@ -62250,7 +63577,11 @@ var _class = function (_Component) {
                 _reactNative.View,
                 { style: pageStyle, key: i, __source: {
                     fileName: _jsxFileName,
+<<<<<<< HEAD
                     lineNumber: 664
+=======
+                    lineNumber: 702
+>>>>>>> origin/dev
                   }
                 },
                 children[page]
@@ -62260,13 +63591,21 @@ var _class = function (_Component) {
                 _reactNative.View,
                 { style: pageStyleLoading, key: i, __source: {
                     fileName: _jsxFileName,
+<<<<<<< HEAD
                     lineNumber: 667
+=======
+                    lineNumber: 705
+>>>>>>> origin/dev
                   }
                 },
                 loadMinimalLoader ? loadMinimalLoader : _react2.default.createElement(_reactNative.ActivityIndicator, {
                   __source: {
                     fileName: _jsxFileName,
+<<<<<<< HEAD
                     lineNumber: 668
+=======
+                    lineNumber: 706
+>>>>>>> origin/dev
                   }
                 })
               );
@@ -62276,7 +63615,11 @@ var _class = function (_Component) {
               _reactNative.View,
               { style: pageStyle, key: i, __source: {
                   fileName: _jsxFileName,
+<<<<<<< HEAD
                   lineNumber: 673
+=======
+                  lineNumber: 711
+>>>>>>> origin/dev
                 }
               },
               children[page]
@@ -62288,7 +63631,11 @@ var _class = function (_Component) {
           _reactNative.View,
           { style: pageStyle, key: 0, __source: {
               fileName: _jsxFileName,
+<<<<<<< HEAD
               lineNumber: 677
+=======
+              lineNumber: 715
+>>>>>>> origin/dev
             }
           },
           children
@@ -62299,7 +63646,11 @@ var _class = function (_Component) {
         _reactNative.View,
         { style: [styles.container, containerStyle], onLayout: this.onLayout, __source: {
             fileName: _jsxFileName,
+<<<<<<< HEAD
             lineNumber: 681
+=======
+            lineNumber: 719
+>>>>>>> origin/dev
           }
         },
         this.renderScrollView(pages),
@@ -62317,6 +63668,7 @@ _class.propTypes = {
   children: _propTypes2.default.node.isRequired,
   containerStyle: _propTypes2.default.oneOfType([_propTypes2.default.object, _propTypes2.default.number]),
   style: _propTypes2.default.oneOfType([_propTypes2.default.object, _propTypes2.default.number]),
+  scrollViewStyle: _propTypes2.default.oneOfType([_propTypes2.default.object, _propTypes2.default.number]),
   pagingEnabled: _propTypes2.default.bool,
   showsHorizontalScrollIndicator: _propTypes2.default.bool,
   showsVerticalScrollIndicator: _propTypes2.default.bool,
@@ -62367,7 +63719,11 @@ _class.defaultProps = {
   }
 };
 exports.default = _class;
+<<<<<<< HEAD
 }, 501, null, "react-native-swiper/src/index.js");
+=======
+}, 494, null, "react-native-swiper/src/index.js");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/components/ShopFooter.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -62379,7 +63735,11 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _Config = require(494        ); // 494 = ../Config
+=======
+var _Config = require(487        ); // 487 = ../Config
+>>>>>>> origin/dev
 
 var ShopFooter = function (_Component) {
   babelHelpers.inherits(ShopFooter, _Component);
@@ -62412,7 +63772,11 @@ var styles = _reactNative.StyleSheet.create({
     backgroundColor: '#ffb300'
   }
 });
+<<<<<<< HEAD
 }, 502, null, "RCTTest/src/components/ShopFooter.js");
+=======
+}, 495, null, "RCTTest/src/components/ShopFooter.js");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/components/RowBanner.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -62424,7 +63788,11 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _Config = require(494        ); // 494 = ../Config
+=======
+var _Config = require(487        ); // 487 = ../Config
+>>>>>>> origin/dev
 
 var RowBanner = function (_Component) {
   babelHelpers.inherits(RowBanner, _Component);
@@ -62524,7 +63892,11 @@ var styles = _reactNative.StyleSheet.create({
     color: '#000000'
   }
 });
+<<<<<<< HEAD
 }, 503, null, "RCTTest/src/components/RowBanner.js");
+=======
+}, 496, null, "RCTTest/src/components/RowBanner.js");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/components/ThirdBanner.js */function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -62618,7 +63990,11 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = ThirdBanner;
+<<<<<<< HEAD
 }, 504, null, "RCTTest/src/components/ThirdBanner.js");
+=======
+}, 497, null, "RCTTest/src/components/ThirdBanner.js");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/pages/CategoryPage.js */function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -62634,11 +64010,19 @@ var _reactNative = require(46            ); // 46 = react-native
 
 var _reactNavigation = require(426               ); // 426 = react-navigation
 
+<<<<<<< HEAD
 var _CategoryHeader = require(506                                                 ); // 506 = ../components/categoryComponents/CategoryHeader.js
 
 var _CategoryHeader2 = babelHelpers.interopRequireDefault(_CategoryHeader);
 
 var _DrawerRoutesConfig = require(507                       ); // 507 = ../DrawerRoutesConfig.js
+=======
+var _CategoryHeader = require(499                                                 ); // 499 = ../components/categoryComponents/CategoryHeader.js
+
+var _CategoryHeader2 = babelHelpers.interopRequireDefault(_CategoryHeader);
+
+var _DrawerRoutesConfig = require(500                       ); // 500 = ../DrawerRoutesConfig.js
+>>>>>>> origin/dev
 
 var _DrawerRoutesConfig2 = babelHelpers.interopRequireDefault(_DrawerRoutesConfig);
 
@@ -62688,7 +64072,11 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = CategoryPage;
+<<<<<<< HEAD
 }, 505, null, "RCTTest/src/pages/CategoryPage.js");
+=======
+}, 498, null, "RCTTest/src/pages/CategoryPage.js");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/components/categoryComponents/CategoryHeader.js */function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -62702,7 +64090,11 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _Config = require(494              ); // 494 = ../../Config.js
+=======
+var _Config = require(487              ); // 487 = ../../Config.js
+>>>>>>> origin/dev
 
 var CategoryHeader = function (_Component) {
 		babelHelpers.inherits(CategoryHeader, _Component);
@@ -62812,7 +64204,11 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = CategoryHeader;
+<<<<<<< HEAD
 }, 506, null, "RCTTest/src/components/categoryComponents/CategoryHeader.js");
+=======
+}, 499, null, "RCTTest/src/components/categoryComponents/CategoryHeader.js");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/DrawerRoutesConfig.js */function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -62827,6 +64223,7 @@ var _reactNative = require(46            ); // 46 = react-native
 
 var _reactNavigation = require(426               ); // 426 = react-navigation
 
+<<<<<<< HEAD
 var _Config = require(494          ); // 494 = ./Config.js
 
 var _CGRecommendPage = require(508                         ); // 508 = ./pages/CGRecommendPage.js
@@ -62842,6 +64239,23 @@ var _CGFruitPage = require(512                     ); // 512 = ./pages/CGFruitPa
 var _CGFruitPage2 = babelHelpers.interopRequireDefault(_CGFruitPage);
 
 var _theme = require(513         ); // 513 = ./theme.js
+=======
+var _Config = require(487          ); // 487 = ./Config.js
+
+var _CGRecommendPage = require(501                         ); // 501 = ./pages/CGRecommendPage.js
+
+var _CGRecommendPage2 = babelHelpers.interopRequireDefault(_CGRecommendPage);
+
+var _CGBookPage = require(504                    ); // 504 = ./pages/CGBookPage.js
+
+var _CGBookPage2 = babelHelpers.interopRequireDefault(_CGBookPage);
+
+var _CGFruitPage = require(505                     ); // 505 = ./pages/CGFruitPage.js
+
+var _CGFruitPage2 = babelHelpers.interopRequireDefault(_CGFruitPage);
+
+var _theme = require(506         ); // 506 = ./theme.js
+>>>>>>> origin/dev
 
 var CategoryNavigator = (0, _reactNavigation.DrawerNavigator)({
 	Recommend: {
@@ -62862,7 +64276,11 @@ var CategoryNavigator = (0, _reactNavigation.DrawerNavigator)({
 });
 
 exports.default = CategoryNavigator;
+<<<<<<< HEAD
 }, 507, null, "RCTTest/src/DrawerRoutesConfig.js");
+=======
+}, 500, null, "RCTTest/src/DrawerRoutesConfig.js");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/pages/CGRecommendPage.js */function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -62876,6 +64294,7 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _category = require(509               ); // 509 = ../category.json
 
 var _category2 = babelHelpers.interopRequireDefault(_category);
@@ -62885,6 +64304,17 @@ var _CGRItemCell = require(510                                              ); /
 var _CGRItemCell2 = babelHelpers.interopRequireDefault(_CGRItemCell);
 
 var _Config = require(494           ); // 494 = ../Config.js
+=======
+var _category = require(502               ); // 502 = ../category.json
+
+var _category2 = babelHelpers.interopRequireDefault(_category);
+
+var _CGRItemCell = require(503                                              ); // 503 = ../components/categoryComponents/CGRItemCell.js
+
+var _CGRItemCell2 = babelHelpers.interopRequireDefault(_CGRItemCell);
+
+var _Config = require(487           ); // 487 = ../Config.js
+>>>>>>> origin/dev
 
 var group = _category2.default.show_1st[0].pile[0].group;
 var sections = [{
@@ -63012,7 +64442,11 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = CGRecommendPage;
+<<<<<<< HEAD
 }, 508, null, "RCTTest/src/pages/CGRecommendPage.js");
+=======
+}, 501, null, "RCTTest/src/pages/CGRecommendPage.js");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/category.json */function(global, require, module, exports) {module.exports = module.exports = {
 	"show_1st": [{
 		"title": "\u4E3A\u4F60\u63A8\u8350",
@@ -77908,7 +79342,11 @@ __d(/* RCTTest/src/category.json */function(global, require, module, exports) {m
 		}]
 	}]
 };
+<<<<<<< HEAD
 }, 509, null, "RCTTest/src/category.json");
+=======
+}, 502, null, "RCTTest/src/category.json");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/components/categoryComponents/CGRItemCell.js */function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -77922,7 +79360,11 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _Config = require(494              ); // 494 = ../../Config.js
+=======
+var _Config = require(487              ); // 487 = ../../Config.js
+>>>>>>> origin/dev
 
 var CGRItemCell = function (_Component) {
   babelHelpers.inherits(CGRItemCell, _Component);
@@ -78005,7 +79447,11 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = CGRItemCell;
+<<<<<<< HEAD
 }, 510, null, "RCTTest/src/components/categoryComponents/CGRItemCell.js");
+=======
+}, 503, null, "RCTTest/src/components/categoryComponents/CGRItemCell.js");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/pages/CGBookPage.js */function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -78019,6 +79465,7 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _category = require(509               ); // 509 = ../category.json
 
 var _category2 = babelHelpers.interopRequireDefault(_category);
@@ -78028,6 +79475,17 @@ var _CGRItemCell = require(510                                              ); /
 var _CGRItemCell2 = babelHelpers.interopRequireDefault(_CGRItemCell);
 
 var _Config = require(494           ); // 494 = ../Config.js
+=======
+var _category = require(502               ); // 502 = ../category.json
+
+var _category2 = babelHelpers.interopRequireDefault(_category);
+
+var _CGRItemCell = require(503                                              ); // 503 = ../components/categoryComponents/CGRItemCell.js
+
+var _CGRItemCell2 = babelHelpers.interopRequireDefault(_CGRItemCell);
+
+var _Config = require(487           ); // 487 = ../Config.js
+>>>>>>> origin/dev
 
 var group = _category2.default.show_1st[1].pile[0].group;
 var sections = [{
@@ -78155,7 +79613,11 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = CGBookPage;
+<<<<<<< HEAD
 }, 511, null, "RCTTest/src/pages/CGBookPage.js");
+=======
+}, 504, null, "RCTTest/src/pages/CGBookPage.js");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/pages/CGFruitPage.js */function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -78169,7 +79631,11 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(46            ); // 46 = react-native
 
+<<<<<<< HEAD
 var _Config = require(494        ); // 494 = ../Config
+=======
+var _Config = require(487        ); // 487 = ../Config
+>>>>>>> origin/dev
 
 var sections = [{ data: ['安倍', '安顺', '安心', '安全', '安庆'], key: 'an' }, { data: ['编辑', '编码', '编织', '编剧', '编排'], key: 'bian' }, { data: ['长江', '长城', '长春', '长安', '长年'], key: 'chang' }];
 
@@ -78314,12 +79780,20 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = CGFruitPage;
+<<<<<<< HEAD
 }, 512, null, "RCTTest/src/pages/CGFruitPage.js");
+=======
+}, 505, null, "RCTTest/src/pages/CGFruitPage.js");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/theme.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var themeColor = exports.themeColor = '#F8453C';
+<<<<<<< HEAD
 }, 513, null, "RCTTest/src/theme.js");
+=======
+}, 506, null, "RCTTest/src/theme.js");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/pages/CartPage.js */function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -78376,7 +79850,11 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = CartPage;
+<<<<<<< HEAD
 }, 514, null, "RCTTest/src/pages/CartPage.js");
+=======
+}, 507, null, "RCTTest/src/pages/CartPage.js");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/pages/ProfilePage.js */function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -78446,7 +79924,11 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = ProfilePage;
+<<<<<<< HEAD
 }, 515, null, "RCTTest/src/pages/ProfilePage.js");
+=======
+}, 508, null, "RCTTest/src/pages/ProfilePage.js");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/pages/SearchPage.js */function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -78503,12 +79985,17 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = SearchPage;
+<<<<<<< HEAD
 }, 516, null, "RCTTest/src/pages/SearchPage.js");
+=======
+}, 509, null, "RCTTest/src/pages/SearchPage.js");
+>>>>>>> origin/dev
 __d(/* react-redux/lib/index.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
 exports.connect = exports.connectAdvanced = exports.createProvider = exports.Provider = undefined;
 
+<<<<<<< HEAD
 var _Provider = require(518                    ); // 518 = ./components/Provider
 
 var _Provider2 = _interopRequireDefault(_Provider);
@@ -78518,6 +80005,17 @@ var _connectAdvanced = require(521                           ); // 521 = ./compo
 var _connectAdvanced2 = _interopRequireDefault(_connectAdvanced);
 
 var _connect = require(524                ); // 524 = ./connect/connect
+=======
+var _Provider = require(511                    ); // 511 = ./components/Provider
+
+var _Provider2 = _interopRequireDefault(_Provider);
+
+var _connectAdvanced = require(514                           ); // 514 = ./components/connectAdvanced
+
+var _connectAdvanced2 = _interopRequireDefault(_connectAdvanced);
+
+var _connect = require(517                ); // 517 = ./connect/connect
+>>>>>>> origin/dev
 
 var _connect2 = _interopRequireDefault(_connect);
 
@@ -78529,7 +80027,11 @@ exports.Provider = _Provider2.default;
 exports.createProvider = _Provider.createProvider;
 exports.connectAdvanced = _connectAdvanced2.default;
 exports.connect = _connect2.default;
+<<<<<<< HEAD
 }, 517, null, "react-redux/lib/index.js");
+=======
+}, 510, null, "react-redux/lib/index.js");
+>>>>>>> origin/dev
 __d(/* react-redux/lib/components/Provider.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
@@ -78537,6 +80039,7 @@ exports.createProvider = createProvider;
 
 var _react = require(12     ); // 12 = react
 
+<<<<<<< HEAD
 var _propTypes = require(448         ); // 448 = prop-types
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
@@ -78544,6 +80047,15 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 var _PropTypes = require(519                 ); // 519 = ../utils/PropTypes
 
 var _warning = require(520               ); // 520 = ../utils/warning
+=======
+var _propTypes = require(442         ); // 442 = prop-types
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _PropTypes = require(512                 ); // 512 = ../utils/PropTypes
+
+var _warning = require(513               ); // 513 = ../utils/warning
+>>>>>>> origin/dev
 
 var _warning2 = _interopRequireDefault(_warning);
 
@@ -78630,13 +80142,21 @@ function createProvider() {
 }
 
 exports.default = createProvider();
+<<<<<<< HEAD
 }, 518, null, "react-redux/lib/components/Provider.js");
+=======
+}, 511, null, "react-redux/lib/components/Provider.js");
+>>>>>>> origin/dev
 __d(/* react-redux/lib/utils/PropTypes.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
 exports.storeShape = exports.subscriptionShape = undefined;
 
+<<<<<<< HEAD
 var _propTypes = require(448         ); // 448 = prop-types
+=======
+var _propTypes = require(442         ); // 442 = prop-types
+>>>>>>> origin/dev
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -78656,7 +80176,11 @@ var storeShape = exports.storeShape = _propTypes2.default.shape({
   dispatch: _propTypes2.default.func.isRequired,
   getState: _propTypes2.default.func.isRequired
 });
+<<<<<<< HEAD
 }, 519, null, "react-redux/lib/utils/PropTypes.js");
+=======
+}, 512, null, "react-redux/lib/utils/PropTypes.js");
+>>>>>>> origin/dev
 __d(/* react-redux/lib/utils/warning.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
@@ -78671,7 +80195,11 @@ function warning(message) {
     throw new Error(message);
   } catch (e) {}
 }
+<<<<<<< HEAD
 }, 520, null, "react-redux/lib/utils/warning.js");
+=======
+}, 513, null, "react-redux/lib/utils/warning.js");
+>>>>>>> origin/dev
 __d(/* react-redux/lib/components/connectAdvanced.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
@@ -78688,21 +80216,37 @@ var _extends = Object.assign || function (target) {
 
 exports.default = connectAdvanced;
 
+<<<<<<< HEAD
 var _hoistNonReactStatics = require(492                      ); // 492 = hoist-non-react-statics
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
 var _invariant = require(522        ); // 522 = invariant
+=======
+var _hoistNonReactStatics = require(440                      ); // 440 = hoist-non-react-statics
+
+var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
+
+var _invariant = require(515        ); // 515 = invariant
+>>>>>>> origin/dev
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
 var _react = require(12     ); // 12 = react
 
+<<<<<<< HEAD
 var _Subscription = require(523                    ); // 523 = ../utils/Subscription
 
 var _Subscription2 = _interopRequireDefault(_Subscription);
 
 var _PropTypes = require(519                 ); // 519 = ../utils/PropTypes
+=======
+var _Subscription = require(516                    ); // 516 = ../utils/Subscription
+
+var _Subscription2 = _interopRequireDefault(_Subscription);
+
+var _PropTypes = require(512                 ); // 512 = ../utils/PropTypes
+>>>>>>> origin/dev
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
@@ -78956,7 +80500,11 @@ function connectAdvanced(selectorFactory) {
     return (0, _hoistNonReactStatics2.default)(Connect, WrappedComponent);
   };
 }
+<<<<<<< HEAD
 }, 521, null, "react-redux/lib/components/connectAdvanced.js");
+=======
+}, 514, null, "react-redux/lib/components/connectAdvanced.js");
+>>>>>>> origin/dev
 __d(/* invariant/browser.js */function(global, require, module, exports) {
 
 'use strict';
@@ -78987,7 +80535,11 @@ var invariant = function invariant(condition, format, a, b, c, d, e, f) {
 };
 
 module.exports = invariant;
+<<<<<<< HEAD
 }, 522, null, "invariant/browser.js");
+=======
+}, 515, null, "invariant/browser.js");
+>>>>>>> origin/dev
 __d(/* react-redux/lib/utils/Subscription.js */function(global, require, module, exports) {"use strict";
 
 exports.__esModule = true;
@@ -79082,7 +80634,11 @@ var Subscription = function () {
 }();
 
 exports.default = Subscription;
+<<<<<<< HEAD
 }, 523, null, "react-redux/lib/utils/Subscription.js");
+=======
+}, 516, null, "react-redux/lib/utils/Subscription.js");
+>>>>>>> origin/dev
 __d(/* react-redux/lib/connect/connect.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
@@ -79099,6 +80655,7 @@ var _extends = Object.assign || function (target) {
 
 exports.createConnect = createConnect;
 
+<<<<<<< HEAD
 var _connectAdvanced = require(521                            ); // 521 = ../components/connectAdvanced
 
 var _connectAdvanced2 = _interopRequireDefault(_connectAdvanced);
@@ -79120,6 +80677,29 @@ var _mergeProps = require(550           ); // 550 = ./mergeProps
 var _mergeProps2 = _interopRequireDefault(_mergeProps);
 
 var _selectorFactory = require(551                ); // 551 = ./selectorFactory
+=======
+var _connectAdvanced = require(514                            ); // 514 = ../components/connectAdvanced
+
+var _connectAdvanced2 = _interopRequireDefault(_connectAdvanced);
+
+var _shallowEqual = require(518                    ); // 518 = ../utils/shallowEqual
+
+var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
+
+var _mapDispatchToProps = require(519                   ); // 519 = ./mapDispatchToProps
+
+var _mapDispatchToProps2 = _interopRequireDefault(_mapDispatchToProps);
+
+var _mapStateToProps = require(542                ); // 542 = ./mapStateToProps
+
+var _mapStateToProps2 = _interopRequireDefault(_mapStateToProps);
+
+var _mergeProps = require(543           ); // 543 = ./mergeProps
+
+var _mergeProps2 = _interopRequireDefault(_mergeProps);
+
+var _selectorFactory = require(544                ); // 544 = ./selectorFactory
+>>>>>>> origin/dev
 
 var _selectorFactory2 = _interopRequireDefault(_selectorFactory);
 
@@ -79202,7 +80782,11 @@ function createConnect() {
 }
 
 exports.default = createConnect();
+<<<<<<< HEAD
 }, 524, null, "react-redux/lib/connect/connect.js");
+=======
+}, 517, null, "react-redux/lib/connect/connect.js");
+>>>>>>> origin/dev
 __d(/* react-redux/lib/utils/shallowEqual.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
@@ -79237,7 +80821,11 @@ function shallowEqual(objA, objB) {
 
   return true;
 }
+<<<<<<< HEAD
 }, 525, null, "react-redux/lib/utils/shallowEqual.js");
+=======
+}, 518, null, "react-redux/lib/utils/shallowEqual.js");
+>>>>>>> origin/dev
 __d(/* react-redux/lib/connect/mapDispatchToProps.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
@@ -79245,9 +80833,15 @@ exports.whenMapDispatchToPropsIsFunction = whenMapDispatchToPropsIsFunction;
 exports.whenMapDispatchToPropsIsMissing = whenMapDispatchToPropsIsMissing;
 exports.whenMapDispatchToPropsIsObject = whenMapDispatchToPropsIsObject;
 
+<<<<<<< HEAD
 var _redux = require(527    ); // 527 = redux
 
 var _wrapMapToProps = require(547               ); // 547 = ./wrapMapToProps
+=======
+var _redux = require(520    ); // 520 = redux
+
+var _wrapMapToProps = require(540               ); // 540 = ./wrapMapToProps
+>>>>>>> origin/dev
 
 function whenMapDispatchToPropsIsFunction(mapDispatchToProps) {
   return typeof mapDispatchToProps === 'function' ? (0, _wrapMapToProps.wrapMapToPropsFunc)(mapDispatchToProps, 'mapDispatchToProps') : undefined;
@@ -79266,12 +80860,17 @@ function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
 }
 
 exports.default = [whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject];
+<<<<<<< HEAD
 }, 526, null, "react-redux/lib/connect/mapDispatchToProps.js");
+=======
+}, 519, null, "react-redux/lib/connect/mapDispatchToProps.js");
+>>>>>>> origin/dev
 __d(/* redux/lib/index.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
 exports.compose = exports.applyMiddleware = exports.bindActionCreators = exports.combineReducers = exports.createStore = undefined;
 
+<<<<<<< HEAD
 var _createStore = require(528            ); // 528 = ./createStore
 
 var _createStore2 = _interopRequireDefault(_createStore);
@@ -79293,6 +80892,29 @@ var _compose = require(546        ); // 546 = ./compose
 var _compose2 = _interopRequireDefault(_compose);
 
 var _warning = require(543              ); // 543 = ./utils/warning
+=======
+var _createStore = require(521            ); // 521 = ./createStore
+
+var _createStore2 = _interopRequireDefault(_createStore);
+
+var _combineReducers = require(535                ); // 535 = ./combineReducers
+
+var _combineReducers2 = _interopRequireDefault(_combineReducers);
+
+var _bindActionCreators = require(537                   ); // 537 = ./bindActionCreators
+
+var _bindActionCreators2 = _interopRequireDefault(_bindActionCreators);
+
+var _applyMiddleware = require(538                ); // 538 = ./applyMiddleware
+
+var _applyMiddleware2 = _interopRequireDefault(_applyMiddleware);
+
+var _compose = require(539        ); // 539 = ./compose
+
+var _compose2 = _interopRequireDefault(_compose);
+
+var _warning = require(536              ); // 536 = ./utils/warning
+>>>>>>> origin/dev
 
 var _warning2 = _interopRequireDefault(_warning);
 
@@ -79311,18 +80933,30 @@ exports.combineReducers = _combineReducers2['default'];
 exports.bindActionCreators = _bindActionCreators2['default'];
 exports.applyMiddleware = _applyMiddleware2['default'];
 exports.compose = _compose2['default'];
+<<<<<<< HEAD
 }, 527, null, "redux/lib/index.js");
+=======
+}, 520, null, "redux/lib/index.js");
+>>>>>>> origin/dev
 __d(/* redux/lib/createStore.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
 exports.ActionTypes = undefined;
 exports['default'] = createStore;
 
+<<<<<<< HEAD
 var _isPlainObject = require(529                   ); // 529 = lodash/isPlainObject
 
 var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
 var _symbolObservable = require(539                ); // 539 = symbol-observable
+=======
+var _isPlainObject = require(522                   ); // 522 = lodash/isPlainObject
+
+var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
+
+var _symbolObservable = require(532                ); // 532 = symbol-observable
+>>>>>>> origin/dev
 
 var _symbolObservable2 = _interopRequireDefault(_symbolObservable);
 
@@ -79464,10 +81098,17 @@ var ActionTypes = exports.ActionTypes = {
     replaceReducer: replaceReducer
   }, _ref2[_symbolObservable2['default']] = observable, _ref2;
 }
+<<<<<<< HEAD
 }, 528, null, "redux/lib/createStore.js");
 __d(/* lodash/isPlainObject.js */function(global, require, module, exports) {var baseGetTag = require(530            ), // 530 = ./_baseGetTag
     getPrototype = require(536              ), // 536 = ./_getPrototype
     isObjectLike = require(538             ); // 538 = ./isObjectLike
+=======
+}, 521, null, "redux/lib/createStore.js");
+__d(/* lodash/isPlainObject.js */function(global, require, module, exports) {var baseGetTag = require(523            ), // 523 = ./_baseGetTag
+    getPrototype = require(529              ), // 529 = ./_getPrototype
+    isObjectLike = require(531             ); // 531 = ./isObjectLike
+>>>>>>> origin/dev
 
 var objectTag = '[object Object]';
 
@@ -79493,10 +81134,17 @@ function isPlainObject(value) {
 }
 
 module.exports = isPlainObject;
+<<<<<<< HEAD
 }, 529, null, "lodash/isPlainObject.js");
 __d(/* lodash/_baseGetTag.js */function(global, require, module, exports) {var Symbol = require(531        ), // 531 = ./_Symbol
     getRawTag = require(534           ), // 534 = ./_getRawTag
     objectToString = require(535                ); // 535 = ./_objectToString
+=======
+}, 522, null, "lodash/isPlainObject.js");
+__d(/* lodash/_baseGetTag.js */function(global, require, module, exports) {var Symbol = require(524        ), // 524 = ./_Symbol
+    getRawTag = require(527           ), // 527 = ./_getRawTag
+    objectToString = require(528                ); // 528 = ./_objectToString
+>>>>>>> origin/dev
 
 var nullTag = '[object Null]',
     undefinedTag = '[object Undefined]';
@@ -79511,27 +81159,46 @@ function baseGetTag(value) {
 }
 
 module.exports = baseGetTag;
+<<<<<<< HEAD
 }, 530, null, "lodash/_baseGetTag.js");
 __d(/* lodash/_Symbol.js */function(global, require, module, exports) {var root = require(532      ); // 532 = ./_root
+=======
+}, 523, null, "lodash/_baseGetTag.js");
+__d(/* lodash/_Symbol.js */function(global, require, module, exports) {var root = require(525      ); // 525 = ./_root
+>>>>>>> origin/dev
 
 var Symbol = root.Symbol;
 
 module.exports = Symbol;
+<<<<<<< HEAD
 }, 531, null, "lodash/_Symbol.js");
 __d(/* lodash/_root.js */function(global, require, module, exports) {var freeGlobal = require(533            ); // 533 = ./_freeGlobal
+=======
+}, 524, null, "lodash/_Symbol.js");
+__d(/* lodash/_root.js */function(global, require, module, exports) {var freeGlobal = require(526            ); // 526 = ./_freeGlobal
+>>>>>>> origin/dev
 
 var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
 
 var root = freeGlobal || freeSelf || Function('return this')();
 
 module.exports = root;
+<<<<<<< HEAD
 }, 532, null, "lodash/_root.js");
+=======
+}, 525, null, "lodash/_root.js");
+>>>>>>> origin/dev
 __d(/* lodash/_freeGlobal.js */function(global, require, module, exports) {
 var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
 
 module.exports = freeGlobal;
+<<<<<<< HEAD
 }, 533, null, "lodash/_freeGlobal.js");
 __d(/* lodash/_getRawTag.js */function(global, require, module, exports) {var Symbol = require(531        ); // 531 = ./_Symbol
+=======
+}, 526, null, "lodash/_freeGlobal.js");
+__d(/* lodash/_getRawTag.js */function(global, require, module, exports) {var Symbol = require(524        ); // 524 = ./_Symbol
+>>>>>>> origin/dev
 
 var objectProto = Object.prototype;
 
@@ -79562,7 +81229,11 @@ function getRawTag(value) {
 }
 
 module.exports = getRawTag;
+<<<<<<< HEAD
 }, 534, null, "lodash/_getRawTag.js");
+=======
+}, 527, null, "lodash/_getRawTag.js");
+>>>>>>> origin/dev
 __d(/* lodash/_objectToString.js */function(global, require, module, exports) {
 var objectProto = Object.prototype;
 
@@ -79573,13 +81244,22 @@ function objectToString(value) {
 }
 
 module.exports = objectToString;
+<<<<<<< HEAD
 }, 535, null, "lodash/_objectToString.js");
 __d(/* lodash/_getPrototype.js */function(global, require, module, exports) {var overArg = require(537         ); // 537 = ./_overArg
+=======
+}, 528, null, "lodash/_objectToString.js");
+__d(/* lodash/_getPrototype.js */function(global, require, module, exports) {var overArg = require(530         ); // 530 = ./_overArg
+>>>>>>> origin/dev
 
 var getPrototype = overArg(Object.getPrototypeOf, Object);
 
 module.exports = getPrototype;
+<<<<<<< HEAD
 }, 536, null, "lodash/_getPrototype.js");
+=======
+}, 529, null, "lodash/_getPrototype.js");
+>>>>>>> origin/dev
 __d(/* lodash/_overArg.js */function(global, require, module, exports) {
 function overArg(func, transform) {
   return function (arg) {
@@ -79588,23 +81268,37 @@ function overArg(func, transform) {
 }
 
 module.exports = overArg;
+<<<<<<< HEAD
 }, 537, null, "lodash/_overArg.js");
+=======
+}, 530, null, "lodash/_overArg.js");
+>>>>>>> origin/dev
 __d(/* lodash/isObjectLike.js */function(global, require, module, exports) {
 function isObjectLike(value) {
   return value != null && typeof value == 'object';
 }
 
 module.exports = isObjectLike;
+<<<<<<< HEAD
 }, 538, null, "lodash/isObjectLike.js");
 __d(/* symbol-observable/index.js */function(global, require, module, exports) {module.exports = require(540          ); // 540 = ./lib/index
 }, 539, null, "symbol-observable/index.js");
+=======
+}, 531, null, "lodash/isObjectLike.js");
+__d(/* symbol-observable/index.js */function(global, require, module, exports) {module.exports = require(533          ); // 533 = ./lib/index
+}, 532, null, "symbol-observable/index.js");
+>>>>>>> origin/dev
 __d(/* symbol-observable/lib/index.js */function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+<<<<<<< HEAD
 var _ponyfill = require(541         ); // 541 = ./ponyfill
+=======
+var _ponyfill = require(534         ); // 534 = ./ponyfill
+>>>>>>> origin/dev
 
 var _ponyfill2 = _interopRequireDefault(_ponyfill);
 
@@ -79628,7 +81322,11 @@ if (typeof self !== 'undefined') {
 
 var result = (0, _ponyfill2['default'])(root);
 exports['default'] = result;
+<<<<<<< HEAD
 }, 540, null, "symbol-observable/lib/index.js");
+=======
+}, 533, null, "symbol-observable/lib/index.js");
+>>>>>>> origin/dev
 __d(/* symbol-observable/lib/ponyfill.js */function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -79652,12 +81350,17 @@ function symbolObservablePonyfill(root) {
 
 	return result;
 };
+<<<<<<< HEAD
 }, 541, null, "symbol-observable/lib/ponyfill.js");
+=======
+}, 534, null, "symbol-observable/lib/ponyfill.js");
+>>>>>>> origin/dev
 __d(/* redux/lib/combineReducers.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
 exports['default'] = combineReducers;
 
+<<<<<<< HEAD
 var _createStore = require(528            ); // 528 = ./createStore
 
 var _isPlainObject = require(529                   ); // 529 = lodash/isPlainObject
@@ -79665,6 +81368,15 @@ var _isPlainObject = require(529                   ); // 529 = lodash/isPlainObj
 var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
 var _warning = require(543              ); // 543 = ./utils/warning
+=======
+var _createStore = require(521            ); // 521 = ./createStore
+
+var _isPlainObject = require(522                   ); // 522 = lodash/isPlainObject
+
+var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
+
+var _warning = require(536              ); // 536 = ./utils/warning
+>>>>>>> origin/dev
 
 var _warning2 = _interopRequireDefault(_warning);
 
@@ -79782,7 +81494,11 @@ function combineReducers(reducers) {
     return hasChanged ? nextState : state;
   };
 }
+<<<<<<< HEAD
 }, 542, null, "redux/lib/combineReducers.js");
+=======
+}, 535, null, "redux/lib/combineReducers.js");
+>>>>>>> origin/dev
 __d(/* redux/lib/utils/warning.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
@@ -79797,7 +81513,11 @@ function warning(message) {
     throw new Error(message);
   } catch (e) {}
 }
+<<<<<<< HEAD
 }, 543, null, "redux/lib/utils/warning.js");
+=======
+}, 536, null, "redux/lib/utils/warning.js");
+>>>>>>> origin/dev
 __d(/* redux/lib/bindActionCreators.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
@@ -79828,7 +81548,11 @@ function bindActionCreators(actionCreators, dispatch) {
   }
   return boundActionCreators;
 }
+<<<<<<< HEAD
 }, 544, null, "redux/lib/bindActionCreators.js");
+=======
+}, 537, null, "redux/lib/bindActionCreators.js");
+>>>>>>> origin/dev
 __d(/* redux/lib/applyMiddleware.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
@@ -79845,7 +81569,11 @@ var _extends = Object.assign || function (target) {
 
 exports['default'] = applyMiddleware;
 
+<<<<<<< HEAD
 var _compose = require(546        ); // 546 = ./compose
+=======
+var _compose = require(539        ); // 539 = ./compose
+>>>>>>> origin/dev
 
 var _compose2 = _interopRequireDefault(_compose);
 
@@ -79881,7 +81609,11 @@ function applyMiddleware() {
     };
   };
 }
+<<<<<<< HEAD
 }, 545, null, "redux/lib/applyMiddleware.js");
+=======
+}, 538, null, "redux/lib/applyMiddleware.js");
+>>>>>>> origin/dev
 __d(/* redux/lib/compose.js */function(global, require, module, exports) {"use strict";
 
 exports.__esModule = true;
@@ -79909,7 +81641,11 @@ function compose() {
     };
   });
 }
+<<<<<<< HEAD
 }, 546, null, "redux/lib/compose.js");
+=======
+}, 539, null, "redux/lib/compose.js");
+>>>>>>> origin/dev
 __d(/* react-redux/lib/connect/wrapMapToProps.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
@@ -79917,7 +81653,11 @@ exports.wrapMapToPropsConstant = wrapMapToPropsConstant;
 exports.getDependsOnOwnProps = getDependsOnOwnProps;
 exports.wrapMapToPropsFunc = wrapMapToPropsFunc;
 
+<<<<<<< HEAD
 var _verifyPlainObject = require(548                         ); // 548 = ../utils/verifyPlainObject
+=======
+var _verifyPlainObject = require(541                         ); // 541 = ../utils/verifyPlainObject
+>>>>>>> origin/dev
 
 var _verifyPlainObject2 = _interopRequireDefault(_verifyPlainObject);
 
@@ -79970,17 +81710,29 @@ function wrapMapToPropsFunc(mapToProps, methodName) {
     return proxy;
   };
 }
+<<<<<<< HEAD
 }, 547, null, "react-redux/lib/connect/wrapMapToProps.js");
+=======
+}, 540, null, "react-redux/lib/connect/wrapMapToProps.js");
+>>>>>>> origin/dev
 __d(/* react-redux/lib/utils/verifyPlainObject.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
 exports.default = verifyPlainObject;
 
+<<<<<<< HEAD
 var _isPlainObject = require(529                   ); // 529 = lodash/isPlainObject
 
 var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
 var _warning = require(520        ); // 520 = ./warning
+=======
+var _isPlainObject = require(522                   ); // 522 = lodash/isPlainObject
+
+var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
+
+var _warning = require(513        ); // 513 = ./warning
+>>>>>>> origin/dev
 
 var _warning2 = _interopRequireDefault(_warning);
 
@@ -79993,14 +81745,22 @@ function verifyPlainObject(value, displayName, methodName) {
     (0, _warning2.default)(methodName + '() in ' + displayName + ' must return a plain object. Instead received ' + value + '.');
   }
 }
+<<<<<<< HEAD
 }, 548, null, "react-redux/lib/utils/verifyPlainObject.js");
+=======
+}, 541, null, "react-redux/lib/utils/verifyPlainObject.js");
+>>>>>>> origin/dev
 __d(/* react-redux/lib/connect/mapStateToProps.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
 exports.whenMapStateToPropsIsFunction = whenMapStateToPropsIsFunction;
 exports.whenMapStateToPropsIsMissing = whenMapStateToPropsIsMissing;
 
+<<<<<<< HEAD
 var _wrapMapToProps = require(547               ); // 547 = ./wrapMapToProps
+=======
+var _wrapMapToProps = require(540               ); // 540 = ./wrapMapToProps
+>>>>>>> origin/dev
 
 function whenMapStateToPropsIsFunction(mapStateToProps) {
   return typeof mapStateToProps === 'function' ? (0, _wrapMapToProps.wrapMapToPropsFunc)(mapStateToProps, 'mapStateToProps') : undefined;
@@ -80013,7 +81773,11 @@ function whenMapStateToPropsIsMissing(mapStateToProps) {
 }
 
 exports.default = [whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing];
+<<<<<<< HEAD
 }, 549, null, "react-redux/lib/connect/mapStateToProps.js");
+=======
+}, 542, null, "react-redux/lib/connect/mapStateToProps.js");
+>>>>>>> origin/dev
 __d(/* react-redux/lib/connect/mergeProps.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
@@ -80033,7 +81797,11 @@ exports.wrapMergePropsFunc = wrapMergePropsFunc;
 exports.whenMergePropsIsFunction = whenMergePropsIsFunction;
 exports.whenMergePropsIsOmitted = whenMergePropsIsOmitted;
 
+<<<<<<< HEAD
 var _verifyPlainObject = require(548                         ); // 548 = ../utils/verifyPlainObject
+=======
+var _verifyPlainObject = require(541                         ); // 541 = ../utils/verifyPlainObject
+>>>>>>> origin/dev
 
 var _verifyPlainObject2 = _interopRequireDefault(_verifyPlainObject);
 
@@ -80082,7 +81850,11 @@ function whenMergePropsIsOmitted(mergeProps) {
 }
 
 exports.default = [whenMergePropsIsFunction, whenMergePropsIsOmitted];
+<<<<<<< HEAD
 }, 550, null, "react-redux/lib/connect/mergeProps.js");
+=======
+}, 543, null, "react-redux/lib/connect/mergeProps.js");
+>>>>>>> origin/dev
 __d(/* react-redux/lib/connect/selectorFactory.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
@@ -80090,7 +81862,11 @@ exports.impureFinalPropsSelectorFactory = impureFinalPropsSelectorFactory;
 exports.pureFinalPropsSelectorFactory = pureFinalPropsSelectorFactory;
 exports.default = finalPropsSelectorFactory;
 
+<<<<<<< HEAD
 var _verifySubselectors = require(552                   ); // 552 = ./verifySubselectors
+=======
+var _verifySubselectors = require(545                   ); // 545 = ./verifySubselectors
+>>>>>>> origin/dev
 
 var _verifySubselectors2 = _interopRequireDefault(_verifySubselectors);
 
@@ -80195,13 +81971,21 @@ function finalPropsSelectorFactory(dispatch, _ref2) {
 
   return selectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, options);
 }
+<<<<<<< HEAD
 }, 551, null, "react-redux/lib/connect/selectorFactory.js");
+=======
+}, 544, null, "react-redux/lib/connect/selectorFactory.js");
+>>>>>>> origin/dev
 __d(/* react-redux/lib/connect/verifySubselectors.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
 exports.default = verifySubselectors;
 
+<<<<<<< HEAD
 var _warning = require(520               ); // 520 = ../utils/warning
+=======
+var _warning = require(513               ); // 513 = ../utils/warning
+>>>>>>> origin/dev
 
 var _warning2 = _interopRequireDefault(_warning);
 
@@ -80224,6 +82008,7 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
   verify(mapDispatchToProps, 'mapDispatchToProps', displayName);
   verify(mergeProps, 'mergeProps', displayName);
 }
+<<<<<<< HEAD
 }, 552, null, "react-redux/lib/connect/verifySubselectors.js");
 __d(/* RCTTest/src/configStore.js */function(global, require, module, exports) {var _redux = require(527    ); // 527 = redux
 
@@ -80240,13 +82025,35 @@ var _reduxPromise = require(556            ); // 556 = redux-promise
 var _reduxPromise2 = babelHelpers.interopRequireDefault(_reduxPromise);
 
 var _reduxLogger = require(563           ); // 563 = redux-logger
+=======
+}, 545, null, "react-redux/lib/connect/verifySubselectors.js");
+__d(/* RCTTest/src/configStore.js */function(global, require, module, exports) {var _redux = require(520    ); // 520 = redux
+
+var _LoginReducer = require(547                     ); // 547 = ./reducer/LoginReducer
+
+var _LoginReducer2 = babelHelpers.interopRequireDefault(_LoginReducer);
+
+var _reduxThunk = require(548          ); // 548 = redux-thunk
+
+var _reduxThunk2 = babelHelpers.interopRequireDefault(_reduxThunk);
+
+var _reduxPromise = require(549            ); // 549 = redux-promise
+
+var _reduxPromise2 = babelHelpers.interopRequireDefault(_reduxPromise);
+
+var _reduxLogger = require(556           ); // 556 = redux-logger
+>>>>>>> origin/dev
 
 var logger = (0, _reduxLogger.createLogger)();
 
 var store = (0, _redux.createStore)(_LoginReducer2.default, (0, _redux.applyMiddleware)(_reduxThunk2.default, logger, _reduxPromise2.default));
 
 module.exports = store;
+<<<<<<< HEAD
 }, 553, null, "RCTTest/src/configStore.js");
+=======
+}, 546, null, "RCTTest/src/configStore.js");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/reducer/LoginReducer.js */function(global, require, module, exports) {
 
 var movies = function movies(state, action) {
@@ -80272,7 +82079,11 @@ var movies = function movies(state, action) {
 };
 
 module.exports = movies;
+<<<<<<< HEAD
 }, 554, null, "RCTTest/src/reducer/LoginReducer.js");
+=======
+}, 547, null, "RCTTest/src/reducer/LoginReducer.js");
+>>>>>>> origin/dev
 __d(/* redux-thunk/lib/index.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
@@ -80296,7 +82107,11 @@ var thunk = createThunkMiddleware();
 thunk.withExtraArgument = createThunkMiddleware;
 
 exports['default'] = thunk;
+<<<<<<< HEAD
 }, 555, null, "redux-thunk/lib/index.js");
+=======
+}, 548, null, "redux-thunk/lib/index.js");
+>>>>>>> origin/dev
 __d(/* redux-promise/lib/index.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
@@ -80313,7 +82128,11 @@ var _extends = Object.assign || function (target) {
 
 exports['default'] = promiseMiddleware;
 
+<<<<<<< HEAD
 var _fluxStandardAction = require(557                   ); // 557 = flux-standard-action
+=======
+var _fluxStandardAction = require(550                   ); // 550 = flux-standard-action
+>>>>>>> origin/dev
 
 function isPromise(val) {
   return val && typeof val.then === 'function';
@@ -80338,7 +82157,11 @@ function promiseMiddleware(_ref) {
 }
 
 module.exports = exports['default'];
+<<<<<<< HEAD
 }, 556, null, "redux-promise/lib/index.js");
+=======
+}, 549, null, "redux-promise/lib/index.js");
+>>>>>>> origin/dev
 __d(/* flux-standard-action/lib/index.js */function(global, require, module, exports) {'use strict';
 
 exports.__esModule = true;
@@ -80349,7 +82172,11 @@ function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { 'default': obj };
 }
 
+<<<<<<< HEAD
 var _lodashIsplainobject = require(558                   ); // 558 = lodash.isplainobject
+=======
+var _lodashIsplainobject = require(551                   ); // 551 = lodash.isplainobject
+>>>>>>> origin/dev
 
 var _lodashIsplainobject2 = _interopRequireDefault(_lodashIsplainobject);
 
@@ -80366,11 +82193,19 @@ function isFSA(action) {
 function isError(action) {
   return action.error === true;
 }
+<<<<<<< HEAD
 }, 557, null, "flux-standard-action/lib/index.js");
 __d(/* lodash.isplainobject/index.js */function(global, require, module, exports) {
 var baseFor = require(559              ), // 559 = lodash._basefor
     isArguments = require(560                 ), // 560 = lodash.isarguments
     keysIn = require(561            ); // 561 = lodash.keysin
+=======
+}, 550, null, "flux-standard-action/lib/index.js");
+__d(/* lodash.isplainobject/index.js */function(global, require, module, exports) {
+var baseFor = require(552              ), // 552 = lodash._basefor
+    isArguments = require(553                 ), // 553 = lodash.isarguments
+    keysIn = require(554            ); // 554 = lodash.keysin
+>>>>>>> origin/dev
 
 var objectTag = '[object Object]';
 
@@ -80404,7 +82239,11 @@ function isPlainObject(value) {
 }
 
 module.exports = isPlainObject;
+<<<<<<< HEAD
 }, 558, null, "lodash.isplainobject/index.js");
+=======
+}, 551, null, "lodash.isplainobject/index.js");
+>>>>>>> origin/dev
 __d(/* lodash._basefor/index.js */function(global, require, module, exports) {
 var baseFor = createBaseFor();
 
@@ -80426,7 +82265,11 @@ function createBaseFor(fromRight) {
 }
 
 module.exports = baseFor;
+<<<<<<< HEAD
 }, 559, null, "lodash._basefor/index.js");
+=======
+}, 552, null, "lodash._basefor/index.js");
+>>>>>>> origin/dev
 __d(/* lodash.isarguments/index.js */function(global, require, module, exports) {
 var MAX_SAFE_INTEGER = 9007199254740991;
 
@@ -80473,10 +82316,17 @@ function isObjectLike(value) {
 }
 
 module.exports = isArguments;
+<<<<<<< HEAD
 }, 560, null, "lodash.isarguments/index.js");
 __d(/* lodash.keysin/index.js */function(global, require, module, exports) {
 var isArguments = require(560                 ), // 560 = lodash.isarguments
     isArray = require(562             ); // 562 = lodash.isarray
+=======
+}, 553, null, "lodash.isarguments/index.js");
+__d(/* lodash.keysin/index.js */function(global, require, module, exports) {
+var isArguments = require(553                 ), // 553 = lodash.isarguments
+    isArray = require(555             ); // 555 = lodash.isarray
+>>>>>>> origin/dev
 
 var reIsUint = /^\d+$/;
 
@@ -80529,7 +82379,11 @@ function keysIn(object) {
 }
 
 module.exports = keysIn;
+<<<<<<< HEAD
 }, 561, null, "lodash.keysin/index.js");
+=======
+}, 554, null, "lodash.keysin/index.js");
+>>>>>>> origin/dev
 __d(/* lodash.isarray/index.js */function(global, require, module, exports) {
 var arrayTag = '[object Array]',
     funcTag = '[object Function]';
@@ -80587,7 +82441,11 @@ function isNative(value) {
 }
 
 module.exports = isArray;
+<<<<<<< HEAD
 }, 562, null, "lodash.isarray/index.js");
+=======
+}, 555, null, "lodash.isarray/index.js");
+>>>>>>> origin/dev
 __d(/* redux-logger/dist/redux-logger.js */function(global, require, module, exports) {!function (e, t) {
   "object" == typeof exports && "undefined" != typeof module ? t(exports) : "function" == typeof define && define.amd ? define(["exports"], t) : t(e.reduxLogger = e.reduxLogger || {});
 }(this, function (e) {
@@ -80869,7 +82727,11 @@ __d(/* redux-logger/dist/redux-logger.js */function(global, require, module, exp
         r = e.getState;return "function" == typeof t || "function" == typeof r ? S()({ dispatch: t, getState: r }) : void console.error("\n[redux-logger v3] BREAKING CHANGE\n[redux-logger v3] Since 3.0.0 redux-logger exports by default logger with default settings.\n[redux-logger v3] Change\n[redux-logger v3] import createLogger from 'redux-logger'\n[redux-logger v3] to\n[redux-logger v3] import { createLogger } from 'redux-logger'\n");
   };e.defaults = L, e.createLogger = S, e.logger = T, e.default = T, Object.defineProperty(e, "__esModule", { value: !0 });
 });
+<<<<<<< HEAD
 }, 563, null, "redux-logger/dist/redux-logger.js");
+=======
+}, 556, null, "redux-logger/dist/redux-logger.js");
+>>>>>>> origin/dev
 __d(/* RCTTest/src/actions/LoginAction.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
 	value: true
 });
@@ -80900,7 +82762,10 @@ var GetMovies = exports.GetMovies = function GetMovies(url) {
 		});
 	};
 };
+<<<<<<< HEAD
 }, 564, null, "RCTTest/src/actions/LoginAction.js");
+=======
+}, 557, null, "RCTTest/src/actions/LoginAction.js");
+>>>>>>> origin/dev
 ;require(97);
 ;require(0);
-//# sourceMappingURL=/index.ios.map

@@ -18,14 +18,19 @@ class TYCategaryViewController: TYBaseViewController {
     }
     override func setUpTableView() {
         super.setUpTableView()
-        let height = tableView.mj_h - 49
-        tableView.mj_h = height;
         //注册cell
         tableView.register(TYAttentionViewCell.classForCoder(), forCellReuseIdentifier: "cell")
         //style
         tableView.separatorColor = UIColor(hex:NSInteger(separatorColorHexValue))
-        tableView.mj_header.removeFromSuperview()
-        tableView.mj_footer.removeFromSuperview()
+        var bottomOffest:CGFloat = 0.0
+        if #available(iOS 11, *) {
+            bottomOffest = (UIScreen.main.bounds.size.width == 375.0 && UIScreen.main.bounds.size.height == 812.0) ?(88.0 + 83.0):(64.0 + 49.0)
+        } else {
+            bottomOffest = 64.0 + 49.0
+        }
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: bottomOffest, right: 0)
+        tableView.scrollIndicatorInsets = tableView.contentInset;
+      
     }
     
 }

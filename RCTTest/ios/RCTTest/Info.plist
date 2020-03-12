@@ -5,11 +5,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>最左</string>
+	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<string>org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -17,7 +17,13 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
+<<<<<<< HEAD
 	<string>1.0.1</string>
+=======
+	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+>>>>>>> origin/dev
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>CodePushDeploymentKey</key>
@@ -26,10 +32,9 @@
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
+<<<<<<< HEAD
 			<key>codepush.azurewebsites.net</key>
 			<dict/>
 			<key>jspush.cn</key>
@@ -39,13 +44,16 @@
 				<key>NSIncludesSubdomains</key>
 				<true/>
 			</dict>
+=======
+>>>>>>> origin/dev
 			<key>localhost</key>
 			<dict>
-				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
 			</dict>
 		</dict>
 	</dict>
+<<<<<<< HEAD
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Jokey想访问您的位置信息</string>
 	<key>NSMicrophoneUsageDescription</key>
@@ -57,12 +65,17 @@
 		<string>Ionicons.ttf</string>
 		<string>Foundation.ttf</string>
 	</array>
+=======
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string></string>
+>>>>>>> origin/dev
 	<key>UIBackgroundModes</key>
 	<array>
+		<string>location</string>
 		<string>remote-notification</string>
 	</array>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -70,6 +83,10 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

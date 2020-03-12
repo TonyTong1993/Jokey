@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSInteger const themeColorHexValue;
-extern NSInteger const separatorColorHexValue;
+extern NSInteger const themeColorHexValue;//主题色值
+extern NSInteger const separatorColorHexValue;//间隔线的色值
 extern NSInteger const textTint;
 extern CGFloat const textFont;
+extern NSInteger const backgroundColorHexValue;
 typedef NS_ENUM(NSInteger,TYThemeType) {
     TYThemeLight = 1,//纯色
     TYThemeDark,//亮黑

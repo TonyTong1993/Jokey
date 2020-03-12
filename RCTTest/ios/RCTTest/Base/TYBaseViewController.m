@@ -8,54 +8,18 @@
 
 #import "TYBaseViewController.h"
 #import "UIImage+Extentions.h"
-
+#import "UIScrollView+Refresh.h"
 @interface TYBaseViewController ()
 
 @end
 
 @implementation TYBaseViewController
 #pragma mark---getter and setter
-- (NSMutableArray *)normalImages
-{
-    if (_normalImages == nil) {
-        _normalImages = [[NSMutableArray alloc] init];
-        for (int i = 0; i < 10; i++) {
-            UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"pull_to_refresh_%d_54x54_",i+1]];
-            [_normalImages addObject:image];
-        }
-        
-    }
-    return _normalImages;
-}
-- (NSMutableArray *)pullingImages
-{
-    if (_pullingImages == nil) {
-        _pullingImages = [[NSMutableArray alloc] init];
-        for (int i = 0; i < 10; i++) {
-            UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"pull_to_refresh_%d_54x54_",i+1]];
-            [_pullingImages addObject:image];
-        }
-        
-    }
-    return _pullingImages;
-}
-//正在刷新状态下的图片
-- (NSMutableArray *)refreshImages
-{
-    if (_refreshImages == nil) {
-        _refreshImages = [[NSMutableArray alloc] init];
-        
-        for (int i = 0; i < 10; i++) {
-            UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"pull_to_refresh_%d_54x54_",i+1]];
-            [_refreshImages addObject:image];
-        }
-    }
-    return _refreshImages;
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.automaticallyAdjustsScrollViewInsets = false;
+    
     [self setUpNavigationBar];
     self.dataSource = @[];
 }
@@ -65,14 +29,21 @@
     self.tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+<<<<<<< HEAD
    
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 125, 0);
     self.tableView.backgroundColor = [UIColor colorWithHexString:@"#f0f0f8"];
     self.tableView.separatorColor = HEXCOLOR(0xebebeb);
+=======
+    
+    self.tableView.backgroundColor = HEXCOLOR(backgroundColorHexValue);
+    self.tableView.separatorColor = HEXCOLOR(separatorColorHexValue);
+>>>>>>> origin/dev
     //去除footer样式
     self.tableView.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:_tableView];
     
+<<<<<<< HEAD
     //设置网络数据下啦刷新
     __weak typeof(self) weakSelf = self;
    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingBlock:^{
@@ -110,6 +81,21 @@
         self.tableView.estimatedSectionFooterHeight = 0;
         
     }
+=======
+    CGFloat bottomOffset = 0.0f;
+    if (@available(iOS 11, *)) {
+         //关闭Self-Sizing
+        self.tableView.estimatedRowHeight = 0;
+        self.tableView.estimatedSectionFooterHeight = 0;
+        self.tableView.estimatedSectionHeaderHeight = 0;
+        bottomOffset = is_iPhoneX?83.0f:64.0f;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = false;
+        bottomOffset = 64.0f;
+    }
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, bottomOffset, 0);
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+>>>>>>> origin/dev
 }
 
 -(void)setUpNavigationBar {
@@ -121,7 +107,7 @@
                                           action:(SEL)action
 {
     
-    UIImage *image = [UIImage iconWithInfo:TBCityIconInfoMake(@"\U0000e720;",24, HEXCOLOR(0x333333))];
+    UIImage *image = [UIImage iconWithInfo:TBCityIconInfoMake(@"\U0000e720;",24, HEXCOLOR(textTint))];
     return  [UIBarButtonItem barBtnItemWithNormalIcon:image
                                         highlightIcon:image
                                                target: target

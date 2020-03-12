@@ -9,9 +9,13 @@
 #import "TYTabBarController.h"
 #import "TYNavigationController.h"
 #import "RCTTest-Swift.h"
+<<<<<<< HEAD
 //环信IM Full版本
 //#import <Hyphenate/Hyphenate.h>
 CFAbsoluteTime StartTime;
+=======
+#import "AppManager.h"
+>>>>>>> origin/dev
 @interface TYTabBarController ()
 
 @end
@@ -24,8 +28,13 @@ CFAbsoluteTime StartTime;
         NSLog(@"didload in %f sec",CFAbsoluteTimeGetCurrent() - StartTime);
     });
     [super viewDidLoad];
+
+    //设置UITabBar主题
+    [[UITabBar appearance] setBackgroundImage:[[UIImage imageNamed:@"tabbar_bg_1x49_"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [[UITabBar appearance] setShadowImage:[UIImage imageWithColor:HEXCOLOR(separatorColorHexValue)]];
+    //添加子视图控制器
     NSArray *barItemInfos = @[
-                              @{@"className":@"TYHomeViewController",@"icon":@"tabbar_featured_24x24_",@"selectedIcon":@"tabbar_featured_hl_24x24_",@"title":@"首页"},
+                          @{@"className":@"TYHomeViewController",@"icon":@"tabbar_featured_24x24_",@"selectedIcon":@"tabbar_featured_hl_24x24_",@"title":@"首页"},
                               @{@"className":[NSString nameSpaceWrapedClassNameInSwift:@"TYAttentionViewController"],@"icon":@"tabbar_follow_24x24_",@"selectedIcon":@"tabbar_follow_hl_24x24_",@"title":@"关注"},
                               @{@"className":[NSString nameSpaceWrapedClassNameInSwift:@"TYDiscoverViewController"],@"icon":@"tabbar_explore_24x24_",@"selectedIcon":@"tabbar_explore_hl_24x24_",@"title":@"发现"},
                              @{@"className":[NSString nameSpaceWrapedClassNameInSwift:@"TYMessageViewController"],@"icon":@"tabbar_remind_24x24_",@"selectedIcon":@"tabbar_remind_hl_24x24_",@"title":@"消息"},
@@ -37,9 +46,7 @@ CFAbsoluteTime StartTime;
 }
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"didAppear in %f sec",CFAbsoluteTimeGetCurrent() - StartTime);
-    });
+ 
 }
 -(void)addChildViewController:(NSString *)className icon:(NSString *)icon selectedIcon:(NSString *)selectedIcon title:(NSString *)title {
     UIViewController *childController = [[NSClassFromString(className) alloc] init];
@@ -49,7 +56,7 @@ CFAbsoluteTime StartTime;
     [barItem setImage:[[UIImage imageNamed:icon] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [barItem setSelectedImage:[[UIImage imageNamed:selectedIcon] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [barItem setTitle:title];
-    [barItem setTitleTextAttributes:@{NSForegroundColorAttributeName:HEXCOLOR(0x52B5EF)} forState:UIControlStateSelected];
+    [barItem setTitleTextAttributes:@{NSForegroundColorAttributeName:HEXCOLOR(themeColorHexValue)} forState:UIControlStateSelected];
     [barItem setTitleTextAttributes:@{NSForegroundColorAttributeName:HEXCOLOR(0xB3B2BA)} forState:UIControlStateNormal];
     [self addChildViewController:nav];
 }

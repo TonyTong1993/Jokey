@@ -1,0 +1,13 @@
+xcodebuild指令学习
+1. -project name.xcodeproj --编译当前目录下工程的名字
+2.-target targetname --明确编译的target
+3.-workspace name.xcworkspace --编译工程的workspace
+4. -scheme schemename --在编译workspace时，是必要选项
+5.-destination destinationspecifier 目标设备
+6.-destination-timeout 设置搜索设备的超时时间
+7.-configuration configurationname DEBUG or Release
+8.-arh architecture 架构
+9.--sdk [sdkfullpath] | [sdkname]
+10.-showsdks
+11.-showBuildSettings
+12 

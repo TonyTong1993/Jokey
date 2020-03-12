@@ -52,6 +52,19 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+<<<<<<< HEAD
+=======
+    gradientLayer.colors = @[(__bridge id)HEXCOLOR(0x2cda89).CGColor,
+                             (__bridge id)HEXCOLOR(0x0dc870).CGColor,];
+    gradientLayer.locations = @[@0.2, @1.0];
+    gradientLayer.startPoint = CGPointMake(0, 0);
+    gradientLayer.endPoint = CGPointMake(1, 0);
+    gradientLayer.frame = leftBtn.bounds;
+    [leftBtn.layer addSublayer:gradientLayer];
+    [leftBtn.layer insertSublayer:gradientLayer atIndex:0];
+    leftBtn.layer.cornerRadius = 12.5;
+    leftBtn.layer.masksToBounds = YES;
+>>>>>>> origin/dev
 }
 
 -(void)setUpTableView {

@@ -10,68 +10,25 @@
 
 @interface UIImage (Extentions)
 
-/** 
- 产生一张屏幕截图
+/**
+ add alpha for image
+
+ @param alpha alpha vale
+ @return new image contain alpha
  */
-+(UIImage *)screenShot;
+- (UIImage *)imageByApplyingAlpha:(CGFloat) alpha;
+
+
+
+@end
+
+@interface UIImage (Photo)
 
 /**
-产生一张视图图片
-
- @param view 在屏幕中必须渲染
+ adjust image orientation
  */
-+(UIImage *)imageWithView:(UIView *)view;
+- (UIImage *)fixOrientation;
 
-
-/**
- 图片添加logo图片
-
- @param logo logo图
- @param position 绘制的位置
- */
--(UIImage *)drawLogo:(UIImage *)logo position:(CGPoint)position;
-
-/**
- 添加水印
-
- @param text 水印文字
- @param position  绘制的位置
- */
--(UIImage *)drawText:(NSString *)text position:(CGPoint)position attributes:(NSDictionary *)attributes;
-
-
-/**
- 设置图片圆角
-
- @param radius 圆角半径
- */
--(UIImage *)cornerRadius:(CGFloat)radius;
-
-/**
-  设置图片圆角
-
- @param radius 圆角尺寸
- @param corners 圆角位置
- @return 剪切后的图片
- */
--(UIImage *)cornerRadius:(CGFloat)radius withRoundingCorners:(UIRectCorner)corners;
-
-/**
- 伸缩图片
-
- @param image 原图
- @param size 伸缩尺寸
- @return 伸缩后的图片
- */
-+(UIImage*) OriginImage:(UIImage *)image scaleToSize:(CGSize)size;
-
-/**
- 画一条屏幕比例下的1像素线
-
- @param color 线的颜色
- @return 图片
- */
-+(UIImage *)singleLineImageWithColor:(UIColor *)color;
 
 
 @end

@@ -6,6 +6,7 @@
 #import "TYServiceApi.h"
 #import "Macro.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <FDStackView/FDStackView.h>
 #import <SDCycleScrollView/SDCycleScrollView.h>
 #import  "TBCityIconFont.h"
 #import "TYTestViewController.h"
