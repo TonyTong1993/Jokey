@@ -10,6 +10,25 @@
 
 @interface UIImage (Extentions)
 
+/**
+ add alpha for image
+
+ @param alpha alpha vale
+ @return new image contain alpha
+ */
 - (UIImage *)imageByApplyingAlpha:(CGFloat) alpha;
+
+
+
+@end
+
+@interface UIImage (Photo)
+
+/**
+ adjust image orientation
+ */
+- (UIImage *)fixOrientation;
+
+
 
 @end

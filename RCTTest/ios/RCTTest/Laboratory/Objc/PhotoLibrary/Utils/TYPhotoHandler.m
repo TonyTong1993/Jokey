@@ -46,6 +46,7 @@
             resultHandler(groups);
         });
     });
+    
 }
 + (void)enumerateAssetsInAssetCollection:(PHAssetCollection *)collection finishBlock:(void(^)(NSArray <PHAsset *>*result))finishBlock {
      NSMutableArray <PHAsset *>*results = [NSMutableArray array];

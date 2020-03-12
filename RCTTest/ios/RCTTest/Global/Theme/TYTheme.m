@@ -44,7 +44,7 @@ static NSString *themeColor;
 }
 //TODO:添加兼容字体
 +(NSString *)themeFontFamilyName {
-    return @"PingFangSCRegular";
+    return @"PingFang-SC-Regular";
 }
 
 @end

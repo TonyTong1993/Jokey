@@ -19,16 +19,19 @@
     return self;
 }
 -(void)setPhoto:(TYPhoto *)photo {
+    
      _photo = photo;
+   
     if ([photo isKindOfClass:[TYLocalAlbumPhoto class]]) {
-
+        __weak typeof(self) weakSelf = self;
         TYLocalAlbumPhoto *localPhoto = (TYLocalAlbumPhoto *)_photo;
         [localPhoto.phAsset getPreViewImage:^(UIImage *result, NSDictionary *info) {
+                CGPoint center = weakSelf.center;
+                weakSelf.size = [weakSelf adaptImageSize:result];
+                weakSelf.image = result;
+                weakSelf.center = center;
             
-//            CGPoint center = self.center;
-//            self.size = [self adaptImageSize:result];
-//            self.image = result;
-//            self.center = center;
+           
         }];
     }
 }

@@ -11,8 +11,8 @@
 #import "UIImage+Extentions.h"
 #import "TYPhoto.h"
 #import "TYPhotoView.h"
-
-@interface TYBrowserView() <UIScrollViewDelegate, UIGestureRecognizerDelegate>
+#import "TYPreviewPhotoViewCell.h"
+@interface TYBrowserView() <UIScrollViewDelegate, UIGestureRecognizerDelegate,UICollectionViewDataSource,UICollectionViewDelegate>
 
 @property (nonatomic, weak) UIView *fromView;
 @property (nonatomic, weak) UIView *toContainerView;
@@ -27,6 +27,8 @@
 
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) UICollectionViewFlowLayout *layout;
 @property (nonatomic, strong) NSMutableArray *cells;
 @property (nonatomic, strong) UIPageControl *pager;
 @property (nonatomic, assign) CGFloat pagerCurrentPage;
@@ -70,74 +72,74 @@
     }
     return _topToolBar;
 }
+- (UICollectionView *)collectionView {
+    if (!_collectionView) {
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        _collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:layout];
+        _collectionView.backgroundColor = [UIColor blackColor];
+        _collectionView.pagingEnabled = YES;
+        _collectionView.showsHorizontalScrollIndicator = NO;
+        _collectionView.dataSource = self;
+        _collectionView.delegate = self;
+        _layout = layout;
+        //注册cell
+        [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([TYPreviewPhotoViewCell class]) bundle:nil] forCellWithReuseIdentifier:[TYPreviewPhotoViewCell reuseIdentifer]];
+    }
+    
+    return _collectionView;
+}
 
 -(instancetype)init {
     self = [super init];
     if (!self) return nil;
     
     self.frame = [UIScreen mainScreen].bounds;
-    _scrollView = [UIScrollView new];
-    _scrollView.frame = [UIScreen mainScreen].bounds;
-    _scrollView.pagingEnabled = true;
-    _scrollView.delegate = self;
-    _scrollView.backgroundColor = [UIColor randomColor];
-
-    [self addSubview:_scrollView];
+    [self addSubview:self.collectionView];
     [self addSubview:self.topToolBar];
-    
     
     return self;
 }
-- (void)presentFromImageView:(UIView *)fromView
-                 toContainer:(UIView *)toContainer
-                    animated:(BOOL)animated
-                  completion:(void (^)(void))completion {
-    if (!toContainer) return;
-    _fromView = fromView;
-    _toContainerView = toContainer;
-    
-    _snapshotImage = [_toContainerView snapshotImageAfterScreenUpdates:NO];
-    
-    
-}
+
 -(void)setDataSource:(id<TYBrowserViewDataSource>)dataSource {
     _dataSource = dataSource;
-    NSMutableArray <TYPhoto *> *datas = [NSMutableArray array];
-    CGFloat startCenterX = self.size.width / 2;
-    CGFloat startCenterY = self.size.height / 2;
-    
     NSUInteger count = [_dataSource numberOfPhotosInBrowserView];
-    self.scrollView.contentSize = CGSizeMake(self.size.width * count, self.size.height);
-    for (int i = 0; i < [_dataSource numberOfPhotosInBrowserView]; i++) {
-        NSAssert([[_dataSource browserView:self photoForRowAtIndex:i] isKindOfClass:[TYPhoto class]], @"类型不匹配");
-        TYPhoto *photo = [_dataSource browserView:self photoForRowAtIndex:i];
-        [datas addObject:photo];
-        TYPhotoView *photoView = [TYPhotoView new];
-        photoView.backgroundColor = [UIColor randomColor];
-        photoView.photo = photo;
-        photoView.center = CGPointMake(startCenterX+(i*self.size.width), startCenterY);
-        [self.scrollView addSubview:photoView];
-    }
+    self.collectionView.contentSize = CGSizeMake(self.size.width * count, self.size.height);
     
-    
-      _groupItems = datas;
 }
 -(void)setDelegate:(id<TYBrowserViewDelegate>)delegate {
     _delegate = delegate;
     if ([_delegate respondsToSelector:@selector(selectedIndexInBrowserView)]) {
         CGPoint contentOffset = CGPointMake(self.size.width * [_delegate selectedIndexInBrowserView], 0);
         [self.scrollView setContentOffset:contentOffset];
-      
     }
+}
+-(void)layoutSubviews {
+    [super layoutSubviews];
+    _layout.minimumLineSpacing = 0.0f;
+    _layout.minimumInteritemSpacing = 0.0f;
+    _layout.itemSize = CGSizeMake(self.width, self.height);
+    [self.collectionView setCollectionViewLayout:_layout];
 }
 -(void)dissmiss {
     if (_delegate&&[_delegate respondsToSelector:@selector(photoBrowserViewDissmissActionResponder)]) {
         [_delegate photoBrowserViewDissmissActionResponder];
     }
 }
-
+#pragma mark - UICollectionViewDataSource an UICollectionViewDelegtate
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return _dataSource.numberOfPhotosInBrowserView;
+}
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSAssert([[_dataSource browserView:self photoForRowAtIndex:indexPath.item] isKindOfClass:[TYPhoto class]], @"类型不匹配");
+    TYPhoto *photo = [_dataSource browserView:self photoForRowAtIndex:indexPath.item];
+    TYPreviewPhotoViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[TYPreviewPhotoViewCell reuseIdentifer] forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor randomColor];
+    return cell;
+}
 #pragma mark---
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
 }
+
 @end

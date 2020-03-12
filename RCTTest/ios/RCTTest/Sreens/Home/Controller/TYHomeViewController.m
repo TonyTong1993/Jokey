@@ -25,7 +25,7 @@
 
 @implementation TYHomeViewController
 #pragma mark---Getter and Setter
--(NSMutableArray *)pageCache {
+-(NSMutableDictionary *)pageCache {
     if (!_pageCache) {
         _pageCache = [NSMutableDictionary dictionaryWithCapacity:3];
     }
@@ -37,7 +37,7 @@
     NSArray *titles = @[@"推荐",@"视频",@"图文"];
     TYSegmentView *segmentView = [[TYSegmentView alloc] initWithTitles:titles];
     
-    [segmentView setTitleFont:[UIFont fontWithName:[TYTheme themeFontFamilyName] size:16]];
+    [segmentView setTitleFont:[UIFont systemFontOfSize:16]];
     [segmentView setTitleColor:HEXCOLOR(textTint) state:SegmentControlStateNormal];
     [segmentView setTitleColor:HEXCOLOR(themeColorHexValue) state:SegmentControlStateSelected];
     segmentView.delegate = self;

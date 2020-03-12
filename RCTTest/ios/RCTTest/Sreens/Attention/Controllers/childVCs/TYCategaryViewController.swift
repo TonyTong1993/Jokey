@@ -28,7 +28,7 @@ class TYCategaryViewController: TYBaseViewController {
         } else {
             bottomOffest = 64.0 + 49.0
         }
-        tableView.contentInset = UIEdgeInsetsMake(0, 0, bottomOffest, 0)
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: bottomOffest, right: 0)
         tableView.scrollIndicatorInsets = tableView.contentInset;
       
     }

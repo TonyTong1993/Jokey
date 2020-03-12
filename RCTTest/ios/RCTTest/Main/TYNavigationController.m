@@ -30,7 +30,7 @@
     NSString *themeColor = [TYTheme themeColorWithType:TYThemePureWhite];
     //设置主题颜色
     [navBar setBarTintColor:HEXCOLOR(themeColorHexValue)];
-    [navBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:[UIFont fontWithName:[TYTheme themeFontFamilyName] size:15]}];
+    [navBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:[UIFont systemFontOfSize:15]}];
     [navBar setBackgroundImage:[UIImage imageNamed:@"nav_bg_1x64_"] forBarMetrics:UIBarMetricsDefault];
     [navBar setShadowImage:[UIImage imageWithColor:HEXCOLOR(0xe0e0e0)]];
     

@@ -55,7 +55,11 @@
    
     //设置iconfont
     [TBCityIconFont setFontName:@"iconfont"];
-
+    if (@available(iOS 13.0, *)) {
+        _window.overrideUserInterfaceStyle = UIUserInterfaceStyleLight;
+    } else {
+            
+    }
 
     return YES;
 }

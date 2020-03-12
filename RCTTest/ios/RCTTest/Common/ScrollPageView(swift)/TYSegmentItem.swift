@@ -21,7 +21,7 @@ class TYSegmentItem: UIButton {
             return
         }
         titleLabel?.font = font
-        titleSize = title.size(attributes: [NSFontAttributeName:font])
+        titleSize = title.size(withAttributes: [NSAttributedString.Key.font:font])
     }
     
     required init?(coder aDecoder: NSCoder) {

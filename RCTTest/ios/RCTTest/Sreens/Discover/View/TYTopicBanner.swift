@@ -26,7 +26,7 @@ class TYTopicBanner: UIView ,TYSegmentScrollViewDataSource,UIScrollViewDelegate{
         let rightBtn = UIButton()
         rightBtn.setImage(#imageLiteral(resourceName: "discover_banner_more"), for: .normal)
         //调整按钮尺寸
-        rightBtn.contentEdgeInsets = UIEdgeInsetsMake(5, 10, 5, 10)
+        rightBtn.contentEdgeInsets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
         //添加stackView
         if #available(iOS 9.0, *) {
             let stackView = UIStackView(frame: frame)
