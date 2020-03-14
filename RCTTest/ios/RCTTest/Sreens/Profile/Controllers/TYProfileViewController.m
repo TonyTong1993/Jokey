@@ -12,13 +12,6 @@
 #import "TYShopViewController.h"
 #import "TYProfileViewModel.h"
 #import "TYRunViewController.h"
-<<<<<<< HEAD
-//#import <CodePush/CodePush.h>
-//#import <EaseUI/EaseMessageViewController.h>
-@interface TYProfileViewController ()
-=======
->>>>>>> origin/dev
-
 @interface TYProfileViewController ()
 {
     NSTimeInterval time;
@@ -32,10 +25,7 @@
     [self setUpTableView];
     //添加测试数据
     NSDictionary *jsonDict = [NSBundle loadJsonFromBundle:@"Profile"];
-<<<<<<< HEAD
-    self.dataSource = [NSArray modelArrayWithClass:[TYProfileViewModel class] json:jsonDict];//[TYProfileViewModel mj_objectArrayWithKeyValuesArray:jsonDict[@"data"]];
-=======
-    self.dataSource = [TYProfileViewModel mj_objectArrayWithKeyValuesArray:jsonDict[@"data"]];
+//    self.dataSource = [TYProfileViewModel mj_objectArrayWithKeyValuesArray:jsonDict[@"data"]];
     
 //  NSTimer *timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(scheduledTimer) userInfo:nil repeats:false];
 //  [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
@@ -58,7 +48,6 @@
 //    dispatch_async(dispatch_get_main_queue(), ^{
 //        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 //    });
->>>>>>> origin/dev
 }
 
 -(void)setUpTableView {
@@ -101,18 +90,8 @@
      TYProfileViewModel *model = self.dataSource[indexPath.section][indexPath.row];
     UIViewController *VC;
     if ([model.className isEqualToString:@"TYShopViewController"]) {
-<<<<<<< HEAD
-        NSURL *jsCodeLocation;
-#ifdef DEBUG
-       jsCodeLocation = [NSURL URLWithString:@"http://192.168.10.50:8081/index.ios.bundle?platform=ios"];
-        
-#else
-        jsCodeLocation = [CodePush bundleURL];
-#endif
-=======
 //         NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
         NSURL *jsCodeLocation = [NSURL URLWithString:@"http://192.168.0.104:8081/index.ios.bundle?platform=ios"];
->>>>>>> origin/dev
         RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation moduleName:@"test" initialProperties:@{} launchOptions:nil];
         TYShopViewController *vc = [[TYShopViewController alloc] init];
         vc.view = rootView;

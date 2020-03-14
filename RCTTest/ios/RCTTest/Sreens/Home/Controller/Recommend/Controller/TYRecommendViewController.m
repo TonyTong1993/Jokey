@@ -28,12 +28,8 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
 -(void)setUpTableView {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
-<<<<<<< HEAD
     self.collectionView.accessibilityLabel = @"videoCollection";
-    _collectionView.dataSource = self;
-    _collectionView.delegate = self;
-   _collectionView.contentInset = UIEdgeInsetsMake(0, 0, 125, 0);
-=======
+    _collectionView.contentInset = UIEdgeInsetsMake(0, 0, 125, 0);
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
     CGFloat bottomOffset = 0.0f;
@@ -48,7 +44,6 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
     self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, bottomOffset, 0);
     self.collectionView.scrollIndicatorInsets = self.collectionView.contentInset;
     
->>>>>>> origin/dev
     [self.view addSubview:_collectionView];
     
     //设置网络数据下啦刷新
@@ -68,7 +63,6 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
     [self.collectionView registerNib:[UINib nibWithNibName:@"TYStatusViewCell" bundle:nil] forCellWithReuseIdentifier:reuserIndentifier];
     
     [self.collectionView.mj_header beginRefreshing];
-<<<<<<< HEAD
  
     //ios11 适配
     if (@available(iOS 11.0,*)) {
@@ -77,10 +71,6 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
         _collectionView.scrollIndicatorInsets = _collectionView.contentInset;
     }
    
-=======
-    
-    
->>>>>>> origin/dev
 }
 
 
@@ -128,16 +118,12 @@ static NSString *reuserIndentifier = @"KTYStatusViewCell";
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
     NSDictionary *dataDict = dict[@"data"];
-<<<<<<< HEAD
-    NSArray *list = [dataDict valueForKey:@"list"];
-    NSArray *dataSource =  [NSArray modelArrayWithClass:[TYModelTest class] json:list];
-=======
+
     NSMutableArray *dataSource = [NSMutableArray array];
     for (int i = 0; i<5; i++) {
-         NSMutableArray *datas = [TYModelTest mj_objectArrayWithKeyValuesArray:dataDict[@"list"]];
-        [dataSource addObjectsFromArray:datas];
+//         NSMutableArray *datas = [TYModelTest mj_objectArrayWithKeyValuesArray:dataDict[@"list"]];
+//        [dataSource addObjectsFromArray:datas];
     }
->>>>>>> origin/dev
     self.dataSource = dataSource;
     [self.collectionView.mj_header endRefreshing];
     [self.collectionView reloadData];

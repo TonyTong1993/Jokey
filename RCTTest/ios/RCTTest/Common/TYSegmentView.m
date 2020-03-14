@@ -222,7 +222,7 @@
 -(void)setTitleSelectedColor:(UIColor *)selectedColor item:(UIButton *)item{
      [item setTitleColor:selectedColor forState:UIControlStateSelected];
 }
-<<<<<<< HEAD
+
 -(void)layoutSubviews {
     [super layoutSubviews];
     
@@ -248,7 +248,9 @@
             [self updateIndicatorViewWithTitle:title animated:false];
             
         }
-=======
+    }];
+}
+
 -(void)willMoveToSuperview:(UIView *)newSuperview {
     [super willMoveToSuperview:newSuperview];
     //更新指示器
@@ -257,8 +259,8 @@
     [self.items enumerateObjectsUsingBlock:^(UIButton *item, NSUInteger idx, BOOL * _Nonnull stop) {
         [self setTitleNormalColor:_titleNormalColor item:item];
         [self setTitleSelectedColor:_titleSelectedColor item:(UIButton *)item];
->>>>>>> origin/dev
     }];
+     
 }
 
 -(void)handleItemSelectedAtIndex:(UIButton *)selectedItem {

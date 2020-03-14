@@ -10,17 +10,12 @@
 #import "TYNetWorkingTool.h"
 #import "TYSegmentView.h"
 #import "TYRecommendViewController.h"
-<<<<<<< HEAD
-#import "TYTestViewController.h"
-=======
-
 #import "TYOCTestListViewController.h"
 /*测试相册功能*/
 #import "TYPhotoCollectionViewController.h"
 #import "TYPhotoAlbumViewController.h"
 /*测试webView*/
 #import "CustomWebViewController.h"
->>>>>>> origin/dev
 @interface TYHomeViewController ()<TYSegmentControlDelegate,UIScrollViewDelegate>
 @property (nonatomic,strong) UIScrollView *scrollView;
 @property (nonatomic,strong) TYSegmentView *segmentView;
@@ -53,27 +48,13 @@
     [self loadNewData];
     
    
-    
-<<<<<<< HEAD
-//    TBCityIconInfo *iconInfo = TBCityIconInfoMake(@"\U0000e6df", 24, [UIColor randomColor]);
-//    UIImage *image = [UIImage iconWithInfo:iconInfo];
-//
-//    UIBarButtonItem *rightBtn = [UIBarButtonItem barBtnItemWithNormalIcon:image highlightIcon:image target:self action:@selector(handleClick)];
-//    self.navigationItem.rightBarButtonItem = rightBtn;
-// UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"Mune" style:UIBarButtonItemStylePlain target:self action:@selector(handleClick)];
-//     self.navigationItem.leftBarButtonItem = leftItem;
 }
 -(void)handleClick {
-    TYTestViewController *testVC = [[TYTestViewController alloc] init];
-    [self.navigationController pushViewController:testVC animated:YES];
-=======
     TBCityIconInfo *iconInfo = TBCityIconInfoMake(@"\U0000e6df", 36, [UIColor randomColor]);
     UIImage *image = [UIImage iconWithInfo:iconInfo];
-    
     UIBarButtonItem *rightBtn = [UIBarButtonItem barBtnItemWithNormalIcon:image highlightIcon:image target:self action:@selector(handleRightItemClick)];
     self.navigationItem.rightBarButtonItem = rightBtn;
     
->>>>>>> origin/dev
 }
 
 -(void)setUpTableView {

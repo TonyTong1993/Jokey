@@ -44,12 +44,12 @@
 
     __weak typeof(self) weakSelf = self;
     [self.present requestAuthorization:^{
-        [weakSelf.hud showAnimated:true];
-        [TYPhotoHandler enumeratePHAssetCollectionsWithResultHandler:^(NSArray<PHAssetCollection *> *result) {
-            [weakSelf.hud hideAnimated:true];
-            weakSelf.phcollections = result;
-            [weakSelf.tableView  reloadData];
-        }];
+//        [weakSelf.hud showAnimated:true];
+//        [TYPhotoHandler enumeratePHAssetCollectionsWithResultHandler:^(NSArray<PHAssetCollection *> *result) {
+//            [weakSelf.hud hideAnimated:true];
+//            weakSelf.phcollections = result;
+//            [weakSelf.tableView  reloadData];
+//        }];
     }];
    
 }

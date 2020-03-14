@@ -76,13 +76,13 @@ static CGFloat margin = 4.0f;
     //监听相册的授权变化
     __weak typeof(self) weakSelf = self;
     [self.present requestAuthorization:^{
-        [weakSelf.hud showAnimated:true];
+//        [weakSelf.hud showAnimated:true];
         __strong typeof(weakSelf) strongSelf = self;
         dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         dispatch_async(globalQueue, ^{
             [TYPhotoHandler enumerateAllAssetsInCollectionsWithfinishBlock:^(PHFetchResult<PHAsset *> *result) {
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [strongSelf.hud hideAnimated:true];
+//                    [strongSelf.hud hideAnimated:true];
                     strongSelf.fetchResult = result;
                     [strongSelf.collectionView reloadData];
                 });

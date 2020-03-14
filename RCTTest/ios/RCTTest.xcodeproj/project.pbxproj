@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF03854A20A41A4E00746CCD /* TYKalmanFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF03854920A41A4E00746CCD /* TYKalmanFilter.m */; };
-
 		AF06DD9120AD538600EC34FF /* Tracker1D.m in Sources */ = {isa = PBXBuildFile; fileRef = AF06DD9020AD538600EC34FF /* Tracker1D.m */; };
-		AF2684EA20A98FB3003814A4 /* trace.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF2684E920A98FB3003814A4 /* trace.txt */; };
-
 		AF5A1E4C20AA6EB30024DBE5 /* KalmanFiter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5A1E4B20AA6EB30024DBE5 /* KalmanFiter.m */; };
 		AF5A1E4F20AAAFAE0024DBE5 /* SavitzkyGolay.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5A1E4E20AAAFAE0024DBE5 /* SavitzkyGolay.m */; };
 		AF5D396A20A59CE800B6B1BF /* CoordTrans.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5D396520A59CE700B6B1BF /* CoordTrans.m */; };
@@ -31,7 +28,6 @@
 		EB032D2B1F0251F300F32465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB032D2A1F0251F300F32465 /* Assets.xcassets */; };
 		EB032D2E1F0251F300F32465 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB032D2C1F0251F300F32465 /* LaunchScreen.storyboard */; };
 		EB0964101F7927FA00417BB3 /* TYTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09640E1F7927FA00417BB3 /* TYTopicCell.swift */; };
-		EB0964111F7927FA00417BB3 /* TYTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB09640F1F7927FA00417BB3 /* TYTopicCell.xib */; };
 		EB18D3E41F0F427200B44790 /* RCTLocationObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3E31F0F427200B44790 /* RCTLocationObserver.m */; };
 		EB18D3E71F0F6B7700B44790 /* TYRCTModule.m in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3E61F0F6B7700B44790 /* TYRCTModule.m */; };
 		EB18D3EA1F0F725C00B44790 /* TYVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB18D3E91F0F725C00B44790 /* TYVideoController.swift */; };
@@ -53,9 +49,9 @@
 		EB32F1431F4AE31C00D766AF /* TYSegmentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB32F1421F4AE31C00D766AF /* TYSegmentItem.swift */; };
 		EB32F1451F4AE32D00D766AF /* TYSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB32F1441F4AE32D00D766AF /* TYSegmentView.swift */; };
 		EB32F1481F4B030F00D766AF /* TYCategaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB32F1471F4B030F00D766AF /* TYCategaryViewController.swift */; };
-		EB3C474E1F80B0EE00902AD3 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = EB3C474D1F80B0EE00902AD3 /* main.jsbundle */; };
 		EB43475F1F3B51D100EC7AE9 /* TYStatusViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB43475D1F3B51D100EC7AE9 /* TYStatusViewCell.m */; };
 		EB4347601F3B51D100EC7AE9 /* TYStatusViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB43475E1F3B51D100EC7AE9 /* TYStatusViewCell.xib */; };
+		EB46C771241CD37300AD52BF /* TYTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB46C770241CD37300AD52BF /* TYTopicCell.xib */; };
 		EB54324C1F4D634E00683AA7 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EB54324B1F4D634E00683AA7 /* UIBarButtonItem+Extension.m */; };
 		EB54324F1F4D7D2B00683AA7 /* TYTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB54324E1F4D7D2B00683AA7 /* TYTestViewController.m */; };
 		EB5432521F4D995900683AA7 /* TYStatusCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5432511F4D995900683AA7 /* TYStatusCommentView.m */; };
@@ -140,14 +136,6 @@
 		EB777A3E1F7BB161000461B3 /* icon_certification.png in Resources */ = {isa = PBXBuildFile; fileRef = EB777A3A1F7B9C91000461B3 /* icon_certification.png */; };
 		EB777A3F1F7BB17F000461B3 /* icon_certification@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB777A381F7B9C90000461B3 /* icon_certification@2x.png */; };
 		EB777A401F7BB187000461B3 /* icon_certification@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB777A391F7B9C90000461B3 /* icon_certification@3x.png */; };
-<<<<<<< HEAD
-		EB811C711F763934003552E9 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB811C701F763934003552E9 /* libMBProgressHUD.a */; };
-		EB811C751F764273003552E9 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = EB811C741F764273003552E9 /* MBProgressHUD+MJ.m */; };
-		EB9126C11F8B200D00F4263D /* TYTestSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9126C01F8B200C00F4263D /* TYTestSecondViewController.m */; };
-		EB9126D31F8B2D2C00F4263D /* RCTTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9126D21F8B2D2C00F4263D /* RCTTestUITests.m */; };
-		EB9126E21F8B2D4400F4263D /* RCTTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9126E11F8B2D4400F4263D /* RCTTestTests.m */; };
-=======
-		EB777A461F7BC7E5000461B3 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = EB777A451F7BC7C4000461B3 /* main.jsbundle */; };
 		EB77A585204E383A009103B3 /* CustomWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB77A583204E383A009103B3 /* CustomWebViewController.m */; };
 		EB7C64431FD63F720018AC3A /* RCTTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7C64421FD63F720018AC3A /* RCTTestTests.m */; };
 		EB7C644D1FD646F70018AC3A /* TYNumberOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7C644C1FD646F70018AC3A /* TYNumberOperations.m */; };
@@ -160,7 +148,6 @@
 		EB88417A204534EC00EDFAF5 /* AppDelegate+PushService.m in Sources */ = {isa = PBXBuildFile; fileRef = EB884179204534EC00EDFAF5 /* AppDelegate+PushService.m */; };
 		EB88417E204538CB00EDFAF5 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB88417D204538CB00EDFAF5 /* AppManager.m */; };
 		EB88418320453E0700EDFAF5 /* SandBoxHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EB88418220453E0700EDFAF5 /* SandBoxHelper.m */; };
->>>>>>> origin/dev
 		EB9FF1E21F47DF2200EEBE11 /* TYTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9FF1E11F47DF2200EEBE11 /* TYTheme.m */; };
 		EBB1E5552056446100956B7F /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB1E5542056446100956B7F /* iconfont.ttf */; };
 		EBB1E5582056721700956B7F /* TYPhotoSelectedHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB1E5572056721700956B7F /* TYPhotoSelectedHandler.m */; };
@@ -177,18 +164,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-<<<<<<< HEAD
-		EB9126D51F8B2D2C00F4263D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EB032D131F0251F300F32465 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EB032D1A1F0251F300F32465;
-			remoteInfo = RCTTest;
-		};
-		EB9126E41F8B2D4400F4263D /* PBXContainerItemProxy */ = {
-=======
 		EB7C64451FD63F720018AC3A /* PBXContainerItemProxy */ = {
->>>>>>> origin/dev
 			isa = PBXContainerItemProxy;
 			containerPortal = EB032D131F0251F300F32465 /* Project object */;
 			proxyType = 1;
@@ -199,14 +175,10 @@
 
 /* Begin PBXFileReference section */
 		4685E6D3869C8CFF7EF29817 /* libPods-RCTTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RCTTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-<<<<<<< HEAD
-		B2D43798E3F0272AA1285130 /* Pods-RCTTest.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.staging.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.staging.xcconfig"; sourceTree = "<group>"; };
-=======
 		AF03854820A41A4E00746CCD /* TYKalmanFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYKalmanFilter.h; sourceTree = "<group>"; };
 		AF03854920A41A4E00746CCD /* TYKalmanFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYKalmanFilter.m; sourceTree = "<group>"; };
 		AF06DD8F20AD538600EC34FF /* Tracker1D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tracker1D.h; sourceTree = "<group>"; };
 		AF06DD9020AD538600EC34FF /* Tracker1D.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tracker1D.m; sourceTree = "<group>"; };
-		AF2684E920A98FB3003814A4 /* trace.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = trace.txt; path = "../../../../../技术演进/GPSEngineTest/GPSEngineTest/trace.txt"; sourceTree = "<group>"; };
 		AF5A1E4A20AA6EB30024DBE5 /* KalmanFiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalmanFiter.h; sourceTree = "<group>"; };
 		AF5A1E4B20AA6EB30024DBE5 /* KalmanFiter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalmanFiter.m; sourceTree = "<group>"; };
 		AF5A1E4D20AAAFAE0024DBE5 /* SavitzkyGolay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SavitzkyGolay.h; sourceTree = "<group>"; };
@@ -229,7 +201,6 @@
 		AF8A30A920AC120400EED7CD /* TYRemotePhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYRemotePhoto.m; sourceTree = "<group>"; };
 		AFB50D1320A2EB4E006302C3 /* TYRunningViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYRunningViewController.h; sourceTree = "<group>"; };
 		AFB50D1420A2EB4E006302C3 /* TYRunningViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYRunningViewController.m; sourceTree = "<group>"; };
->>>>>>> origin/dev
 		D502818BA0F8EC5DDC48C475 /* Pods-RCTTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.debug.xcconfig"; sourceTree = "<group>"; };
 		DC2E37739B2C59D2F6B877A9 /* Pods-RCTTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.release.xcconfig"; sourceTree = "<group>"; };
 		DCEF8753A3129DD7F8B4D947 /* Pods-RCTTest.pureui.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTTest.pureui.xcconfig"; path = "Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest.pureui.xcconfig"; sourceTree = "<group>"; };
@@ -245,7 +216,6 @@
 		EB032D2F1F0251F300F32465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB09640A1F79214600417BB3 /* list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
 		EB09640E1F7927FA00417BB3 /* TYTopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TYTopicCell.swift; sourceTree = "<group>"; };
-		EB09640F1F7927FA00417BB3 /* TYTopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TYTopicCell.xib; sourceTree = "<group>"; };
 		EB18D3E21F0F427200B44790 /* RCTLocationObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTLocationObserver.h; sourceTree = "<group>"; };
 		EB18D3E31F0F427200B44790 /* RCTLocationObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTLocationObserver.m; sourceTree = "<group>"; };
 		EB18D3E51F0F6B7700B44790 /* TYRCTModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYRCTModule.h; sourceTree = "<group>"; };
@@ -284,14 +254,11 @@
 		EB32F1421F4AE31C00D766AF /* TYSegmentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYSegmentItem.swift; sourceTree = "<group>"; };
 		EB32F1441F4AE32D00D766AF /* TYSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYSegmentView.swift; sourceTree = "<group>"; };
 		EB32F1471F4B030F00D766AF /* TYCategaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TYCategaryViewController.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		EB3C474D1F80B0EE00902AD3 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-=======
 		EB3A9B5A2363F1020093E1D1 /* RCTTest-Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCTTest-Swift.h"; sourceTree = "<group>"; };
->>>>>>> origin/dev
 		EB43475C1F3B51D100EC7AE9 /* TYStatusViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYStatusViewCell.h; path = RCTTest/Common/TYStatusViewCell.h; sourceTree = SOURCE_ROOT; };
 		EB43475D1F3B51D100EC7AE9 /* TYStatusViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYStatusViewCell.m; path = RCTTest/Common/TYStatusViewCell.m; sourceTree = SOURCE_ROOT; };
 		EB43475E1F3B51D100EC7AE9 /* TYStatusViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TYStatusViewCell.xib; path = RCTTest/Common/TYStatusViewCell.xib; sourceTree = SOURCE_ROOT; };
+		EB46C770241CD37300AD52BF /* TYTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TYTopicCell.xib; sourceTree = "<group>"; };
 		EB54324A1F4D634E00683AA7 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		EB54324B1F4D634E00683AA7 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		EB54324D1F4D7D2B00683AA7 /* TYTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTestViewController.h; sourceTree = "<group>"; };
@@ -374,6 +341,7 @@
 		EB65011D1F418F1200C0B89A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EB65011F1F418F1800C0B89A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EB6501211F418F2300C0B89A /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		EB6501281F419FAB00C0B89A /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = ../../../IJKMediaFramework.framework; sourceTree = "<group>"; };
 		EB6592501F75022E0059A3B9 /* TYLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLoginViewController.h; sourceTree = "<group>"; };
 		EB6592511F75022E0059A3B9 /* TYLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYLoginViewController.m; sourceTree = "<group>"; };
 		EB6712321F4C0FDE00642B72 /* String(Add).swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String(Add).swift"; sourceTree = "<group>"; };
@@ -428,21 +396,6 @@
 		EB777A381F7B9C90000461B3 /* icon_certification@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_certification@2x.png"; sourceTree = "<group>"; };
 		EB777A391F7B9C90000461B3 /* icon_certification@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_certification@3x.png"; sourceTree = "<group>"; };
 		EB777A3A1F7B9C91000461B3 /* icon_certification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_certification.png; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		EB811C701F763934003552E9 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "Pods/../build/Debug-iphoneos/MBProgressHUD/libMBProgressHUD.a"; sourceTree = "<group>"; };
-		EB811C731F764273003552E9 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
-		EB811C741F764273003552E9 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
-		EB9126BF1F8B200C00F4263D /* TYTestSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYTestSecondViewController.h; sourceTree = "<group>"; };
-		EB9126C01F8B200C00F4263D /* TYTestSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYTestSecondViewController.m; sourceTree = "<group>"; };
-		EB9126C71F8B2A0500F4263D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		EB9126D01F8B2D2B00F4263D /* RCTTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCTTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB9126D21F8B2D2C00F4263D /* RCTTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTTestUITests.m; sourceTree = "<group>"; };
-		EB9126D41F8B2D2C00F4263D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB9126DF1F8B2D4400F4263D /* RCTTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCTTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB9126E11F8B2D4400F4263D /* RCTTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTTestTests.m; sourceTree = "<group>"; };
-		EB9126E31F8B2D4400F4263D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-=======
-		EB777A451F7BC7C4000461B3 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		EB77A582204E383A009103B3 /* CustomWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomWebViewController.h; sourceTree = "<group>"; };
 		EB77A583204E383A009103B3 /* CustomWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomWebViewController.m; sourceTree = "<group>"; };
 		EB7C64401FD63F720018AC3A /* RCTTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCTTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -478,7 +431,6 @@
 		EB88418220453E0700EDFAF5 /* SandBoxHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SandBoxHelper.m; sourceTree = "<group>"; };
 		EB8841842045576400EDFAF5 /* CommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
 		EB88418520455AFD00EDFAF5 /* URLMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLMacros.h; sourceTree = "<group>"; };
->>>>>>> origin/dev
 		EB9FF1E01F47DF2200EEBE11 /* TYTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTheme.h; sourceTree = "<group>"; };
 		EB9FF1E11F47DF2200EEBE11 /* TYTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTheme.m; sourceTree = "<group>"; };
 		EBA8F88A1FC68043005A2B84 /* RCTConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTConfig.h; sourceTree = "<group>"; };
@@ -524,25 +476,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-<<<<<<< HEAD
-		EB9126CD1F8B2D2B00F4263D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EB9126DC1F8B2D4400F4263D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-=======
 		EB7C643D1FD63F720018AC3A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EB7C64621FD681E60018AC3A /* libOCMock.a in Frameworks */,
->>>>>>> origin/dev
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,11 +492,7 @@
 			children = (
 				D502818BA0F8EC5DDC48C475 /* Pods-RCTTest.debug.xcconfig */,
 				DC2E37739B2C59D2F6B877A9 /* Pods-RCTTest.release.xcconfig */,
-<<<<<<< HEAD
-				B2D43798E3F0272AA1285130 /* Pods-RCTTest.staging.xcconfig */,
-=======
 				DCEF8753A3129DD7F8B4D947 /* Pods-RCTTest.pureui.xcconfig */,
->>>>>>> origin/dev
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -645,8 +579,8 @@
 		C99CA68C2F5497E7F1256D9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EB9126C71F8B2A0500F4263D /* XCTest.framework */,
 				EB811C701F763934003552E9 /* libMBProgressHUD.a */,
+				EB6501281F419FAB00C0B89A /* IJKMediaFramework.framework */,
 				EB6501211F418F2300C0B89A /* VideoToolbox.framework */,
 				EB65011F1F418F1800C0B89A /* UIKit.framework */,
 				EB65011D1F418F1200C0B89A /* QuartzCore.framework */,
@@ -671,12 +605,7 @@
 			children = (
 				EB6500F91F418DE500C0B89A /* ThirdFramework */,
 				EB032D1D1F0251F300F32465 /* RCTTest */,
-<<<<<<< HEAD
-				EB9126D11F8B2D2C00F4263D /* RCTTestUITests */,
-				EB9126E01F8B2D4400F4263D /* RCTTestTests */,
-=======
 				EB7C64411FD63F720018AC3A /* RCTTestTests */,
->>>>>>> origin/dev
 				EB032D1C1F0251F300F32465 /* Products */,
 				7953CC99AFBE83F484FADF8B /* Pods */,
 				C99CA68C2F5497E7F1256D9E /* Frameworks */,
@@ -687,12 +616,7 @@
 			isa = PBXGroup;
 			children = (
 				EB032D1B1F0251F300F32465 /* RCTTest.app */,
-<<<<<<< HEAD
-				EB9126D01F8B2D2B00F4263D /* RCTTestUITests.xctest */,
-				EB9126DF1F8B2D4400F4263D /* RCTTestTests.xctest */,
-=======
 				EB7C64401FD63F720018AC3A /* RCTTestTests.xctest */,
->>>>>>> origin/dev
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -721,22 +645,12 @@
 				EB777A3A1F7B9C91000461B3 /* icon_certification.png */,
 				EB777A381F7B9C90000461B3 /* icon_certification@2x.png */,
 				EB777A391F7B9C90000461B3 /* icon_certification@3x.png */,
-<<<<<<< HEAD
-				EB3299C71F1352710034D095 /* fontFamily.txt */,
-=======
-				EB777A451F7BC7C4000461B3 /* main.jsbundle */,
->>>>>>> origin/dev
 				EB3299D31F1385B60034D095 /* Fonts */,
 				EB032D2A1F0251F300F32465 /* Assets.xcassets */,
 				EB032D2C1F0251F300F32465 /* LaunchScreen.storyboard */,
-				EB3C474D1F80B0EE00902AD3 /* main.jsbundle */,
 				EB032D2F1F0251F300F32465 /* Info.plist */,
 				EB5A2A361F03A45900A19F2C /* PrefixHeader.pch */,
-<<<<<<< HEAD
-				EB9126C91F8B2A6500F4263D /* RCTUITest */,
-=======
 				EB3A9B5A2363F1020093E1D1 /* RCTTest-Swift.h */,
->>>>>>> origin/dev
 				EB032D1E1F0251F300F32465 /* Supporting Files */,
 			);
 			path = RCTTest;
@@ -773,8 +687,6 @@
 				EB266F5D1F3B33B000949D40 /* Test.h */,
 				EB54324D1F4D7D2B00683AA7 /* TYTestViewController.h */,
 				EB54324E1F4D7D2B00683AA7 /* TYTestViewController.m */,
-				EB9126BF1F8B200C00F4263D /* TYTestSecondViewController.h */,
-				EB9126C01F8B200C00F4263D /* TYTestSecondViewController.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -1269,7 +1181,7 @@
 				EBE0F7A81F76ABCA006F0AD8 /* TYTopicBanner.swift */,
 				EBE0F7AB1F773C83006F0AD8 /* TYSegmentScrollVIew.swift */,
 				EB09640E1F7927FA00417BB3 /* TYTopicCell.swift */,
-				EB09640F1F7927FA00417BB3 /* TYTopicCell.xib */,
+				EB46C770241CD37300AD52BF /* TYTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1466,32 +1378,6 @@
 			path = "MBProgressHUD-MJ";
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
-		EB9126C91F8B2A6500F4263D /* RCTUITest */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = RCTUITest;
-			path = RCTTest/RCTUITest;
-			sourceTree = SOURCE_ROOT;
-		};
-		EB9126D11F8B2D2C00F4263D /* RCTTestUITests */ = {
-			isa = PBXGroup;
-			children = (
-				EB9126D21F8B2D2C00F4263D /* RCTTestUITests.m */,
-				EB9126D41F8B2D2C00F4263D /* Info.plist */,
-			);
-			path = RCTTestUITests;
-			sourceTree = "<group>";
-		};
-		EB9126E01F8B2D4400F4263D /* RCTTestTests */ = {
-			isa = PBXGroup;
-			children = (
-				EB9126E11F8B2D4400F4263D /* RCTTestTests.m */,
-				EB9126E31F8B2D4400F4263D /* Info.plist */,
-			);
-			path = RCTTestTests;
-=======
 		EB82C27A20119A54005C97BE /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1542,7 +1428,6 @@
 				EB88418220453E0700EDFAF5 /* SandBoxHelper.m */,
 			);
 			path = SandBoxHelper;
->>>>>>> origin/dev
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1567,15 +1452,6 @@
 			productReference = EB032D1B1F0251F300F32465 /* RCTTest.app */;
 			productType = "com.apple.product-type.application";
 		};
-<<<<<<< HEAD
-		EB9126CF1F8B2D2B00F4263D /* RCTTestUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EB9126D71F8B2D2C00F4263D /* Build configuration list for PBXNativeTarget "RCTTestUITests" */;
-			buildPhases = (
-				EB9126CC1F8B2D2B00F4263D /* Sources */,
-				EB9126CD1F8B2D2B00F4263D /* Frameworks */,
-				EB9126CE1F8B2D2B00F4263D /* Resources */,
-=======
 		EB7C643F1FD63F720018AC3A /* RCTTestTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB7C64491FD63F720018AC3A /* Build configuration list for PBXNativeTarget "RCTTestTests" */;
@@ -1583,42 +1459,15 @@
 				EB7C643C1FD63F720018AC3A /* Sources */,
 				EB7C643D1FD63F720018AC3A /* Frameworks */,
 				EB7C643E1FD63F720018AC3A /* Resources */,
->>>>>>> origin/dev
 			);
 			buildRules = (
 			);
 			dependencies = (
-<<<<<<< HEAD
-				EB9126D61F8B2D2C00F4263D /* PBXTargetDependency */,
-			);
-			name = RCTTestUITests;
-			productName = RCTTestUITests;
-			productReference = EB9126D01F8B2D2B00F4263D /* RCTTestUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		EB9126DE1F8B2D4400F4263D /* RCTTestTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EB9126E61F8B2D4400F4263D /* Build configuration list for PBXNativeTarget "RCTTestTests" */;
-			buildPhases = (
-				EB9126DB1F8B2D4400F4263D /* Sources */,
-				EB9126DC1F8B2D4400F4263D /* Frameworks */,
-				EB9126DD1F8B2D4400F4263D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EB9126E51F8B2D4400F4263D /* PBXTargetDependency */,
-			);
-			name = RCTTestTests;
-			productName = RCTTestTests;
-			productReference = EB9126DF1F8B2D4400F4263D /* RCTTestTests.xctest */;
-=======
 				EB7C64461FD63F720018AC3A /* PBXTargetDependency */,
 			);
 			name = RCTTestTests;
 			productName = RCTTestTests;
 			productReference = EB7C64401FD63F720018AC3A /* RCTTestTests.xctest */;
->>>>>>> origin/dev
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -1648,17 +1497,7 @@
 							};
 						};
 					};
-<<<<<<< HEAD
-					EB9126CF1F8B2D2B00F4263D = {
-						CreatedOnToolsVersion = 9.0;
-						DevelopmentTeam = NVZ53TTCA3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = EB032D1A1F0251F300F32465;
-					};
-					EB9126DE1F8B2D4400F4263D = {
-=======
 					EB7C643F1FD63F720018AC3A = {
->>>>>>> origin/dev
 						CreatedOnToolsVersion = 9.0;
 						DevelopmentTeam = NVZ53TTCA3;
 						ProvisioningStyle = Automatic;
@@ -1681,12 +1520,7 @@
 			projectRoot = "";
 			targets = (
 				EB032D1A1F0251F300F32465 /* RCTTest */,
-<<<<<<< HEAD
-				EB9126CF1F8B2D2B00F4263D /* RCTTestUITests */,
-				EB9126DE1F8B2D4400F4263D /* RCTTestTests */,
-=======
 				EB7C643F1FD63F720018AC3A /* RCTTestTests */,
->>>>>>> origin/dev
 			);
 		};
 /* End PBXProject section */
@@ -1696,26 +1530,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
-=======
 				EB6C0A382058FF88004E0CFC /* background.png in Resources */,
 				EB6D11AE20513ADA00715160 /* TYPhotoAlbumViewCell.xib in Resources */,
 				EB6FA841204FE6DD0027923B /* index.html in Resources */,
 				EBBA6BF220B8F39300C6B106 /* TYPreviewPhotoViewCell.xib in Resources */,
+				EB46C771241CD37300AD52BF /* TYTopicCell.xib in Resources */,
 				EBB1E5552056446100956B7F /* iconfont.ttf in Resources */,
 				EB6C0A2E2058DA93004E0CFC /* TYBlurEffectViewController.xib in Resources */,
-				EB777A461F7BC7E5000461B3 /* main.jsbundle in Resources */,
 				EB6DE6F7205297BC009290F0 /* TYPhotoCollectionViewCell.xib in Resources */,
->>>>>>> origin/dev
 				EB777A401F7BB187000461B3 /* icon_certification@3x.png in Resources */,
 				EB777A3F1F7BB17F000461B3 /* icon_certification@2x.png in Resources */,
 				AF8A309D20ABC9C200EED7CD /* 02.txt in Resources */,
 				EB777A3E1F7BB161000461B3 /* icon_certification.png in Resources */,
-				EB3C474E1F80B0EE00902AD3 /* main.jsbundle in Resources */,
 				EB266F5C1F3B317500949D40 /* recommend.json in Resources */,
 				AF8A309B20ABC4CF00EED7CD /* 01.txt in Resources */,
 				EB032D2E1F0251F300F32465 /* LaunchScreen.storyboard in Resources */,
-				EB0964111F7927FA00417BB3 /* TYTopicCell.xib in Resources */,
 				EB55658F1F43021C005BB5DC /* topic.json in Resources */,
 				EB5A9A021F3C4DC10031C497 /* TYImageViewCell.xib in Resources */,
 				EB032D2B1F0251F300F32465 /* Assets.xcassets in Resources */,
@@ -1728,44 +1557,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-<<<<<<< HEAD
-		EB9126CE1F8B2D2B00F4263D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EB9126DD1F8B2D4400F4263D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3A1C1FEEB22AEBC912800669 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest-frameworks.sh",
-				"${PODS_ROOT}/Hyphenate/ios_IM_Hyphenate_sdk_3.3.4r1/HyphenateFullSDK/Hyphenate.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hyphenate.framework",
-			);
-=======
 		EB7C643E1FD63F720018AC3A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
->>>>>>> origin/dev
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
@@ -1777,14 +1573,6 @@
 			files = (
 			);
 			inputPaths = (
-<<<<<<< HEAD
-				"${SRCROOT}/Pods/Target Support Files/Pods-RCTTest/Pods-RCTTest-resources.sh",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-=======
 				"${PODS_ROOT}/Target Support Files/Pods-RCTTest/Pods-RCTTest-resources.sh",
 				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
@@ -1815,7 +1603,6 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
->>>>>>> origin/dev
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1871,11 +1658,7 @@
 				EB88417E204538CB00EDFAF5 /* AppManager.m in Sources */,
 				AFB50D1520A2EB4E006302C3 /* TYRunningViewController.m in Sources */,
 				EB5D392B1F345DE90029085F /* TYSegementIndicatorView.m in Sources */,
-<<<<<<< HEAD
-				EB9126C11F8B200D00F4263D /* TYTestSecondViewController.m in Sources */,
-=======
 				EB61FD6E2048E8FF006CA65F /* YYFPSLabel.m in Sources */,
->>>>>>> origin/dev
 				EB5A2A101F0388D700A19F2C /* TYTabBarController.m in Sources */,
 				EB55658D1F42FEB0005BB5DC /* Bundle(Add).swift in Sources */,
 				EB6592521F75022E0059A3B9 /* TYLoginViewController.m in Sources */,
@@ -1974,41 +1757,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB9126CC1F8B2D2B00F4263D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EB9126D31F8B2D2C00F4263D /* RCTTestUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EB9126DB1F8B2D4400F4263D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EB9126E21F8B2D4400F4263D /* RCTTestTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-<<<<<<< HEAD
-		EB9126D61F8B2D2C00F4263D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EB032D1A1F0251F300F32465 /* RCTTest */;
-			targetProxy = EB9126D51F8B2D2C00F4263D /* PBXContainerItemProxy */;
-		};
-		EB9126E51F8B2D4400F4263D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EB032D1A1F0251F300F32465 /* RCTTest */;
-			targetProxy = EB9126E41F8B2D4400F4263D /* PBXContainerItemProxy */;
-=======
 		EB7C64461FD63F720018AC3A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EB032D1A1F0251F300F32465 /* RCTTest */;
 			targetProxy = EB7C64451FD63F720018AC3A /* PBXContainerItemProxy */;
->>>>>>> origin/dev
 		};
 /* End PBXTargetDependency section */
 
@@ -2054,7 +1809,6 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODEPUSH_KEY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -2105,7 +1859,6 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODEPUSH_KEY = "Wez81D79D2fmfMi3cTzQEzVAI9WU65df6e1f-bb0e-414b-a2de-736c5e0735fa";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -2138,14 +1891,6 @@
 				CODE_SIGN_ENTITLEMENTS = RCTTest/RCTTest.entitlements;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ZA734EWL3T;
-<<<<<<< HEAD
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/IJK",
-					"$(PROJECT_DIR)/RCTTest/ThirdFramework/IJK",
-				);
-=======
->>>>>>> origin/dev
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RCTTest/PrefixHeader.pch;
 				INFOPLIST_FILE = RCTTest/Info.plist;
@@ -2157,12 +1902,8 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MBProgressHUD",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo01;
-<<<<<<< HEAD
-				PRODUCT_NAME = "$(TARGET_NAME)";
-=======
 				PRODUCT_NAME = RCTTest;
 				PURE_UI_DEBUG = "$(APP_PURE_UI)";
->>>>>>> origin/dev
 				SWIFT_OBJC_BRIDGING_HEADER = "RCTTest/Sreens/Video/RCTTest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -2179,14 +1920,6 @@
 				CODE_SIGN_ENTITLEMENTS = RCTTest/RCTTest.entitlements;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ZA734EWL3T;
-<<<<<<< HEAD
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/IJK",
-					"$(PROJECT_DIR)/RCTTest/ThirdFramework/IJK",
-				);
-=======
->>>>>>> origin/dev
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RCTTest/PrefixHeader.pch;
 				INFOPLIST_FILE = RCTTest/Info.plist;
@@ -2198,20 +1931,13 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MBProgressHUD",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo01;
-<<<<<<< HEAD
-				PRODUCT_NAME = "$(TARGET_NAME)";
-=======
 				PRODUCT_NAME = RCTTest;
 				PURE_UI_DEBUG = "";
->>>>>>> origin/dev
 				SWIFT_OBJC_BRIDGING_HEADER = "RCTTest/Sreens/Video/RCTTest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-<<<<<<< HEAD
-		EB89ABF71F7F510700D6E877 /* Staging */ = {
-=======
 		EB7C64471FD63F720018AC3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2279,7 +2005,6 @@
 			name = Release;
 		};
 		EBAB32762010A1F300DDE88E /* PureUI */ = {
->>>>>>> origin/dev
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -2301,16 +2026,6 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-<<<<<<< HEAD
-				CODEPUSH_KEY = "6ipOy9HRDrzRaKaqclbCthtvK_vu65df6e1f-bb0e-414b-a2de-736c5e0735fa ";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-=======
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -2324,7 +2039,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
->>>>>>> origin/dev
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -2332,17 +2046,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-<<<<<<< HEAD
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Staging;
-		};
-		EB89ABF81F7F510700D6E877 /* Staging */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2D43798E3F0272AA1285130 /* Pods-RCTTest.staging.xcconfig */;
-=======
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PURE_UI_KEY = "";
@@ -2354,7 +2057,6 @@
 		EBAB32772010A1F300DDE88E /* PureUI */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DCEF8753A3129DD7F8B4D947 /* Pods-RCTTest.pureui.xcconfig */;
->>>>>>> origin/dev
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -2362,22 +2064,10 @@
 				CODE_SIGN_ENTITLEMENTS = RCTTest/RCTTest.entitlements;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ZA734EWL3T;
-<<<<<<< HEAD
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/IJK",
-					"$(PROJECT_DIR)/RCTTest/ThirdFramework/IJK",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = RCTTest/PrefixHeader.pch;
-				INFOPLIST_FILE = RCTTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-=======
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RCTTest/PrefixHeader.pch;
 				INFOPLIST_FILE = RCTTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
->>>>>>> origin/dev
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2385,147 +2075,6 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MBProgressHUD",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.zuizuo01;
-<<<<<<< HEAD
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "RCTTest/Sreens/Video/RCTTest-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Staging;
-		};
-		EB9126D81F8B2D2C00F4263D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NVZ53TTCA3;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = RCTTestUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.RCTTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RCTTest;
-			};
-			name = Debug;
-		};
-		EB9126D91F8B2D2C00F4263D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NVZ53TTCA3;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = RCTTestUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.RCTTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RCTTest;
-			};
-			name = Release;
-		};
-		EB9126DA1F8B2D2C00F4263D /* Staging */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NVZ53TTCA3;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = RCTTestUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.RCTTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RCTTest;
-			};
-			name = Staging;
-		};
-		EB9126E71F8B2D4400F4263D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NVZ53TTCA3;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = RCTTestTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.RCTTestTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RCTTest.app/RCTTest";
-			};
-			name = Debug;
-		};
-		EB9126E81F8B2D4400F4263D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NVZ53TTCA3;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = RCTTestTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.RCTTestTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RCTTest.app/RCTTest";
-			};
-			name = Release;
-		};
-		EB9126E91F8B2D4400F4263D /* Staging */ = {
-=======
 				PRODUCT_NAME = RCTTest;
 				PURE_UI_DEBUG = "$(APP_PURE_UI)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RCTTest/Sreens/Video/RCTTest-Bridging-Header.h";
@@ -2535,7 +2084,6 @@
 			name = PureUI;
 		};
 		EBAB32782010A1F300DDE88E /* PureUI */ = {
->>>>>>> origin/dev
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -2552,11 +2100,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NVZ53TTCA3;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-<<<<<<< HEAD
-				INFOPLIST_FILE = RCTTestTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-=======
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/usr/include";
 				INFOPLIST_FILE = RCTTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -2566,17 +2109,12 @@
 					"$(PROJECT_DIR)/lib",
 				);
 				OTHER_LDFLAGS = "-ObjC";
->>>>>>> origin/dev
 				PRODUCT_BUNDLE_IDENTIFIER = lptiyu.com.RCTTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RCTTest.app/RCTTest";
 			};
-<<<<<<< HEAD
-			name = Staging;
-=======
 			name = PureUI;
->>>>>>> origin/dev
 		};
 /* End XCBuildConfiguration section */
 
@@ -2587,7 +2125,6 @@
 				EB032D301F0251F300F32465 /* Debug */,
 				EBAB32762010A1F300DDE88E /* PureUI */,
 				EB032D311F0251F300F32465 /* Release */,
-				EB89ABF71F7F510700D6E877 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2598,27 +2135,6 @@
 				EB032D331F0251F300F32465 /* Debug */,
 				EBAB32772010A1F300DDE88E /* PureUI */,
 				EB032D341F0251F300F32465 /* Release */,
-				EB89ABF81F7F510700D6E877 /* Staging */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EB9126D71F8B2D2C00F4263D /* Build configuration list for PBXNativeTarget "RCTTestUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EB9126D81F8B2D2C00F4263D /* Debug */,
-				EB9126D91F8B2D2C00F4263D /* Release */,
-				EB9126DA1F8B2D2C00F4263D /* Staging */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EB9126E61F8B2D4400F4263D /* Build configuration list for PBXNativeTarget "RCTTestTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EB9126E71F8B2D4400F4263D /* Debug */,
-				EB9126E81F8B2D4400F4263D /* Release */,
-				EB9126E91F8B2D4400F4263D /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

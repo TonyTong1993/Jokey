@@ -9,13 +9,11 @@
 #import "TYTabBarController.h"
 #import "TYNavigationController.h"
 #import "RCTTest-Swift.h"
-<<<<<<< HEAD
+#import "AppManager.h"
 //环信IM Full版本
 //#import <Hyphenate/Hyphenate.h>
-CFAbsoluteTime StartTime;
-=======
-#import "AppManager.h"
->>>>>>> origin/dev
+static CFAbsoluteTime StartTime;
+
 @interface TYTabBarController ()
 
 @end

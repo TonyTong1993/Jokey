@@ -29,59 +29,16 @@
     self.tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-<<<<<<< HEAD
+
    
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 125, 0);
-    self.tableView.backgroundColor = [UIColor colorWithHexString:@"#f0f0f8"];
-    self.tableView.separatorColor = HEXCOLOR(0xebebeb);
-=======
-    
     self.tableView.backgroundColor = HEXCOLOR(backgroundColorHexValue);
     self.tableView.separatorColor = HEXCOLOR(separatorColorHexValue);
->>>>>>> origin/dev
+
     //去除footer样式
     self.tableView.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:_tableView];
     
-<<<<<<< HEAD
-    //设置网络数据下啦刷新
-    __weak typeof(self) weakSelf = self;
-   MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingBlock:^{
-      
-           [weakSelf loadNewData];
-       
-    }];
-    [header setImages:self.normalImages forState:MJRefreshStateIdle];
-    [header setImages:self.pullingImages  forState:MJRefreshStatePulling];
-    [header setImages:self.refreshImages  forState:MJRefreshStateRefreshing];
-    header.lastUpdatedTimeLabel.hidden= YES;//如果不隐藏这个会默认 图片在最左边不是在中间
-    header.stateLabel.hidden = YES;
-    self.tableView.mj_header = header;
-    self.tableView.separatorInset = UIEdgeInsetsMake(0, 12, 0, 12);
-    //设置上拉加载更多数据
-    MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-       
-        [weakSelf loadMoreData];
-        
-    }];
-    self.tableView.mj_footer = footer;
-    footer.refreshingTitleHidden = YES;
-    footer.stateLabel.hidden = YES;
-    
-    
-    //ios11 适配
-    if (@available(iOS 11.0,*)) {
-        _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-        _tableView.contentInset = UIEdgeInsetsMake(0, 0, 125, 0);
-        _tableView.scrollIndicatorInsets = _tableView.contentInset;
-        
-#pragma mark--在iOS 11中默认启用Self-Sizing 关闭方法
-        self.tableView.estimatedRowHeight = 0;
-        self.tableView.estimatedSectionHeaderHeight = 0;
-        self.tableView.estimatedSectionFooterHeight = 0;
-        
-    }
-=======
     CGFloat bottomOffset = 0.0f;
     if (@available(iOS 11, *)) {
          //关闭Self-Sizing
@@ -95,7 +52,6 @@
     }
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, bottomOffset, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
->>>>>>> origin/dev
 }
 
 -(void)setUpNavigationBar {

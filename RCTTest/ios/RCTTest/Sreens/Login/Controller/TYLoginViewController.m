@@ -122,13 +122,9 @@
     //修改hud样式
 
     //显示hud
-<<<<<<< HEAD
+
     [hud show:YES];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-=======
-    [hud showAnimated:YES];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
->>>>>>> origin/dev
         //隐藏hud
         [hud hide:true];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:APP_Login_Key];
